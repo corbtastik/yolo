@@ -33,6 +33,10 @@ The colors, typography and site logo can be customized to your tastes. The "corb
 * Provide color values for each variable.
 * Enable your theme by editing `_sass/_solo.scss` and importing it.
 
+### Example w/ "corbs" theme
+
+![Solo example](/static/images/solo-example.png "Solo Example"){:width="300"}
+
 ### License
 
 [MIT License](/LICENSE)
