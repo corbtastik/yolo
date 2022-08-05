@@ -12,7 +12,7 @@ __Goals for continuing Solo:__
 * Keep it simple, no dependencies other than [jekyll](https://jekyllrb.com/).
 * Make it customizable, bring your own colors and fonts.
 
-The one and only one "implementation" page is the one you're looking at.
+The one and only one "implementation" page is [`index.md`](/index.md)
 
 ## Usage
 
