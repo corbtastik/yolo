@@ -1,3 +1,4 @@
+# Solo
 
 Solo the "[og](http://chibicode.github.io/solo)" version was previously developed, maintained and ultimately deprecated by [Shu Uesugi](https://github.com/chibicode).
 
