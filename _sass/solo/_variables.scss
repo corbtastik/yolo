@@ -17,5 +17,10 @@ $base0c: #578CF7 !default;
 $base0d: #AB8DF8 !default;
 $base0e: #EA4BA6 !default;
 $base0f: #C1291C !default;
-
-$base-font-family: "Inconsolata", sans-serif !default;
+// ----------------------------------------------------------------------------
+// Fonts
+// ----------------------------------------------------------------------------
+@import url(//fonts.googleapis.com/css?family=Inconsolata:400,700|Montserrat:700);
+$base-font-family: Inconsolata, sans-serif !default;
+$secondary-font-family: Montserrat, sans-serif !default;
+$monospace-font-family: Inconsolata, monospace !default;

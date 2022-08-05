@@ -8,16 +8,20 @@ Solo the "[og](http://chibicode.github.io/solo)" version was previously develope
 
 I'm a Solo fan, so much that I'm continuing development. I find being able to generate single page docs with a bit of style incredibly useful.
 
-Goals for continuing Solo:
+__Goals for continuing Solo:__
 
 * Keep living the Solo dream, support one and only one page.
-* Keep it simple.
-* Make it customizable.
+* Keep it simple, no dependencies other than [jekyll](https://jekyllrb.com/).
+* Make it customizable, bring your own colors and fonts.
 
 The one and only one "implementation" page is the one you're looking at.
 
 ## Usage
 
+```bash
+jekyll build
+jekyll serve
+```
 
 
 ## Cornucopia of Content
