@@ -6,7 +6,7 @@ Solo the "[og](http://chibicode.github.io/solo)" version was previously develope
 
 > [Solo](http://chibicode.github.io/solo) is a Jekyll theme that supports **single-page websites** only, but supports them well. Yes, it's responsive. - _[Shu Uesugi](https://github.com/chibicode)_
 
-I'm a Solo fan, so much that I'm continuing development. I find being able to generate single page docs with a bit of style incredibly useful.
+I'm a Solo fan, so much so that I'm continuing development when I can. Being able to generate single page docs with a bit of custom style is __mucho__ useful.
 
 __Goals for continuing Solo:__
 
@@ -18,10 +18,22 @@ The one and only one "implementation" page is the one you're looking at.
 
 ## Usage
 
+* You need [jekyll](https://jekyllrb.com/).
+
 ```bash
+git clone https://github.com/corbtastik/solo.git
+cd solo
 jekyll build
 jekyll serve
 ```
+
+### Customize
+
+The colors, typography and site logo can be customized to your tastes. The "corbs" theme is enabled by default.
+
+* To add a custom theme, copy one of the examples in `_sass/solo/themes` to a new scss file. For example `_mytheme.scss`.
+* Provide color values for each variable.
+* Enable your theme by editing `_sass/_solo.scss` and importing it.
 
 
 ## Cornucopia of Content
@@ -108,6 +120,7 @@ H1 is reserved for the site header and not shown here.
 - <ins>Underlined</ins>
 - Superscript <sup>text</sup>
 - Subscript <sub>text</sub>
+- Inline code `SELECT * FROM players;`
 
 [↑↑↑](#){: .back-to-top}
 
