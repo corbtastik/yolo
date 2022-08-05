@@ -35,7 +35,7 @@ The colors, typography and site logo can be customized to your tastes. The "corb
 
 ### Example w/ "corbs" theme
 
-![Solo example](/static/images/solo-example.png "Solo Example"){:width="300"}
+![Solo example](/static/images/solo-example.png "Solo Example")
 
 ### License
 
