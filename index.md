@@ -215,9 +215,9 @@ AND   price <= 10000
 
 > The samples below demonstrate using [kramdown](https://github.com/gettalong/kramdown) to render images, kramdown is the default markdown converter for Jekyll.
 
-![BIG yawn Bucky](/static/images/bucky.png "Sleepy Bucky")
+![BIG yawn Bucky](static/images/bucky.png "Sleepy Bucky")
 
-![BIG yawn Bucky](/static/images/moonpie.png "Moonpie Aweee"){:width="300"}
+![BIG yawn Bucky](static/images/moonpie.png "Moonpie Aweee"){:width="300"}
 
 [↑↑↑](#){: .back-to-top}
 
