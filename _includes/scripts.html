@@ -15,4 +15,22 @@ codeCopyElements.forEach((codeCopyElement, index) => {
         }, 2000);
     });
 });
+
+const igModal = document.getElementById("ig-modal");
+const igModalContent = document.getElementById("ig-modal-content");
+const igModalCaption = document.getElementById("ig-modal-caption");
+const igModalClose = document.getElementsByClassName("ig-modal-close")[0];
+const igImages = document.querySelectorAll('.ig-image');
+
+igModalClose.onclick = function() {
+    igModal.style.display = "none";
+}
+
+igImages.forEach((igImage, index) => {
+    igImage.onclick = function() {
+        igModal.style.display = "block";
+        igModalContent.src = this.src;
+        igModalCaption.innerHTML = this.alt;
+    }
+});
 </script>
