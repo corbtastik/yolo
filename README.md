@@ -35,6 +35,8 @@ The colors, typography and site logo can be customized to your tastes. The "corb
 
 ### Example w/ "corbs" theme
 
+Solo demo - [https://corbtastik.github.io/solo](https://corbtastik.github.io/solo)
+
 ![Solo example](/static/images/solo-example.png "Solo Example")
 
 ### License
