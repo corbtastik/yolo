@@ -223,6 +223,15 @@ AND   price <= 10000
 
 ### Image Grid
 
+Solo has basic support for including an image-grid into your single page site, it works with the following 
+configuration.
+
+__Configuration:__
+
+* The image-grid renders 4 columns by default, thus it's best to add images in multiples of 4.
+* Add your images into `_data/images.yml`.
+* Include `image-grid.html` on your page.
+
 {% include image-grid.html %}
 
 [↑↑↑](#){: .back-to-top}

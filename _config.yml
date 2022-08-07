@@ -1,10 +1,16 @@
 # Site settings
-title: Solo, a Jekyll Theme
+title: Solo, a single page Jekyll Theme
 tag_text: Solo
 description: Solo is a Jekyll theme that supports single-page websites only, but supports them well. Yes, it’s responsive.
-
+# Site customizations
+logo: static/images/logo.png
+style: corbs
 # Build settings
 markdown: kramdown
-exclude: ["README.md"]
+exclude:
+  - "README.md"
+  - "Makefile"
+  - "Containerfile"
+  - ".container-build"
 sass:
   style: uncompressed
