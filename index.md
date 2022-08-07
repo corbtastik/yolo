@@ -217,10 +217,16 @@ AND   price <= 10000
 
 ![BIG yawn Bucky](static/images/bucky.png "Sleepy Bucky")
 
-![BIG yawn Bucky](static/images/moonpie.png "Moonpie Aweee"){:width="300"}
+![Moonie Moonpie](static/images/moonpie.png "Moonpie Aweee"){:width="300"}
+
+[↑↑↑](#){: .back-to-top}
+
+### Image Grid
+
+{% include image-grid.html %}
 
 [↑↑↑](#){: .back-to-top}
 
 ### License
 
-[MIT License](http://chibicode.mit-license.org/)
+[MIT License](/LICENSE)
