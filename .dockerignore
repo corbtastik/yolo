@@ -1,0 +1,7 @@
+.git/
+.idea/
+.jekyll-cache/
+.sass-cache/
+.site-build
+_site/
+Makefile

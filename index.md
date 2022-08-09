@@ -16,6 +16,8 @@ __Goals for continuing Solo:__
 
 The one and only one "implementation" page is the one you're looking at.
 
+---
+
 ## Usage
 
 * You need [jekyll](https://jekyllrb.com/).
@@ -234,6 +236,12 @@ __Configuration:__
 * Include `image-grid.html` on your page.
 
 {% include image-grid.html %}
+
+[↑↑↑](#){: .back-to-top}
+
+## Videos
+
+{% include video.html %}
 
 [↑↑↑](#){: .back-to-top}
 

@@ -16,6 +16,9 @@ clean:
 site:
 	@jekyll build --config _config.yml
 
+solo-image:
+	@podman build -f solo.Containerfile -t $(IMAGE_NAME):$(IMAGE_TAG) .
+
 sampler-image: sampler-site
 	@podman build -f sampler.Containerfile -t $(IMAGE_NAME)-sampler:$(IMAGE_TAG) .
 	@podman tag $(IMAGE_NAME)-sampler:$(IMAGE_TAG) $(IMAGE_NAME)-sampler:latest
