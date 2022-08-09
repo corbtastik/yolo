@@ -13,11 +13,14 @@ SAMPLER_DEMO_REPO=solo-sampler
 clean:
 	@rm -rf $(OUTPUT_DIR)/*
 
-site:
-	@jekyll build --config _config.yml
+solo-site:
+	@mkdir -p $(OUTPUT_DIR)/$(IMAGE_NAME)
+	@echo "version: $(IMAGE_TAG)" > $(OUTPUT_DIR)/$(IMAGE_NAME)/_version.yml
+	@jekyll build --config _config.yml,$(OUTPUT_DIR)/$(IMAGE_NAME)/_version.yml
 
-solo-image:
+solo-image: solo-site
 	@podman build -f solo.Containerfile -t $(IMAGE_NAME):$(IMAGE_TAG) .
+	@podman tag $(IMAGE_NAME):$(IMAGE_TAG) $(IMAGE_NAME):latest
 
 sampler-image: sampler-site
 	@podman build -f sampler.Containerfile -t $(IMAGE_NAME)-sampler:$(IMAGE_TAG) .

@@ -6,13 +6,13 @@ Solo the "[og](http://chibicode.github.io/solo)" version was previously develope
 
 > [Solo](http://chibicode.github.io/solo) is a Jekyll theme that supports **single-page websites** only, but supports them well. Yes, it's responsive. - _[Shu Uesugi](https://github.com/chibicode)_
 
-I'm a Solo fan, so much so that I'm continuing development when I can. Being able to generate single page docs with a bit of custom style is __mucho__ useful.
+The Solo must go on, so I'm gonna continue curating it as time allows.
 
 __Goals for continuing Solo:__
 
-* Keep living the Solo dream, support one and only one page.
-* Keep it simple, no dependencies other than [jekyll](https://jekyllrb.com/).
-* Make it customizable, bring your own colors and fonts.
+* __Keep living the Solo dream__: Support one and only one page.
+* __Keep it simple__: No dependencies other than [jekyll](https://jekyllrb.com/).
+* __Make it customizable__: Bring your own colors and fonts.
 
 The one and only one "implementation" page is the one you're looking at.
 
@@ -29,7 +29,9 @@ jekyll build
 jekyll serve
 ```
 
-### Customize
+---
+
+## Customize
 
 The colors, typography and site logo can be customized to your tastes. The "corbs" theme is enabled by default.
 
@@ -38,6 +40,8 @@ The colors, typography and site logo can be customized to your tastes. The "corb
 * Enable your theme by editing `_sass/_solo.scss` and importing it.
 
 {% include sampler.html %}
+
+---
 
 ## Cornucopia of Content
 
@@ -49,6 +53,10 @@ The colors, typography and site logo can be customized to your tastes. The "corb
 * [Lists](#lists)
 * [Tables](#tables)
 * [Images](#images)
+* [Image Grid](#image-grid)
+* [Videos](#videos)
+
+---
 
 ## Headers
 
@@ -66,11 +74,15 @@ H1 is reserved for the site header and not shown here.
 
 [↑↑↑](#){: .back-to-top}
 
+---
+
 ## Paragraph text
 
 [Baseball](https://en.wikipedia.org/wiki/Baseball) is a bat-and-ball sport played between two teams of nine players each, taking turns batting and fielding. The game is in play when a player on the fielding team, called the pitcher, throws a ball that a player on the batting team tries to hit with a bat. The objective of the offensive team (batting team) is to hit the ball into the field of play, away from the other team's players, allowing its players to run the bases, having them advance counter-clockwise around four bases to score what are called "runs". The objective of the defensive team (referred to as the fielding team) is to prevent batters from becoming runners, and to prevent runners' advance around the bases. A run is scored when a runner legally advances around the bases in order and touches home plate (the place where the player started as a batter). - copied from [Wikipedia](https://en.wikipedia.org/wiki/Baseball).
 
 [↑↑↑](#){: .back-to-top}
+
+---
 
 ## Blockquotes
 
@@ -100,6 +112,8 @@ H1 is reserved for the site header and not shown here.
 
 [↑↑↑](#){: .back-to-top}
 
+---
+
 ## Blockquote w/ markdown
 
 > ### Statistics
@@ -112,6 +126,8 @@ H1 is reserved for the site header and not shown here.
 > 6. __Batting Average:__ Hits divided by at bats.
 
 [↑↑↑](#){: .back-to-top}
+
+---
 
 ## Inline Text
 
@@ -127,7 +143,11 @@ H1 is reserved for the site header and not shown here.
 
 [↑↑↑](#){: .back-to-top}
 
+---
+
 ## Code
+
+> __Tip:__ Click the snippet header to copy to clipboard.
 
 {% include code.html info="WebUI.java" %}
 ```java
@@ -162,6 +182,8 @@ AND   price <= 10000
 
 [↑↑↑](#){: .back-to-top}
 
+---
+
 ## Lists
 
 ### Unordered
@@ -184,6 +206,8 @@ AND   price <= 10000
 4. Mookie Wilson
 
 [↑↑↑](#){: .back-to-top}
+
+---
 
 ## Tables
 
@@ -214,6 +238,8 @@ AND   price <= 10000
 
 [↑↑↑](#){: .back-to-top}
 
+---
+
 ## Images
 
 > The samples below demonstrate using [kramdown](https://github.com/gettalong/kramdown) to render images, kramdown is the default markdown converter for Jekyll.
@@ -224,7 +250,9 @@ AND   price <= 10000
 
 [↑↑↑](#){: .back-to-top}
 
-### Image Grid
+---
+
+## Image Grid
 
 Solo has basic support for including an image-grid into your single page site, it works with the following 
 configuration.
@@ -239,11 +267,15 @@ __Configuration:__
 
 [↑↑↑](#){: .back-to-top}
 
+---
+
 ## Videos
 
 {% include video.html %}
 
 [↑↑↑](#){: .back-to-top}
+
+---
 
 ## License
 
