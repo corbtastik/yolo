@@ -103,7 +103,7 @@ blockquote {
   margin-left: 0;
   margin-right: 0;
   padding: .5rem 1rem;
-  border-left: .25rem solid #ccc;
+  border-left: .25rem solid $text-color;
   color: $text-color-alt;
 }
 
@@ -114,7 +114,7 @@ blockquote p:last-child {
 hr {
   border: none;
   margin: 1.5rem 0;
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px dashed $accent-color;
   position: relative;
   top: -1px;
 }

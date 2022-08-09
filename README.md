@@ -4,15 +4,13 @@ Solo the "[og](http://chibicode.github.io/solo)" version was previously develope
 
 > [Solo](http://chibicode.github.io/solo) is a Jekyll theme that supports **single-page websites** only, but supports them well. Yes, it's responsive. - _[Shu Uesugi](https://github.com/chibicode)_
 
-I'm a Solo fan, so much so that I'm continuing development when I can. Being able to generate single page docs with a bit of custom style is __mucho__ useful.
+The Solo must go on, so I'm gonna continue curating it as time allows.
 
 __Goals for continuing Solo:__
 
-* Keep living the Solo dream, support one and only one page.
-* Keep it simple, no dependencies other than [jekyll](https://jekyllrb.com/).
-* Make it customizable, bring your own colors and fonts.
-
-The one and only one "implementation" page is [`index.md`](/index.md)
+* __Keep living the Solo dream__: Support one and only one page.
+* __Keep it simple__: No dependencies other than [jekyll](https://jekyllrb.com/).
+* __Make it customizable__: Bring your own colors and fonts.
 
 ## Usage
 
@@ -25,7 +23,7 @@ jekyll build
 jekyll serve
 ```
 
-### Customize
+## Customize
 
 The colors, typography and site logo can be customized to your tastes. The "corbs" theme is enabled by default.
 
@@ -39,6 +37,6 @@ Solo demo - [https://corbtastik.github.io/solo](https://corbtastik.github.io/sol
 
 ![Solo example](/static/images/solo-example.png "Solo Example")
 
-### License
+## License
 
 [MIT License](/LICENSE)
