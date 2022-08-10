@@ -37,6 +37,11 @@ Solo demo - [https://corbtastik.github.io/solo](https://corbtastik.github.io/sol
 
 ![Solo example](/static/images/solo-example.png "Solo Example")
 
+## Backlog
+
+* Scope creating Solo for [Eleventy](https://www.11ty.dev/).
+* Scope creating Solo for [Astro](https://astro.build/).
+
 ## License
 
 [MIT License](/LICENSE)

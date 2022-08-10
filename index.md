@@ -252,6 +252,12 @@ AND   price <= 10000
 
 ---
 
+## Image Magic
+
+{% include image-magic.html %}
+
+---
+
 ## Image Grid
 
 Solo has basic support for including an image-grid into your single page site, it works with the following 

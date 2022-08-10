@@ -31,6 +31,27 @@ igImages.forEach((igImage, index) => {
         igModal.style.display = "block";
         igModalContent.src = this.src;
         igModalCaption.innerHTML = this.alt;
-    }
+    };
 });
+
+const imageElements = document.querySelectorAll('.image-magic');
+
+imageElements.forEach((imageElement, index) => {
+    // let isImageBig = false;
+    imageElement.addEventListener("click", () => {
+        imageElement.parentElement.classList.toggle("ig-resize");
+        // if (isImageBig) {
+        //     imageElement.parentElement.style.maxWidth = "25%";
+        //     imageElement.parentElement.style.flex = "25%";
+        //     imageElement.style.width = "100%";
+        //     isImageBig = false;
+        // } else {
+        //     imageElement.parentElement.style.maxWidth = "100%";
+        //     imageElement.parentElement.style.flex = "100%";
+        //     imageElement.style.width = "100%";
+        //     isImageBig = true;
+        // }
+    });
+});
+
 </script>

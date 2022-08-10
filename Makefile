@@ -22,6 +22,9 @@ solo-image: solo-site
 	@podman build -f solo.Containerfile -t $(IMAGE_NAME):$(IMAGE_TAG) .
 	@podman tag $(IMAGE_NAME):$(IMAGE_TAG) $(IMAGE_NAME):latest
 
+# -----------------------------------------------------------------------------
+# Targets for working with a the Solo sampler site.
+# -----------------------------------------------------------------------------
 sampler-image: sampler-site
 	@podman build -f sampler.Containerfile -t $(IMAGE_NAME)-sampler:$(IMAGE_TAG) .
 	@podman tag $(IMAGE_NAME)-sampler:$(IMAGE_TAG) $(IMAGE_NAME)-sampler:latest
