@@ -52,8 +52,10 @@ The colors, typography and site logo can be customized to your tastes. The "corb
 * [Code](#code)
 * [Lists](#lists)
 * [Tables](#tables)
-* [Images](#images)
-* [Image Grid](#image-grid)
+* [Markdown Images](#markdown-images)
+* [Thumbnail Images](#thumbnail-images)
+* [Figure Images](#figure-images)
+* [Image Flexbox](#image-flexbox)
 * [Videos](#videos)
 
 ---
@@ -240,7 +242,7 @@ AND   price <= 10000
 
 ---
 
-## Images
+## Markdown Images
 
 > The samples below demonstrate using [kramdown](https://github.com/gettalong/kramdown) to render images, kramdown is the default markdown converter for Jekyll.
 
@@ -252,24 +254,30 @@ AND   price <= 10000
 
 ---
 
-## Image Magic
+## Thumbnail Images
 
-{% include image-magic.html %}
+* Thumbnail images have a width of 128px.
+* Click to scale.
+
+{% include image/thumbnail.html src='static/images/moonpie.png' description='Wittle Moonpie' %}
+
+## Figure Images
+
+* Figure images are thumbnail images with a caption.
+* Click to scale.
+
+{% include image/figure.html src='static/images/moonpie.png' description='Wittle Moonpie' %}
 
 ---
 
-## Image Grid
+## Image Flexbox
 
-Solo has basic support for including an image-grid into your single page site, it works with the following 
-configuration.
+* Group images in a flexbox with 4 columns, add in multiples of 4.
+* Add image data into `_data/images.yml`.
+* Include `image/flexbox.html` on your page.
+* Click to pop.
 
-__Configuration:__
-
-* The image-grid renders 4 columns by default, thus it's best to add images in multiples of 4.
-* Add your images into `_data/images.yml`.
-* Include `image-grid.html` on your page.
-
-{% include image-grid.html %}
+{% include image/flexbox.html %}
 
 [↑↑↑](#){: .back-to-top}
 
