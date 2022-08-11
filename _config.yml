@@ -6,7 +6,7 @@ description: Solo is a Jekyll theme that supports single-page websites only, but
 logo: static/images/logo.png
 style: corbs
 # Build settings
-version: v1.0
+version: v1.1
 sampler: false
 markdown: kramdown
 exclude:

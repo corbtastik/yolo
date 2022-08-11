@@ -31,13 +31,13 @@ jekyll serve
 
 ---
 
-## Customize
+## Style
 
-The colors, typography and site logo can be customized to your tastes. The "corbs" theme is enabled by default.
+The colors, typography and site logo can be styled to your tastes.
 
-* To add a custom theme, copy one of the examples in `_sass/solo/themes` to a new scss file. For example `_mytheme.scss`.
+* Copy one of the examples in `_sass/solo/themes` to a new scss file.
 * Provide color values for each variable.
-* Enable your theme by editing `_sass/_solo.scss` and importing it.
+* Enable by setting `style` in `_config.yml`.
 
 {% include sampler.html %}
 
@@ -52,8 +52,10 @@ The colors, typography and site logo can be customized to your tastes. The "corb
 * [Code](#code)
 * [Lists](#lists)
 * [Tables](#tables)
-* [Images](#images)
-* [Image Grid](#image-grid)
+* [Markdown Images](#markdown-images)
+* [Thumbnail Images](#thumbnail-images)
+* [Figure Images](#figure-images)
+* [Image Flexbox](#image-flexbox)
 * [Videos](#videos)
 
 ---
@@ -240,30 +242,48 @@ AND   price <= 10000
 
 ---
 
-## Images
+## Markdown Images
 
 > The samples below demonstrate using [kramdown](https://github.com/gettalong/kramdown) to render images, kramdown is the default markdown converter for Jekyll.
 
-![BIG yawn Bucky](static/images/bucky.png "Sleepy Bucky")
+![Moonie Moonpie](static/images/moonpie.png "Moonpie Aweee")
 
-![Moonie Moonpie](static/images/moonpie.png "Moonpie Aweee"){:width="300"}
+![BIG yawn Bucky](static/images/bucky.png "Sleepy Bucky"){:width="50%"}
 
 [↑↑↑](#){: .back-to-top}
 
 ---
 
-## Image Grid
+## Thumbnail Images
 
-Solo has basic support for including an image-grid into your single page site, it works with the following 
-configuration.
+* Thumbnail images have a width of 128px.
+* Click to scale.
 
-__Configuration:__
+{% include image/thumbnail.html src='static/images/moonpie.png' description='Wittle Moonpie' %}
 
-* The image-grid renders 4 columns by default, thus it's best to add images in multiples of 4.
-* Add your images into `_data/images.yml`.
-* Include `image-grid.html` on your page.
+[↑↑↑](#){: .back-to-top}
 
-{% include image-grid.html %}
+---
+
+## Figure Images
+
+* Figure images are thumbnail images with a caption.
+* Click to scale.
+
+{% include image/figure.html src='static/images/moonpie.png' description='Wittle Moonpie' %}
+
+[↑↑↑](#){: .back-to-top}
+
+---
+
+## Image Flexbox
+
+* Group images in a flexbox with 4 columns, add in multiples of 4.
+* Add image data into `_data/images.yml`.
+* Include `image/flexbox.html` on your page.
+* Click to pop.
+
+{% include image/flexbox.html %}
 
 [↑↑↑](#){: .back-to-top}
 
@@ -279,4 +299,28 @@ __Configuration:__
 
 ## License
 
-[MIT License](/LICENSE)
+```text
+MIT License (MIT)
+
+Copyright (c) 2022 Corbs
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+```
+
+[↑↑↑](#){: .back-to-top}

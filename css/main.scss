@@ -5,7 +5,7 @@
 
 @import "solo/variables";
 @import "solo/normalize";
-@import "solo/themes/{{ site.style }}";
+@import "solo/themes/{{ site.style | default: 'default' }}";
 @import "solo/base";
 @import "solo/tables";
 @import "solo/header";

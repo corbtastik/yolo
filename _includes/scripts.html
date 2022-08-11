@@ -16,21 +16,38 @@ codeCopyElements.forEach((codeCopyElement, index) => {
     });
 });
 
-const igModal = document.getElementById("ig-modal");
-const igModalContent = document.getElementById("ig-modal-content");
-const igModalCaption = document.getElementById("ig-modal-caption");
-const igModalClose = document.getElementsByClassName("ig-modal-close")[0];
-const igImages = document.querySelectorAll('.ig-image');
+const imageModal = document.getElementById("image-modal");
+const imageModalContent = document.getElementById("image-modal-content");
+const imageModalCaption = document.getElementById("image-modal-caption");
+const imageModalClose = document.getElementsByClassName("image-modal-close")[0];
+const images = document.querySelectorAll('.image-item');
 
-igModalClose.onclick = function() {
-    igModal.style.display = "none";
+imageModalClose.onclick = function() {
+    imageModal.style.display = "none";
 }
 
-igImages.forEach((igImage, index) => {
-    igImage.onclick = function() {
-        igModal.style.display = "block";
-        igModalContent.src = this.src;
-        igModalCaption.innerHTML = this.alt;
-    }
+images.forEach((image, index) => {
+    image.onclick = function() {
+        imageModal.style.display = "block";
+        imageModalContent.src = this.src;
+        imageModalCaption.innerHTML = this.alt;
+    };
 });
+
+const imageElements = document.querySelectorAll('.image');
+
+imageElements.forEach((imageElement, index) => {
+    let isImageBig = false;
+    let origWidth = imageElement.style.width;
+    imageElement.addEventListener("click", () => {
+        if (isImageBig) {
+            imageElement.style.width = origWidth;
+            isImageBig = false;
+        } else {
+            imageElement.style.width = "100%";
+            isImageBig = true;
+        }
+    });
+});
+
 </script>

@@ -1,5 +1,5 @@
 // ----------------------------------------------------------------------------
-// Images stylesheet
+// Base styles for image related HTML elements.
 // ----------------------------------------------------------------------------
 img {
   border-radius: 0.5em;
@@ -8,29 +8,65 @@ img {
   max-width: 100%;
 }
 
-.ig-image {
+figure {
+  img {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    border-radius: 0.5em;
+    width: 128px;
+  }
+
+  figcaption {
+    text-align: center;
+  }
+}
+
+// ----------------------------------------------------------------------------
+// Custom styles for image related HTML elements.
+// ----------------------------------------------------------------------------
+.image {
+  border: none;
   border-radius: 0.5em;
   padding: .2em;
 }
 
-.ig-link {
+.image-thumbnail {
+  width: 128px;
+  transition: 1s;
+}
+
+.image-link {
   &:is(:hover) {
     opacity: 0.3;
     filter: grayscale(100%);
   }
 }
 
-.ig-row {
+// ----------------------------------------------------------------------------
+// Styles for an image grid (flexbox) elements.
+// ----------------------------------------------------------------------------
+.image-row {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
-.ig-column {
+.image-column {
   flex: 25%;
   max-width: 25%;
 }
 
-.ig-modal {
+.image-item {
+  border: none;
+  border-radius: 0.5em;
+  padding: .2em;
+}
+
+// ----------------------------------------------------------------------------
+// Styles for an image modal (pop out).
+// ----------------------------------------------------------------------------
+.image-modal {
   display: none;
   position: fixed;
   z-index: 1;
@@ -43,14 +79,14 @@ img {
   background-color: $background-color-darker;
 }
 
-.ig-modal-content {
+.image-modal-content {
   margin: auto;
   display: block;
   width: 80%;
   max-width: 700px;
 }
 
-#ig-modal-caption {
+#image-modal-caption {
   margin: auto;
   display: block;
   width: 80%;
@@ -61,7 +97,7 @@ img {
   height: 150px;
 }
 
-.ig-modal-content, #ig-modal-caption {
+.image-modal-content, #image-modal-caption {
   animation-name: zoom;
   animation-duration: 0.6s;
 }
@@ -71,7 +107,7 @@ img {
   to {transform:scale(1)}
 }
 
-.ig-modal-close {
+.image-modal-close {
   position: absolute;
   top: 15px;
   right: 35px;
@@ -81,15 +117,15 @@ img {
   transition: 0.3s;
 }
 
-.ig-modal-close:hover,
-.ig-modal-close:focus {
+.image-modal-close:hover,
+.image-modal-close:focus {
   color: $text-color;
   text-decoration: none;
   cursor: pointer;
 }
 
 @media only screen and (max-width: 700px){
-  .ig-modal-content {
+  .image-modal-content {
     width: 100%;
   }
 }
