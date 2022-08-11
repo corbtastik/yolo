@@ -31,13 +31,13 @@ jekyll serve
 
 ---
 
-## Customize
+## Style
 
-The colors, typography and site logo can be customized to your tastes. The "corbs" theme is enabled by default.
+The colors, typography and site logo can be styled to your tastes.
 
-* To add a custom theme, copy one of the examples in `_sass/solo/themes` to a new scss file. For example `_mytheme.scss`.
+* Copy one of the examples in `_sass/solo/themes` to a new scss file.
 * Provide color values for each variable.
-* Enable your theme by editing `_sass/_solo.scss` and importing it.
+* Enable by setting `style` in `_config.yml`.
 
 {% include sampler.html %}
 
@@ -246,9 +246,9 @@ AND   price <= 10000
 
 > The samples below demonstrate using [kramdown](https://github.com/gettalong/kramdown) to render images, kramdown is the default markdown converter for Jekyll.
 
-![BIG yawn Bucky](static/images/bucky.png "Sleepy Bucky")
+![Moonie Moonpie](static/images/moonpie.png "Moonpie Aweee")
 
-![Moonie Moonpie](static/images/moonpie.png "Moonpie Aweee"){:width="300"}
+![BIG yawn Bucky](static/images/bucky.png "Sleepy Bucky"){:width="50%"}
 
 [↑↑↑](#){: .back-to-top}
 
@@ -261,12 +261,18 @@ AND   price <= 10000
 
 {% include image/thumbnail.html src='static/images/moonpie.png' description='Wittle Moonpie' %}
 
+[↑↑↑](#){: .back-to-top}
+
+---
+
 ## Figure Images
 
 * Figure images are thumbnail images with a caption.
 * Click to scale.
 
 {% include image/figure.html src='static/images/moonpie.png' description='Wittle Moonpie' %}
+
+[↑↑↑](#){: .back-to-top}
 
 ---
 
@@ -293,4 +299,28 @@ AND   price <= 10000
 
 ## License
 
-[MIT License](/LICENSE)
+```text
+MIT License (MIT)
+
+Copyright (c) 2022 Corbs
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+```
+
+[↑↑↑](#){: .back-to-top}
