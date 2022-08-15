@@ -8,7 +8,7 @@ __Goals for Yolo:__
 * __Keep it simple__: No dependencies other than [jekyll](https://jekyllrb.com/).
 * __Make it customizable__: Bring your own colors and fonts.
 
-The one and only one "implementation" page is the one you're looking at.
+The one and only one "implementation" page is [`index.md`](/index.md).
 
 ---
 
