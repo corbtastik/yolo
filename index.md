@@ -54,7 +54,7 @@ The colors, typography and site logo can be styled to your tastes.
 * [Tables](#tables)
 * [Markdown Images](#markdown-images)
 * [Thumbnail Images](#thumbnail-images)
-* [Figure Images](#figure-images)
+* [Figure Images](#thumbnail-figure-images)
 * [Image Flexbox](#image-flexbox)
 * [Videos](#videos)
 
@@ -246,31 +246,290 @@ AND   price <= 10000
 
 > The samples below demonstrate using [kramdown](https://github.com/gettalong/kramdown) to render images, kramdown is the default markdown converter for Jekyll.
 
-![Moonie Moonpie](static/images/moonpie.png "Moonpie Aweee")
+![Moonie Moonpie](assets/images/moonpie.png "Moonpie Aweee")
 
-![BIG yawn Bucky](static/images/bucky.png "Sleepy Bucky"){:width="50%"}
+![BIG yawn Bucky](assets/images/bucky.png "Sleepy Bucky")
 
 [↑↑↑](#){: .back-to-top}
 
 ---
+
+## CSS Images
+
+### Square Images 
+
+__16x16__
+
+<img class="image is-16-x-16" src="assets/images/general/drive-in.png">
+
+__24x24__
+
+<img class="image is-24-x-24" src="assets/images/general/drive-in.png">
+
+__32x32__
+
+<img class="image is-32-x-32" src="assets/images/general/drive-in.png">
+
+__48x48__
+
+<img class="image is-48-x-48" src="assets/images/general/drive-in.png">
+
+__64x64__
+
+<img class="image is-64-x-64" src="assets/images/general/drive-in.png">
+
+__96x96__
+
+<img class="image is-96-x-96" src="assets/images/general/drive-in.png">
+
+__128x128__
+
+<img class="image is-128-x-128" src="assets/images/general/drive-in.png">
+
+__192x192__
+
+<img class="image is-192-x-192" src="assets/images/general/drive-in.png">
+
+__256x256__
+
+<img class="image is-256-x-256" src="assets/images/general/drive-in.png">
+
+__384x384__
+
+<img class="image is-384-x-384" src="assets/images/general/drive-in.png">
+
+__448x448__
+
+<img class="image is-448-x-448" src="assets/images/general/drive-in.png">
+
+__512x512__
+
+<img class="image is-512-x-512" src="assets/images/general/drive-in.png">
+
+__640x640__
+
+<img class="image is-640-x-640" src="assets/images/general/drive-in.png">
+
+---
+
+### 4-by-3 Ratio Images
+
+__100-by-75__
+
+<img class="image is-100-by-75" src="assets/images/general/bluebonnet.png">
+
+__120-by-90__
+
+<img class="image is-120-by-90" src="assets/images/general/bluebonnet.png">
+
+__128-by-96__
+
+<img class="image is-128-by-96" src="assets/images/general/bluebonnet.png">
+
+__160-by-120__
+
+<img class="image is-160-by-120" src="assets/images/general/bluebonnet.png">
+
+__200-by-150__
+
+<img class="image is-200-by-150" src="assets/images/general/bluebonnet.png">
+
+__240-by-180__
+
+<img class="image is-240-by-180" src="assets/images/general/bluebonnet.png">
+
+__256-by-192__
+
+<img class="image is-256-by-192" src="assets/images/general/bluebonnet.png">
+
+__320-by-240__
+
+<img class="image is-320-by-240" src="assets/images/general/bluebonnet.png">
+
+__400-by-300__
+
+<img class="image is-400-by-300" src="assets/images/general/bluebonnet.png">
+
+__480-by-360__
+
+<img class="image is-480-by-360" src="assets/images/general/bluebonnet.png">
+
+__512-by-384__
+
+<img class="image is-512-by-384" src="assets/images/general/bluebonnet.png">
+
+__640-by-480__
+
+<img class="image is-640-by-480" src="assets/images/general/bluebonnet.png">
+
+---
+
+### 3-by-4 Ratio Images
+
+__75-by-100__
+
+<img class="image is-75-by-100" src="assets/images/general/bluebonnet.png">
+
+__90-by-120__
+
+<img class="image is-90-by-120" src="assets/images/general/bluebonnet.png">
+
+__96-by-128__
+
+<img class="image is-96-by-128" src="assets/images/general/bluebonnet.png">
+
+__120-by-160__
+
+<img class="image is-120-by-160" src="assets/images/general/bluebonnet.png">
+
+__150-by-200__
+
+<img class="image is-150-by-200" src="assets/images/general/bluebonnet.png">
+
+__180-by-240__
+
+<img class="image is-180-by-240" src="assets/images/general/bluebonnet.png">
+
+__192-by-256__
+
+<img class="image is-192-by-256" src="assets/images/general/bluebonnet.png">
+
+__240-by-320__
+
+<img class="image is-240-by-320" src="assets/images/general/bluebonnet.png">
+
+__300-by-400__
+
+<img class="image is-300-by-400" src="assets/images/general/bluebonnet.png">
+
+__360-by-480__
+
+<img class="image is-360-by-480" src="assets/images/general/bluebonnet.png">
+
+__384-by-512__
+
+<img class="image is-384-by-512" src="assets/images/general/bluebonnet.png">
+
+__480-by-640__
+
+<img class="image is-480-by-640" src="assets/images/general/bluebonnet.png">
+
+### 16-by-9 Ratio Images
+
+__112-by-63__
+
+<img class="image is-112-by-63" src="assets/images/general/bluebonnet.png">
+
+__128-by-72__
+
+<img class="image is-128-by-72" src="assets/images/general/bluebonnet.png">
+
+__144-by-81__
+
+<img class="image is-144-by-81" src="assets/images/general/bluebonnet.png">
+
+__160-by-90__
+
+<img class="image is-160-by-90" src="assets/images/general/bluebonnet.png">
+
+__192-by-108__
+
+<img class="image is-192-by-108" src="assets/images/general/bluebonnet.png">
+
+__224-by-126__
+
+<img class="image is-224-by-126" src="assets/images/general/bluebonnet.png">
+
+__256-by-144__
+
+<img class="image is-256-by-144" src="assets/images/general/bluebonnet.png">
+
+__320-by-180__
+
+<img class="image is-320-by-180" src="assets/images/general/bluebonnet.png">
+
+__400-by-225__
+
+<img class="image is-400-by-225" src="assets/images/general/bluebonnet.png">
+
+__512-by-288__
+
+<img class="image is-512-by-288" src="assets/images/general/bluebonnet.png">
+
+__640-by-360__
+
+<img class="image is-640-by-360" src="assets/images/general/bluebonnet.png">
+
+### 9-by-16 Ratio Images
+
+__63-by-112__
+
+<img class="image is-63-by-112" src="assets/images/general/bluebonnet.png">
+
+__72-by-128__
+
+<img class="image is-72-by-128" src="assets/images/general/bluebonnet.png">
+
+__81-by-144__
+
+<img class="image is-81-by-144" src="assets/images/general/bluebonnet.png">
+
+__90-by-160__
+
+<img class="image is-90-by-160" src="assets/images/general/bluebonnet.png">
+
+__108-by-192__
+
+<img class="image is-108-by-192" src="assets/images/general/bluebonnet.png">
+
+__126-by-224__
+
+<img class="image is-126-by-224" src="assets/images/general/bluebonnet.png">
+
+__144-by-256__
+
+<img class="image is-144-by-256" src="assets/images/general/bluebonnet.png">
+
+__180-by-320__
+
+<img class="image is-180-by-320" src="assets/images/general/bluebonnet.png">
+
+__225-by-400__
+
+<img class="image is-225-by-400" src="assets/images/general/bluebonnet.png">
+
+__270-by-480__
+
+<img class="image is-270-by-480" src="assets/images/general/bluebonnet.png">
+
+__288-by-512__
+
+<img class="image is-288-by-512" src="assets/images/general/bluebonnet.png">
+
+__360-by-640__
+
+<img class="image is-360-by-640" src="assets/images/general/bluebonnet.png">
 
 ## Thumbnail Images
 
-* Thumbnail images have a width of 128px.
-* Click to scale.
+{%
+  include image/image.html
+  classes="is-512-by-288"
+  src="assets/images/general/bluebonnet.png"
+%}
 
-{% include image/thumbnail.html src='static/images/moonpie.png' description='Wittle Moonpie' %}
+{%
+  include image/image.html
+  classes="is-512-by-288"
+  src="assets/images/general/bluebonnet.png"
+  description="Texas Bluebonnet"
+%}
 
 [↑↑↑](#){: .back-to-top}
 
 ---
 
-## Figure Images
-
-* Figure images are thumbnail images with a caption.
-* Click to scale.
-
-{% include image/figure.html src='static/images/moonpie.png' description='Wittle Moonpie' %}
+## Circle Images
 
 [↑↑↑](#){: .back-to-top}
 

@@ -3,7 +3,7 @@ title: Solo, a single page Jekyll Theme
 tag_text: Solo
 description: Solo is a Jekyll theme that supports single-page websites only, but supports them well. Yes, it’s responsive.
 # Site customizations
-logo: static/images/logo.png
+logo: assets/images/logo.png
 style: corbs
 # Build settings
 version: v1.1

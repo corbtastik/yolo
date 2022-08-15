@@ -1,4 +1,7 @@
 <script>
+// ----------------------------------------------------------------------------------------------------------------
+// Copy code snippet functions
+// ----------------------------------------------------------------------------------------------------------------
 const codeBlocks = document.querySelectorAll('.code-header + .highlighter-rouge');
 const codeCopyElements = document.querySelectorAll('.code-header');
 
@@ -15,7 +18,9 @@ codeCopyElements.forEach((codeCopyElement, index) => {
         }, 2000);
     });
 });
-
+// ----------------------------------------------------------------------------------------------------------------
+// Image Grid modal that shows an image when clicked
+// ----------------------------------------------------------------------------------------------------------------
 const imageModal = document.getElementById("image-modal");
 const imageModalContent = document.getElementById("image-modal-content");
 const imageModalCaption = document.getElementById("image-modal-caption");
@@ -33,18 +38,23 @@ images.forEach((image, index) => {
         imageModalCaption.innerHTML = this.alt;
     };
 });
-
+// ----------------------------------------------------------------------------------------------------------------
+// Function to scale an image when clicked
+// ----------------------------------------------------------------------------------------------------------------
 const imageElements = document.querySelectorAll('.image');
 
 imageElements.forEach((imageElement, index) => {
     let isImageBig = false;
     let origWidth = imageElement.style.width;
+    let origHeight = imageElement.style.height;
     imageElement.addEventListener("click", () => {
         if (isImageBig) {
             imageElement.style.width = origWidth;
+            imageElement.style.height = origHeight;
             isImageBig = false;
         } else {
             imageElement.style.width = "100%";
+            imageElement.style.height = "100%"
             isImageBig = true;
         }
     });

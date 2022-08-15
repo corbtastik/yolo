@@ -1,48 +1,88 @@
 // ----------------------------------------------------------------------------
+// Variables used in _images.scss
+// ----------------------------------------------------------------------------
+$thumbnail-width: 128px;
+$ratio-1-by-1: 16 24 32 48 64 96 128 192 256 384 448 512 640 !default;
+$ratio-4-by-3: 100 120 128 160 200 240 256 320 400 480 512 640 !default;
+$ratio-3-by-4:  75  90  96 120 150 180 192 240 300 360 384 480 !default;
+$ratio-16-by-9: 112 128 144 160 192 224 256 320 400 480 512 640 !default;
+$ratio-9-by-16:  63  72  81  90 108 126 144 180 225 270 288 360 !default;
+// ----------------------------------------------------------------------------
 // Base styles for image related HTML elements.
 // ----------------------------------------------------------------------------
-img {
-  border-radius: 0.5em;
-  margin: 0 auto;
-  display: block;
-  max-width: 100%;
-}
-
 figure {
-  img {
-    display: block;
-    margin-right: auto;
-    margin-left: auto;
-    border-radius: 0.5em;
-    width: 128px;
-  }
-
+  text-align: center;
   figcaption {
     text-align: center;
   }
 }
 
-// ----------------------------------------------------------------------------
-// Custom styles for image related HTML elements.
-// ----------------------------------------------------------------------------
-.image {
-  border: none;
-  border-radius: 0.5em;
-  padding: .2em;
-}
-
-.image-thumbnail {
-  width: 128px;
-  transition: 1s;
-}
-
-.image-link {
-  &:is(:hover) {
-    opacity: 0.3;
-    filter: grayscale(100%);
+img {
+  display: block;
+  position: relative;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  &.link {
+    //transition: 1s;
+    &:is(:hover) {
+      //opacity: 0.7;
+      //filter: grayscale(100%);
+    }
+  }
+  &.center {
+    margin: 0 auto;
+  }
+  &.radius {
+    border-radius: 0.5em;
+  }
+  &.cover {
+    object-fit: cover;
+  }
+  &.circle {
+    border-radius: 50%;
+  }
+  @each $dimension in $ratio-1-by-1 {
+    &.is-#{$dimension}-x-#{$dimension} {
+      height: $dimension * 1px;
+      width: $dimension * 1px;
+      object-fit: cover;
+      border-radius: #{$dimension / 1000}em;
+    }
+  }
+  @each $dimension in $ratio-4-by-3 {
+    &.is-#{$dimension}-by-#{$dimension * 3/4} {
+      width: $dimension * 1px;
+      aspect-ratio: 4/3;
+      object-fit: cover;
+      border-radius: #{$dimension / 1000}em;
+    }
+  }
+  @each $dimension in $ratio-3-by-4 {
+    &.is-#{$dimension}-by-#{$dimension * 4/3} {
+      width: $dimension * 1px;
+      aspect-ratio: 3/4;
+      object-fit: cover;
+      border-radius: #{$dimension / 1000}em;
+    }
+  }
+  @each $dimension in $ratio-16-by-9 {
+    &.is-#{$dimension}-by-#{$dimension * 9/16} {
+      width: $dimension * 1px;
+      aspect-ratio: 16/9;
+      object-fit: cover;
+      border-radius: #{$dimension / 1000}em;
+    }
+  }
+  @each $dimension in $ratio-9-by-16 {
+    &.is-#{$dimension}-by-#{$dimension * 16/9} {
+      width: $dimension * 1px;
+      aspect-ratio: 9/16;
+      object-fit: cover;
+      border-radius: #{$dimension / 1000}em;
+    }
   }
 }
-
 // ----------------------------------------------------------------------------
 // Styles for an image grid (flexbox) elements.
 // ----------------------------------------------------------------------------
