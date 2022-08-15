@@ -44,19 +44,8 @@ images.forEach((image, index) => {
 const imageElements = document.querySelectorAll('.image');
 
 imageElements.forEach((imageElement, index) => {
-    let isImageBig = false;
-    let origWidth = imageElement.style.width;
-    let origHeight = imageElement.style.height;
     imageElement.addEventListener("click", () => {
-        if (isImageBig) {
-            imageElement.style.width = origWidth;
-            imageElement.style.height = origHeight;
-            isImageBig = false;
-        } else {
-            imageElement.style.width = "100%";
-            imageElement.style.height = "100%"
-            isImageBig = true;
-        }
+        imageElement.classList.toggle("max");
     });
 });
 

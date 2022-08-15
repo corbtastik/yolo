@@ -2,11 +2,11 @@
 // Variables used in _images.scss
 // ----------------------------------------------------------------------------
 $thumbnail-width: 128px;
-$ratio-1-by-1: 16 24 32 48 64 96 128 192 256 384 448 512 640 !default;
-$ratio-4-by-3: 100 120 128 160 200 240 256 320 400 480 512 640 !default;
-$ratio-3-by-4:  75  90  96 120 150 180 192 240 300 360 384 480 !default;
-$ratio-16-by-9: 112 128 144 160 192 224 256 320 400 480 512 640 !default;
-$ratio-9-by-16:  63  72  81  90 108 126 144 180 225 270 288 360 !default;
+$ratio-1-by-1: 16 24 32 48 64 96 128 192 256 384 448 512 640;
+$ratio-4-by-3: 100 120 128 160 200 240 256 320 400 480 512 640;
+$ratio-3-by-4:  75  90  96 120 150 180 192 240 300 360 384 480;
+$ratio-16-by-9: 112 128 144 160 192 224 256 320 400 480 512 640;
+$ratio-9-by-16:  63  72  81  90 108 126 144 180 225 270 288 360;
 // ----------------------------------------------------------------------------
 // Base styles for image related HTML elements.
 // ----------------------------------------------------------------------------
@@ -48,64 +48,110 @@ img {
     width: $thumbnail-width;
     height: $thumbnail-width;
     border-radius: .128em;
+    &.max {
+      width: nth($ratio-1-by-1, -1) * 1px;
+      height: nth($ratio-1-by-1, -1) * 1px;
+      border-radius: #{nth($ratio-1-by-1, -1) / 1000}em;
+    }
   }
   &.circle {
     border-radius: 50%;
   }
+  // full 1 by 1 aspect ratios (i.e. is-128-x-128) with .max
   @each $dimension in $ratio-1-by-1 {
     &.is-#{$dimension}-x-#{$dimension} {
-      height: $dimension * 1px;
       width: $dimension * 1px;
+      height: $dimension * 1px;
       object-fit: cover;
       border-radius: #{$dimension / 1000}em;
+      &.max {
+        width: nth($ratio-1-by-1, -1) * 1px;
+        height: nth($ratio-1-by-1, -1) * 1px;
+        border-radius: #{nth($ratio-1-by-1, -1) / 1000}em;
+      }
     }
   }
+  // short 1 by 1 aspect ratios (i.e. is-128) with .max
   @each $dimension in $ratio-1-by-1 {
     &.is-#{$dimension} {
-      height: $dimension * 1px;
       width: $dimension * 1px;
+      height: $dimension * 1px;
       object-fit: cover;
       border-radius: #{$dimension / 1000}em;
+      &.max {
+        width: nth($ratio-1-by-1, -1) * 1px;
+        height: nth($ratio-1-by-1, -1) * 1px;
+        border-radius: #{nth($ratio-1-by-1, -1) / 1000}em;
+      }
     }
   }
+  // 4 by 3 aspect ratios (i.e. is-400-by-300) with .max
   @each $dimension in $ratio-4-by-3 {
     &.is-#{$dimension}-by-#{$dimension * 3/4} {
       width: $dimension * 1px;
       aspect-ratio: 4/3;
       object-fit: cover;
       border-radius: #{$dimension / 1000}em;
+      &.max {
+        width: nth($ratio-4-by-3, -1) * 1px;
+        height: nth($ratio-3-by-4, -1) * 1px;
+        border-radius: #{nth($ratio-4-by-3, -1) / 1000}em;
+      }
     }
   }
+  // 3 by 4 aspect ratios (i.e. is-300-by-400) with .max
   @each $dimension in $ratio-3-by-4 {
     &.is-#{$dimension}-by-#{$dimension * 4/3} {
       width: $dimension * 1px;
       aspect-ratio: 3/4;
       object-fit: cover;
       border-radius: #{$dimension / 1000}em;
+      &.max {
+        width: nth($ratio-3-by-4, -1) * 1px;
+        height: nth($ratio-4-by-3, -1) * 1px;
+        border-radius: #{nth($ratio-3-by-4, -1) / 1000}em;
+      }
     }
   }
+  // 16 by 9 aspect ratios (i.e. is-400-by-225) with .max
   @each $dimension in $ratio-16-by-9 {
     &.is-#{$dimension}-by-#{$dimension * 9/16} {
       width: $dimension * 1px;
       aspect-ratio: 16/9;
       object-fit: cover;
       border-radius: #{$dimension / 1000}em;
+      &.max {
+        width: nth($ratio-16-by-9, -1) * 1px;
+        height: nth($ratio-9-by-16, -1) * 1px;
+        border-radius: #{nth($ratio-16-by-9, -1) / 1000}em;
+      }
     }
   }
+  // 9 by 16 aspect ratios (i.e. is-225-by-400) with .max
   @each $dimension in $ratio-9-by-16 {
     &.is-#{$dimension}-by-#{$dimension * 16/9} {
       width: $dimension * 1px;
       aspect-ratio: 9/16;
       object-fit: cover;
       border-radius: #{$dimension / 1000}em;
+      &.max {
+        width: nth($ratio-9-by-16, -1) * 1px;
+        height: nth($ratio-16-by-9, -1) * 1px;
+        border-radius: #{nth($ratio-9-by-16, -1) / 1000}em;
+      }
     }
   }
+  // circle sizes (i.e. is-circle-128) with .max
   @each $dimension in $ratio-1-by-1 {
     &.is-circle-#{$dimension} {
       height: $dimension * 1px;
       width: $dimension * 1px;
       object-fit: cover;
       border-radius: 50%;
+      &.max {
+        width: nth($ratio-1-by-1, -1) * 1px;
+        height: nth($ratio-1-by-1, -1) * 1px;
+      }
     }
   }
 }
