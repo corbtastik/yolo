@@ -10,12 +10,19 @@ $ratio-9-by-16:  63  72  81  90 108 126 144 180 225 270 288 360 !default;
 // ----------------------------------------------------------------------------
 // Base styles for image related HTML elements.
 // ----------------------------------------------------------------------------
-figure {
-  text-align: center;
-  figcaption {
-    text-align: center;
-  }
-}
+//figure {
+//  text-align: center;
+//  img {
+//    display: block;
+//    position: relative;
+//    width: auto;
+//    height: auto;
+//    max-width: 100%;
+//  }
+//  figcaption {
+//    text-align: center;
+//  }
+//}
 
 img {
   display: block;
@@ -36,14 +43,25 @@ img {
   &.radius {
     border-radius: 0.5em;
   }
-  &.cover {
+  &.thumbnail {
     object-fit: cover;
+    width: $thumbnail-width;
+    height: $thumbnail-width;
+    border-radius: .128em;
   }
   &.circle {
     border-radius: 50%;
   }
   @each $dimension in $ratio-1-by-1 {
     &.is-#{$dimension}-x-#{$dimension} {
+      height: $dimension * 1px;
+      width: $dimension * 1px;
+      object-fit: cover;
+      border-radius: #{$dimension / 1000}em;
+    }
+  }
+  @each $dimension in $ratio-1-by-1 {
+    &.is-#{$dimension} {
       height: $dimension * 1px;
       width: $dimension * 1px;
       object-fit: cover;
@@ -80,6 +98,14 @@ img {
       aspect-ratio: 9/16;
       object-fit: cover;
       border-radius: #{$dimension / 1000}em;
+    }
+  }
+  @each $dimension in $ratio-1-by-1 {
+    &.is-circle-#{$dimension} {
+      height: $dimension * 1px;
+      width: $dimension * 1px;
+      object-fit: cover;
+      border-radius: 50%;
     }
   }
 }

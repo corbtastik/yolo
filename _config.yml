@@ -1,7 +1,7 @@
 # Site settings
-title: Solo, a single page Jekyll Theme
-tag_text: Solo
-description: Solo is a Jekyll theme that supports single-page websites only, but supports them well. Yes, it’s responsive.
+title: Yolo, a single page theme
+tag_text: Yolo
+description: Yolo is a theme for single page sites
 # Site customizations
 logo: assets/images/logo.png
 style: corbs
@@ -13,7 +13,7 @@ exclude:
   - "README.md"
   - "Makefile"
   - "sampler.Containerfile"
-  - "solo.Containerfile"
+  - "yolo.Containerfile"
   - ".site-build"
 sass:
   style: uncompressed

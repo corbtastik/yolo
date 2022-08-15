@@ -2,28 +2,28 @@
 # Make variables
 # =============================================================================
 CONTAINER_REGISTRY=quay.io/corbsmartin
-IMAGE_NAME=solo
+IMAGE_NAME=yolo
 IMAGE_TAG=v1.0
 OUTPUT_DIR=.site-build
 SAMPLER_DIR=sampler
-SAMPLER_DEMO_REPO=solo-sampler
+SAMPLER_DEMO_REPO=yolo-sampler
 # -----------------------------------------------------------------------------
 # Targets for working with a single site build of Solo.
 # -----------------------------------------------------------------------------
 clean:
 	@rm -rf $(OUTPUT_DIR)/*
 
-solo-site:
+yolo-site:
 	@mkdir -p $(OUTPUT_DIR)/$(IMAGE_NAME)
 	@echo "version: $(IMAGE_TAG)" > $(OUTPUT_DIR)/$(IMAGE_NAME)/_version.yml
 	@jekyll build --config _config.yml,$(OUTPUT_DIR)/$(IMAGE_NAME)/_version.yml
 
-solo-image: solo-site
-	@podman build -f solo.Containerfile -t $(IMAGE_NAME):$(IMAGE_TAG) .
+yolo-image: yolo-site
+	@podman build -f yolo.Containerfile -t $(IMAGE_NAME):$(IMAGE_TAG) .
 	@podman tag $(IMAGE_NAME):$(IMAGE_TAG) $(IMAGE_NAME):latest
 
 # -----------------------------------------------------------------------------
-# Targets for working with a the Solo sampler site.
+# Targets for working with a the Yolo sampler site.
 # -----------------------------------------------------------------------------
 sampler-image: sampler-site
 	@podman build -f sampler.Containerfile -t $(IMAGE_NAME)-sampler:$(IMAGE_TAG) .
