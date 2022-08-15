@@ -33,8 +33,6 @@ The colors, typography and site logo can be styled to your tastes.
 * Provide color values for each variable.
 * Enable by setting `style` in `_config.yml`.
 
-{% include sampler.html %}
-
 ---
 
 ### Example w/ "corbs" theme
