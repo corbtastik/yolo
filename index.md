@@ -2,13 +2,9 @@
 layout: default
 ---
 
-Solo the "[og](http://chibicode.github.io/solo)" version was previously developed, maintained and ultimately deprecated by [Shu Uesugi](https://github.com/chibicode).
+Yolo is a single page theme cut from the cloth of "[Solo](http://chibicode.github.io/solo)" which was previously developed and ultimately deprecated by [Shu Uesugi](https://github.com/chibicode).
 
-> [Solo](http://chibicode.github.io/solo) is a Jekyll theme that supports **single-page websites** only, but supports them well. Yes, it's responsive. - _[Shu Uesugi](https://github.com/chibicode)_
-
-The Solo must go on, so I'm gonna continue curating it as time allows.
-
-__Goals for continuing Solo:__
+__Goals for Yolo:__
 
 * __Keep living the Solo dream__: Support one and only one page.
 * __Keep it simple__: No dependencies other than [jekyll](https://jekyllrb.com/).
@@ -23,8 +19,8 @@ The one and only one "implementation" page is the one you're looking at.
 * You need [jekyll](https://jekyllrb.com/).
 
 ```bash
-git clone https://github.com/corbtastik/solo.git
-cd solo
+git clone https://github.com/corbtastik/yolo.git
+cd yolo
 jekyll build
 jekyll serve
 ```
@@ -35,7 +31,7 @@ jekyll serve
 
 The colors, typography and site logo can be styled to your tastes.
 
-* Copy one of the examples in `_sass/solo/themes` to a new scss file.
+* Copy one of the examples in `_sass/yolo/themes` to a new scss file.
 * Provide color values for each variable.
 * Enable by setting `style` in `_config.yml`.
 
@@ -43,7 +39,7 @@ The colors, typography and site logo can be styled to your tastes.
 
 ---
 
-## Cornucopia of Content
+## Yolo Content
 
 * [Headers](#headers)
 * [Paragraph Text](#paragraph-text)
@@ -53,8 +49,14 @@ The colors, typography and site logo can be styled to your tastes.
 * [Lists](#lists)
 * [Tables](#tables)
 * [Markdown Images](#markdown-images)
+* [Square Images](#square-images)
 * [Thumbnail Images](#thumbnail-images)
-* [Figure Images](#figure-images)
+* [Circle Images](#circle-images)
+* [Centered Images](#centered-images)
+* [4-by-3 Aspect Images](#4-by-3-aspect-images)
+* [3-by-4 Aspect Images](#3-by-4-aspect-images)
+* [16-by-9 Aspect Images](#16-by-9-aspect-images)
+* [9-by-16 Aspect Images](#9-by-16-aspect-images)
 * [Image Flexbox](#image-flexbox)
 * [Videos](#videos)
 
@@ -246,9 +248,43 @@ AND   price <= 10000
 
 > The samples below demonstrate using [kramdown](https://github.com/gettalong/kramdown) to render images, kramdown is the default markdown converter for Jekyll.
 
-![Moonie Moonpie](static/images/moonpie.png "Moonpie Aweee")
+![Moonie Moonpie](assets/images/moonpie.png "Moonpie Aweee")
 
-![BIG yawn Bucky](static/images/bucky.png "Sleepy Bucky"){:width="50%"}
+![BIG yawn Bucky](assets/images/bucky.png "Sleepy Bucky")
+
+[↑↑↑](#){: .back-to-top}
+
+---
+
+## Square Images 
+
+Square images can be added with the following classes.
+
+* __`is-16`__
+* __`is-24`__
+* __`is-32`__
+* __`is-48`__
+* __`is-64`__
+* __`is-96`__
+* __`is-128`__
+* __`is-192`__
+* __`is-256`__
+* __`is-384`__
+* __`is-448`__
+* __`is-512`__
+* __`is-640`__
+
+__is-128__
+
+<img class="image is-128" src="assets/images/general/drive-in.png">
+
+__is-256__
+
+<img class="image is-256" src="assets/images/general/drive-in.png">
+
+__is-512__
+
+<img class="image is-512" src="assets/images/general/drive-in.png">
 
 [↑↑↑](#){: .back-to-top}
 
@@ -256,21 +292,224 @@ AND   price <= 10000
 
 ## Thumbnail Images
 
-* Thumbnail images have a width of 128px.
-* Click to scale.
+Thumbnails are 128px x 128px and use the `thumbnail` class.
 
-{% include image/thumbnail.html src='static/images/moonpie.png' description='Wittle Moonpie' %}
+{%
+  include image/image.html
+  classes="thumbnail"
+  src="assets/images/general/big-face-bucky.png"
+%}
 
 [↑↑↑](#){: .back-to-top}
 
 ---
 
-## Figure Images
+## Circle Images
 
-* Figure images are thumbnail images with a caption.
-* Click to scale.
+Circle images can be added with the following classes.
 
-{% include image/figure.html src='static/images/moonpie.png' description='Wittle Moonpie' %}
+* __`is-circle-16`__
+* __`is-circle-24`__
+* __`is-circle-32`__
+* __`is-circle-48`__
+* __`is-circle-64`__
+* __`is-circle-96`__
+* __`is-circle-128`__
+* __`is-circle-192`__
+* __`is-circle-256`__
+* __`is-circle-384`__
+* __`is-circle-448`__
+* __`is-circle-512`__
+* __`is-circle-640`__
+
+__is-circle-128__
+
+{%
+  include image/image.html
+  classes="is-circle-128"
+  src="assets/images/moonpie.png"
+%}
+
+__is-circle-256__
+
+{%
+  include image/image.html
+  classes="is-circle-256"
+  src="assets/images/general/big-face-bucky.png"
+%}
+
+__is-circle-512__
+
+{%
+  include image/image.html
+  classes="is-circle-512"
+  src="assets/images/general/west-texas-wind-turbines.png"
+%}
+
+[↑↑↑](#){: .back-to-top}
+
+---
+
+## Centered Images
+
+Images can be centered by adding the `center` class.
+
+__is-256 center__
+
+{%
+  include image/image.html
+  classes="is-256 center"
+  src="assets/images/general/drive-in.png"
+%}
+
+__is-circle-256 center__
+
+{%
+  include image/image.html
+  classes="is-circle-256 center"
+  src="assets/images/general/big-face-bucky.png"
+%}
+
+__is-256-by-144 center__
+
+{%
+  include image/image.html
+  classes="is-256-by-144 center"
+  src="assets/images/general/bluebonnet.png"
+%}
+
+
+[↑↑↑](#){: .back-to-top}
+
+---
+
+## 4-by-3 Aspect Images
+
+4 by 3 aspect ratio images can be added with the following classes.
+
+* __`is-100-by-75`__
+* __`is-120-by-90`__
+* __`is-128-by-96`__
+* __`is-160-by-120`__
+* __`is-200-by-150`__
+* __`is-240-by-180`__
+* __`is-256-by-192`__
+* __`is-320-by-240`__
+* __`is-400-by-300`__
+* __`is-480-by-360`__
+* __`is-512-by-384`__
+* __`is-640-by-480`__
+
+__is-128-by-96__
+
+<img class="image is-128-by-96" src="assets/images/general/bluebonnet.png">
+
+__is-256-by-192__
+
+<img class="image is-256-by-192" src="assets/images/general/bluebonnet.png">
+
+__is-512-by-384__
+
+<img class="image is-512-by-384" src="assets/images/general/bluebonnet.png">
+
+[↑↑↑](#){: .back-to-top}
+
+---
+
+## 3-by-4 Aspect Images
+
+3 by 4 aspect ratio images can be added with the following classes.
+
+* __`is-75-by-100`__
+* __`is-90-by-120`__
+* __`is-96-by-128`__
+* __`is-120-by-160`__
+* __`is-150-by-200`__
+* __`is-180-by-240`__
+* __`is-192-by-256`__
+* __`is-240-by-320`__
+* __`is-300-by-400`__
+* __`is-360-by-480`__
+* __`is-384-by-512`__
+* __`is-480-by-640`__
+
+__is-150-by-200__
+
+<img class="image is-150-by-200" src="assets/images/general/bluebonnet.png">
+
+__is-240-by-320__
+
+<img class="image is-240-by-320" src="assets/images/general/bluebonnet.png">
+
+__is-384-by-512__
+
+<img class="image is-384-by-512" src="assets/images/general/bluebonnet.png">
+
+[↑↑↑](#){: .back-to-top}
+
+---
+
+## 16-by-9 Aspect Images
+
+16 by 9 aspect ratio images can be added with the following classes.
+
+* __`is-112-by-63`__
+* __`is-128-by-72`__
+* __`is-144-by-81`__
+* __`is-160-by-90`__
+* __`is-192-by-108`__
+* __`is-224-by-126`__
+* __`is-256-by-144`__
+* __`is-320-by-180`__
+* __`is-400-by-225`__
+* __`is-480-by-270`__
+* __`is-512-by-288`__
+* __`is-640-by-360`__
+
+__is-128-by-72__
+
+<img class="image is-128-by-72" src="assets/images/general/bluebonnet.png">
+
+__is-256-by-144__
+
+<img class="image is-256-by-144" src="assets/images/general/bluebonnet.png">
+
+__is-512-by-288__
+
+<img class="image is-512-by-288" src="assets/images/general/bluebonnet.png">
+
+[↑↑↑](#){: .back-to-top}
+
+---
+
+## 9-by-16 Aspect Images
+
+9 by 16 aspect ratio images can be added with the following classes.
+
+* __`is-63-by-112`__
+* __`is-72-by-128`__
+* __`is-81-by-144`__
+* __`is-90-by-160`__
+* __`is-108-by-192`__
+* __`is-126-by-224`__
+* __`is-144-by-256`__
+* __`is-180-by-320`__
+* __`is-225-by-400`__
+* __`is-270-by-480`__
+* __`is-288-by-512`__
+* __`is-360-by-640`__
+
+__is-144-by-256__
+
+<img class="image is-144-by-256" src="assets/images/general/bluebonnet.png">
+
+__is-225-by-400__
+
+<img class="image is-225-by-400" src="assets/images/general/bluebonnet.png">
+
+__is-288-by-512__
+
+<img class="image is-288-by-512" src="assets/images/general/bluebonnet.png">
 
 [↑↑↑](#){: .back-to-top}
 

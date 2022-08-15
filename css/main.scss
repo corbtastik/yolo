@@ -3,14 +3,14 @@
 ---
 @charset "utf-8";
 
-@import "solo/variables";
-@import "solo/normalize";
-@import "solo/themes/{{ site.style | default: 'default' }}";
-@import "solo/base";
-@import "solo/tables";
-@import "solo/header";
-@import "solo/images";
-@import "solo/syntax";
+@import "yolo/variables";
+@import "yolo/normalize";
+@import "yolo/themes/{{ site.style | default: 'default' }}";
+@import "yolo/base";
+@import "yolo/tables";
+@import "yolo/header";
+@import "yolo/images";
+@import "yolo/syntax";
 
 .container {
   max-width: 40rem;
