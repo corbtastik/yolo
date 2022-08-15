@@ -20,7 +20,6 @@ $base0f: #C1291C !default;
 // ----------------------------------------------------------------------------
 // Fonts
 // ----------------------------------------------------------------------------
-@import url(//fonts.googleapis.com/css?family=Inconsolata:400,700|Montserrat:700);
-$base-font-family: Inconsolata, sans-serif !default;
-$secondary-font-family: Montserrat, sans-serif !default;
-$monospace-font-family: Inconsolata, monospace !default;
+$base-font-family: "Inconsolata", sans-serif !default;
+$secondary-font-family: "Montserrat", sans-serif !default;
+$monospace-font-family: "Source Code Pro", monospace !default;
