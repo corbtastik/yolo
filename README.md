@@ -41,6 +41,31 @@ Yolo demo - [https://corbtastik.github.io/yolo](https://corbtastik.github.io/yol
 
 ## Backlog
 
+### ASAP
+
+* [DONE] Image resize on click
+  * [DONE]Maintain aspect ratio of source image
+  * [DONE] Recompute border radius when at max
+* Add figure to image for caption display
+  * Test default alignment and center alignment
+* Add custom font configurations
+  * Primary font and code font
+* Image Flexbox, add next and previous links on image modal
+* Try different `back-to-top` styles
+* Try different `table` styles
+* Add option to collapse header (h2, h3, h4, h5, h6) sections
+* Add eye candy to image modal close button
+* Organize javascript code, remove from scripts.html, link javascript source into scripts.html
+* Implement pill tags that can be added to page
+
+### Mid-term
+
+* Move images into Google Cloud Storage, delete images in assets folder, link to GCS images
+* Build new Yolo container images, push to quay
+* Look into customizing syntax highlighter
+
+### Long-term
+
 * Yolo for [Eleventy](https://www.11ty.dev/).
 * Yolo for [Astro](https://astro.build/).
 
