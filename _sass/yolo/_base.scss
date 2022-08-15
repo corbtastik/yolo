@@ -2,7 +2,7 @@
 // Base elements stylesheet
 // ----------------------------------------------------------------------------
 html {
-  font: 16px/1.5 Inconsolata, sans-serif;
+  font: 16px/1.5 $base-font-family, sans-serif;
 }
 
 @media (min-width: 30rem) {
@@ -33,7 +33,7 @@ a:hover, a:focus {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: Montserrat, sans-serif;
+  font-family: $secondary-font-family, sans-serif;
   margin: 0 0 0.5rem -0.1rem /* align left edge */;
   line-height: 1;
   color: $text-color;

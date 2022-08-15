@@ -35,7 +35,7 @@ The colors, typography and site logo can be styled to your tastes.
 
 ---
 
-### Example w/ "corbs" theme
+### Demo w/ "corbs" theme
 
 Yolo demo - [https://corbtastik.github.io/yolo](https://corbtastik.github.io/yolo)
 
@@ -46,10 +46,12 @@ Yolo demo - [https://corbtastik.github.io/yolo](https://corbtastik.github.io/yol
 * [DONE] Image resize on click
   * [DONE]Maintain aspect ratio of source image
   * [DONE] Recompute border radius when at max
-* Add figure to image for caption display
-  * Test default alignment and center alignment
 * Add custom font configurations
   * Primary font and code font
+* Add figure to image for caption display
+  * Test default alignment and center alignment
+* Add custom 404.html page
+* Ensure themes have a hyperlink color that's different from other text colors.
 * Image Flexbox, add next and previous links on image modal
 * Try different `back-to-top` styles
 * Try different `table` styles
@@ -57,6 +59,8 @@ Yolo demo - [https://corbtastik.github.io/yolo](https://corbtastik.github.io/yol
 * Add eye candy to image modal close button
 * Organize javascript code, remove from scripts.html, link javascript source into scripts.html
 * Implement pill tags that can be added to page
+* Scrub and implement consistent size and dimension units.
+* Test responsiveness, collapsing and stacking.
 
 ### Mid-term
 
