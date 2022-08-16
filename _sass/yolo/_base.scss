@@ -5,7 +5,7 @@ html {
   font: 16px/1.5 $base-font-family, sans-serif;
 }
 
-@media (min-width: 30rem) {
+@media (min-width: 40rem) {
   html {
     font-size: 20px;
   }
@@ -17,7 +17,7 @@ body {
   background-color: $base-color;
 }
 
-@media (min-width: 30rem) {
+@media (min-width: 40rem) {
   body {
     margin-top: 3rem;
   }
