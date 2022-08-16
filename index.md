@@ -1,5 +1,9 @@
 ---
 layout: default
+tags:
+- yolo
+- single-page
+- jekyll
 ---
 
 Yolo is a single page theme cut from the cloth of "[Solo](http://chibicode.github.io/solo)" which was previously developed and ultimately deprecated by [Shu Uesugi](https://github.com/chibicode).

@@ -35,3 +35,28 @@
     border-radius: 0.5em;
   }
 }
+
+.subtitle {
+  color: $accent-color;
+  font-family: $secondary-font-family;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-style: italic;
+}
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  background-color: $pill-color;
+  color: $pill-text-color;
+  font-family: $monospace-font-family;
+  text-decoration: none;
+  padding: 0.25rem 1rem;
+  font-size: 16px;
+  border-radius: 3rem;
+}
+
+.pill:hover {
+  background-color: $pill-hover-color;
+  color: $pill-text-hover-color;
+}
