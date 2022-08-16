@@ -48,6 +48,8 @@ Yolo demo - [https://corbtastik.github.io/yolo](https://corbtastik.github.io/yol
   * [DONE] Recompute border radius when at max
 * [DONE] Add custom font configurations
   * [DONE] Primary font and code font
+* [DONE]Implement pill tags that can be added to page header.
+* [WIP] Theme colors swatches and fonts to Yolo Content
 * Organize javascript code, remove from scripts.html, link javascript source into scripts.html
 * Test and fix responsiveness, collapsing and stacking.
 * Add figure to image for caption display
@@ -59,11 +61,13 @@ Yolo demo - [https://corbtastik.github.io/yolo](https://corbtastik.github.io/yol
 * Try different `table` styles
 * Add option to collapse header (h2, h3, h4, h5, h6) sections
 * Add eye candy to image modal close button
-* Implement pill tags that can be added to page
 * Scrub and implement consistent size and dimension units.
+* Review each theme for readability.
+* Refactor current image-grid to use Bulma flexbox grid.
 
 ### Mid-term
 
+* [WIP] Integrate Bulma's responsive flexbox component.
 * Move images into Google Cloud Storage, delete images in assets folder, link to GCS images
 * Build new Yolo container images, push to quay
 * Look into customizing syntax highlighter

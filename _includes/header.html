@@ -10,7 +10,7 @@
         <span>
           {% for tag in page.tags %}
             {% capture tag_name %}{{ tag }}{% endcapture %}
-            <a href="/tags/#{{ tag_name | slugify }}" class="pill"><nobr>{{ tag_name }}</nobr></a>
+            <code class="pill"><nobr>{{ tag_name }}</nobr></code>
           {% endfor %}
         </span>
     </p>

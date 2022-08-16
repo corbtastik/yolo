@@ -14,7 +14,7 @@ html {
 body {
   margin: 2rem 0 5rem;
   color: $text-color;
-  background-color: $base-color;
+  background-color: $background-color;
 }
 
 @media (min-width: 40rem) {
@@ -54,35 +54,35 @@ h1 a {
 h2 {
   margin-top: 1.5rem;
   font-size: 2rem;
-  margin-bottom: 0.75rem;
+  margin-bottom: 1rem;
   color: $header-text-color;
 }
 
 h3 {
   margin-top: 1.5rem;
   font-size: 1.75rem;
-  margin-bottom: 0.75rem;
+  margin-bottom: 1rem;
   color: $header-text-color;
 }
 
 h4 {
   margin-top: 1.5rem;
   font-size: 1.5rem;
-  margin-bottom: 0.75rem;
+  margin-bottom: 1rem;
   color: $header-text-color;
 }
 
 h5 {
   margin-top: 1.5rem;
   font-size: 1.25rem;
-  margin-bottom: 0.75rem;
+  margin-bottom: 1rem;
   color: $header-text-color;
 }
 
 h6 {
   margin-top: 1.5rem;
   font-size: 1rem;
-  margin-bottom: 0.75rem;
+  margin-bottom: 1rem;
   color: $header-text-color;
 }
 

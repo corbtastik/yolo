@@ -3,10 +3,13 @@
 ---
 @charset "utf-8";
 
+@import "yolo/utilities/functions";
+@import "yolo/utilities/mixins";
 @import "yolo/variables";
 @import "yolo/normalize";
 @import "yolo/themes/{{ site.style | default: 'default' }}";
 @import "yolo/base";
+@import "yolo/grid";
 @import "yolo/tables";
 @import "yolo/header";
 @import "yolo/images";
@@ -26,7 +29,7 @@
 }
 
 .video {
-  text-align: center;
+  //text-align: center;
   width:100%;
   iframe {
     width: 300px;
@@ -47,8 +50,8 @@
 .pill {
   display: inline-flex;
   align-items: center;
-  background-color: $pill-color;
-  color: $pill-text-color;
+  background-color: $secondary-color;
+  color: $accent-color;
   font-family: $monospace-font-family;
   text-decoration: none;
   padding: 0.25rem 1rem;
@@ -57,6 +60,6 @@
 }
 
 .pill:hover {
-  background-color: $pill-hover-color;
-  color: $pill-text-hover-color;
+  background-color: $text-color;
+  color: $secondary-color;
 }

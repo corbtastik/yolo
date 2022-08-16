@@ -2,6 +2,7 @@
 // corbs theme
 // ----------------------------------------------------------------------------
 $base-color: #030f4b !default;
+$secondary-color: #342077 !default;
 
 $background-color: $base-color;
 $background-color-darker: #040a2e !default;
@@ -13,10 +14,3 @@ $code-background-color: #060E3F !default;
 $text-color-alt: #c21d8a !default;
 $text-color: #ff31b9 !default;
 $header-text-color: #00e5ff !default;
-
-$pill-color: #342077 !default;
-$pill-hover-color: #ff31b9 !default;
-$pill-text-color: #00b0ff !default;
-$pill-text-hover-color: #030f4b !default;
-$pill-count-color: #ff31b9 !default;
-$pill-count-hover-color: #030f4b !default;

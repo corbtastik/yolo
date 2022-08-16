@@ -43,8 +43,11 @@ The colors, typography and site logo can be styled to your tastes.
 
 ---
 
-## Yolo Content
+## Yolo Elements
 
+* [Colors](#colors)
+* [Fonts](#fonts)
+* [Grids](#grids)
 * [Headers](#headers)
 * [Paragraph Text](#paragraph-text)
 * [Blockquotes](#blockquotes)
@@ -63,6 +66,30 @@ The colors, typography and site logo can be styled to your tastes.
 * [9-by-16 Aspect Images](#9-by-16-aspect-images)
 * [Image Flexbox](#image-flexbox)
 * [Videos](#videos)
+
+---
+
+## Colors
+
+{% include colors.html %}
+
+[↑↑↑](#){: .back-to-top}
+
+---
+
+## Fonts
+
+{% include fonts.html %}
+
+[↑↑↑](#){: .back-to-top}
+
+---
+
+## Grids
+
+{% include grids.html %}
+
+[↑↑↑](#){: .back-to-top}
 
 ---
 
