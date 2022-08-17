@@ -12,7 +12,7 @@ __Goals for Yolo:__
 
 * __Keep living the Solo dream__: Support one and only one page.
 * __Keep it simple__: No dependencies other than [jekyll](https://jekyllrb.com/).
-* __Make it customizable__: Bring your own colors and fonts.
+* __Make it customizable__: Bring your own [colors](#colors) and [fonts](#typography).
 
 The one and only one "implementation" page is the one you're looking at.
 
@@ -46,8 +46,8 @@ The colors, typography and site logo can be styled to your tastes.
 ## Yolo Elements
 
 * [Colors](#colors)
-* [Fonts](#fonts)
-* [Grids](#grids)
+* [Typography](#typography)
+* [Flexbox](#flexbox)
 * [Headers](#headers)
 * [Paragraph Text](#paragraph-text)
 * [Blockquotes](#blockquotes)
@@ -77,17 +77,21 @@ The colors, typography and site logo can be styled to your tastes.
 
 ---
 
-## Fonts
+## Typography
 
-{% include fonts.html %}
+Yolo's typography implementation is based on [Bulma's Typography helpers](https://bulma.io/documentation/helpers/typography-helpers/).
+
+{% include typography.html %}
 
 [↑↑↑](#){: .back-to-top}
 
 ---
 
-## Grids
+## Flexbox
 
-{% include grids.html %}
+Yolo's flexbox implementation is based on [Bulma's "columns" interface](https://bulma.io/documentation/columns/).
+
+{% include flexbox.html %}
 
 [↑↑↑](#){: .back-to-top}
 
@@ -166,6 +170,7 @@ H1 is reserved for the site header and not shown here.
 
 ## Inline Text
 
+- Just plain text
 - **Bold text**
 - *Italicize text*
 - <abbr title="Abbreviation">Abbr (abbreviation)</abbr>

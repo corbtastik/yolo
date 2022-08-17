@@ -9,17 +9,14 @@
 @import "yolo/normalize";
 @import "yolo/themes/{{ site.style | default: 'default' }}";
 @import "yolo/base";
-@import "yolo/grid";
+@import "yolo/typography";
+@import "yolo/flexbox";
+@import "yolo/container";
 @import "yolo/tables";
 @import "yolo/header";
 @import "yolo/images";
 @import "yolo/syntax";
 
-.container {
-  max-width: 40rem;
-  margin: 0 auto;
-  padding: 0 1rem;
-}
 
 .back-to-top {
   display: block;
@@ -39,20 +36,12 @@
   }
 }
 
-.subtitle {
-  color: $accent-color;
-  font-family: $secondary-font-family;
-  margin-top: 0;
-  margin-bottom: 1rem;
-  font-style: italic;
-}
-
 .pill {
   display: inline-flex;
   align-items: center;
   background-color: $secondary-color;
   color: $accent-color;
-  font-family: $monospace-font-family;
+  font-family: $family-monospace;
   text-decoration: none;
   padding: 0.25rem 1rem;
   font-size: 16px;
@@ -62,4 +51,10 @@
 .pill:hover {
   background-color: $text-color;
   color: $secondary-color;
+}
+
+ul.no-bullets {
+  list-style-type: none; /* Remove bullets */
+  padding: 0; /* Remove padding */
+  margin: 0; /* Remove margins */
 }

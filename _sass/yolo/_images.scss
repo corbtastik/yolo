@@ -10,20 +10,6 @@ $ratio-9-by-16:  63  72  81  90 108 126 144 180 225 270 288 360;
 // ----------------------------------------------------------------------------
 // Base styles for image related HTML elements.
 // ----------------------------------------------------------------------------
-//figure {
-//  text-align: center;
-//  img {
-//    display: block;
-//    position: relative;
-//    width: auto;
-//    height: auto;
-//    max-width: 100%;
-//  }
-//  figcaption {
-//    text-align: center;
-//  }
-//}
-
 img {
   display: block;
   position: relative;
@@ -188,7 +174,7 @@ img {
   width: 100%;
   height: 100%;
   overflow: auto;
-  background-color: $background-color-darker;
+  background-color: $background-darker-color;
 }
 
 .image-modal-content {
@@ -234,10 +220,4 @@ img {
   color: $text-color;
   text-decoration: none;
   cursor: pointer;
-}
-
-@media only screen and (max-width: 700px){
-  .image-modal-content {
-    width: 100%;
-  }
 }

@@ -49,7 +49,8 @@ Yolo demo - [https://corbtastik.github.io/yolo](https://corbtastik.github.io/yol
 * [DONE] Add custom font configurations
   * [DONE] Primary font and code font
 * [DONE]Implement pill tags that can be added to page header.
-* [WIP] Theme colors swatches and fonts to Yolo Content
+* [DONE] Refactor color css names.
+* [DONE] Add theme colors swatches and fonts to Yolo Content.
 * Organize javascript code, remove from scripts.html, link javascript source into scripts.html
 * Test and fix responsiveness, collapsing and stacking.
 * Add figure to image for caption display
@@ -65,9 +66,10 @@ Yolo demo - [https://corbtastik.github.io/yolo](https://corbtastik.github.io/yol
 * Review each theme for readability.
 * Refactor current image-grid to use Bulma flexbox grid.
 
+
 ### Mid-term
 
-* [WIP] Integrate Bulma's responsive flexbox component.
+* [DONE] Integrate Bulma's responsive flexbox component.
 * Move images into Google Cloud Storage, delete images in assets folder, link to GCS images
 * Build new Yolo container images, push to quay
 * Look into customizing syntax highlighter

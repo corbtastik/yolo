@@ -4,75 +4,62 @@
 $column-gap: 0.50rem !default;
 
 .cell {
-  background-color: $accent-color;
+  background-color: $base-color;
+  color: $text-color;
   border-radius: 0.20rem;
-  color: $background-color-darker;
   padding: .25rem 0;
   position: relative;
   text-align: center;
-  &.default {
-    background-color: $base-color;
-    color: $text-color;
-    text-align: left;
-    padding: 1rem;
+  &.demo {
+    background-color: $accent-color;
+    color: $background-darker-color;
   }
   &.white {
     background-color: #fff;
     color: $background-color;
-    text-align: center;
-    padding: 1rem;
   }
   &.base-color {
     background-color: $base-color;
     color: $text-color;
-    text-align: left;
-    padding-left: .25rem;
   }
   &.secondary-color {
     background-color: $secondary-color;
-    text-align: left;
-    padding-left: .25rem;
   }
   &.background-color {
     background-color: $background-color;
-    text-align: left;
-    padding-left: .25rem;
+    border: 1px solid $accent-color;
   }
-  &.background-color-darker {
-    background-color: $background-color-darker;
-    text-align: left;
-    padding-left: .25rem;
+  &.background-darker-color {
+    background-color: $background-darker-color;
   }
   &.accent-color {
     background-color: $accent-color;
-    text-align: left;
-    padding-left: .25rem;
   }
   &.code-background-color {
     background-color: $code-background-color;
-    text-align: left;
-    padding-left: .25rem;
   }
-  &.text-color-alt {
-    background-color: $text-color-alt;
-    text-align: left;
-    padding-left: .25rem;
+  &.text-secondary-color {
+    background-color: $text-secondary-color;
   }
   &.text-color {
     background-color: $text-color;
-    text-align: left;
-    padding-left: .25rem;
   }
   &.header-text-color {
     background-color: $header-text-color;
-    text-align: left;
-    padding-left: .25rem;
   }
 }
 
 .cell.is-primary {
   background-color: $secondary-color;
   color: #fff;
+}
+
+.cell.is-circle-64 {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
 }
 
 .column {
