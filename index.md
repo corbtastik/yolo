@@ -31,9 +31,11 @@ jekyll serve
 
 ---
 
-## Style
+## Themes
 
-The colors, typography and site logo can be styled to your tastes.
+The colors, typography and site logo can be styled to your tastes. Yolo doesn't export a theme gem, nor does it implement an "according to hoyle" Jekyll theme.
+
+> "Theming" for Yolo is simply accomplished by providing a theme scss file as outlined below.
 
 * Copy one of the examples in `_sass/yolo/themes` to a new scss file.
 * Provide color values for each variable.
