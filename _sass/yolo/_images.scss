@@ -144,20 +144,8 @@ img {
 // ----------------------------------------------------------------------------
 // Styles for an image grid (flexbox) elements.
 // ----------------------------------------------------------------------------
-.image-row {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.image-column {
-  flex: 25%;
-  max-width: 25%;
-}
-
 .image-item {
   border: none;
-  border-radius: 0.5em;
   padding: .5rem 0;
 }
 
