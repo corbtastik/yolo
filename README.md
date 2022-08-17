@@ -25,9 +25,9 @@ jekyll serve
 
 ---
 
-## Style
+## Themes
 
-The colors, typography and site logo can be styled to your tastes.
+The colors, typography and site logo can be styled to your tastes. Yolo doesn't export a theme gem, nor does it implement an "according to hoyle" Jekyll theme. "Theming" for Yolo is simply accomplished by providing a theme scss file as outlined below. 
 
 * Copy one of the examples in `_sass/yolo/themes` to a new scss file.
 * Provide color values for each variable.
@@ -44,10 +44,13 @@ Yolo demo - [https://corbtastik.github.io/yolo](https://corbtastik.github.io/yol
 ### ASAP
 
 * [DONE] Image resize on click
-  * [DONE]Maintain aspect ratio of source image
+  * [DONE] Maintain aspect ratio of source image
   * [DONE] Recompute border radius when at max
 * [DONE] Add custom font configurations
   * [DONE] Primary font and code font
+* [DONE] Implement pill tags that can be added to page header.
+* [DONE] Refactor color css names.
+* [DONE] Add theme colors swatches and fonts to Yolo Content.
 * Organize javascript code, remove from scripts.html, link javascript source into scripts.html
 * Test and fix responsiveness, collapsing and stacking.
 * Add figure to image for caption display
@@ -59,11 +62,14 @@ Yolo demo - [https://corbtastik.github.io/yolo](https://corbtastik.github.io/yol
 * Try different `table` styles
 * Add option to collapse header (h2, h3, h4, h5, h6) sections
 * Add eye candy to image modal close button
-* Implement pill tags that can be added to page
 * Scrub and implement consistent size and dimension units.
+* Review each theme for readability.
+* Refactor current image-grid to use Bulma flexbox grid.
+
 
 ### Mid-term
 
+* [DONE] Integrate Bulma's responsive flexbox component.
 * Move images into Google Cloud Storage, delete images in assets folder, link to GCS images
 * Build new Yolo container images, push to quay
 * Look into customizing syntax highlighter

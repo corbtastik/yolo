@@ -3,20 +3,20 @@
 ---
 @charset "utf-8";
 
+@import "yolo/utilities/functions";
+@import "yolo/utilities/mixins";
 @import "yolo/variables";
 @import "yolo/normalize";
 @import "yolo/themes/{{ site.style | default: 'default' }}";
 @import "yolo/base";
+@import "yolo/typography";
+@import "yolo/flexbox";
+@import "yolo/container";
 @import "yolo/tables";
 @import "yolo/header";
 @import "yolo/images";
 @import "yolo/syntax";
 
-.container {
-  max-width: 40rem;
-  margin: 0 auto;
-  padding: 0 1rem;
-}
 
 .back-to-top {
   display: block;
@@ -26,7 +26,7 @@
 }
 
 .video {
-  text-align: center;
+  //text-align: center;
   width:100%;
   iframe {
     width: 300px;
@@ -36,20 +36,12 @@
   }
 }
 
-.subtitle {
-  color: $accent-color;
-  font-family: $secondary-font-family;
-  margin-top: 0;
-  margin-bottom: 1rem;
-  font-style: italic;
-}
-
 .pill {
   display: inline-flex;
   align-items: center;
-  background-color: $pill-color;
-  color: $pill-text-color;
-  font-family: $monospace-font-family;
+  background-color: $secondary-color;
+  color: $accent-color;
+  font-family: $family-monospace;
   text-decoration: none;
   padding: 0.25rem 1rem;
   font-size: 16px;
@@ -57,6 +49,12 @@
 }
 
 .pill:hover {
-  background-color: $pill-hover-color;
-  color: $pill-text-hover-color;
+  background-color: $text-color;
+  color: $secondary-color;
+}
+
+ul.no-bullets {
+  list-style-type: none; /* Remove bullets */
+  padding: 0; /* Remove padding */
+  margin: 0; /* Remove margins */
 }

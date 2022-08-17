@@ -3,7 +3,7 @@
 // ----------------------------------------------------------------------------
 
 pre, code {
-  font-family: $monospace-font-family;
+  font-family: $family-monospace;
   color: $accent-color;
 }
 
@@ -16,22 +16,22 @@ pre {
   padding: .3rem;
   vertical-align: middle;
   width: 100%;
-  background-color: $background-color-darker;
+  background-color: $background-darker-color;
   border-top-left-radius: 0.2em;
   border-top-right-radius: 0.2em;
 
   &::before {
-    background-color: $background-color-darker;;
+    background-color: $background-darker-color;
   }
 
   &:is(.copied, :hover) {
     background-color: $accent-color;
-    color: $background-color-darker;
+    color: $background-darker-color;
   }
 
   &.copied {
     background-color: $text-color;
-    color: $background-color-darker;
+    color: $background-darker-color;
   }
 }
 
@@ -43,7 +43,7 @@ figure.highlight {
   border-bottom-left-radius: 0.3em;
   background: $code-background-color;
   color: $base05;
-  font-family: $monospace-font-family;
+  font-family: $family-monospace;
   line-height: 1.8;
 
   > pre,

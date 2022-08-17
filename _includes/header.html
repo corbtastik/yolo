@@ -5,12 +5,12 @@
     </a>
     {% endif %}
     <h1><a href="./">{{ site.tag_text }}</a></h1>
-    <h4 class="subtitle">{{ site.description }}</h4>
+    <h4 class="is-italic">{{ site.description }}</h4>
     <p>
         <span>
           {% for tag in page.tags %}
             {% capture tag_name %}{{ tag }}{% endcapture %}
-            <a href="/tags/#{{ tag_name | slugify }}" class="pill"><nobr>{{ tag_name }}</nobr></a>
+            <code class="pill"><nobr>{{ tag_name }}</nobr></code>
           {% endfor %}
         </span>
     </p>

@@ -10,7 +10,7 @@
    ========================================================================== */
 
 html {
-    font-family: $base-font-family; /* 1 */
+    font-family: $family-primary; /* 1 */
     box-sizing: border-box;
     -ms-text-size-adjust: 100%; /* 2 */
     -webkit-text-size-adjust: 100%; /* 2 */
@@ -316,7 +316,7 @@ optgroup,
 select,
 textarea {
     margin: 0; /* 2 */
-    font-family: $base-font-family; /* 1 */
+    font-family: $family-primary; /* 1 */
     font-size: 100%; /* 1 */
     line-height: 1.15; /* 1 */
 }

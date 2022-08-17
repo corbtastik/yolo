@@ -12,7 +12,7 @@ __Goals for Yolo:__
 
 * __Keep living the Solo dream__: Support one and only one page.
 * __Keep it simple__: No dependencies other than [jekyll](https://jekyllrb.com/).
-* __Make it customizable__: Bring your own colors and fonts.
+* __Make it customizable__: Bring your own [colors](#colors) and [fonts](#typography).
 
 The one and only one "implementation" page is the one you're looking at.
 
@@ -31,9 +31,11 @@ jekyll serve
 
 ---
 
-## Style
+## Themes
 
-The colors, typography and site logo can be styled to your tastes.
+Yolo doesn't implement an "according to hoyle" Jekyll theme, but the colors, typography and site logo can be styled to your tastes.
+
+> "Theming" for Yolo is accomplished by providing a custom theme scss file as outlined below.
 
 * Copy one of the examples in `_sass/yolo/themes` to a new scss file.
 * Provide color values for each variable.
@@ -43,8 +45,11 @@ The colors, typography and site logo can be styled to your tastes.
 
 ---
 
-## Yolo Content
+## Yolo Elements
 
+* [Colors](#colors)
+* [Typography](#typography)
+* [Flexbox](#flexbox)
 * [Headers](#headers)
 * [Paragraph Text](#paragraph-text)
 * [Blockquotes](#blockquotes)
@@ -63,6 +68,34 @@ The colors, typography and site logo can be styled to your tastes.
 * [9-by-16 Aspect Images](#9-by-16-aspect-images)
 * [Image Flexbox](#image-flexbox)
 * [Videos](#videos)
+
+---
+
+## Colors
+
+{% include colors.html %}
+
+[↑↑↑](#){: .back-to-top}
+
+---
+
+## Typography
+
+Yolo's typography implementation is based on [Bulma's Typography helpers](https://bulma.io/documentation/helpers/typography-helpers/).
+
+{% include typography.html %}
+
+[↑↑↑](#){: .back-to-top}
+
+---
+
+## Flexbox
+
+Yolo's flexbox implementation is based on [Bulma's "columns" interface](https://bulma.io/documentation/columns/).
+
+{% include flexbox.html %}
+
+[↑↑↑](#){: .back-to-top}
 
 ---
 
@@ -139,6 +172,7 @@ H1 is reserved for the site header and not shown here.
 
 ## Inline Text
 
+- Just plain text
 - **Bold text**
 - *Italicize text*
 - <abbr title="Abbreviation">Abbr (abbreviation)</abbr>
@@ -156,6 +190,19 @@ H1 is reserved for the site header and not shown here.
 ## Code
 
 > __Tip:__ Click the snippet header to copy to clipboard.
+
+{% include code.html info="Bash script" %}
+```bash
+#!/bin/bash
+while true; do
+    read -p "Do you wish to continue (yes or no)? " yn
+    case $yn in
+        [Yy]* ) break;;
+        [Nn]* ) exit;;
+        * ) echo "Please answer yes or no.";;
+    esac
+done
+```
 
 {% include code.html info="WebUI.java" %}
 ```java

@@ -2,14 +2,15 @@
 // light theme
 // ----------------------------------------------------------------------------
 $base-color: #fff !default;
+$secondary-color: #6acfcb !default;
 
 $background-color: $base-color;
-$background-color-darker: #ccc !default;
+$background-darker-color: #ccc !default;
 
 $accent-color: #1f56d8 !default;
 
 $code-background-color: #000 !default;
 
-$text-color-alt: #333 !default;
+$text-secondary-color: #333 !default;
 $text-color: #000 !default;
 $header-text-color: #000 !default;

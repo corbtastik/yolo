@@ -1,12 +1,12 @@
 # Site settings
 title: Yolo, a single page theme
 tag_text: Yolo
-description: A theme for single page sites
+description: A single pager theme
 # Site customizations
 logo: assets/images/logo.png
 style: corbs
 # Build settings
-version: v1.1
+version: v1.2
 sampler: false
 markdown: kramdown
 exclude:
