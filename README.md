@@ -44,11 +44,11 @@ Yolo demo - [https://corbtastik.github.io/yolo](https://corbtastik.github.io/yol
 ### ASAP
 
 * [DONE] Image resize on click
-  * [DONE]Maintain aspect ratio of source image
+  * [DONE] Maintain aspect ratio of source image
   * [DONE] Recompute border radius when at max
 * [DONE] Add custom font configurations
   * [DONE] Primary font and code font
-* [DONE]Implement pill tags that can be added to page header.
+* [DONE] Implement pill tags that can be added to page header.
 * [DONE] Refactor color css names.
 * [DONE] Add theme colors swatches and fonts to Yolo Content.
 * Organize javascript code, remove from scripts.html, link javascript source into scripts.html
