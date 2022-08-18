@@ -6,7 +6,7 @@ description: A single pager theme
 logo: assets/images/logo.png
 style: corbs
 # Build settings
-version: v1.2
+version: v1.3
 sampler: false
 markdown: kramdown
 exclude:

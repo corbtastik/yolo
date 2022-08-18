@@ -2,7 +2,7 @@
 // dark theme
 // ----------------------------------------------------------------------------
 $base-color: #000 !default;
-$secondary-color: #000000 !default;
+$secondary-color: #404040 !default;
 
 $background-color: $base-color;
 $background-darker-color: $base-color !default;
@@ -13,4 +13,5 @@ $code-background-color: $base-color !default;
 
 $text-secondary-color: #aaa !default;
 $text-color: #fff !default;
+$text-code-color: #65e9fc !default;
 $header-text-color: #aaa !default;

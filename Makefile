@@ -45,17 +45,11 @@ sampler-site: sampler-init \
 	blue \
 	corbs \
 	dark \
-	dracula \
-	eightyfour \
-	githubdark \
 	green \
 	light \
-	monokai \
-	nightowl \
 	purple \
 	red \
-	soft \
-	solarized
+	soft
 	@jekyll build --config _config.yml,$(OUTPUT_DIR)/_sampler.yml,$(OUTPUT_DIR)/_version.yml
 	@cp -R _site/ $(OUTPUT_DIR)/$(SAMPLER_DIR)
 # -----------------------------------------------------------------------------
@@ -85,24 +79,6 @@ dark:
 		--config _config.yml,$(OUTPUT_DIR)/_style.yml,$(OUTPUT_DIR)/_sampler.yml,$(OUTPUT_DIR)/_version.yml \
 		--destination $(OUTPUT_DIR)/$(SAMPLER_DIR)/dark
 
-dracula:
-	@echo "style: dracula" > $(OUTPUT_DIR)/_style.yml
-	@jekyll build \
-		--config _config.yml,$(OUTPUT_DIR)/_style.yml,$(OUTPUT_DIR)/_sampler.yml,$(OUTPUT_DIR)/_version.yml \
-		--destination $(OUTPUT_DIR)/$(SAMPLER_DIR)/dracula
-
-eightyfour:
-	@echo "style: eightyfour" > $(OUTPUT_DIR)/_style.yml
-	@jekyll build \
-		--config _config.yml,$(OUTPUT_DIR)/_style.yml,$(OUTPUT_DIR)/_sampler.yml,$(OUTPUT_DIR)/_version.yml \
-		--destination $(OUTPUT_DIR)/$(SAMPLER_DIR)/eightyfour
-
-githubdark:
-	@echo "style: githubdark" > $(OUTPUT_DIR)/_style.yml
-	@jekyll build \
-		--config _config.yml,$(OUTPUT_DIR)/_style.yml,$(OUTPUT_DIR)/_sampler.yml,$(OUTPUT_DIR)/_version.yml \
-		--destination $(OUTPUT_DIR)/$(SAMPLER_DIR)/githubdark
-
 green:
 	@echo "style: green" > $(OUTPUT_DIR)/_style.yml
 	@jekyll build \
@@ -114,18 +90,6 @@ light:
 	@jekyll build \
 		--config _config.yml,$(OUTPUT_DIR)/_style.yml,$(OUTPUT_DIR)/_sampler.yml,$(OUTPUT_DIR)/_version.yml \
 		--destination $(OUTPUT_DIR)/$(SAMPLER_DIR)/light
-
-monokai:
-	@echo "style: monokai" > $(OUTPUT_DIR)/_style.yml
-	@jekyll build \
-		--config _config.yml,$(OUTPUT_DIR)/_style.yml,$(OUTPUT_DIR)/_sampler.yml,$(OUTPUT_DIR)/_version.yml \
-		--destination $(OUTPUT_DIR)/$(SAMPLER_DIR)/monokai
-
-nightowl:
-	@echo "style: nightowl" > $(OUTPUT_DIR)/_style.yml
-	@jekyll build \
-		--config _config.yml,$(OUTPUT_DIR)/_style.yml,$(OUTPUT_DIR)/_sampler.yml,$(OUTPUT_DIR)/_version.yml \
-		--destination $(OUTPUT_DIR)/$(SAMPLER_DIR)/nightowl
 
 purple:
 	@echo "style: purple" > $(OUTPUT_DIR)/_style.yml
@@ -144,9 +108,3 @@ soft:
 	@jekyll build \
 		--config _config.yml,$(OUTPUT_DIR)/_style.yml,$(OUTPUT_DIR)/_sampler.yml,$(OUTPUT_DIR)/_version.yml \
 		--destination $(OUTPUT_DIR)/$(SAMPLER_DIR)/soft
-
-solarized:
-	@echo "style: solarized" > $(OUTPUT_DIR)/_style.yml
-	@jekyll build \
-		--config _config.yml,$(OUTPUT_DIR)/_style.yml,$(OUTPUT_DIR)/_sampler.yml,$(OUTPUT_DIR)/_version.yml \
-		--destination $(OUTPUT_DIR)/$(SAMPLER_DIR)/solarized

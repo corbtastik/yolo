@@ -12,7 +12,7 @@ $column-gap: 0.50rem !default;
   text-align: center;
   &.demo {
     background-color: $accent-color;
-    color: $background-darker-color;
+    color: $text-code-color;
   }
   &.white {
     background-color: #fff;
@@ -46,6 +46,9 @@ $column-gap: 0.50rem !default;
   }
   &.header-text-color {
     background-color: $header-text-color;
+  }
+  &.text-code-color {
+    background-color: $text-code-color;
   }
 }
 
