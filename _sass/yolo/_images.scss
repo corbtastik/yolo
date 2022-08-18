@@ -16,6 +16,7 @@ img {
   width: auto;
   height: auto;
   max-width: 100%;
+  border-radius: 0.5em;
   &.link {
     //transition: 1s;
     &:is(:hover) {
@@ -145,8 +146,12 @@ img {
 // Styles for an image grid (flexbox) elements.
 // ----------------------------------------------------------------------------
 .image-item {
-  border: none;
-  padding: .5rem 0;
+  border-radius: 0.3rem;
+  margin: 1rem 0;
+  position: relative;
+  text-align: center;
+  width: inherit;
+  height: inherit;
 }
 
 // ----------------------------------------------------------------------------
@@ -169,14 +174,14 @@ img {
   margin: auto;
   display: block;
   width: 80%;
-  max-width: 700px;
+  max-width: 100%;
 }
 
 #image-modal-caption {
   margin: auto;
   display: block;
   width: 80%;
-  max-width: 700px;
+  max-width: 100%;
   text-align: center;
   color: $text-color;
   padding: 10px 0;

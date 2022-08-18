@@ -52,6 +52,9 @@ sampler-site: sampler-init \
 	soft
 	@jekyll build --config _config.yml,$(OUTPUT_DIR)/_sampler.yml,$(OUTPUT_DIR)/_version.yml
 	@cp -R _site/ $(OUTPUT_DIR)/$(SAMPLER_DIR)
+
+sampler-run: sampler-site
+	@python3 -m http.server --directory $(OUTPUT_DIR)/$(SAMPLER_DIR)
 # -----------------------------------------------------------------------------
 # Targets for running "jekyll build" for every Solo style.
 # -----------------------------------------------------------------------------

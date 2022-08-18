@@ -1,0 +1,69 @@
+<div class="columns">
+    <div class="column">
+        <img src="assets/images/general/dairy-palace.png" onclick="openModal();currentSlide(1)" class="lb-hover-shadow">
+    </div>
+    <div class="column">
+        <img src="assets/images/general/nacho.png" onclick="openModal();currentSlide(2)" class="lb-hover-shadow">
+    </div>
+    <div class="column">
+        <img src="assets/images/general/winter-tree.png" onclick="openModal();currentSlide(3)" class="lb-hover-shadow">
+    </div>
+    <div class="column">
+        <img src="assets/images/general/texas-evening.png" onclick="openModal();currentSlide(4)" class="lb-hover-shadow">
+    </div>
+</div>
+
+<!-- The lb-modal/Lightbox -->
+<div id="lb-myModal" class="lb-modal">
+    <span class="lb-close cursor" onclick="closeModal()">&times;</span>
+    <div class="lb-modal-content">
+
+        <div class="lb-mySlides">
+            <div class="lb-numbertext">1 / 4</div>
+            <img src="assets/images/general/dairy-palace.png">
+        </div>
+
+        <div class="lb-mySlides">
+            <div class="lb-numbertext">2 / 4</div>
+            <img src="assets/images/general/nacho.png">
+        </div>
+
+        <div class="lb-mySlides">
+            <div class="lb-numbertext">3 / 4</div>
+            <img src="assets/images/general/winter-tree.png">
+        </div>
+
+        <div class="lb-mySlides">
+            <div class="lb-numbertext">4 / 4</div>
+            <img src="assets/images/general/texas-evening.png">
+        </div>
+
+        <!-- Next/previous controls -->
+        <a class="lb-prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="lb-next" onclick="plusSlides(1)">&#10095;</a>
+
+        <!-- Caption text -->
+        <div class="lb-caption-container">
+            <p id="lb-caption"></p>
+        </div>
+
+        <!-- Thumbnail image controls -->
+        <div class="columns">
+            <div class="column">
+                <img class="lb-demo" src="assets/images/general/dairy-palace.png" onclick="currentSlide(1)" alt="Dairy Palace, Canton Texas">
+            </div>
+
+            <div class="column">
+                <img class="lb-demo" src="assets/images/general/nacho.png" onclick="currentSlide(2)" alt="Nachooooooo!!!">
+            </div>
+
+            <div class="column">
+                <img class="lb-demo" src="assets/images/general/winter-tree.png" onclick="currentSlide(3)" alt="Snow tree in Dallas">
+            </div>
+
+            <div class="column">
+                <img class="lb-demo" src="assets/images/general/texas-evening.png" onclick="currentSlide(4)" alt="Justa good ole evening in Texas.">
+            </div>
+        </div>
+    </div>
+</div>

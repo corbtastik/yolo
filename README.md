@@ -43,14 +43,20 @@ Yolo demo - [https://corbtastik.github.io/yolo](https://corbtastik.github.io/yol
 
 ### ASAP
 
-* Image flexbox, add radius to images.
+__Work-in-progress:__
+
+* Image Flexbox, add next and previous links on image modal.
+* Add support for Github Gist.
+* Add theme variable for table header color and use in code-header and table headers.
 * Verify Image responsiveness.
 * Add figure to image for caption display.
   * Test default alignment and center alignment.
-* Image Flexbox, add next and previous links on image modal.
 * Try different `back-to-top` styles.
 * Add eye candy to image modal close button.
 * Scrub and implement consistent size and dimension units.
+
+__Complete:__
+
 * [DONE] Image resize on click.
   * [DONE] Maintain aspect ratio of source image.
   * [DONE] Recompute border radius when at max.
@@ -67,6 +73,7 @@ Yolo demo - [https://corbtastik.github.io/yolo](https://corbtastik.github.io/yol
 * [DONE] Theme verification.
   * [DONE] Review each theme for readability.
   * [DONE] Ensure themes have a hyperlink color that's different from other text colors.
+* [DONE] Image flexbox, add radius to images.
 
 
 ### Mid-term
@@ -76,12 +83,20 @@ Yolo demo - [https://corbtastik.github.io/yolo](https://corbtastik.github.io/yol
 * Build new Yolo container images, push to quay.
 * Add option to collapse header (h2, h3, h4, h5, h6) sections.
 * Look into customizing syntax highlighter.
-* Add support for Github Gist.
+* Refactor syntax highlighter.
 
 ### Long-term
 
 * Yolo for [Eleventy](https://www.11ty.dev/).
 * Yolo for [Astro](https://astro.build/).
+
+### Tips
+
+* __Margin vs Padding:__
+  * __Margin:__ Use a margin when you want to adjust the spacing of an element.
+    * Margins aren’t a part of the element.
+  * __Padding:__ Use padding when you want to adjust the appearance of the element itself.
+    * Padding is part of the element.
 
 ## License
 

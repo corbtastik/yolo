@@ -20,7 +20,7 @@ The one and only one "implementation" page is the one you're looking at.
 
 ## Usage
 
-* You need [jekyll](https://jekyllrb.com/).
+You need [jekyll](https://jekyllrb.com/).
 
 ```bash
 git clone https://github.com/corbtastik/yolo.git
@@ -574,6 +574,14 @@ __is-288-by-512__
 * Click to pop.
 
 {% include image/flexbox.html %}
+
+[↑↑↑](#){: .back-to-top}
+
+---
+
+## Image Lightbox
+
+{% include image/lightbox.html %}
 
 [↑↑↑](#){: .back-to-top}
 

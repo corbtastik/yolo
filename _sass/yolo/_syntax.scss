@@ -17,6 +17,7 @@ pre {
   vertical-align: middle;
   width: 100%;
   background-color: $background-darker-color;
+  color: $text-color;
   border-top-left-radius: 0.2em;
   border-top-right-radius: 0.2em;
 
@@ -31,7 +32,6 @@ pre {
 
   &.copied {
     background-color: $text-color;
-    color: $background-darker-color;
   }
 }
 
