@@ -49,17 +49,31 @@ imageElements.forEach((imageElement, index) => {
 });
 
 // ----------------------------------------------------------------------------------------------------------------
-// Lightbox modal
+// Lightbox logic
 // ----------------------------------------------------------------------------------------------------------------
+let lbIsOpen = false;
+let slideIndex = 1;
+// Handle keydown events for lightbox next and prev links.
+document.onkeydown = function(event) {
+    if(lbIsOpen) {
+        if (event.key === 'ArrowLeft' || (event.key === '<' && event.shiftKey)) {
+            plusSlides(-1);
+        } else if (event.key === 'ArrowRight' || (event.key === '>' && event.shiftKey)) {
+            plusSlides(1);
+        }
+    }
+};
+
 function openModal() {
     document.getElementById("lb-modal").style.display = "block";
+    lbIsOpen = true;
 }
 
 function closeModal() {
     document.getElementById("lb-modal").style.display = "none";
+    lbIsOpen = false;
 }
 
-let slideIndex = 1;
 showSlides(slideIndex);
 
 function plusSlides(n) {

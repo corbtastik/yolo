@@ -27,7 +27,7 @@
   description: "Devils Tower, Wyoming"
 - name: "west-texas-wind-turbines"
   src: "assets/images/general/west-texas-wind-turbines.png"
-  description: "West Texas wind turbines"
+  description: "West Texas wind farm."
 - name: "winter-tree"
   src: "assets/images/general/winter-tree.png"
   description: "Snow tree in Dallas"

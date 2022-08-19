@@ -84,6 +84,7 @@ __Complete:__
 * Add option to collapse header (h2, h3, h4, h5, h6) sections.
 * Look into customizing syntax highlighter.
 * Refactor syntax highlighter.
+* Support for including Instagram images.
 
 ### Long-term
 
