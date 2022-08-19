@@ -67,6 +67,7 @@ Yolo doesn't implement an "according to hoyle" Jekyll theme, but the colors, typ
 * [16-by-9 Aspect Images](#16-by-9-aspect-images)
 * [9-by-16 Aspect Images](#9-by-16-aspect-images)
 * [Image Flexbox](#image-flexbox)
+* [Image Lightbox](#image-lightbox)
 * [Videos](#videos)
 
 ---
