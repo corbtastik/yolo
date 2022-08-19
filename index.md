@@ -20,7 +20,7 @@ The one and only one "implementation" page is the one you're looking at.
 
 ## Usage
 
-* You need [jekyll](https://jekyllrb.com/).
+You need [jekyll](https://jekyllrb.com/).
 
 ```bash
 git clone https://github.com/corbtastik/yolo.git
@@ -66,7 +66,7 @@ Yolo doesn't implement an "according to hoyle" Jekyll theme, but the colors, typ
 * [3-by-4 Aspect Images](#3-by-4-aspect-images)
 * [16-by-9 Aspect Images](#16-by-9-aspect-images)
 * [9-by-16 Aspect Images](#9-by-16-aspect-images)
-* [Image Flexbox](#image-flexbox)
+* [Image Lightbox](#image-lightbox)
 * [Videos](#videos)
 
 ---
@@ -566,14 +566,14 @@ __is-288-by-512__
 
 ---
 
-## Image Flexbox
+## Image Lightbox
 
 * Group images in a flexbox with 4 columns, add in multiples of 4.
 * Add image data into `_data/images.yml`.
-* Include `image/flexbox.html` on your page.
+* Include `image/lightbox.html` on your page.
 * Click to pop.
 
-{% include image/flexbox.html %}
+{% include image/lightbox.html %}
 
 [↑↑↑](#){: .back-to-top}
 

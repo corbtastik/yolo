@@ -47,3 +47,56 @@ imageElements.forEach((imageElement, index) => {
         imageElement.classList.toggle("max");
     });
 });
+
+// ----------------------------------------------------------------------------------------------------------------
+// Lightbox logic
+// ----------------------------------------------------------------------------------------------------------------
+let lbIsOpen = false;
+let slideIndex = 1;
+// Handle keydown events for lightbox next and prev links.
+document.onkeydown = function(event) {
+    if(lbIsOpen) {
+        if (event.key === 'ArrowLeft' || (event.key === '<' && event.shiftKey)) {
+            plusSlides(-1);
+        } else if (event.key === 'ArrowRight' || (event.key === '>' && event.shiftKey)) {
+            plusSlides(1);
+        }
+    }
+};
+
+function openModal() {
+    document.getElementById("lb-modal").style.display = "block";
+    lbIsOpen = true;
+}
+
+function closeModal() {
+    document.getElementById("lb-modal").style.display = "none";
+    lbIsOpen = false;
+}
+
+showSlides(slideIndex);
+
+function plusSlides(n) {
+    showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+    showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+    let i;
+    const slides = document.getElementsByClassName("lb-slides");
+    const captionText = document.getElementById("lb-caption");
+    if(n > slides.length) {
+        slideIndex = 1;
+    }
+    if(n < 1) {
+        slideIndex = slides.length;
+    }
+    for(i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    slides[slideIndex - 1].style.display = "block";
+    captionText.innerHTML = slides[slideIndex - 1].children[0].alt;
+}

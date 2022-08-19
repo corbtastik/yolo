@@ -3,3 +3,4 @@ _site
 .idea
 .jekyll-cache
 .site-build
+.DS_Store
