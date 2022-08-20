@@ -168,7 +168,7 @@ img {
   width: 100%;
   height: 100%;
   overflow: auto;
-  background-color: $background-darker-color;
+  background-color: $yolo-dark-color;
 }
 
 .image-modal-content {
@@ -184,7 +184,7 @@ img {
   width: 80%;
   max-width: 100%;
   text-align: center;
-  color: $text-color;
+  color: $yolo-text-primary-color;
   padding: 10px 0;
   height: 150px;
 }
@@ -203,7 +203,7 @@ img {
   position: absolute;
   top: 15px;
   right: 35px;
-  color: $accent-color;
+  color: $yolo-accent-color;
   font-size: 40px;
   font-weight: bold;
   transition: 0.3s;
@@ -211,7 +211,7 @@ img {
 
 .image-modal-close:hover,
 .image-modal-close:focus {
-  color: $text-color;
+  color: $yolo-text-primary-color;
   text-decoration: none;
   cursor: pointer;
 }

@@ -14,12 +14,12 @@ html {
 
 body {
   margin: 2rem 0 5rem;
-  color: $text-color;
-  background-color: $background-color;
+  color: $yolo-text-primary-color;
+  background-color: $yolo-background-color;
 }
 
 a {
-  color: $accent-color;
+  color: $yolo-accent-color;
   text-decoration: none;
 }
 
@@ -31,7 +31,7 @@ h1, h2, h3, h4, h5, h6 {
   font-family: $family-secondary, sans-serif;
   margin: 0 0 0.5rem 0rem;
   line-height: 1;
-  color: $text-color;
+  color: $yolo-text-primary-color;
   text-rendering: optimizeLegibility;
 }
 
@@ -39,7 +39,7 @@ h1 {
   margin-top: 1.5rem;
   font-size: 2.75rem;
   margin-bottom: 1rem;
-  color: $header-text-color;
+  color: $yolo-header-color;
 }
 
 h1 a {
@@ -50,35 +50,35 @@ h2 {
   margin-top: 1.5rem;
   font-size: 2rem;
   margin-bottom: 1rem;
-  color: $header-text-color;
+  color: $yolo-header-color;
 }
 
 h3 {
   margin-top: 1.5rem;
   font-size: 1.75rem;
   margin-bottom: 1rem;
-  color: $header-text-color;
+  color: $yolo-header-color;
 }
 
 h4 {
   margin-top: 1.5rem;
   font-size: 1.5rem;
   margin-bottom: 1rem;
-  color: $header-text-color;
+  color: $yolo-header-color;
 }
 
 h5 {
   margin-top: 1.5rem;
   font-size: 1.25rem;
   margin-bottom: 1rem;
-  color: $header-text-color;
+  color: $yolo-header-color;
 }
 
 h6 {
   margin-top: 1.5rem;
   font-size: 1rem;
   margin-bottom: 1rem;
-  color: $header-text-color;
+  color: $yolo-header-color;
 }
 
 p, ul, ol, dl, table, pre, blockquote {
@@ -98,8 +98,8 @@ blockquote {
   margin-left: 0;
   margin-right: 0;
   padding: .5rem 1rem;
-  border-left: .25rem solid $text-color;
-  color: $text-secondary-color;
+  border-left: .25rem solid $yolo-text-primary-color;
+  color: $yolo-text-secondary-color;
 }
 
 blockquote p:last-child {
@@ -109,7 +109,7 @@ blockquote p:last-child {
 hr {
   border: none;
   margin: 1.5rem 0;
-  border-bottom: 1px dashed $accent-color;
+  border-bottom: 1px dashed $yolo-accent-color;
   position: relative;
   top: -1px;
 }

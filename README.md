@@ -45,6 +45,7 @@ Yolo demo - [https://corbtastik.github.io/yolo](https://corbtastik.github.io/yol
 
 __Work-in-progress:__
 
+* Refactor theme clasess, refactor flexbox, table color vars.
 * Image Flexbox, add next and previous links on image modal.
 * Add support for Github Gist.
 * Add theme variable for table header color and use in code-header and table headers.

@@ -4,7 +4,7 @@ tag_text: Yolo
 description: A single pager theme
 # Site customizations
 logo: assets/images/logo.png
-style: corbs
+style: monoblack
 # Build settings
 version: v1.3
 sampler: false
