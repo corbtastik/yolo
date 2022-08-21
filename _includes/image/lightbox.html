@@ -1,14 +1,13 @@
 {% assign numImages = site.data.images.size %}
-{% assign imagesPerColumn = numImages | divided_by: 4 | minus: 1 %}
-{% assign imagesRemainder = numImages | modulo: 4 %}
+{% assign imagesPerColumn = numImages | divided_by: 4 %}
 <div class="columns">
     {% for i in (0..3) %}
     <div class="column">
-        {% for j in (0..imagesPerColumn) %}
-        {% assign offset = i | times: imagesPerColumn %}
-        {% assign idx = i | plus: j | plus: offset %}
+        {% assign numSlides = imagesPerColumn | minus: 1 %}
+        {% for j in (0..numSlides) %}
+        {% assign idx = i | times: imagesPerColumn | plus: j %}
         <img class="lb-square lb-hover-shadow"
-             onclick="openModal();currentSlide({{ idx | plus: 1}});"
+             onclick="openModal();currentSlide({{ idx }});"
              alt="{{ site.data.images[idx].description }}"
              src="{{ site.data.images[idx].src }}">
         {% endfor %}
@@ -16,7 +15,7 @@
     {% endfor %}
 </div>
 
-{% assign numSlides = site.data.images.size | minus 1 %}
+{% assign numSlides = site.data.images.size | minus: 1 %}
 <!-- The lb-modal/Lightbox -->
 <div id="lb-modal" class="lb-modal">
     <span class="lb-close cursor" onclick="closeModal()">&times;</span>

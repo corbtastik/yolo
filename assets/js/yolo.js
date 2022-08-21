@@ -52,7 +52,7 @@ imageElements.forEach((imageElement, index) => {
 // Lightbox logic
 // ----------------------------------------------------------------------------------------------------------------
 let lbIsOpen = false;
-let slideIndex = 1;
+let slideIndex = 0;
 // Handle keydown events for lightbox next and prev links.
 document.onkeydown = function(event) {
     if(lbIsOpen) {
@@ -88,15 +88,15 @@ function showSlides(n) {
     let i;
     const slides = document.getElementsByClassName("lb-slides");
     const captionText = document.getElementById("lb-caption");
-    if(n > slides.length) {
-        slideIndex = 1;
+    if(n >= slides.length) {
+        slideIndex = 0;
     }
-    if(n < 1) {
-        slideIndex = slides.length;
+    if(n < 0) {
+        slideIndex = slides.length - 1;
     }
     for(i = 0; i < slides.length; i++) {
         slides[i].style.display = "none";
     }
-    slides[slideIndex - 1].style.display = "block";
-    captionText.innerHTML = slides[slideIndex - 1].children[0].alt;
+    slides[slideIndex].style.display = "block";
+    captionText.innerHTML = slides[slideIndex].children[0].alt;
 }
