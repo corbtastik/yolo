@@ -58,8 +58,8 @@ Yolo doesn't implement an "according to hoyle" Jekyll theme, but the colors, typ
 * [Lists](#lists)
 * [Tables](#tables)
 * [Markdown Images](#markdown-images)
-* [Square Images](#square-images)
 * [Thumbnail Images](#thumbnail-images)
+* [Square Images](#square-images)
 * [Circle Images](#circle-images)
 * [4-by-3 Aspect Images](#4-by-3-aspect-images)
 * [3-by-4 Aspect Images](#3-by-4-aspect-images)
@@ -306,36 +306,26 @@ AND   price <= 10000
 
 ---
 
-## Square Images 
-
-Square images can be added with the following classes: `is-16`, `is-24`, `is-32`, `is-48`, `is-64`, `is-96`, `is-128`,
-`is-192`, `is-256`, `is-384`, `is-448`, `is-512`, `is-640`.
-
-__is-128__
-
-<img class="image is-128" src="assets/images/general/drive-in.png">
-
-__is-256__
-
-<img class="image is-256" src="assets/images/general/drive-in.png">
-
-__is-512__
-
-<img class="image is-512" src="assets/images/general/drive-in.png">
-
-[↑↑↑](#){: .back-to-top}
-
----
-
 ## Thumbnail Images
 
 Thumbnails are 128px x 128px and use the `thumbnail` class.
 
 {%
-  include image/image.html
-  classes="thumbnail"
-  src="assets/images/general/big-face-bucky.png"
+include image/image.html
+classes="thumbnail"
+src="assets/images/general/big-face-bucky.png"
 %}
+
+[↑↑↑](#){: .back-to-top}
+
+---
+
+## Square Images 
+
+Square images can be added with the following classes: `is-16`, `is-24`, `is-32`, `is-48`, `is-64`, `is-96`, `is-128`,
+`is-192`, `is-256`, `is-384`, `is-448`, `is-512`, `is-640`.
+
+<img class="image is-256" src="assets/images/general/drive-in.png">
 
 [↑↑↑](#){: .back-to-top}
 
@@ -347,28 +337,10 @@ Circle images can be added with the following classes: `is-circle-16`, `is-circl
 `is-circle-48`, `is-circle-64`, `is-circle-96`, `is-circle-128`, `is-circle-192`, `is-circle-256`, `is-circle-384`, 
 `is-circle-448`, `is-circle-512`, `is-circle-640`.
 
-__is-circle-128__
-
-{%
-  include image/image.html
-  classes="is-circle-128"
-  src="assets/images/moonpie.png"
-%}
-
-__is-circle-256__
-
 {%
   include image/image.html
   classes="is-circle-256"
   src="assets/images/general/big-face-bucky.png"
-%}
-
-__is-circle-512__
-
-{%
-  include image/image.html
-  classes="is-circle-512"
-  src="assets/images/general/west-texas-wind-turbines.png"
 %}
 
 [↑↑↑](#){: .back-to-top}
@@ -381,17 +353,7 @@ __is-circle-512__
 `is-160-by-120`, `is-200-by-150`, `is-240-by-180`, `is-256-by-192`, `is-320-by-240`, `is-400-by-300`, 
 `is-480-by-360`, `is-512-by-384`, `is-640-by-480`.
 
-__is-128-by-96__
-
-<img class="image is-128-by-96" src="assets/images/general/bluebonnet.png">
-
-__is-256-by-192__
-
 <img class="image is-256-by-192" src="assets/images/general/bluebonnet.png">
-
-__is-512-by-384__
-
-<img class="image is-512-by-384" src="assets/images/general/bluebonnet.png">
 
 [↑↑↑](#){: .back-to-top}
 
@@ -403,17 +365,7 @@ __is-512-by-384__
 `is-120-by-160`, `is-150-by-200`, `is-180-by-240`, `is-192-by-256`, `is-240-by-320`, `is-300-by-400`, 
 `is-360-by-480`, `is-384-by-512`, `is-480-by-640`.
 
-__is-150-by-200__
-
-<img class="image is-150-by-200" src="assets/images/general/bluebonnet.png">
-
-__is-240-by-320__
-
 <img class="image is-240-by-320" src="assets/images/general/bluebonnet.png">
-
-__is-384-by-512__
-
-<img class="image is-384-by-512" src="assets/images/general/bluebonnet.png">
 
 [↑↑↑](#){: .back-to-top}
 
@@ -425,17 +377,7 @@ __is-384-by-512__
 `is-160-by-90`, `is-192-by-108`, `is-224-by-126`, `is-256-by-144`, `is-320-by-180`, `is-400-by-225`, `is-480-by-270`,
 `is-512-by-288`, `is-640-by-360`.
 
-__is-128-by-72__
-
-<img class="image is-128-by-72" src="assets/images/general/bluebonnet.png">
-
-__is-256-by-144__
-
 <img class="image is-256-by-144" src="assets/images/general/bluebonnet.png">
-
-__is-512-by-288__
-
-<img class="image is-512-by-288" src="assets/images/general/bluebonnet.png">
 
 [↑↑↑](#){: .back-to-top}
 
@@ -447,17 +389,7 @@ __is-512-by-288__
 `is-90-by-160`, `is-108-by-192`, `is-126-by-224`, `is-144-by-256`, `is-180-by-320`, `is-225-by-400`, `is-270-by-480`,
 `is-288-by-512`, `is-360-by-640`.
 
-__is-144-by-256__
-
-<img class="image is-144-by-256" src="assets/images/general/bluebonnet.png">
-
-__is-225-by-400__
-
 <img class="image is-225-by-400" src="assets/images/general/bluebonnet.png">
-
-__is-288-by-512__
-
-<img class="image is-288-by-512" src="assets/images/general/bluebonnet.png">
 
 [↑↑↑](#){: .back-to-top}
 
