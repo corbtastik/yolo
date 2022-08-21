@@ -45,6 +45,7 @@ Yolo demo - [https://corbtastik.github.io/yolo](https://corbtastik.github.io/yol
 
 __Work-in-progress:__
 
+* Make working with includes easier.
 * Add support for Github Gist.
 * Add figure to image for caption display.
   * Test default alignment and center alignment.

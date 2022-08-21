@@ -72,6 +72,8 @@ Yolo doesn't implement an "according to hoyle" Jekyll theme, but the colors, typ
 
 ## Colors
 
+Yolo's colors can be customized by adding a new theme SCSS file and configuring `site.style` in `_config.yml`.
+
 {% include colors.html %}
 
 [↑↑↑](#){: .back-to-top}
