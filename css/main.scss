@@ -3,11 +3,11 @@
 ---
 @charset "utf-8";
 
-@import "yolo/utilities/functions";
-@import "yolo/utilities/mixins";
 @import "yolo/variables";
-@import "yolo/normalize";
+@import "yolo/utilities/functions";
 @import "yolo/themes/{{ site.style | default: 'default' }}";
+@import "yolo/utilities/mixins";
+@import "yolo/normalize";
 @import "yolo/base";
 @import "yolo/typography";
 @import "yolo/flexbox";

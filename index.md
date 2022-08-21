@@ -8,13 +8,21 @@ tags:
 
 Yolo is a single page theme cut from the cloth of "[Solo](http://chibicode.github.io/solo)" which was previously developed and ultimately deprecated by [Shu Uesugi](https://github.com/chibicode).
 
-__Goals for Yolo:__
+##### Goals for Yolo
 
-* __Keep living the Solo dream__: Support one and only one page.
-* __Keep it simple__: No dependencies other than [jekyll](https://jekyllrb.com/).
-* __Make it customizable__: Bring your own [colors](#colors) and [fonts](#typography).
+###### 1. Keep living the Solo dream
 
-The one and only one "implementation" page is the one you're looking at.
+Support one-and-only-one page but treat it like a pet.
+
+###### 2. Keep it simple
+
+No dependencies other than [jekyll](https://jekyllrb.com/).
+
+###### 3. Make it customizable
+
+Bring your own [colors](#colors) and [fonts](#typography).
+
+> The one-and-only-one "implementation" page is the one you're looking at.
 
 ---
 
@@ -40,8 +48,6 @@ Yolo doesn't implement an "according to hoyle" Jekyll theme, but the colors, typ
 * Copy one of the examples in `_sass/yolo/themes` to a new scss file.
 * Provide color values for each variable.
 * Enable by setting `style` in `_config.yml`.
-
-{% include sampler.html %}
 
 ---
 
@@ -402,7 +408,10 @@ Circle images can be added with the following classes: `is-circle-16`, `is-circl
 * Group images in a flexbox with 4 columns, add in multiples of 4.
 * Add image data into `_data/images.yml`.
 * Include `image/lightbox.html` on your page.
-* Click to pop.
+* Click image to enlarge.
+  * Click on right side of enlarged image to move forward.
+  * Click on left side of enlarged image to move back.
+  * Arrow left `<` and Arrow right `>` keys work too.
 
 {% include image/lightbox.html %}
 

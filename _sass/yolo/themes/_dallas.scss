@@ -1,17 +1,38 @@
 // ----------------------------------------------------------------------------
 // dallas theme
 // ----------------------------------------------------------------------------
-$base-color: #08020a !default;
-$secondary-color: #4113a6 !default;
+$yolo-primary-color: #18091d !default;
+$yolo-secondary-color: #75efb9 !default;
 
-$background-color: #000928;
-$background-darker-color: #08020a !default;
+// base colors
+$yolo-background-color: #030a1e !default;
+$yolo-text-primary-color: #e1fdfe !default;
+$yolo-text-secondary-color: #75efb9 !default;
+$yolo-text-accent-color: #ff0081 !default;
 
-$accent-color: #28cc38 !default;
+// convenient colors
+$yolo-text-dark-color: #2d0721 !default;
+$yolo-text-light-color: #fff5ed !default;
+$yolo-dark-color: #18091d !default;
+$yolo-light-color: #fbffff !default;
+$yolo-accent-color: #ff0081 !default;
 
-$code-background-color: #201326 !default;
+// code colors
+$yolo-code-background-color: #150635 !default;
+$yolo-code-primary-color: #e0e0e0 !default;
+$yolo-code-secondary-color: #bdbdbd !default;
 
-$text-secondary-color: #b30746 !default;
-$text-color: #77eac1 !default;
-$text-code-color: #22faf3 !default;
-$header-text-color: #f73580 !default;
+// element colors
+$yolo-link-color: #0de5ff !default;
+$yolo-header-color: #9671fa !default;
+$yolo-pill-color: #00b7ff !default;
+$yolo-pill-text-color: #2d0721 !default;
+$yolo-table-header-color: #ba9afd !default;
+$yolo-table-border-color: #ba9afd !default;
+$yolo-table-header-text-color: #151515 !default;
+
+// fonts
+$family-primary: "Open Sans", sans-serif;
+$family-secondary: "Red Hat Mono", sans-serif;
+$family-monospace: "Inconsolata", monospace;
+$family-code: "Inconsolata", monospace;

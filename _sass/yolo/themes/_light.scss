@@ -1,17 +1,38 @@
 // ----------------------------------------------------------------------------
 // light theme
 // ----------------------------------------------------------------------------
-$base-color: #fff !default;
-$secondary-color: #aea8a8 !default;
+$yolo-primary-color: #fbffff !default;
+$yolo-secondary-color: #342077 !default;
 
-$background-color: $base-color;
-$background-darker-color: #ccc !default;
+// base colors
+$yolo-background-color: #fbffff !default;
+$yolo-text-primary-color: #342077 !default;
+$yolo-text-secondary-color: #950c67 !default;
+$yolo-text-accent-color: #00b0ff !default;
 
-$accent-color: #4119a7 !default;
+// convenient colors
+$yolo-text-dark-color: #000d55 !default;
+$yolo-text-light-color: #ff80cd !default;
+$yolo-dark-color: #020827 !default;
+$yolo-light-color: #7a85ff !default;
+$yolo-accent-color: #00b0ff !default;
 
-$code-background-color: #000 !default;
+// code colors
+$yolo-code-background-color: #061039 !default;
+$yolo-code-primary-color: #037cb3 !default;
+$yolo-code-secondary-color: #1dab58 !default;
 
-$text-secondary-color: #333 !default;
-$text-color: #000 !default;
-$text-code-color: #8d8c8c !default;
-$header-text-color: #000 !default;
+// element colors
+$yolo-link-color: #037cb3 !default;
+$yolo-header-color: #000d55 !default;
+$yolo-pill-color: #342077 !default;
+$yolo-pill-text-color: #9ce9fb !default;
+$yolo-table-header-color: #5e35b1 !default;
+$yolo-table-border-color: #5e35b1 !default;
+$yolo-table-header-text-color: #9ce9fb !default;
+
+// fonts
+$family-primary: "Red Hat Mono", sans-serif;
+$family-secondary: "Open Sans", sans-serif;
+$family-monospace: "Red Hat Mono", monospace;
+$family-code: "Red Hat Mono", monospace;

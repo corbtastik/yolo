@@ -1,22 +1,6 @@
 // ----------------------------------------------------------------------------
 // arcade theme
 // ----------------------------------------------------------------------------
-$base-color: #000928 !default;
-$secondary-color: #3e1d9d !default;
-
-$background-color: $base-color;
-$background-darker-color: #00080f !default;
-
-$accent-color: #00b0ff !default;
-
-$code-background-color: #00080f !default;
-
-$text-secondary-color: #ff31b9 !default;
-$text-color: #adfff5 !default;
-$text-code-color: #65e9fc !default;
-$header-text-color: #0ad276 !default;
-
-
 $yolo-primary-color: #000928 !default;
 $yolo-secondary-color: #3e1d9d !default;
 
@@ -46,3 +30,9 @@ $yolo-pill-text-color: #9ce9fb !default;
 $yolo-table-header-color: #adfff5 !default;
 $yolo-table-border-color: #adfff5 !default;
 $yolo-table-header-text-color: #000928 !default;
+
+// fonts
+$family-primary: "Roboto Mono", sans-serif;
+$family-secondary: "Raleway", sans-serif;
+$family-monospace: "Roboto Mono", monospace;
+$family-code: "Roboto Mono", monospace;
