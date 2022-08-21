@@ -144,7 +144,7 @@ H1 is reserved for the site header and not shown here.
 > each usually composed of nine players, that take turns playing offense (batting and baserunning)
 > and defense (pitching and fielding). A pair of turns,
 > one at bat and one in the field, by each team constitutes an inning.
-> 
+>
 > The game is played on a field whose primary boundaries, the foul lines,
 > extend forward from home plate at 45-degree angles.
 > The 90-degree area within the foul lines is referred to as fair territory;
@@ -328,7 +328,7 @@ src="assets/images/general/big-face-bucky.png"
 
 ---
 
-## Square Images 
+## Square Images
 
 Square images can be added with the following classes: `is-16`, `is-24`, `is-32`, `is-48`, `is-64`, `is-96`, `is-128`,
 `is-192`, `is-256`, `is-384`, `is-448`, `is-512`, `is-640`.
@@ -341,14 +341,14 @@ Square images can be added with the following classes: `is-16`, `is-24`, `is-32`
 
 ## Circle Images
 
-Circle images can be added with the following classes: `is-circle-16`, `is-circle-24`, `is-circle-32`, 
-`is-circle-48`, `is-circle-64`, `is-circle-96`, `is-circle-128`, `is-circle-192`, `is-circle-256`, `is-circle-384`, 
+Circle images can be added with the following classes: `is-circle-16`, `is-circle-24`, `is-circle-32`,
+`is-circle-48`, `is-circle-64`, `is-circle-96`, `is-circle-128`, `is-circle-192`, `is-circle-256`, `is-circle-384`,
 `is-circle-448`, `is-circle-512`, `is-circle-640`.
 
 {%
-  include image/image.html
-  classes="is-circle-256"
-  src="assets/images/general/big-face-bucky.png"
+include image/image.html
+classes="is-circle-256"
+src="assets/images/general/big-face-bucky.png"
 %}
 
 [↑↑↑](#){: .back-to-top}
@@ -357,8 +357,8 @@ Circle images can be added with the following classes: `is-circle-16`, `is-circl
 
 ## 4-by-3 Aspect Images
 
-4 by 3 aspect ratio images can be added with the following classes: `is-100-by-75`, `is-120-by-90`, `is-128-by-96`, 
-`is-160-by-120`, `is-200-by-150`, `is-240-by-180`, `is-256-by-192`, `is-320-by-240`, `is-400-by-300`, 
+4 by 3 aspect ratio images can be added with the following classes: `is-100-by-75`, `is-120-by-90`, `is-128-by-96`,
+`is-160-by-120`, `is-200-by-150`, `is-240-by-180`, `is-256-by-192`, `is-320-by-240`, `is-400-by-300`,
 `is-480-by-360`, `is-512-by-384`, `is-640-by-480`.
 
 <img class="image is-256-by-192" src="assets/images/general/bluebonnet.png">
@@ -369,8 +369,8 @@ Circle images can be added with the following classes: `is-circle-16`, `is-circl
 
 ## 3-by-4 Aspect Images
 
-3 by 4 aspect ratio images can be added with the following classes: `is-75-by-100`, `is-90-by-120`, `is-96-by-128`, 
-`is-120-by-160`, `is-150-by-200`, `is-180-by-240`, `is-192-by-256`, `is-240-by-320`, `is-300-by-400`, 
+3 by 4 aspect ratio images can be added with the following classes: `is-75-by-100`, `is-90-by-120`, `is-96-by-128`,
+`is-120-by-160`, `is-150-by-200`, `is-180-by-240`, `is-192-by-256`, `is-240-by-320`, `is-300-by-400`,
 `is-360-by-480`, `is-384-by-512`, `is-480-by-640`.
 
 <img class="image is-240-by-320" src="assets/images/general/bluebonnet.png">
@@ -381,7 +381,7 @@ Circle images can be added with the following classes: `is-circle-16`, `is-circl
 
 ## 16-by-9 Aspect Images
 
-16 by 9 aspect ratio images can be added with the following classes: `is-112-by-63`, `is-128-by-72`, `is-144-by-81`, 
+16 by 9 aspect ratio images can be added with the following classes: `is-112-by-63`, `is-128-by-72`, `is-144-by-81`,
 `is-160-by-90`, `is-192-by-108`, `is-224-by-126`, `is-256-by-144`, `is-320-by-180`, `is-400-by-225`, `is-480-by-270`,
 `is-512-by-288`, `is-640-by-360`.
 
@@ -393,7 +393,7 @@ Circle images can be added with the following classes: `is-circle-16`, `is-circl
 
 ## 9-by-16 Aspect Images
 
-9 by 16 aspect ratio images can be added with the following classes: `is-63-by-112`, `is-72-by-128`, `is-81-by-144`, 
+9 by 16 aspect ratio images can be added with the following classes: `is-63-by-112`, `is-72-by-128`, `is-81-by-144`,
 `is-90-by-160`, `is-108-by-192`, `is-126-by-224`, `is-144-by-256`, `is-180-by-320`, `is-225-by-400`, `is-270-by-480`,
 `is-288-by-512`, `is-360-by-640`.
 
@@ -409,9 +409,9 @@ Circle images can be added with the following classes: `is-circle-16`, `is-circl
 * Add image data into `_data/images.yml`.
 * Include `image/lightbox.html` on your page.
 * Click image to enlarge.
-  * Click on right side of enlarged image to move forward.
-  * Click on left side of enlarged image to move back.
-  * Arrow left `<` and Arrow right `>` keys work too.
+    * Click on right side of enlarged image to move forward.
+    * Click on left side of enlarged image to move back.
+    * Arrow left `<` and Arrow right `>` keys work too.
 
 {% include image/lightbox.html %}
 

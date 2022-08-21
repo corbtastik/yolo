@@ -4,16 +4,15 @@ tag_text: Yolo
 description: A single pager theme
 # Site customizations
 logo: assets/images/logo.png
-style: light
+style: corbs
 # Build settings
 version: v1.4
-sampler: false
 markdown: kramdown
 exclude:
   - "README.md"
   - "Makefile"
-  - "sampler.Containerfile"
-  - "yolo.Containerfile"
+  - "Containerfile"
   - ".site-build"
+  - "src/"
 sass:
   style: compressed

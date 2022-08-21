@@ -5,7 +5,7 @@
 
 @import "yolo/variables";
 @import "yolo/utilities/functions";
-@import "yolo/themes/{{ site.style | default: 'default' }}";
+@import "yolo/themes/{{ site.style | default: 'corbs' }}";
 @import "yolo/utilities/mixins";
 @import "yolo/normalize";
 @import "yolo/base";
