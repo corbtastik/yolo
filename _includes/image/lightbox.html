@@ -1,258 +1,39 @@
-<div class="columns">
+<!-- The lb flexbox -->
+{% assign numImages = site.data.images.size %}
+{% assign imagesPerColumn = numImages | divided_by: 4 %}
+<div class="columns is-mobile">
+    {% for i in (0..3) %}
     <div class="column">
-        <img src="assets/images/general/guadalupe-mountains.png"
-             onclick="openModal();currentSlide(1);"
-             class="lb-square lb-hover-shadow">
-        <img src="assets/images/general/dairy-palace.png"
-             onclick="openModal();currentSlide(2);"
-             class="lb-square lb-hover-shadow">
-        <img src="assets/images/general/drive-in.png"
-             onclick="openModal();currentSlide(3);"
-             class="lb-square lb-hover-shadow">
-        <img src="assets/images/general/red-camero.png"
-             onclick="openModal();currentSlide(4;)"
-             class="lb-square lb-hover-shadow">
-        <img src="assets/images/general/nacho.png"
-             onclick="openModal();currentSlide(5);"
-             class="lb-square lb-hover-shadow">
-        <img src="assets/images/general/turkey.png"
-             onclick="openModal();currentSlide(6);"
-             class="lb-square lb-hover-shadow">
+        {% assign numSlides = imagesPerColumn | minus: 1 %}
+        {% for j in (0..numSlides) %}
+        {% assign idx = i | times: imagesPerColumn | plus: j %}
+        <img class="lb-square lb-hover-shadow"
+             onclick="openModal();currentSlide({{ idx }});"
+             alt="{{ site.data.images[idx].description }}"
+             src="{{ site.data.images[idx].src }}">
+        {% endfor %}
     </div>
-    <div class="column">
-        <img src="assets/images/general/ranger-bucky.png"
-             onclick="openModal();currentSlide(7);"
-             class="lb-square lb-hover-shadow">
-        <img src="assets/images/general/best-painting-ever.png"
-             onclick="openModal();currentSlide(8);"
-             class="lb-square lb-hover-shadow">
-        <img src="assets/images/general/devils-tower.png"
-             onclick="openModal();currentSlide(9);"
-             class="lb-square lb-hover-shadow">
-        <img src="assets/images/general/west-texas-wind-turbines.png"
-             onclick="openModal();currentSlide(10);"
-             class="lb-square lb-hover-shadow">
-        <img src="assets/images/general/winter-tree.png"
-             onclick="openModal();currentSlide(11);"
-             class="lb-square lb-hover-shadow">
-        <img src="assets/images/general/bluebonnet.png"
-             onclick="openModal();currentSlide(12);"
-             class="lb-square lb-hover-shadow">
-    </div>
-    <div class="column">
-        <img src="assets/images/general/big-face-bucky.png"
-             onclick="openModal();currentSlide(13);"
-             class="lb-square lb-hover-shadow">
-        <img src="assets/images/general/broken-bow-river.png"
-             onclick="openModal();currentSlide(14);"
-             class="lb-square lb-hover-shadow">
-        <img src="assets/images/general/paris-texas.png"
-             onclick="openModal();currentSlide(15);"
-             class="lb-square lb-hover-shadow">
-        <img src="assets/images/general/blue-camero.png"
-             onclick="openModal();currentSlide(16);"
-             class="lb-square lb-hover-shadow">
-        <img src="assets/images/general/mount-rushmore.png"
-             onclick="openModal();currentSlide(17);"
-             class="lb-square lb-hover-shadow">
-        <img src="assets/images/general/moonpie-house-cat.png"
-             onclick="openModal();currentSlide(18);"
-             class="lb-square lb-hover-shadow">
-    </div>
-    <div class="column">
-        <img src="assets/images/general/texas-evening.png"
-             onclick="openModal();currentSlide(19);"
-             class="lb-square lb-hover-shadow">
-        <img src="assets/images/general/traveling-bucky.png"
-             onclick="openModal();currentSlide(20);"
-             class="lb-square lb-hover-shadow">
-        <img src="assets/images/general/big-sky.png"
-             onclick="openModal();currentSlide(21);"
-             class="lb-square lb-hover-shadow">
-        <img src="assets/images/general/yellow-tree.png"
-             onclick="openModal();currentSlide(22);"
-             class="lb-square lb-hover-shadow">
-        <img src="assets/images/general/mustang-gt.png"
-             onclick="openModal();currentSlide(23);"
-             class="lb-square lb-hover-shadow">
-        <img src="assets/images/general/two-santas.png"
-             onclick="openModal();currentSlide(24);"
-             class="lb-square lb-hover-shadow">
-    </div>
-
-<!--    <div class="column">-->
-<!--        <img src="assets/images/general/dairy-palace.png"-->
-<!--             onclick="openModal();currentSlide(1)"-->
-<!--             class="lb-square center lb-hover-shadow">-->
-<!--    </div>-->
-<!--    <div class="column">-->
-<!--        <img src="assets/images/general/nacho.png"-->
-<!--             onclick="openModal();currentSlide(2)"-->
-<!--             class="lb-square center lb-hover-shadow">-->
-<!--    </div>-->
-<!--    <div class="column">-->
-<!--        <img src="assets/images/general/macpro.png"-->
-<!--             onclick="openModal();currentSlide(3)"-->
-<!--             class="lb-square center lb-hover-shadow">-->
-<!--    </div>-->
-<!--    <div class="column">-->
-<!--        <img src="assets/images/general/porky.png"-->
-<!--             onclick="openModal();currentSlide(4)"-->
-<!--             class="lb-square center lb-hover-shadow">-->
-<!--    </div>-->
-<!--    <div class="column">-->
-<!--        <img src="assets/images/general/guadalupe-mountains.png"-->
-<!--             onclick="openModal();currentSlide(5)"-->
-<!--             class="lb-square center lb-hover-shadow">-->
-<!--    </div>-->
-<!--    <div class="column">-->
-<!--        <img src="assets/images/general/best-painting-ever.png"-->
-<!--             onclick="openModal();currentSlide(6)"-->
-<!--             class="lb-square center lb-hover-shadow">-->
-<!--    </div>-->
-<!--    <div class="column">-->
-<!--        <img src="assets/images/general/devils-tower.png"-->
-<!--             onclick="openModal();currentSlide(7)"-->
-<!--             class="lb-square center lb-hover-shadow">-->
-<!--    </div>-->
-<!--    <div class="column">-->
-<!--        <img src="assets/images/general/big-sky.png"-->
-<!--             onclick="openModal();currentSlide(8)"-->
-<!--             class="lb-square center lb-hover-shadow">-->
-<!--    </div>-->
+    {% endfor %}
 </div>
 
-<!-- The lb-modal/Lightbox -->
+{% assign numSlides = site.data.images.size | minus: 1 %}
+<!-- The lb-modal -->
 <div id="lb-modal" class="lb-modal">
     <span class="lb-close cursor" onclick="closeModal()">&times;</span>
     <div class="lb-modal-content">
+        {% for i in (0..numSlides) %}
         <div class="lb-slides">
             <img class="lb-item center"
-                src="assets/images/general/guadalupe-mountains.png"
-                alt="Guadalupe Mountains, Texas.">
+                 alt="{{ site.data.images[i].description }}"
+                 src="{{ site.data.images[i].src }}">
         </div>
-        <div class="lb-slides">
-            <img class="lb-item center"
-                 src="assets/images/general/dairy-palace.png"
-                alt="Dairy Palace, Canton Texas.">
-        </div>
-        <div class="lb-slides">
-            <img class="lb-item center"
-                src="assets/images/general/drive-in.png"
-                alt="Sky Vue Drive-in, Lamesa Texas.">
-        </div>
-        <div class="lb-slides">
-            <img class="lb-item center"
-                src="assets/images/general/red-camero.png"
-                alt="Red Camero, Oh. Yeah.">
-        </div>
-        <div class="lb-slides">
-            <img class="lb-item center"
-                src="assets/images/general/nacho.png"
-                alt="Nachooooooo!!!">
-        </div>
-        <div class="lb-slides">
-            <img class="lb-item center"
-                src="assets/images/general/turkey.png"
-                alt="Fried Bird.">
-        </div>
-        <div class="lb-slides">
-            <img class="lb-item center"
-                 src="assets/images/general/ranger-bucky.png"
-                 alt="Texas Ranger Bucky.">
-        </div>
-        <div class="lb-slides">
-            <img class="lb-item center"
-                 src="assets/images/general/best-painting-ever.png"
-                 alt="Best Painting EVER!">
-        </div>
-        <div class="lb-slides">
-            <img class="lb-item center"
-                 src="assets/images/general/devils-tower.png"
-                 alt="Devils Tower, Wyoming.">
-        </div>
-        <div class="lb-slides">
-            <img class="lb-item center"
-                 src="assets/images/general/west-texas-wind-turbines.png"
-                 alt="West Texas wind farm.">
-        </div>
-        <div class="lb-slides">
-            <img class="lb-item center"
-                 src="assets/images/general/winter-tree.png"
-                 alt="Snow tree in Dallas.">
-        </div>
-        <div class="lb-slides">
-            <img class="lb-item center"
-                 src="assets/images/general/bluebonnet.png"
-                 alt="Texas bluebonnet.">
-        </div>
-        <div class="lb-slides">
-            <img class="lb-item center"
-                 src="assets/images/general/big-face-bucky.png"
-                 alt="Big Face Bucky.">
-        </div>
-        <div class="lb-slides">
-            <img class="lb-item center"
-                 src="assets/images/general/broken-bow-river.png"
-                 alt="Broken Bow river Oklahoma.">
-        </div>
-        <div class="lb-slides">
-            <img class="lb-item center"
-                 src="assets/images/general/paris-texas.png"
-                 alt="Paris, Texas.">
-        </div>
-        <div class="lb-slides">
-            <img class="lb-item center"
-                 src="assets/images/general/blue-camero.png"
-                 alt="Blue Camero go vroom.">
-        </div>
-        <div class="lb-slides">
-            <img class="lb-item center"
-                 src="assets/images/general/mount-rushmore.png"
-                 alt="Mount Rushmore, South Dakota.">
-        </div>
-        <div class="lb-slides">
-            <img class="lb-item center"
-                 src="assets/images/general/moonpie-house-cat.png"
-                 alt="Moonpie the house kitty, we see your poochie poo!">
-        </div>
-        <div class="lb-slides">
-            <img class="lb-item center"
-                 src="assets/images/general/texas-evening.png"
-                 alt="Justa good ole Texas evening.">
-        </div>
-        <div class="lb-slides">
-            <img class="lb-item center"
-                 src="assets/images/general/traveling-bucky.png"
-                 alt="Traveling Bucky.">
-        </div>
-        <div class="lb-slides">
-            <img class="lb-item center"
-                 src="assets/images/general/big-sky.png"
-                 alt="Big Sky Texas.">
-        </div>
-        <div class="lb-slides">
-            <img class="lb-item center"
-                 src="assets/images/general/yellow-tree.png"
-                 alt="Yellow tree, Broken Bow.">
-        </div>
-        <div class="lb-slides">
-            <img class="lb-item center"
-                 src="assets/images/general/mustang-gt.png"
-                 alt="Mustang GT.">
-        </div>
-        <div class="lb-slides">
-            <img class="lb-item center"
-                 src="assets/images/general/two-santas.png"
-                 alt="Santas at Campo Verde.">
-        </div>
-
+        {% endfor %}
         <!-- Next/previous controls -->
         <a class="lb-nav lb-prev" onclick="plusSlides(-1)">&#10094;</a>
         <a class="lb-nav lb-next" onclick="plusSlides(1)">&#10095;</a>
-        <!-- Caption text -->
-        <div class="lb-caption-container">
-            <p id="lb-caption"></p>
-        </div>
+    </div>
+    <!-- Caption text -->
+    <div class="lb-caption-container">
+        <p id="lb-caption"></p>
     </div>
 </div>

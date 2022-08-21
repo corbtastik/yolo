@@ -6,7 +6,7 @@ description: A single pager theme
 logo: assets/images/logo.png
 style: corbs
 # Build settings
-version: v1.3
+version: v1.4
 sampler: false
 markdown: kramdown
 exclude:
@@ -16,4 +16,4 @@ exclude:
   - "yolo.Containerfile"
   - ".site-build"
 sass:
-  style: uncompressed
+  style: compressed

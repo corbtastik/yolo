@@ -4,57 +4,57 @@
 $column-gap: 0.50rem !default;
 
 .cell {
-  background-color: $base-color;
-  color: $text-color;
+  background-color: $yolo-primary-color;
+  color: $yolo-text-primary-color;
   border-radius: 0.20rem;
   padding: .25rem 0;
   position: relative;
   text-align: center;
   &.demo {
-    background-color: $accent-color;
-    color: $text-code-color;
+    background-color: $yolo-light-color;
+    color: $yolo-text-dark-color;
   }
   &.white {
     background-color: #fff;
-    color: $background-color;
+    color: $yolo-background-color;
   }
-  &.base-color {
-    background-color: $base-color;
-    color: $text-color;
+  &.yolo-primary-color {
+    background-color: $yolo-primary-color;
+    color: $yolo-text-primary-color;
   }
-  &.secondary-color {
-    background-color: $secondary-color;
+  &.yolo-secondary-color {
+    background-color: $yolo-secondary-color;
   }
-  &.background-color {
-    background-color: $background-color;
-    border: 1px solid $accent-color;
+  &.yolo-background-color {
+    background-color: $yolo-background-color;
+    border: 1px solid $yolo-accent-color;
   }
-  &.background-darker-color {
-    background-color: $background-darker-color;
+  &.yolo-dark-color {
+    background-color: $yolo-dark-color;
   }
-  &.accent-color {
-    background-color: $accent-color;
+  &.yolo-accent-color {
+    background-color: $yolo-accent-color;
   }
-  &.code-background-color {
-    background-color: $code-background-color;
+  &.yolo-code-background-color {
+    background-color: $yolo-code-background-color;
   }
-  &.text-secondary-color {
-    background-color: $text-secondary-color;
+  &.yolo-text-secondary-color {
+    background-color: $yolo-text-secondary-color;
   }
-  &.text-color {
-    background-color: $text-color;
+  &.yolo-text-primary-color {
+    background-color: $yolo-text-primary-color;
   }
-  &.header-text-color {
-    background-color: $header-text-color;
+  &.yolo-header-color {
+    background-color: $yolo-header-color;
   }
-  &.text-code-color {
-    background-color: $text-code-color;
+  &.yolo-code-primary-color {
+    background-color: $yolo-code-primary-color;
   }
 }
 
 .cell.is-primary {
-  background-color: $secondary-color;
-  color: #fff;
+  background-color: $yolo-accent-color;
+  color: $yolo-text-dark-color;
 }
 
 .cell.is-circle-64 {

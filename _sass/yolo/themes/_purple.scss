@@ -1,17 +1,32 @@
 // ----------------------------------------------------------------------------
 // purple theme
 // ----------------------------------------------------------------------------
-$base-color: #190841 !default;
-$secondary-color: #4119a7 !default;
+$yolo-primary-color: #190841 !default;
+$yolo-secondary-color: #4119a7 !default;
 
-$background-color: $base-color;
-$background-darker-color: #180440 !default;
+// base colors
+$yolo-background-color: #190841 !default;
+$yolo-text-primary-color: #ded5f7 !default;
+$yolo-text-secondary-color: #9868ee !default;
+$yolo-text-accent-color: #0de5ff !default;
 
-$accent-color: #0de5ff !default;
+// convenient colors
+$yolo-text-dark-color: #4119a7 !default;
+$yolo-text-light-color: #c3acf9 !default;
+$yolo-dark-color: #1b0755 !default;
+$yolo-light-color: #b1a1e3 !default;
+$yolo-accent-color: #0de5ff !default;
 
-$code-background-color: #0f052b !default;
+// code colors
+$yolo-code-background-color: #0f052b !default;
+$yolo-code-primary-color: #65e9fc !default;
+$yolo-code-secondary-color: #9f7ffb !default;
 
-$text-secondary-color: #9868ee !default;
-$text-color: #ded5f7 !default;
-$text-code-color: #65e9fc !default;
-$header-text-color: #9869f8 !default;
+// element colors
+$yolo-link-color: #65e9fc !default;
+$yolo-header-color: #9869f8 !default;
+$yolo-pill-color: #cdb6f5 !default;
+$yolo-pill-text-color: #190841 !default;
+$yolo-table-header-color: #ded5f7 !default;
+$yolo-table-border-color: #ded5f7 !default;
+$yolo-table-header-text-color: #1b0755 !default;

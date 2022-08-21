@@ -45,14 +45,9 @@ Yolo demo - [https://corbtastik.github.io/yolo](https://corbtastik.github.io/yol
 
 __Work-in-progress:__
 
-* Image Flexbox, add next and previous links on image modal.
 * Add support for Github Gist.
-* Add theme variable for table header color and use in code-header and table headers.
-* Verify Image responsiveness.
 * Add figure to image for caption display.
   * Test default alignment and center alignment.
-* Try different `back-to-top` styles.
-* Add eye candy to image modal close button.
 * Scrub and implement consistent size and dimension units.
 
 __Complete:__
@@ -74,6 +69,10 @@ __Complete:__
   * [DONE] Review each theme for readability.
   * [DONE] Ensure themes have a hyperlink color that's different from other text colors.
 * [DONE] Image flexbox, add radius to images.
+* [DONE] Refactor theme clasess, refactor flexbox, table color vars.
+* [DONE] Image Flexbox, add next and previous links on image modal.
+* [DONE] Add theme variable for table header color and use in code-header and table headers.
+* [DONE] Verify Image responsiveness and aspect ratios.
 
 
 ### Mid-term
