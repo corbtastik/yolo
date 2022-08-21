@@ -1,6 +1,7 @@
+<!-- The lb flexbox -->
 {% assign numImages = site.data.images.size %}
 {% assign imagesPerColumn = numImages | divided_by: 4 %}
-<div class="columns">
+<div class="columns is-mobile">
     {% for i in (0..3) %}
     <div class="column">
         {% assign numSlides = imagesPerColumn | minus: 1 %}
@@ -16,7 +17,7 @@
 </div>
 
 {% assign numSlides = site.data.images.size | minus: 1 %}
-<!-- The lb-modal/Lightbox -->
+<!-- The lb-modal -->
 <div id="lb-modal" class="lb-modal">
     <span class="lb-close cursor" onclick="closeModal()">&times;</span>
     <div class="lb-modal-content">
@@ -30,9 +31,9 @@
         <!-- Next/previous controls -->
         <a class="lb-nav lb-prev" onclick="plusSlides(-1)">&#10094;</a>
         <a class="lb-nav lb-next" onclick="plusSlides(1)">&#10095;</a>
-        <!-- Caption text -->
-        <div class="lb-caption-container">
-            <p id="lb-caption"></p>
-        </div>
+    </div>
+    <!-- Caption text -->
+    <div class="lb-caption-container">
+        <p id="lb-caption"></p>
     </div>
 </div>

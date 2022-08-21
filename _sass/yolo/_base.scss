@@ -6,7 +6,7 @@ html {
 }
 
 // When the minimum screen width is 640px or wider then the font-size of the paragraph will change to 20px.
-@media (min-width: 640px) {
+@media (min-width: 768px) {
   html {
     font-size: 20px;
   }
