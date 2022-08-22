@@ -30,6 +30,7 @@ Bring your own [colors](#colors) and [fonts](#typography).
 
 You need [jekyll](https://jekyllrb.com/).
 
+{% include code.html info="Get Yolo" %}
 ```bash
 git clone https://github.com/corbtastik/yolo.git
 cd yolo
@@ -45,9 +46,9 @@ Yolo doesn't implement an "according to hoyle" Jekyll theme, but the colors, typ
 
 > "Theming" for Yolo is accomplished by providing a custom theme scss file as outlined below.
 
-* Copy one of the examples in `_sass/yolo/themes` to a new scss file.
+* Copy one of the themes in `_sass/yolo/themes` to a new scss file.
 * Provide color values for each variable.
-* Enable by setting `style` in `_config.yml`.
+* Enable by setting `site.style` in `_config.yml`.
 
 ---
 
@@ -78,7 +79,7 @@ Yolo doesn't implement an "according to hoyle" Jekyll theme, but the colors, typ
 
 ## Colors
 
-Yolo's colors can be customized by adding a new theme SCSS file and configuring `site.style` in `_config.yml`.
+Yolo's colors can be customized by adding a new theme SCSS file and setting the `site.style` value in `_config.yml`.
 
 {% include colors.html %}
 
@@ -88,7 +89,7 @@ Yolo's colors can be customized by adding a new theme SCSS file and configuring 
 
 ## Typography
 
-Yolo's typography implementation is based on [Bulma's Typography helpers](https://bulma.io/documentation/helpers/typography-helpers/).
+Yolo's typography implementation is based on [Bulma's Typography](https://bulma.io/documentation/helpers/typography-helpers/).
 
 {% include typography.html %}
 
@@ -304,11 +305,19 @@ AND   price <= 10000
 
 ## Markdown Images
 
-> The samples below demonstrate using [kramdown](https://github.com/gettalong/kramdown) to render images, kramdown is the default markdown converter for Jekyll.
+[Kramdown](https://github.com/gettalong/kramdown) is the default markdown converter for [Jekyll](https://jekyllrb.com/) and supports adding images via markdown.
 
-![Moonie Moonpie](assets/images/moonpie.png "Moonpie Aweee")
+> Images added via markdown receive styling from the `<img>` element, they're not styled with `yolo` scss.  
 
-![BIG yawn Bucky](assets/images/bucky.png "Sleepy Bucky")
+{% include code.html info="Markdown images" %}
+```markdown
+![Moonie Moonpie](assets/images/site/moonpie.png "Sweet Moonpie")
+![BIG yawn Bucky](assets/images/site/bucky.png "Sleepy Bucky")
+```
+
+![Moonie Moonpie](assets/images/site/moonpie.png "Moonpie Aweee")
+
+![BIG yawn Bucky](assets/images/site/bucky.png "Sleepy Bucky")
 
 [↑↑↑](#){: .back-to-top}
 
@@ -318,10 +327,17 @@ AND   price <= 10000
 
 Thumbnails are 128px x 128px and use the `thumbnail` class.
 
+{% include code.html info="Thumbnail images" %}
+```html
+<img class="image thumbnail" src="assets/images/yolo/big-face-bucky.png">
+```
+
+> Click to enlarge.
+
 {%
 include image/image.html
 classes="thumbnail"
-src="assets/images/general/big-face-bucky.png"
+src="assets/images/yolo/big-face-bucky.png"
 %}
 
 [↑↑↑](#){: .back-to-top}
@@ -333,7 +349,14 @@ src="assets/images/general/big-face-bucky.png"
 Square images can be added with the following classes: `is-16`, `is-24`, `is-32`, `is-48`, `is-64`, `is-96`, `is-128`,
 `is-192`, `is-256`, `is-384`, `is-448`, `is-512`, `is-640`.
 
-<img class="image is-256" src="assets/images/general/drive-in.png">
+{% include code.html info="Square images" %}
+```html
+<img class="image is-256" src="assets/images/yolo/drive-in.png">
+```
+
+> Click to enlarge.
+
+<img class="image is-256" src="assets/images/yolo/drive-in.png">
 
 [↑↑↑](#){: .back-to-top}
 
@@ -345,10 +368,17 @@ Circle images can be added with the following classes: `is-circle-16`, `is-circl
 `is-circle-48`, `is-circle-64`, `is-circle-96`, `is-circle-128`, `is-circle-192`, `is-circle-256`, `is-circle-384`,
 `is-circle-448`, `is-circle-512`, `is-circle-640`.
 
+{% include code.html info="Circle images" %}
+```html
+<img class="image is-circle-256" src="assets/images/yolo/big-face-bucky.png">
+```
+
+> Click to enlarge.
+
 {%
 include image/image.html
 classes="is-circle-256"
-src="assets/images/general/big-face-bucky.png"
+src="assets/images/yolo/big-face-bucky.png"
 %}
 
 [↑↑↑](#){: .back-to-top}
@@ -361,7 +391,14 @@ src="assets/images/general/big-face-bucky.png"
 `is-160-by-120`, `is-200-by-150`, `is-240-by-180`, `is-256-by-192`, `is-320-by-240`, `is-400-by-300`,
 `is-480-by-360`, `is-512-by-384`, `is-640-by-480`.
 
-<img class="image is-256-by-192" src="assets/images/general/bluebonnet.png">
+{% include code.html info="4-by-3 images" %}
+```html
+<img class="image is-256-by-192" src="assets/images/yolo/bluebonnet.png">
+```
+
+> Click to enlarge.
+
+<img class="image is-256-by-192" src="assets/images/yolo/bluebonnet.png">
 
 [↑↑↑](#){: .back-to-top}
 
@@ -373,7 +410,14 @@ src="assets/images/general/big-face-bucky.png"
 `is-120-by-160`, `is-150-by-200`, `is-180-by-240`, `is-192-by-256`, `is-240-by-320`, `is-300-by-400`,
 `is-360-by-480`, `is-384-by-512`, `is-480-by-640`.
 
-<img class="image is-240-by-320" src="assets/images/general/bluebonnet.png">
+{% include code.html info="3-by-4 images" %}
+```html
+<img class="image is-240-by-320" src="assets/images/yolo/bluebonnet.png">
+```
+
+> Click to enlarge.
+
+<img class="image is-240-by-320" src="assets/images/yolo/bluebonnet.png">
 
 [↑↑↑](#){: .back-to-top}
 
@@ -385,7 +429,14 @@ src="assets/images/general/big-face-bucky.png"
 `is-160-by-90`, `is-192-by-108`, `is-224-by-126`, `is-256-by-144`, `is-320-by-180`, `is-400-by-225`, `is-480-by-270`,
 `is-512-by-288`, `is-640-by-360`.
 
-<img class="image is-256-by-144" src="assets/images/general/bluebonnet.png">
+{% include code.html info="16-by-9 images" %}
+```html
+<img class="image is-256-by-144" src="assets/images/yolo/bluebonnet.png">
+```
+
+> Click to enlarge.
+
+<img class="image is-256-by-144" src="assets/images/yolo/bluebonnet.png">
 
 [↑↑↑](#){: .back-to-top}
 
@@ -397,7 +448,14 @@ src="assets/images/general/big-face-bucky.png"
 `is-90-by-160`, `is-108-by-192`, `is-126-by-224`, `is-144-by-256`, `is-180-by-320`, `is-225-by-400`, `is-270-by-480`,
 `is-288-by-512`, `is-360-by-640`.
 
-<img class="image is-225-by-400" src="assets/images/general/bluebonnet.png">
+{% include code.html info="9-by-16 images" %}
+```html
+<img class="image is-225-by-400" src="assets/images/yolo/bluebonnet.png">
+```
+
+> Click to enlarge.
+
+<img class="image is-225-by-400" src="assets/images/yolo/bluebonnet.png">
 
 [↑↑↑](#){: .back-to-top}
 
@@ -405,13 +463,15 @@ src="assets/images/general/big-face-bucky.png"
 
 ## Image Lightbox
 
-* Group images in a flexbox with 4 columns, add in multiples of 4.
+Yolo includes a lightbox element based on [Bulma's flexbox implementation](https://bulma.io/documentation/columns/).
+
+* 4 column flexbox with square images.
 * Add image data into `_data/images.yml`.
 * Include `image/lightbox.html` on your page.
 * Click image to enlarge.
-    * Click on right side of enlarged image to move forward.
-    * Click on left side of enlarged image to move back.
-    * Arrow left `<` and Arrow right `>` keys work too.
+  * Click on right side of an enlarged image to move forward.
+  * Click on left side of an enlarged image to move back.
+  * Arrow left `<` and Arrow right `>` keys work too.
 
 {% include image/lightbox.html %}
 

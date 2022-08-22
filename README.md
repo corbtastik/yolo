@@ -45,6 +45,9 @@ Yolo demo - [https://corbtastik.github.io/yolo](https://corbtastik.github.io/yol
 
 __Work-in-progress:__
 
+* Create helper for adding/updating custom Google Fonts and document on index.md.
+* Create helper for creating new theme scss files and document on index.md.
+* Create helper for creating a new lightbox with images and document on index.md.
 * Make working with includes easier.
 * Add support for Github Gist.
 * Add figure to image for caption display.

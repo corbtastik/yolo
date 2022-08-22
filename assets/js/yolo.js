@@ -18,26 +18,6 @@ codeCopyElements.forEach((codeCopyElement, index) => {
     });
 });
 // ----------------------------------------------------------------------------------------------------------------
-// Image Grid modal that shows an image when clicked
-// ----------------------------------------------------------------------------------------------------------------
-const imageModal = document.getElementById("image-modal");
-const imageModalContent = document.getElementById("image-modal-content");
-const imageModalCaption = document.getElementById("image-modal-caption");
-const imageModalClose = document.getElementsByClassName("image-modal-close")[0];
-const images = document.querySelectorAll('.image-item');
-
-imageModalClose.onclick = function() {
-    imageModal.style.display = "none";
-}
-
-images.forEach((image, index) => {
-    image.onclick = function() {
-        imageModal.style.display = "block";
-        imageModalContent.src = this.src;
-        imageModalCaption.innerHTML = this.alt;
-    };
-});
-// ----------------------------------------------------------------------------------------------------------------
 // Function to scale an image when clicked
 // ----------------------------------------------------------------------------------------------------------------
 const imageElements = document.querySelectorAll('.image');
@@ -47,7 +27,6 @@ imageElements.forEach((imageElement, index) => {
         imageElement.classList.toggle("max");
     });
 });
-
 // ----------------------------------------------------------------------------------------------------------------
 // Lightbox logic
 // ----------------------------------------------------------------------------------------------------------------

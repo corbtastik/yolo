@@ -3,10 +3,10 @@ title: Yolo, a single page theme
 tag_text: Yolo
 description: A single pager theme
 # Site customizations
-logo: assets/images/logo.png
+logo: assets/images/site/logo.png
 style: corbs
 # Build settings
-version: v1.4
+version: v1.5
 markdown: kramdown
 exclude:
   - "README.md"
