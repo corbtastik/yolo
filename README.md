@@ -73,7 +73,7 @@ __Complete:__
   * [DONE] Review each theme for readability.
   * [DONE] Ensure themes have a hyperlink color that's different from other text colors.
 * [DONE] Image flexbox, add radius to images.
-* [DONE] Refactor theme clasess, refactor flexbox, table color vars.
+* [DONE] Refactor theme classes, refactor flexbox, table color vars.
 * [DONE] Image Flexbox, add next and previous links on image modal.
 * [DONE] Add theme variable for table header color and use in code-header and table headers.
 * [DONE] Verify Image responsiveness and aspect ratios.

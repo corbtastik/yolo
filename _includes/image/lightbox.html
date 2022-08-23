@@ -1,31 +1,32 @@
 <!-- The lb flexbox -->
-{% assign numImages = site.data.images.size %}
-{% assign imagesPerColumn = numImages | divided_by: 4 %}
+{% assign lb_data = include.lb-data %}
+{% assign lb_images = site.data[lb_data] %}
+{% assign lb_num_images = site.data[lb_data].size %}
+{% assign lb_images_per_column = lb_num_images | divided_by: 4 %}
 <div class="columns is-mobile">
     {% for i in (0..3) %}
     <div class="column">
-        {% assign numSlides = imagesPerColumn | minus: 1 %}
-        {% for j in (0..numSlides) %}
-        {% assign idx = i | times: imagesPerColumn | plus: j %}
+        {% assign num_slides = lb_images_per_column | minus: 1 %}
+        {% for j in (0..num_slides) %}
+        {% assign idx = i | times: lb_images_per_column | plus: j %}
+        {% assign lb_image = lb_images[idx] %}
         <img class="lb-square lb-hover-shadow"
              onclick="openModal();currentSlide({{ idx }});"
-             alt="{{ site.data.images[idx].description }}"
-             src="{{ site.data.images[idx].src }}">
+             alt="{{ lb_image.description }}"
+             src="{{ lb_image.src }}">
         {% endfor %}
     </div>
     {% endfor %}
 </div>
-
-{% assign numSlides = site.data.images.size | minus: 1 %}
 <!-- The lb-modal -->
 <div id="lb-modal" class="lb-modal">
     <span class="lb-close cursor" onclick="closeModal()">&times;</span>
     <div class="lb-modal-content">
-        {% for i in (0..numSlides) %}
+        {% for lb_image in lb_images %}
         <div class="lb-slides">
             <img class="lb-item center"
-                 alt="{{ site.data.images[i].description }}"
-                 src="{{ site.data.images[i].src }}">
+                 alt="{{ lb_image.description }}"
+                 src="{{ lb_image.src }}">
         </div>
         {% endfor %}
         <!-- Next/previous controls -->

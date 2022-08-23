@@ -101,7 +101,14 @@ Yolo's typography implementation is based on [Bulma's Typography](https://bulma.
 
 Yolo's flexbox implementation is based on [Bulma's "columns" interface](https://bulma.io/documentation/columns/).
 
-{% include flexbox.html %}
+{% include flexbox.html numColumns="1" %}
+{% include flexbox.html numColumns="2" %}
+{% include flexbox.html numColumns="3" %}
+{% include flexbox.html numColumns="4" %}
+{% include flexbox.html numColumns="5" %}
+{% include flexbox.html numColumns="6" %}
+{% include flexbox.html numColumns="7" %}
+{% include flexbox.html numColumns="8" %}
 
 [↑↑↑](#){: .back-to-top}
 
@@ -473,7 +480,7 @@ Yolo includes a lightbox element based on [Bulma's flexbox implementation](https
   * Click on left side of an enlarged image to move back.
   * Arrow left `<` and Arrow right `>` keys work too.
 
-{% include image/lightbox.html %}
+{% include image/lightbox.html lb-data="lb-yolo" %}
 
 [↑↑↑](#){: .back-to-top}
 
