@@ -470,23 +470,34 @@ src="assets/images/yolo/big-face-bucky.png"
 
 ## Image Lightbox
 
-Yolo includes a lightbox element based on [Bulma's flexbox implementation](https://bulma.io/documentation/columns/).
+Yolo includes a lightbox to showcase pics.
 
-* 4 column flexbox with square images.
-* Add image data into `_data/images.yml`.
+__Summary:__
+
+* 4 column flexbox to display the set of images.
+* Clicking an image opens the lightbox modal.
+* On the lightbox modal:
+  * Click on right side of image to move forward.
+  * Click on left side of image to move back.
+  * Arrow left `<` and right `>` to move as well.
+
+__Configuration:__
+
+* View the example lightbox files in `_data`.
+  * Lightbox data files start with `lb-`.
+* Add your image data into `_data/lb-images.yml`.
+  * Or use a custom data file, for example: `_data/lb-marfa.yml`.
 * Include `image/lightbox.html` on your page.
-* Click image to enlarge.
-  * Click on right side of an enlarged image to move forward.
-  * Click on left side of an enlarged image to move back.
-  * Arrow left `<` and Arrow right `>` keys work too.
+  * If using `lb-images.yml` then: `include image/lightbox.html`.  
+  * If using custom then: `include image/lightbox.html lb-data="lb-marfa"`.
 
-### Lightbox Sample 1
+### Lightbox with default data file
 
-> Data from: _data/lb-yolo.yml
+> Data from: _data/lb-images.yml
 
-{% include image/lightbox.html lb-data="lb-yolo" %}
+{% include image/lightbox.html %}
 
-### Lightbox Sample 2
+### Lightbox with custom data file
 
 > Data from: _data/lb-marfa.yml
 

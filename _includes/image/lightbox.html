@@ -1,5 +1,5 @@
 <!-- The lb flexbox -->
-{% assign lb_data = include.lb-data %}
+{% assign lb_data = include.lb-data | default: "lb-images" %}
 {% assign lb_images = site.data[lb_data] %}
 {% assign lb_num_images = site.data[lb_data].size %}
 {% assign lb_images_per_column = lb_num_images | divided_by: 4 %}
