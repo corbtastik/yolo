@@ -101,14 +101,14 @@ Yolo's typography implementation is based on [Bulma's Typography](https://bulma.
 
 Yolo's flexbox implementation is based on [Bulma's "columns" interface](https://bulma.io/documentation/columns/).
 
-{% include flexbox.html numColumns="1" %}
-{% include flexbox.html numColumns="2" %}
-{% include flexbox.html numColumns="3" %}
-{% include flexbox.html numColumns="4" %}
-{% include flexbox.html numColumns="5" %}
-{% include flexbox.html numColumns="6" %}
-{% include flexbox.html numColumns="7" %}
-{% include flexbox.html numColumns="8" %}
+{% include flexbox.html columns="1" %}
+{% include flexbox.html columns="2" %}
+{% include flexbox.html columns="3" %}
+{% include flexbox.html columns="4" %}
+{% include flexbox.html columns="5" %}
+{% include flexbox.html columns="6" %}
+{% include flexbox.html columns="7" %}
+{% include flexbox.html columns="8" %}
 
 [↑↑↑](#){: .back-to-top}
 

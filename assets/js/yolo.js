@@ -1,22 +1,22 @@
 // ----------------------------------------------------------------------------------------------------------------
 // Copy code snippet functions
 // ----------------------------------------------------------------------------------------------------------------
-const codeBlocks = document.querySelectorAll('.code-header + .highlighter-rouge');
-const codeCopyElements = document.querySelectorAll('.code-header');
-
-codeCopyElements.forEach((codeCopyElement, index) => {
-    const code = codeBlocks[index].innerText;
-    codeCopyElement.addEventListener('click', () => {
-        window.navigator.clipboard.writeText(code);
-        codeCopyElement.classList.add('copied');
-        const infoText = codeCopyElement.innerHTML.trim();
-        codeCopyElement.innerHTML = codeCopyElement.innerHTML + " copied!"
-        setTimeout(() => {
-            codeCopyElement.innerHTML = infoText;
-            codeCopyElement.classList.remove('copied');
-        }, 2000);
-    });
-});
+// const codeBlocks = document.querySelectorAll('.code-header + .highlighter-rouge');
+// const codeCopyElements = document.querySelectorAll('.code-header');
+//
+// codeCopyElements.forEach((codeCopyElement, index) => {
+//     const code = codeBlocks[index].innerText;
+//     codeCopyElement.addEventListener('click', () => {
+//         window.navigator.clipboard.writeText(code);
+//         codeCopyElement.classList.add('copied');
+//         const infoText = codeCopyElement.innerHTML.trim();
+//         codeCopyElement.innerHTML = codeCopyElement.innerHTML + " copied!"
+//         setTimeout(() => {
+//             codeCopyElement.innerHTML = infoText;
+//             codeCopyElement.classList.remove('copied');
+//         }, 2000);
+//     });
+// });
 // ----------------------------------------------------------------------------------------------------------------
 // Function to scale an image when clicked
 // ----------------------------------------------------------------------------------------------------------------

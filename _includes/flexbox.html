@@ -1,8 +1,8 @@
-{% assign numColumns = include.numColumns %}
+{% assign columns = include.columns %}
 <div class="columns">
-    {% for i in (1..numColumns) %}
+    {% for i in (1..columns) %}
     <div class="column">
-        <div class="cell demo">{{ i }} col</div>
+        <div class="cell demo">{{ i }}</div>
     </div>
     {% endfor %}
 </div>
