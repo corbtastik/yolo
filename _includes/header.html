@@ -10,7 +10,7 @@
         <span>
           {% for tag in page.tags %}
             {% capture tag_name %}{{ tag }}{% endcapture %}
-            <code onclick="console.log(Yolo.version());" class="pill"><nobr>{{ tag_name }}</nobr></code>
+            <code class="pill"><nobr>{{ tag_name }}</nobr></code>
           {% endfor %}
         </span>
     </p>

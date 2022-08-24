@@ -480,7 +480,17 @@ Yolo includes a lightbox element based on [Bulma's flexbox implementation](https
   * Click on left side of an enlarged image to move back.
   * Arrow left `<` and Arrow right `>` keys work too.
 
+### Lightbox Sample 1
+
+> Data from: _data/lb-yolo.yml
+
 {% include image/lightbox.html lb-data="lb-yolo" %}
+
+### Lightbox Sample 2
+
+> Data from: _data/lb-marfa.yml
+
+{% include image/lightbox.html lb-data="lb-marfa" %}
 
 [↑↑↑](#){: .back-to-top}
 
