@@ -8,13 +8,21 @@ tags:
 
 Yolo is a single page theme cut from the cloth of "[Solo](http://chibicode.github.io/solo)" which was previously developed and ultimately deprecated by [Shu Uesugi](https://github.com/chibicode).
 
-__Goals for Yolo:__
+##### Goals for Yolo
 
-* __Keep living the Solo dream__: Support one and only one page.
-* __Keep it simple__: No dependencies other than [jekyll](https://jekyllrb.com/).
-* __Make it customizable__: Bring your own [colors](#colors) and [fonts](#typography).
+###### 1. Keep living the Solo dream
 
-The one and only one "implementation" page is the one you're looking at.
+Support one-and-only-one page but treat it like a pet.
+
+###### 2. Keep it simple
+
+No dependencies other than [jekyll](https://jekyllrb.com/).
+
+###### 3. Make it customizable
+
+Bring your own [colors](#colors) and [fonts](#typography).
+
+> The one-and-only-one "implementation" page is the one you're looking at.
 
 ---
 
@@ -22,6 +30,7 @@ The one and only one "implementation" page is the one you're looking at.
 
 You need [jekyll](https://jekyllrb.com/).
 
+{% include code.html info="Get Yolo" %}
 ```bash
 git clone https://github.com/corbtastik/yolo.git
 cd yolo
@@ -37,11 +46,9 @@ Yolo doesn't implement an "according to hoyle" Jekyll theme, but the colors, typ
 
 > "Theming" for Yolo is accomplished by providing a custom theme scss file as outlined below.
 
-* Copy one of the examples in `_sass/yolo/themes` to a new scss file.
+* Copy one of the themes in `_sass/yolo/themes` to a new scss file.
 * Provide color values for each variable.
-* Enable by setting `style` in `_config.yml`.
-
-{% include sampler.html %}
+* Enable by setting `site.style` in `_config.yml`.
 
 ---
 
@@ -72,6 +79,8 @@ Yolo doesn't implement an "according to hoyle" Jekyll theme, but the colors, typ
 
 ## Colors
 
+Yolo's colors can be customized by adding a new theme SCSS file and setting the `site.style` value in `_config.yml`.
+
 {% include colors.html %}
 
 [↑↑↑](#){: .back-to-top}
@@ -80,7 +89,7 @@ Yolo doesn't implement an "according to hoyle" Jekyll theme, but the colors, typ
 
 ## Typography
 
-Yolo's typography implementation is based on [Bulma's Typography helpers](https://bulma.io/documentation/helpers/typography-helpers/).
+Yolo's typography implementation is based on [Bulma's Typography](https://bulma.io/documentation/helpers/typography-helpers/).
 
 {% include typography.html %}
 
@@ -92,7 +101,14 @@ Yolo's typography implementation is based on [Bulma's Typography helpers](https:
 
 Yolo's flexbox implementation is based on [Bulma's "columns" interface](https://bulma.io/documentation/columns/).
 
-{% include flexbox.html %}
+{% include flexbox.html columns="1" %}
+{% include flexbox.html columns="2" %}
+{% include flexbox.html columns="3" %}
+{% include flexbox.html columns="4" %}
+{% include flexbox.html columns="5" %}
+{% include flexbox.html columns="6" %}
+{% include flexbox.html columns="7" %}
+{% include flexbox.html columns="8" %}
 
 [↑↑↑](#){: .back-to-top}
 
@@ -136,7 +152,7 @@ H1 is reserved for the site header and not shown here.
 > each usually composed of nine players, that take turns playing offense (batting and baserunning)
 > and defense (pitching and fielding). A pair of turns,
 > one at bat and one in the field, by each team constitutes an inning.
-> 
+>
 > The game is played on a field whose primary boundaries, the foul lines,
 > extend forward from home plate at 45-degree angles.
 > The 90-degree area within the foul lines is referred to as fair territory;
@@ -296,11 +312,19 @@ AND   price <= 10000
 
 ## Markdown Images
 
-> The samples below demonstrate using [kramdown](https://github.com/gettalong/kramdown) to render images, kramdown is the default markdown converter for Jekyll.
+[Kramdown](https://github.com/gettalong/kramdown) is the default markdown converter for [Jekyll](https://jekyllrb.com/) and supports adding images via markdown.
 
-![Moonie Moonpie](assets/images/moonpie.png "Moonpie Aweee")
+> Images added via markdown receive styling from the `<img>` element, they're not styled with `yolo` scss.  
 
-![BIG yawn Bucky](assets/images/bucky.png "Sleepy Bucky")
+{% include code.html info="Markdown images" %}
+```markdown
+![Moonie Moonpie](assets/images/site/moonpie.png "Sweet Moonpie")
+![BIG yawn Bucky](assets/images/site/bucky.png "Sleepy Bucky")
+```
+
+![Moonie Moonpie](assets/images/site/moonpie.png "Moonpie Aweee")
+
+![BIG yawn Bucky](assets/images/site/bucky.png "Sleepy Bucky")
 
 [↑↑↑](#){: .back-to-top}
 
@@ -310,22 +334,36 @@ AND   price <= 10000
 
 Thumbnails are 128px x 128px and use the `thumbnail` class.
 
+{% include code.html info="Thumbnail images" %}
+```html
+<img class="image thumbnail" src="assets/images/yolo/big-face-bucky.png">
+```
+
+> Click to enlarge.
+
 {%
 include image/image.html
 classes="thumbnail"
-src="assets/images/general/big-face-bucky.png"
+src="assets/images/yolo/big-face-bucky.png"
 %}
 
 [↑↑↑](#){: .back-to-top}
 
 ---
 
-## Square Images 
+## Square Images
 
 Square images can be added with the following classes: `is-16`, `is-24`, `is-32`, `is-48`, `is-64`, `is-96`, `is-128`,
 `is-192`, `is-256`, `is-384`, `is-448`, `is-512`, `is-640`.
 
-<img class="image is-256" src="assets/images/general/drive-in.png">
+{% include code.html info="Square images" %}
+```html
+<img class="image is-256" src="assets/images/yolo/drive-in.png">
+```
+
+> Click to enlarge.
+
+<img class="image is-256" src="assets/images/yolo/drive-in.png">
 
 [↑↑↑](#){: .back-to-top}
 
@@ -333,14 +371,21 @@ Square images can be added with the following classes: `is-16`, `is-24`, `is-32`
 
 ## Circle Images
 
-Circle images can be added with the following classes: `is-circle-16`, `is-circle-24`, `is-circle-32`, 
-`is-circle-48`, `is-circle-64`, `is-circle-96`, `is-circle-128`, `is-circle-192`, `is-circle-256`, `is-circle-384`, 
+Circle images can be added with the following classes: `is-circle-16`, `is-circle-24`, `is-circle-32`,
+`is-circle-48`, `is-circle-64`, `is-circle-96`, `is-circle-128`, `is-circle-192`, `is-circle-256`, `is-circle-384`,
 `is-circle-448`, `is-circle-512`, `is-circle-640`.
 
+{% include code.html info="Circle images" %}
+```html
+<img class="image is-circle-256" src="assets/images/yolo/big-face-bucky.png">
+```
+
+> Click to enlarge.
+
 {%
-  include image/image.html
-  classes="is-circle-256"
-  src="assets/images/general/big-face-bucky.png"
+include image/image.html
+classes="is-circle-256"
+src="assets/images/yolo/big-face-bucky.png"
 %}
 
 [↑↑↑](#){: .back-to-top}
@@ -349,11 +394,18 @@ Circle images can be added with the following classes: `is-circle-16`, `is-circl
 
 ## 4-by-3 Aspect Images
 
-4 by 3 aspect ratio images can be added with the following classes: `is-100-by-75`, `is-120-by-90`, `is-128-by-96`, 
-`is-160-by-120`, `is-200-by-150`, `is-240-by-180`, `is-256-by-192`, `is-320-by-240`, `is-400-by-300`, 
+4 by 3 aspect ratio images can be added with the following classes: `is-100-by-75`, `is-120-by-90`, `is-128-by-96`,
+`is-160-by-120`, `is-200-by-150`, `is-240-by-180`, `is-256-by-192`, `is-320-by-240`, `is-400-by-300`,
 `is-480-by-360`, `is-512-by-384`, `is-640-by-480`.
 
-<img class="image is-256-by-192" src="assets/images/general/bluebonnet.png">
+{% include code.html info="4-by-3 images" %}
+```html
+<img class="image is-256-by-192" src="assets/images/yolo/bluebonnet.png">
+```
+
+> Click to enlarge.
+
+<img class="image is-256-by-192" src="assets/images/yolo/bluebonnet.png">
 
 [↑↑↑](#){: .back-to-top}
 
@@ -361,11 +413,18 @@ Circle images can be added with the following classes: `is-circle-16`, `is-circl
 
 ## 3-by-4 Aspect Images
 
-3 by 4 aspect ratio images can be added with the following classes: `is-75-by-100`, `is-90-by-120`, `is-96-by-128`, 
-`is-120-by-160`, `is-150-by-200`, `is-180-by-240`, `is-192-by-256`, `is-240-by-320`, `is-300-by-400`, 
+3 by 4 aspect ratio images can be added with the following classes: `is-75-by-100`, `is-90-by-120`, `is-96-by-128`,
+`is-120-by-160`, `is-150-by-200`, `is-180-by-240`, `is-192-by-256`, `is-240-by-320`, `is-300-by-400`,
 `is-360-by-480`, `is-384-by-512`, `is-480-by-640`.
 
-<img class="image is-240-by-320" src="assets/images/general/bluebonnet.png">
+{% include code.html info="3-by-4 images" %}
+```html
+<img class="image is-240-by-320" src="assets/images/yolo/bluebonnet.png">
+```
+
+> Click to enlarge.
+
+<img class="image is-240-by-320" src="assets/images/yolo/bluebonnet.png">
 
 [↑↑↑](#){: .back-to-top}
 
@@ -373,11 +432,18 @@ Circle images can be added with the following classes: `is-circle-16`, `is-circl
 
 ## 16-by-9 Aspect Images
 
-16 by 9 aspect ratio images can be added with the following classes: `is-112-by-63`, `is-128-by-72`, `is-144-by-81`, 
+16 by 9 aspect ratio images can be added with the following classes: `is-112-by-63`, `is-128-by-72`, `is-144-by-81`,
 `is-160-by-90`, `is-192-by-108`, `is-224-by-126`, `is-256-by-144`, `is-320-by-180`, `is-400-by-225`, `is-480-by-270`,
 `is-512-by-288`, `is-640-by-360`.
 
-<img class="image is-256-by-144" src="assets/images/general/bluebonnet.png">
+{% include code.html info="16-by-9 images" %}
+```html
+<img class="image is-256-by-144" src="assets/images/yolo/bluebonnet.png">
+```
+
+> Click to enlarge.
+
+<img class="image is-256-by-144" src="assets/images/yolo/bluebonnet.png">
 
 [↑↑↑](#){: .back-to-top}
 
@@ -385,11 +451,18 @@ Circle images can be added with the following classes: `is-circle-16`, `is-circl
 
 ## 9-by-16 Aspect Images
 
-9 by 16 aspect ratio images can be added with the following classes: `is-63-by-112`, `is-72-by-128`, `is-81-by-144`, 
+9 by 16 aspect ratio images can be added with the following classes: `is-63-by-112`, `is-72-by-128`, `is-81-by-144`,
 `is-90-by-160`, `is-108-by-192`, `is-126-by-224`, `is-144-by-256`, `is-180-by-320`, `is-225-by-400`, `is-270-by-480`,
 `is-288-by-512`, `is-360-by-640`.
 
-<img class="image is-225-by-400" src="assets/images/general/bluebonnet.png">
+{% include code.html info="9-by-16 images" %}
+```html
+<img class="image is-225-by-400" src="assets/images/yolo/bluebonnet.png">
+```
+
+> Click to enlarge.
+
+<img class="image is-225-by-400" src="assets/images/yolo/bluebonnet.png">
 
 [↑↑↑](#){: .back-to-top}
 
@@ -397,12 +470,38 @@ Circle images can be added with the following classes: `is-circle-16`, `is-circl
 
 ## Image Lightbox
 
-* Group images in a flexbox with 4 columns, add in multiples of 4.
-* Add image data into `_data/images.yml`.
+Yolo includes a lightbox to showcase pics.
+
+__Summary:__
+
+* 4 column flexbox to display the set of images.
+* Clicking an image opens the lightbox modal.
+* On the lightbox modal:
+  * Click on right side of image to move forward.
+  * Click on left side of image to move back.
+  * Arrow left `<` and right `>` to move as well.
+
+__Configuration:__
+
+* View the example lightbox files in `_data`.
+  * Lightbox data files start with `lb-`.
+* Add your image data into `_data/lb-images.yml`.
+  * Or use a custom data file, for example: `_data/lb-marfa.yml`.
 * Include `image/lightbox.html` on your page.
-* Click to pop.
+  * If using `lb-images.yml` then: `include image/lightbox.html`.  
+  * If using custom then: `include image/lightbox.html lb-data="lb-marfa"`.
+
+### Lightbox with default data file
+
+> Data from: _data/lb-images.yml
 
 {% include image/lightbox.html %}
+
+### Lightbox with custom data file
+
+> Data from: _data/lb-marfa.yml
+
+{% include image/lightbox.html lb-data="lb-marfa" %}
 
 [↑↑↑](#){: .back-to-top}
 

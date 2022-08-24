@@ -3,11 +3,11 @@
 ---
 @charset "utf-8";
 
-@import "yolo/utilities/functions";
-@import "yolo/utilities/mixins";
 @import "yolo/variables";
+@import "yolo/utilities/functions";
+@import "yolo/themes/{{ site.style | default: 'corbs' }}";
+@import "yolo/utilities/mixins";
 @import "yolo/normalize";
-@import "yolo/themes/{{ site.style | default: 'default' }}";
 @import "yolo/base";
 @import "yolo/typography";
 @import "yolo/flexbox";
@@ -91,4 +91,35 @@ ul.no-bullets {
   to {
     transform: rotate(359deg);
   }
+}
+
+.yolo-primary-color {
+  color: $yolo-primary-color;
+}
+.yolo-secondary-color {
+  color: $yolo-secondary-color;
+}
+.yolo-background-color {
+  color: $yolo-background-color;
+}
+.yolo-dark-color {
+  color: $yolo-dark-color;
+}
+.yolo-accent-color {
+  color: $yolo-accent-color;
+}
+.yolo-code-background-color {
+  color: $yolo-code-background-color;
+}
+.yolo-text-secondary-color {
+  color: $yolo-text-secondary-color;
+}
+.yolo-text-primary-color {
+  color: $yolo-text-primary-color;
+}
+.yolo-header-color {
+  color: $yolo-header-color;
+}
+.yolo-code-primary-color {
+  color: $yolo-code-primary-color;
 }

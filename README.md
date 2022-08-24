@@ -45,6 +45,10 @@ Yolo demo - [https://corbtastik.github.io/yolo](https://corbtastik.github.io/yol
 
 __Work-in-progress:__
 
+* Create helper for adding/updating custom Google Fonts and document on index.md.
+* Create helper for creating new theme scss files and document on index.md.
+* Create helper for creating a new lightbox with images and document on index.md.
+* Make working with includes easier.
 * Add support for Github Gist.
 * Add figure to image for caption display.
   * Test default alignment and center alignment.
@@ -69,7 +73,7 @@ __Complete:__
   * [DONE] Review each theme for readability.
   * [DONE] Ensure themes have a hyperlink color that's different from other text colors.
 * [DONE] Image flexbox, add radius to images.
-* [DONE] Refactor theme clasess, refactor flexbox, table color vars.
+* [DONE] Refactor theme classes, refactor flexbox, table color vars.
 * [DONE] Image Flexbox, add next and previous links on image modal.
 * [DONE] Add theme variable for table header color and use in code-header and table headers.
 * [DONE] Verify Image responsiveness and aspect ratios.

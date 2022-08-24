@@ -4,3 +4,4 @@ _site
 .jekyll-cache
 .site-build
 .DS_Store
+.wip

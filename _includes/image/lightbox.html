@@ -1,39 +1,40 @@
 <!-- The lb flexbox -->
-{% assign numImages = site.data.images.size %}
-{% assign imagesPerColumn = numImages | divided_by: 4 %}
+{% assign lb_data = include.lb-data | default: "lb-images" %}
+{% assign lb_images = site.data[lb_data] %}
+{% assign lb_num_images = site.data[lb_data].size %}
+{% assign lb_images_per_column = lb_num_images | divided_by: 4 %}
 <div class="columns is-mobile">
     {% for i in (0..3) %}
     <div class="column">
-        {% assign numSlides = imagesPerColumn | minus: 1 %}
-        {% for j in (0..numSlides) %}
-        {% assign idx = i | times: imagesPerColumn | plus: j %}
+        {% assign num_slides = lb_images_per_column | minus: 1 %}
+        {% for j in (0..num_slides) %}
+        {% assign idx = i | times: lb_images_per_column | plus: j %}
+        {% assign lb_image = lb_images[idx] %}
         <img class="lb-square lb-hover-shadow"
-             onclick="openModal();currentSlide({{ idx }});"
-             alt="{{ site.data.images[idx].description }}"
-             src="{{ site.data.images[idx].src }}">
+             onclick="Yolo.lightbox('{{ lb_data }}').openModal();Yolo.lightbox('{{ lb_data }}').currentSlide({{ idx }});"
+             alt="{{ lb_image.description }}"
+             src="{{ lb_image.src }}">
         {% endfor %}
     </div>
     {% endfor %}
 </div>
-
-{% assign numSlides = site.data.images.size | minus: 1 %}
 <!-- The lb-modal -->
-<div id="lb-modal" class="lb-modal">
-    <span class="lb-close cursor" onclick="closeModal()">&times;</span>
+<div id="lb-modal-{{ lb_data }}" class="lb-modal">
+    <span class="lb-close cursor" onclick="Yolo.lightbox('{{ lb_data }}').closeModal();">&times;</span>
     <div class="lb-modal-content">
-        {% for i in (0..numSlides) %}
+        {% for lb_image in lb_images %}
         <div class="lb-slides">
             <img class="lb-item center"
-                 alt="{{ site.data.images[i].description }}"
-                 src="{{ site.data.images[i].src }}">
+                 alt="{{ lb_image.description }}"
+                 src="{{ lb_image.src }}">
         </div>
         {% endfor %}
         <!-- Next/previous controls -->
-        <a class="lb-nav lb-prev" onclick="plusSlides(-1)">&#10094;</a>
-        <a class="lb-nav lb-next" onclick="plusSlides(1)">&#10095;</a>
+        <a class="lb-nav lb-prev" onclick="Yolo.lightbox('{{ lb_data }}').plusSlides(-1);">&#10094;</a>
+        <a class="lb-nav lb-next" onclick="Yolo.lightbox('{{ lb_data }}').plusSlides(1);">&#10095;</a>
     </div>
     <!-- Caption text -->
     <div class="lb-caption-container">
-        <p id="lb-caption"></p>
+        <p id="lb-caption-{{ lb_data }}"></p>
     </div>
 </div>
