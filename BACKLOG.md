@@ -11,6 +11,7 @@ List of tasks for maturing Yolo.
 * Add figure to image for caption display.
 * Add center align option for elements.
 * Scrub and implement consistent size and dimension units.
+* Resize lb-images for web, add branding, move to GCS.
 
 ## Mid-term
 

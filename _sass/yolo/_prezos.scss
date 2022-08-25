@@ -1,0 +1,32 @@
+.prezo-iframe-container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  border-radius: 0.3em;
+  border: 0;
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+  &.is-16-by-9 {
+    /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+    padding-top: 56.25%;
+  }
+  &.is-4-by-3 {
+    /* 4:3 Aspect Ratio */
+    padding-top: 75%;
+  }
+  &.is-1-by-1 {
+    /* 1:1 Aspect Ratio */
+    padding-top: 100%;
+  }
+}
+
+/* Style the iframe to fit in the iframe-container div with full height and width */
+.prezo-responsive-iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+}

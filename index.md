@@ -74,6 +74,7 @@ Yolo doesn't implement an "according to hoyle" Jekyll theme, but the colors, typ
 * [9-by-16 Aspect Images](#9-by-16-aspect-images)
 * [Image Lightbox](#image-lightbox)
 * [Videos](#videos)
+* [Prezos](#prezos)
 
 ---
 
@@ -584,6 +585,59 @@ A custom data file can be added to render another lightbox.
 ## Videos
 
 {% include video.html %}
+
+[↑↑↑](#){: .back-to-top}
+
+---
+
+## Prezos
+
+Yolo has basic support for embedding Google Slides.
+
+* Enter prezo data into `_data/prezos.yml`
+* Include `prezo.html` on your page.
+* Set the `title` value to match the prezo in `_data/prezos.yml`.
+* By default, prezos are displayed with a `is-16-by-9` aspect ratio.
+* Optionally set the `aspect-ratio` to `is-16-by-9`, `is-4-by-3`, or `is-1-by-1`.
+
+### Sample 1
+
+{% include code.html info="16-by-9 aspect ratio (default)" %}
+{% raw %}
+```html
+{% include prezo.html title="blinged-macmini" %}
+```
+{% endraw %}
+
+> Aspect ratio `is-16-by-9`.
+
+{% include prezo.html title="blinged-macmini" %}
+
+### Sample 2
+
+{% include code.html info="4-by-3 aspect ratio" %}
+{% raw %}
+```html
+{% include prezo.html title="one-awesome-prezo" aspect-ratio="is-4-by-3" %}
+```
+{% endraw %}
+
+> Aspect ratio `is-4-by-3`.
+
+{% include prezo.html title="one-awesome-prezo" aspect-ratio="is-4-by-3" %}
+
+### Sample 3
+
+{% include code.html info="1-by-1 aspect ratio" %}
+{% raw %}
+```html
+{% include prezo.html title="yolo-on" aspect-ratio="is-1-by-1" %}
+```
+{% endraw %}
+
+> Aspect ratio `is-1-by-1`.
+
+{% include prezo.html title="yolo-on" aspect-ratio="is-1-by-1" %}
 
 [↑↑↑](#){: .back-to-top}
 
