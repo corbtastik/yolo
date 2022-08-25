@@ -5,11 +5,14 @@ description: A loveable single page theme
 # Site customizations
 logo: assets/images/site/logo.png
 style: corbs
+images: https://storage.googleapis.com/corbs-foto/yolo
+#images: assets/images
 # Build settings
-version: v1.6
+version: v1.7
 markdown: kramdown
 exclude:
   - "README.md"
+  - "BACKLOG.md"
   - "Makefile"
   - "Containerfile"
   - ".site-build"

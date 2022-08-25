@@ -3,7 +3,7 @@
 # =============================================================================
 CONTAINER_REGISTRY=quay.io/corbsmartin
 IMAGE_NAME=yolo
-IMAGE_TAG=v1.5
+IMAGE_TAG=v1.6
 OUTPUT_DIR=.site-build
 # -----------------------------------------------------------------------------
 # Targets for working with a single site build of Solo.

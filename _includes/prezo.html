@@ -1,0 +1,12 @@
+{% assign prezo_data = include.data-file | default: "prezos" %}
+{% assign prezo_aspect_ratio = include.aspect-ratio | default: "is-16-by-9" %}
+{% assign prezo_title = include.title %}
+{% assign prezos = site.data[prezo_data] %}
+{% for prezo in prezos %}
+{% if prezo.title == prezo_title %}
+<strong>{{ prezo.description }}</strong>
+<div class="prezo-iframe-container {{ prezo_aspect_ratio }}">
+    <iframe class="prezo-responsive-iframe" src="{{ prezo.src }}"></iframe>
+</div>
+{% endif %}
+{% endfor %}
