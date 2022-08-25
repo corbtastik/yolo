@@ -22,7 +22,7 @@ No dependencies other than [jekyll](https://jekyllrb.com/).
 
 Bring your own [colors](#colors) and [fonts](#typography).
 
-> The one-and-only-one "implementation" page is the one you're looking at.
+> The one-and-only "implementation" page is the one you're looking at. It's a sampler of all out-of-the-box elements.
 
 ---
 
@@ -42,9 +42,9 @@ jekyll serve
 
 ## Themes
 
-Yolo doesn't implement an "according to hoyle" Jekyll theme, but the colors, typography and site logo can be styled to your tastes.
+Yolo doesn't implement an "according to hoyle" Jekyll theme, but the colors, fonts, logo and data can be customized.
 
-> "Theming" for Yolo is accomplished by providing a custom theme scss file as outlined below.
+> "Theming" for Yolo is accomplished by providing a custom scss file as outlined below.
 
 * Copy one of the themes in `_sass/yolo/themes` to a new scss file.
 * Provide color values for each variable.
@@ -80,7 +80,7 @@ Yolo doesn't implement an "according to hoyle" Jekyll theme, but the colors, typ
 
 ## Colors
 
-Yolo's colors can be customized by adding a new theme SCSS file and setting the `site.style` value in `_config.yml`.
+Yolo's colors can be customized by adding a new theme scss file and setting the `site.style` value in `_config.yml`.
 
 {% include colors.html %}
 
@@ -101,6 +101,23 @@ Yolo's typography implementation is based on [Bulma's Typography](https://bulma.
 ## Flexbox
 
 Yolo's flexbox implementation is based on [Bulma's "columns" interface](https://bulma.io/documentation/columns/).
+
+Flexbox is used to layout [lightbox images](#image-lightbox) and included to support rich single page layouts. Knock 
+on wood, in the not too distant future I hope to add several layout templates.
+
+{% include code.html info="Flexbox template" %}
+{% raw %}
+```html
+{% include flexbox.html columns="1" %}
+{% include flexbox.html columns="2" %}
+{% include flexbox.html columns="3" %}
+{% include flexbox.html columns="4" %}
+{% include flexbox.html columns="5" %}
+{% include flexbox.html columns="6" %}
+{% include flexbox.html columns="7" %}
+{% include flexbox.html columns="8" %}
+```
+{% endraw %}
 
 {% include flexbox.html columns="1" %}
 {% include flexbox.html columns="2" %}
@@ -135,7 +152,7 @@ H1 is reserved for the site header and not shown here.
 
 ## Paragraph text
 
-[Baseball](https://en.wikipedia.org/wiki/Baseball) is a bat-and-ball sport played between two teams of nine players each, taking turns batting and fielding. The game is in play when a player on the fielding team, called the pitcher, throws a ball that a player on the batting team tries to hit with a bat. The objective of the offensive team (batting team) is to hit the ball into the field of play, away from the other team's players, allowing its players to run the bases, having them advance counter-clockwise around four bases to score what are called "runs". The objective of the defensive team (referred to as the fielding team) is to prevent batters from becoming runners, and to prevent runners' advance around the bases. A run is scored when a runner legally advances around the bases in order and touches home plate (the place where the player started as a batter). - copied from [Wikipedia](https://en.wikipedia.org/wiki/Baseball).
+[Baseball](https://en.wikipedia.org/wiki/Baseball) is a bat-and-ball sport played between two teams of nine players each, taking turns batting and fielding. The game is in play when a player on the fielding team, called the pitcher, throws a ball that a player on the batting team tries to hit with a bat. The objective of the offensive team (batting team) is to hit the ball into the field of play, away from the other team's players, allowing its players to run the bases, having them advance counter-clockwise around four bases to score what are called "runs". - copied from [Wikipedia](https://en.wikipedia.org/wiki/Baseball).
 
 [↑↑↑](#){: .back-to-top}
 
@@ -151,8 +168,7 @@ H1 is reserved for the site header and not shown here.
 
 > A baseball game is played between two teams,
 > each usually composed of nine players, that take turns playing offense (batting and baserunning)
-> and defense (pitching and fielding). A pair of turns,
-> one at bat and one in the field, by each team constitutes an inning.
+> and defense (pitching and fielding).
 >
 > The game is played on a field whose primary boundaries, the foul lines,
 > extend forward from home plate at 45-degree angles.
@@ -173,13 +189,13 @@ H1 is reserved for the site header and not shown here.
 
 ## Blockquote w/ markdown
 
-> ### Statistics
+> ### Baseball Statistics
 >
 > 1. __At Bats:__ Plate appearances, excluding walks and hit by pitches.
-> 2. __Hits:__ Times a base is reached safely, because of a batted ball.
-> 3. __Runs:__ Times circling the bases and reaching home safely.
+> 2. __Hits:__ Number of times a base is reached safely.
+> 3. __Runs:__ Number of times runners reach home safely.
 > 4. __RBIs:__ Number of runners who scored due to a batter's action.
-> 5. __Home Runs:__ Hits on which the batter successfully touched all four bases.
+> 5. __Home Runs:__ Hits where the batter touches all four bases safely.
 > 6. __Batting Average:__ Hits divided by at bats.
 
 [↑↑↑](#){: .back-to-top}
@@ -205,7 +221,7 @@ H1 is reserved for the site header and not shown here.
 
 ## Code
 
-> __Tip:__ Click the snippet header to copy to clipboard.
+> __Tip:__ Click header to copy a snippet.
 
 {% include code.html info="Bash script" %}
 ```bash
@@ -292,7 +308,7 @@ AND   price <= 10000
 | <a href="https://www.baseball-reference.com/players/r/ruthba01.shtml" target="_blank">Babe Ruth</a> | .342 | 714 |
 | <a href="https://www.baseball-reference.com/players/w/wilsomo01.shtml" target="_blank">Mookie Wilson</a> | .274 | 67 |
 
-### With formatted content
+### Formatted content
 
 | Command | Description |
 | --- | --- |
@@ -300,7 +316,7 @@ AND   price <= 10000
 | `git status` | List all *new or modified* files |
 | `git diff` | Show file differences that **haven't been** staged |
 
-### With cell alignment
+### Cell alignment
 
 | Left-aligned | Center-aligned | Right-aligned |
 | :---         |     :---:      |          ---: |
@@ -348,7 +364,7 @@ Thumbnails are 128px x 128px and use the `thumbnail` class.
 ```
 {% endraw %}
 
-> Click to enlarge.
+> __Tip:__ Click to enlarge.
 
 {%
   include image/image.html
@@ -376,7 +392,7 @@ Square images can be added with the following classes: `is-16`, `is-24`, `is-32`
 ```
 {% endraw %}
 
-> Click to enlarge.
+> __Tip:__ Click to enlarge.
 
 {%
   include image/image.html
@@ -405,7 +421,7 @@ Circle images can be added with the following classes: `is-circle-16`, `is-circl
 ```
 {% endraw %}
 
-> Click to enlarge.
+> __Tip:__ Click to enlarge.
 
 {%
   include image/image.html
@@ -434,7 +450,7 @@ Circle images can be added with the following classes: `is-circle-16`, `is-circl
 ```
 {% endraw %}
 
-> Click to enlarge.
+> __Tip:__ Click to enlarge.
 
 {%
   include image/image.html
@@ -463,7 +479,7 @@ Circle images can be added with the following classes: `is-circle-16`, `is-circl
 ```
 {% endraw %}
 
-> Click to enlarge.
+> __Tip:__ Click to enlarge.
 
 {%
   include image/image.html
@@ -492,7 +508,7 @@ Circle images can be added with the following classes: `is-circle-16`, `is-circl
 ```
 {% endraw %}
 
-> Click to enlarge.
+> __Tip:__ Click to enlarge.
 
 {%
   include image/image.html
@@ -521,7 +537,7 @@ Circle images can be added with the following classes: `is-circle-16`, `is-circl
 ```
 {% endraw %}
 
-> Click to enlarge.
+> __Tip:__ Click to enlarge.
 
 {%
   include image/image.html
@@ -564,9 +580,9 @@ The `_data/lb-images.yml` file is the default lightbox data file, just replace w
 
 ### Custom data file
 
-A custom data file can be added to render another lightbox.
+A custom data file can be added to render a lightbox.
 
-* Create a new file in `_data` and prefix the name with `lb-`.
+* Create a new file in `_data` and prefix name with `lb-`.
 * Use the data file name (w/o `.yml` ext) as the value to `lb-data`.
 
 {% include code.html info="Images from: _data/lb-marfa.yml" %}
@@ -596,9 +612,9 @@ Yolo has basic support for embedding Google Slides.
 
 * Enter prezo data into `_data/prezos.yml`
 * Include `prezo.html` on your page.
-* Set the `title` value to match the prezo in `_data/prezos.yml`.
+* Set `title` value to match prezo in `_data/prezos.yml`.
 * By default, prezos are displayed with a `is-16-by-9` aspect ratio.
-* Optionally set the `aspect-ratio` to `is-16-by-9`, `is-4-by-3`, or `is-1-by-1`.
+* Optionally set `aspect-ratio` to `is-16-by-9`, `is-4-by-3`, or `is-1-by-1`.
 
 ### Sample 1
 
