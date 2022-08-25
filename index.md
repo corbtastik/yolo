@@ -474,22 +474,15 @@ Yolo includes a lightbox to showcase pics.
 
 __Summary:__
 
-* 4 column flexbox to display the set of images.
-* Clicking an image opens the lightbox modal.
-* On the lightbox modal:
-  * Click on right side of image to move forward.
-  * Click on left side of image to move back.
-  * Arrow left `<` and right `>` to move as well.
+* 4 column flexbox to display images.
+* Click an image to open the lightbox.
+* Click left or right, key `<` or `>` to move.
 
 __Configuration:__
 
-* View the example lightbox files in `_data`.
-  * Lightbox data files start with `lb-`.
-* Add your image data into `_data/lb-images.yml`.
-  * Or use a custom data file, for example: `_data/lb-marfa.yml`.
+* View the sample lightbox data file: `_data/lb-images.yml`.
+* Add image data into `_data/lb-images.yml`.
 * Include `image/lightbox.html` on your page.
-  * If using `lb-images.yml` then: `include image/lightbox.html`.  
-  * If using custom then: `include image/lightbox.html lb-data="lb-marfa"`.
 
 ### Lightbox with default data file
 
