@@ -5,6 +5,8 @@ description: A loveable single page theme
 # Site customizations
 logo: assets/images/site/logo.png
 style: corbs
+images: https://storage.googleapis.com/corbs-foto/yolo
+#images: assets/images
 # Build settings
 version: v1.6
 markdown: kramdown

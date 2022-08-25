@@ -317,14 +317,16 @@ AND   price <= 10000
 > Images added via markdown receive styling from the `<img>` element, they're not styled with `yolo` scss.  
 
 {% include code.html info="Markdown images" %}
+{% raw %}
 ```markdown
-![Moonie Moonpie](assets/images/site/moonpie.png "Sweet Moonpie")
-![BIG yawn Bucky](assets/images/site/bucky.png "Sleepy Bucky")
+![Moonie Moonpie]({{ site.images }}/site/moonpie.png "Sweet Moonpie")
+![BIG yawn Bucky]({{ site.images }}/site/bucky.png "Sleepy Bucky")
 ```
+{% endraw %}
 
-![Moonie Moonpie](assets/images/site/moonpie.png "Moonpie Aweee")
+![Moonie Moonpie]({{ site.images }}/site/moonpie.png "Sweet Moonpie")
 
-![BIG yawn Bucky](assets/images/site/bucky.png "Sleepy Bucky")
+![BIG yawn Bucky]({{ site.images }}/site/bucky.png "Sleepy Bucky")
 
 [↑↑↑](#){: .back-to-top}
 
@@ -335,16 +337,22 @@ AND   price <= 10000
 Thumbnails are 128px x 128px and use the `thumbnail` class.
 
 {% include code.html info="Thumbnail images" %}
+{% raw %}
 ```html
-<img class="image thumbnail" src="assets/images/yolo/big-face-bucky.png">
+{%
+  include image/image.html
+  classes="thumbnail"
+  src="yolo/big-face-bucky.png"
+%}
 ```
+{% endraw %}
 
 > Click to enlarge.
 
 {%
-include image/image.html
-classes="thumbnail"
-src="assets/images/yolo/big-face-bucky.png"
+  include image/image.html
+  classes="thumbnail"
+  src="yolo/big-face-bucky.png"
 %}
 
 [↑↑↑](#){: .back-to-top}
@@ -357,13 +365,23 @@ Square images can be added with the following classes: `is-16`, `is-24`, `is-32`
 `is-192`, `is-256`, `is-384`, `is-448`, `is-512`, `is-640`.
 
 {% include code.html info="Square images" %}
+{% raw %}
 ```html
-<img class="image is-256" src="assets/images/yolo/drive-in.png">
+{%
+  include image/image.html
+  classes="image is-256"
+  src="yolo/drive-in.png"
+%}
 ```
+{% endraw %}
 
 > Click to enlarge.
 
-<img class="image is-256" src="assets/images/yolo/drive-in.png">
+{%
+  include image/image.html
+  classes="image is-256"
+  src="yolo/drive-in.png"
+%}
 
 [↑↑↑](#){: .back-to-top}
 
@@ -376,16 +394,22 @@ Circle images can be added with the following classes: `is-circle-16`, `is-circl
 `is-circle-448`, `is-circle-512`, `is-circle-640`.
 
 {% include code.html info="Circle images" %}
+{% raw %}
 ```html
-<img class="image is-circle-256" src="assets/images/yolo/big-face-bucky.png">
+{%
+  include image/image.html
+  classes="is-circle-256"
+  src="yolo/big-face-bucky.png"
+%}
 ```
+{% endraw %}
 
 > Click to enlarge.
 
 {%
-include image/image.html
-classes="is-circle-256"
-src="assets/images/yolo/big-face-bucky.png"
+  include image/image.html
+  classes="is-circle-256"
+  src="yolo/big-face-bucky.png"
 %}
 
 [↑↑↑](#){: .back-to-top}
@@ -399,13 +423,23 @@ src="assets/images/yolo/big-face-bucky.png"
 `is-480-by-360`, `is-512-by-384`, `is-640-by-480`.
 
 {% include code.html info="4-by-3 images" %}
+{% raw %}
 ```html
-<img class="image is-256-by-192" src="assets/images/yolo/bluebonnet.png">
+{%
+  include image/image.html
+  classes="image is-256-by-192"
+  src="yolo/bluebonnet.png"
+%}
 ```
+{% endraw %}
 
 > Click to enlarge.
 
-<img class="image is-256-by-192" src="assets/images/yolo/bluebonnet.png">
+{%
+  include image/image.html
+  classes="image is-256-by-192"
+  src="yolo/bluebonnet.png"
+%}
 
 [↑↑↑](#){: .back-to-top}
 
@@ -418,13 +452,23 @@ src="assets/images/yolo/big-face-bucky.png"
 `is-360-by-480`, `is-384-by-512`, `is-480-by-640`.
 
 {% include code.html info="3-by-4 images" %}
+{% raw %}
 ```html
-<img class="image is-240-by-320" src="assets/images/yolo/bluebonnet.png">
+{%
+  include image/image.html
+  classes="image is-240-by-320"
+  src="yolo/bluebonnet.png"
+%}
 ```
+{% endraw %}
 
 > Click to enlarge.
 
-<img class="image is-240-by-320" src="assets/images/yolo/bluebonnet.png">
+{%
+  include image/image.html
+  classes="image is-240-by-320"
+  src="yolo/bluebonnet.png"
+%}
 
 [↑↑↑](#){: .back-to-top}
 
@@ -437,13 +481,23 @@ src="assets/images/yolo/big-face-bucky.png"
 `is-512-by-288`, `is-640-by-360`.
 
 {% include code.html info="16-by-9 images" %}
+{% raw %}
 ```html
-<img class="image is-256-by-144" src="assets/images/yolo/bluebonnet.png">
+{%
+  include image/image.html
+  classes="image is-256-by-144"
+  src="yolo/bluebonnet.png"
+%}
 ```
+{% endraw %}
 
 > Click to enlarge.
 
-<img class="image is-256-by-144" src="assets/images/yolo/bluebonnet.png">
+{%
+  include image/image.html
+  classes="image is-256-by-144"
+  src="yolo/bluebonnet.png"
+%}
 
 [↑↑↑](#){: .back-to-top}
 
@@ -456,13 +510,23 @@ src="assets/images/yolo/big-face-bucky.png"
 `is-288-by-512`, `is-360-by-640`.
 
 {% include code.html info="9-by-16 images" %}
+{% raw %}
 ```html
-<img class="image is-225-by-400" src="assets/images/yolo/bluebonnet.png">
+{%
+  include image/image.html
+  classes="image is-225-by-400"
+  src="yolo/bluebonnet.png"
+%}
 ```
+{% endraw %}
 
 > Click to enlarge.
 
-<img class="image is-225-by-400" src="assets/images/yolo/bluebonnet.png">
+{%
+  include image/image.html
+  classes="image is-225-by-400"
+  src="yolo/bluebonnet.png"
+%}
 
 [↑↑↑](#){: .back-to-top}
 
@@ -484,15 +548,32 @@ __Configuration:__
 * Add image data into `_data/lb-images.yml`.
 * Include `image/lightbox.html` on your page.
 
-### Lightbox with default data file
+### Default data file
 
-> Data from: _data/lb-images.yml
+The `_data/lb-images.yml` file is the default lightbox data file, just replace with your data to display images.
+
+{% include code.html info="Images from: _data/lb-images.yml" %}
+{% raw %}
+```html
+{% include image/lightbox.html %}
+```
+{% endraw %}
 
 {% include image/lightbox.html %}
 
-### Lightbox with custom data file
+### Custom data file
 
-> Data from: _data/lb-marfa.yml
+A custom data file can be added to render another lightbox.
+
+* Create a new file in `_data` and prefix the name with `lb-`.
+* Use the data file name (w/o `.yml` ext) as the value to `lb-data`.
+
+{% include code.html info="Images from: _data/lb-marfa.yml" %}
+{% raw %}
+```html
+{% include image/lightbox.html lb-data="lb-marfa" %}
+```
+{% endraw %}
 
 {% include image/lightbox.html lb-data="lb-marfa" %}
 

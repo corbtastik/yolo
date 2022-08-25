@@ -4,7 +4,6 @@ List of tasks for maturing Yolo.
 
 ## ASAP
 
-* Create a corbs light theme.
 * Create tutorial for adding custom lightbox.
 * Create tutorial for adding custom theme.
 * Create tutorial for using includes.
@@ -15,7 +14,7 @@ List of tasks for maturing Yolo.
 
 ## Mid-term
 
-* Move images into Google Cloud Storage, delete images in assets folder, link to GCS images.
+* Add support for Google Cloud Storage for image assets.
 * Build new Yolo container images, push to quay.
 * Add option to collapse header (h2, h3, h4, h5, h6) sections.
 * Look into customizing syntax highlighter.
@@ -50,6 +49,7 @@ List of tasks for maturing Yolo.
 * [DONE] Add theme variable for table header color and use in code-header and table headers.
 * [DONE] Verify Image responsiveness and aspect ratios.
 * [DONE] Integrate Bulma's responsive flexbox component.
+* [DONE 2022-08-25] Create a corbs light theme (named: "cloudy").
 
 
 

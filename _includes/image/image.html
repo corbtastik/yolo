@@ -1,8 +1,8 @@
 {% if include.description %}
 <figure>
-  <img class="image {{ include.classes }}" alt="{{ include.description }}"  src="{{ include.src }}">
+  <img class="image {{ include.classes }}" alt="{{ include.description }}"  src="{{ site.images }}/{{ include.src }}">
   <figcaption>{{ include.description }}</figcaption>
 </figure>
 {% else %}
-<img class="image {{ include.classes }}" src="{{ include.src }}">
+<img class="image {{ include.classes }}" src="{{ site.images }}/{{ include.src }}">
 {% endif %}
