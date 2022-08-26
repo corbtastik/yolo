@@ -24,6 +24,9 @@ Bring your own [colors](#colors) and [fonts](#typography).
 
 > The one-and-only "implementation" page is the one you're looking at. It's a sampler of all out-of-the-box elements.
 
+
+##### [> Kuddos](#thanks)
+
 ---
 
 ## Usage
@@ -654,6 +657,34 @@ Yolo has basic support for embedding Google Slides.
 > Aspect ratio `is-1-by-1`.
 
 {% include prezo.html title="yolo-on" aspect-ratio="is-1-by-1" %}
+
+[↑↑↑](#){: .back-to-top}
+
+---
+
+## Thanks
+
+I'm a developer by trade with roots in C and Java. I once read something like - _"write code every day"_ and although I haven't, I like to try. I enjoy frontend development but consider myself a hack. I get by, but get by with a little help from my friends.
+
+> Many thanks for these resources and the folks behind them.
+
+#### [w3schools](https://www.w3schools.com/)
+
+When I want an unvarnished take on HTML, CSS, and Javascript I go to [w3schools](https://www.w3schools.com/). That and every time I google for frontend related stuff [w3schools](https://www.w3schools.com/) comes up. Great reference material, some of which guided the [Yolo Lightbox](#image-lightbox) implementation.
+
+> Sanks [w3schools](https://www.w3schools.com/) people.
+
+#### [Solo](http://chibicode.github.io/solo/)
+
+Years ago I googled _"minimal jekyll theme"_, which led me to [Solo](http://chibicode.github.io/solo/). It was exactly what I was looking for, simple to get started and customize. Not to mention there's a quirky beauty in its look. Over the years I've used Solo for single page "technical" docs. It's the motivation and starting point for Yolo.
+
+> Well done [Shu Uesugi](https://github.com/chibicode), sanks amigo.
+
+#### [Bulma](https://bulma.io/)
+
+_"The modern CSS framework that just works"_, true dat. Bulma is not included as a library in Yolo but contains slightly modified scss from select areas, namely flexbox, typography and image styling. For my tastes Bulma is the best css framework, they be awesome yo.
+
+> Sanks [Bulma](https://bulma.io/) people.
 
 [↑↑↑](#){: .back-to-top}
 
