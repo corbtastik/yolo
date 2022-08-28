@@ -109,18 +109,18 @@
     }
 
     Yolo.prototype.initToc = function() {
-        document.getElementById('sidebar')
-            .addEventListener('click', this.toggleToc, false);
-    };
-
-    Yolo.prototype.toggleToc = function() {
-        const sidebarWidth = document.getElementById("sidebar").style.width;
-        if(sidebarWidth === "50%") {
-            document.getElementById("sidebar").style.width = "20px";
-        } else {
-            document.getElementById("sidebar").style.width = "50%";
+        const sidebar = document.getElementById('sidebar');
+        if(sidebar !== undefined) {
+            sidebar.addEventListener('click', function() {
+                const sidebarWidth = sidebar.style.width;
+                if(sidebarWidth === "50%") {
+                    sidebar.style.width = "1rem";
+                } else {
+                    sidebar.style.width = "50%";
+                }
+            }, false);
         }
-    }
+    };
 
     Yolo.prototype.scaleImages = function() {
         const images = document.querySelectorAll('.image');
