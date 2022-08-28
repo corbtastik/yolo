@@ -109,8 +109,6 @@
     }
 
     Yolo.prototype.initToc = function() {
-        document.getElementById('toggle')
-            .addEventListener('click', this.toggleToc, false);
         document.getElementById('sidebar')
             .addEventListener('click', this.toggleToc, false);
     };
@@ -118,10 +116,8 @@
     Yolo.prototype.toggleToc = function() {
         const sidebarWidth = document.getElementById("sidebar").style.width;
         if(sidebarWidth === "50%") {
-            document.getElementById("sidebar-nav").style.opacity = "0";
-            document.getElementById("sidebar").style.width = "0px";
+            document.getElementById("sidebar").style.width = "20px";
         } else {
-            document.getElementById("sidebar-nav").style.opacity = "1";
             document.getElementById("sidebar").style.width = "50%";
         }
     }
