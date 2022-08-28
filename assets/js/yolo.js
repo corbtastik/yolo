@@ -103,9 +103,24 @@
             const yolo = new Yolo();
             yolo.scaleImages();
             yolo.copySnippet();
+            yolo.initToc();
             return yolo;
         }
     }
+
+    Yolo.prototype.initToc = function() {
+        const sidebar = document.getElementById('sidebar');
+        if(sidebar !== undefined) {
+            sidebar.addEventListener('click', function() {
+                const sidebarWidth = sidebar.style.width;
+                if(sidebarWidth === "50%") {
+                    sidebar.style.width = "1rem";
+                } else {
+                    sidebar.style.width = "50%";
+                }
+            }, false);
+        }
+    };
 
     Yolo.prototype.scaleImages = function() {
         const images = document.querySelectorAll('.image');

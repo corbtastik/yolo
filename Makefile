@@ -5,11 +5,15 @@ CONTAINER_REGISTRY=quay.io/corbsmartin
 IMAGE_NAME=yolo
 IMAGE_TAG=v1.6
 OUTPUT_DIR=.site-build
+JEKYLL_PORT=4000
 # -----------------------------------------------------------------------------
 # Targets for working with a single site build of Solo.
 # -----------------------------------------------------------------------------
 clean:
 	@rm -rf $(OUTPUT_DIR)
+
+run:
+	@jekyll serve --port $(JEKYLL_PORT)
 
 yolo-site:
 	@mkdir -p $(OUTPUT_DIR)/$(IMAGE_NAME)
@@ -40,6 +44,12 @@ arcade:
 	@jekyll build \
 		--config _config.yml,$(OUTPUT_DIR)/_style.yml,$(OUTPUT_DIR)/_version.yml \
 		--destination $(OUTPUT_DIR)/$(SAMPLER_DIR)/arcade
+
+cloudy:
+	@echo "style: cloudy" > $(OUTPUT_DIR)/_style.yml
+	@jekyll build \
+		--config _config.yml,$(OUTPUT_DIR)/_style.yml,$(OUTPUT_DIR)/_version.yml \
+		--destination $(OUTPUT_DIR)/$(SAMPLER_DIR)/cloudy
 
 corbs:
 	@echo "style: corbs" > $(OUTPUT_DIR)/_style.yml

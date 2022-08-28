@@ -24,6 +24,9 @@ Bring your own [colors](#colors) and [fonts](#typography).
 
 > The one-and-only "implementation" page is the one you're looking at. It's a sampler of all out-of-the-box elements.
 
+
+##### [> Kuddos](#thanks)
+
 ---
 
 ## Usage
@@ -78,7 +81,7 @@ Yolo doesn't implement an "according to hoyle" Jekyll theme, but the colors, fon
 
 ---
 
-## Colors
+### Colors
 
 Yolo's colors can be customized by adding a new theme scss file and setting the `site.style` value in `_config.yml`.
 
@@ -88,7 +91,7 @@ Yolo's colors can be customized by adding a new theme scss file and setting the 
 
 ---
 
-## Typography
+### Typography
 
 Yolo's typography implementation is based on [Bulma's Typography](https://bulma.io/documentation/helpers/typography-helpers/).
 
@@ -98,7 +101,7 @@ Yolo's typography implementation is based on [Bulma's Typography](https://bulma.
 
 ---
 
-## Flexbox
+### Flexbox
 
 Yolo's flexbox implementation is based on [Bulma's "columns" interface](https://bulma.io/documentation/columns/).
 
@@ -132,7 +135,7 @@ on wood, in the not too distant future I hope to add several layout templates.
 
 ---
 
-## Headers
+### Headers
 
 H1 is reserved for the site header and not shown here.
 
@@ -150,7 +153,7 @@ H1 is reserved for the site header and not shown here.
 
 ---
 
-## Paragraph text
+### Paragraph text
 
 [Baseball](https://en.wikipedia.org/wiki/Baseball) is a bat-and-ball sport played between two teams of nine players each, taking turns batting and fielding. The game is in play when a player on the fielding team, called the pitcher, throws a ball that a player on the batting team tries to hit with a bat. The objective of the offensive team (batting team) is to hit the ball into the field of play, away from the other team's players, allowing its players to run the bases, having them advance counter-clockwise around four bases to score what are called "runs". - copied from [Wikipedia](https://en.wikipedia.org/wiki/Baseball).
 
@@ -158,13 +161,13 @@ H1 is reserved for the site header and not shown here.
 
 ---
 
-## Blockquotes
+### Blockquotes
 
-### Single Blockquote
+#### Single Blockquote
 
 > In the United States and Canada, professional Major League Baseball (MLB) teams are divided into the National League (NL) and American League (AL), each with three divisions: East, West, and Central. The MLB champion is determined by playoffs that culminate in the World Series.
 
-### Two paragraph Blockquote
+#### Two paragraph Blockquote
 
 > A baseball game is played between two teams,
 > each usually composed of nine players, that take turns playing offense (batting and baserunning)
@@ -175,7 +178,7 @@ H1 is reserved for the site header and not shown here.
 > The 90-degree area within the foul lines is referred to as fair territory;
 > the 270-degree area outside them is foul territory.
 
-### Nested Blockquote
+#### Nested Blockquote
 
 > The number of players on a baseball roster, or squad, varies by league and by the level of organized play. A Major League Baseball (MLB) team has a roster of 25 players with specific roles. A typical roster features the following players:
 >
@@ -183,13 +186,9 @@ H1 is reserved for the site header and not shown here.
 >
 > Most baseball leagues worldwide have the DH rule.
 
-[↑↑↑](#){: .back-to-top}
+#### Blockquote w/ markdown
 
----
-
-## Blockquote w/ markdown
-
-> ### Baseball Statistics
+> #### Baseball Statistics
 >
 > 1. __At Bats:__ Plate appearances, excluding walks and hit by pitches.
 > 2. __Hits:__ Number of times a base is reached safely.
@@ -202,7 +201,7 @@ H1 is reserved for the site header and not shown here.
 
 ---
 
-## Inline Text
+### Inline Text
 
 - Just plain text
 - **Bold text**
@@ -219,7 +218,7 @@ H1 is reserved for the site header and not shown here.
 
 ---
 
-## Code
+### Code
 
 > __Tip:__ Click header to copy a snippet.
 
@@ -271,9 +270,9 @@ AND   price <= 10000
 
 ---
 
-## Lists
+### Lists
 
-### Unordered
+#### Unordered
 
 * Arlington Stadium
 * Rangers Ballpark in Arlington
@@ -285,7 +284,7 @@ AND   price <= 10000
         * Boston Beaneaters
             * Boston Red Sox
 
-### Ordered
+#### Ordered
 
 1. Babe Ruth
 2. Willie Mays
@@ -296,9 +295,9 @@ AND   price <= 10000
 
 ---
 
-## Tables
+### Tables
 
-### Basic
+#### Basic
 
 > __See:__ [Github markdown tables](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/organizing-information-with-tables)
 
@@ -308,7 +307,7 @@ AND   price <= 10000
 | <a href="https://www.baseball-reference.com/players/r/ruthba01.shtml" target="_blank">Babe Ruth</a> | .342 | 714 |
 | <a href="https://www.baseball-reference.com/players/w/wilsomo01.shtml" target="_blank">Mookie Wilson</a> | .274 | 67 |
 
-### Formatted content
+#### Formatted content
 
 | Command | Description |
 | --- | --- |
@@ -316,7 +315,7 @@ AND   price <= 10000
 | `git status` | List all *new or modified* files |
 | `git diff` | Show file differences that **haven't been** staged |
 
-### Cell alignment
+#### Cell alignment
 
 | Left-aligned | Center-aligned | Right-aligned |
 | :---         |     :---:      |          ---: |
@@ -327,7 +326,7 @@ AND   price <= 10000
 
 ---
 
-## Markdown Images
+### Markdown Images
 
 [Kramdown](https://github.com/gettalong/kramdown) is the default markdown converter for [Jekyll](https://jekyllrb.com/) and supports adding images via markdown.
 
@@ -349,7 +348,7 @@ AND   price <= 10000
 
 ---
 
-## Thumbnail Images
+### Thumbnail Images
 
 Thumbnails are 128px x 128px and use the `thumbnail` class.
 
@@ -376,7 +375,7 @@ Thumbnails are 128px x 128px and use the `thumbnail` class.
 
 ---
 
-## Square Images
+### Square Images
 
 Square images can be added with the following classes: `is-16`, `is-24`, `is-32`, `is-48`, `is-64`, `is-96`, `is-128`,
 `is-192`, `is-256`, `is-384`, `is-448`, `is-512`, `is-640`.
@@ -404,7 +403,7 @@ Square images can be added with the following classes: `is-16`, `is-24`, `is-32`
 
 ---
 
-## Circle Images
+### Circle Images
 
 Circle images can be added with the following classes: `is-circle-16`, `is-circle-24`, `is-circle-32`,
 `is-circle-48`, `is-circle-64`, `is-circle-96`, `is-circle-128`, `is-circle-192`, `is-circle-256`, `is-circle-384`,
@@ -433,7 +432,7 @@ Circle images can be added with the following classes: `is-circle-16`, `is-circl
 
 ---
 
-## 4-by-3 Aspect Images
+### 4-by-3 Aspect Images
 
 4 by 3 aspect ratio images can be added with the following classes: `is-100-by-75`, `is-120-by-90`, `is-128-by-96`,
 `is-160-by-120`, `is-200-by-150`, `is-240-by-180`, `is-256-by-192`, `is-320-by-240`, `is-400-by-300`,
@@ -462,7 +461,7 @@ Circle images can be added with the following classes: `is-circle-16`, `is-circl
 
 ---
 
-## 3-by-4 Aspect Images
+### 3-by-4 Aspect Images
 
 3 by 4 aspect ratio images can be added with the following classes: `is-75-by-100`, `is-90-by-120`, `is-96-by-128`,
 `is-120-by-160`, `is-150-by-200`, `is-180-by-240`, `is-192-by-256`, `is-240-by-320`, `is-300-by-400`,
@@ -491,7 +490,7 @@ Circle images can be added with the following classes: `is-circle-16`, `is-circl
 
 ---
 
-## 16-by-9 Aspect Images
+### 16-by-9 Aspect Images
 
 16 by 9 aspect ratio images can be added with the following classes: `is-112-by-63`, `is-128-by-72`, `is-144-by-81`,
 `is-160-by-90`, `is-192-by-108`, `is-224-by-126`, `is-256-by-144`, `is-320-by-180`, `is-400-by-225`, `is-480-by-270`,
@@ -520,7 +519,7 @@ Circle images can be added with the following classes: `is-circle-16`, `is-circl
 
 ---
 
-## 9-by-16 Aspect Images
+### 9-by-16 Aspect Images
 
 9 by 16 aspect ratio images can be added with the following classes: `is-63-by-112`, `is-72-by-128`, `is-81-by-144`,
 `is-90-by-160`, `is-108-by-192`, `is-126-by-224`, `is-144-by-256`, `is-180-by-320`, `is-225-by-400`, `is-270-by-480`,
@@ -549,7 +548,7 @@ Circle images can be added with the following classes: `is-circle-16`, `is-circl
 
 ---
 
-## Image Lightbox
+### Image Lightbox
 
 Yolo includes a lightbox to showcase pics.
 
@@ -565,7 +564,7 @@ __Configuration:__
 * Add image data into `_data/lb-images.yml`.
 * Include `image/lightbox.html` on your page.
 
-### Default data file
+#### Default data file
 
 The `_data/lb-images.yml` file is the default lightbox data file, just replace with your data to display images.
 
@@ -578,7 +577,7 @@ The `_data/lb-images.yml` file is the default lightbox data file, just replace w
 
 {% include image/lightbox.html %}
 
-### Custom data file
+#### Custom data file
 
 A custom data file can be added to render a lightbox.
 
@@ -598,7 +597,7 @@ A custom data file can be added to render a lightbox.
 
 ---
 
-## Videos
+### Videos
 
 {% include video.html %}
 
@@ -606,7 +605,7 @@ A custom data file can be added to render a lightbox.
 
 ---
 
-## Prezos
+### Prezos
 
 Yolo has basic support for embedding Google Slides.
 
@@ -616,7 +615,7 @@ Yolo has basic support for embedding Google Slides.
 * By default, prezos are displayed with a `is-16-by-9` aspect ratio.
 * Optionally set `aspect-ratio` to `is-16-by-9`, `is-4-by-3`, or `is-1-by-1`.
 
-### Sample 1
+#### Sample 1
 
 {% include code.html info="16-by-9 aspect ratio (default)" %}
 {% raw %}
@@ -629,7 +628,7 @@ Yolo has basic support for embedding Google Slides.
 
 {% include prezo.html title="blinged-macmini" %}
 
-### Sample 2
+#### Sample 2
 
 {% include code.html info="4-by-3 aspect ratio" %}
 {% raw %}
@@ -642,7 +641,7 @@ Yolo has basic support for embedding Google Slides.
 
 {% include prezo.html title="one-awesome-prezo" aspect-ratio="is-4-by-3" %}
 
-### Sample 3
+#### Sample 3
 
 {% include code.html info="1-by-1 aspect ratio" %}
 {% raw %}
@@ -654,6 +653,34 @@ Yolo has basic support for embedding Google Slides.
 > Aspect ratio `is-1-by-1`.
 
 {% include prezo.html title="yolo-on" aspect-ratio="is-1-by-1" %}
+
+[↑↑↑](#){: .back-to-top}
+
+---
+
+## Thanks
+
+I'm a developer by trade with roots in C and Java. I once read something like - _"write code every day"_ and although I haven't, I like to try. I enjoy frontend development but consider myself a hack. I get by, but get by with a little help from my friends.
+
+> Many thanks for these resources and the folks behind them.
+
+### [w3schools](https://www.w3schools.com/)
+
+When I want an unvarnished take on HTML, CSS, and Javascript I go to [w3schools](https://www.w3schools.com/). That and every time I google for frontend related stuff [w3schools](https://www.w3schools.com/) comes up. Great reference material, some of which guided the [Yolo Lightbox](#image-lightbox) implementation.
+
+> Sanks [w3schools](https://www.w3schools.com/) people.
+
+### [Solo](http://chibicode.github.io/solo/)
+
+Years ago I googled _"minimal jekyll theme"_, which led me to [Solo](http://chibicode.github.io/solo/). It was exactly what I was looking for, simple to get started and customize. Not to mention there's a quirky beauty in its look. Over the years I've used Solo for single page "technical" docs. It's the motivation and starting point for Yolo.
+
+> Well done [Shu Uesugi](https://github.com/chibicode), sanks amigo.
+
+### [Bulma](https://bulma.io/)
+
+_"The modern CSS framework that just works"_, true dat. Bulma is not included as a library in Yolo but contains slightly modified scss from select areas, namely flexbox, typography and image styling. For my tastes Bulma is the best css framework, they be awesome yo.
+
+> Sanks [Bulma](https://bulma.io/) people.
 
 [↑↑↑](#){: .back-to-top}
 
