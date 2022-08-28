@@ -20,21 +20,23 @@
 </div>
 <!-- The lb-modal -->
 <div id="lb-modal-{{ lb_data }}" class="lb-modal">
-    <span class="lb-close cursor" onclick="Yolo.lightbox('{{ lb_data }}').closeModal();">&times;</span>
-    <div class="lb-modal-content">
-        {% for lb_image in lb_images %}
-        <div class="lb-slides">
-            <img class="lb-item center"
-                 alt="{{ lb_image.description }}"
-                 src="{{ lb_image.src }}">
+    <span class="lb-close" onclick="Yolo.lightbox('{{ lb_data }}').closeModal();">&times;</span>
+    <div class="lb-container is-mobile">
+        <div class="lb-modal-content">
+            {% for lb_image in lb_images %}
+            <div class="lb-slides">
+                <img class="lb-item center"
+                     alt="{{ lb_image.description }}"
+                     src="{{ lb_image.src }}">
+            </div>
+            {% endfor %}
+            <!-- Next/previous controls -->
+            <a class="lb-nav lb-prev" onclick="Yolo.lightbox('{{ lb_data }}').plusSlides(-1);">&#10094;</a>
+            <a class="lb-nav lb-next" onclick="Yolo.lightbox('{{ lb_data }}').plusSlides(1);">&#10095;</a>
         </div>
-        {% endfor %}
-        <!-- Next/previous controls -->
-        <a class="lb-nav lb-prev" onclick="Yolo.lightbox('{{ lb_data }}').plusSlides(-1);">&#10094;</a>
-        <a class="lb-nav lb-next" onclick="Yolo.lightbox('{{ lb_data }}').plusSlides(1);">&#10095;</a>
-    </div>
-    <!-- Caption text -->
-    <div class="lb-caption-container">
-        <p id="lb-caption-{{ lb_data }}"></p>
+        <!-- Caption text -->
+        <div class="lb-caption-container">
+            <p id="lb-caption-{{ lb_data }}"></p>
+        </div>
     </div>
 </div>
