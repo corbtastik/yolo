@@ -15,7 +15,7 @@ List of tasks for maturing Yolo.
 
 ## Mid-term
 
-* Add support for Google Cloud Storage for image assets.
+* Add support for embedding PDFs.
 * Build new Yolo container images, push to quay.
 * Add option to collapse header (h2, h3, h4, h5, h6) sections.
 * Look into customizing syntax highlighter.
@@ -51,6 +51,7 @@ List of tasks for maturing Yolo.
 * [DONE] Verify Image responsiveness and aspect ratios.
 * [DONE] Integrate Bulma's responsive flexbox component.
 * [DONE 2022-08-25] Create a corbs light theme (named: "cloudy").
+* [DONE] Add support for Google Cloud Storage for image assets.
 
 
 
