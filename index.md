@@ -272,6 +272,145 @@ AND   price <= 10000
 
 ### Lists
 
+#### Styled Lists
+
+##### no styling
+
+<ul>
+  <li>Babe Ruth</li>
+  <li>Willie Mays</li>
+  <li>Mookie Wilson</li>
+</ul>
+
+##### is-dot
+
+<ul class="is-dot">
+  <li>Babe Ruth</li>
+  <li>Willie Mays</li>
+  <li>Mookie Wilson</li>
+</ul>
+
+##### is-circle
+
+<ul class="is-circle">
+  <li>Babe Ruth</li>
+  <li>Willie Mays</li>
+  <li>Mookie Wilson</li>
+</ul>
+
+##### is-triangle
+
+<ul class="is-triangle">
+  <li>Babe Ruth</li>
+  <li>Willie Mays</li>
+  <li>Mookie Wilson</li>
+</ul>
+
+##### is-star
+
+<ul class="is-star">
+  <li>Babe Ruth</li>
+  <li>Willie Mays</li>
+  <li>Mookie Wilson</li>
+</ul>
+
+##### is-snowflake
+
+<ul class="is-snowflake">
+  <li>Babe Ruth</li>
+  <li>Willie Mays</li>
+  <li>Mookie Wilson</li>
+</ul>
+
+##### is-plus
+
+<ul class="is-plus">
+  <li>Babe Ruth</li>
+  <li>Willie Mays</li>
+  <li>Mookie Wilson</li>
+</ul>
+
+##### is-dash
+
+<ul class="is-dash">
+  <li>Babe Ruth</li>
+  <li>Willie Mays</li>
+  <li>Mookie Wilson</li>
+</ul>
+
+##### is-asterisk
+
+<ul class="is-asterisk">
+  <li>Babe Ruth</li>
+  <li>Willie Mays</li>
+  <li>Mookie Wilson</li>
+</ul>
+
+##### is-hash
+
+<ul class="is-hash">
+  <li>Babe Ruth</li>
+  <li>Willie Mays</li>
+  <li>Mookie Wilson</li>
+</ul>
+
+##### is-equalsign
+
+<ul class="is-equalsign">
+  <li>Babe Ruth</li>
+  <li>Willie Mays</li>
+  <li>Mookie Wilson</li>
+</ul>
+
+##### is-greaterthansign
+
+<ul class="is-greaterthansign">
+  <li>Babe Ruth</li>
+  <li>Willie Mays</li>
+  <li>Mookie Wilson</li>
+</ul>
+
+##### is-lessthansign
+
+<ul class="is-lessthansign">
+  <li>Babe Ruth</li>
+  <li>Willie Mays</li>
+  <li>Mookie Wilson</li>
+</ul>
+
+##### is-tilde
+
+<ul class="is-tilde">
+  <li>Babe Ruth</li>
+  <li>Willie Mays</li>
+  <li>Mookie Wilson</li>
+</ul>
+
+##### is-test
+
+<ul class="is-test">
+  <li>Babe Ruth</li>
+  <li>Willie Mays</li>
+  <li>Mookie Wilson</li>
+</ul>
+
+##### has-border
+
+<ul class="has-border">
+  <li>Babe Ruth</li>
+  <li>Willie Mays</li>
+  <li>Mookie Wilson</li>
+</ul>
+
+##### no-bullets
+
+<ul class="no-bullets">
+  <li>Babe Ruth</li>
+  <li>Willie Mays</li>
+  <li>Mookie Wilson</li>
+</ul>
+
+
 #### Unordered
 
 * Arlington Stadium

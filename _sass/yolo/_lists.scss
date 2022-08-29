@@ -1,0 +1,126 @@
+// ----------------------------------------------------------------------------
+// lists stylesheet
+// ----------------------------------------------------------------------------
+ul {
+  // ul resets
+  margin-top: 0;
+  margin-bottom: 1rem;
+  padding-left: 1.5rem;
+  list-style: none;
+  display: block;
+
+  li {
+    color: $yolo-text-primary-color;
+    position: relative;
+    list-style: none;
+  }
+
+  li:before {
+    color: $yolo-accent-color;
+    display: inline-block;
+    width: 1rem;
+    margin-left: -1rem;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(0, -50%);
+  }
+
+  &.no-bullets {
+    list-style-type: none;
+  }
+
+  &.has-border {
+    border-left: 0.3rem solid $yolo-accent-color;
+  }
+
+  &.is-dot {
+    li:before {
+      content: "\2022";
+    }
+  }
+
+  &.is-circle {
+    li:before {
+      content: "\25E6";
+    }
+  }
+
+  &.is-triangle {
+    li:before {
+      content: "\2023";
+    }
+  }
+
+  &.is-star {
+    li:before {
+      content: "\2605";
+    }
+  }
+
+  &.is-snowflake {
+    li:before {
+      content: "\2744";
+    }
+  }
+
+  &.is-plus {
+    li:before {
+      content: "\002B";
+    }
+  }
+
+  &.is-dash {
+    li:before {
+      content: "\002D";
+    }
+  }
+
+  &.is-dash {
+    li:before {
+      content: "\002D";
+    }
+  }
+
+  &.is-asterisk {
+    li:before {
+      content: "\002A";
+    }
+  }
+
+  &.is-hash {
+    li:before {
+      content: "\0023";
+    }
+  }
+
+  &.is-equalsign {
+    li:before {
+      content: "\003D";
+    }
+  }
+
+  &.is-greaterthansign {
+    li:before {
+      content: "\003E";
+    }
+  }
+
+  &.is-lessthansign {
+    li:before {
+      content: "\003C";
+    }
+  }
+
+  &.is-tilde {
+    li:before {
+      content: "\007E";
+    }
+  }
+
+  &.is-test {
+    li:before {
+      content: "\002B";
+    }
+  }
+}
