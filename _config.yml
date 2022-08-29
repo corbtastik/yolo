@@ -16,5 +16,6 @@ exclude:
   - "Containerfile"
   - ".site-build"
   - "src/"
+  - "docs/"
 sass:
   style: compressed

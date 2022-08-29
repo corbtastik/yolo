@@ -4,6 +4,7 @@ List of tasks for maturing Yolo.
 
 ## ASAP
 
+* Make lists styling better.
 * Create tutorial for adding custom lightbox.
 * Create tutorial for adding custom theme.
 * Create tutorial for using includes.

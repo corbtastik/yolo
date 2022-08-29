@@ -13,6 +13,9 @@ ul {
     color: $yolo-text-primary-color;
     position: relative;
     list-style: none;
+    strong {
+      color: $yolo-light-color;
+    }
   }
 
   li:before {
@@ -20,10 +23,14 @@ ul {
     display: inline-block;
     width: 1rem;
     margin-left: -1rem;
-    position: absolute;
-    top: 50%;
-    left: 0;
-    transform: translate(0, -50%);
+    //position: absolute;
+    //top: 50%;
+    //left: 0;
+    //transform: translate(0, -50%);
+  }
+
+  &.is-sublist {
+    margin-bottom: 0;
   }
 
   &.no-bullets {

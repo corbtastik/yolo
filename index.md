@@ -290,6 +290,51 @@ AND   price <= 10000
   <li>Mookie Wilson</li>
 </ul>
 
+<ul class="is-dot">
+  <li>Players
+    <ul class="is-dot">
+      <li>Babe Ruth</li>
+      <li>Willie Mays</li>
+      <li>Mookie Wilson</li>
+    </ul>
+  </li>
+</ul>
+
+<ul class="is-dot">
+  <li><strong>People: </strong>
+    <ul class="is-dot">
+      <li><strong>Player: </strong>Babe Ruth
+        <ul class="is-dot is-sublist">
+          <li><strong>HR: </strong>714</li>
+          <li><strong>AVG: </strong>.342</li>
+          <li><strong>HITS: </strong>2873</li>        
+        </ul>
+      </li>
+      <li><strong>Player: </strong>Willie Mays
+        <ul class="is-dot is-sublist">
+          <li><strong>HR: </strong>660</li>
+          <li><strong>AVG: </strong>.301</li>
+          <li><strong>HITS: </strong>3293</li>        
+        </ul>
+      </li>
+      <li><strong>Player: </strong>Mookie Wilson
+        <ul class="is-dot is-sublist">
+          <li><strong>HR: </strong>67</li>
+          <li><strong>AVG: </strong>.274</li>
+          <li><strong>HITS: </strong>1397</li>        
+        </ul>
+      </li>
+      <li><strong>Coach: </strong>Ron Washington
+        <ul class="is-dot">
+          <li><strong>Games: </strong>1275</li>
+          <li><strong>Win: </strong>664</li>
+          <li><strong>Loss: </strong>611</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
 ##### is-circle
 
 <ul class="is-circle">
