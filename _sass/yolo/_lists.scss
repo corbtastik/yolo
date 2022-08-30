@@ -2,6 +2,38 @@
 // lists stylesheet
 // ----------------------------------------------------------------------------
 ul {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  padding-left: 1.5rem;
+
+  li {
+    color: $yolo-text-light-color;
+  }
+  ::marker {
+    color: $yolo-accent-color;
+  }
+}
+
+ol {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  padding-left: 2.5rem;
+
+  li {
+    color: $yolo-text-light-color;
+  }
+  ::marker {
+    color: $yolo-accent-color;
+  }
+}
+
+ul.no-bullets {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.is-list {
   // ul resets
   margin-top: 0;
   margin-bottom: 1rem;
@@ -18,12 +50,9 @@ ul {
   li:before {
     color: $yolo-accent-color;
     display: inline-block;
+    content: "\2022";
     width: 1rem;
     margin-left: -1rem;
-    //position: absolute;
-    //top: 50%;
-    //left: 0;
-    //transform: translate(0, -50%);
   }
 
   &.is-sublist {
@@ -34,7 +63,6 @@ ul {
     li {
       span:nth-child(1) {
         font-weight: bold;
-        font-family: $family-secondary;
         color: $yolo-text-secondary-color;
       }
       span:nth-child(2) {
@@ -50,7 +78,9 @@ ul {
   }
 
   &.no-bullets {
-    list-style-type: none;
+    li:before {
+      content: "";
+    }
   }
 
   &.has-border {
