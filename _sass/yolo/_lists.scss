@@ -13,9 +13,6 @@ ul {
     color: $yolo-text-primary-color;
     position: relative;
     list-style: none;
-    strong {
-      color: $yolo-light-color;
-    }
   }
 
   li:before {
@@ -31,6 +28,25 @@ ul {
 
   &.is-sublist {
     margin-bottom: 0;
+  }
+
+  &.is-annotated {
+    li {
+      span:nth-child(1) {
+        font-weight: bold;
+        font-family: $family-secondary;
+        color: $yolo-text-secondary-color;
+      }
+      span:nth-child(2) {
+        color: $yolo-text-accent-color;
+      }
+      span:nth-child(2):before {
+        content: '\003A\00A0';
+      }
+      span:nth-child(3) {
+        color: $yolo-text-light-color;
+      }
+    }
   }
 
   &.no-bullets {
