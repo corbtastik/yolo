@@ -277,12 +277,11 @@ AND   price <= 10000
 * Arlington Stadium
 * Rangers Ballpark in Arlington
 * Ebbets Field
-* Shea Stadium
 
 * Boston Red Stockings
-    * Boston Red Caps
-        * Boston Beaneaters
-            * Boston Red Sox
+  * Boston Red Caps
+    * Boston Beaneaters
+      * Boston Red Sox
 
 #### Ordered
 

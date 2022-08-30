@@ -2,5 +2,6 @@
 .idea/
 .jekyll-cache/
 .sass-cache/
+docs/
 Makefile
 BACKLOG.md

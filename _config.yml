@@ -7,7 +7,7 @@ style: corbs
 logo: assets/images/site/logo.png
 images: https://storage.googleapis.com/corbs-foto/yolo
 # Build settings
-version: v1.9
+version: v1.10
 markdown: kramdown
 exclude:
   - "README.md"
@@ -16,5 +16,6 @@ exclude:
   - "Containerfile"
   - ".site-build"
   - "src/"
+  - "docs/"
 sass:
   style: compressed
