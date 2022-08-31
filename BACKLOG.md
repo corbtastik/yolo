@@ -4,7 +4,7 @@ List of tasks for maturing Yolo.
 
 ## ASAP
 
-* Make lists styling better.
+* Responsiveness, laptop screen
 * Create tutorial for adding custom lightbox.
 * Create tutorial for adding custom theme.
 * Create tutorial for using includes.
@@ -53,6 +53,7 @@ List of tasks for maturing Yolo.
 * [DONE] Integrate Bulma's responsive flexbox component.
 * [DONE 2022-08-25] Create a corbs light theme (named: "cloudy").
 * [DONE] Add support for Google Cloud Storage for image assets.
+* [DONE] Make lists styling better.
 
 
 
