@@ -3,7 +3,7 @@
 # =============================================================================
 CONTAINER_REGISTRY=quay.io/corbsmartin
 IMAGE_NAME=yolo
-IMAGE_TAG=v1.6
+IMAGE_TAG=v1.11
 OUTPUT_DIR=.site-build
 JEKYLL_PORT=4000
 # -----------------------------------------------------------------------------
@@ -21,20 +21,23 @@ yolo-site:
 	@jekyll build --config _config.yml,$(OUTPUT_DIR)/$(IMAGE_NAME)/_version.yml \
 		--destination $(OUTPUT_DIR)/$(IMAGE_NAME)
 
-#title: Yolo, a single page theme
-#tag_text: Yolo
-#description: A single pager theme
-yolo-post:
-	@mv index.md .site-build/
-	@cp src/road-to-van-horn.md ./index.md
-	@echo "title: Road to Van Horn" > $(OUTPUT_DIR)/$(IMAGE_NAME)/_version.yml
-
 yolo-reset:
 	@mv .site-build/index.md ./index.md
 
-yolo-image: yolo-site
+# -----------------------------------------------------------------------------
+# Targets for running containerizing yolo
+# -----------------------------------------------------------------------------
+yoloc:
+	@podman build -f ./src/yoloc.Containerfile -t yoloc:latest ./src
+
+yolo: yoloc
 	@podman build -f Containerfile -t $(IMAGE_NAME):$(IMAGE_TAG) .
 	@podman tag $(IMAGE_NAME):$(IMAGE_TAG) $(IMAGE_NAME):latest
+
+pod: yolo
+	-podman rm -f yolo
+	@podman run --name yolo -d -p 9696:9696 yolo:latest
+	@podman ps
 
 # -----------------------------------------------------------------------------
 # Targets for running "jekyll build" for every Solo style.
