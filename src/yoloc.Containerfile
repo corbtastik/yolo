@@ -1,3 +1,6 @@
+# ------------------------------------------------------------------------------------------------------------------
+# This image is used to transform assets,markdown,scss and templates into plain HTML,CSS and Javascript.
+# ------------------------------------------------------------------------------------------------------------------
 FROM registry.redhat.io/ubi8/ubi
 USER root
 LABEL maintainer="corbs"
