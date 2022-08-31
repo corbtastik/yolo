@@ -1,6 +1,14 @@
 // ----------------------------------------------------------------------------
 // yolo specific classes
 // ----------------------------------------------------------------------------
+.left {
+  margin-right: auto;
+  margin-left: 0;
+}
+
+.center {
+  margin: 0 auto;
+}
 
 // back to top link styling
 .back-to-top {
