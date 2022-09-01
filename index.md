@@ -599,15 +599,16 @@ A custom data file can be added to render an Image Grid.
 
 * Create a new file in `_data` and prefix name with `ig-`.
 * Use the data file name (w/o `.yml` ext) as the value to `ig-data`.
+* Customize the number of columns by setting `ig-columns`.
 
 {% include code.html info="Images from: _data/ig-pets.yml" %}
 {% raw %}
 ```html
-{% include image/grid.html ig-data="ig-pets" %}
+{% include image/grid.html ig-data="ig-pets" ig-columns="2" %}
 ```
 {% endraw %}
 
-{% include image/grid.html ig-data="ig-pets" %}
+{% include image/grid.html ig-data="ig-pets" ig-columns="2" %}
 
 [↑↑↑](#){: .back-to-top}
 
