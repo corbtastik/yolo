@@ -561,6 +561,16 @@ Circle images can be added with the following classes: `is-circle-16`, `is-circl
 
 ---
 
+### Image Grid
+
+Yolo has an image-grid, which is similar to the Lightbox, except it shows the image inline, instead of in a modal.
+
+{% include image/grid.html %}
+
+[↑↑↑](#){: .back-to-top}
+
+---
+
 ### Image Lightbox
 
 Yolo includes a lightbox to showcase pics.

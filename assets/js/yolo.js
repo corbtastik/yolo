@@ -14,10 +14,72 @@
             }
         }
         static enabled() {
-            return false;
+            return true;
         }
     }
 
+    // ------------------------------------------------------------------------
+    // ImageGrid class for image-grid logic
+    // ------------------------------------------------------------------------
+    class ImageGrid {
+        constructor(name) {
+            this.name = name;
+        }
+
+        static create(name) {
+            Console.println("ImageGrid.create for name=" + name);
+            return new ImageGrid(name);
+        }
+
+        static dom(name) {
+            return document.getElementById("ig-" + name);
+        }
+
+        static domTarget(name) {
+            return document.getElementById("ig-target-" + name);
+        }
+    }
+
+    ImageGrid.prototype.name = function() {
+        return this.name;
+    }
+
+    ImageGrid.prototype.openImage = function(imageId) {
+        Console.println("ImageGrid.openImage: " + this.name);
+        // Hide the grid
+        ImageGrid.dom(this.name).style.display = "none";
+        // Show the ig-target, hide all images, show the one passed in.
+        const imageTarget = ImageGrid.domTarget(this.name);
+        const images = imageTarget.getElementsByTagName('img');
+        for(let i = 0; i < images.length; i++) {
+            const caption = document.getElementById(this.name + "-caption-" + i);
+            if(images[i].id === imageId) {
+                images[i].style.display = "block";
+                caption.style.display = "block";
+            } else {
+                images[i].style.display = "none";
+                caption.style.display = "none";
+            }
+        }
+        imageTarget.classList.toggle("no-display");
+        imageTarget.style.display = "block";
+    };
+
+    ImageGrid.prototype.closeImage = function() {
+        Console.println("ImageGrid.closeImage: " + this.name);
+        // Hide images and ig-target
+        const imageTarget = ImageGrid.domTarget(this.name);
+        const images = imageTarget.getElementsByTagName('img');
+        for(let i = 0; i < images.length; i++) {
+            const caption = document.getElementById(this.name + "-caption-" + i);
+            caption.style.display = "none";
+            images[i].style.display = "none";
+        }
+        imageTarget.style.display = "none";
+        imageTarget.classList.toggle("no-display");
+        // Show the grid
+        ImageGrid.dom(this.name).style.display = "block";
+    };
     // ------------------------------------------------------------------------
     // Lightbox class for lightbox logic
     // ------------------------------------------------------------------------
@@ -98,6 +160,7 @@
     class Yolo {
         constructor() {
             this.lightboxes = new Map();
+            this.imageGrids = new Map();
         }
         static create() {
             const yolo = new Yolo();
@@ -149,7 +212,7 @@
         // Protection against lightbox craziness
         if(this.lightboxes.size > 20) {
             Console.println("Yolo.lightbox max instances " + this.lightboxes.size + " reached.");
-            throw "Error: Yolo lightbox limit!";
+            throw "Error: Yolo lightbox limit, perhaps start another single page site?";
         }
         // Create new lightbox instance, setup event listener for prev, next links
         const lightbox = Lightbox.create(name);
@@ -167,6 +230,23 @@
         });
         this.lightboxes.set(name, lightbox);
         return this.lightboxes.get(name);
+    };
+
+    Yolo.prototype.imageGrid = function(name) {
+        // Return image-grid instance if it exists
+        if(this.imageGrids.has(name)) {
+            return this.imageGrids.get(name);
+        }
+        // Protect against image-grid craziness
+        if(this.imageGrids.size > 20) {
+            Console.println("Yolo.imageGrid max instances " + this.imageGrids.size + " reached.");
+            throw "Error: Yolo imageGrid limit, perhaps start another single page site?";
+        }
+        // Create new image-grid instance
+        const imageGrid = ImageGrid.create(name);
+        Console.println("Yolo.imageGrid, created new instance named: " + name);
+        this.imageGrids.set(name, imageGrid);
+        return this.imageGrids.get(name);
     };
 
     // ------------------------------------------------------------------------

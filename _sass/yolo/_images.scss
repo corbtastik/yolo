@@ -45,6 +45,13 @@ img {
   &.circle {
     border-radius: 50%;
   }
+  &.square {
+    width: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    border-radius: 0.256em;
+    margin: 1rem 0;
+  }
   // full 1 by 1 aspect ratios (i.e. is-128-x-128) with .max
   @each $dimension in $ratio-1-by-1 {
     &.is-#{$dimension}-x-#{$dimension} {
@@ -153,4 +160,11 @@ img {
       }
     }
   }
+}
+
+.ig-target-caption-container {
+  text-align: center;
+  background-color: $yolo-background-color;
+  color: $yolo-text-primary-color;
+  margin-bottom: 1rem;
 }

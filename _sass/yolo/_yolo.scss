@@ -10,6 +10,11 @@
   margin: 0 auto;
 }
 
+.no-display {
+  display: none;
+  overflow: auto;
+}
+
 // back to top link styling
 .back-to-top {
   display: block;
