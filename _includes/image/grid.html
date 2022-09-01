@@ -1,5 +1,5 @@
 <!-- The image grid -->
-{% assign ig_data = include.grid-data | default: "ig-images" %}
+{% assign ig_data = include.ig-data | default: "ig-images" %}
 {% assign ig_images = site.data[ig_data] %}
 {% assign ig_num_images = site.data[ig_data].size %}
 {% assign ig_images_per_column = ig_num_images | divided_by: 4 %}
@@ -30,7 +30,7 @@
                  onclick="Yolo.imageGrid('{{ ig_data }}').closeImage('{{ ig_data }}-image-{{ i }}');"
                  alt="{{ ig_image.description }}"
                  src="{{ ig_image.src }}">
-            <div id="{{ ig_data }}-caption-{{ i }}" class="ig-target-caption-container">
+            <div id="{{ ig_data }}-caption-{{ i }}" class="caption-container">
                 <p>{{ ig_image.description }}</p>
             </div>
             {% endfor %}
