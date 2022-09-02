@@ -1,16 +1,16 @@
-<div class="header">
+<div class="site-header">
     {% if site.logo %}
     <a href="./">
         <img class="logo" src="{{ site.logo }}" title="Site Logo">
     </a>
     {% endif %}
-    <h1><a href="./">{{ site.tag_text }}</a></h1>
-    <h4 class="is-italic">{{ site.description }}</h4>
+    <h1 class="tag"><a href="./">{{ site.tag_text }}</a></h1>
+    <h4 class="description">{{ site.description }}</h4>
     <p>
         <span>
           {% for tag in page.tags %}
             {% capture tag_name %}{{ tag }}{% endcapture %}
-            <code class="pill"><nobr>{{ tag_name }}</nobr></code>
+            <code class="pill">{{ tag_name }}</code>
           {% endfor %}
         </span>
     </p>
