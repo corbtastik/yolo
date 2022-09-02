@@ -1,8 +1,12 @@
-{% assign columns = include.columns %}
+{% assign columns = include.columns | default: 1 %}
 <div class="columns">
     {% for i in (1..columns) %}
     <div class="column">
-        <div class="cell demo">{{ i }}</div>
+        {% if include.fill %}
+        <div class="cell {{ include.fill }}">{{ include.fill }}</div>
+        {% else %}
+        <div class="cell yolo-accent-color">{{ i }}</div>
+        {% endif %}
     </div>
     {% endfor %}
 </div>

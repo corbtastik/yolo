@@ -100,7 +100,12 @@ Yolo doesn't implement an "according to hoyle" Jekyll theme, but the colors, fon
 
 Yolo's colors can be customized by adding a new theme scss file and setting the `site.style` value in `_config.yml`.
 
-{% include colors.html %}
+{% include flexbox.html columns="1" fill="yolo-primary-color" %}
+{% include flexbox.html columns="1" fill="yolo-secondary-color" %}
+{% include flexbox.html columns="1" fill="yolo-accent-color" %}
+{% include flexbox.html columns="1" fill="yolo-code-background-color" %}
+{% include flexbox.html columns="1" fill="yolo-code-color" %}
+{% include flexbox.html columns="1" fill="yolo-link-color" %}
 
 [↑↑↑](#){: .back-to-top}
 

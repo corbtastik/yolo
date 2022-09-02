@@ -54,6 +54,3 @@ List of tasks for maturing Yolo.
 * [DONE 2022-08-25] Create a corbs light theme (named: "cloudy").
 * [DONE] Add support for Google Cloud Storage for image assets.
 * [DONE] Make lists styling better.
-
-
-

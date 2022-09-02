@@ -7,7 +7,7 @@ ul {
   padding-left: 1.5rem;
 
   li {
-    color: $yolo-text-primary-color;
+    color: $yolo-secondary-color;
   }
   ::marker {
     color: $yolo-accent-color;
@@ -20,7 +20,7 @@ ol {
   padding-left: 2.5rem;
 
   li {
-    color: $yolo-text-primary-color;
+    color: $yolo-secondary-color;
   }
   ::marker {
     color: $yolo-accent-color;
@@ -42,7 +42,7 @@ ul.no-bullets {
   display: block;
 
   li {
-    color: $yolo-text-primary-color;
+    color: $yolo-secondary-color;
     position: relative;
     list-style: none;
   }
@@ -63,16 +63,12 @@ ul.no-bullets {
     li {
       span:nth-child(1) {
         font-weight: bold;
-        color: $yolo-text-secondary-color;
       }
       span:nth-child(2) {
-        color: $yolo-text-accent-color;
+        color: $yolo-accent-color;
       }
       span:nth-child(2):before {
         content: '\003A\00A0';
-      }
-      span:nth-child(3) {
-        color: $yolo-text-light-color;
       }
     }
   }

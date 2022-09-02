@@ -1,36 +1,13 @@
 // ----------------------------------------------------------------------------
 // corbs theme
 // ----------------------------------------------------------------------------
-$yolo-primary-color: #000d55 !default;
-$yolo-secondary-color: #342077 !default;
-
-// base colors
-$yolo-background-color: #061039 !default;
-$yolo-text-primary-color: #ff31b9 !default;
-$yolo-text-secondary-color: #7a85ff !default;
-$yolo-text-accent-color: #00b0ff !default;
-
-// convenient colors
-$yolo-text-dark-color: #000d55 !default;
-$yolo-text-light-color: #ff80cd !default;
-$yolo-dark-color: #020827 !default;
-$yolo-light-color: #7a85ff !default;
+// colors
+$yolo-primary-color: #061039 !default;
+$yolo-secondary-color: #ff31b9 !default;
 $yolo-accent-color: #00b0ff !default;
-
-// code colors
 $yolo-code-background-color: #000928 !default;
-$yolo-code-primary-color: #30ea7d !default;
-$yolo-code-secondary-color: #65e9fc !default;
-
-// element colors
+$yolo-code-color: #30ea7d !default;
 $yolo-link-color: #65e9fc !default;
-$yolo-header-color: #00b0ff !default;
-$yolo-pill-color: #342077 !default;
-$yolo-pill-text-color: #9ce9fb !default;
-$yolo-table-header-color: #ff31b9 !default;
-$yolo-table-border-color: #ff31b9 !default;
-$yolo-table-header-text-color: #000d55 !default;
-
 // fonts
 $family-primary: "Roboto Mono", sans-serif;
 $family-secondary: "Raleway", sans-serif;
