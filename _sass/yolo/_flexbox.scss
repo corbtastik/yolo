@@ -4,65 +4,12 @@
 $column-gap: 0.50rem !default;
 
 .cell {
-  background-color: $yolo-primary-color;
-  color: $yolo-text-primary-color;
+  background-color: inherit;
+  color: inherit;
   border-radius: 0.20rem;
   padding: .25rem 0;
   position: relative;
   text-align: center;
-  &.demo {
-    background-color: $yolo-light-color;
-    color: $yolo-text-dark-color;
-  }
-  &.white {
-    background-color: #fff;
-    color: $yolo-background-color;
-  }
-  &.yolo-primary-color {
-    background-color: $yolo-primary-color;
-    color: $yolo-text-primary-color;
-  }
-  &.yolo-secondary-color {
-    background-color: $yolo-secondary-color;
-  }
-  &.yolo-background-color {
-    background-color: $yolo-background-color;
-    border: 1px solid $yolo-accent-color;
-  }
-  &.yolo-dark-color {
-    background-color: $yolo-dark-color;
-  }
-  &.yolo-accent-color {
-    background-color: $yolo-accent-color;
-  }
-  &.yolo-code-background-color {
-    background-color: $yolo-code-background-color;
-  }
-  &.yolo-text-secondary-color {
-    background-color: $yolo-text-secondary-color;
-  }
-  &.yolo-text-primary-color {
-    background-color: $yolo-text-primary-color;
-  }
-  &.yolo-header-color {
-    background-color: $yolo-header-color;
-  }
-  &.yolo-code-primary-color {
-    background-color: $yolo-code-primary-color;
-  }
-}
-
-.cell.is-primary {
-  background-color: $yolo-accent-color;
-  color: $yolo-text-dark-color;
-}
-
-.cell.is-circle-64 {
-  width: 64px;
-  height: 64px;
-  border-radius: 50%;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
 }
 
 .column {
