@@ -1,12 +1,22 @@
 // ----------------------------------------------------------------------------
 // header stylesheet
 // ----------------------------------------------------------------------------
-.header {
+.site-header {
+  .tag {
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+  }
   .logo {
     border-radius: 50%;
     display: inline;
     width: 128px;
     height: 128px;
     object-fit: cover;
+  }
+  .description {
+    font-weight: lighter;
+    margin-top: 0;
+    margin-bottom: 1rem;
   }
 }
