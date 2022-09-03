@@ -17,13 +17,7 @@ img {
   height: auto;
   max-width: 100%;
   border-radius: 0.5em;
-  &.link {
-    //transition: 1s;
-    &:is(:hover) {
-      //opacity: 0.7;
-      //filter: grayscale(100%);
-    }
-  }
+  transition-duration: 1s;
   &.center {
     margin: 0 auto;
   }
