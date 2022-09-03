@@ -1,0 +1,21 @@
+# Site settings
+title: Yolo, a loveable single page theme
+tag_text: Yolo
+description: A loveable single page theme
+# Site customizations
+style: none
+logo: assets/images/site/logo.png
+images: assets/images
+# Build settings
+version: v1.12
+markdown: kramdown
+exclude:
+  - "README.md"
+  - "BACKLOG.md"
+  - "Makefile"
+  - "Containerfile"
+  - ".site-build"
+  - "src/"
+  - "docs/"
+sass:
+  style: compressed
