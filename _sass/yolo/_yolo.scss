@@ -1,9 +1,13 @@
 // ----------------------------------------------------------------------------
 // yolo specific classes
 // ----------------------------------------------------------------------------
+#yolo-container {
+
+}
+
 .left {
   margin-right: auto;
-  margin-left: 0;
+  margin-left: 1rem;
 }
 
 .center {
@@ -70,7 +74,7 @@
   font-family: $family-monospace;
   text-decoration: none;
   padding: 0.25rem 1rem;
-  font-size: 16px;
+  font-size: $size-6;
   font-weight: bold;
   border-radius: 3rem;
 }

@@ -148,25 +148,7 @@
   right: 100%;
   border-radius: 0 .3rem .3rem 0;
   color: transparent;
-
   &:hover {
     color: $yolo-accent-color;
   }
-}
-
-img.lb-demo {
-  opacity: 0.6;
-}
-
-.lb-active,
-.lb-demo:hover {
-  opacity: 1;
-}
-
-img.lb-hover-shadow {
-  transition: 0.3s;
-}
-
-.lb-hover-shadow:hover {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
