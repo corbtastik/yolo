@@ -1,9 +1,0 @@
-.git/
-.idea/
-.jekyll-cache/
-.sass-cache/
-.site-build/
-src/
-docs/
-Makefile
-BACKLOG.md

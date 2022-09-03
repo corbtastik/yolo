@@ -6,7 +6,7 @@ tags:
 - jekyll
 ---
 
-Your new yolo "lite" sample page.
+Your new yolo "lite" sample site.
 
 ## Headers
 
