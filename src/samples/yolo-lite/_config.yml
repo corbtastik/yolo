@@ -3,11 +3,11 @@ title: Yolo, a loveable single page theme
 tag_text: Yolo
 description: A loveable single page theme
 # Site customizations
-style: corbs
+style: none
 logo: assets/images/site/logo.png
-images: https://storage.googleapis.com/corbs-foto/yolo
+images: assets/images
 # Build settings
-version: v1.13
+version: v1.12
 markdown: kramdown
 exclude:
   - "README.md"
