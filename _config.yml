@@ -7,7 +7,7 @@ style: corbs
 logo: assets/images/site/logo.png
 images: https://storage.googleapis.com/corbs-foto/yolo
 # Build settings
-version: v1.12
+version: v1.13
 markdown: kramdown
 exclude:
   - "README.md"
