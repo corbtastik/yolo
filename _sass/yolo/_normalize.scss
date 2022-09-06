@@ -1,71 +1,35 @@
-/*! normalize.css v5.0.0 | MIT License | github.com/necolas/normalize.css */
-
-/**
- * 1. Change the default font family in all browsers (opinionated).
- * 2. Prevent adjustments of font size after orientation changes in
- *    IE on Windows Phone and in iOS.
- */
+/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 
 /* Document
    ========================================================================== */
 
-html {
-    font-family: $family-primary; /* 1 */
-    box-sizing: border-box;
-    -ms-text-size-adjust: 100%; /* 2 */
-    -webkit-text-size-adjust: 100%; /* 2 */
-}
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in iOS.
+ */
 
-*,
-*::before,
-*::after {
-    box-sizing: inherit;
+html {
+    line-height: 1.15; /* 1 */
+    -webkit-text-size-adjust: 100%; /* 2 */
 }
 
 /* Sections
    ========================================================================== */
 
 /**
- * Remove the margin in all browsers (opinionated).
+ * Remove the margin in all browsers.
  */
 
 body {
     margin: 0;
-    line-height: 1.5;
 }
 
 /**
- * Add the correct display in IE 9-.
+ * Render the `main` element consistently in IE.
  */
 
-article,
-aside,
-footer,
-header,
-nav,
-section {
+main {
     display: block;
-}
-
-/**
- * Remove margin padding.
- *
- */
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-pre,
-blockquote,
-dl,
-table,
-address {
-    margin-top: 0;
-    margin-bottom: 1.5rem;
 }
 
 /**
@@ -75,41 +39,11 @@ address {
 
 h1 {
     font-size: 2em;
-}
-
-/**
- * Adjust heading line-height
- *
- */
-
-h1,
-h2,
-h3,
-h4 {
-    line-height: 1.2;
+    margin: 0.67em 0;
 }
 
 /* Grouping content
    ========================================================================== */
-
-/**
- * Add the correct display in IE 9-.
- * 1. Add the correct display in IE.
- */
-
-figcaption,
-figure,
-main { /* 1 */
-    display: block;
-}
-
-/**
- * Reset the margins.
- */
-
-figure {
-    margin: 1rem 0 1.5rem;
-}
 
 /**
  * 1. Add the correct box sizing in Firefox.
@@ -117,48 +51,34 @@ figure {
  */
 
 hr {
+    box-sizing: content-box; /* 1 */
     height: 0; /* 1 */
     overflow: visible; /* 2 */
-    box-sizing: content-box; /* 1 */
 }
 
 /**
  * 1. Correct the inheritance and scaling of font size in all browsers.
  * 2. Correct the odd `em` font sizing in all browsers.
- * 3. Add scrollbars to wide code blocks.
  */
 
 pre {
     font-family: monospace, monospace; /* 1 */
     font-size: 1em; /* 2 */
-    overflow-x: auto;  /* 3 */
 }
 
 /* Text-level semantics
    ========================================================================== */
 
 /**
- * 1. Remove the gray background on active links in IE 10.
- * 2. Remove gaps in links underline in iOS 8+ and Safari 8+.
+ * Remove the gray background on active links in IE 10.
  */
 
 a {
-    background-color: transparent; /* 1 */
-    -webkit-text-decoration-skip: objects; /* 2 */
+    background-color: transparent;
 }
 
 /**
- * Remove the outline on focused links when they are also active or hovered
- * in all browsers (opinionated).
- */
-
-a:active,
-a:hover {
-    outline-width: 0;
-}
-
-/**
- * 1. Remove the bottom border in Firefox 39-.
+ * 1. Remove the bottom border in Chrome 57-
  * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
  */
 
@@ -169,13 +89,12 @@ abbr[title] {
 }
 
 /**
- * Prevent the duplicate application of `bolder` by the next rule in Safari 6.
+ * Add the correct font weight in Chrome, Edge, and Safari.
  */
 
 b,
 strong {
-    font-weight: inherit;
-    font-weight: bolder; /* Add the correct font weight in Chrome, Edge, and Safari. */
+    font-weight: bolder;
 }
 
 /**
@@ -191,44 +110,11 @@ samp {
 }
 
 /**
- * Add the correct font style in Android 4.3-.
- */
-
-dfn {
-    font-style: italic;
-}
-
-/**
- * Add the correct background and color in IE 9-.
- */
-
-mark {
-    background-color: #ff0;
-    color: #000;
-}
-
-/**
  * Add the correct font size in all browsers.
  */
 
 small {
     font-size: 80%;
-}
-
-/**
- * Change the margin and padding and add a line rule on the left-side in all
- * browsers (opinionated).
- */
-
-blockquote {
-    margin-right: 0;
-    margin-left: 0;
-    padding: 0 1rem;
-    border-left: solid 0.25rem;
-
-    *:last-child {
-        margin-bottom: 0;
-    }
 }
 
 /**
@@ -238,9 +124,9 @@ blockquote {
 
 sub,
 sup {
-    position: relative;
     font-size: 75%;
     line-height: 0;
+    position: relative;
     vertical-align: baseline;
 }
 
@@ -252,70 +138,22 @@ sup {
     top: -0.5em;
 }
 
-/**
- * Remove margin
- */
-
-ul,
-ol {
-    margin-top: 0;
-}
-
 /* Embedded content
    ========================================================================== */
 
 /**
- * Add the correct display in IE 9-.
+ * Remove the border on images inside links in IE 10.
  */
-
-audio,
-video {
-    display: inline-block;
-}
-
-/**
- * Add the correct display in iOS 4-7.
- */
-
-audio:not([controls]) {
-    display: none;
-    height: 0;
-}
 
 img {
-    /* Responsive images (ensure images don't scale beyond their parents) */
-    max-width: 100%; /* part 1: Set a maximum relative to the parent*/
-    width: auto\9; /* IE7-8 need help adjusting responsive images*/
-    height: auto; /* part 2: Scale the height according to the width, otherwise you get stretching*/
-
-    border-style: none; /* Remove the border on images inside links in IE 10-.*/
-
-    vertical-align: middle;
-    -ms-interpolation-mode: bicubic;
-}
-
-/**
- * Hide the overflow in IE.
- */
-
-svg:not(:root) {
-    overflow: hidden;
-}
-
-/**
- * iframe reset addition.
- */
-iframe {
-    border: 0;
-    margin: 0;
-    padding: 0;
+    border-style: none;
 }
 
 /* Forms
    ========================================================================== */
 
 /**
- * 1. Change the font styles in all browsers (opinionated).
+ * 1. Change the font styles in all browsers.
  * 2. Remove the margin in Firefox and Safari.
  */
 
@@ -324,10 +162,10 @@ input,
 optgroup,
 select,
 textarea {
-    margin: 0; /* 2 */
-    font-family: $family-primary; /* 1 */
+    font-family: inherit; /* 1 */
     font-size: 100%; /* 1 */
     line-height: 1.15; /* 1 */
+    margin: 0; /* 2 */
 }
 
 /**
@@ -351,16 +189,14 @@ select { /* 1 */
 }
 
 /**
- * 1. Prevent a WebKit bug where (2) destroys native `audio` and `video`
- *    controls in Android 4.
- * 2. Correct the inability to style clickable types in iOS and Safari.
+ * Correct the inability to style clickable types in iOS and Safari.
  */
 
 button,
-html [type="button"], /* 1 */
+[type="button"],
 [type="reset"],
 [type="submit"] {
-    -webkit-appearance: button; /* 2 */
+    -webkit-appearance: button;
 }
 
 /**
@@ -371,8 +207,8 @@ button::-moz-focus-inner,
 [type="button"]::-moz-focus-inner,
 [type="reset"]::-moz-focus-inner,
 [type="submit"]::-moz-focus-inner {
-    padding: 0;
     border-style: none;
+    padding: 0;
 }
 
 /**
@@ -387,13 +223,11 @@ button:-moz-focusring,
 }
 
 /**
- * Change the border, margin, and padding in all browsers (opinionated).
+ * Correct the padding in Firefox.
  */
 
 fieldset {
-    margin: 0 2px;
-    padding: 0.35em 0.625em 0.75em;
-    border: 1px solid #c0c0c0;
+    padding: 0.35em 0.75em 0.625em;
 }
 
 /**
@@ -404,26 +238,24 @@ fieldset {
  */
 
 legend {
+    box-sizing: border-box; /* 1 */
+    color: inherit; /* 2 */
     display: table; /* 1 */
     max-width: 100%; /* 1 */
     padding: 0; /* 3 */
-    color: inherit; /* 2 */
     white-space: normal; /* 1 */
-    box-sizing: border-box; /* 1 */
 }
 
 /**
- * 1. Add the correct display in IE 9-.
- * 2. Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ * Add the correct vertical alignment in Chrome, Firefox, and Opera.
  */
 
 progress {
-    display: inline-block; /* 1 */
-    vertical-align: baseline; /* 2 */
+    vertical-align: baseline;
 }
 
 /**
- * Remove the default vertical scrollbar in IE.
+ * Remove the default vertical scrollbar in IE 10+.
  */
 
 textarea {
@@ -431,14 +263,14 @@ textarea {
 }
 
 /**
- * 1. Add the correct box sizing in IE 10-.
- * 2. Remove the padding in IE 10-.
+ * 1. Add the correct box sizing in IE 10.
+ * 2. Remove the padding in IE 10.
  */
 
 [type="checkbox"],
 [type="radio"] {
-    padding: 0; /* 2 */
     box-sizing: border-box; /* 1 */
+    padding: 0; /* 2 */
 }
 
 /**
@@ -456,15 +288,14 @@ textarea {
  */
 
 [type="search"] {
-    outline-offset: -2px; /* 2 */
     -webkit-appearance: textfield; /* 1 */
+    outline-offset: -2px; /* 2 */
 }
 
 /**
- * Remove the inner padding and cancel buttons in Chrome and Safari on macOS.
+ * Remove the inner padding in Chrome and Safari on macOS.
  */
 
-[type="search"]::-webkit-search-cancel-button,
 [type="search"]::-webkit-search-decoration {
     -webkit-appearance: none;
 }
@@ -475,20 +306,18 @@ textarea {
  */
 
 ::-webkit-file-upload-button {
-    font: inherit; /* 2 */
     -webkit-appearance: button; /* 1 */
+    font: inherit; /* 2 */
 }
 
 /* Interactive
    ========================================================================== */
 
 /*
- * Add the correct display in IE 9-.
- * 1. Add the correct display in Edge, IE, and Firefox.
+ * Add the correct display in Edge, IE 10+, and Firefox.
  */
 
-details, /* 1 */
-menu {
+details {
     display: block;
 }
 
@@ -500,30 +329,19 @@ summary {
     display: list-item;
 }
 
-/* Scripting
+/* Misc
    ========================================================================== */
 
 /**
- * Add the correct display in IE 9-.
- */
-
-canvas {
-    display: inline-block;
-}
-
-/**
- * Add the correct display in IE.
+ * Add the correct display in IE 10+.
  */
 
 template {
     display: none;
 }
 
-/* Hidden
-   ========================================================================== */
-
 /**
- * Add the correct display in IE 10-.
+ * Add the correct display in IE 10.
  */
 
 [hidden] {

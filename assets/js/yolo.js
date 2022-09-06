@@ -14,7 +14,7 @@
             }
         }
         static enabled() {
-            return false;
+            return true;
         }
     }
 
@@ -166,7 +166,11 @@
             const yolo = new Yolo();
             yolo.scaleImages();
             yolo.copySnippet();
+            yolo.themeHandler();
             return yolo;
+        }
+        static themes() {
+            return ["corbs", "cloudy"];
         }
     }
 
@@ -249,6 +253,35 @@
         return this.imageGrids.get(name);
     };
 
+    Yolo.prototype.themeHandler = function() {
+        const themeWrapper = document.getElementById("theme-wrapper");
+        const themeDot = document.getElementById("theme-dot");
+        themeDot.addEventListener("click", function() {
+            Console.println("Yolo theme-dot clicked.");
+            if(localStorage.getItem("active-theme") === "dark-theme") {
+                localStorage.setItem("active-theme", "light-theme");
+                themeWrapper.classList.remove("dark-theme");
+                themeWrapper.classList.add("light-theme");
+            } else if(localStorage.getItem("active-theme") === "light-theme") {
+                localStorage.setItem("active-theme", "dark-theme");
+                themeWrapper.classList.remove("light-theme");
+                themeWrapper.classList.add("dark-theme");
+            } else {
+                localStorage.setItem("active-theme", "light-theme");
+                themeWrapper.classList.remove("light-theme");
+                themeWrapper.classList.remove("dark-theme");
+                themeWrapper.classList.add("light-theme");
+            }
+        });
+
+        // themeWrapper.addEventListener("load", function() {
+        //     if (localStorage.getItem("active-theme")) {
+        //         themeWrapper.classList.add("dark-mode");
+        //     } else {
+        //         localStorage.setItem("dark-mode", "0");
+        //     }
+        // });
+    }
     // ------------------------------------------------------------------------
     // Expose Yolo on the window object.
     //   Call from HTML: onclick="Yolo.lightbox("lb-images").openModal();"

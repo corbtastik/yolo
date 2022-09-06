@@ -2,23 +2,29 @@
 // header stylesheet
 // ----------------------------------------------------------------------------
 .site-header {
-  .tag {
-    margin-top: 1rem;
-    margin-bottom: 0.5rem;
-    font-weight: bold;
-    color: $yolo-secondary-color;
-  }
   .logo {
     border-radius: 50%;
-    display: inline;
+    margin-bottom: 1rem;
     width: 128px;
     height: 128px;
     object-fit: cover;
+    float: left;
+  }
+  .theme-dot {
+    font-size: $size-2;
+    transform: rotate(90deg);
+    float: right;
+    cursor: pointer;
+  }
+  .tag {
+    clear: both;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
   }
   .description {
     font-weight: lighter;
     margin-top: 0;
     margin-bottom: 1rem;
-    color: $yolo-accent-color;
   }
 }

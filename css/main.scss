@@ -6,10 +6,10 @@
 @import "yolo/variables";
 @import "yolo/utilities/functions";
 @import "yolo/themes/{{ site.style | default: 'corbs' }}";
-@import "yolo/utilities/mixins";
-@import "yolo/normalize";
-@import "yolo/base";
-@import "yolo/typography";
+@import "yolo/utilities/mixins"; // no
+@import "yolo/normalize";  // no
+@import "yolo/base";  // yes
+@import "yolo/typography"; // yes
 @import "yolo/flexbox";
 @import "yolo/container";
 @import "yolo/tables";
