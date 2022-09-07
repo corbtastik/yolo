@@ -3,20 +3,14 @@
 ---
 @charset "utf-8";
 
+@import "yolo/normalize";
 @import "yolo/variables";
-@import "yolo/utilities/functions";
+@import "yolo/base";
+@import "yolo/syntax";
+@import "yolo/responsiveness";
+@import "yolo/layout";
 @import "yolo/themes/{{ site.style | default: 'corbs' }}";
-@import "yolo/utilities/mixins"; // no
-@import "yolo/normalize";  // no
-@import "yolo/base";  // yes
-@import "yolo/typography"; // yes
-@import "yolo/flexbox";
-@import "yolo/container";
-@import "yolo/tables";
-@import "yolo/lists";
-@import "yolo/header";
+@import "yolo/typography";
 @import "yolo/images";
 @import "yolo/lightbox";
-@import "yolo/prezos";
-@import "yolo/syntax";
 @import "yolo/yolo";

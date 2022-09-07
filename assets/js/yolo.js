@@ -13,6 +13,18 @@
                 console.log(text);
             }
         }
+        static info(text) {
+            Console.println("INFO: " + text);
+        }
+        static warning(text) {
+            Console.println("WARN: " + text);
+        }
+        static debug(text) {
+            Console.println("DEBUG: " + text);
+        }
+        static error(text) {
+            Console.println("ERROR: " + text);
+        }
         static enabled() {
             return true;
         }
@@ -164,9 +176,12 @@
         }
         static create() {
             const yolo = new Yolo();
+            // Initialize image scaling
             yolo.scaleImages();
+            // Initialize copy code snippets
             yolo.copySnippet();
-            yolo.themeHandler();
+            // Initialize dark / light theme toggle
+            yolo.themeToggle();
             return yolo;
         }
         static themes() {
@@ -253,34 +268,46 @@
         return this.imageGrids.get(name);
     };
 
-    Yolo.prototype.themeHandler = function() {
-        const themeWrapper = document.getElementById("theme-wrapper");
+    Yolo.prototype.themeToggle = function() {
+        const yoloSite = document.getElementById("yolo-site");
         const themeDot = document.getElementById("theme-dot");
         themeDot.addEventListener("click", function() {
-            Console.println("Yolo theme-dot clicked.");
-            if(localStorage.getItem("active-theme") === "dark-theme") {
+            const activeTheme = localStorage.getItem("active-theme");
+            if(activeTheme === "dark-theme") {
+                Console.debug("Switching active-theme to light-theme");
+                yoloSite.classList.remove("dark-theme");
                 localStorage.setItem("active-theme", "light-theme");
-                themeWrapper.classList.remove("dark-theme");
-                themeWrapper.classList.add("light-theme");
-            } else if(localStorage.getItem("active-theme") === "light-theme") {
+                yoloSite.classList.add("light-theme");
+            } else if(activeTheme === "light-theme") {
+                Console.debug("Switching active-theme to dark-theme");
+                yoloSite.classList.remove("light-theme");
                 localStorage.setItem("active-theme", "dark-theme");
-                themeWrapper.classList.remove("light-theme");
-                themeWrapper.classList.add("dark-theme");
-            } else {
+                yoloSite.classList.add("dark-theme");
+            } else if(activeTheme == null) {
+                Console.warning("The active-theme is null, setting to light-theme.");
                 localStorage.setItem("active-theme", "light-theme");
-                themeWrapper.classList.remove("light-theme");
-                themeWrapper.classList.remove("dark-theme");
-                themeWrapper.classList.add("light-theme");
+                yoloSite.classList.add("light-theme");
+            } else {
+                Console.error("The active-theme is set to an invalid theme value: "
+                    + activeTheme + ", setting to light-theme.");
+                localStorage.setItem("active-theme", "light-theme");
+                yoloSite.classList.add("light-theme");
             }
         });
 
-        // themeWrapper.addEventListener("load", function() {
-        //     if (localStorage.getItem("active-theme")) {
-        //         themeWrapper.classList.add("dark-mode");
-        //     } else {
-        //         localStorage.setItem("dark-mode", "0");
-        //     }
-        // });
+        window.addEventListener("load", function() {
+            const activeTheme = localStorage.getItem("active-theme");
+            Console.info("Window load, active-theme: " + activeTheme);
+            if(activeTheme === "dark-theme") {
+                localStorage.setItem("active-theme", "dark-theme");
+                yoloSite.classList.add("dark-theme");
+            } else {
+                localStorage.setItem("active-theme", "light-theme");
+                yoloSite.classList.add("light-theme");
+            }
+            Console.info("Window load, transitioning to opacity 1");
+            yoloSite.style.opacity = "1";
+        });
     }
     // ------------------------------------------------------------------------
     // Expose Yolo on the window object.

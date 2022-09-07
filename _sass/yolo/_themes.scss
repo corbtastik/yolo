@@ -1,0 +1,279 @@
+// ----------------------------------------------------------------------------
+// themed elements
+// ----------------------------------------------------------------------------
+$dark-primary-color: #061039 !default;
+$dark-secondary-color: #ff31b9 !default;
+$dark-accent-color: #00b0ff !default;
+$dark-code-background-color: #000928 !default;
+$dark-code-color: #30ea7d !default;
+$dark-link-color: #65e9fc !default;
+
+$light-primary-color: #e9f4fe !default;
+$light-secondary-color: #32439e !default;
+$light-accent-color: #0091ea !default;
+$light-code-background-color: #000928 !default;
+$light-code-color: #17ba59 !default;
+$light-link-color: #ef0c81 !default;
+
+// This selector ONLY defines color properties
+.light-theme {
+  color: $light-secondary-color;
+  background-color: $light-primary-color;
+
+  a {
+    color: $light-link-color;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    color: $light-accent-color;
+  }
+
+  blockquote {
+    border-left: .25rem solid $light-accent-color;
+  }
+
+  hr {
+    border-bottom: 1px dashed $light-accent-color;
+  }
+
+  pre, code {
+    color: $light-code-color;
+  }
+
+  ul {
+    li {
+      color: $light-secondary-color;
+    }
+    ::marker {
+      color: $light-accent-color;
+    }
+  }
+
+  ol {
+    li {
+      color: $light-secondary-color;
+    }
+    ::marker {
+      color: $light-accent-color;
+    }
+  }
+
+  th {
+    border-top: 1px solid $light-secondary-color;
+  }
+
+  th, td {
+    border-bottom: 1px solid $light-secondary-color;
+    border-left: 1px solid $light-secondary-color;
+    border-right: 1px solid $light-secondary-color;
+  }
+
+  thead {
+    background-color: $light-secondary-color;
+    color: $light-primary-color;
+  }
+
+  .yolo-header {
+    .theme-dot {
+      color: $light-secondary-color;
+    }
+    .tag {
+      color: $light-secondary-color;
+    }
+    .description {
+      color: $light-accent-color;
+    }
+  }
+
+  .lb-modal {
+    background-color: $light-primary-color;
+  }
+
+  .lb-close {
+    color: $light-accent-color;
+  }
+
+  .lb-close:hover,
+  .lb-close:focus {
+    color: $light-secondary-color;
+  }
+
+  .lb-nav {
+    &:hover {
+      background-color: rgba($light-accent-color, 0.3);
+    }
+  }
+
+  .lb-prev {
+    &:hover {
+      color: $light-accent-color;
+    }
+  }
+
+  .lb-next {
+    &:hover {
+      color: $light-accent-color;
+    }
+  }
+
+  div.highlighter-rouge,
+  figure.highlight {
+    background: $light-code-background-color;
+    color: $light-code-color;
+  }
+
+  .back-to-top {
+    color: $light-accent-color;
+  }
+
+  .code-header {
+    background-color: $light-secondary-color;
+    color: $light-primary-color;
+    &:is(.copied, :hover) {
+      background-color: $light-accent-color;
+    }
+    &.copied {
+      background-color: $light-secondary-color;
+    }
+  }
+
+  .pill {
+    background-color: $light-secondary-color;
+    color: $light-primary-color;
+  }
+
+  .pill:hover {
+    background-color: $light-accent-color;
+  }
+}
+
+.dark-theme {
+  color: $dark-secondary-color;
+  background-color: $dark-primary-color;
+
+  a {
+    color: $dark-link-color;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    color: $dark-accent-color;
+  }
+
+  blockquote {
+    border-left: .25rem solid $dark-accent-color;
+  }
+
+  hr {
+    border-bottom: 1px dashed $dark-accent-color;
+  }
+
+  pre, code {
+    color: $dark-code-color;
+  }
+
+  ul {
+    li {
+      color: $dark-secondary-color;
+    }
+    ::marker {
+      color: $dark-accent-color;
+    }
+  }
+
+  ol {
+    li {
+      color: $dark-secondary-color;
+    }
+    ::marker {
+      color: $dark-accent-color;
+    }
+  }
+
+  th {
+    border-top: 1px solid $dark-secondary-color;
+  }
+
+  th, td {
+    border-bottom: 1px solid $dark-secondary-color;
+    border-left: 1px solid $dark-secondary-color;
+    border-right: 1px solid $dark-secondary-color;
+  }
+
+  thead {
+    background-color: $dark-secondary-color;
+    color: $dark-primary-color;
+  }
+
+  .yolo-header {
+    .theme-dot {
+      color: $dark-secondary-color;
+    }
+    .tag {
+      color: $dark-secondary-color;
+    }
+    .description {
+      color: $dark-accent-color;
+    }
+  }
+
+  .lb-modal {
+    background-color: $dark-primary-color;
+  }
+
+  .lb-close {
+    color: $dark-accent-color;
+  }
+
+  .lb-close:hover,
+  .lb-close:focus {
+    color: $dark-secondary-color;
+  }
+
+  .lb-nav {
+    &:hover {
+      background-color: rgba($dark-accent-color, 0.3);
+    }
+  }
+
+  .lb-prev {
+    &:hover {
+      color: $dark-accent-color;
+    }
+  }
+
+  .lb-next {
+    &:hover {
+      color: $dark-accent-color;
+    }
+  }
+
+  div.highlighter-rouge,
+  figure.highlight {
+    background: $dark-code-background-color;
+    color: $dark-code-color;
+  }
+
+  .back-to-top {
+    color: $dark-accent-color;
+  }
+
+  .code-header {
+    background-color: $dark-secondary-color;
+    color: $dark-primary-color;
+    &:is(.copied, :hover) {
+      background-color: $dark-accent-color;
+    }
+    &.copied {
+      background-color: $dark-secondary-color;
+    }
+  }
+
+  .pill {
+    background-color: $dark-secondary-color;
+    color: $dark-primary-color;
+  }
+
+  .pill:hover {
+    background-color: $dark-accent-color;
+  }
+}

@@ -1,280 +1,37 @@
 // ----------------------------------------------------------------------------
 // yolo specific classes
 // ----------------------------------------------------------------------------
-$dark-primary-color: #061039 !default;
-$dark-secondary-color: #ff31b9 !default;
-$dark-accent-color: #00b0ff !default;
-$dark-code-background-color: #000928 !default;
-$dark-code-color: #30ea7d !default;
-$dark-link-color: #65e9fc !default;
-
-$light-primary-color: #e9f4fe !default;
-$light-secondary-color: #32439e !default;
-$light-accent-color: #0091ea !default;
-$light-code-background-color: #000928 !default;
-$light-code-color: #17ba59 !default;
-$light-link-color: #ef0c81 !default;
-
-// This selector ONLY defines color properties
-.light-theme {
-  color: $light-secondary-color;
-  background-color: $light-primary-color;
-
-  a {
-    color: $light-link-color;
-  }
-
-  h1, h2, h3, h4, h5, h6 {
-    color: $light-accent-color;
-  }
-
-  blockquote {
-    border-left: .25rem solid $light-accent-color;
-  }
-
-  hr {
-    border-bottom: 1px dashed $light-accent-color;
-  }
-
-  pre, code {
-    color: $light-code-color;
-  }
-
-  ul {
-    li {
-      color: $light-secondary-color;
-    }
-    ::marker {
-      color: $light-accent-color;
-    }
-  }
-
-  ol {
-    li {
-      color: $light-secondary-color;
-    }
-    ::marker {
-      color: $light-accent-color;
-    }
-  }
-
-  th {
-    border-top: 1px solid $light-secondary-color;
-  }
-
-  th, td {
-    border-bottom: 1px solid $light-secondary-color;
-    border-left: 1px solid $light-secondary-color;
-    border-right: 1px solid $light-secondary-color;
-  }
-
-  thead {
-    background-color: $light-secondary-color;
-    color: $light-primary-color;
-  }
-
-  .site-header {
-    .theme-dot {
-      color: $light-secondary-color;
-    }
-    .tag {
-      color: $light-secondary-color;
-    }
-    .description {
-      color: $light-accent-color;
-    }
-  }
-
-  .lb-modal {
-    background-color: $light-primary-color;
-  }
-
-  .lb-close {
-    color: $light-accent-color;
-  }
-
-  .lb-close:hover,
-  .lb-close:focus {
-    color: $light-secondary-color;
-  }
-
-  .lb-nav {
-    &:hover {
-      background-color: rgba($light-accent-color, 0.3);
-    }
-  }
-
-  .lb-prev {
-    &:hover {
-      color: $light-accent-color;
-    }
-  }
-
-  .lb-next {
-    &:hover {
-      color: $light-accent-color;
-    }
-  }
-
-  div.highlighter-rouge,
-  figure.highlight {
-    background: $light-code-background-color;
-    color: $light-code-color;
-  }
-
-  .back-to-top {
-    color: $light-accent-color;
-  }
-
-  .code-header {
-    background-color: $light-secondary-color;
-    color: $light-primary-color;
-    &:is(.copied, :hover) {
-      background-color: $light-accent-color;
-    }
-    &.copied {
-      background-color: $light-secondary-color;
-    }
-  }
-
-  .pill {
-    background-color: $light-secondary-color;
-    color: $light-primary-color;
-  }
-
-  .pill:hover {
-    background-color: $light-accent-color;
-  }
+#yolo-site {
+  opacity: 0;
+  transition: opacity 3s;
 }
 
-.dark-theme {
-  color: $dark-secondary-color;
-  background-color: $dark-primary-color;
-
-  a {
-    color: $dark-link-color;
+// page header
+.yolo-header {
+  .logo {
+    border-radius: 50%;
+    margin-bottom: 1rem;
+    width: 128px;
+    height: 128px;
+    object-fit: cover;
+    float: left;
   }
-
-  h1, h2, h3, h4, h5, h6 {
-    color: $dark-accent-color;
+  .theme-dot {
+    font-size: $size-2;
+    transform: rotate(90deg);
+    float: right;
+    cursor: pointer;
   }
-
-  blockquote {
-    border-left: .25rem solid $dark-accent-color;
+  .tag {
+    clear: both;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
   }
-
-  hr {
-    border-bottom: 1px dashed $dark-accent-color;
-  }
-
-  pre, code {
-    color: $dark-code-color;
-  }
-
-  ul {
-    li {
-      color: $dark-secondary-color;
-    }
-    ::marker {
-      color: $dark-accent-color;
-    }
-  }
-
-  ol {
-    li {
-      color: $dark-secondary-color;
-    }
-    ::marker {
-      color: $dark-accent-color;
-    }
-  }
-
-  th {
-    border-top: 1px solid $dark-secondary-color;
-  }
-
-  th, td {
-    border-bottom: 1px solid $dark-secondary-color;
-    border-left: 1px solid $dark-secondary-color;
-    border-right: 1px solid $dark-secondary-color;
-  }
-
-  thead {
-    background-color: $dark-secondary-color;
-    color: $dark-primary-color;
-  }
-
-  .site-header {
-    .theme-dot {
-      color: $dark-secondary-color;
-    }
-    .tag {
-      color: $dark-secondary-color;
-    }
-    .description {
-      color: $dark-accent-color;
-    }
-  }
-
-  .lb-modal {
-    background-color: $dark-primary-color;
-  }
-
-  .lb-close {
-    color: $dark-accent-color;
-  }
-
-  .lb-close:hover,
-  .lb-close:focus {
-    color: $dark-secondary-color;
-  }
-
-  .lb-nav {
-    &:hover {
-      background-color: rgba($dark-accent-color, 0.3);
-    }
-  }
-
-  .lb-prev {
-    &:hover {
-      color: $dark-accent-color;
-    }
-  }
-
-  .lb-next {
-    &:hover {
-      color: $dark-accent-color;
-    }
-  }
-
-  div.highlighter-rouge,
-  figure.highlight {
-    background: $dark-code-background-color;
-    color: $dark-code-color;
-  }
-
-  .back-to-top {
-    color: $dark-accent-color;
-  }
-
-  .code-header {
-    background-color: $dark-secondary-color;
-    color: $dark-primary-color;
-    &:is(.copied, :hover) {
-      background-color: $dark-accent-color;
-    }
-    &.copied {
-      background-color: $dark-secondary-color;
-    }
-  }
-
-  .pill {
-    background-color: $dark-secondary-color;
-    color: $dark-primary-color;
-  }
-
-  .pill:hover {
-    background-color: $dark-accent-color;
+  .description {
+    font-weight: lighter;
+    margin-top: 0;
+    margin-bottom: 1rem;
   }
 }
 
@@ -290,6 +47,12 @@ $light-link-color: #ef0c81 !default;
 .no-display {
   display: none;
   overflow: auto;
+}
+
+.no-bullets {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
 }
 
 .caption {
@@ -315,7 +78,6 @@ $light-link-color: #ef0c81 !default;
 
 // embedded video styling
 .video {
-  //text-align: center;
   width: 100%;
   iframe {
     width: 300px;
@@ -335,6 +97,40 @@ $light-link-color: #ef0c81 !default;
   font-size: $size-6;
   font-weight: bold;
   border-radius: 3rem;
+}
+
+// prezo styling
+.prezo-iframe-container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  border-radius: 0.3em;
+  border: 0;
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+  &.is-16-by-9 {
+    /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+    padding-top: 56.25%;
+  }
+  &.is-4-by-3 {
+    /* 4:3 Aspect Ratio */
+    padding-top: 75%;
+  }
+  &.is-1-by-1 {
+    /* 1:1 Aspect Ratio */
+    padding-top: 100%;
+  }
+}
+
+/* Style the iframe to fit in the iframe-container div with full height and width */
+.prezo-responsive-iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
 }
 
 // For image rotation on 404 page
