@@ -17,7 +17,7 @@
     float: left;
   }
   .theme-dot {
-    font-size: $size-2;
+    font-size: $size-3;
     transform: rotate(90deg);
     float: right;
     cursor: pointer;
@@ -151,6 +151,7 @@
 .light-theme {
   color: $light-secondary-color;
   background-color: $light-primary-color;
+  font-family: $family-primary;
 
   a {
     color: $light-link-color;
@@ -307,6 +308,7 @@
 .dark-theme {
   color: $dark-secondary-color;
   background-color: $dark-primary-color;
+  font-family: $family-primary;
 
   a {
     color: $dark-link-color;
