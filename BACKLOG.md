@@ -4,7 +4,24 @@ List of tasks for maturing Yolo.
 
 ## ASAP
 
-* Responsiveness, laptop screen
+* Dark / Light mode toggle, all the cool kids are doing it.
+  * themes/_none.scss
+  * themes/_corbs.scss
+  * themes/_cloudy.scss
+  * themes/_light.scss
+  * themes/_logrey.scss
+  * themes/_avoca.scss
+  * themes/_arcade.scss
+  * themes/_dark.scss
+  * _base.scss
+  * _lightbox.scss
+  * _syntax.scss
+  * _yolo.scss
+  * _lists.scss
+  * _tables.scss
+  * _header.scss
+
+* Responsiveness, laptop screen.
 * Create tutorial for adding custom lightbox.
 * Create tutorial for adding custom theme.
 * Create tutorial for using includes.

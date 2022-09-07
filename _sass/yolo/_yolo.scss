@@ -1,6 +1,40 @@
 // ----------------------------------------------------------------------------
 // yolo specific classes
 // ----------------------------------------------------------------------------
+#yolo-site {
+  opacity: 0;
+  transition: opacity 3s;
+}
+
+// page header
+.yolo-header {
+  .logo {
+    border-radius: 50%;
+    margin-bottom: 1rem;
+    width: 128px;
+    height: 128px;
+    object-fit: cover;
+    float: left;
+  }
+  .theme-dot {
+    font-size: $size-2;
+    transform: rotate(90deg);
+    float: right;
+    cursor: pointer;
+  }
+  .tag {
+    clear: both;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+  }
+  .description {
+    font-weight: lighter;
+    margin-top: 0;
+    margin-bottom: 1rem;
+  }
+}
+
 .left {
   margin-right: auto;
   margin-left: 0;
@@ -15,43 +49,35 @@
   overflow: auto;
 }
 
+.no-bullets {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
 .caption {
   text-align: center;
   padding: 1rem;
 }
 
-// back to top link styling
 .back-to-top {
   display: block;
-  color: $yolo-accent-color;
   text-align: right;
   text-decoration: none;
 }
 
 // copy code header
 .code-header {
-  width: 100%;
   font-family: $family-secondary;
   font-weight: bold;
   padding: 0.3em 0.3em 0.3em 0.4em;
   vertical-align: middle;
-  background-color: $yolo-secondary-color;
-  color: $yolo-primary-color;
   border-top-left-radius: 0.3em;
   border-top-right-radius: 0.3em;
-
-  &:is(.copied, :hover) {
-    background-color: $yolo-accent-color;
-  }
-
-  &.copied {
-    background-color: $yolo-secondary-color;
-  }
 }
 
 // embedded video styling
 .video {
-  //text-align: center;
   width: 100%;
   iframe {
     width: 300px;
@@ -65,8 +91,6 @@
 .pill {
   display: inline-flex;
   align-items: center;
-  background-color: $yolo-secondary-color;
-  color: $yolo-primary-color;
   font-family: $family-monospace;
   text-decoration: none;
   padding: 0.25rem 1rem;
@@ -75,8 +99,38 @@
   border-radius: 3rem;
 }
 
-.pill:hover {
-  background-color: $yolo-accent-color;
+// prezo styling
+.prezo-iframe-container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  border-radius: 0.3em;
+  border: 0;
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+  &.is-16-by-9 {
+    /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+    padding-top: 56.25%;
+  }
+  &.is-4-by-3 {
+    /* 4:3 Aspect Ratio */
+    padding-top: 75%;
+  }
+  &.is-1-by-1 {
+    /* 1:1 Aspect Ratio */
+    padding-top: 100%;
+  }
+}
+
+/* Style the iframe to fit in the iframe-container div with full height and width */
+.prezo-responsive-iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
 }
 
 // For image rotation on 404 page
@@ -93,28 +147,316 @@
   }
 }
 
-// yolo fill color classes
-.yolo-primary-color {
-  background-color: $yolo-primary-color;
-  color: $yolo-secondary-color;
+// This selector ONLY defines color properties
+.light-theme {
+  color: $light-secondary-color;
+  background-color: $light-primary-color;
+
+  a {
+    color: $light-link-color;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    color: $light-accent-color;
+  }
+
+  blockquote {
+    border-left: .25rem solid $light-accent-color;
+  }
+
+  hr {
+    border-bottom: 1px dashed $light-accent-color;
+  }
+
+  pre, code {
+    color: $light-code-color;
+  }
+
+  ul {
+    li {
+      color: $light-secondary-color;
+    }
+    ::marker {
+      color: $light-accent-color;
+    }
+  }
+
+  ol {
+    li {
+      color: $light-secondary-color;
+    }
+    ::marker {
+      color: $light-accent-color;
+    }
+  }
+
+  th {
+    border-top: 1px solid $light-secondary-color;
+  }
+
+  th, td {
+    border-bottom: 1px solid $light-secondary-color;
+    border-left: 1px solid $light-secondary-color;
+    border-right: 1px solid $light-secondary-color;
+  }
+
+  thead {
+    background-color: $light-secondary-color;
+    color: $light-primary-color;
+  }
+
+  .yolo-header {
+    .theme-dot {
+      color: $light-secondary-color;
+    }
+    .tag {
+      color: $light-secondary-color;
+    }
+    .description {
+      color: $light-accent-color;
+    }
+  }
+
+  .lb-modal {
+    background-color: $light-primary-color;
+  }
+
+  .lb-close {
+    color: $light-accent-color;
+  }
+
+  .lb-close:hover,
+  .lb-close:focus {
+    color: $light-secondary-color;
+  }
+
+  .lb-nav {
+    &:hover {
+      background-color: rgba($light-accent-color, 0.3);
+    }
+  }
+
+  .lb-prev {
+    &:hover {
+      color: $light-accent-color;
+    }
+  }
+
+  .lb-next {
+    &:hover {
+      color: $light-accent-color;
+    }
+  }
+
+  div.highlighter-rouge,
+  figure.highlight {
+    background: $light-code-background-color;
+    color: $light-code-color;
+  }
+
+  .back-to-top {
+    color: $light-accent-color;
+  }
+
+  .code-header {
+    background-color: $light-secondary-color;
+    color: $light-primary-color;
+    &:is(.copied, :hover) {
+      background-color: $light-accent-color;
+    }
+    &.copied {
+      background-color: $light-secondary-color;
+    }
+  }
+
+  .pill {
+    background-color: $light-secondary-color;
+    color: $light-primary-color;
+  }
+
+  .pill:hover {
+    background-color: $light-accent-color;
+  }
+
+  .primary-color {
+    background-color: $light-primary-color;
+    color: $light-secondary-color;
+  }
+  .secondary-color {
+    background-color: $light-secondary-color;
+    color: $light-primary-color;
+  }
+  .accent-color {
+    background-color: $light-accent-color;
+    color: $light-primary-color;
+  }
+  .code-background-color {
+    background-color: $light-code-background-color;
+    color: $light-code-color;
+  }
+  .code-color {
+    background-color: $light-code-color;
+    color: $light-code-background-color;
+  }
+  .link-color {
+    background-color: $light-link-color;
+    color: $light-primary-color;
+  }
 }
-.yolo-secondary-color {
-  background-color: $yolo-secondary-color;
-  color: $yolo-primary-color;
+
+.dark-theme {
+  color: $dark-secondary-color;
+  background-color: $dark-primary-color;
+
+  a {
+    color: $dark-link-color;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    color: $dark-accent-color;
+  }
+
+  blockquote {
+    border-left: .25rem solid $dark-accent-color;
+  }
+
+  hr {
+    border-bottom: 1px dashed $dark-accent-color;
+  }
+
+  pre, code {
+    color: $dark-code-color;
+  }
+
+  ul {
+    li {
+      color: $dark-secondary-color;
+    }
+    ::marker {
+      color: $dark-accent-color;
+    }
+  }
+
+  ol {
+    li {
+      color: $dark-secondary-color;
+    }
+    ::marker {
+      color: $dark-accent-color;
+    }
+  }
+
+  th {
+    border-top: 1px solid $dark-secondary-color;
+  }
+
+  th, td {
+    border-bottom: 1px solid $dark-secondary-color;
+    border-left: 1px solid $dark-secondary-color;
+    border-right: 1px solid $dark-secondary-color;
+  }
+
+  thead {
+    background-color: $dark-secondary-color;
+    color: $dark-primary-color;
+  }
+
+  .yolo-header {
+    .theme-dot {
+      color: $dark-secondary-color;
+    }
+    .tag {
+      color: $dark-secondary-color;
+    }
+    .description {
+      color: $dark-accent-color;
+    }
+  }
+
+  .lb-modal {
+    background-color: $dark-primary-color;
+  }
+
+  .lb-close {
+    color: $dark-accent-color;
+  }
+
+  .lb-close:hover,
+  .lb-close:focus {
+    color: $dark-secondary-color;
+  }
+
+  .lb-nav {
+    &:hover {
+      background-color: rgba($dark-accent-color, 0.3);
+    }
+  }
+
+  .lb-prev {
+    &:hover {
+      color: $dark-accent-color;
+    }
+  }
+
+  .lb-next {
+    &:hover {
+      color: $dark-accent-color;
+    }
+  }
+
+  div.highlighter-rouge,
+  figure.highlight {
+    background: $dark-code-background-color;
+    color: $dark-code-color;
+  }
+
+  .back-to-top {
+    color: $dark-accent-color;
+  }
+
+  .code-header {
+    background-color: $dark-secondary-color;
+    color: $dark-primary-color;
+    &:is(.copied, :hover) {
+      background-color: $dark-accent-color;
+    }
+    &.copied {
+      background-color: $dark-secondary-color;
+    }
+  }
+
+  .pill {
+    background-color: $dark-secondary-color;
+    color: $dark-primary-color;
+  }
+
+  .pill:hover {
+    background-color: $dark-accent-color;
+  }
+
+  .primary-color {
+    background-color: $dark-primary-color;
+    color: $dark-secondary-color;
+  }
+  .secondary-color {
+    background-color: $dark-secondary-color;
+    color: $dark-primary-color;
+  }
+  .accent-color {
+    background-color: $dark-accent-color;
+    color: $dark-primary-color;
+  }
+  .code-background-color {
+    background-color: $dark-code-background-color;
+    color: $dark-code-color;
+  }
+  .code-color {
+    background-color: $dark-code-color;
+    color: $dark-code-background-color;
+  }
+  .link-color {
+    background-color: $dark-link-color;
+    color: $dark-primary-color;
+  }
 }
-.yolo-accent-color {
-  background-color: $yolo-accent-color;
-  color: $yolo-primary-color;
-}
-.yolo-code-background-color {
-  background-color: $yolo-code-background-color;
-  color: $yolo-code-color;
-}
-.yolo-code-color {
-  background-color: $yolo-code-color;
-  color: $yolo-code-background-color;
-}
-.yolo-link-color {
-  background-color: $yolo-link-color;
-  color: $yolo-primary-color;
-}
+

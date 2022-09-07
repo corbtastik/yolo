@@ -1,3 +1,14 @@
+// ----------------------------------------------------------------------------
+// Responsiveness classes
+// ----------------------------------------------------------------------------
+@import "variables";
+
+@media (min-width: $tablet) {
+  html {
+    font-size: $size-5;
+  }
+}
+
 @mixin rtl {
   @if $rtl {
     @content;

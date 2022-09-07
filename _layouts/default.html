@@ -1,12 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 {% include head.html %}
-<body>
-  <div id="yolo-container" class="container left">
-    {% include header.html %}
-    {{ content }}
-    {% include footer.html %}
+<body id="yolo-site">
+  <div class="container left">
+    <header>
+      {% include components/header.html %}
+    </header>
+    <main>{{ content }}</main>
+    <footer>
+      {% include components/footer.html %}
+    </footer>
   </div>
-{% include scripts.html %}
+  {% include scripts.html %}
 </body>
 </html>

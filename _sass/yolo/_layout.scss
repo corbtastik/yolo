@@ -1,5 +1,81 @@
 // ----------------------------------------------------------------------------
-// flexbox stylesheet
+// Layout support
+// ----------------------------------------------------------------------------
+@import "variables";
+@import "responsiveness";
+
+// Divide function for flexbox
+@function divide($dividend, $divisor, $precision: 10) {
+  $sign: if($dividend > 0 and $divisor > 0, 1, -1);
+  $dividend: abs($dividend);
+  $divisor: abs($divisor);
+  $quotient: 0;
+  $remainder: $dividend;
+  @if $dividend == 0 {
+    @return 0;
+  }
+  @if $divisor == 0 {
+    @error "Cannot divide by 0";
+  }
+  @if $divisor == 1 {
+    @return $dividend;
+  }
+  @while $remainder >= $divisor {
+    $quotient: $quotient + 1;
+    $remainder: $remainder - $divisor;
+  }
+  @if $remainder > 0 and $precision > 0 {
+    $remainder: divide($remainder * 10, $divisor, $precision - 1) * .1;
+  }
+  @return ($quotient + $remainder) * $sign;
+};
+
+// ----------------------------------------------------------------------------
+// Container classes
+// ----------------------------------------------------------------------------
+$container-offset: (2 * $gap) !default;
+$container-max-width: $fullhd !default;
+
+.container {
+  flex-grow: 1;
+  margin: 0 auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  position: relative;
+  width: auto;
+  &.is-fluid {
+    max-width: none !important;
+    padding-left: $gap;
+    padding-right: $gap;
+    width: 100%;
+  }
+  @include desktop {
+    max-width: $desktop - $container-offset;
+  }
+  @include until-widescreen {
+    &.is-widescreen:not(.is-max-desktop) {
+      max-width: min($widescreen, $container-max-width) - $container-offset;
+    }
+  }
+  @include until-fullhd {
+    &.is-fullhd:not(.is-max-desktop):not(.is-max-widescreen) {
+      max-width: min($fullhd, $container-max-width) - $container-offset;
+    }
+  }
+  @include widescreen {
+    &:not(.is-max-desktop) {
+      max-width: min($widescreen, $container-max-width) - $container-offset;
+    }
+  }
+  @include fullhd {
+    &:not(.is-max-desktop):not(.is-max-widescreen) {
+      max-width: min($fullhd, $container-max-width) - $container-offset;
+    }
+  }
+}
+
+// ----------------------------------------------------------------------------
+// flexbox classes
 // ----------------------------------------------------------------------------
 $column-gap: 0.50rem !default;
 

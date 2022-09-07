@@ -24,7 +24,7 @@
 </div>
 <div id="ig-target-{{ ig_data }}" class="no-display">
     <div class="columns is-mobile">
-        <div id="{{ ig_data }}-target-column" class="column is-full">
+        <div id="{{ ig_data }}-target-column" class="column">
             {% assign num_images = ig_num_images | minus: 1 %}
             {% for i in (0..num_images) %}
             {% assign ig_image = ig_images[i] %}

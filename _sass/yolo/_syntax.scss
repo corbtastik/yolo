@@ -1,9 +1,10 @@
 // ----------------------------------------------------------------------------
 // Syntax highlighting
 // ----------------------------------------------------------------------------
+@import "variables";
+
 pre, code {
   font-family: $family-monospace;
-  color: $yolo-code-color;
 }
 
 pre {
@@ -15,7 +16,6 @@ figure.highlight {
   position: relative;
   border-bottom-right-radius: 0.3em;
   border-bottom-left-radius: 0.3em;
-  background: $yolo-code-background-color;
   color: $base05;
   font-family: $family-monospace;
   line-height: 1.8;

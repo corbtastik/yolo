@@ -1,24 +1,22 @@
 // ----------------------------------------------------------------------------
-// Syntax highlighting (material) colors
+// Default theme colors for light and dark modes.
 // ----------------------------------------------------------------------------
-$base00: #060E3F !default;
-$base01: #393f45 !default;
-$base02: #565e65 !default;
-$base03: #747c84 !default;
-$base04: #adb3ba !default;
-$base05: #c7ccd1 !default;
-$base06: #dfe2e5 !default;
-$base07: #f3f4f5 !default;
-$base08: #F2AE56 !default;
-$base09: #FCEA60 !default;
-$base0a: #6FE182 !default;
-$base0b: #7EFCFD !default;
-$base0c: #578CF7 !default;
-$base0d: #AB8DF8 !default;
-$base0e: #EA4BA6 !default;
-$base0f: #C1291C !default;
+// light theme colors
+$light-primary-color: #fff !default;
+$light-secondary-color: #000 !default;
+$light-accent-color: #000 !default;
+$light-code-background-color: #000 !default;
+$light-code-color: #848484 !default;
+$light-link-color: #00b0ff !default;
+// dark theme colors
+$dark-primary-color: #000 !default;
+$dark-secondary-color: #fff !default;
+$dark-accent-color: #000 !default;
+$dark-code-background-color: #000 !default;
+$dark-code-color: #848484 !default;
+$dark-link-color: #00b0ff !default;
 // ----------------------------------------------------------------------------
-// Typography
+// Default Typography fonts, sizes and weights
 // ----------------------------------------------------------------------------
 $family-primary: "Inconsolata", sans-serif !default;
 $family-secondary: "Montserrat", sans-serif !default;
@@ -39,13 +37,29 @@ $weight-medium: 500 !default;
 $weight-semibold: 600 !default;
 $weight-bold: 700 !default;
 // ----------------------------------------------------------------------------
-// Flags
+// Syntax highlighting (material) colors
+// ----------------------------------------------------------------------------
+$base00: #060E3F !default;
+$base01: #393f45 !default;
+$base02: #565e65 !default;
+$base03: #747c84 !default;
+$base04: #adb3ba !default;
+$base05: #c7ccd1 !default;
+$base06: #dfe2e5 !default;
+$base07: #f3f4f5 !default;
+$base08: #F2AE56 !default;
+$base09: #FCEA60 !default;
+$base0a: #6FE182 !default;
+$base0b: #7EFCFD !default;
+$base0c: #578CF7 !default;
+$base0d: #AB8DF8 !default;
+$base0e: #EA4BA6 !default;
+$base0f: #C1291C !default;
+// ----------------------------------------------------------------------------
+// Layouts and responsiveness
 // ----------------------------------------------------------------------------
 $variable-columns: true !default;
 $rtl: false !default;
-// ----------------------------------------------------------------------------
-// Responsiveness
-// ----------------------------------------------------------------------------
 // The container horizontal gap, which acts as the offset for breakpoints
 $gap: 32px !default;
 // 960, 1152, and 1344 have been chosen because they are divisible by both 12 and 16
