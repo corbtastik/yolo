@@ -1,13 +1,20 @@
 // ----------------------------------------------------------------------------
 // corbs theme
 // ----------------------------------------------------------------------------
-// colors
-$yolo-primary-color: #061039 !default;
-$yolo-secondary-color: #ff31b9 !default;
-$yolo-accent-color: #00b0ff !default;
-$yolo-code-background-color: #000928 !default;
-$yolo-code-color: #30ea7d !default;
-$yolo-link-color: #65e9fc !default;
+$light-primary-color: #e9f4fe;
+$light-secondary-color: #32439e;
+$light-accent-color: #0091ea;
+$light-code-background-color: #000928;
+$light-code-color: #17ba59;
+$light-link-color: #ef0c81;
+
+$dark-primary-color: #061039;
+$dark-secondary-color: #ff31b9;
+$dark-accent-color: #00b0ff;
+$dark-code-background-color: #000928;
+$dark-code-color: #30ea7d;
+$dark-link-color: #65e9fc;
+
 // fonts
 $family-primary: "Roboto Mono", sans-serif;
 $family-secondary: "Raleway", sans-serif;

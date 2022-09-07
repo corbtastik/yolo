@@ -1,5 +1,5 @@
 // ----------------------------------------------------------------------------
-// arcade theme
+// yinyang theme
 // ----------------------------------------------------------------------------
 $light-primary-color: #fbffff;
 $light-secondary-color: #093fc4;
@@ -8,15 +8,15 @@ $light-code-background-color: #000928;
 $light-code-color: #00e676;
 $light-link-color: #f7346d;
 
-$dark-primary-color: #000928;
-$dark-secondary-color: #00e676;
-$dark-accent-color: #596ef8;
-$dark-code-background-color: #00080f;
-$dark-code-color: #65e9fc;
-$dark-link-color: #ff31b9;
+$dark-primary-color: #0e0e0e;
+$dark-secondary-color: #d1ecfb;
+$dark-accent-color: #00b0ff;
+$dark-code-background-color: #000;
+$dark-code-color: #00e676;
+$dark-link-color: #f7346d;
 
 // fonts
-$family-primary: "Roboto Mono", sans-serif;
+$family-primary: "Inconsolata", sans-serif;
 $family-secondary: "Raleway", sans-serif;
-$family-monospace: "Roboto Mono", monospace;
-$family-code: "Roboto Mono", monospace;
+$family-monospace: "Inconsolata", monospace;
+$family-code: "Inconsolata", monospace;
