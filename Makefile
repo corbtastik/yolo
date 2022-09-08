@@ -24,6 +24,9 @@ yolo-site:
 yolo-reset:
 	@mv .site-build/index.md ./index.md
 
+theme:
+	@cp ./src/templates/_theme.scss _sass/yolo/themes/_$(NAME).scss
+
 # -----------------------------------------------------------------------------
 # Targets for running containerizing yolo
 # -----------------------------------------------------------------------------
@@ -48,25 +51,19 @@ arcade:
 		--config _config.yml,$(OUTPUT_DIR)/_style.yml,$(OUTPUT_DIR)/_version.yml \
 		--destination $(OUTPUT_DIR)/$(SAMPLER_DIR)/arcade
 
-cloudy:
-	@echo "style: cloudy" > $(OUTPUT_DIR)/_style.yml
-	@jekyll build \
-		--config _config.yml,$(OUTPUT_DIR)/_style.yml,$(OUTPUT_DIR)/_version.yml \
-		--destination $(OUTPUT_DIR)/$(SAMPLER_DIR)/cloudy
-
 corbs:
 	@echo "style: corbs" > $(OUTPUT_DIR)/_style.yml
 	@jekyll build \
 		--config _config.yml,$(OUTPUT_DIR)/_style.yml,$(OUTPUT_DIR)/_version.yml \
 		--destination $(OUTPUT_DIR)/$(SAMPLER_DIR)/corbs
 
-dark:
+domino:
 	@echo "style: dark" > $(OUTPUT_DIR)/_style.yml
 	@jekyll build \
 		--config _config.yml,$(OUTPUT_DIR)/_style.yml,$(OUTPUT_DIR)/_version.yml \
 		--destination $(OUTPUT_DIR)/$(SAMPLER_DIR)/dark
 
-light:
+yinyang:
 	@echo "style: light" > $(OUTPUT_DIR)/_style.yml
 	@jekyll build \
 		--config _config.yml,$(OUTPUT_DIR)/_style.yml,$(OUTPUT_DIR)/_version.yml \

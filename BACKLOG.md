@@ -5,27 +5,10 @@ List of tasks for maturing Yolo.
 ## ASAP
 
 * Dark / Light mode toggle, all the cool kids are doing it.
-  * themes/_none.scss
-  * themes/_corbs.scss
-  * themes/_cloudy.scss
-  * themes/_light.scss
-  * themes/_logrey.scss
-  * themes/_avoca.scss
-  * themes/_arcade.scss
-  * themes/_dark.scss
-  * _base.scss
-  * _lightbox.scss
-  * _syntax.scss
-  * _yolo.scss
-  * _lists.scss
-  * _tables.scss
-  * _header.scss
-
 * Responsiveness, laptop screen.
 * Create tutorial for adding custom lightbox.
 * Create tutorial for adding custom theme.
 * Create tutorial for using includes.
-* Add support for Github Gist.
 * Add figure to image for caption display.
 * Add center align option for elements.
 * Scrub and implement consistent size and dimension units.
@@ -34,6 +17,7 @@ List of tasks for maturing Yolo.
 ## Mid-term
 
 * Add support for embedding PDFs.
+* Add support for Github Gist.
 * Build new Yolo container images, push to quay.
 * Add option to collapse header (h2, h3, h4, h5, h6) sections.
 * Look into customizing syntax highlighter.
@@ -42,7 +26,6 @@ List of tasks for maturing Yolo.
 ## Long-term
 
 * Yolo for Eleventy.
-* Yolo for Astro.
 
 ## Complete
 

@@ -173,6 +173,21 @@
     color: $light-code-color;
   }
 
+  /* Code in text */
+  p > code,
+  blockquote > code,
+  h1 > code,
+  h2 > code,
+  h3 > code,
+  h4 > code,
+  h5 > code,
+  h6 > code,
+  li > code,
+  dd > code,
+  td > code {
+    color: $light-accent-color;
+  }
+
   ul {
     li {
       color: $light-secondary-color;
@@ -328,6 +343,21 @@
 
   pre, code {
     color: $dark-code-color;
+  }
+
+  /* Code in text */
+  p > code,
+  blockquote > code,
+  h1 > code,
+  h2 > code,
+  h3 > code,
+  h4 > code,
+  h5 > code,
+  h6 > code,
+  li > code,
+  dd > code,
+  td > code {
+    color: $dark-accent-color;
   }
 
   ul {

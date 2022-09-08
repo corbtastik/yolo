@@ -55,13 +55,74 @@ jekyll serve
 
 ## Themes
 
-Yolo doesn't implement an "according to hoyle" Jekyll theme, but the colors, fonts, logo and data can be customized.
+Yolo doesn't implement an "according to hoyle" [gem based theme](https://jekyllrb.com/docs/themes/), but the colors and fonts can be customized as outlined below.
 
-> "Theming" for Yolo is accomplished by providing a custom scss file as outlined below.
+> __Note:__ "Theming" for Yolo is accomplished by providing a custom scss file in `_sass/yolo/themes`. Each theme must specify "light" and "dark" values to support switching between the two modes.
 
-* Copy one of the themes in `_sass/yolo/themes` to a new scss file.
-* Provide color values for each variable.
-* Enable by setting `site.style` in `_config.yml`.
+##### 1. Create a new scss file for your theme.
+
+{% include code.html info="Create theme scss" %}
+```bash
+# Use whatever NAME you like
+make theme NAME=domino
+```
+
+##### 2. Customize the theme values.
+
+__Color properties:__
+
+| Light/Dark property       | Description                           |
+|---------------------------|---------------------------------------|
+| `*-primary-color`         | Background color                      |
+| `*-secondary-color`       | Foreground color, text, tables        |
+| `*-accent-color`          | Header color                          |
+| `*-code-background-color` | Background color for code snippets    |
+| `*-code-color`            | Text color for inline code & snippets |
+| `*-link-color`            | Hyperlink color                       |
+
+__Font family properties:__
+
+> __Note:__ Add font-family in `_data/fonts.yml` to customize what fonts are available.
+
+| Font property      | Description                        |
+|--------------------|------------------------------------|
+| `family-primary`   | Family for body and most text      |
+| `family-secondary` | Family for headers and accent text |
+| `family-monospace` | Family for code                    |
+
+__Theme file:__
+
+{% include code.html info="_sass/yolo/themes/_domino.scss" %}
+```scss
+$light-primary-color: #fff;
+$light-secondary-color: #000;
+$light-accent-color: #757575;
+$light-code-background-color: #424242;
+$light-code-color: #757575;
+$light-link-color: #2196f3;
+
+$dark-primary-color: #000;
+$dark-secondary-color: #fff;
+$dark-accent-color: #bdbdbd;
+$dark-code-background-color: #424242;
+$dark-code-color: #fff;
+$dark-link-color: #2196f3;
+
+$family-primary: "Open Sans", sans-serif;
+$family-secondary: "Raleway", sans-serif;
+$family-monospace: "Inconsolata", monospace;
+```
+
+##### 3. Enable by setting `site.style` in `_config.yml`.
+
+__Jekyll config:__
+
+```yaml
+# Site customizations
+style: domino
+```
+
+That's it, run Yolo and adjust colors to your liking.
 
 [↑↑↑](#){: .back-to-top}
 
@@ -98,7 +159,7 @@ Yolo doesn't implement an "according to hoyle" Jekyll theme, but the colors, fon
 
 ### Colors
 
-Yolo's colors can be customized by adding a new theme scss file and setting the `site.style` value in `_config.yml`.
+Yolo's colors can be customized as outlined in [Yolo Themes](#themes). 
 
 {% include flexbox.html columns="1" fill="primary-color" %}
 {% include flexbox.html columns="1" fill="secondary-color" %}
@@ -113,7 +174,7 @@ Yolo's colors can be customized by adding a new theme scss file and setting the 
 
 ### Typography
 
-Yolo's typography implementation is based on [Bulma's Typography](https://bulma.io/documentation/helpers/typography-helpers/).
+Yolo's fonts can be customized as outlined in [Yolo Themes](#themes).
 
 {% include typography.html %}
 
@@ -123,10 +184,9 @@ Yolo's typography implementation is based on [Bulma's Typography](https://bulma.
 
 ### Flexbox
 
-Yolo's flexbox implementation is based on [Bulma's "columns" interface](https://bulma.io/documentation/columns/).
+Flexbox is used to layout [lightbox](#image-lightbox) and [grid](#image-grid) images.
 
-Flexbox is used to layout [lightbox images](#image-lightbox) and included to support rich single page layouts. Knock
-on wood, in the not too distant future I hope to add several layout templates.
+> Yolo's flexbox implementation is based on [Bulma's "columns" interface](https://bulma.io/documentation/columns/).
 
 {% include code.html info="Flexbox template" %}
 {% raw %}
@@ -347,9 +407,7 @@ AND   price <= 10000
 
 ### Markdown Images
 
-[Kramdown](https://github.com/gettalong/kramdown) is the default markdown converter for [Jekyll](https://jekyllrb.com/) and supports adding images via markdown.
-
-> Images added via markdown receive styling from the `<img>` element, they're not styled with `yolo` scss.
+> Images added via markdown receive styling from the `<img>` element, they're not styled with `yolo` classes.
 
 {% include code.html info="Markdown images" %}
 {% raw %}

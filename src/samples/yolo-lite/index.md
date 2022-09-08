@@ -1,7 +1,7 @@
 ---
 layout: default
 tags:
-- yolo
+- yolo-lite
 - single-page
 - jekyll
 ---
