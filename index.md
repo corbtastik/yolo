@@ -6,15 +6,15 @@ tags:
 - jekyll
 ---
 
-Yolo is a single page theme cut from the cloth of "[Solo](http://chibicode.github.io/solo)" which was previously developed and ultimately deprecated by [Shu Uesugi](https://github.com/chibicode).
+Yolo is laser focused on static single page sites, and while anyone can Yolo, it's purposely built for cerebral, techie, picture taking folk. 
 
 ##### Goals for Yolo
 
-###### 1. Keep living the Solo dream
+###### 1. Live our best single page life.
 
-Support one-and-only-one page but treat it like a pet.
+Nurture _one-and-only-one_ page sites like we nurture our pets.
 
-###### 2. Keep it simple
+###### 2. Strive for simplicity.
 
 No dependencies other than [jekyll](https://jekyllrb.com/).
 
@@ -22,22 +22,20 @@ No dependencies other than [jekyll](https://jekyllrb.com/).
 
 Bring your own [colors](#colors) and [fonts](#typography).
 
-> The one-and-only "implementation" page is the one you're looking at.
-
 ---
 
 ## Table of Contents
 
-* [Usage](#usage)
-* [Themes](#themes)
-* [Yolo Elements](#yolo-elements)
-* [Yolo and Containers](#yolo-and-containers)
-* [Kudos](#thanks)
-* [License](#license)
+* [Getting Started](#getting-started): _How to Yolo_
+* [Themes](#themes): _Yolo your way with themes_
+* [Elements](#elements): _What Yolo brings to the party_
+* [Containers](#containers): _Yolo in a container_
+* [Kudos](#thanks): _I get by with a little help from my friends_
+* [License](#license): _MIT_
 
 ---
 
-## Usage
+## Getting Started
 
 You need [jekyll](https://jekyllrb.com/).
 
@@ -128,7 +126,7 @@ That's it, run Yolo and adjust colors to your liking.
 
 ---
 
-## Yolo Elements
+## Elements
 
 * [Colors](#colors)
 * [Typography](#typography)
@@ -789,7 +787,7 @@ Yolo has basic support for embedding Google Slides.
 
 ---
 
-## Yolo and Containers
+## Containers
 
 This section "contains" information on building and running your single page Yolo site as a container.
 
@@ -843,7 +841,9 @@ When I want an unvarnished take on HTML, CSS, and Javascript I go to [w3schools]
 
 ### [Solo](http://chibicode.github.io/solo/)
 
-Years ago I googled _"minimal jekyll theme"_, which led me to [Solo](http://chibicode.github.io/solo/). It was exactly what I was looking for, simple to get started and customize. Not to mention there's a quirky beauty in its look. Over the years I've used Solo for single page "technical" docs. It's the motivation and starting point for Yolo.
+Years ago I googled _"minimal jekyll theme"_, which led me to [Solo](http://chibicode.github.io/solo/). It was exactly what I was looking for, simple to get started and customize. Not to mention there's a quirky beauty in its look. Over the years I've used Solo for single page "technical" docs.
+
+Yolo is cut from the cloth of "[Solo](http://chibicode.github.io/solo)" which was previously developed by [Shu Uesugi](https://github.com/chibicode).
 
 > Well done [Shu Uesugi](https://github.com/chibicode), sanks amigo.
 

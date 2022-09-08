@@ -2,7 +2,7 @@
 .idea/
 .jekyll-cache/
 .sass-cache/
-.site-build/
+.yolo-build/
 src/
 docs/
 Makefile

@@ -2,6 +2,6 @@ _site
 .sass-cache
 .idea
 .jekyll-cache
-.site-build
+.yolo-build
 .DS_Store
 .wip

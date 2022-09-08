@@ -4,7 +4,6 @@ List of tasks for maturing Yolo.
 
 ## ASAP
 
-* Dark / Light mode toggle, all the cool kids are doing it.
 * Responsiveness, laptop screen.
 * Create tutorial for adding custom lightbox.
 * Create tutorial for adding custom theme.
@@ -54,3 +53,4 @@ List of tasks for maturing Yolo.
 * [DONE 2022-08-25] Create a corbs light theme (named: "cloudy").
 * [DONE] Add support for Google Cloud Storage for image assets.
 * [DONE] Make lists styling better.
+* [DONE] Dark / Light mode toggle, all the cool kids are doing it.

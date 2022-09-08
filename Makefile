@@ -4,10 +4,10 @@
 CONTAINER_REGISTRY=quay.io/corbsmartin
 IMAGE_NAME=yolo
 IMAGE_TAG=v1.15
-OUTPUT_DIR=.site-build
+OUTPUT_DIR=.yolo-build
 JEKYLL_PORT=4000
 # -----------------------------------------------------------------------------
-# Targets for working with a single site build of Solo.
+# Targets for working with a Yolo site.
 # -----------------------------------------------------------------------------
 clean:
 	@rm -rf $(OUTPUT_DIR)
@@ -22,13 +22,13 @@ yolo-site:
 		--destination $(OUTPUT_DIR)/$(IMAGE_NAME)
 
 yolo-reset:
-	@mv .site-build/index.md ./index.md
+	@mv .yolo-build/index.md ./index.md
 
-theme:
+new-theme:
 	@cp ./src/templates/_theme.scss _sass/yolo/themes/_$(NAME).scss
 
 # -----------------------------------------------------------------------------
-# Targets for running containerizing yolo
+# Targets for running containerizing Yolo
 # -----------------------------------------------------------------------------
 yoloc:
 	@podman build -f ./src/yoloc.Containerfile -t yoloc:latest ./src
@@ -43,28 +43,40 @@ pod: yolo
 	@podman ps
 
 # -----------------------------------------------------------------------------
-# Targets for running "jekyll build" for every Solo style.
+# Targets for building a site for each Yolo theme.
 # -----------------------------------------------------------------------------
+all-themes: arcade corbs domino yinyang
+
+clean-themes:
+	@rm -rf $(OUTPUT_DIR)/arcade
+	@rm -rf $(OUTPUT_DIR)/corbs
+	@rm -rf $(OUTPUT_DIR)/domino
+	@rm -rf $(OUTPUT_DIR)/yinyang
+
 arcade:
-	@echo "style: arcade" > $(OUTPUT_DIR)/_style.yml
+	@mkdir -p $(OUTPUT_DIR)/arcade
+	@echo "style: arcade" > $(OUTPUT_DIR)/arcade/_style.yml
 	@jekyll build \
-		--config _config.yml,$(OUTPUT_DIR)/_style.yml,$(OUTPUT_DIR)/_version.yml \
-		--destination $(OUTPUT_DIR)/$(SAMPLER_DIR)/arcade
+		--config _config.yml,$(OUTPUT_DIR)/arcade/_style.yml \
+		--destination $(OUTPUT_DIR)/arcade
 
 corbs:
-	@echo "style: corbs" > $(OUTPUT_DIR)/_style.yml
+	@mkdir -p $(OUTPUT_DIR)/corbs
+	@echo "style: corbs" > $(OUTPUT_DIR)/corbs/_style.yml
 	@jekyll build \
-		--config _config.yml,$(OUTPUT_DIR)/_style.yml,$(OUTPUT_DIR)/_version.yml \
-		--destination $(OUTPUT_DIR)/$(SAMPLER_DIR)/corbs
+		--config _config.yml,$(OUTPUT_DIR)/corbs/_style.yml \
+		--destination $(OUTPUT_DIR)/corbs
 
 domino:
-	@echo "style: dark" > $(OUTPUT_DIR)/_style.yml
+	@mkdir -p $(OUTPUT_DIR)/domino
+	@echo "style: domino" > $(OUTPUT_DIR)/domino/_style.yml
 	@jekyll build \
-		--config _config.yml,$(OUTPUT_DIR)/_style.yml,$(OUTPUT_DIR)/_version.yml \
-		--destination $(OUTPUT_DIR)/$(SAMPLER_DIR)/dark
+		--config _config.yml,$(OUTPUT_DIR)/domino/_style.yml \
+		--destination $(OUTPUT_DIR)/domino
 
 yinyang:
-	@echo "style: light" > $(OUTPUT_DIR)/_style.yml
+	@mkdir -p $(OUTPUT_DIR)/yinyang
+	@echo "style: yinyang" > $(OUTPUT_DIR)/yinyang/_style.yml
 	@jekyll build \
-		--config _config.yml,$(OUTPUT_DIR)/_style.yml,$(OUTPUT_DIR)/_version.yml \
-		--destination $(OUTPUT_DIR)/$(SAMPLER_DIR)/light
+		--config _config.yml,$(OUTPUT_DIR)/yinyang/_style.yml \
+		--destination $(OUTPUT_DIR)/yinyang
