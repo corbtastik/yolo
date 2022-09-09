@@ -1,6 +1,8 @@
 // ----------------------------------------------------------------------------
 // yolo specific classes
 // ----------------------------------------------------------------------------
+@import "variables";
+
 #yolo-site {
   opacity: 0;
   transition: opacity 3s;
@@ -68,7 +70,6 @@
 
 // copy code header
 .code-header {
-  font-family: $family-secondary;
   font-weight: bold;
   padding: 0.3em 0.3em 0.3em 0.4em;
   vertical-align: middle;
@@ -91,7 +92,6 @@
 .pill {
   display: inline-flex;
   align-items: center;
-  font-family: $family-monospace;
   text-decoration: none;
   padding: 0.25rem 1rem;
   font-size: $size-6;
@@ -147,7 +147,7 @@
   }
 }
 
-// This selector ONLY defines color properties
+// light-theme colors
 .light-theme {
   color: $light-secondary-color;
   background-color: $light-primary-color;
@@ -159,6 +159,7 @@
 
   h1, h2, h3, h4, h5, h6 {
     color: $light-accent-color;
+    font-family: $family-secondary, sans-serif;
   }
 
   blockquote {
@@ -219,6 +220,7 @@
   thead {
     background-color: $light-secondary-color;
     color: $light-primary-color;
+    font-family: $family-secondary;
   }
 
   .yolo-header {
@@ -277,6 +279,7 @@
   .code-header {
     background-color: $light-secondary-color;
     color: $light-primary-color;
+    font-family: $family-secondary;
     &:is(.copied, :hover) {
       background-color: $light-accent-color;
     }
@@ -288,6 +291,7 @@
   .pill {
     background-color: $light-secondary-color;
     color: $light-primary-color;
+    font-family: $family-monospace;
   }
 
   .pill:hover {
@@ -320,6 +324,7 @@
   }
 }
 
+// dark-theme colors
 .dark-theme {
   color: $dark-secondary-color;
   background-color: $dark-primary-color;
@@ -331,6 +336,7 @@
 
   h1, h2, h3, h4, h5, h6 {
     color: $dark-accent-color;
+    font-family: $family-secondary, sans-serif;
   }
 
   blockquote {
@@ -391,6 +397,7 @@
   thead {
     background-color: $dark-secondary-color;
     color: $dark-primary-color;
+    font-family: $family-secondary;
   }
 
   .yolo-header {
@@ -449,6 +456,7 @@
   .code-header {
     background-color: $dark-secondary-color;
     color: $dark-primary-color;
+    font-family: $family-secondary;
     &:is(.copied, :hover) {
       background-color: $dark-accent-color;
     }
@@ -460,6 +468,7 @@
   .pill {
     background-color: $dark-secondary-color;
     color: $dark-primary-color;
+    font-family: $family-monospace;
   }
 
   .pill:hover {
@@ -491,4 +500,3 @@
     color: $dark-primary-color;
   }
 }
-

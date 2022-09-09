@@ -45,7 +45,7 @@ pod: yolo
 # -----------------------------------------------------------------------------
 # Targets for building a site for each Yolo theme.
 # -----------------------------------------------------------------------------
-all-themes: arcade corbs domino yinyang
+all-themes: arcade corbs solo yinyang
 
 clean-themes:
 	@rm -rf $(OUTPUT_DIR)/arcade
@@ -67,12 +67,12 @@ corbs:
 		--config _config.yml,$(OUTPUT_DIR)/corbs/_style.yml \
 		--destination $(OUTPUT_DIR)/corbs
 
-domino:
-	@mkdir -p $(OUTPUT_DIR)/domino
-	@echo "style: domino" > $(OUTPUT_DIR)/domino/_style.yml
+solo:
+	@mkdir -p $(OUTPUT_DIR)/solo
+	@echo "style: solo" > $(OUTPUT_DIR)/solo/_style.yml
 	@jekyll build \
-		--config _config.yml,$(OUTPUT_DIR)/domino/_style.yml \
-		--destination $(OUTPUT_DIR)/domino
+		--config _config.yml,$(OUTPUT_DIR)/solo/_style.yml \
+		--destination $(OUTPUT_DIR)/solo
 
 yinyang:
 	@mkdir -p $(OUTPUT_DIR)/yinyang
