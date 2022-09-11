@@ -266,6 +266,79 @@ H1 is reserved for the site header and not shown here.
 
 > __Tip:__ Click header to copy a snippet.
 
+{% include code.html info="Python snippet" %}
+```python
+class Person:
+  def __init__(self, name, age):
+    self.name = name
+    self.age = age
+
+p1 = Person("John", 36)
+# Print name and age
+print(p1.name)
+print(p1.age)
+```
+
+{% include code.html info="C snippet" %}
+```c
+#include <stdio.h>
+
+// Print Hello, World
+int main() {
+   printf("Hello World!");
+   return 0;
+}
+```
+
+{% include code.html info="C++ snippet" %}
+```c++
+#include <iostream>
+using namespace std;
+
+// Print Hello World
+int main() {
+    cout << "Hello World!";
+    return 0;
+}
+```
+
+{% include code.html info="C# snippet" %}
+```csharp
+// Hello World! program
+namespace HelloWorld {
+    class Hello {         
+        static void Main(string[] args) {
+            System.Console.WriteLine("Hello World!");
+        }
+    }
+}
+```
+
+{% include code.html info="Go snippet" %}
+```go
+package main
+import "fmt"
+
+// Print Hello World
+func main() {
+    fmt.Println("Hello World!")
+}
+```
+
+{% include code.html info="Kotlin snippet" %}
+```kotlin
+// Print Hello World
+fun main(args : Array<String>) {
+    println("Hello World!")
+}
+```
+
+```dart
+void main() {
+  print('Hello, World!');
+}
+```
+
 {% include code.html info="Bash script" %}
 ```bash
 #!/bin/bash
