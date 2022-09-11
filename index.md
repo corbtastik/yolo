@@ -266,121 +266,162 @@ H1 is reserved for the site header and not shown here.
 
 > __Tip:__ Click header to copy a snippet.
 
+{% include code.html info="Bash snippet" %}
+```bash
+#!/bin/bash
+function say_howdy() {
+  echo "Howdy $1!"
+}
+
+if [ $# -ne 1 ]; then
+    echo "Usage: Howdy <NAME>"
+    exit 1
+fi
+
+# Say Howdy
+say_howdy $1
+```
+
+[↑↑↑](#){: .back-to-top}
+
 {% include code.html info="Python snippet" %}
 ```python
-class Person:
-  def __init__(self, name, age):
-    self.name = name
-    self.age = age
+import sys
 
-p1 = Person("John", 36)
-# Print name and age
-print(p1.name)
-print(p1.age)
+def sayHowdy(name):
+    print("Howdy " + name + "!")
+
+if len(sys.argv) != 2:
+    print("Usage: Howdy <NAME>")
+    sys.exit(1)
+
+# Say Howdy
+sayHowdy(sys.argv[1])
 ```
+
+[↑↑↑](#){: .back-to-top}
 
 {% include code.html info="C snippet" %}
 ```c
 #include <stdio.h>
-
-// Print Hello, World
-int main() {
-   printf("Hello World!");
-   return 0;
+// Say Howdy
+int main(int argc, char **argv) {
+    if(argc != 2) {
+        printf("Usage: Howdy <NAME>");
+        return 1;
+    }
+    printf("Howdy %s!\n", argv[1]);
+    return 0;
 }
 ```
+
+[↑↑↑](#){: .back-to-top}
 
 {% include code.html info="C++ snippet" %}
 ```c++
 #include <iostream>
 using namespace std;
 
-// Print Hello World
-int main() {
-    cout << "Hello World!";
+int main(int argc, char** argv) {
+    if(argc != 2) {
+        cout << "Usage: Howdy <NAME>";
+        return 1;
+    }
+    cout << "Howdy " << argv[1];
     return 0;
 }
 ```
 
-{% include code.html info="C# snippet" %}
-```csharp
-// Hello World! program
-namespace HelloWorld {
-    class Hello {         
-        static void Main(string[] args) {
-            System.Console.WriteLine("Hello World!");
-        }
-    }
+[↑↑↑](#){: .back-to-top}
+
+{% include code.html info="JavaScript snippet" %}
+```javascript
+function sayHowdy(name) {
+    console.log("Howdy " + name + "!");
 }
+
+if(process.argv.length != 3) {
+    console.log("Usage: Howdy <NAME>");
+    process.exit(1);
+}
+
+// Say Howdy
+sayHowdy(process.argv[2]);
 ```
+
+[↑↑↑](#){: .back-to-top}
 
 {% include code.html info="Go snippet" %}
 ```go
 package main
-import "fmt"
 
-// Print Hello World
-func main() {
-    fmt.Println("Hello World!")
+import (
+    "os"
+    "fmt"
+)
+
+// Say Howdy
+func main () {
+    if len(os.Args) != 2 {
+        fmt.Println("Usage: Howdy <NAME>")
+        os.Exit(1)
+    }
+    fmt.Println("Howdy " + os.Args[1] + "!")
+    os.Exit(0)
 }
 ```
+
+[↑↑↑](#){: .back-to-top}
 
 {% include code.html info="Kotlin snippet" %}
 ```kotlin
-// Print Hello World
-fun main(args : Array<String>) {
-    println("Hello World!")
+// Say Howdy
+fun main(args: Array<String>): Int {
+    if(args.size != 1) {
+        println("Usage: Howdy <NAME>")
+        return 1
+    }
+    println("Howdy " + args[0] + "!")
+    return 0
 }
 ```
 
+[↑↑↑](#){: .back-to-top}
+
+{% include code.html info="Dart snippet" %}
 ```dart
-void main() {
-  print('Hello, World!');
+import 'dart:io';
+// Say Howdy
+void main(List<String> args) {
+    exitCode = 0;
+    if(args.length != 1) {
+        stdout.writeln("Usage: Howdy <NAME>");
+        exitCode = 1;
+        return;
+    }
+    stdout.writeln("Howdy ${args[0]}!");
 }
 ```
 
-{% include code.html info="Bash script" %}
-```bash
-#!/bin/bash
-# Yes / No prompt
-while true; do
-    read -p "Do you wish to continue (yes or no)? " yn
-    case $yn in
-        [Yy]* ) break;;
-        [Nn]* ) exit;;
-        * ) echo "Please answer yes or no.";;
-    esac
-done
-```
+[↑↑↑](#){: .back-to-top}
 
-{% include code.html info="Spring Boot Application" %}
+{% include code.html info="Java snippet" %}
 ```java
-package io.todos;
-
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
-
-/**
- * WebUI: User interface sample application.
- * @author: corbs
- */
-@SpringBootApplication
-public class WebUI {
+// Say Howdy
+public class Howdy {
     public static void main(String[] args) {
-      SpringApplication.run(WebUI.class, args);
+        if(args.length != 1) {
+            System.out.println("Usage: Howdy <NAME>");
+            System.exit(1);
+        }
+        System.out.println("Howdy " + args[0] + "!");
     }
 }
 ```
 
-{% include code.html info="MongoDB query" %}
-```javascript
-// Find orders for micky
-db.orders.find(
-   { price: { $gt: 5000, $lte: 10000 }, cust_id: "mickey@mouse.com" }
-)
-```
+[↑↑↑](#){: .back-to-top}
 
-{% include code.html info="SQL example" %}
+{% include code.html info="SQL snippet" %}
 ```sql
 -- Select orders for micky
 SELECT *
