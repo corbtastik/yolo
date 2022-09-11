@@ -6,7 +6,8 @@ tags:
 - jekyll
 ---
 
-Yolo is laser focused on static single page sites, and while anyone can Yolo, it's purposely built for writers, techies, and picture taker folk. 
+Yolo is laser focused on static single page sites, and while anyone can Yolo, it's purposely built for writers, 
+techies, and picture taking folk. 
 
 ##### Goals for Yolo
 
