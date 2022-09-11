@@ -114,8 +114,7 @@ $family-monospace: "Inconsolata", monospace;
 
 ##### 3. Enable by setting `site.style` in `_config.yml`.
 
-__Jekyll config:__
-
+{% include code.html info="Jekyll _config.yml" %}
 ```yaml
 # Site customizations
 style: domino
@@ -270,6 +269,7 @@ H1 is reserved for the site header and not shown here.
 {% include code.html info="Bash script" %}
 ```bash
 #!/bin/bash
+# Yes / No prompt
 while true; do
     read -p "Do you wish to continue (yes or no)? " yn
     case $yn in
@@ -287,6 +287,10 @@ package io.todos;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+/**
+ * WebUI: User interface sample application.
+ * @author: corbs
+ */
 @SpringBootApplication
 public class WebUI {
     public static void main(String[] args) {
@@ -297,6 +301,7 @@ public class WebUI {
 
 {% include code.html info="MongoDB query" %}
 ```javascript
+// Find orders for micky
 db.orders.find(
    { price: { $gt: 5000, $lte: 10000 }, cust_id: "mickey@mouse.com" }
 )
@@ -304,6 +309,7 @@ db.orders.find(
 
 {% include code.html info="SQL example" %}
 ```sql
+-- Select orders for micky
 SELECT *
 FROM orders
 WHERE cust_id = "mickey@mouse.com"
