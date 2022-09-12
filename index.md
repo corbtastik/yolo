@@ -266,6 +266,41 @@ H1 is reserved for the site header and not shown here.
 
 > __Tip:__ Click header to copy a snippet.
 
+{% include code.html info="JSON array" %}
+```json
+[{
+  "id": 1000,
+  "first_name": "Sponge",
+  "last_name": "Bob",
+  "email": "spongebob@krustykrab.com",
+  "phone": "555-555-5555",
+  "address": "124 Conch Street",
+  "city": "Bikini Bottom"
+}, {
+  "id": 1001,
+  "first_name": "Charlie",
+  "last_name": "Brown",
+  "email": "chuck@peanuts.com",
+  "phone": "612-111-7777",
+  "address": "1770 James Street",
+  "city": "Minneapolis",
+  "state": "Minnesota",
+  "zipcode": "55403"
+}, {
+  "id": 3,
+  "first_name": "Levon",
+  "last_name": "Laurent",
+  "email": "llaurent2@etsy.com",
+  "phone": "212-535-6056",
+  "schools": "Zhejiang Normal University",
+  "address": "93 Lyons Court",
+  "city": "New York City",
+  "state": "New York",
+  "zipcode": "10125"
+}]
+```
+
+
 {% include code.html info="Bash snippet" %}
 ```bash
 #!/bin/bash
