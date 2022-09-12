@@ -6,11 +6,11 @@
 @import "yolo/normalize";
 @import "yolo/variables";
 @import "yolo/base";
-@import "yolo/syntax";
 @import "yolo/responsiveness";
 @import "yolo/layout";
 @import "yolo/themes/{{ site.style | default: 'corbs' }}";
 @import "yolo/typography";
+@import "yolo/syntax";
 @import "yolo/images";
 @import "yolo/lightbox";
 @import "yolo/yolo";

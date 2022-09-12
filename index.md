@@ -284,23 +284,6 @@ say_howdy $1
 
 [↑↑↑](#){: .back-to-top}
 
-{% include code.html info="Python snippet" %}
-```python
-import sys
-
-def sayHowdy(name):
-    print("Howdy " + name + "!")
-
-if len(sys.argv) != 2:
-    print("Usage: Howdy <NAME>")
-    sys.exit(1)
-
-# Say Howdy
-sayHowdy(sys.argv[1])
-```
-
-[↑↑↑](#){: .back-to-top}
-
 {% include code.html info="C snippet" %}
 ```c
 #include <stdio.h>
@@ -334,19 +317,19 @@ int main(int argc, char** argv) {
 
 [↑↑↑](#){: .back-to-top}
 
-{% include code.html info="JavaScript snippet" %}
-```javascript
-function sayHowdy(name) {
-    console.log("Howdy " + name + "!");
-}
-
-if(process.argv.length != 3) {
-    console.log("Usage: Howdy <NAME>");
-    process.exit(1);
-}
-
+{% include code.html info="Dart snippet" %}
+```dart
+import 'dart:io';
 // Say Howdy
-sayHowdy(process.argv[2]);
+void main(List<String> args) {
+    exitCode = 0;
+    if(args.length != 1) {
+        stdout.writeln("Usage: Howdy <NAME>");
+        exitCode = 1;
+        return;
+    }
+    stdout.writeln("Howdy ${args[0]}!");
+}
 ```
 
 [↑↑↑](#){: .back-to-top}
@@ -373,33 +356,46 @@ func main () {
 
 [↑↑↑](#){: .back-to-top}
 
-{% include code.html info="Kotlin snippet" %}
-```kotlin
-// Say Howdy
-fun main(args: Array<String>): Int {
-    if(args.size != 1) {
-        println("Usage: Howdy <NAME>")
-        return 1
-    }
-    println("Howdy " + args[0] + "!")
-    return 0
-}
+{% include code.html info="HTML snippet" %}
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Howdy!</title>
+</head>
+<body>
+    <h1>Howdy from an HTML page!</h1>
+</body>
+</html>
 ```
 
 [↑↑↑](#){: .back-to-top}
 
-{% include code.html info="Dart snippet" %}
-```dart
-import 'dart:io';
-// Say Howdy
-void main(List<String> args) {
-    exitCode = 0;
-    if(args.length != 1) {
-        stdout.writeln("Usage: Howdy <NAME>");
-        exitCode = 1;
-        return;
+{% include code.html info="JSON snippet" %}
+```json
+{
+  "apiVersion": "v1",
+  "kind": "Service",
+  "metadata": {
+    "name": "minio-server-lb",
+    "namespace": "minio",
+    "labels": {
+      "app/name": "minio"
     }
-    stdout.writeln("Howdy ${args[0]}!");
+  },
+  "spec": {
+    "ports": [{
+        "port": 9000,
+        "targetPort": 9000,
+        "protocol": "TCP"
+      }],
+    "selector": {
+      "app/name": "minio",
+      "app/component": "backend"
+    },
+    "type": "LoadBalancer"
+  }
 }
 ```
 
@@ -421,6 +417,88 @@ public class Howdy {
 
 [↑↑↑](#){: .back-to-top}
 
+{% include code.html info="JavaScript snippet" %}
+```javascript
+function sayHowdy(name) {
+    console.log("Howdy " + name + "!");
+}
+
+if(process.argv.length != 3) {
+    console.log("Usage: Howdy <NAME>");
+    process.exit(1);
+}
+
+// Say Howdy
+sayHowdy(process.argv[2]);
+```
+
+[↑↑↑](#){: .back-to-top}
+
+{% include code.html info="Kotlin snippet" %}
+```kotlin
+// Say Howdy
+fun main(args: Array<String>): Int {
+    if(args.size != 1) {
+        println("Usage: Howdy <NAME>")
+        return 1
+    }
+    println("Howdy " + args[0] + "!")
+    return 0
+}
+```
+
+[↑↑↑](#){: .back-to-top}
+
+{% include code.html info="Markdown snippet" %}
+```markdown
+# Markdown
+
+* __Howdy__
+* _from_
+* <ins>a</ins>
+* [Markdown](https://en.wikipedia.org/wiki/Markdown)
+* `document`!
+```
+
+[↑↑↑](#){: .back-to-top}
+
+{% include code.html info="Python snippet" %}
+```python
+import sys
+
+def sayHowdy(name):
+    print("Howdy " + name + "!")
+
+if len(sys.argv) != 2:
+    print("Usage: Howdy <NAME>")
+    sys.exit(1)
+
+# Say Howdy
+sayHowdy(sys.argv[1])
+```
+
+[↑↑↑](#){: .back-to-top}
+
+{% include code.html info="SCSS snippet" %}
+```scss
+.light-theme {
+  color: $light-secondary-color;
+  background-color: $light-primary-color;
+  font-family: $family-primary;
+
+  a {
+    color: $light-link-color;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    color: $light-accent-color;
+    font-family: $family-secondary, sans-serif;
+  }
+}
+```
+
+[↑↑↑](#){: .back-to-top}
+
 {% include code.html info="SQL snippet" %}
 ```sql
 -- Select orders for micky
@@ -429,6 +507,28 @@ FROM orders
 WHERE cust_id = "mickey@mouse.com"
 AND   price > 5000
 AND   price <= 10000
+```
+
+[↑↑↑](#){: .back-to-top}
+
+{% include code.html info="YAML snippet" %}
+```yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: minio-server-lb
+  namespace: minio
+  labels:
+    app/name: minio
+spec:
+  ports:
+    - port: 9000
+      targetPort: 9000
+      protocol: TCP
+  selector:
+    app/name: minio
+    app/component: backend
+  type: LoadBalancer
 ```
 
 [↑↑↑](#){: .back-to-top}
