@@ -6,7 +6,8 @@ tags:
 - jekyll
 ---
 
-Yolo is laser focused on static single page sites, and while anyone can Yolo, it's purposely built for writers, techies, and picture taker folk.
+Yolo is laser focused on static single page sites, and while anyone can Yolo, it's purposely built for writers,
+techies, and picture taking folk.
 
 ##### Goals for Yolo
 
@@ -113,8 +114,7 @@ $family-monospace: "Inconsolata", monospace;
 
 ##### 3. Enable by setting `site.style` in `_config.yml`.
 
-__Jekyll config:__
-
+{% include code.html info="Jekyll _config.yml" %}
 ```yaml
 # Site customizations
 style: domino
@@ -130,7 +130,6 @@ That's it, run Yolo and adjust colors to your liking.
 
 * [Colors](#colors)
 * [Typography](#typography)
-* [Flexbox](#flexbox)
 * [Headers](#headers)
 * [Paragraph Text](#paragraph-text)
 * [Blockquotes](#blockquotes)
@@ -175,39 +174,6 @@ Yolo's colors can be customized as outlined in [Yolo Themes](#themes).
 Yolo's fonts can be customized as outlined in [Yolo Themes](#themes).
 
 {% include typography.html %}
-
-[↑↑↑](#){: .back-to-top}
-
----
-
-### Flexbox
-
-Flexbox is used to layout [lightbox](#image-lightbox) and [grid](#image-grid) images.
-
-> Yolo's flexbox implementation is based on [Bulma's "columns" interface](https://bulma.io/documentation/columns/).
-
-{% include code.html info="Flexbox template" %}
-{% raw %}
-```html
-{% include flexbox.html columns="1" %}
-{% include flexbox.html columns="2" %}
-{% include flexbox.html columns="3" %}
-{% include flexbox.html columns="4" %}
-{% include flexbox.html columns="5" %}
-{% include flexbox.html columns="6" %}
-{% include flexbox.html columns="7" %}
-{% include flexbox.html columns="8" %}
-```
-{% endraw %}
-
-{% include flexbox.html columns="1" %}
-{% include flexbox.html columns="2" %}
-{% include flexbox.html columns="3" %}
-{% include flexbox.html columns="4" %}
-{% include flexbox.html columns="5" %}
-{% include flexbox.html columns="6" %}
-{% include flexbox.html columns="7" %}
-{% include flexbox.html columns="8" %}
 
 [↑↑↑](#){: .back-to-top}
 
@@ -300,48 +266,304 @@ H1 is reserved for the site header and not shown here.
 
 > __Tip:__ Click header to copy a snippet.
 
-{% include code.html info="Bash script" %}
-```bash
-#!/bin/bash
-while true; do
-    read -p "Do you wish to continue (yes or no)? " yn
-    case $yn in
-        [Yy]* ) break;;
-        [Nn]* ) exit;;
-        * ) echo "Please answer yes or no.";;
-    esac
-done
+{% include code.html info="JSON array" %}
+```json
+[{
+  "id": 1000,
+  "first_name": "Sponge",
+  "last_name": "Bob",
+  "email": "spongebob@krustykrab.com",
+  "phone": "555-555-5555",
+  "address": "124 Conch Street",
+  "city": "Bikini Bottom"
+}, {
+  "id": 1001,
+  "first_name": "Charlie",
+  "last_name": "Brown",
+  "email": "chuck@peanuts.com",
+  "phone": "612-111-7777",
+  "address": "1770 James Street",
+  "city": "Minneapolis",
+  "state": "Minnesota",
+  "zipcode": "55403"
+}, {
+  "id": 3,
+  "first_name": "Levon",
+  "last_name": "Laurent",
+  "email": "llaurent2@etsy.com",
+  "phone": "212-535-6056",
+  "schools": "Zhejiang Normal University",
+  "address": "93 Lyons Court",
+  "city": "New York City",
+  "state": "New York",
+  "zipcode": "10125"
+}]
 ```
 
-{% include code.html info="Spring Boot Application" %}
+
+{% include code.html info="Bash snippet" %}
+```bash
+#!/bin/bash
+function say_howdy() {
+  echo "Howdy $1!"
+}
+
+if [ $# -ne 1 ]; then
+    echo "Usage: Howdy <NAME>"
+    exit 1
+fi
+
+# Say Howdy
+say_howdy $1
+```
+
+[↑↑↑](#){: .back-to-top}
+
+{% include code.html info="C snippet" %}
+```c
+#include <stdio.h>
+// Say Howdy
+int main(int argc, char **argv) {
+    if(argc != 2) {
+        printf("Usage: Howdy <NAME>");
+        return 1;
+    }
+    printf("Howdy %s!\n", argv[1]);
+    return 0;
+}
+```
+
+[↑↑↑](#){: .back-to-top}
+
+{% include code.html info="C++ snippet" %}
+```c++
+#include <iostream>
+using namespace std;
+
+int main(int argc, char** argv) {
+    if(argc != 2) {
+        cout << "Usage: Howdy <NAME>";
+        return 1;
+    }
+    cout << "Howdy " << argv[1];
+    return 0;
+}
+```
+
+[↑↑↑](#){: .back-to-top}
+
+{% include code.html info="Dart snippet" %}
+```dart
+import 'dart:io';
+// Say Howdy
+void main(List<String> args) {
+    exitCode = 0;
+    if(args.length != 1) {
+        stdout.writeln("Usage: Howdy <NAME>");
+        exitCode = 1;
+        return;
+    }
+    stdout.writeln("Howdy ${args[0]}!");
+}
+```
+
+[↑↑↑](#){: .back-to-top}
+
+{% include code.html info="Go snippet" %}
+```go
+package main
+
+import (
+    "os"
+    "fmt"
+)
+
+// Say Howdy
+func main () {
+    if len(os.Args) != 2 {
+        fmt.Println("Usage: Howdy <NAME>")
+        os.Exit(1)
+    }
+    fmt.Println("Howdy " + os.Args[1] + "!")
+    os.Exit(0)
+}
+```
+
+[↑↑↑](#){: .back-to-top}
+
+{% include code.html info="HTML snippet" %}
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Howdy!</title>
+</head>
+<body>
+    <h1>Howdy from an HTML page!</h1>
+</body>
+</html>
+```
+
+[↑↑↑](#){: .back-to-top}
+
+{% include code.html info="JSON snippet" %}
+```json
+{
+  "apiVersion": "v1",
+  "kind": "Service",
+  "metadata": {
+    "name": "minio-server-lb",
+    "namespace": "minio",
+    "labels": {
+      "app/name": "minio"
+    }
+  },
+  "spec": {
+    "ports": [{
+        "port": 9000,
+        "targetPort": 9000,
+        "protocol": "TCP"
+      }],
+    "selector": {
+      "app/name": "minio",
+      "app/component": "backend"
+    },
+    "type": "LoadBalancer"
+  }
+}
+```
+
+[↑↑↑](#){: .back-to-top}
+
+{% include code.html info="Java snippet" %}
 ```java
-package io.todos;
-
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
-
-@SpringBootApplication
-public class WebUI {
+// Say Howdy
+public class Howdy {
     public static void main(String[] args) {
-      SpringApplication.run(WebUI.class, args);
+        if(args.length != 1) {
+            System.out.println("Usage: Howdy <NAME>");
+            System.exit(1);
+        }
+        System.out.println("Howdy " + args[0] + "!");
     }
 }
 ```
 
-{% include code.html info="MongoDB query" %}
+[↑↑↑](#){: .back-to-top}
+
+{% include code.html info="JavaScript snippet" %}
 ```javascript
-db.orders.find(
-   { price: { $gt: 5000, $lte: 10000 }, cust_id: "mickey@mouse.com" }
-)
+function sayHowdy(name) {
+    console.log("Howdy " + name + "!");
+}
+
+if(process.argv.length != 3) {
+    console.log("Usage: Howdy <NAME>");
+    process.exit(1);
+}
+
+// Say Howdy
+sayHowdy(process.argv[2]);
 ```
 
-{% include code.html info="SQL example" %}
+[↑↑↑](#){: .back-to-top}
+
+{% include code.html info="Kotlin snippet" %}
+```kotlin
+// Say Howdy
+fun main(args: Array<String>): Int {
+    if(args.size != 1) {
+        println("Usage: Howdy <NAME>")
+        return 1
+    }
+    println("Howdy " + args[0] + "!")
+    return 0
+}
+```
+
+[↑↑↑](#){: .back-to-top}
+
+{% include code.html info="Markdown snippet" %}
+```markdown
+# Markdown
+
+* __Howdy__
+* _from_
+* <ins>a</ins>
+* [Markdown](https://en.wikipedia.org/wiki/Markdown)
+* `document`!
+```
+
+[↑↑↑](#){: .back-to-top}
+
+{% include code.html info="Python snippet" %}
+```python
+import sys
+
+def sayHowdy(name):
+    print("Howdy " + name + "!")
+
+if len(sys.argv) != 2:
+    print("Usage: Howdy <NAME>")
+    sys.exit(1)
+
+# Say Howdy
+sayHowdy(sys.argv[1])
+```
+
+[↑↑↑](#){: .back-to-top}
+
+{% include code.html info="SCSS snippet" %}
+```scss
+.light-theme {
+  color: $light-secondary-color;
+  background-color: $light-primary-color;
+  font-family: $family-primary;
+
+  a {
+    color: $light-link-color;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    color: $light-accent-color;
+    font-family: $family-secondary, sans-serif;
+  }
+}
+```
+
+[↑↑↑](#){: .back-to-top}
+
+{% include code.html info="SQL snippet" %}
 ```sql
+-- Select orders for micky
 SELECT *
 FROM orders
 WHERE cust_id = "mickey@mouse.com"
 AND   price > 5000
 AND   price <= 10000
+```
+
+[↑↑↑](#){: .back-to-top}
+
+{% include code.html info="YAML snippet" %}
+```yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: minio-server-lb
+  namespace: minio
+  labels:
+    app/name: minio
+spec:
+  ports:
+    - port: 9000
+      targetPort: 9000
+      protocol: TCP
+  selector:
+    app/name: minio
+    app/component: backend
+  type: LoadBalancer
 ```
 
 [↑↑↑](#){: .back-to-top}
@@ -625,25 +847,16 @@ src="yolo/bluebonnet.png"
 
 ### Image Grid
 
-Yolo has an Image Grid, which is similar to the Lightbox, except it shows the image inline, instead of in a modal.
+The Image Grid is similar to the [Lightbox](#image-lightbox), except it shows images inline, instead of in a modal.
 
-__Summary:__
+> __Tip:__ Click an image to enlarge, click again to minimize.
 
-* 4 column flexbox to display images.
-* Click an image to maximize.
-* Click again to minimize.
-
-__Configuration:__
-
-* View the sample Image Grid data file: `_data/ig-images.yml`.
 * Add image data into `_data/ig-images.yml`.
 * Include `image/grid.html` on your page.
 
-> __Note:__ The structure of the Image Grid data file is the same as the Lightbox.
-
 #### Default data file
 
-The `_data/ig-images.yml` file is the default Image Grid data file, just replace with your data to display images.
+The `_data/ig-images.yml` file is the default data file, just replace with your data to display images.
 
 {% include code.html info="Images from: _data/ig-images.yml" %}
 {% raw %}
@@ -656,9 +869,9 @@ The `_data/ig-images.yml` file is the default Image Grid data file, just replace
 
 #### Custom data file
 
-A custom data file can be added to render an Image Grid.
+A custom data file can be added to create an Image Grid.
 
-* Create a new file in `_data` and prefix name with `ig-`.
+* Create a new file in `_data/` and prefix name with `ig-`.
 * Use the data file name (w/o `.yml` ext) as the value to `ig-data`.
 * Customize the number of columns by setting `ig-columns`.
 
@@ -679,19 +892,10 @@ A custom data file can be added to render an Image Grid.
 
 Yolo includes a Lightbox to showcase pics.
 
-__Summary:__
+> __Tip:__ Click an image to open Lightbox, click left or right, key `<` or `>` to move.
 
-* 4 column flexbox to display images.
-* Click an image to open the Lightbox.
-* Click left or right, key `<` or `>` to move.
-
-__Configuration:__
-
-* View the sample Lightbox data file: `_data/lb-images.yml`.
 * Add image data into `_data/lb-images.yml`.
 * Include `image/lightbox.html` on your page.
-
-> __Note:__ The structure of the Lightbox data file is the same as the Image Grid.
 
 #### Default data file
 
@@ -708,7 +912,7 @@ The `_data/lb-images.yml` file is the default Lightbox data file, just replace w
 
 #### Custom data file
 
-A custom data file can be added to render a Lightbox.
+A custom data file can be added to create a Lightbox.
 
 * Create a new file in `_data` and prefix name with `lb-`.
 * Use the data file name (w/o `.yml` ext) as the value to `lb-data`.

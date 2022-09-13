@@ -266,8 +266,7 @@
     }
   }
 
-  div.highlighter-rouge,
-  figure.highlight {
+  .highlighter-rouge, .highlight {
     background: $light-code-background-color;
     color: $light-code-color;
   }
@@ -443,8 +442,7 @@
     }
   }
 
-  div.highlighter-rouge,
-  figure.highlight {
+  .highlighter-rouge, .highlight {
     background: $dark-code-background-color;
     color: $dark-code-color;
   }
@@ -498,53 +496,5 @@
   .link-color {
     background-color: $dark-link-color;
     color: $dark-primary-color;
-  }
-}
-
-$syntax-on-dark: (
-  "syntax01": red,
-  "syntax02": #f3f4f7,
-  "syntax03": #dfe2e5,
-  "syntax04": #ff6d00,
-  "syntax05": #d500f9,
-  "syntax06": #01d62f,
-  "syntax07": #40f5f5,
-  "syntax08": #304ffe,
-  "syntax09": #9167fb,
-  "syntax10": #ff4081
-);
-
-$syntax-on-light: (
-  "syntax01": blue,
-  "syntax02": #5c6bc0,
-  "syntax03": #474747,
-  "syntax04": #d55803,
-  "syntax05": #b900d5,
-  "syntax06": #03ae2d,
-  "syntax07": #00b8b8,
-  "syntax08": #4560f8,
-  "syntax09": #6b36fc,
-  "syntax10": #c1174d
-);
-
-
-// Syntax highlighting text color based on background color
-@function text-color($bg, $syntax) {
-  @if(lightness($bg) > 50) {
-    // syntax-on-light
-    @return map-get($syntax-on-light, "syntax01");
-  } @else {
-    // syntax-on-dark
-    @return map-get($syntax-on-dark, "syntax01");
-  }
-}
-
-@mixin dynamic-color($bg, $syntax) {
-  color: text-color($bg, $syntax);
-}
-
-.highlight {
-  .c { /* Comment */
-    @include dynamic-color($dark-code-background-color, "syntax01");
   }
 }
