@@ -3,6 +3,21 @@
 // ----------------------------------------------------------------------------
 @import "variables";
 
+// Syntax highlighting text color based on background color
+@function text-color($bg, $syntax) {
+  @if(lightness($bg) > 50) {
+    // syntax-on-light
+    @return map-get($syntax-on-light, $syntax);
+  } @else {
+    // syntax-on-dark
+    @return map-get($syntax-on-dark, $syntax);
+  }
+}
+
+@mixin dynamic-color($bg, $syntax) {
+  color: text-color($bg, $syntax);
+}
+
 #yolo-site {
   opacity: 0;
   transition: opacity 3s;
@@ -186,7 +201,7 @@
   li > code,
   dd > code,
   td > code {
-    color: $light-accent-color;
+    color: $light-code-color;
   }
 
   ul {
@@ -266,11 +281,6 @@
     }
   }
 
-  .highlighter-rouge, .highlight {
-    background: $light-code-background-color;
-    color: $light-code-color;
-  }
-
   .back-to-top {
     color: $light-accent-color;
   }
@@ -321,6 +331,74 @@
     background-color: $light-link-color;
     color: $light-primary-color;
   }
+
+  .highlight {
+    background: $light-code-background-color;
+    color: $light-code-color;
+    .c { /* Comment */ @include dynamic-color($light-code-background-color, "syntax01"); }
+    .err { /* Error */ @include dynamic-color($light-code-background-color, "syntax04"); }
+    .k {  /* Keyword */ @include dynamic-color($light-code-background-color, "syntax10"); }
+    .l {  /* Literal */ @include dynamic-color($light-code-background-color, "syntax05"); }
+    .n {  /* Name */ @include dynamic-color($light-code-background-color, "syntax02"); }
+    .o {  /* Operator */ @include dynamic-color($light-code-background-color, "syntax08"); }
+    .p {  /* Punctuation */ @include dynamic-color($light-code-background-color, "syntax02"); }
+    .cm {  /* Comment.Multiline */ @include dynamic-color($light-code-background-color, "syntax01"); }
+    .cp {  /* Comment.Preproc */ @include dynamic-color($light-code-background-color, "syntax01"); }
+    .c1 {  /* Comment.Single */ @include dynamic-color($light-code-background-color, "syntax01"); }
+    .cs {  /* Comment.Special */ @include dynamic-color($light-code-background-color, "syntax01"); }
+    .gd {  /* Generic.Deleted */ @include dynamic-color($light-code-background-color, "syntax04"); }
+    .ge {  /* Generic.Emph */ font-style: italic; }
+    .gh {  /* Generic.Heading */ @include dynamic-color($light-code-background-color, "syntax02"); font-weight: bold; }
+    .gi {  /* Generic.Inserted */ @include dynamic-color($light-code-background-color, "syntax07"); }
+    .gp {  /* Generic.Prompt */ @include dynamic-color($light-code-background-color, "syntax01"); font-weight: bold; }
+    .gs {  /* Generic.Strong */ font-weight: bold; }
+    .gu {  /* Generic.Subheading */ @include dynamic-color($light-code-background-color, "syntax08"); font-weight: bold; }
+    .kc {  /* Keyword.Constant */ @include dynamic-color($light-code-background-color, "syntax10"); }
+    .kd {  /* Keyword.Declaration */ @include dynamic-color($light-code-background-color, "syntax10"); }
+    .kn {  /* Keyword.Namespace */ @include dynamic-color($light-code-background-color, "syntax08"); }
+    .kp {  /* Keyword.Pseudo */ @include dynamic-color($light-code-background-color, "syntax10"); }
+    .kr {  /* Keyword.Reserved */ @include dynamic-color($light-code-background-color, "syntax10"); }
+    .kt {  /* Keyword.Type */ @include dynamic-color($light-code-background-color, "syntax06"); }
+    .ld {  /* Literal.Date */ @include dynamic-color($light-code-background-color, "syntax07"); }
+    .m {  /* Literal.Number */ @include dynamic-color($light-code-background-color, "syntax05"); }
+    .s {  /* Literal.String */ @include dynamic-color($light-code-background-color, "syntax07"); }
+    .na { /* Name.Attribute */ @include dynamic-color($light-code-background-color, "syntax09"); }
+    .nb {  /* Name.Builtin */ @include dynamic-color($light-code-background-color, "syntax02"); }
+    .nc {  /* Name.Class */ @include dynamic-color($light-code-background-color, "syntax06"); }
+    .no {  /* Name.Constant */ @include dynamic-color($light-code-background-color, "syntax04"); }
+    .nd {  /* Name.Decorator */ @include dynamic-color($light-code-background-color, "syntax08"); }
+    .ni {  /* Name.Entity */ @include dynamic-color($light-code-background-color, "syntax02"); }
+    .ne {  /* Name.Exception */ @include dynamic-color($light-code-background-color, "syntax04"); }
+    .nf {  /* Name.Function */ @include dynamic-color($light-code-background-color, "syntax09"); }
+    .nl {  /* Name.Label */ @include dynamic-color($light-code-background-color, "syntax02"); }
+    .nn {  /* Name.Namespace */ @include dynamic-color($light-code-background-color, "syntax06"); }
+    .nx {  /* Name.Other */ @include dynamic-color($light-code-background-color, "syntax09"); }
+    .py {  /* Name.Property */ @include dynamic-color($light-code-background-color, "syntax02"); }
+    .nt {  /* Name.Tag */ @include dynamic-color($light-code-background-color, "syntax08"); }
+    .nv {  /* Name.Variable */ @include dynamic-color($light-code-background-color, "syntax04"); }
+    .ow {  /* Operator.Word */ @include dynamic-color($light-code-background-color, "syntax08"); }
+    .w {   /* Text.Whitespace */ @include dynamic-color($light-code-background-color, "syntax02"); }
+    .mf {  /* Literal.Number.Float */ @include dynamic-color($light-code-background-color, "syntax05"); }
+    .mh {  /* Literal.Number.Hex */ @include dynamic-color($light-code-background-color, "syntax05"); }
+    .mi {  /* Literal.Number.Integer */ @include dynamic-color($light-code-background-color, "syntax05"); }
+    .mo {  /* Literal.Number.Oct */ @include dynamic-color($light-code-background-color, "syntax05"); }
+    .sb {  /* Literal.String.Backtick */ @include dynamic-color($light-code-background-color, "syntax07"); }
+    .sc {  /* Literal.String.Char */ @include dynamic-color($light-code-background-color, "syntax02"); }
+    .sd {  /* Literal.String.Doc */ @include dynamic-color($light-code-background-color, "syntax01"); }
+    .s2 {  /* Literal.String.Double */ @include dynamic-color($light-code-background-color, "syntax07"); }
+    .se {  /* Literal.String.Escape */ @include dynamic-color($light-code-background-color, "syntax05"); }
+    .sh {  /* Literal.String.Heredoc */ @include dynamic-color($light-code-background-color, "syntax07"); }
+    .si {  /* Literal.String.Interpol */ @include dynamic-color($light-code-background-color, "syntax05"); }
+    .sx {  /* Literal.String.Other */ @include dynamic-color($light-code-background-color, "syntax07"); }
+    .sr {  /* Literal.String.Regex */ @include dynamic-color($light-code-background-color, "syntax07"); }
+    .s1 {  /* Literal.String.Single */ @include dynamic-color($light-code-background-color, "syntax07"); }
+    .ss {  /* Literal.String.Symbol */ @include dynamic-color($light-code-background-color, "syntax07"); }
+    .bp {  /* Name.Builtin.Pseudo */ @include dynamic-color($light-code-background-color, "syntax02"); }
+    .vc {  /* Name.Variable.Class */ @include dynamic-color($light-code-background-color, "syntax04"); }
+    .vg {  /* Name.Variable.Global */ @include dynamic-color($light-code-background-color, "syntax04"); }
+    .vi {  /* Name.Variable.Instance */ @include dynamic-color($light-code-background-color, "syntax04"); }
+    .il {  /* Literal.Number.Integer.Long */ @include dynamic-color($light-code-background-color, "syntax05"); }
+  }
 }
 
 // dark-theme colors
@@ -362,7 +440,7 @@
   li > code,
   dd > code,
   td > code {
-    color: $dark-accent-color;
+    color: $dark-code-color;
   }
 
   ul {
@@ -442,11 +520,6 @@
     }
   }
 
-  .highlighter-rouge, .highlight {
-    background: $dark-code-background-color;
-    color: $dark-code-color;
-  }
-
   .back-to-top {
     color: $dark-accent-color;
   }
@@ -496,5 +569,73 @@
   .link-color {
     background-color: $dark-link-color;
     color: $dark-primary-color;
+  }
+
+  .highlight {
+    background: $dark-code-background-color;
+    color: $dark-code-color;
+    .c { /* Comment */ @include dynamic-color($dark-code-background-color, "syntax01"); }
+    .err { /* Error */ @include dynamic-color($dark-code-background-color, "syntax04"); }
+    .k {  /* Keyword */ @include dynamic-color($dark-code-background-color, "syntax10"); }
+    .l {  /* Literal */ @include dynamic-color($dark-code-background-color, "syntax05"); }
+    .n {  /* Name */ @include dynamic-color($dark-code-background-color, "syntax02"); }
+    .o {  /* Operator */ @include dynamic-color($dark-code-background-color, "syntax08"); }
+    .p {  /* Punctuation */ @include dynamic-color($dark-code-background-color, "syntax02"); }
+    .cm {  /* Comment.Multiline */ @include dynamic-color($dark-code-background-color, "syntax01"); }
+    .cp {  /* Comment.Preproc */ @include dynamic-color($dark-code-background-color, "syntax01"); }
+    .c1 {  /* Comment.Single */ @include dynamic-color($dark-code-background-color, "syntax01"); }
+    .cs {  /* Comment.Special */ @include dynamic-color($dark-code-background-color, "syntax01"); }
+    .gd {  /* Generic.Deleted */ @include dynamic-color($dark-code-background-color, "syntax04"); }
+    .ge {  /* Generic.Emph */ font-style: italic; }
+    .gh {  /* Generic.Heading */ @include dynamic-color($dark-code-background-color, "syntax02"); font-weight: bold; }
+    .gi {  /* Generic.Inserted */ @include dynamic-color($dark-code-background-color, "syntax07"); }
+    .gp {  /* Generic.Prompt */ @include dynamic-color($dark-code-background-color, "syntax01"); font-weight: bold; }
+    .gs {  /* Generic.Strong */ font-weight: bold; }
+    .gu {  /* Generic.Subheading */ @include dynamic-color($dark-code-background-color, "syntax08"); font-weight: bold; }
+    .kc {  /* Keyword.Constant */ @include dynamic-color($dark-code-background-color, "syntax10"); }
+    .kd {  /* Keyword.Declaration */ @include dynamic-color($dark-code-background-color, "syntax10"); }
+    .kn {  /* Keyword.Namespace */ @include dynamic-color($dark-code-background-color, "syntax08"); }
+    .kp {  /* Keyword.Pseudo */ @include dynamic-color($dark-code-background-color, "syntax10"); }
+    .kr {  /* Keyword.Reserved */ @include dynamic-color($dark-code-background-color, "syntax10"); }
+    .kt {  /* Keyword.Type */ @include dynamic-color($dark-code-background-color, "syntax06"); }
+    .ld {  /* Literal.Date */ @include dynamic-color($dark-code-background-color, "syntax07"); }
+    .m {  /* Literal.Number */ @include dynamic-color($dark-code-background-color, "syntax05"); }
+    .s {  /* Literal.String */ @include dynamic-color($dark-code-background-color, "syntax07"); }
+    .na { /* Name.Attribute */ @include dynamic-color($dark-code-background-color, "syntax09"); }
+    .nb {  /* Name.Builtin */ @include dynamic-color($dark-code-background-color, "syntax02"); }
+    .nc {  /* Name.Class */ @include dynamic-color($dark-code-background-color, "syntax06"); }
+    .no {  /* Name.Constant */ @include dynamic-color($dark-code-background-color, "syntax04"); }
+    .nd {  /* Name.Decorator */ @include dynamic-color($dark-code-background-color, "syntax08"); }
+    .ni {  /* Name.Entity */ @include dynamic-color($dark-code-background-color, "syntax02"); }
+    .ne {  /* Name.Exception */ @include dynamic-color($dark-code-background-color, "syntax04"); }
+    .nf {  /* Name.Function */ @include dynamic-color($dark-code-background-color, "syntax09"); }
+    .nl {  /* Name.Label */ @include dynamic-color($dark-code-background-color, "syntax02"); }
+    .nn {  /* Name.Namespace */ @include dynamic-color($dark-code-background-color, "syntax06"); }
+    .nx {  /* Name.Other */ @include dynamic-color($dark-code-background-color, "syntax09"); }
+    .py {  /* Name.Property */ @include dynamic-color($dark-code-background-color, "syntax02"); }
+    .nt {  /* Name.Tag */ @include dynamic-color($dark-code-background-color, "syntax08"); }
+    .nv {  /* Name.Variable */ @include dynamic-color($dark-code-background-color, "syntax04"); }
+    .ow {  /* Operator.Word */ @include dynamic-color($dark-code-background-color, "syntax08"); }
+    .w {   /* Text.Whitespace */ @include dynamic-color($dark-code-background-color, "syntax02"); }
+    .mf {  /* Literal.Number.Float */ @include dynamic-color($dark-code-background-color, "syntax05"); }
+    .mh {  /* Literal.Number.Hex */ @include dynamic-color($dark-code-background-color, "syntax05"); }
+    .mi {  /* Literal.Number.Integer */ @include dynamic-color($dark-code-background-color, "syntax05"); }
+    .mo {  /* Literal.Number.Oct */ @include dynamic-color($dark-code-background-color, "syntax05"); }
+    .sb {  /* Literal.String.Backtick */ @include dynamic-color($dark-code-background-color, "syntax07"); }
+    .sc {  /* Literal.String.Char */ @include dynamic-color($dark-code-background-color, "syntax02"); }
+    .sd {  /* Literal.String.Doc */ @include dynamic-color($dark-code-background-color, "syntax01"); }
+    .s2 {  /* Literal.String.Double */ @include dynamic-color($dark-code-background-color, "syntax07"); }
+    .se {  /* Literal.String.Escape */ @include dynamic-color($dark-code-background-color, "syntax05"); }
+    .sh {  /* Literal.String.Heredoc */ @include dynamic-color($dark-code-background-color, "syntax07"); }
+    .si {  /* Literal.String.Interpol */ @include dynamic-color($dark-code-background-color, "syntax05"); }
+    .sx {  /* Literal.String.Other */ @include dynamic-color($dark-code-background-color, "syntax07"); }
+    .sr {  /* Literal.String.Regex */ @include dynamic-color($dark-code-background-color, "syntax07"); }
+    .s1 {  /* Literal.String.Single */ @include dynamic-color($dark-code-background-color, "syntax07"); }
+    .ss {  /* Literal.String.Symbol */ @include dynamic-color($dark-code-background-color, "syntax07"); }
+    .bp {  /* Name.Builtin.Pseudo */ @include dynamic-color($dark-code-background-color, "syntax02"); }
+    .vc {  /* Name.Variable.Class */ @include dynamic-color($dark-code-background-color, "syntax04"); }
+    .vg {  /* Name.Variable.Global */ @include dynamic-color($dark-code-background-color, "syntax04"); }
+    .vi {  /* Name.Variable.Instance */ @include dynamic-color($dark-code-background-color, "syntax04"); }
+    .il {  /* Literal.Number.Integer.Long */ @include dynamic-color($dark-code-background-color, "syntax05"); }
   }
 }

@@ -2,10 +2,271 @@
 layout: default
 tags:
 - yolo
-- syntax-highlighting
+- single-page
+- jekyll
 ---
 
-## Code
+Yolo is laser focused on static single page sites, and while anyone can Yolo, it's purposely built for writers,
+techies, and picture taking folk.
+
+##### Goals for Yolo
+
+###### 1. Live the best single page life.
+
+Pamper single page sites like we pamper our pets.
+
+###### 2. Strive for simplicity.
+
+No dependencies other than [jekyll](https://jekyllrb.com/).
+
+###### 3. Make it customizable
+
+Bring your own [colors](#colors) and [fonts](#typography).
+
+---
+
+## Table of Contents
+
+* [Getting Started](#getting-started): _How to Yolo_
+* [Themes](#themes): _Yolo your way with themes_
+* [Elements](#elements): _What Yolo brings to the party_
+* [Containers](#containers): _Yolo in a container_
+* [Kudos](#thanks): _I get by with a little help from my friends_
+* [License](#license): _MIT_
+
+---
+
+## Getting Started
+
+You need [jekyll](https://jekyllrb.com/).
+
+{% include code.html info="Get Yolo" %}
+```bash
+git clone https://github.com/corbtastik/yolo.git
+cd yolo
+jekyll build
+jekyll serve
+```
+
+[↑↑↑](#){: .back-to-top}
+
+---
+
+## Themes
+
+Yolo doesn't implement an "according to hoyle" [gem based theme](https://jekyllrb.com/docs/themes/), but the colors and fonts can be customized as outlined below.
+
+> __Note:__ "Theming" for Yolo is accomplished by providing a custom scss file in `_sass/yolo/themes`. Each theme must specify "light" and "dark" values to support switching between the two modes.
+
+* Copy one of the themes in `_sass/yolo/themes` to a new scss file.
+* Provide color values for each variable.
+* Enable by setting `site.style` in `_config.yml`.
+
+##### 1. Create a new scss file for your theme.
+
+{% include code.html info="Create theme scss" %}
+```bash
+# Use whatever NAME you like
+make theme NAME=domino
+```
+
+##### 2. Customize the theme values.
+
+__Color properties:__
+
+| Light/Dark property       | Description                           |
+|---------------------------|---------------------------------------|
+| `*-primary-color`         | Background color                      |
+| `*-secondary-color`       | Foreground color, text, tables        |
+| `*-accent-color`          | Header color                          |
+| `*-code-background-color` | Background color for code snippets    |
+| `*-code-color`            | Text color for inline code & snippets |
+| `*-link-color`            | Hyperlink color                       |
+
+__Font family properties:__
+
+> __Note:__ Add font-family in `_data/fonts.yml` to customize what fonts are available.
+
+| Font property      | Description                        |
+|--------------------|------------------------------------|
+| `family-primary`   | Family for body and most text      |
+| `family-secondary` | Family for headers and accent text |
+| `family-monospace` | Family for code                    |
+
+__Theme file:__
+
+{% include code.html info="_sass/yolo/themes/_domino.scss" %}
+```scss
+$light-primary-color: #fff;
+$light-secondary-color: #000;
+$light-accent-color: #757575;
+$light-code-background-color: #424242;
+$light-code-color: #757575;
+$light-link-color: #2196f3;
+
+$dark-primary-color: #000;
+$dark-secondary-color: #fff;
+$dark-accent-color: #bdbdbd;
+$dark-code-background-color: #424242;
+$dark-code-color: #fff;
+$dark-link-color: #2196f3;
+
+$family-primary: "Open Sans", sans-serif;
+$family-secondary: "Raleway", sans-serif;
+$family-monospace: "Inconsolata", monospace;
+```
+
+##### 3. Enable by setting `site.style` in `_config.yml`.
+
+{% include code.html info="Jekyll _config.yml" %}
+```yaml
+# Site customizations
+style: domino
+```
+
+That's it, run Yolo and adjust colors to your liking.
+
+[↑↑↑](#){: .back-to-top}
+
+---
+
+## Elements
+
+* [Colors](#colors)
+* [Typography](#typography)
+* [Headers](#headers)
+* [Paragraph Text](#paragraph-text)
+* [Blockquotes](#blockquotes)
+* [Inline Text](#inline-text)
+* [Code](#code)
+* [Lists](#lists)
+* [Tables](#tables)
+* [Markdown Images](#markdown-images)
+* [Thumbnail Images](#thumbnail-images)
+* [Square Images](#square-images)
+* [Circle Images](#circle-images)
+* [4-by-3 Images](#4-by-3-images)
+* [3-by-4 Images](#3-by-4-images)
+* [16-by-9 Images](#16-by-9-images)
+* [9-by-16 Images](#9-by-16-images)
+* [Image Grid](#image-grid)
+* [Image Lightbox](#image-lightbox)
+* [Videos](#videos)
+* [Prezos](#prezos)
+
+[↑↑↑](#){: .back-to-top}
+
+---
+
+### Colors
+
+Yolo's colors can be customized as outlined in [Yolo Themes](#themes).
+
+{% include flexbox.html columns="1" fill="primary-color" %}
+{% include flexbox.html columns="1" fill="secondary-color" %}
+{% include flexbox.html columns="1" fill="accent-color" %}
+{% include flexbox.html columns="1" fill="code-background-color" %}
+{% include flexbox.html columns="1" fill="code-color" %}
+{% include flexbox.html columns="1" fill="link-color" %}
+
+[↑↑↑](#){: .back-to-top}
+
+---
+
+### Typography
+
+Yolo's fonts can be customized as outlined in [Yolo Themes](#themes).
+
+{% include typography.html %}
+
+[↑↑↑](#){: .back-to-top}
+
+---
+
+### Headers
+
+H1 is reserved for the site header and not shown here.
+
+## H2 Heading
+
+### H3 Heading
+
+#### H4 Heading
+
+##### H5 Heading
+
+###### H6 Heading
+
+[↑↑↑](#){: .back-to-top}
+
+---
+
+### Paragraph text
+
+[Baseball](https://en.wikipedia.org/wiki/Baseball) is a bat-and-ball sport played between two teams of nine players each, taking turns batting and fielding. The game is in play when a player on the fielding team, called the pitcher, throws a ball that a player on the batting team tries to hit with a bat. The objective of the offensive team (batting team) is to hit the ball into the field of play, away from the other team's players, allowing its players to run the bases, having them advance counter-clockwise around four bases to score what are called "runs". - copied from [Wikipedia](https://en.wikipedia.org/wiki/Baseball).
+
+[↑↑↑](#){: .back-to-top}
+
+---
+
+### Blockquotes
+
+#### Single Blockquote
+
+> In the United States and Canada, professional Major League Baseball (MLB) teams are divided into the National League (NL) and American League (AL), each with three divisions: East, West, and Central. The MLB champion is determined by playoffs that culminate in the World Series.
+
+#### Two paragraph Blockquote
+
+> A baseball game is played between two teams,
+> each usually composed of nine players, that take turns playing offense (batting and baserunning)
+> and defense (pitching and fielding).
+>
+> The game is played on a field whose primary boundaries, the foul lines,
+> extend forward from home plate at 45-degree angles.
+> The 90-degree area within the foul lines is referred to as fair territory;
+> the 270-degree area outside them is foul territory.
+
+#### Nested Blockquote
+
+> The number of players on a baseball roster, or squad, varies by league and by the level of organized play. A Major League Baseball (MLB) team has a roster of 25 players with specific roles. A typical roster features the following players:
+>
+> > Eight position players: the catcher, four infielders, and three outfielders—all of whom play on a regular basis.
+>
+> Most baseball leagues worldwide have the DH rule.
+
+#### Blockquote w/ markdown
+
+> #### Baseball Statistics
+>
+> 1. __At Bats:__ Plate appearances, excluding walks and hit by pitches.
+> 2. __Hits:__ Number of times a base is reached safely.
+> 3. __Runs:__ Number of times runners reach home safely.
+> 4. __RBIs:__ Number of runners who scored due to a batter's action.
+> 5. __Home Runs:__ Hits where the batter touches all four bases safely.
+> 6. __Batting Average:__ Hits divided by at bats.
+
+[↑↑↑](#){: .back-to-top}
+
+---
+
+### Inline Text
+
+- Just plain text
+- **Bold text**
+- *Italicize text*
+- <abbr title="Abbreviation">Abbr (abbreviation)</abbr>
+- <cite>Citation</cite>
+- <del>Deleted</del>
+- <ins>Underlined</ins>
+- Superscript <sup>text</sup>
+- Subscript <sub>text</sub>
+- Inline code `SELECT * FROM players;`
+
+[↑↑↑](#){: .back-to-top}
+
+---
+
+### Code
 
 > __Tip:__ Click header to copy a snippet.
 
@@ -30,15 +291,16 @@ tags:
   "state": "Minnesota",
   "zipcode": "55403"
 }, {
-  "id": 1002,
-  "first_name": "Garfield",
-  "last_name": "Arbuckle",
-  "email": "garfield@nick.com",
-  "phone": "765-867-9305",
-  "address": "711 Maple Street",
-  "city": "Muncie",
-  "state": "Indiana",
-  "zipcode": "47302"
+  "id": 3,
+  "first_name": "Levon",
+  "last_name": "Laurent",
+  "email": "llaurent2@etsy.com",
+  "phone": "212-535-6056",
+  "schools": "Zhejiang Normal University",
+  "address": "93 Lyons Court",
+  "city": "New York City",
+  "state": "New York",
+  "zipcode": "10125"
 }]
 ```
 
@@ -306,6 +568,527 @@ spec:
     app/name: minio
     app/component: backend
   type: LoadBalancer
+```
+
+[↑↑↑](#){: .back-to-top}
+
+---
+
+### Lists
+
+#### Unordered
+
+* Arlington Stadium
+* Rangers Ballpark in Arlington
+* Ebbets Field
+
+* Boston Red Stockings
+    * Boston Red Caps
+        * Boston Beaneaters
+            * Boston Red Sox
+
+#### Ordered
+
+1. Babe Ruth
+2. Willie Mays
+3. Dale Murphy
+4. Mookie Wilson
+
+[↑↑↑](#){: .back-to-top}
+
+---
+
+### Tables
+
+#### Basic
+
+> __See:__ [Github markdown tables](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/organizing-information-with-tables)
+
+| Player        | BA            | HR           |
+| ------------- | ------------- | ------------ |
+| <a href="https://www.baseball-reference.com/players/a/aaronha01.shtml" target="_blank">Hank Aaron</a> | .305 | 755 |
+| <a href="https://www.baseball-reference.com/players/r/ruthba01.shtml" target="_blank">Babe Ruth</a> | .342 | 714 |
+| <a href="https://www.baseball-reference.com/players/w/wilsomo01.shtml" target="_blank">Mookie Wilson</a> | .274 | 67 |
+
+#### Formatted content
+
+| Command | Description |
+| --- | --- |
+| `git rm` | <del>Remove</del> a file from the index |
+| `git status` | List all *new or modified* files |
+| `git diff` | Show file differences that **haven't been** staged |
+
+#### Cell alignment
+
+| Left-aligned | Center-aligned | Right-aligned |
+| :---         |     :---:      |          ---: |
+| `git status` | `git status`   | `git status`  |
+| `git diff`   | `git diff`     | `git diff`    |
+
+[↑↑↑](#){: .back-to-top}
+
+---
+
+### Markdown Images
+
+> Images added via markdown receive styling from the `<img>` element, they're not styled with `yolo` classes.
+
+{% include code.html info="Markdown images" %}
+{% raw %}
+```markdown
+![Moonie Moonpie]({{ site.images }}/site/moonpie.png "Sweet Moonpie")
+![BIG yawn Bucky]({{ site.images }}/site/bucky.png "Sleepy Bucky")
+```
+{% endraw %}
+
+![Moonie Moonpie]({{ site.images }}/site/moonpie.png "Sweet Moonpie")
+
+![BIG yawn Bucky]({{ site.images }}/site/bucky.png "Sleepy Bucky")
+
+[↑↑↑](#){: .back-to-top}
+
+---
+
+### Thumbnail Images
+
+Thumbnails are 128px x 128px and use the `thumbnail` class.
+
+{% include code.html info="Thumbnail images" %}
+{% raw %}
+```html
+{%
+  include image/image.html
+  classes="thumbnail"
+  src="yolo/big-face-bucky.png"
+%}
+```
+{% endraw %}
+
+> __Tip:__ Click to enlarge.
+
+{%
+include image/image.html
+classes="thumbnail"
+src="yolo/big-face-bucky.png"
+%}
+
+[↑↑↑](#){: .back-to-top}
+
+---
+
+### Square Images
+
+Square images can be added with the following classes: `is-16`, `is-24`, `is-32`, `is-48`, `is-64`, `is-96`, `is-128`,
+`is-192`, `is-256`, `is-384`, `is-448`, `is-512`, `is-640`.
+
+{% include code.html info="Square images" %}
+{% raw %}
+```html
+{%
+  include image/image.html
+  classes="image is-256"
+  src="yolo/drive-in.png"
+%}
+```
+{% endraw %}
+
+> __Tip:__ Click to enlarge.
+
+{%
+include image/image.html
+classes="image is-256"
+src="yolo/drive-in.png"
+%}
+
+[↑↑↑](#){: .back-to-top}
+
+---
+
+### Circle Images
+
+Circle images can be added with the following classes: `is-circle-16`, `is-circle-24`, `is-circle-32`,
+`is-circle-48`, `is-circle-64`, `is-circle-96`, `is-circle-128`, `is-circle-192`, `is-circle-256`, `is-circle-384`,
+`is-circle-448`, `is-circle-512`, `is-circle-640`.
+
+{% include code.html info="Circle images" %}
+{% raw %}
+```html
+{%
+  include image/image.html
+  classes="is-circle-256"
+  src="yolo/big-face-bucky.png"
+%}
+```
+{% endraw %}
+
+> __Tip:__ Click to enlarge.
+
+{%
+include image/image.html
+classes="is-circle-256"
+src="yolo/big-face-bucky.png"
+%}
+
+[↑↑↑](#){: .back-to-top}
+
+---
+
+### 4-by-3 Images
+
+4 by 3 aspect ratio images can be added with the following classes: `is-100-by-75`, `is-120-by-90`, `is-128-by-96`,
+`is-160-by-120`, `is-200-by-150`, `is-240-by-180`, `is-256-by-192`, `is-320-by-240`, `is-400-by-300`,
+`is-480-by-360`, `is-512-by-384`, `is-640-by-480`.
+
+{% include code.html info="4-by-3 images" %}
+{% raw %}
+```html
+{%
+  include image/image.html
+  classes="image is-256-by-192"
+  src="yolo/bluebonnet.png"
+%}
+```
+{% endraw %}
+
+> __Tip:__ Click to enlarge.
+
+{%
+include image/image.html
+classes="image is-256-by-192"
+src="yolo/bluebonnet.png"
+%}
+
+[↑↑↑](#){: .back-to-top}
+
+---
+
+### 3-by-4 Images
+
+3 by 4 aspect ratio images can be added with the following classes: `is-75-by-100`, `is-90-by-120`, `is-96-by-128`,
+`is-120-by-160`, `is-150-by-200`, `is-180-by-240`, `is-192-by-256`, `is-240-by-320`, `is-300-by-400`,
+`is-360-by-480`, `is-384-by-512`, `is-480-by-640`.
+
+{% include code.html info="3-by-4 images" %}
+{% raw %}
+```html
+{%
+  include image/image.html
+  classes="image is-240-by-320"
+  src="yolo/bluebonnet.png"
+%}
+```
+{% endraw %}
+
+> __Tip:__ Click to enlarge.
+
+{%
+include image/image.html
+classes="image is-240-by-320"
+src="yolo/bluebonnet.png"
+%}
+
+[↑↑↑](#){: .back-to-top}
+
+---
+
+### 16-by-9 Images
+
+16 by 9 aspect ratio images can be added with the following classes: `is-112-by-63`, `is-128-by-72`, `is-144-by-81`,
+`is-160-by-90`, `is-192-by-108`, `is-224-by-126`, `is-256-by-144`, `is-320-by-180`, `is-400-by-225`, `is-480-by-270`,
+`is-512-by-288`, `is-640-by-360`.
+
+{% include code.html info="16-by-9 images" %}
+{% raw %}
+```html
+{%
+  include image/image.html
+  classes="image is-256-by-144"
+  src="yolo/bluebonnet.png"
+%}
+```
+{% endraw %}
+
+> __Tip:__ Click to enlarge.
+
+{%
+include image/image.html
+classes="image is-256-by-144"
+src="yolo/bluebonnet.png"
+%}
+
+[↑↑↑](#){: .back-to-top}
+
+---
+
+### 9-by-16 Images
+
+9 by 16 aspect ratio images can be added with the following classes: `is-63-by-112`, `is-72-by-128`, `is-81-by-144`,
+`is-90-by-160`, `is-108-by-192`, `is-126-by-224`, `is-144-by-256`, `is-180-by-320`, `is-225-by-400`, `is-270-by-480`,
+`is-288-by-512`, `is-360-by-640`.
+
+{% include code.html info="9-by-16 images" %}
+{% raw %}
+```html
+{%
+  include image/image.html
+  classes="image is-225-by-400"
+  src="yolo/bluebonnet.png"
+%}
+```
+{% endraw %}
+
+> __Tip:__ Click to enlarge.
+
+{%
+include image/image.html
+classes="image is-225-by-400"
+src="yolo/bluebonnet.png"
+%}
+
+[↑↑↑](#){: .back-to-top}
+
+---
+
+### Image Grid
+
+The Image Grid is similar to the [Lightbox](#image-lightbox), except it shows images inline, instead of in a modal.
+
+> __Tip:__ Click an image to enlarge, click again to minimize.
+
+* Add image data into `_data/ig-images.yml`.
+* Include `image/grid.html` on your page.
+
+#### Default data file
+
+The `_data/ig-images.yml` file is the default data file, just replace with your data to display images.
+
+{% include code.html info="Images from: _data/ig-images.yml" %}
+{% raw %}
+```html
+{% include "image/grid.html" %}
+```
+{% endraw %}
+
+{% include image/grid.html %}
+
+#### Custom data file
+
+A custom data file can be added to create an Image Grid.
+
+* Create a new file in `_data/` and prefix name with `ig-`.
+* Use the data file name (w/o `.yml` ext) as the value to `ig-data`.
+* Customize the number of columns by setting `ig-columns`.
+
+{% include code.html info="Images from: _data/ig-pets.yml" %}
+{% raw %}
+```html
+{% include image/grid.html ig-data="ig-pets" ig-columns="2" %}
+```
+{% endraw %}
+
+{% include image/grid.html ig-data="ig-pets" ig-columns="2" %}
+
+[↑↑↑](#){: .back-to-top}
+
+---
+
+### Image Lightbox
+
+Yolo includes a Lightbox to showcase pics.
+
+> __Tip:__ Click an image to open Lightbox, click left or right, key `<` or `>` to move.
+
+* Add image data into `_data/lb-images.yml`.
+* Include `image/lightbox.html` on your page.
+
+#### Default data file
+
+The `_data/lb-images.yml` file is the default Lightbox data file, just replace with your data to display images.
+
+{% include code.html info="Images from: _data/lb-images.yml" %}
+{% raw %}
+```html
+{% include image/lightbox.html %}
+```
+{% endraw %}
+
+{% include image/lightbox.html %}
+
+#### Custom data file
+
+A custom data file can be added to create a Lightbox.
+
+* Create a new file in `_data` and prefix name with `lb-`.
+* Use the data file name (w/o `.yml` ext) as the value to `lb-data`.
+
+{% include code.html info="Images from: _data/lb-marfa.yml" %}
+{% raw %}
+```html
+{% include image/lightbox.html lb-data="lb-marfa" %}
+```
+{% endraw %}
+
+{% include image/lightbox.html lb-data="lb-marfa" %}
+
+[↑↑↑](#){: .back-to-top}
+
+---
+
+### Videos
+
+{% include video.html %}
+
+[↑↑↑](#){: .back-to-top}
+
+---
+
+### Prezos
+
+Yolo has basic support for embedding Google Slides.
+
+* Enter prezo data into `_data/prezos.yml`
+* Include `prezo.html` on your page.
+* Set `title` value to match prezo in `_data/prezos.yml`.
+* By default, prezos are displayed with a `is-16-by-9` aspect ratio.
+* Optionally set `aspect-ratio` to `is-16-by-9`, `is-4-by-3`, or `is-1-by-1`.
+
+#### Sample 1
+
+{% include code.html info="16-by-9 aspect ratio (default)" %}
+{% raw %}
+```html
+{% include prezo.html title="blinged-macmini" %}
+```
+{% endraw %}
+
+> Aspect ratio `is-16-by-9`.
+
+{% include prezo.html title="blinged-macmini" %}
+
+#### Sample 2
+
+{% include code.html info="4-by-3 aspect ratio" %}
+{% raw %}
+```html
+{% include prezo.html title="one-awesome-prezo" aspect-ratio="is-4-by-3" %}
+```
+{% endraw %}
+
+> Aspect ratio `is-4-by-3`.
+
+{% include prezo.html title="one-awesome-prezo" aspect-ratio="is-4-by-3" %}
+
+#### Sample 3
+
+{% include code.html info="1-by-1 aspect ratio" %}
+{% raw %}
+```html
+{% include prezo.html title="yolo-on" aspect-ratio="is-1-by-1" %}
+```
+{% endraw %}
+
+> Aspect ratio `is-1-by-1`.
+
+{% include prezo.html title="yolo-on" aspect-ratio="is-1-by-1" %}
+
+[↑↑↑](#){: .back-to-top}
+
+---
+
+## Containers
+
+This section "contains" information on building and running your single page Yolo site as a container.
+
+> The project `Makefile` includes targets for building a container with [podman](https://podman.io/).
+
+### Tools
+
+* [Podman](https://podman.io/)
+* Make (_optional but recommended_)
+
+<ins>Two</ins> container images are built using the Makefile. The <ins>first</ins> is `yoloc` which is a "builder" image, to "build" your site, and the <ins>second</ins> is `yolo`, to "run" your site.
+
+### yoloc
+
+Yoloc is a "builder" image based on [UBI](https://developers.redhat.com/products/rhel/ubi), with gcc, gcc-c++, make, ruby, ruby-devel, and jekyll packages installed. Essentially, it's the latest version of jekyll in a container.
+
+> Yoloc isn't a runtime image, meaning it doesn't run a server process, it's a build time image, with the tooling needed to run `jekyll build`. The output `_site` is passed to the `yolo` container, where it's served by [apache httpd](https://httpd.apache.org/).
+
+### yolo
+
+The Yolo image is a runtime image based on [UBI](https://developers.redhat.com/products/rhel/ubi), with [apache httpd](https://httpd.apache.org/) installed. Your yolo `_site` is configured in `/var/www/html` where it's served by apache on port `9696`.
+
+### Building and running
+
+> `make pod` - builds and runs your site as a container
+
+```bash
+make pod
+```
+
+* Creates the `yoloc` image.
+* Uses `yoloc` to build your `_site`.
+* Creates the `yolo` image to run your site.
+* Starts a yolo container from the `yolo` image, on [`http://localhost:9696`](http://localhost:9696).
+
+[↑↑↑](#){: .back-to-top}
+
+---
+
+## Thanks
+
+I'm a developer by trade with roots in C and Java. I once read something like - _"write code every day"_ and although I haven't, I like to try. I enjoy frontend development but consider myself a hack. I get by, but get by with a little help from my friends.
+
+> Many thanks for these resources and the folks behind them.
+
+### [w3schools](https://www.w3schools.com/)
+
+When I want an unvarnished take on HTML, CSS, and Javascript I go to [w3schools](https://www.w3schools.com/). That and every time I google for frontend related stuff [w3schools](https://www.w3schools.com/) comes up. Great reference material, some of which guided the [Yolo Lightbox](#image-lightbox) implementation.
+
+> Sanks [w3schools](https://www.w3schools.com/) people.
+
+### [Solo](http://chibicode.github.io/solo/)
+
+Years ago I googled _"minimal jekyll theme"_, which led me to [Solo](http://chibicode.github.io/solo/). It was exactly what I was looking for, simple to get started and customize. Not to mention there's a quirky beauty in its look. Over the years I've used Solo for single page "technical" docs.
+
+Yolo is cut from the cloth of "[Solo](http://chibicode.github.io/solo)" which was previously developed by [Shu Uesugi](https://github.com/chibicode).
+
+> Well done [Shu Uesugi](https://github.com/chibicode), sanks amigo.
+
+### [Bulma](https://bulma.io/)
+
+_"The modern CSS framework that just works"_, true dat. Bulma is not included as a library, but Yolo contains slightly modified scss from select areas, namely flexbox, typography and image styling. For my tastes Bulma is the best css framework, they be awesome yo.
+
+> Sanks [Bulma](https://bulma.io/) people.
+
+[↑↑↑](#){: .back-to-top}
+
+---
+
+## License
+
+```text
+MIT License (MIT)
+
+Copyright (c) 2022 Corbs
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
 ```
 
 [↑↑↑](#){: .back-to-top}

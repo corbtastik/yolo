@@ -47,7 +47,33 @@ $syntax06: #01d62f !default;
 $syntax07: #40f5f5 !default;
 $syntax08: #304ffe !default;
 $syntax09: #9167fb !default;
-$syntax10: #ff4081 !default;
+$syntax10: #fe4a85 !default;
+
+$syntax-on-dark: (
+  "syntax01": #a0a0a0,
+  "syntax02": #e4e8eb,
+  "syntax03": #dfe2e5,
+  "syntax04": #ffab00,
+  "syntax05": #e040fb,
+  "syntax06": #00e676,
+  "syntax07": #4ffbfb,
+  "syntax08": #609dfc,
+  "syntax09": #bd9ef8,
+  "syntax10": #ff4081
+);
+
+$syntax-on-light: (
+  "syntax01": #8f8f8f,
+  "syntax02": #011842,
+  "syntax03": #393939,
+  "syntax04": #eb6302,
+  "syntax05": #c500e3,
+  "syntax06": #01c72b,
+  "syntax07": #019e9e,
+  "syntax08": #1b3df8,
+  "syntax09": #5923ca,
+  "syntax10": #db0c4d
+);
 // ----------------------------------------------------------------------------
 // Layouts and responsiveness
 // ----------------------------------------------------------------------------
