@@ -58,10 +58,6 @@ Yolo doesn't implement an "according to hoyle" [gem based theme](https://jekyllr
 
 > __Note:__ "Theming" for Yolo is accomplished by providing a custom scss file in `_sass/yolo/themes`. Each theme must specify "light" and "dark" values to support switching between the two modes.
 
-* Copy one of the themes in `_sass/yolo/themes` to a new scss file.
-* Provide color values for each variable.
-* Enable by setting `site.style` in `_config.yml`.
-
 ##### 1. Create a new scss file for your theme.
 
 {% include code.html info="Create theme scss" %}

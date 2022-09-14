@@ -3,11 +3,11 @@ title: Yolo on my friend
 tag_text: Yolo
 description: Loveable single page sites
 # Site customizations
-style: yinyang
+style: corbs
 logo: assets/images/site/logo.png
 images: https://storage.googleapis.com/corbs-foto/yolo
 # Build settings
-version: v1.15
+version: v1.16
 markdown: kramdown
 exclude:
   - "README.md"

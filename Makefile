@@ -3,7 +3,7 @@
 # =============================================================================
 CONTAINER_REGISTRY=quay.io/corbsmartin
 IMAGE_NAME=yolo
-IMAGE_TAG=v1.15
+IMAGE_TAG=v1.16
 OUTPUT_DIR=.yolo-build
 JEKYLL_PORT=4000
 # -----------------------------------------------------------------------------

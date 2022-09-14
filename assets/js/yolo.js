@@ -13,17 +13,11 @@
                 console.log(text);
             }
         }
-        static info(text) {
-            Console.println("INFO: " + text);
-        }
-        static warning(text) {
-            Console.println("WARN: " + text);
-        }
-        static debug(text) {
-            Console.println("DEBUG: " + text);
+        static log(text) {
+            Console.println("YOLO LOG " + new Date().toUTCString() + ": " + text);
         }
         static error(text) {
-            Console.println("ERROR: " + text);
+            Console.println("YOLO ERR " + new Date().toUTCString() + ": " + text);
         }
         static enabled() {
             return true;
@@ -39,7 +33,7 @@
         }
 
         static create(name) {
-            Console.println("ImageGrid.create for name=" + name);
+            Console.log("ImageGrid.create for name=" + name);
             return new ImageGrid(name);
         }
 
@@ -57,7 +51,7 @@
     }
 
     ImageGrid.prototype.openImage = function(imageId) {
-        Console.println("ImageGrid.openImage: " + this.name);
+        Console.log("ImageGrid.openImage: " + this.name);
         // Hide the grid
         ImageGrid.dom(this.name).style.display = "none";
         // Show the ig-target, hide all images, show the one passed in.
@@ -78,7 +72,7 @@
     };
 
     ImageGrid.prototype.closeImage = function() {
-        Console.println("ImageGrid.closeImage: " + this.name);
+        Console.log("ImageGrid.closeImage: " + this.name);
         // Hide images and ig-target
         const imageTarget = ImageGrid.domTarget(this.name);
         const images = imageTarget.getElementsByTagName('img');
@@ -104,7 +98,7 @@
         }
 
         static create(name) {
-            Console.println("Lightbox.create for name=" + name);
+            Console.log("Lightbox.create for name=" + name);
             return new Lightbox(name);
         }
 
@@ -127,24 +121,24 @@
     };
 
     Lightbox.prototype.openModal = function() {
-        Console.println("Lightbox.openModal: " + this.name);
+        Console.log("Lightbox.openModal: " + this.name);
         Lightbox.dom(this.name).style.display = "block";
         this.isOpen = true;
     };
 
     Lightbox.prototype.closeModal = function() {
-        Console.println("Lightbox.closeModal: " + this.name);
+        Console.log("Lightbox.closeModal: " + this.name);
         Lightbox.dom(this.name).style.display = "none";
         this.isOpen = false;
     };
 
     Lightbox.prototype.plusSlides = function(n) {
-        Console.println("Lightbox.plusSlides: name=" + this.name + " slide=" + n);
+        Console.log("Lightbox.plusSlides: name=" + this.name + " slide=" + n);
         this.showSlides(this.slideIndex += n);
     };
 
     Lightbox.prototype.currentSlide = function(n) {
-        Console.println("Lightbox.currentSlide: name=" + this.name + " slide=" + n);
+        Console.log("Lightbox.currentSlide: name=" + this.name + " slide=" + n);
         this.showSlides(this.slideIndex = n);
     };
 
@@ -161,7 +155,7 @@
         for(i = 0; i < slides.length; i++) {
             slides[i].style.display = "none";
         }
-        Console.println("Lightbox.showSlides: name=" + this.name + " slide=" + this.slideIndex);
+        Console.log("Lightbox.showSlides: name=" + this.name + " slide=" + this.slideIndex);
         slides[this.slideIndex].style.display = "block";
         caption.innerHTML = slides[this.slideIndex].children[0].alt;
     };
@@ -182,6 +176,8 @@
             yolo.copySnippet();
             // Initialize dark / light theme toggle
             yolo.themeToggle();
+            // Initialize sidebar
+            yolo.initSidebar();
             return yolo;
         }
         static themes() {
@@ -189,11 +185,28 @@
         }
     }
 
+    Yolo.prototype.initSidebar = function() {
+        const sidebar = document.getElementById('sidebar');
+        if(sidebar !== null) {
+            Console.log("Sidebar is enabled, adding event listener.");
+            sidebar.addEventListener('click', function() {
+                const sidebarWidth = sidebar.style.width;
+                if(sidebarWidth === "50%") {
+                    sidebar.style.width = "1rem";
+                } else {
+                    sidebar.style.width = "50%";
+                }
+            }, false);
+        } else {
+            Console.log("Sidebar is disabled.");
+        }
+    };
+
     Yolo.prototype.scaleImages = function() {
         const images = document.querySelectorAll('.image');
         images.forEach((image, index) => {
             image.addEventListener("click", () => {
-                Console.println("Yolo.scaleImage to max: " + image.src);
+                Console.log("Yolo.scaleImage to max: " + image.src);
                 image.classList.toggle("max");
             });
         });
@@ -208,8 +221,7 @@
             const code = blocks[index].innerText;
             element.addEventListener('click', () => {
                 window.navigator.clipboard.writeText(code).then(r => {
-                    console.log("writeText then callback");
-                    Console.println("Yolo.copySnippet to clipboard.");
+                    Console.log("Yolo.copySnippet to clipboard.");
                 });
                 element.classList.add('copied');
                 const infoText = element.innerHTML.trim();
@@ -225,24 +237,24 @@
     Yolo.prototype.lightbox = function(name) {
         // Return lightbox instance if it exists
         if(this.lightboxes.has(name)) {
-            Console.println("Yolo.lightbox returning existing Lightbox: name=" + name);
+            Console.log("Yolo.lightbox returning existing Lightbox: name=" + name);
             return this.lightboxes.get(name);
         }
         // Protection against lightbox craziness
         if(this.lightboxes.size > 20) {
-            Console.println("Yolo.lightbox max instances " + this.lightboxes.size + " reached.");
+            Console.log("Yolo.lightbox max instances " + this.lightboxes.size + " reached.");
             throw "Error: Yolo lightbox limit, perhaps start another single page site?";
         }
         // Create new lightbox instance, setup event listener for prev, next links
         const lightbox = Lightbox.create(name);
-        Console.println("Yolo.lightbox, created new instance named: " + name);
+        Console.log("Yolo.lightbox, created new instance named: " + name);
         window.document.addEventListener("keydown", event => {
             if(lightbox.isOpen) {
                 if (event.key === "ArrowLeft" || (event.key === "<" && event.shiftKey)) {
-                    Console.println("Yolo.lightbox keydown ArrowLeft clicked.");
+                    Console.log("Yolo.lightbox keydown ArrowLeft clicked.");
                     lightbox.plusSlides(-1);
                 } else if (event.key === "ArrowRight" || (event.key === ">" && event.shiftKey)) {
-                    Console.println("Yolo.lightbox keydown ArrowRight clicked.");
+                    Console.log("Yolo.lightbox keydown ArrowRight clicked.");
                     lightbox.plusSlides(1);
                 }
             }
@@ -258,12 +270,12 @@
         }
         // Protect against image-grid craziness
         if(this.imageGrids.size > 20) {
-            Console.println("Yolo.imageGrid max instances " + this.imageGrids.size + " reached.");
+            Console.error("Yolo.imageGrid max instances " + this.imageGrids.size + " reached.");
             throw "Error: Yolo imageGrid limit, perhaps start another single page site?";
         }
         // Create new image-grid instance
         const imageGrid = ImageGrid.create(name);
-        Console.println("Yolo.imageGrid, created new instance named: " + name);
+        Console.log("Yolo.imageGrid, created new instance named: " + name);
         this.imageGrids.set(name, imageGrid);
         return this.imageGrids.get(name);
     };
@@ -271,20 +283,26 @@
     Yolo.prototype.themeToggle = function() {
         const yoloSite = document.getElementById("yolo-site");
         const themeDot = document.getElementById("theme-dot");
+
+        if(yoloSite === null || themeDot === null) {
+            Console.error("Yolo Site and/or Theme Dot is null, perhaps verify <body id=\"yolo-site\">");
+            return;
+        }
+
         themeDot.addEventListener("click", function() {
             const activeTheme = localStorage.getItem("active-theme");
             if(activeTheme === "dark-theme") {
-                Console.debug("Switching active-theme to light-theme");
+                Console.log("Switching active-theme to light-theme");
                 yoloSite.classList.remove("dark-theme");
                 localStorage.setItem("active-theme", "light-theme");
                 yoloSite.classList.add("light-theme");
             } else if(activeTheme === "light-theme") {
-                Console.debug("Switching active-theme to dark-theme");
+                Console.log("Switching active-theme to dark-theme");
                 yoloSite.classList.remove("light-theme");
                 localStorage.setItem("active-theme", "dark-theme");
                 yoloSite.classList.add("dark-theme");
             } else if(activeTheme == null) {
-                Console.warning("The active-theme is null, setting to light-theme.");
+                Console.log("The active-theme is null, setting to light-theme.");
                 localStorage.setItem("active-theme", "light-theme");
                 yoloSite.classList.add("light-theme");
             } else {
@@ -297,7 +315,7 @@
 
         window.addEventListener("load", function() {
             const activeTheme = localStorage.getItem("active-theme");
-            Console.info("Window load, active-theme: " + activeTheme);
+            Console.log("Window load, active-theme: " + activeTheme);
             if(activeTheme === "dark-theme") {
                 localStorage.setItem("active-theme", "dark-theme");
                 yoloSite.classList.add("dark-theme");
@@ -305,7 +323,7 @@
                 localStorage.setItem("active-theme", "light-theme");
                 yoloSite.classList.add("light-theme");
             }
-            Console.info("Window load, transitioning to opacity 1");
+            Console.log("Window load, transitioning to opacity 1");
             yoloSite.style.opacity = "1";
         });
     }
