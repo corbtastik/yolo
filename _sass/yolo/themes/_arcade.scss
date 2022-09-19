@@ -1,22 +1,21 @@
 // ----------------------------------------------------------------------------
 // arcade theme
 // ----------------------------------------------------------------------------
-$light-primary-color: #fbffff;
-$light-secondary-color: #093fc4;
+$light-primary-color: #fbfcfc;
+$light-secondary-color: #FF1989;
 $light-accent-color: #4113a6;
-$light-code-background-color: #000928;
-$light-code-color: #00e676;
-$light-link-color: #f7346d;
+$light-code-background-color: #fff;
+$light-code-color: #01a6c8;
+$light-link-color: #02c162;
 
 $dark-primary-color: #000928;
 $dark-secondary-color: #00e676;
-$dark-accent-color: #596ef8;
+$dark-accent-color: #697df8;
 $dark-code-background-color: #00080f;
 $dark-code-color: #65e9fc;
 $dark-link-color: #ff31b9;
 
 // fonts
-$family-primary: "Roboto Mono", sans-serif;
-$family-secondary: "Raleway", sans-serif;
+$family-primary: "Inconsolata", sans-serif;
+$family-secondary: "Montserrat", sans-serif;
 $family-monospace: "Roboto Mono", monospace;
-$family-code: "Roboto Mono", monospace;

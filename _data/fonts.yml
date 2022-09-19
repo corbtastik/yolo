@@ -1,9 +1,15 @@
+# Sans-serif fonts
 - name: "Open Sans"
   weights: "400,400i,700,700i"
 - name: "Raleway"
   weights: "400,400i,700,700i"
 - name: "Montserrat"
   weights: "400,400i,700,700i"
+- name: "Poppins"
+  weights: "200,200i,400,400i,700,700i"
+- name: "Source Sans Pro"
+  weights: "300,300i,400,400i,700,700i"
+# Monospace fonts
 - name: "Inconsolata"
   weights: "400,400i,700,700i"
 - name: "Source Code Pro"
@@ -12,3 +18,5 @@
   weights: "400,400i,600,600i"
 - name: "Roboto Mono"
   weights: "300,300i,400,400i,700,700i"
+- name: "Azeret Mono"
+  weights: "200,200i,400,400i,700,700i"

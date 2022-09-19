@@ -1,22 +1,23 @@
 // ----------------------------------------------------------------------------
 // corbs theme
 // ----------------------------------------------------------------------------
+// light mode colors
 $light-primary-color: #e9f4fe;
 $light-secondary-color: #32439e;
 $light-accent-color: #0091ea;
-$light-code-background-color: #000928;
-$light-code-color: #17ba59;
 $light-link-color: #ef0c81;
+$light-code-background-color: #f8faff;
+$light-code-color: #0bbf52;
 
+// dark mode colors
 $dark-primary-color: #061039;
 $dark-secondary-color: #ff31b9;
 $dark-accent-color: #00b0ff;
+$dark-link-color: #65e9fc;
 $dark-code-background-color: #000928;
 $dark-code-color: #30ea7d;
-$dark-link-color: #65e9fc;
 
 // fonts
-$family-primary: "Roboto Mono", sans-serif;
+$family-primary: "Roboto Mono", monospace;
 $family-secondary: "Raleway", sans-serif;
 $family-monospace: "Red Hat Mono", monospace;
-$family-code: "Red Hat Mono", monospace;

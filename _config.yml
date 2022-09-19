@@ -1,20 +1,20 @@
 # Site settings
-title: Yolo, a loveable single page theme
+title: Yolo on my friend
 tag_text: Yolo
-description: A loveable single page theme
+description: Loveable single page sites
 # Site customizations
 style: corbs
 logo: assets/images/site/logo.png
 images: https://storage.googleapis.com/corbs-foto/yolo
 # Build settings
-version: v1.15
+version: v1.16
 markdown: kramdown
 exclude:
   - "README.md"
   - "BACKLOG.md"
   - "Makefile"
   - "Containerfile"
-  - ".site-build"
+  - ".yolo-build"
   - "src/"
   - "docs/"
 sass:

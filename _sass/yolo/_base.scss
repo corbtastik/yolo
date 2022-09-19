@@ -24,7 +24,6 @@ a:hover, a:focus {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: $family-secondary, sans-serif;
   margin: 0 0 0.5rem 0;
   line-height: 1;
   text-rendering: optimizeLegibility;
@@ -69,6 +68,15 @@ h6 {
 p, ul, ol, dl, table, pre, blockquote {
   margin-top: 0;
   margin-bottom: 1rem;
+}
+
+pre, code {
+  font-family: $family-monospace;
+  overflow-x: auto;
+}
+
+pre {
+  font-size: 0.8rem;
 }
 
 ul, ol {
