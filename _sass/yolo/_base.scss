@@ -72,6 +72,7 @@ p, ul, ol, dl, table, pre, blockquote {
 
 pre, code {
   font-family: $family-monospace;
+  overflow-x: auto;
 }
 
 pre {
