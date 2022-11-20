@@ -8,11 +8,11 @@ RUN jekyll build
 # -------------------------------------------------------------------------------------------------
 # Yolo runtime image based on apache, that serves the build site on port 9696.
 # -------------------------------------------------------------------------------------------------
-FROM registry.redhat.io/ubi8/ubi
+FROM registry.access.redhat.com/ubi8
 LABEL maintainer="corbs"
 ENV PORT 9696
-RUN yum update --disablerepo=* --enablerepo=ubi-8-appstream --enablerepo=ubi-8-baseos -y && \
-    yum install --disablerepo=* --enablerepo=ubi-8-appstream --enablerepo=ubi-8-baseos httpd -y && \
+RUN yum update --disablerepo=* --enablerepo=ubi-8-appstream-rpms --enablerepo=ubi-8-baseos-rpms -y && \
+    yum install --disablerepo=* --enablerepo=ubi-8-appstream-rpms --enablerepo=ubi-8-baseos-rpms httpd -y && \
     yum clean all
 RUN sed -ri -e "/^Listen 80/c\Listen ${PORT}" /etc/httpd/conf/httpd.conf && \
     chown -R apache:apache /etc/httpd/logs/ && \
