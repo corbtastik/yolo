@@ -20,3 +20,10 @@ yolo: yoloc
 pod: yolo
 	@podman rm -f yolo
 	@podman run --name yolo -d -p 9696:9696 $(CONTAINER_REGISTRY)/$(IMAGE_NAME):latest
+# -----------------------------------------------------------------------------
+# Targets for working with single page samples in ./src/samples
+# -----------------------------------------------------------------------------
+helm-starter:
+	@mv ./index.md ./index.md.backup
+	@cp ./src/samples/helm-starter/index.md ./
+	@mv ./_config.yml ./_config.yml.backup

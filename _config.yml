@@ -17,5 +17,7 @@ exclude:
   - ".yolo-build"
   - "src/"
   - "docs/"
+  - "index.md.backup"
+  - "_config.yml.backup"
 sass:
   style: compressed
