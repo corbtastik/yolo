@@ -22,3 +22,15 @@ yolo: yoloc
 yolo-pod: yolo
 	@podman rm -f yolo
 	@podman run --name yolo -d -p 9696:9696 $(CONTAINER_REGISTRY)/$(IMAGE_NAME):latest
+# -----------------------------------------------------------------------------
+# Targets for working with single page samples in ./src/samples
+# -----------------------------------------------------------------------------
+backup:
+	@echo "Backing up index.md and _config.yml"
+	@mv ./index.md ./index.md.backup
+	@mv ./_config.yml ./_config.yml.backup
+
+restore:
+	@echo "Restoring index.md and _config.yml"
+	@mv ./index.md.backup ./index.md
+	@mv ./_config.yml.backup ./_config.yml

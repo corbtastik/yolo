@@ -1,3 +1,24 @@
+{% assign image_data = include.image-data | default: "images" %}
+{% assign images = site.data[image_data] %}
+{% assign sourceImage = nil %}
+
+{% for image in images %}
+{% if image.name == include.name %}
+{% assign sourceImage = image %}
+{% break %}
+{% endif %}
+{% endfor %}
+
+{% if sourceImage != nil %}
+{% if include.description %}
+<figure class="{{ include.classes }}">
+  <img class="image {{ include.classes }}" alt="{{ include.description }}"  src="{{ sourceImage.src }}">
+  <figcaption>{{ include.description }}</figcaption>
+</figure>
+{% else %}
+<img class="image {{ include.classes }}" alt="{{ sourceImage.name }}" src="{{ sourceImage.src }}">
+{% endif %}
+{% else %}
 {% if include.description %}
 <figure>
   <img class="image {{ include.classes }}" alt="{{ include.description }}"  src="{{ site.images }}/{{ include.src }}">
@@ -5,4 +26,5 @@
 </figure>
 {% else %}
 <img class="image {{ include.classes }}" alt="{{ include.src }}" src="{{ site.images }}/{{ include.src }}">
+{% endif %}
 {% endif %}

@@ -1,3 +1,7 @@
 <div class="code-header">
-    {{ include.info }}
+    {% if include.label %}
+    {{ include.label }}
+    {% else %}
+    <span>Copy</span>
+    {% endif %}
 </div>

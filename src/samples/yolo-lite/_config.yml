@@ -3,7 +3,7 @@ title: Yolo, a loveable single page theme
 tag_text: Yolo
 description: A loveable single page theme
 # Site customizations
-style: none
+style: solo
 logo: assets/images/site/logo.png
 images: assets/images
 # Build settings
@@ -14,8 +14,10 @@ exclude:
   - "BACKLOG.md"
   - "Makefile"
   - "Containerfile"
-  - ".site-build"
+  - ".yolo-build"
   - "src/"
   - "docs/"
+  - "index.md.backup"
+  - "_config.yml.backup"
 sass:
   style: compressed
