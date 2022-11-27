@@ -1,36 +1,9 @@
-{% if site.sidebar %}
 <div id="sidebar" class="sidebar">
     <div class="inner">
         <nav id="sidebar-nav">
             <ul id="sidebar-nav-links">
-                <li><a href="./"><span>{{ site.tag_text }}</span></a></li>
-                <li><a href="./#usage"><span>Usage</span></a></li>
-                <li><a href="./#themes"><span>Themes</span></a></li>
-                <li><a href="./#yolo-elements"><span>Yolo Elements</span></a></li>
-                <li><a href="./#colors"><span>&nbsp;&nbsp;Colors</span></a></li>
-                <li><a href="./#typography"><span>&nbsp;&nbsp;Typography</span></a></li>
-                <li><a href="./#flexbox"><span>&nbsp;&nbsp;Flexbox</span></a></li>
-                <li><a href="./#headers"><span>&nbsp;&nbsp;Headers</span></a></li>
-                <li><a href="./#paragraph-text"><span>&nbsp;&nbsp;Paragraph Text</span></a></li>
-                <li><a href="./#blockquotes"><span>&nbsp;&nbsp;Blockquotes</span></a></li>
-                <li><a href="./#inline-text"><span>&nbsp;&nbsp;Inline Text</span></a></li>
-                <li><a href="./#code"><span>&nbsp;&nbsp;Code</span></a></li>
-                <li><a href="./#lists"><span>&nbsp;&nbsp;Lists</span></a></li>
-                <li><a href="./#tables"><span>&nbsp;&nbsp;Tables</span></a></li>
-                <li><a href="./#markdown-images"><span>&nbsp;&nbsp;Markdown Images</span></a></li>
-                <li><a href="./#thumbnail-images"><span>&nbsp;&nbsp;Thumbnail Images</span></a></li>
-                <li><a href="./#square-images"><span>&nbsp;&nbsp;Square Images</span></a></li>
-                <li><a href="./#circle-images"><span>&nbsp;&nbsp;Circle Images</span></a></li>
-                <li><a href="./#4-by-3-aspect-images"><span>&nbsp;&nbsp;4-by-3 Aspect Images</span></a></li>
-                <li><a href="./#3-by-4-aspect-images"><span>&nbsp;&nbsp;3-by-4 Aspect Images</span></a></li>
-                <li><a href="./#16-by-9-aspect-images"><span>&nbsp;&nbsp;16-by-9 Aspect Images</span></a></li>
-                <li><a href="./#9-by-16-aspect-images"><span>&nbsp;&nbsp;9-by-16 Aspect Images</span></a></li>
-                <li><a href="./#image-lightbox"><span>&nbsp;&nbsp;Image Lightbox</span></a></li>
-                <li><a href="./#videos"><span>&nbsp;&nbsp;Videos</span></a></li>
-                <li><a href="./#prezos"><span>&nbsp;&nbsp;Prezos</span></a></li>
-                <li><a href="./#thanks"><span>Thanks</span></a></li>
+                {% include sidebar-entries.html collection=site.data.sidebar.entries %}
             </ul>
         </nav>
     </div>
 </div>
-{% endif %}

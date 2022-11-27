@@ -6,6 +6,7 @@ description: Loveable single page sites
 style: corbs
 logo: assets/images/site/logo.png
 images: https://storage.googleapis.com/corbs-foto/yolo
+sidebar: true
 # Build settings
 version: v1.16
 markdown: kramdown

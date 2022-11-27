@@ -187,14 +187,20 @@
 
     Yolo.prototype.initSidebar = function() {
         const sidebar = document.getElementById('sidebar');
+        const sidebarNav = document.getElementById('sidebar-nav');
+        // const sidebarTab = document.getElementById('sidebar-tab');
         if(sidebar !== null) {
             Console.log("Sidebar is enabled, adding event listener.");
             sidebar.addEventListener('click', function() {
                 const sidebarWidth = sidebar.style.width;
                 if(sidebarWidth === "50%") {
-                    sidebar.style.width = "1rem";
+                    sidebar.style.width = "0.5rem";
+                    sidebar.classList.remove("open")
+                    sidebarNav.style.opacity = "0";
                 } else {
                     sidebar.style.width = "50%";
+                    sidebar.classList.add("open")
+                    sidebarNav.style.opacity = "1";
                 }
             }, false);
         } else {

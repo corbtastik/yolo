@@ -9,6 +9,8 @@ tags:
 Yolo is laser focused on static single page sites, and while anyone can Yolo, it's purposely built for writers,
 techies, and picture taking folk.
 
+> _I don't always use single-page sites but when I do, I yolo._
+
 ##### Goals for Yolo
 
 ###### 1. Live the best single page life.

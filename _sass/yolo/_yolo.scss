@@ -18,11 +18,6 @@
   color: text-color($bg, $syntax);
 }
 
-#yolo-site {
-  opacity: 0;
-  transition: opacity 3s;
-}
-
 // page header
 .yolo-header {
   .logo {
@@ -159,49 +154,6 @@
   }
   to {
     transform: rotate(359deg);
-  }
-}
-
-.sidebar {
-  position: fixed;
-  z-index: 50;
-  float: left;
-  top: 0;
-  left: 0;
-  width: 1rem;
-  height: 100%;
-  overflow-x: hidden;
-  transition: 0.5s;
-  border-style: solid;
-  border-right-width: .5rem;
-  border-left-width: 0;
-  border-top-width: 0;
-  border-bottom-width: 0;
-  &:is(:hover) {
-    cursor: pointer;
-  }
-
-  > .inner {
-    width: 100%;
-    height: 100%;
-    padding: 1.5em .5em;
-    overflow-x: hidden;
-
-    nav {
-      ul {
-        line-height: 1;
-        list-style-type: none;
-        margin-bottom: 1.5rem;
-        //padding-bottom: 0.5rem;
-        padding: 1rem;
-        li {
-          margin-bottom: 1rem;
-        }
-        li:before {
-          content: "- ";
-        }
-      }
-    }
   }
 }
 
@@ -351,8 +303,11 @@
   }
 
   .sidebar {
-    background-color: $light-primary-color;
-    border-left-color: $light-accent-color;
+    background-color: $light-secondary-color;
+    border-right-color: $light-accent-color;
+    &:is(.open) {
+      background-color: $light-code-background-color;
+    }
   }
 
   .primary-color {
@@ -595,8 +550,11 @@
   }
 
   .sidebar {
-    background-color: $dark-primary-color;
-    border-right-color: $dark-secondary-color;
+    background-color: $dark-secondary-color;
+    border-right-color: $dark-accent-color;
+    &:is(.open) {
+      background-color: $dark-code-background-color;
+    }
   }
 
   .primary-color {

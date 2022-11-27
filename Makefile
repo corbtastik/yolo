@@ -34,3 +34,14 @@ restore:
 	@echo "Restoring index.md and _config.yml"
 	@mv ./index.md.backup ./index.md
 	@mv ./_config.yml.backup ./_config.yml
+
+open-yolo-lite: backup
+	@echo "Opening site: ./src/samples/yolo-lite"
+	@mv ./src/samples/yolo-lite/index.md ./index.md
+	@mv ./src/samples/yolo-lite/_config.yml ./_config.yml
+
+save-yolo-lite:
+	@echo "Saving site: ./src/samples/yolo-lite"
+	@mv ./index.md ./src/samples/yolo-lite/index.md
+	@mv ./_config.yml ./src/samples/yolo-lite/_config.yml
+	@$(call restore)
