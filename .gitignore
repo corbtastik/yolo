@@ -5,3 +5,4 @@ _site
 .yolo-build
 .DS_Store
 .wip
+.stash

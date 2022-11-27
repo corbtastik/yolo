@@ -9,22 +9,6 @@
   }
 }
 
-@mixin rtl {
-  @if $rtl {
-    @content;
-  }
-}
-
-@mixin ltr-property($property, $spacing, $right: true) {
-  $normal: if($right, "right", "left");
-  $opposite: if($right, "left", "right");
-  @if $rtl {
-    #{$property}-#{$opposite}: $spacing;
-  }  @else {
-    #{$property}-#{$normal}: $spacing;
-  }
-}
-
 @mixin from($device) {
   @media screen and (min-width: $device) {
     @content;

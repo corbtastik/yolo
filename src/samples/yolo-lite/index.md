@@ -85,7 +85,7 @@ Your new yolo "lite" sample page.
 
 > __Tip:__ Click header to copy a snippet.
 
-{% include code.html info="Bash script" %}
+{% include code.html label="Bash script" %}
 ```bash
 #!/bin/bash
 while true; do

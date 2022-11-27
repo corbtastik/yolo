@@ -13,4 +13,13 @@
 @import "yolo/syntax";
 @import "yolo/images";
 @import "yolo/lightbox";
+@import "yolo/sidebar";
 @import "yolo/yolo";
+
+#yolo-site {
+  opacity: 0;
+  transition: opacity 2s;
+{% if site.sidebar %}
+  margin-left: 1rem;
+{% endif %}
+}

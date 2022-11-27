@@ -9,6 +9,8 @@ tags:
 Yolo is laser focused on static single page sites, and while anyone can Yolo, it's purposely built for writers,
 techies, and picture taking folk.
 
+> _I don't always use single-page sites but when I do, I yolo._
+
 ##### Goals for Yolo
 
 ###### 1. Live the best single page life.
@@ -40,7 +42,7 @@ Bring your own [colors](#colors) and [fonts](#typography).
 
 You need [jekyll](https://jekyllrb.com/).
 
-{% include code.html info="Get Yolo" %}
+{% include code.html label="Get Yolo" %}
 ```bash
 git clone https://github.com/corbtastik/yolo.git
 cd yolo
@@ -60,7 +62,7 @@ Yolo doesn't implement an "according to hoyle" [gem based theme](https://jekyllr
 
 ##### 1. Create a new scss file for your theme.
 
-{% include code.html info="Create theme scss" %}
+{% include code.html label="Create theme scss" %}
 ```bash
 # Use whatever NAME you like
 make theme NAME=domino
@@ -91,7 +93,7 @@ __Font family properties:__
 
 __Theme file:__
 
-{% include code.html info="_sass/yolo/themes/_domino.scss" %}
+{% include code.html label="_sass/yolo/themes/_domino.scss" %}
 ```scss
 $light-primary-color: #fff;
 $light-secondary-color: #000;
@@ -114,7 +116,7 @@ $family-monospace: "Inconsolata", monospace;
 
 ##### 3. Enable by setting `site.style` in `_config.yml`.
 
-{% include code.html info="Jekyll _config.yml" %}
+{% include code.html label="Jekyll _config.yml" %}
 ```yaml
 # Site customizations
 style: domino
@@ -266,7 +268,7 @@ H1 is reserved for the site header and not shown here.
 
 > __Tip:__ Click header to copy a snippet.
 
-{% include code.html info="JSON array" %}
+{% include code.html label="JSON array" %}
 ```json
 [{
   "id": 1000,
@@ -301,7 +303,7 @@ H1 is reserved for the site header and not shown here.
 ```
 
 
-{% include code.html info="Bash snippet" %}
+{% include code.html label="Bash snippet" %}
 ```bash
 #!/bin/bash
 function say_howdy() {
@@ -319,7 +321,7 @@ say_howdy $1
 
 [↑↑↑](#){: .back-to-top}
 
-{% include code.html info="C snippet" %}
+{% include code.html label="C snippet" %}
 ```c
 #include <stdio.h>
 // Say Howdy
@@ -335,7 +337,7 @@ int main(int argc, char **argv) {
 
 [↑↑↑](#){: .back-to-top}
 
-{% include code.html info="C++ snippet" %}
+{% include code.html label="C++ snippet" %}
 ```c++
 #include <iostream>
 using namespace std;
@@ -352,7 +354,7 @@ int main(int argc, char** argv) {
 
 [↑↑↑](#){: .back-to-top}
 
-{% include code.html info="Dart snippet" %}
+{% include code.html label="Dart snippet" %}
 ```dart
 import 'dart:io';
 // Say Howdy
@@ -369,7 +371,7 @@ void main(List<String> args) {
 
 [↑↑↑](#){: .back-to-top}
 
-{% include code.html info="Go snippet" %}
+{% include code.html label="Go snippet" %}
 ```go
 package main
 
@@ -391,7 +393,7 @@ func main () {
 
 [↑↑↑](#){: .back-to-top}
 
-{% include code.html info="HTML snippet" %}
+{% include code.html label="HTML snippet" %}
 ```html
 <!DOCTYPE html>
 <html lang="en">
@@ -407,7 +409,7 @@ func main () {
 
 [↑↑↑](#){: .back-to-top}
 
-{% include code.html info="JSON snippet" %}
+{% include code.html label="JSON snippet" %}
 ```json
 {
   "apiVersion": "v1",
@@ -436,7 +438,7 @@ func main () {
 
 [↑↑↑](#){: .back-to-top}
 
-{% include code.html info="Java snippet" %}
+{% include code.html label="Java snippet" %}
 ```java
 // Say Howdy
 public class Howdy {
@@ -452,7 +454,7 @@ public class Howdy {
 
 [↑↑↑](#){: .back-to-top}
 
-{% include code.html info="JavaScript snippet" %}
+{% include code.html label="JavaScript snippet" %}
 ```javascript
 function sayHowdy(name) {
     console.log("Howdy " + name + "!");
@@ -469,7 +471,7 @@ sayHowdy(process.argv[2]);
 
 [↑↑↑](#){: .back-to-top}
 
-{% include code.html info="Kotlin snippet" %}
+{% include code.html label="Kotlin snippet" %}
 ```kotlin
 // Say Howdy
 fun main(args: Array<String>): Int {
@@ -484,7 +486,7 @@ fun main(args: Array<String>): Int {
 
 [↑↑↑](#){: .back-to-top}
 
-{% include code.html info="Markdown snippet" %}
+{% include code.html label="Markdown snippet" %}
 ```markdown
 # Markdown
 
@@ -497,7 +499,7 @@ fun main(args: Array<String>): Int {
 
 [↑↑↑](#){: .back-to-top}
 
-{% include code.html info="Python snippet" %}
+{% include code.html label="Python snippet" %}
 ```python
 import sys
 
@@ -514,7 +516,7 @@ sayHowdy(sys.argv[1])
 
 [↑↑↑](#){: .back-to-top}
 
-{% include code.html info="SCSS snippet" %}
+{% include code.html label="SCSS snippet" %}
 ```scss
 .light-theme {
   color: $light-secondary-color;
@@ -534,7 +536,7 @@ sayHowdy(sys.argv[1])
 
 [↑↑↑](#){: .back-to-top}
 
-{% include code.html info="SQL snippet" %}
+{% include code.html label="SQL snippet" %}
 ```sql
 -- Select orders for micky
 SELECT *
@@ -546,7 +548,7 @@ AND   price <= 10000
 
 [↑↑↑](#){: .back-to-top}
 
-{% include code.html info="YAML snippet" %}
+{% include code.html label="YAML snippet" %}
 ```yaml
 apiVersion: v1
 kind: Service
@@ -629,7 +631,7 @@ spec:
 
 > Images added via markdown receive styling from the `<img>` element, they're not styled with `yolo` classes.
 
-{% include code.html info="Markdown images" %}
+{% include code.html label="Markdown images" %}
 {% raw %}
 ```markdown
 ![Moonie Moonpie]({{ site.images }}/site/moonpie.png "Sweet Moonpie")
@@ -645,11 +647,42 @@ spec:
 
 ---
 
+### Custom Images
+
+You can add custom images anywhere in the project root, and then add a reference into `_data/images.yml` which enables use of `include image/image.html` on your page.
+
+For example:
+
+{% include code.html label="Custom images" %}
+{% raw %}
+```html
+{%
+  include image/image.html
+  classes="center is-384"
+  name="bucky-and-nacho"
+  description="Bucky and Nacho at the park."
+%}
+```
+{% endraw %}
+
+> __Tip:__ Click to enlarge.
+
+{%
+  include image/image.html
+  classes="center is-384"
+  name="bucky-and-nacho"
+  description="Bucky and Nacho at the park."
+%}
+
+[↑↑↑](#){: .back-to-top}
+
+---
+
 ### Thumbnail Images
 
 Thumbnails are 128px x 128px and use the `thumbnail` class.
 
-{% include code.html info="Thumbnail images" %}
+{% include code.html label="Thumbnail images" %}
 {% raw %}
 ```html
 {%
@@ -677,7 +710,7 @@ src="yolo/big-face-bucky.png"
 Square images can be added with the following classes: `is-16`, `is-24`, `is-32`, `is-48`, `is-64`, `is-96`, `is-128`,
 `is-192`, `is-256`, `is-384`, `is-448`, `is-512`, `is-640`.
 
-{% include code.html info="Square images" %}
+{% include code.html label="Square images" %}
 {% raw %}
 ```html
 {%
@@ -706,7 +739,7 @@ Circle images can be added with the following classes: `is-circle-16`, `is-circl
 `is-circle-48`, `is-circle-64`, `is-circle-96`, `is-circle-128`, `is-circle-192`, `is-circle-256`, `is-circle-384`,
 `is-circle-448`, `is-circle-512`, `is-circle-640`.
 
-{% include code.html info="Circle images" %}
+{% include code.html label="Circle images" %}
 {% raw %}
 ```html
 {%
@@ -735,7 +768,7 @@ src="yolo/big-face-bucky.png"
 `is-160-by-120`, `is-200-by-150`, `is-240-by-180`, `is-256-by-192`, `is-320-by-240`, `is-400-by-300`,
 `is-480-by-360`, `is-512-by-384`, `is-640-by-480`.
 
-{% include code.html info="4-by-3 images" %}
+{% include code.html label="4-by-3 images" %}
 {% raw %}
 ```html
 {%
@@ -764,7 +797,7 @@ src="yolo/bluebonnet.png"
 `is-120-by-160`, `is-150-by-200`, `is-180-by-240`, `is-192-by-256`, `is-240-by-320`, `is-300-by-400`,
 `is-360-by-480`, `is-384-by-512`, `is-480-by-640`.
 
-{% include code.html info="3-by-4 images" %}
+{% include code.html label="3-by-4 images" %}
 {% raw %}
 ```html
 {%
@@ -793,7 +826,7 @@ src="yolo/bluebonnet.png"
 `is-160-by-90`, `is-192-by-108`, `is-224-by-126`, `is-256-by-144`, `is-320-by-180`, `is-400-by-225`, `is-480-by-270`,
 `is-512-by-288`, `is-640-by-360`.
 
-{% include code.html info="16-by-9 images" %}
+{% include code.html label="16-by-9 images" %}
 {% raw %}
 ```html
 {%
@@ -822,7 +855,7 @@ src="yolo/bluebonnet.png"
 `is-90-by-160`, `is-108-by-192`, `is-126-by-224`, `is-144-by-256`, `is-180-by-320`, `is-225-by-400`, `is-270-by-480`,
 `is-288-by-512`, `is-360-by-640`.
 
-{% include code.html info="9-by-16 images" %}
+{% include code.html label="9-by-16 images" %}
 {% raw %}
 ```html
 {%
@@ -858,7 +891,7 @@ The Image Grid is similar to the [Lightbox](#image-lightbox), except it shows im
 
 The `_data/ig-images.yml` file is the default data file, just replace with your data to display images.
 
-{% include code.html info="Images from: _data/ig-images.yml" %}
+{% include code.html label="Images from: _data/ig-images.yml" %}
 {% raw %}
 ```html
 {% include "image/grid.html" %}
@@ -875,7 +908,7 @@ A custom data file can be added to create an Image Grid.
 * Use the data file name (w/o `.yml` ext) as the value to `ig-data`.
 * Customize the number of columns by setting `ig-columns`.
 
-{% include code.html info="Images from: _data/ig-pets.yml" %}
+{% include code.html label="Images from: _data/ig-pets.yml" %}
 {% raw %}
 ```html
 {% include image/grid.html ig-data="ig-pets" ig-columns="2" %}
@@ -901,7 +934,7 @@ Yolo includes a Lightbox to showcase pics.
 
 The `_data/lb-images.yml` file is the default Lightbox data file, just replace with your data to display images.
 
-{% include code.html info="Images from: _data/lb-images.yml" %}
+{% include code.html label="Images from: _data/lb-images.yml" %}
 {% raw %}
 ```html
 {% include image/lightbox.html %}
@@ -917,7 +950,7 @@ A custom data file can be added to create a Lightbox.
 * Create a new file in `_data` and prefix name with `lb-`.
 * Use the data file name (w/o `.yml` ext) as the value to `lb-data`.
 
-{% include code.html info="Images from: _data/lb-marfa.yml" %}
+{% include code.html label="Images from: _data/lb-marfa.yml" %}
 {% raw %}
 ```html
 {% include image/lightbox.html lb-data="lb-marfa" %}
@@ -950,7 +983,7 @@ Yolo has basic support for embedding Google Slides.
 
 #### Sample 1
 
-{% include code.html info="16-by-9 aspect ratio (default)" %}
+{% include code.html label="16-by-9 aspect ratio (default)" %}
 {% raw %}
 ```html
 {% include prezo.html title="blinged-macmini" %}
@@ -963,7 +996,7 @@ Yolo has basic support for embedding Google Slides.
 
 #### Sample 2
 
-{% include code.html info="4-by-3 aspect ratio" %}
+{% include code.html label="4-by-3 aspect ratio" %}
 {% raw %}
 ```html
 {% include prezo.html title="one-awesome-prezo" aspect-ratio="is-4-by-3" %}
@@ -976,7 +1009,7 @@ Yolo has basic support for embedding Google Slides.
 
 #### Sample 3
 
-{% include code.html info="1-by-1 aspect ratio" %}
+{% include code.html label="1-by-1 aspect ratio" %}
 {% raw %}
 ```html
 {% include prezo.html title="yolo-on" aspect-ratio="is-1-by-1" %}

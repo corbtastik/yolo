@@ -1,0 +1,43 @@
+.sidebar {
+  position: fixed;
+  z-index: 50;
+  float: left;
+  top: 0;
+  left: 0;
+  width: 0.5rem;
+  height: 100%;
+  overflow-x: hidden;
+  transition: 0.5s;
+  border-style: solid;
+  border-right-width: .5rem;
+  border-left-width: 0;
+  border-top-width: 0;
+  border-bottom-width: 0;
+  &:is(:hover) {
+    cursor: pointer;
+  }
+  &:is(.open) {
+    border-right-width: .1rem;
+  }
+  > .inner {
+    width: 100%;
+    height: 100%;
+    padding: 1.5em .5em;
+    overflow-x: hidden;
+    transition: 0.2s;
+    nav {
+      ul {
+        line-height: 1;
+        list-style-type: none;
+        margin-bottom: 0;
+        padding: 1rem 1rem 0;
+        li {
+          margin-bottom: 1rem;
+        }
+        li:before {
+          content: "- ";
+        }
+      }
+    }
+  }
+}
