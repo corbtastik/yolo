@@ -128,34 +128,6 @@ That's it, run Yolo and adjust colors to your liking.
 
 ---
 
-## Elements
-
-* [Colors](#colors)
-* [Typography](#typography)
-* [Headers](#headers)
-* [Paragraph Text](#paragraph-text)
-* [Blockquotes](#blockquotes)
-* [Inline Text](#inline-text)
-* [Code](#code)
-* [Lists](#lists)
-* [Tables](#tables)
-* [Markdown Images](#markdown-images)
-* [Thumbnail Images](#thumbnail-images)
-* [Square Images](#square-images)
-* [Circle Images](#circle-images)
-* [4-by-3 Images](#4-by-3-images)
-* [3-by-4 Images](#3-by-4-images)
-* [16-by-9 Images](#16-by-9-images)
-* [9-by-16 Images](#9-by-16-images)
-* [Image Grid](#image-grid)
-* [Image Lightbox](#image-lightbox)
-* [Videos](#videos)
-* [Prezos](#prezos)
-
-[↑↑↑](#){: .back-to-top}
-
----
-
 ### Colors
 
 Yolo's colors can be customized as outlined in [Yolo Themes](#themes).
@@ -176,6 +148,23 @@ Yolo's colors can be customized as outlined in [Yolo Themes](#themes).
 Yolo's fonts can be customized as outlined in [Yolo Themes](#themes).
 
 {% include typography.html %}
+
+[↑↑↑](#){: .back-to-top}
+
+---
+
+## Elements
+
+* [Headers](#headers)
+* [Paragraph Text](#paragraph-text)
+* [Blockquotes](#blockquotes)
+* [Inline Text](#inline-text)
+* [Code](#code)
+* [Lists](#lists)
+* [Tables](#tables)
+* [Markdown Images](#markdown-images)
+* [Videos](#videos)
+* [Prezos](#prezos)
 
 [↑↑↑](#){: .back-to-top}
 
@@ -647,34 +636,19 @@ spec:
 
 ---
 
-### Custom Images
+## Styled Images
 
-You can add custom images anywhere in the project root, and then add a reference into `_data/images.yml` which enables use of `include image/image.html` on your page.
+You can use yolo Styled Images in addition to markdown images if you're looking for a little eye-candy. Yolo includes support for common aspect ratios, an [image-grid](#image-grid) and [image-lightbox](#image-lightbox).
 
-For example:
-
-{% include code.html label="Custom images" %}
-{% raw %}
-```html
-{%
-  include image/image.html
-  classes="center is-384"
-  name="bucky-and-nacho"
-  description="Bucky and Nacho at the park."
-%}
-```
-{% endraw %}
-
-> __Tip:__ Click to enlarge.
-
-{%
-  include image/image.html
-  classes="center is-384"
-  name="bucky-and-nacho"
-  description="Bucky and Nacho at the park."
-%}
-
-[↑↑↑](#){: .back-to-top}
+* [Thumbnail Images](#thumbnail-images)
+* [Square Images](#square-images)
+* [Circle Images](#circle-images)
+* [4-by-3 Images](#4-by-3-images)
+* [3-by-4 Images](#3-by-4-images)
+* [16-by-9 Images](#16-by-9-images)
+* [9-by-16 Images](#9-by-16-images)
+* [Image Grid](#image-grid)
+* [Image Lightbox](#image-lightbox)
 
 ---
 
@@ -1035,30 +1009,54 @@ This section "contains" information on building and running your single page Yol
 * [Podman](https://podman.io/)
 * Make (_optional but recommended_)
 
-<ins>Two</ins> container images are built using the Makefile. The <ins>first</ins> is `yoloc` which is a "builder" image, to "build" your site, and the <ins>second</ins> is `yolo`, to "run" your site.
+<ins>Two</ins> container images are built using the Makefile.
+
+* The <ins>first</ins> is `yoloc` which is a "builder" image, to "build" your site.
+* The <ins>second</ins> is `yolo`, to "run" your site.
 
 ### yoloc
 
-Yoloc is a "builder" image based on [UBI](https://developers.redhat.com/products/rhel/ubi), with gcc, gcc-c++, make, ruby, ruby-devel, and jekyll packages installed. Essentially, it's the latest version of jekyll in a container.
+Yoloc is a "builder" image based on [ubi8-minimal](https://developers.redhat.com/products/rhel/ubi), with the following packages added:
 
-> Yoloc isn't a runtime image, meaning it doesn't run a server process, it's a build time image, with the tooling needed to run `jekyll build`. The output `_site` is passed to the `yolo` container, where it's served by [apache httpd](https://httpd.apache.org/).
+* gcc
+* gcc-c++
+* make
+* ruby
+* ruby-devel
+* jekyll
+
+> Yoloc isn't a runtime image, meaning it doesn't run a server process, it's a build time image, with the tooling needed to run `jekyll build`. The output `_site` will be passed to the `yolo` container, where it's served by [apache httpd](https://httpd.apache.org/).
 
 ### yolo
 
-The Yolo image is a runtime image based on [UBI](https://developers.redhat.com/products/rhel/ubi), with [apache httpd](https://httpd.apache.org/) installed. Your yolo `_site` is configured in `/var/www/html` where it's served by apache on port `9696`.
+The Yolo image is a runtime image based on [ubi8-minimal](https://developers.redhat.com/products/rhel/ubi), with [apache httpd](https://httpd.apache.org/) installed. Your yolo `_site` is configured in `/var/www/html` where it's served by apache on port `9696`.
 
 ### Building and running
 
-> `make pod` - builds and runs your site as a container
-
+{% include code.html label="Podman build and run" %}
 ```bash
-make pod
+# First build yoloc
+podman build -f ./src/yoloc.Containerfile -t yoloc:latest ./src
+
+# Then build yolo
+podman build -f Containerfile -t yolo:latest .
+
+# Now run and access on http://localhost:9696
+podman run --name yolo -d -p 9696:9696 yolo:latest
 ```
+
+The `Makefile` automates the build and run process, with `make yolo-pod`, which:
 
 * Creates the `yoloc` image.
 * Uses `yoloc` to build your `_site`.
 * Creates the `yolo` image to run your site.
 * Starts a yolo container from the `yolo` image, on [`http://localhost:9696`](http://localhost:9696).
+
+{% include code.html label="Makefile build and run" %}
+```bash
+# Build and run with make
+make yolo-pod
+```
 
 [↑↑↑](#){: .back-to-top}
 

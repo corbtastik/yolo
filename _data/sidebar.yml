@@ -7,13 +7,14 @@ entries:
     url: ./#getting-started
   - title: Themes
     url: ./#themes
+    entries:
+      - title: Colors
+        url: ./#colors
+      - title: Typography
+        url: ./#typography
   - title: Elements
     url: ./#elements
     entries:
-    - title: Colors
-      url: ./#colors
-    - title: Typography
-      url: ./#typography
     - title: Headers
       url: ./#headers
     - title: Paragraph text
@@ -30,6 +31,9 @@ entries:
       url: ./#tables
     - title: Markdown Images
       url: ./#markdown-images
+  - title: Styled Images
+    url: ./#styled-images
+    entries:
     - title: Thumbnail Images
       url: ./#thumbnail-images
     - title: Square Images
@@ -48,10 +52,10 @@ entries:
       url: ./#image-grid
     - title: Image Lightbox
       url: ./#image-lightbox
-    - title: Videos
-      url: ./#videos
-    - title: Prezos
-      url: ./#prezos
+  - title: Videos
+    url: ./#videos
+  - title: Prezos
+    url: ./#prezos
   - title: Containers
     url: ./#containers
     entries:
