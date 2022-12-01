@@ -266,7 +266,7 @@
 
     Yolo.prototype.initSidebar = function() {
         const sidebar = document.getElementById('sidebar');
-        const sidebarNav = document.getElementById('sidebar-nav');
+        const sidebarNav = document.getElementById('toc-sidebar');
         if(sidebar !== null) {
             Console.log("Sidebar is enabled, adding event listener.");
             sidebar.addEventListener('click', function() {
