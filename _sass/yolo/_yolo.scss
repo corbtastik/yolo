@@ -218,17 +218,17 @@
   }
 
   th {
-    border-top: 1px solid $light-secondary-color;
+    border-top: 1px solid $light-accent-color;
   }
 
   th, td {
-    border-bottom: 1px solid $light-secondary-color;
-    border-left: 1px solid $light-secondary-color;
-    border-right: 1px solid $light-secondary-color;
+    border-bottom: 1px solid $light-accent-color;
+    border-left: 1px solid $light-accent-color;
+    border-right: 1px solid $light-accent-color;
   }
 
   thead {
-    background-color: $light-secondary-color;
+    background-color: $light-accent-color;
     color: $light-primary-color;
     font-family: $family-secondary;
   }
@@ -277,18 +277,18 @@
   }
 
   .back-to-top {
-    color: $light-accent-color;
+    color: $light-link-color;
   }
 
   .code-header {
-    background-color: $light-secondary-color;
+    background-color: $light-accent-color;
     color: $light-primary-color;
     font-family: $family-secondary;
     &:is(.copied, :hover) {
-      background-color: $light-accent-color;
+      background-color: $light-secondary-color;
     }
     &.copied {
-      background-color: $light-secondary-color;
+      background-color: $light-accent-color;
     }
   }
 
@@ -465,17 +465,17 @@
   }
 
   th {
-    border-top: 1px solid $dark-secondary-color;
+    border-top: 1px solid $dark-accent-color;
   }
 
   th, td {
-    border-bottom: 1px solid $dark-secondary-color;
-    border-left: 1px solid $dark-secondary-color;
-    border-right: 1px solid $dark-secondary-color;
+    border-bottom: 1px solid $dark-accent-color;
+    border-left: 1px solid $dark-accent-color;
+    border-right: 1px solid $dark-accent-color;
   }
 
   thead {
-    background-color: $dark-secondary-color;
+    background-color: $dark-accent-color;
     color: $dark-primary-color;
     font-family: $family-secondary;
   }
@@ -524,18 +524,18 @@
   }
 
   .back-to-top {
-    color: $dark-accent-color;
+    color: $dark-link-color;
   }
 
   .code-header {
-    background-color: $dark-secondary-color;
+    background-color: $dark-accent-color;
     color: $dark-primary-color;
     font-family: $family-secondary;
     &:is(.copied, :hover) {
-      background-color: $dark-accent-color;
+      background-color: $dark-secondary-color;
     }
     &.copied {
-      background-color: $dark-secondary-color;
+      background-color: $dark-accent-color;
     }
   }
 

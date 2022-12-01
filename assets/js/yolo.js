@@ -161,6 +161,83 @@
     };
 
     // ------------------------------------------------------------------------
+    // Table of Contents class for adding toc to a Yolo post/page.
+    // ------------------------------------------------------------------------
+    class Toc {
+        static create() {
+            if(document.getElementById("toc")) {
+                const headers = Toc.getHeaders();
+                document.getElementById("toc").classList.add("nav-menu");
+                document.getElementById("toc").innerHTML = Toc.buildTree(headers);
+            }
+            if(document.getElementById("toc-sidebar")) {
+                const headers = Toc.getHeaders();
+                document.getElementById("toc-sidebar").classList.add("nav-menu");
+                document.getElementById("toc-sidebar").innerHTML = Toc.buildTree(headers);
+            }
+        }
+
+        static getHeaders() {
+            const hTags = ["h2", "h3", "h4", "h5", "h6"];
+            const elements = document.querySelectorAll(hTags.join());
+            const headers = [];
+
+            elements.forEach(el => {
+                if(!el.classList.contains("no-toc")) {
+                    const text = el.innerText;
+                    const id = text
+                        .toLowerCase()
+                        .split(" ")
+                        .join("-");
+
+                    el.setAttribute("id", id);
+
+                    headers.push({
+                        id,
+                        text,
+                        level: hTags.indexOf(el.tagName.toLowerCase())
+                    });
+                }
+            });
+
+            return headers;
+        }
+
+        static buildTree(headers) {
+            const list = [];
+            let nextLevelHeaders = [];
+            let lastLevel = -1;
+
+            if (headers.length === 0) {
+                return "";
+            }
+
+            const buildSubTree = () => {
+                if (nextLevelHeaders.length > 0) {
+                    list[list.length - 1] += Toc.buildTree(nextLevelHeaders);
+                }
+            };
+
+            headers.forEach(h => {
+                if (lastLevel !== -1 && lastLevel < h.level) {
+                    nextLevelHeaders.push(h);
+                    return;
+                }
+
+                buildSubTree();
+
+                lastLevel = h.level;
+                list.push(`<a href="#${h.id}">${h.text}</a>`);
+                nextLevelHeaders = [];
+            });
+
+            buildSubTree();
+
+            const listHTML = list.map(i => `<li>${i}</li>`).join("");
+            return `<ul>${listHTML}</ul>`;
+        }
+    }
+    // ------------------------------------------------------------------------
     // Yolo class for the site logic
     // ------------------------------------------------------------------------
     class Yolo {
@@ -178,6 +255,8 @@
             yolo.themeToggle();
             // Initialize sidebar
             yolo.initSidebar();
+            // Initialize toc helper
+            yolo.tocHelper();
             return yolo;
         }
         static themes() {
@@ -188,7 +267,6 @@
     Yolo.prototype.initSidebar = function() {
         const sidebar = document.getElementById('sidebar');
         const sidebarNav = document.getElementById('sidebar-nav');
-        // const sidebarTab = document.getElementById('sidebar-tab');
         if(sidebar !== null) {
             Console.log("Sidebar is enabled, adding event listener.");
             sidebar.addEventListener('click', function() {
@@ -332,6 +410,26 @@
             Console.log("Window load, transitioning to opacity 1");
             yoloSite.style.opacity = "1";
         });
+    }
+
+    Yolo.prototype.tocHelper = function() {
+        // const headings = document.querySelectorAll("h1, h2, h3, h4, h5, h6");
+        // const tocHTML = [];
+        // let i = 0;
+        // if(headings.length > 0) {
+        //     tocHTML[i++] = "<ul>"
+        //     headings.forEach((element, index) => {
+        //         if(element.id) {
+        //             tocHTML[i++] = "<li><a href=\"#" + element.id + "\">" + element.innerText.trim() + "</a></li>";
+        //         }
+        //     });
+        //     tocHTML[i++] = "</ul>";
+        // }
+        // document.getElementById("toc").innerHTML = tocHTML.join('');
+        // const headers = Toc.getHeaders();
+        //
+        // document.getElementById("toc").innerHTML = Toc.buildTree(headers);
+        Toc.create();
     }
     // ------------------------------------------------------------------------
     // Expose Yolo on the window object.
