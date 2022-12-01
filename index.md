@@ -12,29 +12,31 @@ techies, and picture taking folk.
 > _I don't always use single-page sites but when I do, I yolo._
 
 ##### Goals for Yolo
+{:.no-toc}
 
 ###### 1. Live the best single page life.
+{:.no-toc}
 
 Pamper single page sites like we pamper our pets.
 
 ###### 2. Strive for simplicity.
+{:.no-toc}
 
 No dependencies other than [jekyll](https://jekyllrb.com/).
 
 ###### 3. Make it customizable
+{:.no-toc}
 
 Bring your own [colors](#colors) and [fonts](#typography).
 
 ---
 
 ## Table of Contents
+{:.no-toc}
 
-* [Getting Started](#getting-started): _How to Yolo_
-* [Themes](#themes): _Yolo your way with themes_
-* [Elements](#elements): _What Yolo brings to the party_
-* [Containers](#containers): _Yolo in a container_
-* [Kudos](#thanks): _I get by with a little help from my friends_
-* [License](#license): _MIT_
+<div id="toc"></div>
+
+[↑↑↑](#){: .back-to-top}
 
 ---
 
@@ -50,7 +52,7 @@ jekyll build
 jekyll serve
 ```
 
-[↑↑↑](#){: .back-to-top}
+[↑↑↑](#table-of-contents){: .back-to-top}
 
 ---
 
@@ -61,6 +63,7 @@ Yolo doesn't implement an "according to hoyle" [gem based theme](https://jekyllr
 > __Note:__ "Theming" for Yolo is accomplished by providing a custom scss file in `_sass/yolo/themes`. Each theme must specify "light" and "dark" values to support switching between the two modes.
 
 ##### 1. Create a new scss file for your theme.
+{:.no-toc}
 
 {% include code.html label="Create theme scss" %}
 ```bash
@@ -69,6 +72,7 @@ make theme NAME=domino
 ```
 
 ##### 2. Customize the theme values.
+{:.no-toc}
 
 __Color properties:__
 
@@ -115,6 +119,7 @@ $family-monospace: "Inconsolata", monospace;
 ```
 
 ##### 3. Enable by setting `site.style` in `_config.yml`.
+{:.no-toc}
 
 {% include code.html label="Jekyll _config.yml" %}
 ```yaml
@@ -124,35 +129,7 @@ style: domino
 
 That's it, run Yolo and adjust colors to your liking.
 
-[↑↑↑](#){: .back-to-top}
-
----
-
-## Elements
-
-* [Colors](#colors)
-* [Typography](#typography)
-* [Headers](#headers)
-* [Paragraph Text](#paragraph-text)
-* [Blockquotes](#blockquotes)
-* [Inline Text](#inline-text)
-* [Code](#code)
-* [Lists](#lists)
-* [Tables](#tables)
-* [Markdown Images](#markdown-images)
-* [Thumbnail Images](#thumbnail-images)
-* [Square Images](#square-images)
-* [Circle Images](#circle-images)
-* [4-by-3 Images](#4-by-3-images)
-* [3-by-4 Images](#3-by-4-images)
-* [16-by-9 Images](#16-by-9-images)
-* [9-by-16 Images](#9-by-16-images)
-* [Image Grid](#image-grid)
-* [Image Lightbox](#image-lightbox)
-* [Videos](#videos)
-* [Prezos](#prezos)
-
-[↑↑↑](#){: .back-to-top}
+[↑↑↑](#table-of-contents){: .back-to-top}
 
 ---
 
@@ -167,7 +144,7 @@ Yolo's colors can be customized as outlined in [Yolo Themes](#themes).
 {% include flexbox.html columns="1" fill="code-color" %}
 {% include flexbox.html columns="1" fill="link-color" %}
 
-[↑↑↑](#){: .back-to-top}
+[↑↑↑](#table-of-contents){: .back-to-top}
 
 ---
 
@@ -177,7 +154,24 @@ Yolo's fonts can be customized as outlined in [Yolo Themes](#themes).
 
 {% include typography.html %}
 
-[↑↑↑](#){: .back-to-top}
+[↑↑↑](#table-of-contents){: .back-to-top}
+
+---
+
+## Elements
+
+* [Headers](#headers)
+* [Paragraph Text](#paragraph-text)
+* [Blockquotes](#blockquotes)
+* [Inline Text](#inline-text)
+* [Code](#code)
+* [Lists](#lists)
+* [Tables](#tables)
+* [Markdown Images](#markdown-images)
+* [Videos](#videos)
+* [Prezos](#prezos)
+
+[↑↑↑](#table-of-contents){: .back-to-top}
 
 ---
 
@@ -186,16 +180,21 @@ Yolo's fonts can be customized as outlined in [Yolo Themes](#themes).
 H1 is reserved for the site header and not shown here.
 
 ## H2 Heading
+{:.no-toc}
 
 ### H3 Heading
+{:.no-toc}
 
 #### H4 Heading
+{:.no-toc}
 
 ##### H5 Heading
+{:.no-toc}
 
 ###### H6 Heading
+{:.no-toc}
 
-[↑↑↑](#){: .back-to-top}
+[↑↑↑](#table-of-contents){: .back-to-top}
 
 ---
 
@@ -203,17 +202,19 @@ H1 is reserved for the site header and not shown here.
 
 [Baseball](https://en.wikipedia.org/wiki/Baseball) is a bat-and-ball sport played between two teams of nine players each, taking turns batting and fielding. The game is in play when a player on the fielding team, called the pitcher, throws a ball that a player on the batting team tries to hit with a bat. The objective of the offensive team (batting team) is to hit the ball into the field of play, away from the other team's players, allowing its players to run the bases, having them advance counter-clockwise around four bases to score what are called "runs". - copied from [Wikipedia](https://en.wikipedia.org/wiki/Baseball).
 
-[↑↑↑](#){: .back-to-top}
+[↑↑↑](#table-of-contents){: .back-to-top}
 
 ---
 
 ### Blockquotes
 
 #### Single Blockquote
+{:.no-toc}
 
 > In the United States and Canada, professional Major League Baseball (MLB) teams are divided into the National League (NL) and American League (AL), each with three divisions: East, West, and Central. The MLB champion is determined by playoffs that culminate in the World Series.
 
 #### Two paragraph Blockquote
+{:.no-toc}
 
 > A baseball game is played between two teams,
 > each usually composed of nine players, that take turns playing offense (batting and baserunning)
@@ -225,6 +226,7 @@ H1 is reserved for the site header and not shown here.
 > the 270-degree area outside them is foul territory.
 
 #### Nested Blockquote
+{:.no-toc}
 
 > The number of players on a baseball roster, or squad, varies by league and by the level of organized play. A Major League Baseball (MLB) team has a roster of 25 players with specific roles. A typical roster features the following players:
 >
@@ -233,9 +235,10 @@ H1 is reserved for the site header and not shown here.
 > Most baseball leagues worldwide have the DH rule.
 
 #### Blockquote w/ markdown
+{:.no-toc}
 
 > #### Baseball Statistics
->
+> {:.no-toc}
 > 1. __At Bats:__ Plate appearances, excluding walks and hit by pitches.
 > 2. __Hits:__ Number of times a base is reached safely.
 > 3. __Runs:__ Number of times runners reach home safely.
@@ -243,7 +246,7 @@ H1 is reserved for the site header and not shown here.
 > 5. __Home Runs:__ Hits where the batter touches all four bases safely.
 > 6. __Batting Average:__ Hits divided by at bats.
 
-[↑↑↑](#){: .back-to-top}
+[↑↑↑](#table-of-contents){: .back-to-top}
 
 ---
 
@@ -260,7 +263,7 @@ H1 is reserved for the site header and not shown here.
 - Subscript <sub>text</sub>
 - Inline code `SELECT * FROM players;`
 
-[↑↑↑](#){: .back-to-top}
+[↑↑↑](#table-of-contents){: .back-to-top}
 
 ---
 
@@ -319,7 +322,7 @@ fi
 say_howdy $1
 ```
 
-[↑↑↑](#){: .back-to-top}
+[↑↑↑](#table-of-contents){: .back-to-top}
 
 {% include code.html label="C snippet" %}
 ```c
@@ -335,7 +338,7 @@ int main(int argc, char **argv) {
 }
 ```
 
-[↑↑↑](#){: .back-to-top}
+[↑↑↑](#table-of-contents){: .back-to-top}
 
 {% include code.html label="C++ snippet" %}
 ```c++
@@ -352,7 +355,7 @@ int main(int argc, char** argv) {
 }
 ```
 
-[↑↑↑](#){: .back-to-top}
+[↑↑↑](#table-of-contents){: .back-to-top}
 
 {% include code.html label="Dart snippet" %}
 ```dart
@@ -369,7 +372,7 @@ void main(List<String> args) {
 }
 ```
 
-[↑↑↑](#){: .back-to-top}
+[↑↑↑](#table-of-contents){: .back-to-top}
 
 {% include code.html label="Go snippet" %}
 ```go
@@ -391,7 +394,7 @@ func main () {
 }
 ```
 
-[↑↑↑](#){: .back-to-top}
+[↑↑↑](#table-of-contents){: .back-to-top}
 
 {% include code.html label="HTML snippet" %}
 ```html
@@ -407,7 +410,7 @@ func main () {
 </html>
 ```
 
-[↑↑↑](#){: .back-to-top}
+[↑↑↑](#table-of-contents){: .back-to-top}
 
 {% include code.html label="JSON snippet" %}
 ```json
@@ -436,7 +439,7 @@ func main () {
 }
 ```
 
-[↑↑↑](#){: .back-to-top}
+[↑↑↑](#table-of-contents){: .back-to-top}
 
 {% include code.html label="Java snippet" %}
 ```java
@@ -452,7 +455,7 @@ public class Howdy {
 }
 ```
 
-[↑↑↑](#){: .back-to-top}
+[↑↑↑](#table-of-contents){: .back-to-top}
 
 {% include code.html label="JavaScript snippet" %}
 ```javascript
@@ -469,7 +472,7 @@ if(process.argv.length != 3) {
 sayHowdy(process.argv[2]);
 ```
 
-[↑↑↑](#){: .back-to-top}
+[↑↑↑](#table-of-contents){: .back-to-top}
 
 {% include code.html label="Kotlin snippet" %}
 ```kotlin
@@ -484,7 +487,7 @@ fun main(args: Array<String>): Int {
 }
 ```
 
-[↑↑↑](#){: .back-to-top}
+[↑↑↑](#table-of-contents){: .back-to-top}
 
 {% include code.html label="Markdown snippet" %}
 ```markdown
@@ -497,7 +500,7 @@ fun main(args: Array<String>): Int {
 * `document`!
 ```
 
-[↑↑↑](#){: .back-to-top}
+[↑↑↑](#table-of-contents){: .back-to-top}
 
 {% include code.html label="Python snippet" %}
 ```python
@@ -514,7 +517,7 @@ if len(sys.argv) != 2:
 sayHowdy(sys.argv[1])
 ```
 
-[↑↑↑](#){: .back-to-top}
+[↑↑↑](#table-of-contents){: .back-to-top}
 
 {% include code.html label="SCSS snippet" %}
 ```scss
@@ -534,7 +537,7 @@ sayHowdy(sys.argv[1])
 }
 ```
 
-[↑↑↑](#){: .back-to-top}
+[↑↑↑](#table-of-contents){: .back-to-top}
 
 {% include code.html label="SQL snippet" %}
 ```sql
@@ -546,7 +549,7 @@ AND   price > 5000
 AND   price <= 10000
 ```
 
-[↑↑↑](#){: .back-to-top}
+[↑↑↑](#table-of-contents){: .back-to-top}
 
 {% include code.html label="YAML snippet" %}
 ```yaml
@@ -568,13 +571,14 @@ spec:
   type: LoadBalancer
 ```
 
-[↑↑↑](#){: .back-to-top}
+[↑↑↑](#table-of-contents){: .back-to-top}
 
 ---
 
 ### Lists
 
 #### Unordered
+{:.no-toc}
 
 * Arlington Stadium
 * Rangers Ballpark in Arlington
@@ -586,19 +590,21 @@ spec:
             * Boston Red Sox
 
 #### Ordered
+{:.no-toc}
 
 1. Babe Ruth
 2. Willie Mays
 3. Dale Murphy
 4. Mookie Wilson
 
-[↑↑↑](#){: .back-to-top}
+[↑↑↑](#table-of-contents){: .back-to-top}
 
 ---
 
 ### Tables
 
 #### Basic
+{:.no-toc}
 
 > __See:__ [Github markdown tables](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/organizing-information-with-tables)
 
@@ -609,6 +615,7 @@ spec:
 | <a href="https://www.baseball-reference.com/players/w/wilsomo01.shtml" target="_blank">Mookie Wilson</a> | .274 | 67 |
 
 #### Formatted content
+{:.no-toc}
 
 | Command | Description |
 | --- | --- |
@@ -617,13 +624,14 @@ spec:
 | `git diff` | Show file differences that **haven't been** staged |
 
 #### Cell alignment
+{:.no-toc}
 
 | Left-aligned | Center-aligned | Right-aligned |
 | :---         |     :---:      |          ---: |
 | `git status` | `git status`   | `git status`  |
 | `git diff`   | `git diff`     | `git diff`    |
 
-[↑↑↑](#){: .back-to-top}
+[↑↑↑](#table-of-contents){: .back-to-top}
 
 ---
 
@@ -643,38 +651,21 @@ spec:
 
 ![BIG yawn Bucky]({{ site.images }}/site/bucky.png "Sleepy Bucky")
 
-[↑↑↑](#){: .back-to-top}
+[↑↑↑](#table-of-contents){: .back-to-top}
 
 ---
 
-### Custom Images
+## Styled Images
 
-You can add custom images anywhere in the project root, and then add a reference into `_data/images.yml` which enables use of `include image/image.html` on your page.
+You can use yolo Styled Images in addition to markdown images if you're looking for a little eye-candy. Yolo includes support for common aspect ratios, an [image-grid](#image-grid) and [image-lightbox](#image-lightbox).
 
-For example:
-
-{% include code.html label="Custom images" %}
-{% raw %}
-```html
-{%
-  include image/image.html
-  classes="center is-384"
-  name="bucky-and-nacho"
-  description="Bucky and Nacho at the park."
-%}
-```
-{% endraw %}
-
-> __Tip:__ Click to enlarge.
-
-{%
-  include image/image.html
-  classes="center is-384"
-  name="bucky-and-nacho"
-  description="Bucky and Nacho at the park."
-%}
-
-[↑↑↑](#){: .back-to-top}
+* [Thumbnail Images](#thumbnail-images)
+* [Square Images](#square-images)
+* [Circle Images](#circle-images)
+* [4-by-3 Images](#4-by-3-images)
+* [3-by-4 Images](#3-by-4-images)
+* [16-by-9 Images](#16-by-9-images)
+* [9-by-16 Images](#9-by-16-images)
 
 ---
 
@@ -701,7 +692,7 @@ classes="thumbnail"
 src="yolo/big-face-bucky.png"
 %}
 
-[↑↑↑](#){: .back-to-top}
+[↑↑↑](#table-of-contents){: .back-to-top}
 
 ---
 
@@ -729,7 +720,7 @@ classes="image is-256"
 src="yolo/drive-in.png"
 %}
 
-[↑↑↑](#){: .back-to-top}
+[↑↑↑](#table-of-contents){: .back-to-top}
 
 ---
 
@@ -758,7 +749,7 @@ classes="is-circle-256"
 src="yolo/big-face-bucky.png"
 %}
 
-[↑↑↑](#){: .back-to-top}
+[↑↑↑](#table-of-contents){: .back-to-top}
 
 ---
 
@@ -787,7 +778,7 @@ classes="image is-256-by-192"
 src="yolo/bluebonnet.png"
 %}
 
-[↑↑↑](#){: .back-to-top}
+[↑↑↑](#table-of-contents){: .back-to-top}
 
 ---
 
@@ -816,7 +807,7 @@ classes="image is-240-by-320"
 src="yolo/bluebonnet.png"
 %}
 
-[↑↑↑](#){: .back-to-top}
+[↑↑↑](#table-of-contents){: .back-to-top}
 
 ---
 
@@ -845,7 +836,7 @@ classes="image is-256-by-144"
 src="yolo/bluebonnet.png"
 %}
 
-[↑↑↑](#){: .back-to-top}
+[↑↑↑](#table-of-contents){: .back-to-top}
 
 ---
 
@@ -874,11 +865,11 @@ classes="image is-225-by-400"
 src="yolo/bluebonnet.png"
 %}
 
-[↑↑↑](#){: .back-to-top}
+[↑↑↑](#table-of-contents){: .back-to-top}
 
 ---
 
-### Image Grid
+## Image Grid
 
 The Image Grid is similar to the [Lightbox](#image-lightbox), except it shows images inline, instead of in a modal.
 
@@ -887,7 +878,8 @@ The Image Grid is similar to the [Lightbox](#image-lightbox), except it shows im
 * Add image data into `_data/ig-images.yml`.
 * Include `image/grid.html` on your page.
 
-#### Default data file
+### Default data file
+{:.no-toc}
 
 The `_data/ig-images.yml` file is the default data file, just replace with your data to display images.
 
@@ -900,7 +892,8 @@ The `_data/ig-images.yml` file is the default data file, just replace with your 
 
 {% include image/grid.html %}
 
-#### Custom data file
+### Custom data file
+{:.no-toc}
 
 A custom data file can be added to create an Image Grid.
 
@@ -917,11 +910,11 @@ A custom data file can be added to create an Image Grid.
 
 {% include image/grid.html ig-data="ig-pets" ig-columns="2" %}
 
-[↑↑↑](#){: .back-to-top}
+[↑↑↑](#table-of-contents){: .back-to-top}
 
 ---
 
-### Image Lightbox
+## Image Lightbox
 
 Yolo includes a Lightbox to showcase pics.
 
@@ -930,7 +923,8 @@ Yolo includes a Lightbox to showcase pics.
 * Add image data into `_data/lb-images.yml`.
 * Include `image/lightbox.html` on your page.
 
-#### Default data file
+### Default data file
+{:.no-toc}
 
 The `_data/lb-images.yml` file is the default Lightbox data file, just replace with your data to display images.
 
@@ -943,7 +937,8 @@ The `_data/lb-images.yml` file is the default Lightbox data file, just replace w
 
 {% include image/lightbox.html %}
 
-#### Custom data file
+### Custom data file
+{:.no-toc}
 
 A custom data file can be added to create a Lightbox.
 
@@ -959,19 +954,19 @@ A custom data file can be added to create a Lightbox.
 
 {% include image/lightbox.html lb-data="lb-marfa" %}
 
-[↑↑↑](#){: .back-to-top}
+[↑↑↑](#table-of-contents){: .back-to-top}
 
 ---
 
-### Videos
+## Videos
 
 {% include video.html %}
 
-[↑↑↑](#){: .back-to-top}
+[↑↑↑](#table-of-contents){: .back-to-top}
 
 ---
 
-### Prezos
+## Prezos
 
 Yolo has basic support for embedding Google Slides.
 
@@ -982,6 +977,7 @@ Yolo has basic support for embedding Google Slides.
 * Optionally set `aspect-ratio` to `is-16-by-9`, `is-4-by-3`, or `is-1-by-1`.
 
 #### Sample 1
+{:.no-toc}
 
 {% include code.html label="16-by-9 aspect ratio (default)" %}
 {% raw %}
@@ -995,6 +991,7 @@ Yolo has basic support for embedding Google Slides.
 {% include prezo.html title="blinged-macmini" %}
 
 #### Sample 2
+{:.no-toc}
 
 {% include code.html label="4-by-3 aspect ratio" %}
 {% raw %}
@@ -1008,6 +1005,7 @@ Yolo has basic support for embedding Google Slides.
 {% include prezo.html title="one-awesome-prezo" aspect-ratio="is-4-by-3" %}
 
 #### Sample 3
+{:.no-toc}
 
 {% include code.html label="1-by-1 aspect ratio" %}
 {% raw %}
@@ -1020,7 +1018,7 @@ Yolo has basic support for embedding Google Slides.
 
 {% include prezo.html title="yolo-on" aspect-ratio="is-1-by-1" %}
 
-[↑↑↑](#){: .back-to-top}
+[↑↑↑](#table-of-contents){: .back-to-top}
 
 ---
 
@@ -1031,36 +1029,64 @@ This section "contains" information on building and running your single page Yol
 > The project `Makefile` includes targets for building a container with [podman](https://podman.io/).
 
 ### Tools
+{:.no-toc}
 
 * [Podman](https://podman.io/)
 * Make (_optional but recommended_)
 
-<ins>Two</ins> container images are built using the Makefile. The <ins>first</ins> is `yoloc` which is a "builder" image, to "build" your site, and the <ins>second</ins> is `yolo`, to "run" your site.
+<ins>Two</ins> container images are built using the Makefile.
+
+* The <ins>first</ins> is `yoloc` which is a "builder" image, to "build" your site.
+* The <ins>second</ins> is `yolo`, to "run" your site.
 
 ### yoloc
+{:.no-toc}
 
-Yoloc is a "builder" image based on [UBI](https://developers.redhat.com/products/rhel/ubi), with gcc, gcc-c++, make, ruby, ruby-devel, and jekyll packages installed. Essentially, it's the latest version of jekyll in a container.
+Yoloc is a "builder" image based on [ubi8-minimal](https://developers.redhat.com/products/rhel/ubi), with the following packages added:
 
-> Yoloc isn't a runtime image, meaning it doesn't run a server process, it's a build time image, with the tooling needed to run `jekyll build`. The output `_site` is passed to the `yolo` container, where it's served by [apache httpd](https://httpd.apache.org/).
+* gcc
+* gcc-c++
+* make
+* ruby
+* ruby-devel
+* jekyll
+
+> Yoloc isn't a runtime image, meaning it doesn't run a server process, it's a build time image, with the tooling needed to run `jekyll build`. The output `_site` will be passed to the `yolo` container, where it's served by [apache httpd](https://httpd.apache.org/).
 
 ### yolo
+{:.no-toc}
 
-The Yolo image is a runtime image based on [UBI](https://developers.redhat.com/products/rhel/ubi), with [apache httpd](https://httpd.apache.org/) installed. Your yolo `_site` is configured in `/var/www/html` where it's served by apache on port `9696`.
+The Yolo image is a runtime image based on [ubi8-minimal](https://developers.redhat.com/products/rhel/ubi), with [apache httpd](https://httpd.apache.org/) installed. Your yolo `_site` is configured in `/var/www/html` where it's served by apache on port `9696`.
 
 ### Building and running
+{:.no-toc}
 
-> `make pod` - builds and runs your site as a container
-
+{% include code.html label="Podman build and run" %}
 ```bash
-make pod
+# First build yoloc
+podman build -f ./src/yoloc.Containerfile -t yoloc:latest ./src
+
+# Then build yolo
+podman build -f Containerfile -t yolo:latest .
+
+# Now run and access on http://localhost:9696
+podman run --name yolo -d -p 9696:9696 yolo:latest
 ```
+
+The `Makefile` automates the build and run process, with `make yolo-pod`, which:
 
 * Creates the `yoloc` image.
 * Uses `yoloc` to build your `_site`.
 * Creates the `yolo` image to run your site.
 * Starts a yolo container from the `yolo` image, on [`http://localhost:9696`](http://localhost:9696).
 
-[↑↑↑](#){: .back-to-top}
+{% include code.html label="Makefile build and run" %}
+```bash
+# Build and run with make
+make yolo-pod
+```
+
+[↑↑↑](#table-of-contents){: .back-to-top}
 
 ---
 
@@ -1071,12 +1097,14 @@ I'm a developer by trade with roots in C and Java. I once read something like - 
 > Many thanks for these resources and the folks behind them.
 
 ### [w3schools](https://www.w3schools.com/)
+{:.no-toc}
 
 When I want an unvarnished take on HTML, CSS, and Javascript I go to [w3schools](https://www.w3schools.com/). That and every time I google for frontend related stuff [w3schools](https://www.w3schools.com/) comes up. Great reference material, some of which guided the [Yolo Lightbox](#image-lightbox) implementation.
 
 > Sanks [w3schools](https://www.w3schools.com/) people.
 
 ### [Solo](http://chibicode.github.io/solo/)
+{:.no-toc}
 
 Years ago I googled _"minimal jekyll theme"_, which led me to [Solo](http://chibicode.github.io/solo/). It was exactly what I was looking for, simple to get started and customize. Not to mention there's a quirky beauty in its look. Over the years I've used Solo for single page "technical" docs.
 
@@ -1085,12 +1113,13 @@ Yolo is cut from the cloth of "[Solo](http://chibicode.github.io/solo)" which wa
 > Well done [Shu Uesugi](https://github.com/chibicode), sanks amigo.
 
 ### [Bulma](https://bulma.io/)
+{:.no-toc}
 
 _"The modern CSS framework that just works"_, true dat. Bulma is not included as a library, but Yolo contains slightly modified scss from select areas, namely flexbox, typography and image styling. For my tastes Bulma is the best css framework, they be awesome yo.
 
 > Sanks [Bulma](https://bulma.io/) people.
 
-[↑↑↑](#){: .back-to-top}
+[↑↑↑](#table-of-contents){: .back-to-top}
 
 ---
 
@@ -1120,4 +1149,4 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 ```
 
-[↑↑↑](#){: .back-to-top}
+[↑↑↑](#table-of-contents){: .back-to-top}

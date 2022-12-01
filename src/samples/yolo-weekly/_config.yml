@@ -1,0 +1,24 @@
+# Site settings
+title: Weekly
+tag_text: Weekly
+description: Status Report
+# Site customizations
+style: weekly
+logo: assets/images/site/logo.png
+images: https://storage.googleapis.com/corbs-foto/yolo
+sidebar: true
+# Build settings
+version: v1.16
+markdown: kramdown
+exclude:
+  - "README.md"
+  - "BACKLOG.md"
+  - "Makefile"
+  - "Containerfile"
+  - ".yolo-build"
+  - "src/"
+  - "docs/"
+  - "index.md.backup"
+  - "_config.yml.backup"
+sass:
+  style: compressed
