@@ -4,12 +4,9 @@ List of tasks for maturing Yolo.
 
 ## ASAP
 
-* Responsiveness, laptop screen.
-* Create tutorial for adding custom lightbox.
-* Create tutorial for adding custom theme.
-* Create tutorial for using includes.
-* Add figure to image for caption display.
-* Add center align option for elements.
+* Document features: sidebar, toc, collapsibles
+* [DONE] Responsiveness, laptop screen.
+* [DONE] Add figure to image for caption display.
 * Scrub and implement consistent size and dimension units.
 * Resize lb-images for web, add branding, move to GCS.
 
@@ -17,7 +14,7 @@ List of tasks for maturing Yolo.
 
 * Add support for embedding PDFs.
 * Add support for Github Gist.
-* Build new Yolo container images, push to quay.
+* [DONE] Build new Yolo container images, push to quay.
 * Add option to collapse header (h2, h3, h4, h5, h6) sections.
 * Look into customizing syntax highlighter.
 * Support for including Instagram images.
