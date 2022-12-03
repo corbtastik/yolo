@@ -31,10 +31,7 @@ Bring your own [colors](#colors) and [fonts](#typography).
 
 ---
 
-## Table of Contents
-{:.no-toc}
-
-<div id="toc"></div>
+{% include toc.html header="h2" text="Table of Contents" %}
 
 [↑↑↑](#){: .back-to-top}
 

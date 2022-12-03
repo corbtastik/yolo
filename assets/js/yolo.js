@@ -161,7 +161,7 @@
     };
 
     // ------------------------------------------------------------------------
-    // Table of Contents class for adding toc to a Yolo post/page.
+    // Table of Contents class for adding toc to a Yolo post/page and sidebar
     // ------------------------------------------------------------------------
     class Toc {
         static create() {
@@ -182,20 +182,12 @@
             const elements = document.querySelectorAll(hTags.join());
             const headers = [];
 
-            elements.forEach(el => {
-                if(!el.classList.contains("no-toc")) {
-                    const text = el.innerText;
-                    const id = text
-                        .toLowerCase()
-                        .split(" ")
-                        .join("-");
-
-                    el.setAttribute("id", id);
-
-                    headers.push({
-                        id,
-                        text,
-                        level: hTags.indexOf(el.tagName.toLowerCase())
+            elements.forEach(element => {
+                if(!element.classList.contains("no-toc")) {
+                    const text = element.innerText;
+                    const id = text.toLowerCase().split(" ").join("-");
+                    element.setAttribute("id", id);
+                    headers.push({id, text, level: hTags.indexOf(element.tagName.toLowerCase())
                     });
                 }
             });
@@ -252,21 +244,18 @@
             // Initialize copy code snippets
             yolo.copySnippet();
             // Initialize dark / light theme toggle
-            yolo.themeToggle();
+            yolo.toggleTheme();
             // Initialize sidebar
             yolo.initSidebar();
-            // Initialize toc helper
-            yolo.tocHelper();
+            // Initialize toc on page/post and sidebar
+            yolo.initToc();
             return yolo;
-        }
-        static themes() {
-            return ["corbs", "cloudy"];
         }
     }
 
     Yolo.prototype.initSidebar = function() {
         const sidebar = document.getElementById('sidebar');
-        const sidebarNav = document.getElementById('sidebar-nav');
+        const sidebarNav = document.getElementById('toc-sidebar');
         if(sidebar !== null) {
             Console.log("Sidebar is enabled, adding event listener.");
             sidebar.addEventListener('click', function() {
@@ -364,7 +353,7 @@
         return this.imageGrids.get(name);
     };
 
-    Yolo.prototype.themeToggle = function() {
+    Yolo.prototype.toggleTheme = function() {
         const yoloSite = document.getElementById("yolo-site");
         const themeDot = document.getElementById("theme-dot");
 
@@ -412,23 +401,7 @@
         });
     }
 
-    Yolo.prototype.tocHelper = function() {
-        // const headings = document.querySelectorAll("h1, h2, h3, h4, h5, h6");
-        // const tocHTML = [];
-        // let i = 0;
-        // if(headings.length > 0) {
-        //     tocHTML[i++] = "<ul>"
-        //     headings.forEach((element, index) => {
-        //         if(element.id) {
-        //             tocHTML[i++] = "<li><a href=\"#" + element.id + "\">" + element.innerText.trim() + "</a></li>";
-        //         }
-        //     });
-        //     tocHTML[i++] = "</ul>";
-        // }
-        // document.getElementById("toc").innerHTML = tocHTML.join('');
-        // const headers = Toc.getHeaders();
-        //
-        // document.getElementById("toc").innerHTML = Toc.buildTree(headers);
+    Yolo.prototype.initToc = function() {
         Toc.create();
     }
     // ------------------------------------------------------------------------
