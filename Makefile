@@ -5,6 +5,11 @@ CONTAINER_REGISTRY=quay.io/corbsmartin
 IMAGE_NAME=yolo
 IMAGE_TAG=v1.1
 # -----------------------------------------------------------------------------
+# Jekyll targets
+# -----------------------------------------------------------------------------
+run:
+	@jekyll serve
+# -----------------------------------------------------------------------------
 # yoloc builder image (ubi8-minimal)
 # -----------------------------------------------------------------------------
 yoloc:
@@ -22,6 +27,13 @@ yolo: yoloc
 yolo-pod: yolo
 	@podman rm -f yolo
 	@podman run --name yolo -d -p 9696:9696 $(CONTAINER_REGISTRY)/$(IMAGE_NAME):latest
+# -----------------------------------------------------------------------------
+# Publish to surge.sh
+# -----------------------------------------------------------------------------
+surge:
+	@jekyll clean
+	@jekyll build
+	@surge _site/ corbtastik-yolo.surge.sh
 # -----------------------------------------------------------------------------
 # Targets for working with single page samples in ./src/samples
 # -----------------------------------------------------------------------------

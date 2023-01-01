@@ -47,7 +47,8 @@ Yolo doesn't implement an "according to hoyle" Jekyll theme, but the colors, typ
 
 ## Yolo demo
 
-Yolo on - [https://corbtastik.github.io/yolo](https://corbtastik.github.io/yolo)
+* Yolo on Github Pages - [https://corbtastik.github.io/yolo](https://corbtastik.github.io/yolo)
+* Yolo on Surge - [https://corbtastik-yolo.surge.sh](https://corbtastik-yolo.surge.sh)
 
 ## License
 
