@@ -2,7 +2,7 @@
 <html lang="en">
 {% include head.html %}
 <body id="yolo-site">
-  <div class="container center">
+  <div id="yolo-container" class="container {{ site.align }}">
     {% if site.sidebar %}
     {% include sidebar.html %}
     {% endif %}

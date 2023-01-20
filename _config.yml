@@ -4,6 +4,8 @@ tag_text: Yolo
 description: Loveable single page sites
 # Site customizations
 style: corbs
+# Align content, left, center or right (default is left)
+align: left
 #logo: assets/images/site/logo.png
 images: https://storage.googleapis.com/corbs-foto/yolo
 sidebar: true

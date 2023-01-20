@@ -259,16 +259,24 @@
         if(sidebar !== null) {
             Console.log("Sidebar is enabled, adding event listener.");
             sidebar.addEventListener('click', function() {
+                const yoloContainer = document.getElementById('yolo-container');
+                const containerWidth = yoloContainer.clientWidth;
+                Console.log("yolo-container width=" + containerWidth);
                 const sidebarWidth = sidebar.style.width;
-                if(sidebarWidth === "50%") {
+                if(sidebar.classList.contains("open")) {
                     sidebar.style.width = "0.5rem";
                     sidebar.classList.remove("open")
                     sidebarNav.style.opacity = "0";
                 } else {
-                    sidebar.style.width = "50%";
+                    sidebar.style.width = (containerWidth / 2) + "px"
                     sidebar.classList.add("open")
                     sidebarNav.style.opacity = "1";
                 }
+                // if(sidebarWidth === "50%") {
+                //
+                // } else {
+                //
+                // }
             }, false);
         } else {
             Console.log("Sidebar is disabled.");

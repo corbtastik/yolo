@@ -38,9 +38,9 @@ $container-max-width: $fullhd !default;
 
 .container {
   flex-grow: 1;
-  margin: 0 auto;
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
+  //margin: 0 auto;
+  padding-left: 2rem;
+  padding-right: 2rem;
   position: relative;
   width: auto;
   &.is-fluid {
