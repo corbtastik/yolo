@@ -19,8 +19,8 @@ yoloc:
 # -----------------------------------------------------------------------------
 yolo: yoloc
 	@podman build -f Containerfile -t $(IMAGE_NAME):$(IMAGE_TAG) .
-		@podman tag $(IMAGE_NAME):$(IMAGE_TAG) $(IMAGE_NAME):latest
-		@podman tag $(IMAGE_NAME):latest $(CONTAINER_REGISTRY)/$(IMAGE_NAME):latest
+	@podman tag $(IMAGE_NAME):$(IMAGE_TAG) $(IMAGE_NAME):latest
+	@podman tag $(IMAGE_NAME):latest $(CONTAINER_REGISTRY)/$(IMAGE_NAME):latest
 # -----------------------------------------------------------------------------
 # Run yolo pod with podman
 # -----------------------------------------------------------------------------
@@ -34,37 +34,3 @@ surge:
 	@jekyll clean
 	@jekyll build
 	@surge _site/ corbtastik-yolo.surge.sh
-# -----------------------------------------------------------------------------
-# Targets for working with single page samples in ./src/samples
-# -----------------------------------------------------------------------------
-backup:
-	@echo "Backing up index.md and _config.yml"
-	@mv ./index.md ./index.md.backup
-	@mv ./_config.yml ./_config.yml.backup
-
-restore:
-	@echo "Restoring index.md and _config.yml"
-	@mv ./index.md.backup ./index.md
-	@mv ./_config.yml.backup ./_config.yml
-
-open-lite: backup
-	@echo "Opening site: ./src/samples/yolo-lite"
-	@cp ./src/samples/yolo-lite/index.md ./index.md
-	@cp ./src/samples/yolo-lite/_config.yml ./_config.yml
-
-save-lite:
-	@echo "Saving site: ./src/samples/yolo-lite"
-	@mv ./index.md ./src/samples/yolo-lite/index.md
-	@mv ./_config.yml ./src/samples/yolo-lite/_config.yml
-	@$(call restore)
-
-open-weekly: backup
-	@echo "Opening site: ./src/samples/yolo-weekly"
-	@cp ./src/samples/yolo-weekly/index.md ./index.md
-	@cp ./src/samples/yolo-weekly/_config.yml ./_config.yml
-
-save-weekly:
-	@echo "Saving site: ./src/samples/yolo-lite"
-	@cp ./index.md ./src/samples/yolo-weekly/index.md
-	@cp ./_config.yml ./src/samples/yolo-weekly/_config.yml
-	@$(call restore)
