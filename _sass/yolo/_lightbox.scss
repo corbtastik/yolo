@@ -60,7 +60,7 @@
   margin: 1rem 0;
   position: relative;
   text-align: center;
-  width: 100%;
+  width: 80%;
 }
 
 .lb-modal {
@@ -106,7 +106,7 @@
   display: block;
   top: 0;
   bottom: 0;
-  width: 8%;
+  width: 5%;
   height: 100%;
   color: transparent;
   text-align: center;
@@ -129,14 +129,14 @@
 }
 
 .lb-prev {
-  left: 0;
+  left: 10%;
   right: 0;
   border-radius: .3rem 0 0 .3rem;
   color: transparent;
 }
 
 .lb-next {
-  left: 92%;
+  left: 85%;
   right: 100%;
   border-radius: 0 .3rem .3rem 0;
   color: transparent;
