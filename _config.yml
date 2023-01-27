@@ -8,7 +8,8 @@ style: corbs
 align: left
 #logo: assets/images/site/logo.png
 images: https://storage.googleapis.com/corbs-foto/yolo
-sidebar: false
+sidebar:
+  logo: assets/images/site/logo.png
 # Build settings
 version: v1.1
 markdown: kramdown

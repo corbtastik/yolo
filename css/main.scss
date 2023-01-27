@@ -3,12 +3,12 @@
 ---
 @charset "utf-8";
 
-@import "yolo/normalize";
 @import "yolo/variables";
+@import "yolo/themes/{{ site.style | default: 'corbs' }}";
+@import "yolo/normalize";
 @import "yolo/base";
 @import "yolo/responsiveness";
 @import "yolo/layout";
-@import "yolo/themes/{{ site.style | default: 'corbs' }}";
 @import "yolo/typography";
 @import "yolo/syntax";
 @import "yolo/images";
@@ -16,10 +16,6 @@
 @import "yolo/navigation";
 @import "yolo/yolo";
 
-#yolo-site {
-  opacity: 0;
-  transition: opacity 2s;
 {% if site.sidebar %}
-  margin-left: 1rem;
+@import "yolo/sidebar";
 {% endif %}
-}

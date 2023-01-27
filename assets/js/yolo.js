@@ -259,24 +259,22 @@
         if(sidebar !== null) {
             Console.log("Sidebar is enabled, adding event listener.");
             sidebar.addEventListener('click', function() {
-                const yoloContainer = document.getElementById('yolo-container');
-                const containerWidth = yoloContainer.clientWidth;
-                Console.log("yolo-container width=" + containerWidth);
-                const sidebarWidth = sidebar.style.width;
-                if(sidebar.classList.contains("open")) {
-                    sidebar.style.width = "0.5rem";
-                    sidebar.classList.remove("open")
-                    sidebarNav.style.opacity = "0";
+                if (window.matchMedia('screen and (max-width: 768px)').matches) {
+                    const sidebarWidth = sidebar.clientWidth;
+                    Console.log("sidebarWidth=" + sidebarWidth);
+                    Console.log("Sidebar is collapsed, media query active.")
+                    if(sidebar.classList.contains("open")) {
+                        sidebar.style.width = "0.5rem";
+                        sidebar.classList.remove("open")
+                        sidebarNav.style.opacity = "0";
+                    } else {
+                        sidebar.style.width = "100%";
+                        sidebar.classList.add("open")
+                        sidebarNav.style.opacity = "1";
+                    }
                 } else {
-                    sidebar.style.width = (containerWidth / 2) + "px"
-                    sidebar.classList.add("open")
-                    sidebarNav.style.opacity = "1";
+                    Console.log("Sidebar is open, media query NOT active.")
                 }
-                // if(sidebarWidth === "50%") {
-                //
-                // } else {
-                //
-                // }
             }, false);
         } else {
             Console.log("Sidebar is disabled.");

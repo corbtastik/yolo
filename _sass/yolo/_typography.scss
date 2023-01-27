@@ -29,12 +29,7 @@ $sizes: $size-1 $size-2 $size-3 $size-4 $size-5 $size-6 $size-7 !default;
 @include desktop {
   @include typography-size('desktop');
 }
-@include widescreen {
-  @include typography-size('widescreen');
-}
-@include fullhd {
-  @include typography-size('fullhd');
-}
+
 $alignments: ('centered': 'center', 'justified': 'justify', 'left': 'left', 'right': 'right');
 
 @each $alignment, $text-align in $alignments {
@@ -65,26 +60,6 @@ $alignments: ('centered': 'center', 'justified': 'justify', 'left': 'left', 'rig
   }
   @include desktop {
     .has-text-#{$alignment}-desktop {
-      text-align: #{$text-align} !important;
-    }
-  }
-  @include desktop-only {
-    .has-text-#{$alignment}-desktop-only {
-      text-align: #{$text-align} !important;
-    }
-  }
-  @include widescreen {
-    .has-text-#{$alignment}-widescreen {
-      text-align: #{$text-align} !important;
-    }
-  }
-  @include widescreen-only {
-    .has-text-#{$alignment}-widescreen-only {
-      text-align: #{$text-align} !important;
-    }
-  }
-  @include fullhd {
-    .has-text-#{$alignment}-fullhd {
       text-align: #{$text-align} !important;
     }
   }
