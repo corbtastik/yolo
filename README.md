@@ -1,14 +1,17 @@
 # Yolo
 
-Yolo is a single page theme cut from the cloth of "[Solo](http://chibicode.github.io/solo)" which was previously developed and ultimately deprecated by [Shu Uesugi](https://github.com/chibicode).
+Yolo is laser focused on static single page sites, and while anyone can Yolo, it's purposely built for writers,
+techies, and picture taking folk.
+
+> _I don't always use single-page sites but when I do, I [yolo](https://github.com/corbtastik/yolo)._
 
 ## Goals for Yolo
 
-### 1. Keep living the Solo dream
+### 1. Live the best single page life.
 
-Support one-and-only-one page but treat it like a pet.
+Pamper single page sites like we pamper our pets.
 
-### 2. Keep it simple
+### 2. Strive for simplicity.
 
 No dependencies other than [jekyll](https://jekyllrb.com/).
 
@@ -16,11 +19,16 @@ No dependencies other than [jekyll](https://jekyllrb.com/).
 
 Bring your own colors and fonts.
 
-> The one and only one "implementation" page is [`index.md`](/index.md).
+---
+
+## Yolo demo
+
+* Yolo on Github Pages - [https://corbtastik.github.io/yolo](https://corbtastik.github.io/yolo)
+* Yolo on Surge - [https://corbtastik-yolo.surge.sh](https://corbtastik-yolo.surge.sh)
 
 ---
 
-## Usage
+## Getting Started
 
 * You need [jekyll](https://jekyllrb.com/).
 
@@ -28,27 +36,16 @@ Bring your own colors and fonts.
 git clone https://github.com/corbtastik/yolo.git
 cd yolo
 jekyll build
-jekyll serve
+jekyll serve  # open http://localhost:4000
 ```
 
 ---
 
-## Themes
+## Next Steps
 
-Yolo doesn't implement an "according to hoyle" Jekyll theme, but the colors, typography and site logo can be styled to your tastes.
-
-> "Theming" for Yolo is accomplished by providing a custom theme scss file as outlined below.
-
-* Copy one of the themes in `_sass/yolo/themes` to a new scss file.
-* Provide color values for each variable.
-* Enable by setting `site.style` in `_config.yml`.
+Take a gander at the [demo page](https://corbtastik.github.io/yolo/#getting-started) for info on usage, themes, and customizations.
 
 ---
-
-## Yolo demo
-
-* Yolo on Github Pages - [https://corbtastik.github.io/yolo](https://corbtastik.github.io/yolo)
-* Yolo on Surge - [https://corbtastik-yolo.surge.sh](https://corbtastik-yolo.surge.sh)
 
 ## License
 
