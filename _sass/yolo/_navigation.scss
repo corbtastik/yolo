@@ -1,40 +1,4 @@
-.sidebar {
-  position: fixed;
-  z-index: 50;
-  float: left;
-  top: 0;
-  left: 0;
-  width: 0.5rem;
-  height: 100%;
-  overflow-x: hidden;
-  transition: 0.5s;
-  border-style: solid;
-  border-right-width: .5rem;
-  border-left-width: 0;
-  border-top-width: 0;
-  border-bottom-width: 0;
-  &:is(.open) {
-    border-right-width: .1rem;
-  }
-  > .close {
-    position: absolute;
-    top: 0;
-    right: 25px;
-    font-size: 36px;
-    margin-left: 50px;
-    &:is(:hover) {
-      cursor: pointer;
-    }
-  }
-  > .inner {
-    width: auto;
-    height: 100%;
-    margin: 1.5em;
-    overflow-x: hidden;
-    transition: 0.2s;
-  }
-}
-
+// Toggled by yolo.js
 .nav-menu {
   ul {
     line-height: 1;

@@ -33,45 +33,12 @@
 // ----------------------------------------------------------------------------
 // Container classes
 // ----------------------------------------------------------------------------
-$container-offset: (2 * $gap) !default;
-$container-max-width: $fullhd !default;
-
 .container {
-  flex-grow: 1;
-  margin: 0 auto;
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
-  position: relative;
-  width: auto;
-  &.is-fluid {
-    max-width: none !important;
-    padding-left: $gap;
-    padding-right: $gap;
-    width: 100%;
-  }
-  @include desktop {
-    max-width: $desktop - $container-offset;
-  }
-  @include until-widescreen {
-    &.is-widescreen:not(.is-max-desktop) {
-      max-width: min($widescreen, $container-max-width) - $container-offset;
-    }
-  }
-  @include until-fullhd {
-    &.is-fullhd:not(.is-max-desktop):not(.is-max-widescreen) {
-      max-width: min($fullhd, $container-max-width) - $container-offset;
-    }
-  }
-  @include widescreen {
-    &:not(.is-max-desktop) {
-      max-width: min($widescreen, $container-max-width) - $container-offset;
-    }
-  }
-  @include fullhd {
-    &:not(.is-max-desktop):not(.is-max-widescreen) {
-      max-width: min($fullhd, $container-max-width) - $container-offset;
-    }
-  }
+  max-width: 48rem;
+  padding-left: 3rem;
+  padding-right: 3rem;
+  margin-left:  auto;
+  margin-right: auto;
 }
 
 // ----------------------------------------------------------------------------
@@ -524,170 +491,6 @@ $column-gap: 0.50rem !default;
       }
     }
   }
-  @include widescreen {
-    &.is-narrow-widescreen {
-      flex: none;
-      width: unset;
-    }
-    &.is-full-widescreen {
-      flex: none;
-      width: 100%;
-    }
-    &.is-three-quarters-widescreen {
-      flex: none;
-      width: 75%;
-    }
-    &.is-two-thirds-widescreen {
-      flex: none;
-      width: 66.6666%;
-    }
-    &.is-half-widescreen {
-      flex: none;
-      width: 50%;
-    }
-    &.is-one-third-widescreen {
-      flex: none;
-      width: 33.3333%;
-    }
-    &.is-one-quarter-widescreen {
-      flex: none;
-      width: 25%;
-    }
-    &.is-one-fifth-widescreen {
-      flex: none;
-      width: 20%;
-    }
-    &.is-two-fifths-widescreen {
-      flex: none;
-      width: 40%;
-    }
-    &.is-three-fifths-widescreen {
-      flex: none;
-      width: 60%;
-    }
-    &.is-four-fifths-widescreen {
-      flex: none;
-      width: 80%;
-    }
-    &.is-offset-three-quarters-widescreen {
-      @include ltr-property("margin", 75%, false);
-    }
-    &.is-offset-two-thirds-widescreen {
-      @include ltr-property("margin", 66.6666%, false);
-    }
-    &.is-offset-half-widescreen {
-      @include ltr-property("margin", 50%, false);
-    }
-    &.is-offset-one-third-widescreen {
-      @include ltr-property("margin", 33.3333%, false);
-    }
-    &.is-offset-one-quarter-widescreen {
-      @include ltr-property("margin", 25%, false);
-    }
-    &.is-offset-one-fifth-widescreen {
-      @include ltr-property("margin", 20%, false);
-    }
-    &.is-offset-two-fifths-widescreen {
-      @include ltr-property("margin", 40%, false);
-    }
-    &.is-offset-three-fifths-widescreen {
-      @include ltr-property("margin", 60%, false);
-    }
-    &.is-offset-four-fifths-widescreen {
-      @include ltr-property("margin", 80%, false);
-    }
-    @for $i from 0 through 12 {
-      &.is-#{$i}-widescreen {
-        flex: none;
-        width: percentage(divide($i, 12));
-      }
-      &.is-offset-#{$i}-widescreen {
-        @include ltr-property("margin", percentage(divide($i, 12)), false);
-      }
-    }
-  }
-  @include fullhd {
-    &.is-narrow-fullhd {
-      flex: none;
-      width: unset;
-    }
-    &.is-full-fullhd {
-      flex: none;
-      width: 100%;
-    }
-    &.is-three-quarters-fullhd {
-      flex: none;
-      width: 75%;
-    }
-    &.is-two-thirds-fullhd {
-      flex: none;
-      width: 66.6666%;
-    }
-    &.is-half-fullhd {
-      flex: none;
-      width: 50%;
-    }
-    &.is-one-third-fullhd {
-      flex: none;
-      width: 33.3333%;
-    }
-    &.is-one-quarter-fullhd {
-      flex: none;
-      width: 25%;
-    }
-    &.is-one-fifth-fullhd {
-      flex: none;
-      width: 20%;
-    }
-    &.is-two-fifths-fullhd {
-      flex: none;
-      width: 40%;
-    }
-    &.is-three-fifths-fullhd {
-      flex: none;
-      width: 60%;
-    }
-    &.is-four-fifths-fullhd {
-      flex: none;
-      width: 80%;
-    }
-    &.is-offset-three-quarters-fullhd {
-      @include ltr-property("margin", 75%, false);
-    }
-    &.is-offset-two-thirds-fullhd {
-      @include ltr-property("margin", 66.6666%, false);
-    }
-    &.is-offset-half-fullhd {
-      @include ltr-property("margin", 50%, false);
-    }
-    &.is-offset-one-third-fullhd {
-      @include ltr-property("margin", 33.3333%, false);
-    }
-    &.is-offset-one-quarter-fullhd {
-      @include ltr-property("margin", 25%, false);
-    }
-    &.is-offset-one-fifth-fullhd {
-      @include ltr-property("margin", 20%, false);
-    }
-    &.is-offset-two-fifths-fullhd {
-      @include ltr-property("margin", 40%, false);
-    }
-    &.is-offset-three-fifths-fullhd {
-      @include ltr-property("margin", 60%, false);
-    }
-    &.is-offset-four-fifths-fullhd {
-      @include ltr-property("margin", 80%, false);
-    }
-    @for $i from 0 through 12 {
-      &.is-#{$i}-fullhd {
-        flex: none;
-        width: percentage(divide($i, 12));
-      }
-      &.is-offset-#{$i}-fullhd {
-        @include ltr-property("margin", percentage(divide($i, 12)), false);
-      }
-    }
-  }
 }
 .columns {
   @include ltr-property("margin", (-$column-gap), false);
@@ -773,26 +576,6 @@ $column-gap: 0.50rem !default;
       }
       @include desktop {
         &.is-#{$i}-desktop {
-          --columnGap: #{$i * 0.25rem};
-        }
-      }
-      @include desktop-only {
-        &.is-#{$i}-desktop-only {
-          --columnGap: #{$i * 0.25rem};
-        }
-      }
-      @include widescreen {
-        &.is-#{$i}-widescreen {
-          --columnGap: #{$i * 0.25rem};
-        }
-      }
-      @include widescreen-only {
-        &.is-#{$i}-widescreen-only {
-          --columnGap: #{$i * 0.25rem};
-        }
-      }
-      @include fullhd {
-        &.is-#{$i}-fullhd {
           --columnGap: #{$i * 0.25rem};
         }
       }

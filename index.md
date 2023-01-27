@@ -9,7 +9,7 @@ tags:
 Yolo is laser focused on static single page sites, and while anyone can Yolo, it's purposely built for writers,
 techies, and picture taking folk.
 
-> _I don't always use single-page sites but when I do, I yolo._
+> _I don't always use single-page sites but when I do, I [yolo](https://github.com/corbtastik/yolo)._
 
 ##### Goals for Yolo
 {:.no-toc}

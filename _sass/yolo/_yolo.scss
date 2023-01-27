@@ -18,7 +18,11 @@
   color: text-color($bg, $syntax);
 }
 
-// page header
+#yolo-site {
+  opacity: 0;
+  transition: opacity 2s;
+}
+
 .yolo-header {
   .logo {
     border-radius: 50%;
@@ -103,6 +107,8 @@
   display: inline-flex;
   align-items: center;
   text-decoration: none;
+  margin-top: 0.25rem;
+  margin-bottom: 0.25rem;
   padding: 0.25rem 1rem;
   font-size: $size-6;
   font-weight: bold;
@@ -173,7 +179,10 @@
   }
 
   blockquote {
-    border-left: .25rem solid $light-accent-color;
+    border-left: .25rem solid $light-accent-color;;
+    border-top-right-radius: .25rem;
+    border-bottom-right-radius: .25rem;
+    background-color: $light-code-background-color;
   }
 
   hr {
@@ -303,11 +312,7 @@
   }
 
   .sidebar {
-    background-color: $light-secondary-color;
-    border-right-color: $light-accent-color;
-    &:is(.open) {
-      background-color: $light-code-background-color;
-    }
+    background-color: $light-sidebar-color;
   }
 
   .primary-color {
@@ -420,7 +425,10 @@
   }
 
   blockquote {
-    border-left: .25rem solid $dark-accent-color;
+    border-left: .25rem solid $dark-accent-color;;
+    border-top-right-radius: .25rem;
+    border-bottom-right-radius: .25rem;
+    background-color: $dark-code-background-color;
   }
 
   hr {
@@ -550,11 +558,7 @@
   }
 
   .sidebar {
-    background-color: $dark-secondary-color;
-    border-right-color: $dark-accent-color;
-    &:is(.open) {
-      background-color: $dark-code-background-color;
-    }
+    background-color: $dark-sidebar-color;
   }
 
   .primary-color {
@@ -649,4 +653,5 @@
     .vi {  /* Name.Variable.Instance */ @include dynamic-color($dark-code-background-color, "syntax04"); }
     .il {  /* Literal.Number.Integer.Long */ @include dynamic-color($dark-code-background-color, "syntax05"); }
   }
+
 }

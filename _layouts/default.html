@@ -2,10 +2,10 @@
 <html lang="en">
 {% include head.html %}
 <body id="yolo-site">
-  <div class="container center">
-    {% if site.sidebar %}
-    {% include sidebar.html %}
-    {% endif %}
+  {% if site.sidebar %}
+  {% include sidebar.html %}
+  {% endif %}
+  <div id="yolo-container" class="container {{ site.align }}">
     <header>
       {% include components/header.html %}
     </header>
