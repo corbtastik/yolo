@@ -47,6 +47,21 @@ Take a gander at the [demo page](https://corbtastik.github.io/yolo/#getting-star
 
 ---
 
+## Yolo themes
+
+There are 5 theme scss files included in `_sass/yolo/themes`, each defines color variables for dark and light modes.  Create your own scss file and configure the name in `_config.yml`.
+
+### Corbs
+
+#### Dark
+
+<img src="https://storage.googleapis.com/corbs-foto/yolo/screenshots/yolo-corbs-dark-01.png" alt="Yolo Corbs Dark" style="width:768px;">
+
+#### Light
+
+<img src="https://storage.googleapis.com/corbs-foto/yolo/screenshots/yolo-corbs-light-01.png" alt="Yolo Corbs Light" style="width:768px;">
+
+
 ## License
 
 [MIT License](/LICENSE)
