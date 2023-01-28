@@ -10,10 +10,10 @@
 {% endfor %}
 
 {% if sourceImage != nil %}
-{% if include.description %}
+{% if sourceImage.description %}
 <figure class="{{ include.classes }}">
-  <img class="image {{ include.classes }}" alt="{{ include.description }}"  src="{{ sourceImage.src }}">
-  <figcaption>{{ include.description }}</figcaption>
+  <img class="image {{ include.classes }}" alt="{{ sourceImage.description }}"  src="{{ sourceImage.src }}">
+  <figcaption>{{ sourceImage.description }}</figcaption>
 </figure>
 {% else %}
 <img class="image {{ include.classes }}" alt="{{ sourceImage.name }}" src="{{ sourceImage.src }}">

@@ -582,9 +582,9 @@ spec:
 * Ebbets Field
 
 * Boston Red Stockings
-  * Boston Red Caps
-    * Boston Beaneaters
-      * Boston Red Sox
+    * Boston Red Caps
+        * Boston Beaneaters
+            * Boston Red Sox
 
 #### Ordered
 {:.no-toc}
