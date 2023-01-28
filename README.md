@@ -51,15 +51,45 @@ Take a gander at the [demo page](https://corbtastik.github.io/yolo/#getting-star
 
 There are 5 theme scss files included in `_sass/yolo/themes`, each defines color variables for dark and light modes.  Create your own scss file and configure the name in `_config.yml`.
 
-### Corbs
+### Corbs > Dark
 
-#### Dark
+<img src="https://storage.googleapis.com/corbs-foto/yolo/screenshots/yolo-corbs-dark-01.png" alt="Yolo Corbs Dark" style="width:384px;">
 
-<img src="https://storage.googleapis.com/corbs-foto/yolo/screenshots/yolo-corbs-dark-01.png" alt="Yolo Corbs Dark" style="width:768px;">
+### Corbs > Light
 
-#### Light
+<img src="https://storage.googleapis.com/corbs-foto/yolo/screenshots/yolo-corbs-light-01.png" alt="Yolo Corbs Light" style="width:384px;">
 
-<img src="https://storage.googleapis.com/corbs-foto/yolo/screenshots/yolo-corbs-light-01.png" alt="Yolo Corbs Light" style="width:768px;">
+### Arcade > Dark
+
+<img src="https://storage.googleapis.com/corbs-foto/yolo/screenshots/yolo-arcade-dark-01.png" alt="Yolo Arcade Dark" style="width:384px;">
+
+### Arcade > Light
+
+<img src="https://storage.googleapis.com/corbs-foto/yolo/screenshots/yolo-arcade-light-01.png" alt="Yolo Arcade Light" style="width:384px;">
+
+### Skeletor > Dark
+
+<img src="https://storage.googleapis.com/corbs-foto/yolo/screenshots/yolo-skeletor-dark-01.png" alt="Yolo Skeletor Dark" style="width:384px;">
+
+### Skeletor > Light
+
+<img src="https://storage.googleapis.com/corbs-foto/yolo/screenshots/yolo-skeletor-light-01.png" alt="Yolo Skeletor Light" style="width:384px;">
+
+### Solo > Dark
+
+<img src="https://storage.googleapis.com/corbs-foto/yolo/screenshots/yolo-solo-dark-01.png" alt="Yolo Solo Dark" style="width:384px;">
+
+### Solo > Light
+
+<img src="https://storage.googleapis.com/corbs-foto/yolo/screenshots/yolo-solo-light-01.png" alt="Yolo Solo Light" style="width:384px;">
+
+### Weekly > Dark
+
+<img src="https://storage.googleapis.com/corbs-foto/yolo/screenshots/yolo-weekly-dark-01.png" alt="Yolo Weekly Dark" style="width:384px;">
+
+### Weekly > Light
+
+<img src="https://storage.googleapis.com/corbs-foto/yolo/screenshots/yolo-weekly-light-01.png" alt="Yolo Weekly Light" style="width:384px;">
 
 
 ## License
