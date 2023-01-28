@@ -1,0 +1,12 @@
+{
+  "title": "Yolo on my friend",
+  "name": "Yolo",
+  "description": "Loveable single page sites",
+  "style": "corbs",
+  "align": "left",
+  "logo": "assets/images/site/logo.png",
+  "images": "https://storage.googleapis.com/corbs-foto/yolo",
+  "sidebar": {
+    "logo": "assets/images/site/logo.png"
+  }
+}
