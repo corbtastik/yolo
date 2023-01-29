@@ -1,6 +1,6 @@
 # Site settings
+name: Weekly
 title: Weekly
-tag_text: Weekly
 description: Status Report
 # Site customizations
 style: weekly

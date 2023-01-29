@@ -7,10 +7,11 @@ style: corbs
 # Align content, left, center or right (default is left)
 align: left
 #logo: assets/images/site/logo.png
+images: https://storage.googleapis.com/corbs-foto/yolo
 sidebar:
   logo: assets/images/site/logo.png
 # Build settings
-version: v1.3
+version: v1.2
 markdown: kramdown
 exclude:
   - "README.md"

@@ -611,20 +611,6 @@ spec:
 | <a href="https://www.baseball-reference.com/players/r/ruthba01.shtml" target="_blank">Babe Ruth</a> | .342 | 714 |
 | <a href="https://www.baseball-reference.com/players/w/wilsomo01.shtml" target="_blank">Mookie Wilson</a> | .274 | 67 |
 
-| Rank | Movie                                                                                                                   |
-|:-----|:------------------------------------------------------------------------------------------------------------------------|
-| 1    | [Rogue One](https://en.wikipedia.org/wiki/Rogue_One)                                                                    |
-| 2    | [Episode V – The Empire Strikes Back](https://en.wikipedia.org/wiki/The_Empire_Strikes_Back)                            |
-| 3    | [Episode IV – A New Hope](https://en.wikipedia.org/wiki/Star_Wars_(film))                                               |
-| 4    | [Episode VII – The Force Awakens](https://en.wikipedia.org/wiki/Star_Wars:_The_Force_Awakens)                           |
-| 5    | [Solo: A Star Wars Story](https://en.wikipedia.org/wiki/Solo:_A_Star_Wars_Story)                                        |
-| 6    | [Episode VI – Return of the Jedi](https://en.wikipedia.org/wiki/Return_of_the_Jedi)                                     |
-| 7    | [Episode VIII – The Last Jedi](https://en.wikipedia.org/wiki/Star_Wars:_The_Last_Jedi)                                  |
-| 8    | [Episode IX – The Rise of Skywalker](https://en.wikipedia.org/wiki/Star_Wars:_The_Rise_of_Skywalker)                    |
-| 9    | [Episode III – Revenge of the Sith](https://en.wikipedia.org/wiki/Star_Wars:_Episode_III_%E2%80%93_Revenge_of_the_Sith) |
-| 10   | [Episode II – Attack of the Clones](https://en.wikipedia.org/wiki/Star_Wars:_Episode_II_%E2%80%93_Attack_of_the_Clones) |
-| 11   | [Episode I – The Phantom Menace](https://en.wikipedia.org/wiki/Star_Wars:_Episode_I_%E2%80%93_The_Phantom_Menace)       |
-
 #### Formatted content
 {:.no-toc}
 
@@ -653,14 +639,14 @@ spec:
 {% include code.html label="Markdown images" %}
 {% raw %}
 ```markdown
-![Moonie Moonpie](assets/images/site/moonpie.png "Sweet Moonpie")
-![BIG yawn Bucky](assets/images/site/bucky.png "Sleepy Bucky")
+![Moonie Moonpie]({{ site.images }}/site/moonpie.png "Sweet Moonpie")
+![BIG yawn Bucky]({{ site.images }}/site/bucky.png "Sleepy Bucky")
 ```
 {% endraw %}
 
-![Moonie Moonpie](assets/images/site/moonpie.png "Sweet Moonpie")
+![Moonie Moonpie]({{ site.images }}/site/moonpie.png "Sweet Moonpie")
 
-![BIG yawn Bucky](assets/images/site/bucky.png "Sleepy Bucky")
+![BIG yawn Bucky]({{ site.images }}/site/bucky.png "Sleepy Bucky")
 
 [↑↑↑](#table-of-contents){: .back-to-top}
 
@@ -690,7 +676,7 @@ Thumbnails are 128px x 128px and use the `thumbnail` class.
 {%
   include image/image.html
   classes="thumbnail"
-  src="https://storage.googleapis.com/corbs-foto/yolo/yolo/big-face-bucky.png"
+  src="yolo/big-face-bucky.png"
 %}
 ```
 {% endraw %}
@@ -700,7 +686,7 @@ Thumbnails are 128px x 128px and use the `thumbnail` class.
 {%
 include image/image.html
 classes="thumbnail"
-src="https://storage.googleapis.com/corbs-foto/yolo/yolo/big-face-bucky.png"
+src="yolo/big-face-bucky.png"
 %}
 
 [↑↑↑](#table-of-contents){: .back-to-top}
@@ -718,7 +704,7 @@ Square images can be added with the following classes: `is-16`, `is-24`, `is-32`
 {%
   include image/image.html
   classes="image is-256"
-  src="https://storage.googleapis.com/corbs-foto/yolo/yolo/drive-in.png"
+  src="yolo/drive-in.png"
 %}
 ```
 {% endraw %}
@@ -728,7 +714,7 @@ Square images can be added with the following classes: `is-16`, `is-24`, `is-32`
 {%
 include image/image.html
 classes="image is-256"
-src="https://storage.googleapis.com/corbs-foto/yolo/yolo/drive-in.png"
+src="yolo/drive-in.png"
 %}
 
 [↑↑↑](#table-of-contents){: .back-to-top}
@@ -747,7 +733,7 @@ Circle images can be added with the following classes: `is-circle-16`, `is-circl
 {%
   include image/image.html
   classes="is-circle-256"
-  src="https://storage.googleapis.com/corbs-foto/yolo/yolo/big-face-bucky.png"
+  src="yolo/big-face-bucky.png"
 %}
 ```
 {% endraw %}
@@ -757,7 +743,7 @@ Circle images can be added with the following classes: `is-circle-16`, `is-circl
 {%
 include image/image.html
 classes="is-circle-256"
-src="https://storage.googleapis.com/corbs-foto/yolo/yolo/big-face-bucky.png"
+src="yolo/big-face-bucky.png"
 %}
 
 [↑↑↑](#table-of-contents){: .back-to-top}
@@ -776,7 +762,7 @@ src="https://storage.googleapis.com/corbs-foto/yolo/yolo/big-face-bucky.png"
 {%
   include image/image.html
   classes="image is-256-by-192"
-  src="https://storage.googleapis.com/corbs-foto/yolo/yolo/bluebonnet.png"
+  src="yolo/bluebonnet.png"
 %}
 ```
 {% endraw %}
@@ -786,7 +772,7 @@ src="https://storage.googleapis.com/corbs-foto/yolo/yolo/big-face-bucky.png"
 {%
 include image/image.html
 classes="image is-256-by-192"
-src="https://storage.googleapis.com/corbs-foto/yolo/yolo/bluebonnet.png"
+src="yolo/bluebonnet.png"
 %}
 
 [↑↑↑](#table-of-contents){: .back-to-top}
@@ -805,7 +791,7 @@ src="https://storage.googleapis.com/corbs-foto/yolo/yolo/bluebonnet.png"
 {%
   include image/image.html
   classes="image is-240-by-320"
-  src="https://storage.googleapis.com/corbs-foto/yolo/yolo/bluebonnet.png"
+  src="yolo/bluebonnet.png"
 %}
 ```
 {% endraw %}
@@ -815,7 +801,7 @@ src="https://storage.googleapis.com/corbs-foto/yolo/yolo/bluebonnet.png"
 {%
 include image/image.html
 classes="image is-240-by-320"
-src="https://storage.googleapis.com/corbs-foto/yolo/yolo/bluebonnet.png"
+src="yolo/bluebonnet.png"
 %}
 
 [↑↑↑](#table-of-contents){: .back-to-top}
@@ -834,7 +820,7 @@ src="https://storage.googleapis.com/corbs-foto/yolo/yolo/bluebonnet.png"
 {%
   include image/image.html
   classes="image is-256-by-144"
-  src="https://storage.googleapis.com/corbs-foto/yolo/yolo/bluebonnet.png"
+  src="yolo/bluebonnet.png"
 %}
 ```
 {% endraw %}
@@ -844,7 +830,7 @@ src="https://storage.googleapis.com/corbs-foto/yolo/yolo/bluebonnet.png"
 {%
 include image/image.html
 classes="image is-256-by-144"
-src="https://storage.googleapis.com/corbs-foto/yolo/yolo/bluebonnet.png"
+src="yolo/bluebonnet.png"
 %}
 
 [↑↑↑](#table-of-contents){: .back-to-top}
@@ -863,7 +849,7 @@ src="https://storage.googleapis.com/corbs-foto/yolo/yolo/bluebonnet.png"
 {%
   include image/image.html
   classes="image is-225-by-400"
-  src="https://storage.googleapis.com/corbs-foto/yolo/yolo/bluebonnet.png"
+  src="yolo/bluebonnet.png"
 %}
 ```
 {% endraw %}
@@ -873,7 +859,7 @@ src="https://storage.googleapis.com/corbs-foto/yolo/yolo/bluebonnet.png"
 {%
 include image/image.html
 classes="image is-225-by-400"
-src="https://storage.googleapis.com/corbs-foto/yolo/yolo/bluebonnet.png"
+src="yolo/bluebonnet.png"
 %}
 
 [↑↑↑](#table-of-contents){: .back-to-top}

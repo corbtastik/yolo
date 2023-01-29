@@ -347,3 +347,12 @@ template {
 [hidden] {
     display: none;
 }
+
+/*
+ * Added by corbs
+ */
+figure {
+    display: block;
+    margin: 0;
+    padding: 0;
+}
