@@ -21,10 +21,10 @@
 {% else %}
 {% if include.description %}
 <figure>
-  <img class="image {{ include.classes }}" alt="{{ include.description }}"  src="{{ site.images }}/{{ include.src }}">
+  <img class="image {{ include.classes }}" alt="{{ include.description }}"  src="{{ include.src }}">
   <figcaption>{{ include.description }}</figcaption>
 </figure>
 {% else %}
-<img class="image {{ include.classes }}" alt="{{ include.src }}" src="{{ site.images }}/{{ include.src }}">
+<img class="image {{ include.classes }}" alt="{{ include.src }}" src="{{ include.src }}">
 {% endif %}
 {% endif %}
