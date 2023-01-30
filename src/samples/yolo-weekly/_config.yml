@@ -4,9 +4,10 @@ title: Weekly
 description: Status Report
 # Site customizations
 style: weekly
-logo: assets/images/site/logo.png
-images: https://storage.googleapis.com/corbs-foto/yolo
-sidebar: true
+header:
+  logo: assets/images/site/logo.png
+sidebar:
+  logo: assets/images/site/logo.png
 # Build settings
 version: v1.16
 markdown: kramdown

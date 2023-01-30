@@ -137,9 +137,10 @@ Yolo's colors can be customized as outlined in [Yolo Themes](#themes).
 {% include flexbox.html columns="1" fill="primary-color" %}
 {% include flexbox.html columns="1" fill="secondary-color" %}
 {% include flexbox.html columns="1" fill="accent-color" %}
+{% include flexbox.html columns="1" fill="link-color" %}
 {% include flexbox.html columns="1" fill="code-background-color" %}
 {% include flexbox.html columns="1" fill="code-color" %}
-{% include flexbox.html columns="1" fill="link-color" %}
+{% include flexbox.html columns="1" fill="sidebar-color" %}
 
 [↑↑↑](#table-of-contents){: .back-to-top}
 

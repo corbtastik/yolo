@@ -4,8 +4,10 @@ title: Yolo, a loveable single page theme
 description: A loveable single page theme
 # Site customizations
 style: bookworm
-logo: assets/images/site/logo.png
-images: assets/images
+header:
+  logo: assets/images/site/logo.png
+sidebar:
+  logo: assets/images/site/logo.png
 # Build settings
 version: v1.12
 markdown: kramdown

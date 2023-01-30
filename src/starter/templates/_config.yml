@@ -3,10 +3,10 @@ title: {{ title }}
 description: {{ description }}
 style: {{ style }}
 align: {{ align }}
-header:
-  logo: {{ header.logo }}
-sidebar:
-  logo: {{ sidebar.logo }}
+#header:
+#  logo: {{ header.logo }}
+#sidebar:
+#  logo: {{ sidebar.logo }}
 version: {{ yolo.version }}
 markdown: kramdown
 exclude:
