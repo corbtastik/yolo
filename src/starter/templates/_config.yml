@@ -1,0 +1,19 @@
+name: {{ name }}
+title: {{ title }}
+description: {{ description }}
+style: {{ style }}
+align: {{ align }}
+header:
+  logo: {{ header.logo }}
+sidebar:
+  logo: {{ sidebar.logo }}
+version: {{ yolo.version }}
+markdown: kramdown
+exclude:
+  - "README.md"
+  - "Makefile"
+  - "Containerfile"
+  - "src/"
+  - "docs/"
+sass:
+  style: compressed

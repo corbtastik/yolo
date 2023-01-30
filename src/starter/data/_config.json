@@ -1,11 +1,16 @@
 {
-  "title": "Yolo on my friend",
   "name": "Yolo",
+  "title": "Yolo on my friend",
   "description": "Loveable single page sites",
   "style": "corbs",
   "align": "left",
-  "logo": "assets/images/site/logo.png",
+  "header": {
+    "logo": "assets/images/site/logo.png"
+  },
   "sidebar": {
     "logo": "assets/images/site/logo.png"
+  },
+  "yolo": {
+    "version": "v1.3"
   }
 }

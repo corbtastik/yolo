@@ -95,6 +95,10 @@
     }
   }
 
+  .yolo-footer {
+    color: $dark-accent-color;
+  }
+
   .lb-modal {
     background-color: $dark-primary-color;
   }
@@ -168,6 +172,10 @@
     background-color: $dark-accent-color;
     color: $dark-primary-color;
   }
+  .link-color {
+    background-color: $dark-link-color;
+    color: $dark-primary-color;
+  }
   .code-background-color {
     background-color: $dark-code-background-color;
     color: $dark-code-color;
@@ -176,9 +184,9 @@
     background-color: $dark-code-color;
     color: $dark-code-background-color;
   }
-  .link-color {
-    background-color: $dark-link-color;
-    color: $dark-primary-color;
+  .sidebar-color {
+    background-color: $dark-sidebar-color;
+    color: $dark-secondary-color;
   }
 
   .highlight {
