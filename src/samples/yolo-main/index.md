@@ -303,6 +303,7 @@ H1 is reserved for the site header and not shown here.
 }]
 ```
 
+
 {% include code.html label="Bash snippet" %}
 ```bash
 #!/bin/bash
