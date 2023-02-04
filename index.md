@@ -81,6 +81,7 @@ __Color properties:__
 | `*-code-background-color` | Background color for code snippets    |
 | `*-code-color`            | Text color for inline code & snippets |
 | `*-link-color`            | Hyperlink color                       |
+| `*-sidebar-color`         | Sidebar background color              |
 
 __Font family properties:__
 
@@ -98,17 +99,19 @@ __Theme file:__
 ```scss
 $light-primary-color: #fff;
 $light-secondary-color: #000;
-$light-accent-color: #757575;
-$light-code-background-color: #424242;
-$light-code-color: #757575;
+$light-accent-color: #383838;
+$light-code-background-color: #fff;
+$light-code-color: #000;
 $light-link-color: #2196f3;
+$light-sidebar-color: #fff;
 
 $dark-primary-color: #000;
 $dark-secondary-color: #fff;
-$dark-accent-color: #bdbdbd;
-$dark-code-background-color: #424242;
+$dark-accent-color: #b3b2b2;
+$dark-code-background-color: #000;
 $dark-code-color: #fff;
 $dark-link-color: #2196f3;
+$dark-sidebar-color: #000;
 
 $family-primary: "Open Sans", sans-serif;
 $family-secondary: "Raleway", sans-serif;
@@ -268,41 +271,6 @@ H1 is reserved for the site header and not shown here.
 ### Code
 
 > __Tip:__ Click header to copy a snippet.
-
-{% include code.html label="JSON array" %}
-```json
-[{
-  "id": 1000,
-  "first_name": "Sponge",
-  "last_name": "Bob",
-  "email": "spongebob@krustykrab.com",
-  "phone": "555-555-5555",
-  "address": "124 Conch Street",
-  "city": "Bikini Bottom"
-}, {
-  "id": 1001,
-  "first_name": "Charlie",
-  "last_name": "Brown",
-  "email": "chuck@peanuts.com",
-  "phone": "612-111-7777",
-  "address": "1770 James Street",
-  "city": "Minneapolis",
-  "state": "Minnesota",
-  "zipcode": "55403"
-}, {
-  "id": 3,
-  "first_name": "Levon",
-  "last_name": "Laurent",
-  "email": "llaurent2@etsy.com",
-  "phone": "212-535-6056",
-  "schools": "Zhejiang Normal University",
-  "address": "93 Lyons Court",
-  "city": "New York City",
-  "state": "New York",
-  "zipcode": "10125"
-}]
-```
-
 
 {% include code.html label="Bash snippet" %}
 ```bash
@@ -606,42 +574,28 @@ spec:
 
 > __See:__ [Github markdown tables](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/organizing-information-with-tables)
 
-| Player        | BA            | HR           |
-| ------------- | ------------- | ------------ |
-| <a href="https://www.baseball-reference.com/players/a/aaronha01.shtml" target="_blank">Hank Aaron</a> | .305 | 755 |
-| <a href="https://www.baseball-reference.com/players/r/ruthba01.shtml" target="_blank">Babe Ruth</a> | .342 | 714 |
-| <a href="https://www.baseball-reference.com/players/w/wilsomo01.shtml" target="_blank">Mookie Wilson</a> | .274 | 67 |
-
-| Rank | Movie                                                                                                                   |
-|:-----|:------------------------------------------------------------------------------------------------------------------------|
-| 1    | [Rogue One](https://en.wikipedia.org/wiki/Rogue_One)                                                                    |
-| 2    | [Episode V – The Empire Strikes Back](https://en.wikipedia.org/wiki/The_Empire_Strikes_Back)                            |
-| 3    | [Episode IV – A New Hope](https://en.wikipedia.org/wiki/Star_Wars_(film))                                               |
-| 4    | [Episode VII – The Force Awakens](https://en.wikipedia.org/wiki/Star_Wars:_The_Force_Awakens)                           |
-| 5    | [Solo: A Star Wars Story](https://en.wikipedia.org/wiki/Solo:_A_Star_Wars_Story)                                        |
-| 6    | [Episode VI – Return of the Jedi](https://en.wikipedia.org/wiki/Return_of_the_Jedi)                                     |
-| 7    | [Episode VIII – The Last Jedi](https://en.wikipedia.org/wiki/Star_Wars:_The_Last_Jedi)                                  |
-| 8    | [Episode IX – The Rise of Skywalker](https://en.wikipedia.org/wiki/Star_Wars:_The_Rise_of_Skywalker)                    |
-| 9    | [Episode III – Revenge of the Sith](https://en.wikipedia.org/wiki/Star_Wars:_Episode_III_%E2%80%93_Revenge_of_the_Sith) |
-| 10   | [Episode II – Attack of the Clones](https://en.wikipedia.org/wiki/Star_Wars:_Episode_II_%E2%80%93_Attack_of_the_Clones) |
-| 11   | [Episode I – The Phantom Menace](https://en.wikipedia.org/wiki/Star_Wars:_Episode_I_%E2%80%93_The_Phantom_Menace)       |
+| Player                                                                                                   | BA   | HR  |
+|----------------------------------------------------------------------------------------------------------|------|-----|
+| <a href="https://www.baseball-reference.com/players/a/aaronha01.shtml" target="_blank">Hank Aaron</a>    | .305 | 755 |
+| <a href="https://www.baseball-reference.com/players/r/ruthba01.shtml" target="_blank">Babe Ruth</a>      | .342 | 714 |
+| <a href="https://www.baseball-reference.com/players/w/wilsomo01.shtml" target="_blank">Mookie Wilson</a> | .274 | 67  |
 
 #### Formatted content
 {:.no-toc}
 
-| Command | Description |
-| --- | --- |
-| `git rm` | <del>Remove</del> a file from the index |
-| `git status` | List all *new or modified* files |
-| `git diff` | Show file differences that **haven't been** staged |
+| Command      | Description                                        |
+|--------------|----------------------------------------------------|
+| `git rm`     | <del>Remove</del> a file from the index            |
+| `git status` | List all *new or modified* files                   |
+| `git diff`   | Show file differences that **haven't been** staged |
 
 #### Cell alignment
 {:.no-toc}
 
 | Left-aligned | Center-aligned | Right-aligned |
-| :---         |     :---:      |          ---: |
-| `git status` | `git status`   | `git status`  |
-| `git diff`   | `git diff`     | `git diff`    |
+|:-------------|:--------------:|--------------:|
+| `git status` |  `git status`  |  `git status` |
+| `git diff`   |   `git diff`   |    `git diff` |
 
 [↑↑↑](#table-of-contents){: .back-to-top}
 
