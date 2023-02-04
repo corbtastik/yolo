@@ -1,189 +1,144 @@
-- name: IMG_0278
-  src: https://storage.googleapis.com/corbs-foto/dallas/IMG_0278.png
-  description: IMG_0278
-- name: IMG_0569
-  src: https://storage.googleapis.com/corbs-foto/dallas/IMG_0569.png
-  description: IMG_0569
-- name: IMG_0867
-  src: https://storage.googleapis.com/corbs-foto/dallas/IMG_0867.png
-  description: IMG_0867
-- name: IMG_0872
+- name: flying-into-dallas
   src: https://storage.googleapis.com/corbs-foto/dallas/IMG_0872.png
-  description: IMG_0872
-- name: IMG_1144
-  src: https://storage.googleapis.com/corbs-foto/dallas/IMG_1144.png
-  description: IMG_1144
-- name: IMG_1145
-  src: https://storage.googleapis.com/corbs-foto/dallas/IMG_1145.png
-  description: IMG_1145
-- name: IMG_1146
-  src: https://storage.googleapis.com/corbs-foto/dallas/IMG_1146.png
-  description: IMG_1146
-- name: IMG_1147
-  src: https://storage.googleapis.com/corbs-foto/dallas/IMG_1147.png
-  description: IMG_1147
-- name: IMG_1150
-  src: https://storage.googleapis.com/corbs-foto/dallas/IMG_1150.png
-  description: IMG_1150
-- name: IMG_1153
-  src: https://storage.googleapis.com/corbs-foto/dallas/IMG_1153.png
-  description: IMG_1153
-- name: IMG_1156
-  src: https://storage.googleapis.com/corbs-foto/dallas/IMG_1156.png
-  description: IMG_1156
-- name: IMG_1158
-  src: https://storage.googleapis.com/corbs-foto/dallas/IMG_1158.png
-  description: IMG_1158
-- name: IMG_1163
-  src: https://storage.googleapis.com/corbs-foto/dallas/IMG_1163.png
-  description: IMG_1163
-- name: IMG_1164
-  src: https://storage.googleapis.com/corbs-foto/dallas/IMG_1164.png
-  description: IMG_1164
-- name: IMG_1168
-  src: https://storage.googleapis.com/corbs-foto/dallas/IMG_1168.png
-  description: IMG_1168
-- name: IMG_1170
-  src: https://storage.googleapis.com/corbs-foto/dallas/IMG_1170.png
-  description: IMG_1170
-- name: IMG_1172
-  src: https://storage.googleapis.com/corbs-foto/dallas/IMG_1172.png
-  description: IMG_1172
-- name: IMG_1175
-  src: https://storage.googleapis.com/corbs-foto/dallas/IMG_1175.png
-  description: IMG_1175
-- name: IMG_1179
-  src: https://storage.googleapis.com/corbs-foto/dallas/IMG_1179.png
-  description: IMG_1179
-- name: IMG_1183
-  src: https://storage.googleapis.com/corbs-foto/dallas/IMG_1183.png
-  description: IMG_1183
-- name: IMG_1185
-  src: https://storage.googleapis.com/corbs-foto/dallas/IMG_1185.png
-  description: IMG_1185
-- name: IMG_1193
-  src: https://storage.googleapis.com/corbs-foto/dallas/IMG_1193.png
-  description: IMG_1193
-- name: IMG_1197
-  src: https://storage.googleapis.com/corbs-foto/dallas/IMG_1197.png
-  description: IMG_1197
-- name: IMG_1200
-  src: https://storage.googleapis.com/corbs-foto/dallas/IMG_1200.png
-  description: IMG_1200
-- name: IMG_1203
-  src: https://storage.googleapis.com/corbs-foto/dallas/IMG_1203.png
-  description: IMG_1203
-- name: IMG_1207
-  src: https://storage.googleapis.com/corbs-foto/dallas/IMG_1207.png
-  description: IMG_1207
-- name: IMG_1210
-  src: https://storage.googleapis.com/corbs-foto/dallas/IMG_1210.png
-  description: IMG_1210
-- name: IMG_1454
-  src: https://storage.googleapis.com/corbs-foto/dallas/IMG_1454.png
-  description: IMG_1454
-- name: IMG_1456
-  src: https://storage.googleapis.com/corbs-foto/dallas/IMG_1456.png
-  description: IMG_1456
-- name: IMG_1463
-  src: https://storage.googleapis.com/corbs-foto/dallas/IMG_1463.png
-  description: IMG_1463
-- name: IMG_2046
-  src: https://storage.googleapis.com/corbs-foto/dallas/IMG_2046.png
-  description: IMG_2046
-- name: IMG_2153
-  src: https://storage.googleapis.com/corbs-foto/dallas/IMG_2153.png
-  description: IMG_2153
-- name: IMG_2154
-  src: https://storage.googleapis.com/corbs-foto/dallas/IMG_2154.png
-  description: IMG_2154
-- name: IMG_2160
-  src: https://storage.googleapis.com/corbs-foto/dallas/IMG_2160.png
-  description: IMG_2160
-- name: IMG_3211
-  src: https://storage.googleapis.com/corbs-foto/dallas/IMG_3211.png
-  description: IMG_3211
-- name: IMG_3946
+  description: Early morning flight into Big D
+- name: dallas-from-a-plane
   src: https://storage.googleapis.com/corbs-foto/dallas/IMG_3946.png
-  description: IMG_3946
-- name: IMG_4073
+  description: Downtown Dallas from the sky
+- name: bigd-steak
+  src: https://storage.googleapis.com/corbs-foto/dallas/IMG_0278.png
+  description: A Big D steak!
+- name: good-ole-bowl-of-chili
+  src: https://storage.googleapis.com/corbs-foto/dallas/IMG_0569.png
+  description: A good ole bowl of chili at Tolbert's
+- name: dallas-does-italian
+  src: https://storage.googleapis.com/corbs-foto/dallas/IMG_0867.png
+  description: Dallas does Italian food!
+- name: campisis-on-lovers-lane
+  src: https://storage.googleapis.com/corbs-foto/dallas/IMG_1144.png
+  description: A Dallas staple - Campisi's on Lovers Lane
+- name: campisis-signage
+  src: https://storage.googleapis.com/corbs-foto/dallas/IMG_1145.png
+  description: Campisi's signage be cool
+- name: campisis-egyptian-restaurant
+  src: https://storage.googleapis.com/corbs-foto/dallas/IMG_1146.png
+  description: Campisi's Egyptian Restaurant
+- name: granada-theater
+  src: https://storage.googleapis.com/corbs-foto/dallas/IMG_1150.png
+  description: The classic Granada Theater on Greenville Ave
+- name: the-bank-of-america-building-at-night
+  src: https://storage.googleapis.com/corbs-foto/dallas/IMG_1156.png
+  description: The iconic green Bank of America building at night
+- name: the-omni-hotel
+  src: https://storage.googleapis.com/corbs-foto/dallas/IMG_1170.png
+  description: The Omni Hotel in downtown Dallas
+- name: the-red-pegasus-1
+  src: https://storage.googleapis.com/corbs-foto/dallas/IMG_1164.png
+  description: The red Pegasus
+- name: the-red-pegasus-2
+  src: https://storage.googleapis.com/corbs-foto/dallas/IMG_1183.png
+  description: The red Pegasus turning and a turning...
+- name: the-red-pegasus-3
+  src: https://storage.googleapis.com/corbs-foto/dallas/IMG_1203.png
+  description: Close up of the red Pegasus
+- name: bishop-ave-mural
+  src: https://storage.googleapis.com/corbs-foto/dallas/IMG_1454.png
+  description: A mural on Bishop Ave
+- name: hunkys-hamburger
+  src: https://storage.googleapis.com/corbs-foto/dallas/IMG_1456.png
+  description: A big jalapeno burger at Hunky's
+- name: strolling-the-bishop-arts-district
+  src: https://storage.googleapis.com/corbs-foto/dallas/IMG_1463.png
+  description: A stroll in the Bishop Arts District
+- name: jfk-memorial-plaza
+  src: https://storage.googleapis.com/corbs-foto/dallas/IMG_2046.png
+  description: John F. Kennedy Memorial Plaza, downtown Dallas
+- name: the-palace-theater-grapevine
+  src: https://storage.googleapis.com/corbs-foto/dallas/IMG_2153.png
+  description: The Palace Theater in Grapevine
+- name: blue-camero-in-grapevine
+  src: https://storage.googleapis.com/corbs-foto/dallas/IMG_2154.png
+  description: Cars are a big deal in Big D
+- name: shelby-mustang-interior
+  src: https://storage.googleapis.com/corbs-foto/dallas/IMG_2160.png
+  description: The interior of a Shelby Mustang in Grapevine
+- name: the-candlelight-inn
+  src: https://storage.googleapis.com/corbs-foto/dallas/IMG_3211.png
+  description: The Candlelight Inn - A junk foodies dream
+- name: blue-christmas-light
   src: https://storage.googleapis.com/corbs-foto/dallas/IMG_4073.png
-  description: IMG_4073
-- name: IMG_4083
+  description: A blue christmas light in Arlington
+- name: red-christmas-light
   src: https://storage.googleapis.com/corbs-foto/dallas/IMG_4083.png
-  description: IMG_4083
-- name: IMG_4086
+  description: A red christmas light in Arlington
+- name: green-christmas-light
   src: https://storage.googleapis.com/corbs-foto/dallas/IMG_4086.png
-  description: IMG_4086
-- name: IMG_4122
+  description: A green christmas light in Arlington
+- name: christmas-light-tree
   src: https://storage.googleapis.com/corbs-foto/dallas/IMG_4122.png
-  description: IMG_4122
-- name: IMG_4139
+  description: A Christmas light tree in Arlington
+- name: christmas-light-drive
   src: https://storage.googleapis.com/corbs-foto/dallas/IMG_4139.png
-  description: IMG_4139
-- name: IMG_4648
+  description: Driving under Christmas lights in Arlington
+- name: america-airline-center
   src: https://storage.googleapis.com/corbs-foto/dallas/IMG_4648.png
-  description: IMG_4648
-- name: IMG_4655
+  description: The AA Center before a Dallas Mavs game
+- name: mavs-pre-game
   src: https://storage.googleapis.com/corbs-foto/dallas/IMG_4655.png
-  description: IMG_4655
-- name: IMG_4680
+  description: Dallas Mavs pre-game warmup
+- name: mavs-vs-pistons
   src: https://storage.googleapis.com/corbs-foto/dallas/IMG_4680.png
-  description: IMG_4680
-- name: IMG_4703
-  src: https://storage.googleapis.com/corbs-foto/dallas/IMG_4703.png
-  description: IMG_4703
-- name: IMG_4717
+  description: The Dallas Mavs vs Detroit Pistons
+- name: mavs-halftime
   src: https://storage.googleapis.com/corbs-foto/dallas/IMG_4717.png
-  description: IMG_4717
-- name: IMG_4720
+  description: Halftime at the Mavs game
+- name: the-mavs-maniacs
   src: https://storage.googleapis.com/corbs-foto/dallas/IMG_4720.png
-  description: IMG_4720
-- name: IMG_4727
+  description: The Mavs Maniacs
+- name: mavs-over-pistons
   src: https://storage.googleapis.com/corbs-foto/dallas/IMG_4727.png
-  description: IMG_4727
-- name: IMG_6048
+  description: Mavs 106, Pistons 101, what a game!
+- name: president-george-w-bush-library-ceiling
   src: https://storage.googleapis.com/corbs-foto/dallas/IMG_6048.png
-  description: IMG_6048
-- name: IMG_6049
+  description: Ceiling of the George W. Bush Presidential Library
+- name: digital-mural-gwb-library
   src: https://storage.googleapis.com/corbs-foto/dallas/IMG_6049.png
-  description: IMG_6049
-- name: IMG_6052
+  description: A digital mural in the George W. Bush Presidential Library
+- name: gwb-library-doors
   src: https://storage.googleapis.com/corbs-foto/dallas/IMG_6052.png
-  description: IMG_6052
-- name: IMG_6054
+  description: Doors in the George W. Bush Presidential Library
+- name: foyer-in-the-gwb-library
   src: https://storage.googleapis.com/corbs-foto/dallas/IMG_6054.png
-  description: IMG_6054
-- name: IMG_6056
+  description: The foyer of the George W. Bush Presidential Library
+- name: gwb-texas-ranger-boots
   src: https://storage.googleapis.com/corbs-foto/dallas/IMG_6056.png
-  description: IMG_6056
-- name: IMG_6680
+  description: George W. Bush's Texas Ranger boots
+- name: bank-of-america-building
   src: https://storage.googleapis.com/corbs-foto/dallas/IMG_6680.png
-  description: IMG_6680
-- name: IMG_6695
+  description: The Bank of America building on a grey day
+- name: sprinkles-cupcakes
   src: https://storage.googleapis.com/corbs-foto/dallas/IMG_6695.png
-  description: IMG_6695
-- name: IMG_7330
+  description: Sprinkles Cupcakes on Preston Road
+- name: concert-at-the-factory
   src: https://storage.googleapis.com/corbs-foto/dallas/IMG_7330.png
-  description: IMG_7330
-- name: IMG_7348
+  description: A concert at The Factory in Deep Ellum
+- name: curtain-call-at-the-factory
   src: https://storage.googleapis.com/corbs-foto/dallas/IMG_7348.png
-  description: IMG_7348
-- name: IMG_7862
+  description: A curtain call at The Factory in Deep Ellum
+- name: hard-eight-bbq
   src: https://storage.googleapis.com/corbs-foto/dallas/IMG_7862.png
-  description: IMG_7862
-- name: IMG_7904
+  description: Hard Eight BBQ in Irving
+- name: the-eye-of-dallas
   src: https://storage.googleapis.com/corbs-foto/dallas/IMG_7904.png
-  description: IMG_7904
-- name: IMG_8702
+  description: The eye of Dallas
+- name: the-ole-southwestern-bell-building
   src: https://storage.googleapis.com/corbs-foto/dallas/IMG_8702.png
-  description: IMG_8702
-- name: IMG_8762
+  description: The old Southwestern Bell building, downtown Dallas
+- name: pivotal-labs-party
   src: https://storage.googleapis.com/corbs-foto/dallas/IMG_8762.png
-  description: IMG_8762
-- name: IMG_9599
+  description: Party at Pivotal Labs in Dallas
+- name: starbucks-reserve-dallas
   src: https://storage.googleapis.com/corbs-foto/dallas/IMG_9599.png
-  description: IMG_9599
-- name: IMG_9935
+  description: The Starbucks Reserve bar in Dallas
+- name: greenville-ave-pizza-co
   src: https://storage.googleapis.com/corbs-foto/dallas/IMG_9935.png
-  description: IMG_9935
+  description: The Greenville Ave Pizza Company
