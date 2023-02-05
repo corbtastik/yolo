@@ -95,9 +95,17 @@ There are 5 theme scss files included in `_sass/yolo/themes`, each defines color
 
 ## Makefile docs
 
+### open a single-page
+
+The `open` target will save the current single-page on the site root and load one from `src/samples`. Every single-page will have at least two files: `index.md` and `_config.yml`. A single-page site is described by a `yolo.json` file, which contains information on what files define the single-page site.
+
+As mentioned every single-page site will have `index.md` and `_config.yml` files, but additional files, such as `_data`, and `scss` files can be configured. The following examples document how to use the `open` target.
+
 ```bash
 # parse yolo.json
 cat ./src/samples/yolo-dallas/yolo.json | jq -r --arg cmd "cp " '$cmd + .data[0]'
+# copy a _data file into _data/ at the site root
+cat ./src/samples/yolo-dallas/yolo.json | jq -r --arg cmd "cp ./src/samples/yolo-dallas/" --arg dest " _data/" '$cmd + .data[0] + $dest'
 ```
 
 ## License
