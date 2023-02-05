@@ -106,6 +106,28 @@ As mentioned every single-page site will have `index.md` and `_config.yml` files
 cat ./src/samples/yolo-dallas/yolo.json | jq -r --arg cmd "cp " '$cmd + .data[0]'
 # copy a _data file into _data/ at the site root
 cat ./src/samples/yolo-dallas/yolo.json | jq -r --arg cmd "cp ./src/samples/yolo-dallas/" --arg dest " _data/" '$cmd + .data[0] + $dest'
+
+# Execute a jq command and save output (which is a generated cp command) to shell var CP_CMD
+CP_FILES=$(cat ./src/samples/yolo-dallas/yolo.json \
+  | jq -r --arg source "./src/samples/yolo-dallas/" '$source + .data[]') 
+CP_CMD=$(cat ./src/samples/yolo-dallas/yolo.json \
+  | jq -r --arg cmd "cp ./src/samples/yolo-dallas/" \
+  --arg dest " _data/ " '$cmd + .data[] + $dest')
+echo $CP_CMD
+# This is the output of echo $CP_CMD
+cp ./src/samples/yolo-dallas/lb-dallas.yml _data/
+cp ./src/samples/yolo-dallas/ig-dallas.yml _data/
+
+# Execute the command saved in $CP_CMD by echoing its content inside a command subshell
+$(echo $CP_CMD)
+$($CP_CMD)
+
+# This works
+CP_FILES=$(cat ./src/samples/yolo-dallas/yolo.json \
+  | jq -r --arg source "./src/samples/yolo-dallas/" '$source + .data[]')
+CP_FILES="${CP_FILES//$'\n'/ }"  
+cp $(echo $CP_FILES) _data/
+
 ```
 
 ## License
