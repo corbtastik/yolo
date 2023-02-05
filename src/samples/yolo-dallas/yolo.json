@@ -1,0 +1,9 @@
+{
+  "site": "yolo-dallas",
+  "config": "_config.yml",
+  "index": "index.md",
+  "data": [
+    "lb-dallas.yml",
+    "ig-dallas.yml"
+  ]
+}

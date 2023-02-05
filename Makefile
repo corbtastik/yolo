@@ -37,6 +37,11 @@ load:
 	@cp ./_config.yml ./src/samples/$(UNLOAD_SITE)/_config.yml
 	@cp ./src/samples/$(LOAD_SITE)/index.md ./index.md
 	@cp ./src/samples/$(LOAD_SITE)/_config.yml ./_config.yml
+
+open:
+	@$(call is_defined, UNLOAD_SITE, UNLOAD_SITE is required: usage UNLOAD_SITE=yolo-main)
+	@$(call is_defined, LOAD_SITE, LOAD_SITE is required: usage LOAD_SITE=yolo-dallas)
+
 # -----------------------------------------------------------------------------
 # Publish to surge.sh
 # -----------------------------------------------------------------------------

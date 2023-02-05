@@ -91,6 +91,14 @@ There are 5 theme scss files included in `_sass/yolo/themes`, each defines color
 
 <img src="https://storage.googleapis.com/corbs-foto/yolo/screenshots/yolo-weekly-light-01.png" alt="Yolo Weekly Light" style="width:384px;">
 
+---
+
+## Makefile docs
+
+```bash
+# parse yolo.json
+cat ./src/samples/yolo-dallas/yolo.json | jq -r --arg cmd "cp " '$cmd + .data[0]'
+```
 
 ## License
 
