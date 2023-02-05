@@ -21,7 +21,7 @@ The value of `site.images` can be set to a subdirectory of `assets/images` or UR
 __For example:__
 
 * Setting `site.images=https://storage.googleapis.com/corbs-foto/yolo` will resolve images from a Google Cloud Storage bucket.
-* Setting `site.images=assets/images/site` will resolve images from the `assets/images/site` directory relative to the Yolo webroot.
+* Setting `site.images=assets/images` will resolve images from the `assets/images` directory relative to the Yolo webroot.
 
 #### Site Images Sample
 

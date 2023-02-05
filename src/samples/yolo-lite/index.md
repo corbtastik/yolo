@@ -155,9 +155,9 @@ done
 
 > Images added via markdown receive styling from the `<img>` element, they're not styled with `yolo` scss.
 
-![Moonie Moonpie]({{ site.images }}/site/moonpie.png "Sweet Moonpie")
+![Moonie Moonpie]({{ site.images }}/moonpie.png "Sweet Moonpie")
 
-![BIG yawn Bucky]({{ site.images }}/site/bucky.png "Sleepy Bucky")
+![BIG yawn Bucky]({{ site.images }}/bucky.png "Sleepy Bucky")
 
 ---
 

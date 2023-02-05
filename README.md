@@ -101,33 +101,68 @@ The `open` target will save the current single-page on the site root and load on
 
 As mentioned every single-page site will have `index.md` and `_config.yml` files, but additional files, such as `_data`, and `scss` files can be configured. The following examples document how to use the `open` target.
 
+```json
+{
+  "site": "yolo-main",
+  "config": "_config.yml",
+  "index": "index.md",
+  "data": [
+    "fonts.yml",
+    "ig-images.yml",
+    "ig-pets.yml",
+    "images.yml",
+    "lb-images.yml",
+    "lb-marfa.yml",
+    "prezos.yml",
+    "videos.yml"
+  ],
+  "assets": {
+    "images": [
+      "bucky.png",
+      "error.png",
+      "logo.png",
+      "moonpie.png"
+    ]
+  }
+}
+```
+
 ```bash
-# parse yolo.json
-cat ./src/samples/yolo-dallas/yolo.json | jq -r --arg cmd "cp " '$cmd + .data[0]'
-# copy a _data file into _data/ at the site root
-cat ./src/samples/yolo-dallas/yolo.json | jq -r --arg cmd "cp ./src/samples/yolo-dallas/" --arg dest " _data/" '$cmd + .data[0] + $dest'
+# Save site automation
+# Get name of current site in use
+SAVE_SITE=$(cat ./yolo.json | jq -r '.site')
+# Get name of the index file to save as, NOTE: it can be save with a different name than index.md
+INDEX_FILE=$(cat ./yolo.json | jq -r --arg dest "./src/samples/${SAVE_SITE}/" '$dest + .index')
+cp ./index.md $(echo $INDEX_FILE)
+# Get name of the config file to save as, NOTE: it can be save with a different name than _config.yml
+CONFIG_FILE=$(cat ./yolo.json | jq -r --arg dest "./src/samples/${SAVE_SITE}/" '$dest + .config')
+cp ./_config.yml $(echo $CONFIG_FILE)
+# Save optional _data files
+DATA_FILES=$(cat ./yolo.json | jq -r --arg source "./_data/" '$source + .data[]')
+DATA_FILES="${DATA_FILES//$'\n'/ }"
+cp $(echo $DATA_FILES) ./src/samples/${SAVE_SITE}/_data
+# Save optional assets files
+IMAGE_FILES=$(cat ./yolo.json | jq -r --arg source "./assets/images/" '$source + .assets.images[]')
+IMAGE_FILES="${IMAGE_FILES//$'\n'/ }"
+cp $(echo $IMAGE_FILES) ./src/samples/${SAVE_SITE}/assets/images/
 
-# Execute a jq command and save output (which is a generated cp command) to shell var CP_CMD
-CP_FILES=$(cat ./src/samples/yolo-dallas/yolo.json \
-  | jq -r --arg source "./src/samples/yolo-dallas/" '$source + .data[]') 
-CP_CMD=$(cat ./src/samples/yolo-dallas/yolo.json \
-  | jq -r --arg cmd "cp ./src/samples/yolo-dallas/" \
-  --arg dest " _data/ " '$cmd + .data[] + $dest')
-echo $CP_CMD
-# This is the output of echo $CP_CMD
-cp ./src/samples/yolo-dallas/lb-dallas.yml _data/
-cp ./src/samples/yolo-dallas/ig-dallas.yml _data/
-
-# Execute the command saved in $CP_CMD by echoing its content inside a command subshell
-$(echo $CP_CMD)
-$($CP_CMD)
-
-# This works
-CP_FILES=$(cat ./src/samples/yolo-dallas/yolo.json \
+# Open site automation
+# Copy required file: index.md
+INDEX_FILE=$(cat ./src/samples/yolo-dallas/yolo.json \
+  | jq -r --arg source "./src/samples/yolo-dallas/" '$source + .index')
+cp $(echo $INDEX_FILE) ./index.md
+# Copy required file: _config.yml
+CONFIG_FILE=$(cat ./src/samples/yolo-dallas/yolo.json \
+  | jq -r --arg source "./src/samples/yolo-dallas/" '$source + .config')
+cp $(echo $CONFIG_FILE) ./_config.yml
+# Copy optional _data files
+DATA_FILES=$(cat ./src/samples/yolo-dallas/yolo.json \
   | jq -r --arg source "./src/samples/yolo-dallas/" '$source + .data[]')
-CP_FILES="${CP_FILES//$'\n'/ }"  
-cp $(echo $CP_FILES) _data/
-
+DATA_FILES="${DATA_FILES//$'\n'/ }"
+cp $(echo $DATA_FILES) _data/
+# Copy assets
+IMAGE_FILES=$(cat ./src/samples/yolo-main/yolo.json \
+  | jq -r --arg source "./src/samples/yolo-main/" '$source + .assets.images[]')
 ```
 
 ## License

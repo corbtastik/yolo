@@ -191,10 +191,10 @@ say_howdy $1
 {% include code.html label="Markdown images" %}
 {% raw %}
 ```markdown
-![Moonie Moonpie](assets/images/site/moonpie.png "Sweet Moonpie")
+![Moonie Moonpie](assets/images/moonpie.png "Sweet Moonpie")
 ```
 {% endraw %}
 
-![Moonie Moonpie](assets/images/site/moonpie.png "Sweet Moonpie")
+![Moonie Moonpie](assets/images/moonpie.png "Sweet Moonpie")
 
 [↑↑↑](#table-of-contents){: .back-to-top}

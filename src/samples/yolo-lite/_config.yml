@@ -5,9 +5,9 @@ description: A loveable single page theme
 # Site customizations
 style: bookworm
 header:
-  logo: assets/images/site/logo.png
+  logo: assets/images/logo.png
 sidebar:
-  logo: assets/images/site/logo.png
+  logo: assets/images/logo.png
 # Build settings
 version: v1.12
 markdown: kramdown

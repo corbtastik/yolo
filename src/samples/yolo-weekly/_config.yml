@@ -5,9 +5,9 @@ description: Status Report
 # Site customizations
 style: weekly
 header:
-  logo: assets/images/site/logo.png
+  logo: assets/images/logo.png
 sidebar:
-  logo: assets/images/site/logo.png
+  logo: assets/images/logo.png
 # Build settings
 version: v1.16
 markdown: kramdown

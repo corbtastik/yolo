@@ -7,9 +7,9 @@ style: corbs
 # Align content, left, center or right (default is left)
 align: left
 #header:
-#  logo: assets/images/site/logo.png
+#  logo: assets/images/logo.png
 sidebar:
-  logo: assets/images/site/logo.png
+  logo: assets/images/logo.png
 # Build settings
 version: v1.3
 markdown: kramdown
