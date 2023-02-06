@@ -28,21 +28,6 @@ yolo-pod: yolo
 	@podman rm -f yolo
 	@podman run --name yolo -d -p 9696:9696 $(CONTAINER_REGISTRY)/$(IMAGE_NAME):latest
 # -----------------------------------------------------------------------------
-# Targets for working with single pages in src/samples
-# -----------------------------------------------------------------------------
-load:
-	@$(call is_defined, UNLOAD_SITE, UNLOAD_SITE is required: usage UNLOAD_SITE=yolo-main)
-	@$(call is_defined, LOAD_SITE, LOAD_SITE is required: usage LOAD_SITE=yolo-dallas)
-	@cp ./index.md ./src/samples/$(UNLOAD_SITE)/index.md
-	@cp ./_config.yml ./src/samples/$(UNLOAD_SITE)/_config.yml
-	@cp ./src/samples/$(LOAD_SITE)/index.md ./index.md
-	@cp ./src/samples/$(LOAD_SITE)/_config.yml ./_config.yml
-
-open:
-	@$(call is_defined, SAVE_SITE, SAVE_SITE is required: usage SAVE_SITE=yolo-main)
-	@$(call is_defined, OPEN_SITE, OPEN_SITE is required: usage OPEN_SITE=yolo-dallas)
-
-# -----------------------------------------------------------------------------
 # Publish to surge.sh
 # -----------------------------------------------------------------------------
 surge:
