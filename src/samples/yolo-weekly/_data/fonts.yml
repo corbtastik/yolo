@@ -1,0 +1,8 @@
+# Sans-serif fonts
+- name: "Open Sans"
+  weights: "400,400i,700,700i"
+- name: "Red Hat Text"
+  weights: "0,300;0,400;0,700;1,300;1,400;1,700"
+# Monospace fonts
+- name: "Red Hat Mono"
+  weights: "400,400i,600,600i"

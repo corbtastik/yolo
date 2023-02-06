@@ -3,8 +3,8 @@ title: Dallas is a jewel!
 description: Dallas is a beautiful sight...
 style: corbs
 align: left
-#header:
-#  logo: assets/images/logo.png
+header:
+  logo: assets/images/logo.png
 #sidebar:
 #  logo: assets/images/logo.png
 # Build settings

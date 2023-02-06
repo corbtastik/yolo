@@ -14,10 +14,11 @@
   ],
   "assets": {
     "images": [
-      "assets/images/bucky.png",
-      "assets/images/error.png",
-      "assets/images/logo.png",
-      "assets/images/moonpie.png"
+      "bucky.png",
+      "error.png",
+      "logo.png",
+      "moonpie.png"
     ]
-  }
+  },
+  "theme": "_corbs.scss"
 }

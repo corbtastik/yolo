@@ -1,25 +1,20 @@
-# Site settings
 name: Weekly
 title: Weekly
 description: Status Report
-# Site customizations
 style: weekly
-header:
-  logo: assets/images/logo.png
+align: left
+#header:
+#  logo: assets/images/logo.png
 sidebar:
   logo: assets/images/logo.png
 # Build settings
-version: v1.16
+version: v1.3
 markdown: kramdown
 exclude:
   - "README.md"
-  - "BACKLOG.md"
   - "Makefile"
   - "Containerfile"
-  - ".yolo-build"
   - "src/"
   - "docs/"
-  - "index.md.backup"
-  - "_config.yml.backup"
 sass:
   style: compressed

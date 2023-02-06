@@ -151,11 +151,13 @@ cp $(echo $DATA_FILES) ./src/samples/$SAVE_SITE/_data/
 IMAGE_FILES=$(cat ./yolo.json | jq -r --arg source "./assets/images/" '$source + .assets.images[]')
 IMAGE_FILES="${IMAGE_FILES//$'\n'/ }"
 cp $(echo $IMAGE_FILES) ./src/samples/$SAVE_SITE/assets/images/
+# Copy the yolo.json file to $SAVE_SITE
+cp ./yolo.json ./src/samples/$SAVE_SITE/
 # -----------------------------------------------------------------------------
 # Open site automation
 # -----------------------------------------------------------------------------
 # Get site name to open
-OPEN_SITE=yolo-dallas
+OPEN_SITE=yolo-main
 # Copy required file: index.md
 INDEX_FILE=$(cat ./src/samples/$OPEN_SITE/yolo.json \
   | jq -r --arg source "./src/samples/$OPEN_SITE/" '$source + .index')
@@ -176,6 +178,10 @@ cp $(echo $DATA_FILES) _data/
 # Copy assets
 IMAGE_FILES=$(cat ./src/samples/$OPEN_SITE/yolo.json \
   | jq -r --arg source "./src/samples/$OPEN_SITE/assets/images/" '$source + .assets.images[]')
+IMAGE_FILES="${IMAGE_FILES//$'\n'/ }"
+cp $(echo $IMAGE_FILES) ./assets/images/
+# Copy yolo.json to site root
+cp ./src/samples/$OPEN_SITE/yolo.json ./
 ```
 
 ## License
