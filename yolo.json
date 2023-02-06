@@ -19,5 +19,6 @@
       "logo.png",
       "moonpie.png"
     ]
-  }
+  },
+  "theme": "_corbs.scss"
 }

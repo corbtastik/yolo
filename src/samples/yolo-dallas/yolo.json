@@ -3,7 +3,15 @@
   "config": "_config.yml",
   "index": "index.md",
   "data": [
+    "fonts.yml",
     "lb-dallas.yml",
     "ig-dallas.yml"
-  ]
+  ],
+  "assets": {
+    "images": [
+      "error.png",
+      "logo.png"
+    ]
+  },
+  "theme": "_corbs.scss"
 }
