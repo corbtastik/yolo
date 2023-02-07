@@ -1,13 +1,9 @@
 # Site settings
 name: Yolo
-title: Yolo on my friend
-description: Loveable single page sites
-# Site customizations
-style: skeletor
-# Align content, left, center or right (default is left)
+title: Yolo solo theme
+description: Solo theme sample page
+style: solo
 align: left
-#header:
-#  logo: assets/images/logo.png
 sidebar:
   logo: assets/images/logo.png
 # Build settings

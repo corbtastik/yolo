@@ -1,2 +1,2 @@
 #!/bin/bash
-echo "Yolo Tool v1.0 $1"
+echo "Yolo Tool v1.0"

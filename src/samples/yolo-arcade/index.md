@@ -1,12 +1,12 @@
 ---
 layout: default
 tags:
-- yolo-lite
-- single-page
+- yolo
+- arcade-theme
 - jekyll
 ---
 
-Yolo "lite" demo page with mostly plain markdown elements.
+Yolo __[arcade](https://en.wikipedia.org/wiki/Arcade_video_game)__ theme sample page with mostly plain markdown elements.
 
 {% include toc.html header="h2" text="Table of Contents" %}
 

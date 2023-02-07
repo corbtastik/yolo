@@ -32,3 +32,5 @@ RUN yum update ${YUM_FLAGS} -y && \
     chmod 755 /yolo-tool/*.sh && \
     yum clean all && \
     rm -rf /var/cache/* /var/log/dnf*
+
+CMD ["/bin/bash", "-c", "/yolo-tool/yolo-tool.sh"]
