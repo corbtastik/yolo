@@ -3,9 +3,34 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="{{ site.description }}">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Site title -->
     <title>{{ site.title }}</title>
-    <!-- Site styling resources including fonts -->
-    {% include styles.html %}
+    <!-- Fonts -->
+    {% if site.data.fonts.size > 0 %}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family={% for font in site.data.fonts %}{{ font.name | replace: ' ', '+' }}{% if font.weights %}:{% endif %}{{ font.weights | remove: ' ' }}{% if forloop.last != true %}|{% endif %}{% endfor %}">
+    {% endif %}
+    <script>
+      {% if site.data.settings.color_scheme == "auto" %}
+      if (localStorage.getItem("theme") === "dark") {
+        document.documentElement.setAttribute("dark", "");
+        document.documentElement.classList.add('dark-mode');
+      }
+      {% elsif site.data.settings.color_scheme == "light" %}
+      document.documentElement.setAttribute("light", "");
+      document.documentElement.classList.add('light-mode');
+      {% elsif site.data.settings.color_scheme == "dark" %}
+      document.documentElement.setAttribute("dark", "");
+      document.documentElement.classList.add('dark-mode');
+      {% else %}
+      if (localStorage.getItem("theme") === "dark") {
+        document.documentElement.setAttribute("dark", "");
+        document.documentElement.classList.add('dark-mode');
+      }
+      {% endif %}
+    </script>
+    <!-- Main site stylesheet, generated via sass -->
+    <link rel="stylesheet" href="css/main.css">
 </head>
