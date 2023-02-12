@@ -1,22 +1,29 @@
 // ----------------------------------------------------------------------------
-// Solo theme, a nod to the OG.
+// Solo theme
 // ----------------------------------------------------------------------------
-$light-primary-color: #fff;
-$light-secondary-color: #000;
-$light-accent-color: #383838;
-$light-code-background-color: #fff;
-$light-code-color: #000;
-$light-link-color: #2196f3;
-$light-sidebar-color: #fff;
-
-$dark-primary-color: #000;
-$dark-secondary-color: #fff;
-$dark-accent-color: #b3b2b2;
-$dark-code-background-color: #000;
-$dark-code-color: #fff;
-$dark-link-color: #2196f3;
-$dark-sidebar-color: #000;
-
-$family-primary: "Inconsolata", sans-serif;
-$family-secondary: "Montserrat", sans-serif;
-$family-monospace: "Inconsolata", monospace;
+// Light mode
+:root {
+  --primary-color: #fff;
+  --secondary-color: #000;
+  --accent-color: #383838;
+  --link-color: #2196f3;
+  --code-background-color: #fff;
+  --code-color: #000;
+  --sidebar-color: #fff;
+  --font-family-primary: "Inconsolata", monospace;
+  --font-family-secondary: "Montserrat", sans-serif;
+  --font-family-monospace: "Inconsolata", monospace;
+}
+// Dark mode
+:root[dark] {
+  --primary-color: #000;
+  --secondary-color: #fff;
+  --accent-color: #b3b2b2;
+  --link-color: #2196f3;
+  --code-background-color: #000;
+  --code-color: #fff;
+  --sidebar-color: #000;
+  --font-family-primary: "Inconsolata", monospace;
+  --font-family-secondary: "Montserrat", sans-serif;
+  --font-family-monospace: "Inconsolata", monospace;
+}

@@ -244,7 +244,7 @@
             // Initialize copy code snippets
             yolo.copySnippet();
             // Initialize dark / light theme toggle
-            yolo.toggleTheme();
+            // yolo.toggleTheme();
             // Initialize sidebar
             yolo.initSidebar();
             // Initialize toc on page/post and sidebar
@@ -359,56 +359,56 @@
         return this.imageGrids.get(name);
     };
 
-    Yolo.prototype.toggleTheme = function() {
-        const yoloSite = document.getElementById("yolo-site");
-        const themeDot = document.getElementById("theme-dot");
-
-        if(yoloSite === null || themeDot === null) {
-            Console.error("Yolo Site and/or Theme Dot is null, perhaps verify <body id=\"yolo-site\">");
-            return;
-        }
-
-        document.addEventListener('DOMContentLoaded', (event) => {
-            const activeTheme = localStorage.getItem("active-theme");
-            Console.log("DOM fully loaded and parsed, active-theme: " + activeTheme);
-            if(activeTheme === "dark-theme") {
-                localStorage.setItem("active-theme", "dark-theme");
-                yoloSite.classList.add("dark-theme");
-            } else {
-                localStorage.setItem("active-theme", "light-theme");
-                yoloSite.classList.add("light-theme");
-            }
-        });
-
-        window.addEventListener("load", function() {
-            const activeTheme = localStorage.getItem("active-theme");
-            Console.log("Window load, active-theme: " + activeTheme);
-        });
-
-        themeDot.addEventListener("click", function() {
-            const activeTheme = localStorage.getItem("active-theme");
-            if(activeTheme === "dark-theme") {
-                Console.log("Switching active-theme to light-theme");
-                yoloSite.classList.remove("dark-theme");
-                localStorage.setItem("active-theme", "light-theme");
-                yoloSite.classList.add("light-theme");
-            } else if(activeTheme === "light-theme") {
-                Console.log("Switching active-theme to dark-theme");
-                yoloSite.classList.remove("light-theme");
-                localStorage.setItem("active-theme", "dark-theme");
-                yoloSite.classList.add("dark-theme");
-            } else if(activeTheme == null) {
-                Console.log("The active-theme is null, setting to light-theme.");
-                localStorage.setItem("active-theme", "light-theme");
-                yoloSite.classList.add("light-theme");
-            } else {
-                Console.error("The active-theme is set to an invalid theme value: "
-                    + activeTheme + ", setting to light-theme.");
-                localStorage.setItem("active-theme", "light-theme");
-                yoloSite.classList.add("light-theme");
-            }
-        });
-    }
+    // Yolo.prototype.toggleTheme = function() {
+    //     const yoloSite = document.getElementById("yolo-site");
+    //     const themeDot = document.getElementById("theme-dot");
+    //
+    //     if(yoloSite === null || themeDot === null) {
+    //         Console.error("Yolo Site and/or Theme Dot is null, perhaps verify <body id=\"yolo-site\">");
+    //         return;
+    //     }
+    //
+    //     document.addEventListener('DOMContentLoaded', (event) => {
+    //         const activeTheme = localStorage.getItem("active-theme");
+    //         Console.log("DOM fully loaded and parsed, active-theme: " + activeTheme);
+    //         if(activeTheme === "dark-theme") {
+    //             localStorage.setItem("active-theme", "dark-theme");
+    //             yoloSite.classList.add("dark-theme");
+    //         } else {
+    //             localStorage.setItem("active-theme", "light-theme");
+    //             yoloSite.classList.add("light-theme");
+    //         }
+    //     });
+    //
+    //     window.addEventListener("load", function() {
+    //         const activeTheme = localStorage.getItem("active-theme");
+    //         Console.log("Window load, active-theme: " + activeTheme);
+    //     });
+    //
+    //     themeDot.addEventListener("click", function() {
+    //         const activeTheme = localStorage.getItem("active-theme");
+    //         if(activeTheme === "dark-theme") {
+    //             Console.log("Switching active-theme to light-theme");
+    //             yoloSite.classList.remove("dark-theme");
+    //             localStorage.setItem("active-theme", "light-theme");
+    //             yoloSite.classList.add("light-theme");
+    //         } else if(activeTheme === "light-theme") {
+    //             Console.log("Switching active-theme to dark-theme");
+    //             yoloSite.classList.remove("light-theme");
+    //             localStorage.setItem("active-theme", "dark-theme");
+    //             yoloSite.classList.add("dark-theme");
+    //         } else if(activeTheme == null) {
+    //             Console.log("The active-theme is null, setting to light-theme.");
+    //             localStorage.setItem("active-theme", "light-theme");
+    //             yoloSite.classList.add("light-theme");
+    //         } else {
+    //             Console.error("The active-theme is set to an invalid theme value: "
+    //                 + activeTheme + ", setting to light-theme.");
+    //             localStorage.setItem("active-theme", "light-theme");
+    //             yoloSite.classList.add("light-theme");
+    //         }
+    //     });
+    // }
 
     Yolo.prototype.initToc = function() {
         Toc.create();
