@@ -35,12 +35,14 @@ surge:
 	@jekyll build
 	@surge _site/ corbtastik-yolo.surge.sh
 # -----------------------------------------------------------------------------
-# Create starter sites
+# Create new Yolo sites
 # -----------------------------------------------------------------------------
 starter:
 	@$(call is_defined, SITE_NAME, SITE_NAME is required: usage SITE_NAME=my-site)
 	@mkdir -p .generated/$(SITE_NAME)
-	@git clone https://github.com/corbtastik/yolo.git $(SITE_NAME)
+	@git clone https://github.com/corbtastik/yolo.git .generated/$(SITE_NAME)
+	@rm -rf .generated/$(SITE_NAME)/.git
+	@mv .generated/$(SITE_NAME)/src/starter/templates/index.md .generated/$(SITE_NAME)/index.md
 
 # -----------------------------------------------------------------------------
 # Make utility functions

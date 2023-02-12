@@ -91,6 +91,98 @@ There are 5 theme scss files included in `_sass/yolo/themes`, each defines color
 
 <img src="https://storage.googleapis.com/corbs-foto/yolo/screenshots/yolo-weekly-light-01.png" alt="Yolo Weekly Light" style="width:384px;">
 
+---
+
+## Makefile docs
+
+### open a single-page
+
+The `open` target will save the current single-page on the site root and load one from `src/samples`. Every single-page will have at least two files: `index.md` and `_config.yml`. A single-page site is described by a `yolo.json` file, which contains information on what files define the single-page site.
+
+As mentioned every single-page site will have `index.md` and `_config.yml` files, but additional files, such as `_data`, and `scss` files can be configured. The following examples document how to use the `open` target.
+
+```json
+{
+  "site": "yolo-main",
+  "config": "_config.yml",
+  "index": "index.md",
+  "data": [
+    "fonts.yml",
+    "ig-images.yml",
+    "ig-pets.yml",
+    "images.yml",
+    "lb-images.yml",
+    "lb-marfa.yml",
+    "prezos.yml",
+    "videos.yml"
+  ],
+  "assets": {
+    "images": [
+      "bucky.png",
+      "error.png",
+      "logo.png",
+      "moonpie.png"
+    ]
+  },
+  "theme": "_corbs.scss"
+}
+```
+
+```bash
+# -----------------------------------------------------------------------------
+# Save site automation - saves the current site to ./src/samples/$SAVE_SITE
+# -----------------------------------------------------------------------------
+# Get site in use
+SAVE_SITE=$(cat ./yolo.json | jq -r '.site')
+# Get name of the index file to save as, NOTE: it can be save with a different name than index.md
+INDEX_FILE=$(cat ./yolo.json | jq -r --arg dest "./src/samples/$SAVE_SITE/" '$dest + .index')
+cp ./index.md $(echo $INDEX_FILE)
+# Get name of the config file to save as, NOTE: it can be save with a different name than _config.yml
+CONFIG_FILE=$(cat ./yolo.json | jq -r --arg dest "./src/samples/$SAVE_SITE/" '$dest + .config')
+cp ./_config.yml $(echo $CONFIG_FILE)
+# Get name of the sass theme file to save
+THEME_FILE=$(cat ./yolo.json | jq -r --arg source "./_sass/yolo/themes/" '$source + .theme')
+cp $(echo $THEME_FILE) ./src/samples/$SAVE_SITE/_sass/yolo/themes/
+# Save optional _data files
+DATA_FILES=$(cat ./yolo.json | jq -r --arg source "./_data/" '$source + .data[]')
+DATA_FILES="${DATA_FILES//$'\n'/ }"
+cp $(echo $DATA_FILES) ./src/samples/$SAVE_SITE/_data/
+# Save optional assets files
+IMAGE_FILES=$(cat ./yolo.json | jq -r --arg source "./assets/images/" '$source + .assets.images[]')
+IMAGE_FILES="${IMAGE_FILES//$'\n'/ }"
+cp $(echo $IMAGE_FILES) ./src/samples/$SAVE_SITE/assets/images/
+# Copy the yolo.json file to $SAVE_SITE
+cp ./yolo.json ./src/samples/$SAVE_SITE/
+# -----------------------------------------------------------------------------
+# Open site automation
+# -----------------------------------------------------------------------------
+# Get site name to open
+OPEN_SITE=yolo-main
+# Copy required file: index.md
+INDEX_FILE=$(cat ./src/samples/$OPEN_SITE/yolo.json \
+  | jq -r --arg source "./src/samples/$OPEN_SITE/" '$source + .index')
+cp $(echo $INDEX_FILE) ./index.md
+# Copy required file: _config.yml
+CONFIG_FILE=$(cat ./src/samples/$OPEN_SITE/yolo.json \
+  | jq -r --arg source "./src/samples/$OPEN_SITE/" '$source + .config')
+cp $(echo $CONFIG_FILE) ./_config.yml
+# Get name of the sass theme file to open
+THEME_FILE=$(cat ./src/samples/$OPEN_SITE/yolo.json \
+  | jq -r --arg source "./src/samples/$OPEN_SITE/_sass/yolo/themes/" '$source + .theme')
+cp $(echo $THEME_FILE) ./_sass/yolo/themes/
+# Copy optional _data files
+DATA_FILES=$(cat ./src/samples/$OPEN_SITE/yolo.json \
+  | jq -r --arg source "./src/samples/$OPEN_SITE/_data/" '$source + .data[]')
+DATA_FILES="${DATA_FILES//$'\n'/ }"
+cp $(echo $DATA_FILES) _data/
+# Copy assets
+IMAGE_FILES=$(cat ./src/samples/$OPEN_SITE/yolo.json \
+  | jq -r --arg source "./src/samples/$OPEN_SITE/assets/images/" '$source + .assets.images[]')
+IMAGE_FILES="${IMAGE_FILES//$'\n'/ }"
+cp $(echo $IMAGE_FILES) ./assets/images/
+# Copy yolo.json to site root
+cp ./src/samples/$OPEN_SITE/yolo.json ./
+```
 
 ## License
 

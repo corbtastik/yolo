@@ -1,25 +1,29 @@
 // ----------------------------------------------------------------------------
 // corbs theme
 // ----------------------------------------------------------------------------
-// light mode colors
-$light-primary-color: #edf5fb;
-$light-secondary-color: #1a237e;
-$light-accent-color: #0091ea;
-$light-link-color: #ed1292;
-$light-code-background-color: #f8faff;
-$light-code-color: #6843c8;
-$light-sidebar-color: #e1f5fe;
-
-// dark mode colors
-$dark-primary-color: #000928;
-$dark-secondary-color: #fb1d9e;
-$dark-accent-color: #00b0ff;
-$dark-link-color: #65e9fc;
-$dark-code-background-color: #01081f;
-$dark-code-color: #b388ff;
-$dark-sidebar-color: #000110;
-
-// fonts
-$family-primary: "JetBrains Mono", monospace;
-$family-secondary: "Poppins", sans-serif;
-$family-monospace: "Inconsolata", monospace;
+// Light mode
+:root {
+  --primary-color: #edf5fb;
+  --secondary-color: #1a237e;
+  --accent-color: #d10277;
+  --link-color: #0091ea;
+  --code-background-color: #f8faff;
+  --code-color: #6843c8;
+  --sidebar-color: #e1f5fe;
+  --font-family-primary: "JetBrains Mono", monospace;
+  --font-family-secondary: "Red Hat Text", sans-serif;
+  --font-family-monospace: "Inconsolata", monospace;
+}
+// Dark mode
+:root[dark] {
+  --primary-color: #000928;
+  --secondary-color: #fb1d9e;
+  --accent-color: #00b0ff;
+  --link-color: #65e9fc;
+  --code-background-color: #000110;
+  --code-color: #b388ff;
+  --sidebar-color: #000110;
+  --font-family-primary: "JetBrains Mono", monospace;
+  --font-family-secondary: "Red Hat Text", sans-serif;
+  --font-family-monospace: "Inconsolata", monospace;
+}

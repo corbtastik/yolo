@@ -2,10 +2,20 @@
     <!-- Site metadata -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="{{ site.description }}">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="{{ site.data.settings.description }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Site title -->
-    <title>{{ site.title }}</title>
-    <!-- Site styling resources including fonts -->
-    {% include styles.html %}
+    <title>{{ site.data.settings.title }}</title>
+    <!-- Fonts -->
+    {% if site.data.fonts.size > 0 %}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family={% for font in site.data.fonts %}{{ font.name | replace: ' ', '+' }}{% if font.weights %}:{% endif %}{{ font.weights | remove: ' ' }}{% if forloop.last != true %}|{% endif %}{% endfor %}">
+    <!-- Ionicons Icons -->
+    <link rel="preload" href="https://unpkg.com/ionicons@4.6.3/dist/css/ionicons.min.css" as="style">
+    <link href="https://unpkg.com/ionicons@4.6.3/dist/css/ionicons.min.css" rel="stylesheet">
+    {% endif %}
+    <script src="assets/js/theme.js"></script>
+    <!-- Main site stylesheet, generated via sass -->
+    <link rel="stylesheet" href="css/main.css">
 </head>

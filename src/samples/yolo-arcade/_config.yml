@@ -1,0 +1,19 @@
+# Site settings
+name: Yolo
+title: Yolo arcade theme
+description: Arcade theme sample page
+style: arcade
+align: left
+sidebar:
+  logo: assets/images/logo.png
+# Build settings
+version: v1.3
+markdown: kramdown
+exclude:
+  - "README.md"
+  - "Makefile"
+  - "Containerfile"
+  - "src/"
+  - "docs/"
+sass:
+  style: compressed

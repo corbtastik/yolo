@@ -27,9 +27,9 @@ The Yolo `settings.json` object represents the core site settings for a Yolo sit
   "description": "Loveable single page sites",
   "style": "corbs",
   "align": "left",
-  "logo": "assets/images/site/logo.png",
+  "logo": "assets/images/logo.png",
   "sidebar": {
-    "logo": "assets/images/site/logo.png"
+    "logo": "assets/images/logo.png"
   }
 }
 ```
@@ -41,4 +41,4 @@ The Yolo `settings.json` object represents the core site settings for a Yolo sit
 * `_data/prezos.yml`
 * `_data/videos.yml`
 * `_sass/yolo/themes`
-* `assets/images/site`
+* `assets/images`

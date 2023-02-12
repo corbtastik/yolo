@@ -6,16 +6,15 @@ description: Loveable single page sites
 style: corbs
 # Align content, left, center or right (default is left)
 align: left
-#logo: assets/images/site/logo.png
-images: https://storage.googleapis.com/corbs-foto/yolo
+#header:
+#  logo: assets/images/logo.png
 sidebar:
-  logo: assets/images/site/logo.png
+  logo: assets/images/logo.png
 # Build settings
-version: v1.2
+version: v1.3
 markdown: kramdown
 exclude:
   - "README.md"
-  - "BACKLOG.md"
   - "Makefile"
   - "Containerfile"
   - "src/"

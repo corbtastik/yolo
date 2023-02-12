@@ -1,23 +1,30 @@
-# Site settings
-name: Yolo
-title: Yolo on my friend
-description: Loveable single page sites
-# Site customizations
-style: corbs
-# Align content, left, center or right (default is left)
-align: left
-#logo: assets/images/site/logo.png
-sidebar:
-  logo: assets/images/site/logo.png
-# Build settings
-version: v1.3
+# -----------------------------------------------------------------------------
+# Jekyll site settings, see _data/settings.yml for Yolo settings
+# -----------------------------------------------------------------------------
+# baseurl: The sub-path your site is hosted from, for example: /blog
+# -----------------------------------------------------------------------------
+baseurl: ""
+# -----------------------------------------------------------------------------
+# url: The protocol and hostname for your site, for example: https://corbs.io
+# -----------------------------------------------------------------------------
+url: ""
+# -----------------------------------------------------------------------------
+# markdown: The markdown processor to use, kramdown is the jekyll default.
+# -----------------------------------------------------------------------------
 markdown: kramdown
+# -----------------------------------------------------------------------------
+# exclude: List of files and folders to exclude from jekyll
+# -----------------------------------------------------------------------------
 exclude:
   - "README.md"
-  - "BACKLOG.md"
   - "Makefile"
   - "Containerfile"
   - "src/"
   - "docs/"
+# -----------------------------------------------------------------------------
+# sass_dir: Folder that contains sass/scss files to be processed
+# style: compressed or uncompressed css generation
+# -----------------------------------------------------------------------------
 sass:
+  sass_dir: _sass
   style: compressed

@@ -7,3 +7,4 @@ _site
 .wip
 .stash
 .generated
+.env

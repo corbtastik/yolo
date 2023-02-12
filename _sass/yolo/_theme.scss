@@ -1,0 +1,294 @@
+// ----------------------------------------------------------------------------
+// Theme stylesheet for all elements that get special attention
+// ----------------------------------------------------------------------------
+// Syntax Highlighting on light
+// ----------------------------------------------------------------------------
+:root {
+  --syntax01: #8f8f8f;
+  --syntax02: #011842;
+  --syntax03: #393939;
+  --syntax04: #eb6302;
+  --syntax05: #c500e3;
+  --syntax06: #01c72b;
+  --syntax07: #019e9e;
+  --syntax08: #1b3df8;
+  --syntax09: #5923ca;
+  --syntax10: #db0c4d;
+}
+// ----------------------------------------------------------------------------
+// Syntax Highlighting on dark
+// ----------------------------------------------------------------------------
+:root[dark] {
+  --syntax01: #a0a0a0;
+  --syntax02: #e4e8eb;
+  --syntax03: #dfe2e5;
+  --syntax04: #ffab00;
+  --syntax05: #e040fb;
+  --syntax06: #00e676;
+  --syntax07: #4ffbfb;
+  --syntax08: #609dfc;
+  --syntax09: #bd9ef8;
+  --syntax10: #ff4081;
+}
+// ----------------------------------------------------------------------------
+// Contains selectors for all themed elements.
+// Only colors and fonts should be added here.
+// See: _sass/yolo/themes for specific theme colors.
+// ----------------------------------------------------------------------------
+.yolo-themed {
+  color: var(--secondary-color);
+  background-color: var(--primary-color);
+  font-family: var(--font-family-primary);
+
+  a {
+    color: var(--link-color);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    color: var(--accent-color);
+    font-family: var(--font-family-secondary), sans-serif;
+  }
+
+  blockquote {
+    border-left: .25rem solid var(--accent-color);;
+    border-top-right-radius: .25rem;
+    border-bottom-right-radius: .25rem;
+    background-color: var(--code-background-color);
+  }
+
+  hr {
+    border-bottom: 1px dashed var(--accent-color);
+  }
+
+  pre, code {
+    color: var(--code-color);
+  }
+
+  b, strong, em, abbr, cite, del, ins, sup, sub {
+    color: var(--secondary-color);
+  }
+
+  /* Code in text */
+  p > code,
+  blockquote > code,
+  h1 > code,
+  h2 > code,
+  h3 > code,
+  h4 > code,
+  h5 > code,
+  h6 > code,
+  li > code,
+  dd > code,
+  td > code {
+    color: var(--code-color);
+  }
+
+  ul {
+    li {
+      color: var(--secondary-color);
+    }
+    ::marker {
+      color: var(--accent-color);
+    }
+  }
+
+  ol {
+    li {
+      color: var(--secondary-color);
+    }
+    ::marker {
+      color: var(--accent-color);
+    }
+  }
+
+  th {
+    border-top: 1px solid var(--accent-color);
+  }
+
+  th, td {
+    border-bottom: 1px solid var(--accent-color);
+    border-left: 1px solid var(--accent-color);
+    border-right: 1px solid var(--accent-color);
+  }
+
+  thead {
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+    font-family: var(--font-family-secondary);
+  }
+
+  .yolo-header {
+    .theme-dot {
+      color: var(--secondary-color);
+    }
+    .tag {
+      color: var(--secondary-color);
+    }
+    .description {
+      color: var(--accent-color);
+    }
+  }
+
+  .yolo-footer {
+    color: var(--accent-color);
+  }
+
+  .lb-modal {
+    background-color: var(--primary-color);
+  }
+
+  .lb-close {
+    color: var(--accent-color);
+  }
+
+  .lb-close:hover,
+  .lb-close:focus {
+    color: var(--secondary-color);
+  }
+
+  .lb-nav {
+    &:hover {
+      background-color: rgba(var(--accent-color), 0.3);
+    }
+  }
+
+  .lb-prev {
+    &:hover {
+      color: var(--accent-color);
+    }
+  }
+
+  .lb-next {
+    &:hover {
+      color: var(--accent-color);
+    }
+  }
+
+  .back-to-top {
+    color: var(--link-color);
+  }
+
+  .code-header {
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+    font-family: var(--font-family-secondary);
+    &:is(.copied, :hover) {
+      background-color: var(--secondary-color);
+    }
+    &.copied {
+      background-color: var(--accent-color);
+    }
+  }
+
+  .pill {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    font-family: var(--font-family-monospace);
+  }
+
+  .pill:hover {
+    background-color: var(--accent-color);
+  }
+
+  .sidebar {
+    background-color: var(--sidebar-color);
+  }
+
+  .primary-color {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+  }
+  .secondary-color {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+  }
+  .accent-color {
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+  }
+  .link-color {
+    background-color: var(--link-color);
+    color: var(--primary-color);
+  }
+  .code-background-color {
+    background-color: var(--code-background-color);
+    color: var(--code-color);
+  }
+  .code-color {
+    background-color: var(--code-color);
+    color: var(--code-background-color);
+  }
+  .sidebar-color {
+    background-color: var(--sidebar-color);
+    color: var(--secondary-color);
+  }
+
+  .highlight {
+    background: var(--code-background-color);
+    color: var(--code-color);
+    .c { /* Comment */ color: var(--syntax01); }
+    .err { /* Error */ color: var(--syntax04); }
+    .k {  /* Keyword */ color: var(--syntax10); }
+    .l {  /* Literal */ color: var(--syntax05); }
+    .n {  /* Name */ color: var(--syntax02); }
+    .o {  /* Operator */ color: var(--syntax08); }
+    .p {  /* Punctuation */ color: var(--syntax02); }
+    .cm {  /* Comment.Multiline */ color: var(--syntax01); }
+    .cp {  /* Comment.Preproc */ color: var(--syntax01); }
+    .c1 {  /* Comment.Single */ color: var(--syntax01); }
+    .cs {  /* Comment.Special */ color: var(--syntax01); }
+    .gd {  /* Generic.Deleted */ color: var(--syntax04); }
+    .ge {  /* Generic.Emph */ font-style: italic; }
+    .gh {  /* Generic.Heading */ color: var(--syntax02); font-weight: bold; }
+    .gi {  /* Generic.Inserted */ color: var(--syntax07); }
+    .gp {  /* Generic.Prompt */ color: var(--syntax01); font-weight: bold; }
+    .gs {  /* Generic.Strong */ font-weight: bold; }
+    .gu {  /* Generic.Subheading */ color: var(--syntax08); font-weight: bold; }
+    .kc {  /* Keyword.Constant */ color: var(--syntax10); }
+    .kd {  /* Keyword.Declaration */ color: var(--syntax10); }
+    .kn {  /* Keyword.Namespace */ color: var(--syntax08); }
+    .kp {  /* Keyword.Pseudo */ color: var(--syntax10); }
+    .kr {  /* Keyword.Reserved */ color: var(--syntax10); }
+    .kt {  /* Keyword.Type */ color: var(--syntax06); }
+    .ld {  /* Literal.Date */ color: var(--syntax07); }
+    .m {  /* Literal.Number */ color: var(--syntax05); }
+    .s {  /* Literal.String */ color: var(--syntax07); }
+    .na { /* Name.Attribute */ color: var(--syntax09); }
+    .nb {  /* Name.Builtin */ color: var(--syntax02); }
+    .nc {  /* Name.Class */ color: var(--syntax06); }
+    .no {  /* Name.Constant */ color: var(--syntax04); }
+    .nd {  /* Name.Decorator */ color: var(--syntax08); }
+    .ni {  /* Name.Entity */ color: var(--syntax02); }
+    .ne {  /* Name.Exception */ color: var(--syntax04); }
+    .nf {  /* Name.Function */ color: var(--syntax09); }
+    .nl {  /* Name.Label */ color: var(--syntax02); }
+    .nn {  /* Name.Namespace */ color: var(--syntax06); }
+    .nx {  /* Name.Other */ color: var(--syntax09); }
+    .py {  /* Name.Property */ color: var(--syntax02); }
+    .nt {  /* Name.Tag */ color: var(--syntax08); }
+    .nv {  /* Name.Variable */ color: var(--syntax04); }
+    .ow {  /* Operator.Word */ color: var(--syntax08); }
+    .w {   /* Text.Whitespace */ color: var(--syntax02); }
+    .mf {  /* Literal.Number.Float */ color: var(--syntax05); }
+    .mh {  /* Literal.Number.Hex */ color: var(--syntax05); }
+    .mi {  /* Literal.Number.Integer */ color: var(--syntax05); }
+    .mo {  /* Literal.Number.Oct */ color: var(--syntax05); }
+    .sb {  /* Literal.String.Backtick */ color: var(--syntax07); }
+    .sc {  /* Literal.String.Char */ color: var(--syntax02); }
+    .sd {  /* Literal.String.Doc */ color: var(--syntax01); }
+    .s2 {  /* Literal.String.Double */ color: var(--syntax07); }
+    .se {  /* Literal.String.Escape */ color: var(--syntax05); }
+    .sh {  /* Literal.String.Heredoc */ color: var(--syntax07); }
+    .si {  /* Literal.String.Interpol */ color: var(--syntax05); }
+    .sx {  /* Literal.String.Other */ color: var(--syntax07); }
+    .sr {  /* Literal.String.Regex */ color: var(--syntax07); }
+    .s1 {  /* Literal.String.Single */ color: var(--syntax07); }
+    .ss {  /* Literal.String.Symbol */ color: var(--syntax07); }
+    .bp {  /* Name.Builtin.Pseudo */ color: var(--syntax02); }
+    .vc {  /* Name.Variable.Class */ color: var(--syntax04); }
+    .vg {  /* Name.Variable.Global */ color: var(--syntax04); }
+    .vi {  /* Name.Variable.Instance */ color: var(--syntax04); }
+    .il {  /* Literal.Number.Integer.Long */ color: var(--syntax05); }
+  }
+
+}

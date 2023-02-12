@@ -3,6 +3,7 @@ layout: default
 tags:
 - yolo
 - single-page
+- demo
 - jekyll
 ---
 
@@ -81,6 +82,7 @@ __Color properties:__
 | `*-code-background-color` | Background color for code snippets    |
 | `*-code-color`            | Text color for inline code & snippets |
 | `*-link-color`            | Hyperlink color                       |
+| `*-sidebar-color`         | Sidebar background color              |
 
 __Font family properties:__
 
@@ -98,17 +100,19 @@ __Theme file:__
 ```scss
 $light-primary-color: #fff;
 $light-secondary-color: #000;
-$light-accent-color: #757575;
-$light-code-background-color: #424242;
-$light-code-color: #757575;
+$light-accent-color: #383838;
+$light-code-background-color: #fff;
+$light-code-color: #000;
 $light-link-color: #2196f3;
+$light-sidebar-color: #fff;
 
 $dark-primary-color: #000;
 $dark-secondary-color: #fff;
-$dark-accent-color: #bdbdbd;
-$dark-code-background-color: #424242;
+$dark-accent-color: #b3b2b2;
+$dark-code-background-color: #000;
 $dark-code-color: #fff;
 $dark-link-color: #2196f3;
+$dark-sidebar-color: #000;
 
 $family-primary: "Open Sans", sans-serif;
 $family-secondary: "Raleway", sans-serif;
@@ -137,9 +141,10 @@ Yolo's colors can be customized as outlined in [Yolo Themes](#themes).
 {% include flexbox.html columns="1" fill="primary-color" %}
 {% include flexbox.html columns="1" fill="secondary-color" %}
 {% include flexbox.html columns="1" fill="accent-color" %}
+{% include flexbox.html columns="1" fill="link-color" %}
 {% include flexbox.html columns="1" fill="code-background-color" %}
 {% include flexbox.html columns="1" fill="code-color" %}
-{% include flexbox.html columns="1" fill="link-color" %}
+{% include flexbox.html columns="1" fill="sidebar-color" %}
 
 [↑↑↑](#table-of-contents){: .back-to-top}
 
@@ -267,41 +272,6 @@ H1 is reserved for the site header and not shown here.
 ### Code
 
 > __Tip:__ Click header to copy a snippet.
-
-{% include code.html label="JSON array" %}
-```json
-[{
-  "id": 1000,
-  "first_name": "Sponge",
-  "last_name": "Bob",
-  "email": "spongebob@krustykrab.com",
-  "phone": "555-555-5555",
-  "address": "124 Conch Street",
-  "city": "Bikini Bottom"
-}, {
-  "id": 1001,
-  "first_name": "Charlie",
-  "last_name": "Brown",
-  "email": "chuck@peanuts.com",
-  "phone": "612-111-7777",
-  "address": "1770 James Street",
-  "city": "Minneapolis",
-  "state": "Minnesota",
-  "zipcode": "55403"
-}, {
-  "id": 3,
-  "first_name": "Levon",
-  "last_name": "Laurent",
-  "email": "llaurent2@etsy.com",
-  "phone": "212-535-6056",
-  "schools": "Zhejiang Normal University",
-  "address": "93 Lyons Court",
-  "city": "New York City",
-  "state": "New York",
-  "zipcode": "10125"
-}]
-```
-
 
 {% include code.html label="Bash snippet" %}
 ```bash
@@ -605,28 +575,28 @@ spec:
 
 > __See:__ [Github markdown tables](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/organizing-information-with-tables)
 
-| Player        | BA            | HR           |
-| ------------- | ------------- | ------------ |
-| <a href="https://www.baseball-reference.com/players/a/aaronha01.shtml" target="_blank">Hank Aaron</a> | .305 | 755 |
-| <a href="https://www.baseball-reference.com/players/r/ruthba01.shtml" target="_blank">Babe Ruth</a> | .342 | 714 |
-| <a href="https://www.baseball-reference.com/players/w/wilsomo01.shtml" target="_blank">Mookie Wilson</a> | .274 | 67 |
+| Player                                                                                                   | BA   | HR  |
+|----------------------------------------------------------------------------------------------------------|------|-----|
+| <a href="https://www.baseball-reference.com/players/a/aaronha01.shtml" target="_blank">Hank Aaron</a>    | .305 | 755 |
+| <a href="https://www.baseball-reference.com/players/r/ruthba01.shtml" target="_blank">Babe Ruth</a>      | .342 | 714 |
+| <a href="https://www.baseball-reference.com/players/w/wilsomo01.shtml" target="_blank">Mookie Wilson</a> | .274 | 67  |
 
 #### Formatted content
 {:.no-toc}
 
-| Command | Description |
-| --- | --- |
-| `git rm` | <del>Remove</del> a file from the index |
-| `git status` | List all *new or modified* files |
-| `git diff` | Show file differences that **haven't been** staged |
+| Command      | Description                                        |
+|--------------|----------------------------------------------------|
+| `git rm`     | <del>Remove</del> a file from the index            |
+| `git status` | List all *new or modified* files                   |
+| `git diff`   | Show file differences that **haven't been** staged |
 
 #### Cell alignment
 {:.no-toc}
 
 | Left-aligned | Center-aligned | Right-aligned |
-| :---         |     :---:      |          ---: |
-| `git status` | `git status`   | `git status`  |
-| `git diff`   | `git diff`     | `git diff`    |
+|:-------------|:--------------:|--------------:|
+| `git status` |  `git status`  |  `git status` |
+| `git diff`   |   `git diff`   |    `git diff` |
 
 [↑↑↑](#table-of-contents){: .back-to-top}
 
@@ -639,14 +609,14 @@ spec:
 {% include code.html label="Markdown images" %}
 {% raw %}
 ```markdown
-![Moonie Moonpie]({{ site.images }}/site/moonpie.png "Sweet Moonpie")
-![BIG yawn Bucky]({{ site.images }}/site/bucky.png "Sleepy Bucky")
+![Moonie Moonpie](assets/images/moonpie.png "Sweet Moonpie")
+![BIG yawn Bucky](assets/images/bucky.png "Sleepy Bucky")
 ```
 {% endraw %}
 
-![Moonie Moonpie]({{ site.images }}/site/moonpie.png "Sweet Moonpie")
+![Moonie Moonpie](assets/images/moonpie.png "Sweet Moonpie")
 
-![BIG yawn Bucky]({{ site.images }}/site/bucky.png "Sleepy Bucky")
+![BIG yawn Bucky](assets/images/bucky.png "Sleepy Bucky")
 
 [↑↑↑](#table-of-contents){: .back-to-top}
 
@@ -676,7 +646,7 @@ Thumbnails are 128px x 128px and use the `thumbnail` class.
 {%
   include image/image.html
   classes="thumbnail"
-  src="yolo/big-face-bucky.png"
+  src="https://storage.googleapis.com/corbs-foto/yolo/yolo/big-face-bucky.png"
 %}
 ```
 {% endraw %}
@@ -686,7 +656,7 @@ Thumbnails are 128px x 128px and use the `thumbnail` class.
 {%
 include image/image.html
 classes="thumbnail"
-src="yolo/big-face-bucky.png"
+src="https://storage.googleapis.com/corbs-foto/yolo/yolo/big-face-bucky.png"
 %}
 
 [↑↑↑](#table-of-contents){: .back-to-top}
@@ -704,7 +674,7 @@ Square images can be added with the following classes: `is-16`, `is-24`, `is-32`
 {%
   include image/image.html
   classes="image is-256"
-  src="yolo/drive-in.png"
+  src="https://storage.googleapis.com/corbs-foto/yolo/yolo/drive-in.png"
 %}
 ```
 {% endraw %}
@@ -714,7 +684,7 @@ Square images can be added with the following classes: `is-16`, `is-24`, `is-32`
 {%
 include image/image.html
 classes="image is-256"
-src="yolo/drive-in.png"
+src="https://storage.googleapis.com/corbs-foto/yolo/yolo/drive-in.png"
 %}
 
 [↑↑↑](#table-of-contents){: .back-to-top}
@@ -733,7 +703,7 @@ Circle images can be added with the following classes: `is-circle-16`, `is-circl
 {%
   include image/image.html
   classes="is-circle-256"
-  src="yolo/big-face-bucky.png"
+  src="https://storage.googleapis.com/corbs-foto/yolo/yolo/big-face-bucky.png"
 %}
 ```
 {% endraw %}
@@ -743,7 +713,7 @@ Circle images can be added with the following classes: `is-circle-16`, `is-circl
 {%
 include image/image.html
 classes="is-circle-256"
-src="yolo/big-face-bucky.png"
+src="https://storage.googleapis.com/corbs-foto/yolo/yolo/big-face-bucky.png"
 %}
 
 [↑↑↑](#table-of-contents){: .back-to-top}
@@ -762,7 +732,7 @@ src="yolo/big-face-bucky.png"
 {%
   include image/image.html
   classes="image is-256-by-192"
-  src="yolo/bluebonnet.png"
+  src="https://storage.googleapis.com/corbs-foto/yolo/yolo/bluebonnet.png"
 %}
 ```
 {% endraw %}
@@ -772,7 +742,7 @@ src="yolo/big-face-bucky.png"
 {%
 include image/image.html
 classes="image is-256-by-192"
-src="yolo/bluebonnet.png"
+src="https://storage.googleapis.com/corbs-foto/yolo/yolo/bluebonnet.png"
 %}
 
 [↑↑↑](#table-of-contents){: .back-to-top}
@@ -791,7 +761,7 @@ src="yolo/bluebonnet.png"
 {%
   include image/image.html
   classes="image is-240-by-320"
-  src="yolo/bluebonnet.png"
+  src="https://storage.googleapis.com/corbs-foto/yolo/yolo/bluebonnet.png"
 %}
 ```
 {% endraw %}
@@ -801,7 +771,7 @@ src="yolo/bluebonnet.png"
 {%
 include image/image.html
 classes="image is-240-by-320"
-src="yolo/bluebonnet.png"
+src="https://storage.googleapis.com/corbs-foto/yolo/yolo/bluebonnet.png"
 %}
 
 [↑↑↑](#table-of-contents){: .back-to-top}
@@ -820,7 +790,7 @@ src="yolo/bluebonnet.png"
 {%
   include image/image.html
   classes="image is-256-by-144"
-  src="yolo/bluebonnet.png"
+  src="https://storage.googleapis.com/corbs-foto/yolo/yolo/bluebonnet.png"
 %}
 ```
 {% endraw %}
@@ -830,7 +800,7 @@ src="yolo/bluebonnet.png"
 {%
 include image/image.html
 classes="image is-256-by-144"
-src="yolo/bluebonnet.png"
+src="https://storage.googleapis.com/corbs-foto/yolo/yolo/bluebonnet.png"
 %}
 
 [↑↑↑](#table-of-contents){: .back-to-top}
@@ -849,7 +819,7 @@ src="yolo/bluebonnet.png"
 {%
   include image/image.html
   classes="image is-225-by-400"
-  src="yolo/bluebonnet.png"
+  src="https://storage.googleapis.com/corbs-foto/yolo/yolo/bluebonnet.png"
 %}
 ```
 {% endraw %}
@@ -859,7 +829,7 @@ src="yolo/bluebonnet.png"
 {%
 include image/image.html
 classes="image is-225-by-400"
-src="yolo/bluebonnet.png"
+src="https://storage.googleapis.com/corbs-foto/yolo/yolo/bluebonnet.png"
 %}
 
 [↑↑↑](#table-of-contents){: .back-to-top}

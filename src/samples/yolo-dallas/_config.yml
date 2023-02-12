@@ -1,0 +1,20 @@
+name: Dallas is a jewel
+title: Dallas is a jewel!
+description: Dallas is a beautiful sight...
+style: corbs
+align: left
+header:
+  logo: assets/images/logo.png
+#sidebar:
+#  logo: assets/images/logo.png
+# Build settings
+version: v1.3
+markdown: kramdown
+exclude:
+  - "README.md"
+  - "Makefile"
+  - "Containerfile"
+  - "src/"
+  - "docs/"
+sass:
+  style: compressed

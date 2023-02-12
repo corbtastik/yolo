@@ -1,0 +1,6 @@
+# Sans-serif fonts
+- name: "Montserrat"
+  weights: "400,400i,700,700i"
+# Monospace fonts
+- name: "Inconsolata"
+  weights: "400,400i,700,700i"

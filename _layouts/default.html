@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="yolo-themed">
 {% include head.html %}
 <body id="yolo-site">
-  {% if site.sidebar %}
+  {% if site.data.settings.sidebar %}
   {% include sidebar.html %}
   {% endif %}
-  <div id="yolo-container" class="container {{ site.align }}">
+  <div id="yolo-container" class="container {{ site.data.settings.align | default: 'left' }}">
     <header>
       {% include components/header.html %}
     </header>
