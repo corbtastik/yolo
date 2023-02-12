@@ -9,5 +9,5 @@ style: corbs
 align: left
 #header:
 #  logo: assets/images/logo.png
-#sidebar:
-#  logo: assets/images/logo.png
+sidebar:
+  logo: assets/images/logo.png
