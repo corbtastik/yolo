@@ -1,7 +1,13 @@
 # -----------------------------------------------------------------------------
-# Yolo site settings. Note: _config.yml contains only required jekyll settings
+# Yolo site settings. see: _config.yml for jekyll settings
 # -----------------------------------------------------------------------------
 name: Yolo
+version: v1.3
 title: Yolo on my friend
 description: Loveable single page sites
 style: corbs
+align: left
+#header:
+#  logo: assets/images/logo.png
+#sidebar:
+#  logo: assets/images/logo.png
