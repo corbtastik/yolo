@@ -13,16 +13,9 @@
     object-fit: cover;
     float: left;
   }
-  .theme-dot {
-    font-family: monospace;
-    font-size: $size-3;
-    transform: rotate(90deg);
-    float: right;
-    cursor: pointer;
-  }
   .tag {
     clear: both;
-    margin-top: 1rem;
+    margin-top: 0.5rem;
     margin-bottom: 0.5rem;
     font-weight: bold;
   }
@@ -31,6 +24,22 @@
     margin-top: 0;
     margin-bottom: 1rem;
   }
+}
+
+.toggle-flexbox {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: $size-3;
+  font-size: $size-3;
+}
+
+.toggle-button {
+  position: absolute;
+  transition: color .25s ease;
+  user-select: none;
+  cursor: pointer;
 }
 
 .yolo-footer {
@@ -155,3 +164,9 @@
 @mixin dynamic-color($bg, $syntax) {
   color: text-color($bg, $syntax);
 }
+
+// material-icon sizes
+.material-icons.md-18 { font-size: 18px; }
+.material-icons.md-24 { font-size: 24px; }
+.material-icons.md-36 { font-size: 36px; }
+.material-icons.md-48 { font-size: 48px; }

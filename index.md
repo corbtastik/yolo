@@ -1,10 +1,9 @@
 ---
 layout: default
-tags:
-- yolo
-- single-page
-- demo
-- jekyll
+links:
+- yolo,https://github.com/corbtastik/yolo
+- single-page,https://en.wikipedia.org/wiki/Single-page_application
+- jekyll,https://jekyllrb.com
 ---
 
 Yolo is laser focused on static single page sites, and while anyone can Yolo, it's purposely built for writers,

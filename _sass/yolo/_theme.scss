@@ -1,9 +1,10 @@
 // ----------------------------------------------------------------------------
 // Theme stylesheet for all elements that get special attention
 // ----------------------------------------------------------------------------
-// Syntax Highlighting on light
+// Variables that apply to light mode that are not part of a custom theme
 // ----------------------------------------------------------------------------
 :root {
+  // Syntax Highlighting on light
   --syntax01: #8f8f8f;
   --syntax02: #011842;
   --syntax03: #393939;
@@ -16,9 +17,10 @@
   --syntax10: #db0c4d;
 }
 // ----------------------------------------------------------------------------
-// Syntax Highlighting on dark
+// Variables that apply to light mode that are not part of a custom theme
 // ----------------------------------------------------------------------------
 :root[dark] {
+  // Syntax Highlighting on light
   --syntax01: #a0a0a0;
   --syntax02: #e4e8eb;
   --syntax03: #dfe2e5;
@@ -118,13 +120,16 @@
   }
 
   .yolo-header {
-    .theme-dot {
-      color: var(--secondary-color);
-    }
     .tag {
       color: var(--secondary-color);
     }
     .description {
+      color: var(--accent-color);
+    }
+  }
+
+  .toggle-button {
+    &:hover {
       color: var(--accent-color);
     }
   }
@@ -290,5 +295,4 @@
     .vi {  /* Name.Variable.Instance */ color: var(--syntax04); }
     .il {  /* Literal.Number.Integer.Long */ color: var(--syntax05); }
   }
-
 }
