@@ -1,0 +1,48 @@
+// ----------------------------------------------------------------------------
+// yolo theme - WIP new color scheme implementation
+// ----------------------------------------------------------------------------
+// Dark mode
+:root[dark] {
+  // primary-color: by default set as the background color
+  --primary-color: #000928;
+  // on-primary-color: color used on top of primary-color
+  --on-primary-color: #fb1d9e;
+  // primary-container-color: primary color used for containers
+  --primary-container-color: #000110;
+  // on-primary-container-color: color used on top of primary-container-color
+  --on-primary-container-color: #dbe1ff;
+
+  --secondary-color: #fb1d9e;
+  --on-secondary-color: #000928;
+  --secondary-container-color: #8c0056;
+  --on-secondary-container-color: #ffdae5;
+
+  --tertiary-color: #b388ff;
+  --on-tertiary-color: #140233;
+  --tertiary-container-color: #3b1779;
+  --on-tertiary-container-color: #bfa3f3;
+
+  --accent-color: #00b0ff;
+  --on-accent-color: #000928;
+  --accent-container-color: #037eb8;
+  --on-accent-container-color: #001521;
+
+  --background-color: #000928;
+  --link-color: #65e9fc;
+
+  --neutral-color: #e0e0e0;
+  --on-neutral-color: #212121;
+
+  --error-color: #ffcdd2;
+  --on-error-color: #b71c1c;
+
+  --warn-color: #ffee58;
+  --on-warn-color: #212121;
+
+  --info-color: #bbdefb;
+  --on-info-color: #1565c0;
+
+  --font-family-primary: "JetBrains Mono", monospace;
+  --font-family-secondary: "Red Hat Text", sans-serif;
+  --font-family-monospace: "Inconsolata", monospace;
+}
