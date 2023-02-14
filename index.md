@@ -57,77 +57,13 @@ jekyll serve
 
 Yolo doesn't implement an "according to hoyle" [gem based theme](https://jekyllrb.com/docs/themes/), but the colors and fonts can be customized as outlined below.
 
-> __Note:__ "Theming" for Yolo is accomplished by providing a custom scss file in `_sass/yolo/themes`. Each theme must specify "light" and "dark" values to support switching between the two modes.
+> __Note:__
+>   * "Theming" for Yolo is accomplished by providing a custom scss file in `_sass/yolo/themes`. Each theme must specify "light" and "dark" values to support switching between the two modes.
+>   * Add font-family in `_data/fonts.yml` to customize what fonts are available.
 
-##### 1. Create a new scss file for your theme.
-{:.no-toc}
-
-{% include code.html label="Create theme scss" %}
-```bash
-# Use whatever NAME you like
-make theme NAME=domino
-```
-
-##### 2. Customize the theme values.
-{:.no-toc}
-
-__Color properties:__
-
-| Light/Dark property       | Description                           |
-|---------------------------|---------------------------------------|
-| `*-primary-color`         | Background color                      |
-| `*-secondary-color`       | Foreground color, text, tables        |
-| `*-accent-color`          | Header color                          |
-| `*-code-background-color` | Background color for code snippets    |
-| `*-code-color`            | Text color for inline code & snippets |
-| `*-link-color`            | Hyperlink color                       |
-| `*-sidebar-color`         | Sidebar background color              |
-
-__Font family properties:__
-
-> __Note:__ Add font-family in `_data/fonts.yml` to customize what fonts are available.
-
-| Font property      | Description                        |
-|--------------------|------------------------------------|
-| `family-primary`   | Family for body and most text      |
-| `family-secondary` | Family for headers and accent text |
-| `family-monospace` | Family for code                    |
-
-__Theme file:__
-
-{% include code.html label="_sass/yolo/themes/_domino.scss" %}
-```scss
-$light-primary-color: #fff;
-$light-secondary-color: #000;
-$light-accent-color: #383838;
-$light-code-background-color: #fff;
-$light-code-color: #000;
-$light-link-color: #2196f3;
-$light-sidebar-color: #fff;
-
-$dark-primary-color: #000;
-$dark-secondary-color: #fff;
-$dark-accent-color: #b3b2b2;
-$dark-code-background-color: #000;
-$dark-code-color: #fff;
-$dark-link-color: #2196f3;
-$dark-sidebar-color: #000;
-
-$family-primary: "Open Sans", sans-serif;
-$family-secondary: "Raleway", sans-serif;
-$family-monospace: "Inconsolata", monospace;
-```
-
-##### 3. Enable by setting `site.style` in `_config.yml`.
-{:.no-toc}
-
-{% include code.html label="Jekyll _config.yml" %}
-```yaml
-# Site customizations
-style: domino
-```
-
-That's it, run Yolo and adjust colors to your liking.
+1. Create a new scss file in `_sass/yolo/themes/`.
+2. Customize the theme values for light and dark modes.
+3. Enable by setting `theme.name` in `_data/_settings.yml`.
 
 [↑↑↑](#table-of-contents){: .back-to-top}
 
@@ -135,15 +71,31 @@ That's it, run Yolo and adjust colors to your liking.
 
 ### Colors
 
-Yolo's colors can be customized as outlined in [Yolo Themes](#themes).
+Yolo's colors can be customized as outlined in [Themes](#themes).
 
 {% include flexbox.html columns="1" fill="primary-color" %}
+{% include flexbox.html columns="1" fill="on-primary-color" %}
+{% include flexbox.html columns="1" fill="primary-container-color" %}
+{% include flexbox.html columns="1" fill="on-primary-container-color" %}
 {% include flexbox.html columns="1" fill="secondary-color" %}
+{% include flexbox.html columns="1" fill="on-secondary-color" %}
+{% include flexbox.html columns="1" fill="secondary-container-color" %}
+{% include flexbox.html columns="1" fill="on-secondary-container-color" %}
+{% include flexbox.html columns="1" fill="tertiary-color" %}
+{% include flexbox.html columns="1" fill="on-tertiary-color" %}
+{% include flexbox.html columns="1" fill="tertiary-container-color" %}
+{% include flexbox.html columns="1" fill="on-tertiary-container-color" %}
 {% include flexbox.html columns="1" fill="accent-color" %}
+{% include flexbox.html columns="1" fill="on-accent-color" %}
 {% include flexbox.html columns="1" fill="link-color" %}
-{% include flexbox.html columns="1" fill="code-background-color" %}
-{% include flexbox.html columns="1" fill="code-color" %}
-{% include flexbox.html columns="1" fill="sidebar-color" %}
+{% include flexbox.html columns="1" fill="neutral-color" %}
+{% include flexbox.html columns="1" fill="on-neutral-color" %}
+{% include flexbox.html columns="1" fill="error-color" %}
+{% include flexbox.html columns="1" fill="on-error-color" %}
+{% include flexbox.html columns="1" fill="warn-color" %}
+{% include flexbox.html columns="1" fill="on-warn-color" %}
+{% include flexbox.html columns="1" fill="info-color" %}
+{% include flexbox.html columns="1" fill="on-info-color" %}
 
 [↑↑↑](#table-of-contents){: .back-to-top}
 
@@ -151,7 +103,7 @@ Yolo's colors can be customized as outlined in [Yolo Themes](#themes).
 
 ### Typography
 
-Yolo's fonts can be customized as outlined in [Yolo Themes](#themes).
+Yolo's fonts can be customized as outlined in [Themes](#themes).
 
 {% include typography.html %}
 
@@ -306,107 +258,6 @@ int main(int argc, char **argv) {
 
 [↑↑↑](#table-of-contents){: .back-to-top}
 
-{% include code.html label="C++ snippet" %}
-```c++
-#include <iostream>
-using namespace std;
-
-int main(int argc, char** argv) {
-    if(argc != 2) {
-        cout << "Usage: Howdy <NAME>";
-        return 1;
-    }
-    cout << "Howdy " << argv[1];
-    return 0;
-}
-```
-
-[↑↑↑](#table-of-contents){: .back-to-top}
-
-{% include code.html label="Dart snippet" %}
-```dart
-import 'dart:io';
-// Say Howdy
-void main(List<String> args) {
-    exitCode = 0;
-    if(args.length != 1) {
-        stdout.writeln("Usage: Howdy <NAME>");
-        exitCode = 1;
-        return;
-    }
-    stdout.writeln("Howdy ${args[0]}!");
-}
-```
-
-[↑↑↑](#table-of-contents){: .back-to-top}
-
-{% include code.html label="Go snippet" %}
-```go
-package main
-
-import (
-    "os"
-    "fmt"
-)
-
-// Say Howdy
-func main () {
-    if len(os.Args) != 2 {
-        fmt.Println("Usage: Howdy <NAME>")
-        os.Exit(1)
-    }
-    fmt.Println("Howdy " + os.Args[1] + "!")
-    os.Exit(0)
-}
-```
-
-[↑↑↑](#table-of-contents){: .back-to-top}
-
-{% include code.html label="HTML snippet" %}
-```html
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8" />
-    <title>Howdy!</title>
-</head>
-<body>
-    <h1>Howdy from an HTML page!</h1>
-</body>
-</html>
-```
-
-[↑↑↑](#table-of-contents){: .back-to-top}
-
-{% include code.html label="JSON snippet" %}
-```json
-{
-  "apiVersion": "v1",
-  "kind": "Service",
-  "metadata": {
-    "name": "minio-server-lb",
-    "namespace": "minio",
-    "labels": {
-      "app/name": "minio"
-    }
-  },
-  "spec": {
-    "ports": [{
-        "port": 9000,
-        "targetPort": 9000,
-        "protocol": "TCP"
-      }],
-    "selector": {
-      "app/name": "minio",
-      "app/component": "backend"
-    },
-    "type": "LoadBalancer"
-  }
-}
-```
-
-[↑↑↑](#table-of-contents){: .back-to-top}
-
 {% include code.html label="Java snippet" %}
 ```java
 // Say Howdy
@@ -451,90 +302,6 @@ fun main(args: Array<String>): Int {
     println("Howdy " + args[0] + "!")
     return 0
 }
-```
-
-[↑↑↑](#table-of-contents){: .back-to-top}
-
-{% include code.html label="Markdown snippet" %}
-```markdown
-# Markdown
-
-* __Howdy__
-* _from_
-* <ins>a</ins>
-* [Markdown](https://en.wikipedia.org/wiki/Markdown)
-* `document`!
-```
-
-[↑↑↑](#table-of-contents){: .back-to-top}
-
-{% include code.html label="Python snippet" %}
-```python
-import sys
-
-def sayHowdy(name):
-    print("Howdy " + name + "!")
-
-if len(sys.argv) != 2:
-    print("Usage: Howdy <NAME>")
-    sys.exit(1)
-
-# Say Howdy
-sayHowdy(sys.argv[1])
-```
-
-[↑↑↑](#table-of-contents){: .back-to-top}
-
-{% include code.html label="SCSS snippet" %}
-```scss
-.light-theme {
-  color: $light-secondary-color;
-  background-color: $light-primary-color;
-  font-family: $family-primary;
-
-  a {
-    color: $light-link-color;
-  }
-
-  h1, h2, h3, h4, h5, h6 {
-    color: $light-accent-color;
-    font-family: $family-secondary, sans-serif;
-  }
-}
-```
-
-[↑↑↑](#table-of-contents){: .back-to-top}
-
-{% include code.html label="SQL snippet" %}
-```sql
--- Select orders for micky
-SELECT *
-FROM orders
-WHERE cust_id = "mickey@mouse.com"
-AND   price > 5000
-AND   price <= 10000
-```
-
-[↑↑↑](#table-of-contents){: .back-to-top}
-
-{% include code.html label="YAML snippet" %}
-```yaml
-apiVersion: v1
-kind: Service
-metadata:
-  name: minio-server-lb
-  namespace: minio
-  labels:
-    app/name: minio
-spec:
-  ports:
-    - port: 9000
-      targetPort: 9000
-      protocol: TCP
-  selector:
-    app/name: minio
-    app/component: backend
-  type: LoadBalancer
 ```
 
 [↑↑↑](#table-of-contents){: .back-to-top}

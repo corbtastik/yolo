@@ -4,7 +4,7 @@
 @charset "utf-8";
 
 @import "yolo/variables";
-@import "yolo/themes/{{ site.data.settings.theme.name | default: 'corbs' }}";
+@import "yolo/themes/{{ site.data.settings.theme.name | default: 'yolo' }}";
 @import "yolo/normalize";
 @import "yolo/base";
 @import "yolo/responsiveness";

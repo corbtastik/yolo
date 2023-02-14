@@ -15,12 +15,22 @@
   --syntax08: #1b3df8;
   --syntax09: #5923ca;
   --syntax10: #db0c4d;
+  // Error, Warn and Info colors on light
+  --error-color: #b71c1c;
+  --on-error-color: #ffcdd2;
+  --warn-color: #212121;
+  --on-warn-color: #ffee58;
+  --info-color: #1565c0;
+  --on-info-color: #bbdefb;
+  // Neutral colors on light
+  --neutral-color: #212121;
+  --on-neutral-color: #e0e0e0;
 }
 // ----------------------------------------------------------------------------
 // Variables that apply to light mode that are not part of a custom theme
 // ----------------------------------------------------------------------------
 :root[dark] {
-  // Syntax Highlighting on light
+  // Syntax Highlighting on dark
   --syntax01: #a0a0a0;
   --syntax02: #e4e8eb;
   --syntax03: #dfe2e5;
@@ -31,6 +41,16 @@
   --syntax08: #609dfc;
   --syntax09: #bd9ef8;
   --syntax10: #ff4081;
+  // Error, Warn and Info colors on dark
+  --error-color: #ffcdd2;
+  --on-error-color: #b71c1c;
+  --warn-color: #ffee58;
+  --on-warn-color: #212121;
+  --info-color: #bbdefb;
+  --on-info-color: #1565c0;
+  // Neutral colors on dark
+  --neutral-color: #e0e0e0;
+  --on-neutral-color: #212121;
 }
 // ----------------------------------------------------------------------------
 // Contains selectors for all themed elements.
@@ -38,7 +58,7 @@
 // See: _sass/yolo/themes for specific theme colors.
 // ----------------------------------------------------------------------------
 .yolo-themed {
-  color: var(--secondary-color);
+  color: var(--on-primary-color);
   background-color: var(--primary-color);
   font-family: var(--font-family-primary);
 
@@ -47,7 +67,7 @@
   }
 
   h1, h2, h3, h4, h5, h6 {
-    color: var(--accent-color);
+    color: var(--tertiary-color);
     font-family: var(--font-family-secondary), sans-serif;
   }
 
@@ -55,7 +75,8 @@
     border-left: .25rem solid var(--accent-color);;
     border-top-right-radius: .25rem;
     border-bottom-right-radius: .25rem;
-    background-color: var(--code-background-color);
+    background-color: var(--primary-container-color);
+    color: var(--on-primary-container-color);
   }
 
   hr {
@@ -63,11 +84,11 @@
   }
 
   pre, code {
-    color: var(--code-color);
+    color: var(--on-primary-container-color);
   }
 
   b, strong, em, abbr, cite, del, ins, sup, sub {
-    color: var(--secondary-color);
+    color: var(--on-primary-color);
   }
 
   /* Code in text */
@@ -82,12 +103,15 @@
   li > code,
   dd > code,
   td > code {
-    color: var(--code-color);
+    color: var(--on-primary-container-color);
   }
 
   ul {
     li {
-      color: var(--secondary-color);
+      color: var(--on-primary-color);
+    }
+    ::before {
+      color: var(--accent-color);
     }
     ::marker {
       color: var(--accent-color);
@@ -96,7 +120,7 @@
 
   ol {
     li {
-      color: var(--secondary-color);
+      color: var(--on-primary-color);
     }
     ::marker {
       color: var(--accent-color);
@@ -104,24 +128,24 @@
   }
 
   th {
-    border-top: 1px solid var(--accent-color);
+    border-top: 1px solid var(--secondary-color);
   }
 
   th, td {
-    border-bottom: 1px solid var(--accent-color);
-    border-left: 1px solid var(--accent-color);
-    border-right: 1px solid var(--accent-color);
+    border-bottom: 1px solid var(--secondary-color);
+    border-left: 1px solid var(--secondary-color);
+    border-right: 1px solid var(--secondary-color);
   }
 
   thead {
-    background-color: var(--accent-color);
-    color: var(--primary-color);
+    background-color: var(--secondary-color);
+    color: var(--on-secondary-color);
     font-family: var(--font-family-secondary);
   }
 
   .yolo-header {
     .tag {
-      color: var(--secondary-color);
+      color: var(--on-primary-color);
     }
     .description {
       color: var(--accent-color);
@@ -129,26 +153,27 @@
   }
 
   .toggle-button {
+    color: var(--secondary-color);
     &:hover {
-      color: var(--accent-color);
+      color: var(--tertiary-color);
     }
   }
 
   .yolo-footer {
-    color: var(--accent-color);
+    color: var(--secondary-color);
   }
 
   .lb-modal {
-    background-color: var(--primary-color);
+    background-color: var(--primary-container-color);
   }
 
   .lb-close {
-    color: var(--accent-color);
+    color: var(--secondary-color);
   }
 
   .lb-close:hover,
   .lb-close:focus {
-    color: var(--secondary-color);
+    color: var(--tertiary-color);
   }
 
   .lb-nav {
@@ -158,14 +183,16 @@
   }
 
   .lb-prev {
+    color: var(--secondary-color);
     &:hover {
-      color: var(--accent-color);
+      color: var(--tertiary-color);
     }
   }
 
   .lb-next {
+    color: var(--secondary-color);
     &:hover {
-      color: var(--accent-color);
+      color: var(--tertiary-color);
     }
   }
 
@@ -174,63 +201,130 @@
   }
 
   .code-header {
-    background-color: var(--accent-color);
-    color: var(--primary-color);
+    background-color: var(--secondary-color);
+    color: var(--on-secondary-color);
     font-family: var(--font-family-secondary);
     &:is(.copied, :hover) {
-      background-color: var(--secondary-color);
+      background-color: var(--tertiary-color);
+      color: var(--on-tertiary-color);
     }
     &.copied {
-      background-color: var(--accent-color);
+      background-color: var(--secondary-color);
     }
   }
 
   .pill {
     background-color: var(--secondary-color);
-    color: var(--primary-color);
+    color: var(--on-secondary-color);
     font-family: var(--font-family-monospace);
   }
 
   .pill:hover {
-    background-color: var(--accent-color);
+    background-color: var(--tertiary-color);
+    color: var(--on-tertiary-color);
   }
 
   .sidebar {
-    background-color: var(--sidebar-color);
+    background-color: var(--primary-container-color);
+    color: var(--on-primary-container-color);
   }
+
 
   .primary-color {
     background-color: var(--primary-color);
-    color: var(--secondary-color);
+    color: var(--on-primary-color);
+  }
+  .on-primary-color {
+    background-color: var(--on-primary-color);
+    color: var(--primary-color);
+  }
+  .primary-container-color {
+    background-color: var(--primary-container-color);
+    color: var(--on-primary-container-color);
+  }
+  .on-primary-container-color {
+    background-color: var(--on-primary-container-color);
+    color: var(--primary-container-color);
   }
   .secondary-color {
     background-color: var(--secondary-color);
-    color: var(--primary-color);
+    color: var(--on-secondary-color);
+  }
+  .on-secondary-color {
+    background-color: var(--on-secondary-color);
+    color: var(--secondary-color);
+  }
+  .secondary-container-color {
+    background-color: var(--secondary-container-color);
+    color: var(--on-secondary-container-color);
+  }
+  .on-secondary-container-color {
+    background-color: var(--on-secondary-container-color);
+    color: var(--secondary-container-color);
+  }
+  .tertiary-color {
+    background-color: var(--tertiary-color);
+    color: var(--on-tertiary-color);
+  }
+  .on-tertiary-color {
+    background-color: var(--on-tertiary-color);
+    color: var(--tertiary-color);
+  }
+  .tertiary-container-color {
+    background-color: var(--tertiary-container-color);
+    color: var(--on-tertiary-container-color);
+  }
+  .on-tertiary-container-color {
+    background-color: var(--on-tertiary-container-color);
+    color: var(--tertiary-container-color);
   }
   .accent-color {
     background-color: var(--accent-color);
-    color: var(--primary-color);
+    color: var(--on-accent-color);
+  }
+  .on-accent-color {
+    background-color: var(--on-accent-color);
+    color: var(--accent-color);
+  }
+  .neutral-color {
+    background-color: var(--neutral-color);
+    color: var(--on-neutral-color);
+  }
+  .on-neutral-color {
+    background-color: var(--on-neutral-color);
+    color: var(--neutral-color);
   }
   .link-color {
     background-color: var(--link-color);
     color: var(--primary-color);
   }
-  .code-background-color {
-    background-color: var(--code-background-color);
-    color: var(--code-color);
+  .error-color {
+    background-color: var(--error-color);
+    color: var(--on-error-color);
   }
-  .code-color {
-    background-color: var(--code-color);
-    color: var(--code-background-color);
+  .on-error-color {
+    background-color: var(--on-error-color);
+    color: var(--error-color);
   }
-  .sidebar-color {
-    background-color: var(--sidebar-color);
-    color: var(--secondary-color);
+  .warn-color {
+    background-color: var(--warn-color);
+    color: var(--on-warn-color);
   }
-
+  .on-warn-color {
+    background-color: var(--on-warn-color);
+    color: var(--warn-color);
+  }
+  .info-color {
+    background-color: var(--info-color);
+    color: var(--on-info-color);
+  }
+  .on-info-color {
+    background-color: var(--on-info-color);
+    color: var(--info-color);
+  }
   .highlight {
-    background: var(--code-background-color);
-    color: var(--code-color);
+    background: var(--primary-container-color);
+    color: var(--on-primary-container-color);
     .c { /* Comment */ color: var(--syntax01); }
     .err { /* Error */ color: var(--syntax04); }
     .k {  /* Keyword */ color: var(--syntax10); }
