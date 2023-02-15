@@ -1,0 +1,55 @@
+// ----------------------------------------------------------------------------
+// weekly theme
+// ----------------------------------------------------------------------------
+// Light mode
+:root {
+  --primary-color: #eceff1;
+  --on-primary-color: #37474f;
+  --primary-container-color: #fafafa;
+  --on-primary-container-color: #000928;
+
+  --secondary-color: #1a237e;
+  --on-secondary-color: #fff;
+  --secondary-container-color: #424242;
+  --on-secondary-container-color: #f5f5f5;
+
+  --tertiary-color: #1f56d8;
+  --on-tertiary-color: #fafafa;
+  --tertiary-container-color: #0b1e4a;
+  --on-tertiary-container-color: #f5f5f5;
+
+  --accent-color: #4a23b3;
+  --on-accent-color: #fff;
+
+  --link-color: #0091ea;
+
+  --font-family-primary: "Red Hat Text", sans-serif;
+  --font-family-secondary: "Open Sans", sans-serif;
+  --font-family-monospace: "Red Hat Mono", monospace;
+}
+// Dark mode
+:root[dark] {
+  --primary-color: #020c2a;
+  --on-primary-color: #eceff1;
+  --primary-container-color: #000a12;
+  --on-primary-container-color: #c4feee;
+
+  --secondary-color: #8457ff;
+  --on-secondary-color: #000;
+  --secondary-container-color: #100a20;
+  --on-secondary-container-color: #dcedf8;
+
+  --tertiary-color: #17a3f7;
+  --on-tertiary-color: #000;
+  --tertiary-container-color: #082c41;
+  --on-tertiary-container-color: #dcedf8;
+
+  --accent-color: #8457ff;
+  --on-accent-color: #fff;
+
+  --link-color: #65e9fc;
+
+  --font-family-primary: "Red Hat Text", sans-serif;
+  --font-family-secondary: "Open Sans", sans-serif;
+  --font-family-monospace: "Red Hat Mono", monospace;
+}
