@@ -1,0 +1,14 @@
+# -----------------------------------------------------------------------------
+# Yolo site settings. see: _config.yml for jekyll settings
+# -----------------------------------------------------------------------------
+name: Solo
+version: v1.3
+title: Solo Theme
+description: A simple theme
+theme:
+  name: solo
+align: left
+#header:
+#  logo: assets/images/logo.png
+sidebar:
+  logo: assets/images/logo.png
