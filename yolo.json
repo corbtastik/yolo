@@ -3,6 +3,7 @@
   "config": "_config.yml",
   "index": "index.md",
   "data": [
+    "settings.yml",
     "fonts.yml",
     "ig-images.yml",
     "ig-pets.yml",

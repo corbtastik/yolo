@@ -1,10 +1,8 @@
 ---
 layout: default
-tags:
-- yolo
-- single-page
-- demo
-- jekyll
+links:
+- yolo,https://github.com/corbtastik/yolo
+- jekyll,https://jekyllrb.com
 ---
 
 Yolo is laser focused on static single page sites, and while anyone can Yolo, it's purposely built for writers,
@@ -32,12 +30,6 @@ Bring your own [colors](#colors) and [fonts](#typography).
 
 ---
 
-{% include toc.html header="h2" text="Table of Contents" %}
-
-[↑↑↑](#){: .back-to-top}
-
----
-
 ## Getting Started
 
 You need [jekyll](https://jekyllrb.com/).
@@ -50,7 +42,7 @@ jekyll build
 jekyll serve
 ```
 
-[↑↑↑](#table-of-contents){: .back-to-top}
+[↑↑↑](#){: .back-to-top}
 
 ---
 
@@ -58,105 +50,57 @@ jekyll serve
 
 Yolo doesn't implement an "according to hoyle" [gem based theme](https://jekyllrb.com/docs/themes/), but the colors and fonts can be customized as outlined below.
 
-> __Note:__ "Theming" for Yolo is accomplished by providing a custom scss file in `_sass/yolo/themes`. Each theme must specify "light" and "dark" values to support switching between the two modes.
+> __Note:__
+>   * "Theming" for Yolo is accomplished by providing a custom scss file in `_sass/yolo/themes`. Each theme must specify "light" and "dark" values to support switching between the two modes.
+>   * Add font-family in `_data/fonts.yml` to customize what fonts are available.
 
-##### 1. Create a new scss file for your theme.
-{:.no-toc}
+1. Create a new scss file in `_sass/yolo/themes/`.
+2. Customize the theme values for light and dark modes.
+3. Enable by setting `theme.name` in `_data/_settings.yml`.
 
-{% include code.html label="Create theme scss" %}
-```bash
-# Use whatever NAME you like
-make theme NAME=domino
-```
-
-##### 2. Customize the theme values.
-{:.no-toc}
-
-__Color properties:__
-
-| Light/Dark property       | Description                           |
-|---------------------------|---------------------------------------|
-| `*-primary-color`         | Background color                      |
-| `*-secondary-color`       | Foreground color, text, tables        |
-| `*-accent-color`          | Header color                          |
-| `*-code-background-color` | Background color for code snippets    |
-| `*-code-color`            | Text color for inline code & snippets |
-| `*-link-color`            | Hyperlink color                       |
-| `*-sidebar-color`         | Sidebar background color              |
-
-__Font family properties:__
-
-> __Note:__ Add font-family in `_data/fonts.yml` to customize what fonts are available.
-
-| Font property      | Description                        |
-|--------------------|------------------------------------|
-| `family-primary`   | Family for body and most text      |
-| `family-secondary` | Family for headers and accent text |
-| `family-monospace` | Family for code                    |
-
-__Theme file:__
-
-{% include code.html label="_sass/yolo/themes/_domino.scss" %}
-```scss
-$light-primary-color: #fff;
-$light-secondary-color: #000;
-$light-accent-color: #383838;
-$light-code-background-color: #fff;
-$light-code-color: #000;
-$light-link-color: #2196f3;
-$light-sidebar-color: #fff;
-
-$dark-primary-color: #000;
-$dark-secondary-color: #fff;
-$dark-accent-color: #b3b2b2;
-$dark-code-background-color: #000;
-$dark-code-color: #fff;
-$dark-link-color: #2196f3;
-$dark-sidebar-color: #000;
-
-$family-primary: "Open Sans", sans-serif;
-$family-secondary: "Raleway", sans-serif;
-$family-monospace: "Inconsolata", monospace;
-```
-
-##### 3. Enable by setting `site.style` in `_config.yml`.
-{:.no-toc}
-
-{% include code.html label="Jekyll _config.yml" %}
-```yaml
-# Site customizations
-style: domino
-```
-
-That's it, run Yolo and adjust colors to your liking.
-
-[↑↑↑](#table-of-contents){: .back-to-top}
+[↑↑↑](#){: .back-to-top}
 
 ---
 
 ### Colors
 
-Yolo's colors can be customized as outlined in [Yolo Themes](#themes).
+Yolo's colors can be customized as outlined in [Themes](#themes).
 
 {% include flexbox.html columns="1" fill="primary-color" %}
+{% include flexbox.html columns="1" fill="on-primary-color" %}
+{% include flexbox.html columns="1" fill="primary-container-color" %}
+{% include flexbox.html columns="1" fill="on-primary-container-color" %}
 {% include flexbox.html columns="1" fill="secondary-color" %}
+{% include flexbox.html columns="1" fill="on-secondary-color" %}
+{% include flexbox.html columns="1" fill="secondary-container-color" %}
+{% include flexbox.html columns="1" fill="on-secondary-container-color" %}
+{% include flexbox.html columns="1" fill="tertiary-color" %}
+{% include flexbox.html columns="1" fill="on-tertiary-color" %}
+{% include flexbox.html columns="1" fill="tertiary-container-color" %}
+{% include flexbox.html columns="1" fill="on-tertiary-container-color" %}
 {% include flexbox.html columns="1" fill="accent-color" %}
+{% include flexbox.html columns="1" fill="on-accent-color" %}
 {% include flexbox.html columns="1" fill="link-color" %}
-{% include flexbox.html columns="1" fill="code-background-color" %}
-{% include flexbox.html columns="1" fill="code-color" %}
-{% include flexbox.html columns="1" fill="sidebar-color" %}
+{% include flexbox.html columns="1" fill="neutral-color" %}
+{% include flexbox.html columns="1" fill="on-neutral-color" %}
+{% include flexbox.html columns="1" fill="error-color" %}
+{% include flexbox.html columns="1" fill="on-error-color" %}
+{% include flexbox.html columns="1" fill="warn-color" %}
+{% include flexbox.html columns="1" fill="on-warn-color" %}
+{% include flexbox.html columns="1" fill="info-color" %}
+{% include flexbox.html columns="1" fill="on-info-color" %}
 
-[↑↑↑](#table-of-contents){: .back-to-top}
+[↑↑↑](#){: .back-to-top}
 
 ---
 
 ### Typography
 
-Yolo's fonts can be customized as outlined in [Yolo Themes](#themes).
+Yolo's fonts can be customized as outlined in [Themes](#themes).
 
 {% include typography.html %}
 
-[↑↑↑](#table-of-contents){: .back-to-top}
+[↑↑↑](#){: .back-to-top}
 
 ---
 
@@ -173,7 +117,7 @@ Yolo's fonts can be customized as outlined in [Yolo Themes](#themes).
 * [Videos](#videos)
 * [Prezos](#prezos)
 
-[↑↑↑](#table-of-contents){: .back-to-top}
+[↑↑↑](#){: .back-to-top}
 
 ---
 
@@ -196,7 +140,7 @@ H1 is reserved for the site header and not shown here.
 ###### H6 Heading
 {:.no-toc}
 
-[↑↑↑](#table-of-contents){: .back-to-top}
+[↑↑↑](#){: .back-to-top}
 
 ---
 
@@ -204,7 +148,7 @@ H1 is reserved for the site header and not shown here.
 
 [Baseball](https://en.wikipedia.org/wiki/Baseball) is a bat-and-ball sport played between two teams of nine players each, taking turns batting and fielding. The game is in play when a player on the fielding team, called the pitcher, throws a ball that a player on the batting team tries to hit with a bat. The objective of the offensive team (batting team) is to hit the ball into the field of play, away from the other team's players, allowing its players to run the bases, having them advance counter-clockwise around four bases to score what are called "runs". - copied from [Wikipedia](https://en.wikipedia.org/wiki/Baseball).
 
-[↑↑↑](#table-of-contents){: .back-to-top}
+[↑↑↑](#){: .back-to-top}
 
 ---
 
@@ -248,7 +192,7 @@ H1 is reserved for the site header and not shown here.
 > 5. __Home Runs:__ Hits where the batter touches all four bases safely.
 > 6. __Batting Average:__ Hits divided by at bats.
 
-[↑↑↑](#table-of-contents){: .back-to-top}
+[↑↑↑](#){: .back-to-top}
 
 ---
 
@@ -265,7 +209,7 @@ H1 is reserved for the site header and not shown here.
 - Subscript <sub>text</sub>
 - Inline code `SELECT * FROM players;`
 
-[↑↑↑](#table-of-contents){: .back-to-top}
+[↑↑↑](#){: .back-to-top}
 
 ---
 
@@ -289,7 +233,7 @@ fi
 say_howdy $1
 ```
 
-[↑↑↑](#table-of-contents){: .back-to-top}
+[↑↑↑](#){: .back-to-top}
 
 {% include code.html label="C snippet" %}
 ```c
@@ -305,108 +249,7 @@ int main(int argc, char **argv) {
 }
 ```
 
-[↑↑↑](#table-of-contents){: .back-to-top}
-
-{% include code.html label="C++ snippet" %}
-```c++
-#include <iostream>
-using namespace std;
-
-int main(int argc, char** argv) {
-    if(argc != 2) {
-        cout << "Usage: Howdy <NAME>";
-        return 1;
-    }
-    cout << "Howdy " << argv[1];
-    return 0;
-}
-```
-
-[↑↑↑](#table-of-contents){: .back-to-top}
-
-{% include code.html label="Dart snippet" %}
-```dart
-import 'dart:io';
-// Say Howdy
-void main(List<String> args) {
-    exitCode = 0;
-    if(args.length != 1) {
-        stdout.writeln("Usage: Howdy <NAME>");
-        exitCode = 1;
-        return;
-    }
-    stdout.writeln("Howdy ${args[0]}!");
-}
-```
-
-[↑↑↑](#table-of-contents){: .back-to-top}
-
-{% include code.html label="Go snippet" %}
-```go
-package main
-
-import (
-    "os"
-    "fmt"
-)
-
-// Say Howdy
-func main () {
-    if len(os.Args) != 2 {
-        fmt.Println("Usage: Howdy <NAME>")
-        os.Exit(1)
-    }
-    fmt.Println("Howdy " + os.Args[1] + "!")
-    os.Exit(0)
-}
-```
-
-[↑↑↑](#table-of-contents){: .back-to-top}
-
-{% include code.html label="HTML snippet" %}
-```html
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8" />
-    <title>Howdy!</title>
-</head>
-<body>
-    <h1>Howdy from an HTML page!</h1>
-</body>
-</html>
-```
-
-[↑↑↑](#table-of-contents){: .back-to-top}
-
-{% include code.html label="JSON snippet" %}
-```json
-{
-  "apiVersion": "v1",
-  "kind": "Service",
-  "metadata": {
-    "name": "minio-server-lb",
-    "namespace": "minio",
-    "labels": {
-      "app/name": "minio"
-    }
-  },
-  "spec": {
-    "ports": [{
-        "port": 9000,
-        "targetPort": 9000,
-        "protocol": "TCP"
-      }],
-    "selector": {
-      "app/name": "minio",
-      "app/component": "backend"
-    },
-    "type": "LoadBalancer"
-  }
-}
-```
-
-[↑↑↑](#table-of-contents){: .back-to-top}
+[↑↑↑](#){: .back-to-top}
 
 {% include code.html label="Java snippet" %}
 ```java
@@ -422,7 +265,7 @@ public class Howdy {
 }
 ```
 
-[↑↑↑](#table-of-contents){: .back-to-top}
+[↑↑↑](#){: .back-to-top}
 
 {% include code.html label="JavaScript snippet" %}
 ```javascript
@@ -439,7 +282,7 @@ if(process.argv.length != 3) {
 sayHowdy(process.argv[2]);
 ```
 
-[↑↑↑](#table-of-contents){: .back-to-top}
+[↑↑↑](#){: .back-to-top}
 
 {% include code.html label="Kotlin snippet" %}
 ```kotlin
@@ -454,91 +297,7 @@ fun main(args: Array<String>): Int {
 }
 ```
 
-[↑↑↑](#table-of-contents){: .back-to-top}
-
-{% include code.html label="Markdown snippet" %}
-```markdown
-# Markdown
-
-* __Howdy__
-* _from_
-* <ins>a</ins>
-* [Markdown](https://en.wikipedia.org/wiki/Markdown)
-* `document`!
-```
-
-[↑↑↑](#table-of-contents){: .back-to-top}
-
-{% include code.html label="Python snippet" %}
-```python
-import sys
-
-def sayHowdy(name):
-    print("Howdy " + name + "!")
-
-if len(sys.argv) != 2:
-    print("Usage: Howdy <NAME>")
-    sys.exit(1)
-
-# Say Howdy
-sayHowdy(sys.argv[1])
-```
-
-[↑↑↑](#table-of-contents){: .back-to-top}
-
-{% include code.html label="SCSS snippet" %}
-```scss
-.light-theme {
-  color: $light-secondary-color;
-  background-color: $light-primary-color;
-  font-family: $family-primary;
-
-  a {
-    color: $light-link-color;
-  }
-
-  h1, h2, h3, h4, h5, h6 {
-    color: $light-accent-color;
-    font-family: $family-secondary, sans-serif;
-  }
-}
-```
-
-[↑↑↑](#table-of-contents){: .back-to-top}
-
-{% include code.html label="SQL snippet" %}
-```sql
--- Select orders for micky
-SELECT *
-FROM orders
-WHERE cust_id = "mickey@mouse.com"
-AND   price > 5000
-AND   price <= 10000
-```
-
-[↑↑↑](#table-of-contents){: .back-to-top}
-
-{% include code.html label="YAML snippet" %}
-```yaml
-apiVersion: v1
-kind: Service
-metadata:
-  name: minio-server-lb
-  namespace: minio
-  labels:
-    app/name: minio
-spec:
-  ports:
-    - port: 9000
-      targetPort: 9000
-      protocol: TCP
-  selector:
-    app/name: minio
-    app/component: backend
-  type: LoadBalancer
-```
-
-[↑↑↑](#table-of-contents){: .back-to-top}
+[↑↑↑](#){: .back-to-top}
 
 ---
 
@@ -564,7 +323,7 @@ spec:
 3. Dale Murphy
 4. Mookie Wilson
 
-[↑↑↑](#table-of-contents){: .back-to-top}
+[↑↑↑](#){: .back-to-top}
 
 ---
 
@@ -598,7 +357,7 @@ spec:
 | `git status` |  `git status`  |  `git status` |
 | `git diff`   |   `git diff`   |    `git diff` |
 
-[↑↑↑](#table-of-contents){: .back-to-top}
+[↑↑↑](#){: .back-to-top}
 
 ---
 
@@ -618,7 +377,7 @@ spec:
 
 ![BIG yawn Bucky](assets/images/bucky.png "Sleepy Bucky")
 
-[↑↑↑](#table-of-contents){: .back-to-top}
+[↑↑↑](#){: .back-to-top}
 
 ---
 
@@ -659,7 +418,7 @@ classes="thumbnail"
 src="https://storage.googleapis.com/corbs-foto/yolo/yolo/big-face-bucky.png"
 %}
 
-[↑↑↑](#table-of-contents){: .back-to-top}
+[↑↑↑](#){: .back-to-top}
 
 ---
 
@@ -687,7 +446,7 @@ classes="image is-256"
 src="https://storage.googleapis.com/corbs-foto/yolo/yolo/drive-in.png"
 %}
 
-[↑↑↑](#table-of-contents){: .back-to-top}
+[↑↑↑](#){: .back-to-top}
 
 ---
 
@@ -716,7 +475,7 @@ classes="is-circle-256"
 src="https://storage.googleapis.com/corbs-foto/yolo/yolo/big-face-bucky.png"
 %}
 
-[↑↑↑](#table-of-contents){: .back-to-top}
+[↑↑↑](#){: .back-to-top}
 
 ---
 
@@ -745,7 +504,7 @@ classes="image is-256-by-192"
 src="https://storage.googleapis.com/corbs-foto/yolo/yolo/bluebonnet.png"
 %}
 
-[↑↑↑](#table-of-contents){: .back-to-top}
+[↑↑↑](#){: .back-to-top}
 
 ---
 
@@ -774,7 +533,7 @@ classes="image is-240-by-320"
 src="https://storage.googleapis.com/corbs-foto/yolo/yolo/bluebonnet.png"
 %}
 
-[↑↑↑](#table-of-contents){: .back-to-top}
+[↑↑↑](#){: .back-to-top}
 
 ---
 
@@ -803,7 +562,7 @@ classes="image is-256-by-144"
 src="https://storage.googleapis.com/corbs-foto/yolo/yolo/bluebonnet.png"
 %}
 
-[↑↑↑](#table-of-contents){: .back-to-top}
+[↑↑↑](#){: .back-to-top}
 
 ---
 
@@ -832,7 +591,7 @@ classes="image is-225-by-400"
 src="https://storage.googleapis.com/corbs-foto/yolo/yolo/bluebonnet.png"
 %}
 
-[↑↑↑](#table-of-contents){: .back-to-top}
+[↑↑↑](#){: .back-to-top}
 
 ---
 
@@ -877,7 +636,7 @@ A custom data file can be added to create an Image Grid.
 
 {% include image/grid.html ig-data="ig-pets" ig-columns="2" %}
 
-[↑↑↑](#table-of-contents){: .back-to-top}
+[↑↑↑](#){: .back-to-top}
 
 ---
 
@@ -921,7 +680,7 @@ A custom data file can be added to create a Lightbox.
 
 {% include image/lightbox.html lb-data="lb-marfa" %}
 
-[↑↑↑](#table-of-contents){: .back-to-top}
+[↑↑↑](#){: .back-to-top}
 
 ---
 
@@ -929,7 +688,7 @@ A custom data file can be added to create a Lightbox.
 
 {% include video.html %}
 
-[↑↑↑](#table-of-contents){: .back-to-top}
+[↑↑↑](#){: .back-to-top}
 
 ---
 
@@ -985,7 +744,7 @@ Yolo has basic support for embedding Google Slides.
 
 {% include prezo.html title="yolo-on" aspect-ratio="is-1-by-1" %}
 
-[↑↑↑](#table-of-contents){: .back-to-top}
+[↑↑↑](#){: .back-to-top}
 
 ---
 
@@ -1053,7 +812,7 @@ The `Makefile` automates the build and run process, with `make yolo-pod`, which:
 make yolo-pod
 ```
 
-[↑↑↑](#table-of-contents){: .back-to-top}
+[↑↑↑](#){: .back-to-top}
 
 ---
 
@@ -1086,7 +845,7 @@ _"The modern CSS framework that just works"_, true dat. Bulma is not included as
 
 > Sanks [Bulma](https://bulma.io/) people.
 
-[↑↑↑](#table-of-contents){: .back-to-top}
+[↑↑↑](#){: .back-to-top}
 
 ---
 
@@ -1116,4 +875,4 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 ```
 
-[↑↑↑](#table-of-contents){: .back-to-top}
+[↑↑↑](#){: .back-to-top}

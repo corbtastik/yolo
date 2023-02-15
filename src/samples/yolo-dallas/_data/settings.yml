@@ -1,14 +1,14 @@
 # -----------------------------------------------------------------------------
 # Yolo site settings. see: _config.yml for jekyll settings
 # -----------------------------------------------------------------------------
-name: Yolo
+name: Dallas is a jewel
 version: v1.3
-title: Yolo on my friend
-description: Loveable single pages
+title: Dallas is a jewel
+description: Dallas is a beautiful sight...
 theme:
   name: corbs
 align: left
-#header:
-#  logo: assets/images/logo.png
-sidebar:
+header:
   logo: assets/images/logo.png
+#sidebar:
+#  logo: assets/images/logo.png

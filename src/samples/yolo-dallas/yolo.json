@@ -3,6 +3,7 @@
   "config": "_config.yml",
   "index": "index.md",
   "data": [
+    "settings.yml",
     "fonts.yml",
     "lb-dallas.yml",
     "ig-dallas.yml"

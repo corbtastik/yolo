@@ -1,25 +1,55 @@
 // ----------------------------------------------------------------------------
 // corbs theme
 // ----------------------------------------------------------------------------
-// light mode colors
-$light-primary-color: #edf5fb;
-$light-secondary-color: #1a237e;
-$light-accent-color: #0091ea;
-$light-link-color: #ed1292;
-$light-code-background-color: #f8faff;
-$light-code-color: #6843c8;
-$light-sidebar-color: #e1f5fe;
+// Light mode
+:root {
+  --primary-color: #ecf6ff;
+  --on-primary-color: #011141;
+  --primary-container-color: #f8faff;
+  --on-primary-container-color: #3f2390;
 
-// dark mode colors
-$dark-primary-color: #000928;
-$dark-secondary-color: #fb1d9e;
-$dark-accent-color: #00b0ff;
-$dark-link-color: #65e9fc;
-$dark-code-background-color: #000110;
-$dark-code-color: #b388ff;
-$dark-sidebar-color: #000110;
+  --secondary-color: #070f62;
+  --on-secondary-color: #edf5fb;
+  --secondary-container-color: #04093e;
+  --on-secondary-container-color: #edf5fb;
 
-// fonts
-$family-primary: "Inconsolata", monospace;
-$family-secondary: "Open Sans", sans-serif;
-$family-monospace: "Red Hat Mono", monospace;
+  --tertiary-color: #774bd5;
+  --on-tertiary-color: #f8faff;
+  --tertiary-container-color: #bfa3f3;
+  --on-tertiary-container-color: #140233;
+
+  --accent-color: #d10277;
+  --on-accent-color: #f8d1e7;
+
+  --link-color: #0091ea;
+
+  --font-family-primary: "JetBrains Mono", monospace;
+  --font-family-secondary: "Red Hat Text", sans-serif;
+  --font-family-monospace: "Inconsolata", monospace;
+}
+// Dark mode
+:root[dark] {
+  --primary-color: #000928;
+  --on-primary-color: #b89cf6;
+  --primary-container-color: #04000c;
+  --on-primary-container-color: #d5d7f8;
+
+  --secondary-color: #fb1d9e;
+  --on-secondary-color: #19010f;
+  --secondary-container-color: #b5036a;
+  --on-secondary-container-color: #f6a5d4;
+
+  --tertiary-color: #00b0ff;
+  --on-tertiary-color: #000928;
+  --tertiary-container-color: #025a82;
+  --on-tertiary-container-color: #d0f2f6;
+
+  --accent-color: #fb1d9e;
+  --on-accent-color: #000928;
+
+  --link-color: #65e9fc;
+
+  --font-family-primary: "JetBrains Mono", monospace;
+  --font-family-secondary: "Red Hat Text", sans-serif;
+  --font-family-monospace: "Inconsolata", monospace;
+}

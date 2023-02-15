@@ -2,7 +2,6 @@
 layout: default
 links:
 - yolo,https://github.com/corbtastik/yolo
-- single-page,https://en.wikipedia.org/wiki/Single-page_application
 - jekyll,https://jekyllrb.com
 ---
 
@@ -31,12 +30,6 @@ Bring your own [colors](#colors) and [fonts](#typography).
 
 ---
 
-{% include toc.html header="h2" text="Table of Contents" %}
-
-[↑↑↑](#){: .back-to-top}
-
----
-
 ## Getting Started
 
 You need [jekyll](https://jekyllrb.com/).
@@ -49,7 +42,7 @@ jekyll build
 jekyll serve
 ```
 
-[↑↑↑](#table-of-contents){: .back-to-top}
+[↑↑↑](#){: .back-to-top}
 
 ---
 
@@ -65,7 +58,7 @@ Yolo doesn't implement an "according to hoyle" [gem based theme](https://jekyllr
 2. Customize the theme values for light and dark modes.
 3. Enable by setting `theme.name` in `_data/_settings.yml`.
 
-[↑↑↑](#table-of-contents){: .back-to-top}
+[↑↑↑](#){: .back-to-top}
 
 ---
 
@@ -97,7 +90,7 @@ Yolo's colors can be customized as outlined in [Themes](#themes).
 {% include flexbox.html columns="1" fill="info-color" %}
 {% include flexbox.html columns="1" fill="on-info-color" %}
 
-[↑↑↑](#table-of-contents){: .back-to-top}
+[↑↑↑](#){: .back-to-top}
 
 ---
 
@@ -107,7 +100,7 @@ Yolo's fonts can be customized as outlined in [Themes](#themes).
 
 {% include typography.html %}
 
-[↑↑↑](#table-of-contents){: .back-to-top}
+[↑↑↑](#){: .back-to-top}
 
 ---
 
@@ -124,7 +117,7 @@ Yolo's fonts can be customized as outlined in [Themes](#themes).
 * [Videos](#videos)
 * [Prezos](#prezos)
 
-[↑↑↑](#table-of-contents){: .back-to-top}
+[↑↑↑](#){: .back-to-top}
 
 ---
 
@@ -147,7 +140,7 @@ H1 is reserved for the site header and not shown here.
 ###### H6 Heading
 {:.no-toc}
 
-[↑↑↑](#table-of-contents){: .back-to-top}
+[↑↑↑](#){: .back-to-top}
 
 ---
 
@@ -155,7 +148,7 @@ H1 is reserved for the site header and not shown here.
 
 [Baseball](https://en.wikipedia.org/wiki/Baseball) is a bat-and-ball sport played between two teams of nine players each, taking turns batting and fielding. The game is in play when a player on the fielding team, called the pitcher, throws a ball that a player on the batting team tries to hit with a bat. The objective of the offensive team (batting team) is to hit the ball into the field of play, away from the other team's players, allowing its players to run the bases, having them advance counter-clockwise around four bases to score what are called "runs". - copied from [Wikipedia](https://en.wikipedia.org/wiki/Baseball).
 
-[↑↑↑](#table-of-contents){: .back-to-top}
+[↑↑↑](#){: .back-to-top}
 
 ---
 
@@ -199,7 +192,7 @@ H1 is reserved for the site header and not shown here.
 > 5. __Home Runs:__ Hits where the batter touches all four bases safely.
 > 6. __Batting Average:__ Hits divided by at bats.
 
-[↑↑↑](#table-of-contents){: .back-to-top}
+[↑↑↑](#){: .back-to-top}
 
 ---
 
@@ -216,7 +209,7 @@ H1 is reserved for the site header and not shown here.
 - Subscript <sub>text</sub>
 - Inline code `SELECT * FROM players;`
 
-[↑↑↑](#table-of-contents){: .back-to-top}
+[↑↑↑](#){: .back-to-top}
 
 ---
 
@@ -240,7 +233,7 @@ fi
 say_howdy $1
 ```
 
-[↑↑↑](#table-of-contents){: .back-to-top}
+[↑↑↑](#){: .back-to-top}
 
 {% include code.html label="C snippet" %}
 ```c
@@ -256,7 +249,7 @@ int main(int argc, char **argv) {
 }
 ```
 
-[↑↑↑](#table-of-contents){: .back-to-top}
+[↑↑↑](#){: .back-to-top}
 
 {% include code.html label="Java snippet" %}
 ```java
@@ -272,7 +265,7 @@ public class Howdy {
 }
 ```
 
-[↑↑↑](#table-of-contents){: .back-to-top}
+[↑↑↑](#){: .back-to-top}
 
 {% include code.html label="JavaScript snippet" %}
 ```javascript
@@ -289,7 +282,7 @@ if(process.argv.length != 3) {
 sayHowdy(process.argv[2]);
 ```
 
-[↑↑↑](#table-of-contents){: .back-to-top}
+[↑↑↑](#){: .back-to-top}
 
 {% include code.html label="Kotlin snippet" %}
 ```kotlin
@@ -304,7 +297,7 @@ fun main(args: Array<String>): Int {
 }
 ```
 
-[↑↑↑](#table-of-contents){: .back-to-top}
+[↑↑↑](#){: .back-to-top}
 
 ---
 
@@ -330,7 +323,7 @@ fun main(args: Array<String>): Int {
 3. Dale Murphy
 4. Mookie Wilson
 
-[↑↑↑](#table-of-contents){: .back-to-top}
+[↑↑↑](#){: .back-to-top}
 
 ---
 
@@ -364,7 +357,7 @@ fun main(args: Array<String>): Int {
 | `git status` |  `git status`  |  `git status` |
 | `git diff`   |   `git diff`   |    `git diff` |
 
-[↑↑↑](#table-of-contents){: .back-to-top}
+[↑↑↑](#){: .back-to-top}
 
 ---
 
@@ -384,7 +377,7 @@ fun main(args: Array<String>): Int {
 
 ![BIG yawn Bucky](assets/images/bucky.png "Sleepy Bucky")
 
-[↑↑↑](#table-of-contents){: .back-to-top}
+[↑↑↑](#){: .back-to-top}
 
 ---
 
@@ -425,7 +418,7 @@ classes="thumbnail"
 src="https://storage.googleapis.com/corbs-foto/yolo/yolo/big-face-bucky.png"
 %}
 
-[↑↑↑](#table-of-contents){: .back-to-top}
+[↑↑↑](#){: .back-to-top}
 
 ---
 
@@ -453,7 +446,7 @@ classes="image is-256"
 src="https://storage.googleapis.com/corbs-foto/yolo/yolo/drive-in.png"
 %}
 
-[↑↑↑](#table-of-contents){: .back-to-top}
+[↑↑↑](#){: .back-to-top}
 
 ---
 
@@ -482,7 +475,7 @@ classes="is-circle-256"
 src="https://storage.googleapis.com/corbs-foto/yolo/yolo/big-face-bucky.png"
 %}
 
-[↑↑↑](#table-of-contents){: .back-to-top}
+[↑↑↑](#){: .back-to-top}
 
 ---
 
@@ -511,7 +504,7 @@ classes="image is-256-by-192"
 src="https://storage.googleapis.com/corbs-foto/yolo/yolo/bluebonnet.png"
 %}
 
-[↑↑↑](#table-of-contents){: .back-to-top}
+[↑↑↑](#){: .back-to-top}
 
 ---
 
@@ -540,7 +533,7 @@ classes="image is-240-by-320"
 src="https://storage.googleapis.com/corbs-foto/yolo/yolo/bluebonnet.png"
 %}
 
-[↑↑↑](#table-of-contents){: .back-to-top}
+[↑↑↑](#){: .back-to-top}
 
 ---
 
@@ -569,7 +562,7 @@ classes="image is-256-by-144"
 src="https://storage.googleapis.com/corbs-foto/yolo/yolo/bluebonnet.png"
 %}
 
-[↑↑↑](#table-of-contents){: .back-to-top}
+[↑↑↑](#){: .back-to-top}
 
 ---
 
@@ -598,7 +591,7 @@ classes="image is-225-by-400"
 src="https://storage.googleapis.com/corbs-foto/yolo/yolo/bluebonnet.png"
 %}
 
-[↑↑↑](#table-of-contents){: .back-to-top}
+[↑↑↑](#){: .back-to-top}
 
 ---
 
@@ -643,7 +636,7 @@ A custom data file can be added to create an Image Grid.
 
 {% include image/grid.html ig-data="ig-pets" ig-columns="2" %}
 
-[↑↑↑](#table-of-contents){: .back-to-top}
+[↑↑↑](#){: .back-to-top}
 
 ---
 
@@ -687,7 +680,7 @@ A custom data file can be added to create a Lightbox.
 
 {% include image/lightbox.html lb-data="lb-marfa" %}
 
-[↑↑↑](#table-of-contents){: .back-to-top}
+[↑↑↑](#){: .back-to-top}
 
 ---
 
@@ -695,7 +688,7 @@ A custom data file can be added to create a Lightbox.
 
 {% include video.html %}
 
-[↑↑↑](#table-of-contents){: .back-to-top}
+[↑↑↑](#){: .back-to-top}
 
 ---
 
@@ -751,7 +744,7 @@ Yolo has basic support for embedding Google Slides.
 
 {% include prezo.html title="yolo-on" aspect-ratio="is-1-by-1" %}
 
-[↑↑↑](#table-of-contents){: .back-to-top}
+[↑↑↑](#){: .back-to-top}
 
 ---
 
@@ -819,7 +812,7 @@ The `Makefile` automates the build and run process, with `make yolo-pod`, which:
 make yolo-pod
 ```
 
-[↑↑↑](#table-of-contents){: .back-to-top}
+[↑↑↑](#){: .back-to-top}
 
 ---
 
@@ -852,7 +845,7 @@ _"The modern CSS framework that just works"_, true dat. Bulma is not included as
 
 > Sanks [Bulma](https://bulma.io/) people.
 
-[↑↑↑](#table-of-contents){: .back-to-top}
+[↑↑↑](#){: .back-to-top}
 
 ---
 
@@ -882,4 +875,4 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 ```
 
-[↑↑↑](#table-of-contents){: .back-to-top}
+[↑↑↑](#){: .back-to-top}
