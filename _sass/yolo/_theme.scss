@@ -229,6 +229,33 @@
     color: var(--on-primary-container-color);
   }
 
+  // info styling
+  .info {
+    margin: 1rem 0;
+
+    blockquote {
+      border-left: .25rem solid var(--on-info-color);;
+      border-top-right-radius: .25rem;
+      border-bottom-right-radius: .25rem;
+      padding: 0;
+      background-color: var(--info-color);
+      color: var(--on-info-color);
+    }
+    .title {
+      font-family: var(--font-family-secondary);
+      font-weight: bold;
+      border-top-right-radius: .25rem;
+      margin: 0;
+      padding: 0.25rem;
+      background-color: var(--on-info-color);
+      color: var(--info-color);
+      vertical-align: middle;
+    }
+    .note {
+      margin: 0;
+      padding: 0.5rem 1rem;
+    }
+  }
 
   .primary-color {
     background-color: var(--primary-color);

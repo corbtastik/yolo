@@ -1,0 +1,12 @@
+{% assign note_title = include.title %}
+{% assign note_text = include.text %}
+<div class="info">
+    <blockquote>
+        <p class="title">
+            <span class="material-icons md-36">info</span>&nbsp;&nbsp;{{ note_title }}
+        </p>
+        <p class="note">
+            {{ note_text }}
+        </p>
+    </blockquote>
+</div>

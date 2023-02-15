@@ -1,0 +1,18 @@
+{
+  "site": "yolo-themes",
+  "config": "_config.yml",
+  "index": "index.md",
+  "data": [
+    "settings.yml",
+    "fonts.yml"
+  ],
+  "assets": {
+    "images": [
+      "bucky.png",
+      "error.png",
+      "logo.png",
+      "moonpie.png"
+    ]
+  },
+  "theme": "_corbs.scss"
+}
