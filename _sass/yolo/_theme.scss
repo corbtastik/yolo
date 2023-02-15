@@ -67,12 +67,12 @@
   }
 
   h1, h2, h3, h4, h5, h6 {
-    color: var(--tertiary-color);
+    color: var(--secondary-color);
     font-family: var(--font-family-secondary), sans-serif;
   }
 
   blockquote {
-    border-left: .25rem solid var(--accent-color);;
+    border-left: .25rem solid var(--tertiary-color);;
     border-top-right-radius: .25rem;
     border-bottom-right-radius: .25rem;
     background-color: var(--primary-container-color);
@@ -80,7 +80,7 @@
   }
 
   hr {
-    border-bottom: 1px dashed var(--accent-color);
+    border-bottom: 1px dashed var(--tertiary-color);
   }
 
   pre, code {
@@ -111,10 +111,10 @@
       color: var(--on-primary-color);
     }
     ::before {
-      color: var(--accent-color);
+      color: var(--tertiary-color);
     }
     ::marker {
-      color: var(--accent-color);
+      color: var(--tertiary-color);
     }
   }
 
@@ -123,7 +123,7 @@
       color: var(--on-primary-color);
     }
     ::marker {
-      color: var(--accent-color);
+      color: var(--tertiary-color);
     }
   }
 
@@ -148,7 +148,7 @@
       color: var(--on-primary-color);
     }
     .description {
-      color: var(--accent-color);
+      color: var(--tertiary-color);
     }
   }
 
@@ -178,7 +178,7 @@
 
   .lb-nav {
     &:hover {
-      background-color: rgba(var(--accent-color), 0.3);
+      background-color: rgba(var(--tertiary-color), 0.3);
     }
   }
 
@@ -304,14 +304,6 @@
   .on-tertiary-container-color {
     background-color: var(--on-tertiary-container-color);
     color: var(--tertiary-container-color);
-  }
-  .accent-color {
-    background-color: var(--accent-color);
-    color: var(--on-accent-color);
-  }
-  .on-accent-color {
-    background-color: var(--on-accent-color);
-    color: var(--accent-color);
   }
   .neutral-color {
     background-color: var(--neutral-color);

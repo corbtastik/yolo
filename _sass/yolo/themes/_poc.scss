@@ -1,0 +1,49 @@
+// ----------------------------------------------------------------------------
+// poc theme
+// ----------------------------------------------------------------------------
+// Light mode
+:root {
+  --primary-color: #ccd8ff;
+  --on-primary-color: #000928;
+  --primary-container-color: #d2bdfb;
+  --on-primary-container-color: #04000c;
+
+  --secondary-color: #000928;
+  --on-secondary-color: #00b0ff;
+  --secondary-container-color: #04000c;
+  --on-secondary-container-color: #edf5fb;
+
+  --tertiary-color: #000928;
+  --on-tertiary-color: #fb1d9e;
+  --tertiary-container-color: #bfa3f3;
+  --on-tertiary-container-color: #04000c;
+
+  --link-color: #0091ea;
+
+  --font-family-primary: "JetBrains Mono", monospace;
+  --font-family-secondary: "Red Hat Text", sans-serif;
+  --font-family-monospace: "Inconsolata", monospace;
+}
+// Dark mode
+:root[dark] {
+  --primary-color: #000928;
+  --on-primary-color: #dbe1ff;
+  --primary-container-color: #000712;
+  --on-primary-container-color: #9bcbff;
+
+  --secondary-color: #00b0ff;
+  --on-secondary-color: #011e31;
+  --secondary-container-color: #00344f;
+  --on-secondary-container-color: #8ecdff;
+
+  --tertiary-color: #fb1d9e;
+  --on-tertiary-color: #2a0016;
+  --tertiary-container-color: #8c0056;
+  --on-tertiary-container-color: #ff82ba;
+
+  --link-color: #65e9fc;
+
+  --font-family-primary: "JetBrains Mono", monospace;
+  --font-family-secondary: "Red Hat Text", sans-serif;
+  --font-family-monospace: "Inconsolata", monospace;
+}

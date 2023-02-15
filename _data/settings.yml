@@ -6,7 +6,7 @@ version: v1.3
 title: Yolo on my friend
 description: Loveable single pages
 theme:
-  name: corbs
+  name: poc
 align: left
 #header:
 #  logo: assets/images/logo.png
