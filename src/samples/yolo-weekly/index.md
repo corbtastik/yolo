@@ -1,8 +1,8 @@
 ---
 layout: default
 tags:
+- yolo,https://github.com/corbtastik/yolo
 - weekly
-- status-report
 ---
 
 ### Summary

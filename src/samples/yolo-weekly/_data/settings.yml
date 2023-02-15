@@ -1,0 +1,14 @@
+# -----------------------------------------------------------------------------
+# Yolo site settings. see: _config.yml for jekyll settings
+# -----------------------------------------------------------------------------
+name: Weekly
+version: v1.3
+title: Yolo Weekly Theme
+description: A professional'ish look
+theme:
+  name: weekly
+align: left
+#header:
+#  logo: assets/images/logo.png
+sidebar:
+  logo: assets/images/logo.png
