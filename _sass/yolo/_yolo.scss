@@ -85,11 +85,20 @@
 
 // copy code header
 .code-header {
-  font-weight: bold;
   padding: 0.3em 0.3em 0.3em 0.4em;
-  vertical-align: middle;
   border-top-left-radius: 0.3em;
   border-top-right-radius: 0.3em;
+  vertical-align: middle;
+  .code-label {
+    font-weight: bold;
+  }
+  .copy-icon {
+    padding-top: .125em;
+    float: right;
+  }
+  &:is(:hover) {
+    cursor: pointer;
+  }
 }
 
 // embedded video styling

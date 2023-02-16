@@ -60,53 +60,64 @@ Yolo doesn't implement an "according to hoyle" [gem based theme](https://jekyllr
 2. Customize the theme values for light and dark modes.
 3. Enable by setting `theme.name` in `_data/settings.yml`.
 
-[↑↑↑](#howdy){: .back-to-top}
-
 ---
 
-## Colors
-
-Colors in Yolo loosely follows Google's [Material Design v3 Color System](https://m3.material.io/styles/color/overview).
-
 ### Key Colors
+{:.no-toc}
 
 Key colors provide the foundation of your theme and should [contrast](https://en.wikipedia.org/wiki/Contrast_(vision)) or [complement](https://en.wikipedia.org/wiki/Complementary_colors) each other in [hue](https://en.wikipedia.org/wiki/Hue).
 
 There are __3__ key color variables for both __light__ and __dark__ modes.
 
-1. `primary-color`: Defines the color for the page background.
-2. `secondary-color`: Defines the color for prominent elements.
-3. `tertiary-color`: Defines the color for accenting elements.
-
-You provide hex values for both modes, for example the `primary-color` for __light__ mode will be different from __dark__ mode.
-
-#### Primary
-
-The `primary-color` is applied to the page background which will occupy most of the space. For __light__ mode the intent should be to define a "lighter" color than what you specify for __dark__ mode.
-
-#### Secondary
-
-The `secondary-color` is applied to visually prominent elements like h1-h6 headers, tables, code headers, buttons, and pills. 
-
-#### Tertiary
-
-The `tertiary-color` is applied to accent elements like blockquotes, horizontal rules, list bullets, numbers, as well as the hover over color. 
-
-### Swatches
-
 {% include flexbox.html columns="1" fill="primary-color" %}
-{% include flexbox.html columns="1" fill="on-primary-color" %}
-{% include flexbox.html columns="1" fill="primary-container-color" %}
-{% include flexbox.html columns="1" fill="on-primary-container-color" %}
 {% include flexbox.html columns="1" fill="secondary-color" %}
-{% include flexbox.html columns="1" fill="on-secondary-color" %}
-{% include flexbox.html columns="1" fill="secondary-container-color" %}
-{% include flexbox.html columns="1" fill="on-secondary-container-color" %}
 {% include flexbox.html columns="1" fill="tertiary-color" %}
-{% include flexbox.html columns="1" fill="on-tertiary-color" %}
+
+---
+
+### Container Colors
+{:.no-toc}
+
+Each key color has 1 corresponding "_container_" color, which represents a container inset within the `primary-color`.
+
+> __Note:__ The `primary-container-color` is applied to the background of code blocks, and blockquotes such as this.
+> > Thus, if your `primary-color` is white, then you might select a grey color for the `primary-container-color` to create a slight contrast between the two.
+
+{% include flexbox.html columns="1" fill="primary-container-color" %}
+{% include flexbox.html columns="1" fill="secondary-container-color" %}
 {% include flexbox.html columns="1" fill="tertiary-container-color" %}
+
+---
+
+### On Colors
+{:.no-toc}
+
+On colors are for elements that are placed "_on_" the corresponding key or container color. On colors should contrast with the color they are being placed on top of to increase readability.
+
+> __Example:__ If your `primary-color` is white then a logical `on-primary-color` would be black.
+
+{% include flexbox.html columns="1" fill="on-primary-color" %}
+{% include flexbox.html columns="1" fill="on-primary-container-color" %}
+{% include flexbox.html columns="1" fill="on-secondary-color" %}
+{% include flexbox.html columns="1" fill="on-secondary-container-color" %}
+{% include flexbox.html columns="1" fill="on-tertiary-color" %}
 {% include flexbox.html columns="1" fill="on-tertiary-container-color" %}
+
+---
+
+### General Colors
+{:.no-toc}
+
+Links are prominent on web pages, so it gets its own variable - [link-color](https://github.com/corbtastik/yolo).
+
+> __Note:__ Generally, it's a good idea to have a distinct color, consistency applied to links.
+
 {% include flexbox.html columns="1" fill="link-color" %}
+
+The `neutral-color` and `on-neutral-color` variables are general use colors.
+
+> __Note:__ As mentioned in the "[On Colors](#on-colors)" section, it's best to have an "on" color that contrasts with the underlying color.
+
 {% include flexbox.html columns="1" fill="neutral-color" %}
 {% include flexbox.html columns="1" fill="on-neutral-color" %}
 
@@ -114,7 +125,8 @@ The `tertiary-color` is applied to accent elements like blockquotes, horizontal 
 
 ---
 
-## Typography
+### Typography
+{:.no-toc}
 
 Yolo's fonts can be customized as outlined in [Themes](#themes).
 
@@ -124,26 +136,9 @@ Yolo's fonts can be customized as outlined in [Themes](#themes).
 
 ---
 
-## Elements
+## Headers
 
-* [Headers](#headers)
-* [Paragraph Text](#paragraph-text)
-* [Blockquotes](#blockquotes)
-* [Inline Text](#inline-text)
-* [Code](#code)
-* [Lists](#lists)
-* [Tables](#tables)
-* [Markdown Images](#markdown-images)
-* [Videos](#videos)
-* [Prezos](#prezos)
-
-[↑↑↑](#howdy){: .back-to-top}
-
----
-
-### Headers
-
-H1 is reserved for the site header and not shown here.
+> __Note:__ H1 is reserved for the site header and not shown here.
 
 ## H2 Heading
 {:.no-toc}
@@ -164,7 +159,7 @@ H1 is reserved for the site header and not shown here.
 
 ---
 
-### Paragraph text
+## Paragraph text
 
 [Baseball](https://en.wikipedia.org/wiki/Baseball) is a bat-and-ball sport played between two teams of nine players each, taking turns batting and fielding. The game is in play when a player on the fielding team, called the pitcher, throws a ball that a player on the batting team tries to hit with a bat. The objective of the offensive team (batting team) is to hit the ball into the field of play, away from the other team's players, allowing its players to run the bases, having them advance counter-clockwise around four bases to score what are called "runs". - copied from [Wikipedia](https://en.wikipedia.org/wiki/Baseball).
 
@@ -172,14 +167,14 @@ H1 is reserved for the site header and not shown here.
 
 ---
 
-### Blockquotes
+## Blockquotes
 
-#### Single Blockquote
+### Single Blockquote
 {:.no-toc}
 
 > In the United States and Canada, professional Major League Baseball (MLB) teams are divided into the National League (NL) and American League (AL), each with three divisions: East, West, and Central. The MLB champion is determined by playoffs that culminate in the World Series.
 
-#### Two paragraph Blockquote
+### Two paragraph Blockquote
 {:.no-toc}
 
 > A baseball game is played between two teams,
@@ -191,7 +186,7 @@ H1 is reserved for the site header and not shown here.
 > The 90-degree area within the foul lines is referred to as fair territory;
 > the 270-degree area outside them is foul territory.
 
-#### Nested Blockquote
+### Nested Blockquote
 {:.no-toc}
 
 > The number of players on a baseball roster, or squad, varies by league and by the level of organized play. A Major League Baseball (MLB) team has a roster of 25 players with specific roles. A typical roster features the following players:
@@ -200,10 +195,10 @@ H1 is reserved for the site header and not shown here.
 >
 > Most baseball leagues worldwide have the DH rule.
 
-#### Blockquote w/ markdown
+### Blockquote w/ markdown
 {:.no-toc}
 
-> #### Baseball Statistics
+> ### Baseball Statistics
 > {:.no-toc}
 > 1. __At Bats:__ Plate appearances, excluding walks and hit by pitches.
 > 2. __Hits:__ Number of times a base is reached safely.
@@ -216,7 +211,7 @@ H1 is reserved for the site header and not shown here.
 
 ---
 
-### Inline Text
+## Inline Text
 
 - Just plain text
 - **Bold text**
@@ -233,7 +228,7 @@ H1 is reserved for the site header and not shown here.
 
 ---
 
-### Code
+## Code
 
 > __Tip:__ Click header to copy a snippet.
 
@@ -251,38 +246,6 @@ fi
 
 # Say Howdy
 say_howdy $1
-```
-
-[↑↑↑](#howdy){: .back-to-top}
-
-{% include code.html label="C snippet" %}
-```c
-#include <stdio.h>
-// Say Howdy
-int main(int argc, char **argv) {
-    if(argc != 2) {
-        printf("Usage: Howdy <NAME>");
-        return 1;
-    }
-    printf("Howdy %s!\n", argv[1]);
-    return 0;
-}
-```
-
-[↑↑↑](#howdy){: .back-to-top}
-
-{% include code.html label="Java snippet" %}
-```java
-// Say Howdy
-public class Howdy {
-    public static void main(String[] args) {
-        if(args.length != 1) {
-            System.out.println("Usage: Howdy <NAME>");
-            System.exit(1);
-        }
-        System.out.println("Howdy " + args[0] + "!");
-    }
-}
 ```
 
 [↑↑↑](#howdy){: .back-to-top}
@@ -321,9 +284,9 @@ fun main(args: Array<String>): Int {
 
 ---
 
-### Lists
+## Lists
 
-#### Unordered
+### Unordered
 {:.no-toc}
 
 * Arlington Stadium
@@ -335,7 +298,7 @@ fun main(args: Array<String>): Int {
         * Boston Beaneaters
             * Boston Red Sox
 
-#### Ordered
+### Ordered
 {:.no-toc}
 
 1. Babe Ruth
@@ -347,12 +310,10 @@ fun main(args: Array<String>): Int {
 
 ---
 
-### Tables
+## Tables
 
-#### Basic
+### Basic
 {:.no-toc}
-
-> __See:__ [Github markdown tables](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/organizing-information-with-tables)
 
 | Player                                                                                                   | BA   | HR  |
 |----------------------------------------------------------------------------------------------------------|------|-----|
@@ -360,7 +321,7 @@ fun main(args: Array<String>): Int {
 | <a href="https://www.baseball-reference.com/players/r/ruthba01.shtml" target="_blank">Babe Ruth</a>      | .342 | 714 |
 | <a href="https://www.baseball-reference.com/players/w/wilsomo01.shtml" target="_blank">Mookie Wilson</a> | .274 | 67  |
 
-#### Formatted content
+### Formatted content
 {:.no-toc}
 
 | Command      | Description                                        |
@@ -369,7 +330,7 @@ fun main(args: Array<String>): Int {
 | `git status` | List all *new or modified* files                   |
 | `git diff`   | Show file differences that **haven't been** staged |
 
-#### Cell alignment
+### Cell alignment
 {:.no-toc}
 
 | Left-aligned | Center-aligned | Right-aligned |
@@ -381,7 +342,7 @@ fun main(args: Array<String>): Int {
 
 ---
 
-### Markdown Images
+## Markdown Images
 
 > Images added via markdown receive styling from the `<img>` element, they're not styled with `yolo` classes.
 
@@ -405,37 +366,19 @@ fun main(args: Array<String>): Int {
 
 You can use yolo Styled Images in addition to markdown images if you're looking for a little eye-candy. Yolo includes support for common aspect ratios, an [image-grid](#image-grid) and [image-lightbox](#image-lightbox).
 
-* [Thumbnail Images](#thumbnail-images)
-* [Square Images](#square-images)
-* [Circle Images](#circle-images)
-* [4-by-3 Images](#4-by-3-images)
-* [3-by-4 Images](#3-by-4-images)
-* [16-by-9 Images](#16-by-9-images)
-* [9-by-16 Images](#9-by-16-images)
+> __Tip:__ Click an image to enlarge.
 
 ---
 
 ### Thumbnail Images
+{:.no-toc}
 
 Thumbnails are 128px x 128px and use the `thumbnail` class.
 
-{% include code.html label="Thumbnail images" %}
-{% raw %}
-```html
 {%
-include image/image.html
-classes="thumbnail"
-src="https://storage.googleapis.com/corbs-foto/yolo/yolo/big-face-bucky.png"
-%}
-```
-{% endraw %}
-
-> __Tip:__ Click to enlarge.
-
-{%
-include image/image.html
-classes="thumbnail"
-src="https://storage.googleapis.com/corbs-foto/yolo/yolo/big-face-bucky.png"
+  include image/image.html
+  classes="thumbnail"
+  src="https://storage.googleapis.com/corbs-foto/yolo/yolo/big-face-bucky.png"
 %}
 
 [↑↑↑](#howdy){: .back-to-top}
@@ -443,27 +386,15 @@ src="https://storage.googleapis.com/corbs-foto/yolo/yolo/big-face-bucky.png"
 ---
 
 ### Square Images
+{:.no-toc}
 
 Square images can be added with the following classes: `is-16`, `is-24`, `is-32`, `is-48`, `is-64`, `is-96`, `is-128`,
 `is-192`, `is-256`, `is-384`, `is-448`, `is-512`, `is-640`.
 
-{% include code.html label="Square images" %}
-{% raw %}
-```html
 {%
-include image/image.html
-classes="image is-256"
-src="https://storage.googleapis.com/corbs-foto/yolo/yolo/drive-in.png"
-%}
-```
-{% endraw %}
-
-> __Tip:__ Click to enlarge.
-
-{%
-include image/image.html
-classes="image is-256"
-src="https://storage.googleapis.com/corbs-foto/yolo/yolo/drive-in.png"
+  include image/image.html
+  classes="image is-256"
+  src="https://storage.googleapis.com/corbs-foto/yolo/yolo/drive-in.png"
 %}
 
 [↑↑↑](#howdy){: .back-to-top}
@@ -471,28 +402,16 @@ src="https://storage.googleapis.com/corbs-foto/yolo/yolo/drive-in.png"
 ---
 
 ### Circle Images
+{:.no-toc}
 
 Circle images can be added with the following classes: `is-circle-16`, `is-circle-24`, `is-circle-32`,
 `is-circle-48`, `is-circle-64`, `is-circle-96`, `is-circle-128`, `is-circle-192`, `is-circle-256`, `is-circle-384`,
 `is-circle-448`, `is-circle-512`, `is-circle-640`.
 
-{% include code.html label="Circle images" %}
-{% raw %}
-```html
 {%
-include image/image.html
-classes="is-circle-256"
-src="https://storage.googleapis.com/corbs-foto/yolo/yolo/big-face-bucky.png"
-%}
-```
-{% endraw %}
-
-> __Tip:__ Click to enlarge.
-
-{%
-include image/image.html
-classes="is-circle-256"
-src="https://storage.googleapis.com/corbs-foto/yolo/yolo/big-face-bucky.png"
+  include image/image.html
+  classes="is-circle-256"
+  src="https://storage.googleapis.com/corbs-foto/yolo/yolo/big-face-bucky.png"
 %}
 
 [↑↑↑](#howdy){: .back-to-top}
@@ -500,28 +419,16 @@ src="https://storage.googleapis.com/corbs-foto/yolo/yolo/big-face-bucky.png"
 ---
 
 ### 4-by-3 Images
+{:.no-toc}
 
 4 by 3 aspect ratio images can be added with the following classes: `is-100-by-75`, `is-120-by-90`, `is-128-by-96`,
 `is-160-by-120`, `is-200-by-150`, `is-240-by-180`, `is-256-by-192`, `is-320-by-240`, `is-400-by-300`,
 `is-480-by-360`, `is-512-by-384`, `is-640-by-480`.
 
-{% include code.html label="4-by-3 images" %}
-{% raw %}
-```html
 {%
-include image/image.html
-classes="image is-256-by-192"
-src="https://storage.googleapis.com/corbs-foto/yolo/yolo/bluebonnet.png"
-%}
-```
-{% endraw %}
-
-> __Tip:__ Click to enlarge.
-
-{%
-include image/image.html
-classes="image is-256-by-192"
-src="https://storage.googleapis.com/corbs-foto/yolo/yolo/bluebonnet.png"
+  include image/image.html
+  classes="image is-256-by-192"
+  src="https://storage.googleapis.com/corbs-foto/yolo/yolo/bluebonnet.png"
 %}
 
 [↑↑↑](#howdy){: .back-to-top}
@@ -529,28 +436,16 @@ src="https://storage.googleapis.com/corbs-foto/yolo/yolo/bluebonnet.png"
 ---
 
 ### 3-by-4 Images
+{:.no-toc}
 
 3 by 4 aspect ratio images can be added with the following classes: `is-75-by-100`, `is-90-by-120`, `is-96-by-128`,
 `is-120-by-160`, `is-150-by-200`, `is-180-by-240`, `is-192-by-256`, `is-240-by-320`, `is-300-by-400`,
 `is-360-by-480`, `is-384-by-512`, `is-480-by-640`.
 
-{% include code.html label="3-by-4 images" %}
-{% raw %}
-```html
 {%
-include image/image.html
-classes="image is-240-by-320"
-src="https://storage.googleapis.com/corbs-foto/yolo/yolo/bluebonnet.png"
-%}
-```
-{% endraw %}
-
-> __Tip:__ Click to enlarge.
-
-{%
-include image/image.html
-classes="image is-240-by-320"
-src="https://storage.googleapis.com/corbs-foto/yolo/yolo/bluebonnet.png"
+  include image/image.html
+  classes="image is-240-by-320"
+  src="https://storage.googleapis.com/corbs-foto/yolo/yolo/bluebonnet.png"
 %}
 
 [↑↑↑](#howdy){: .back-to-top}
@@ -558,28 +453,16 @@ src="https://storage.googleapis.com/corbs-foto/yolo/yolo/bluebonnet.png"
 ---
 
 ### 16-by-9 Images
+{:.no-toc}
 
 16 by 9 aspect ratio images can be added with the following classes: `is-112-by-63`, `is-128-by-72`, `is-144-by-81`,
 `is-160-by-90`, `is-192-by-108`, `is-224-by-126`, `is-256-by-144`, `is-320-by-180`, `is-400-by-225`, `is-480-by-270`,
 `is-512-by-288`, `is-640-by-360`.
 
-{% include code.html label="16-by-9 images" %}
-{% raw %}
-```html
 {%
-include image/image.html
-classes="image is-256-by-144"
-src="https://storage.googleapis.com/corbs-foto/yolo/yolo/bluebonnet.png"
-%}
-```
-{% endraw %}
-
-> __Tip:__ Click to enlarge.
-
-{%
-include image/image.html
-classes="image is-256-by-144"
-src="https://storage.googleapis.com/corbs-foto/yolo/yolo/bluebonnet.png"
+  include image/image.html
+  classes="image is-256-by-144"
+  src="https://storage.googleapis.com/corbs-foto/yolo/yolo/bluebonnet.png"
 %}
 
 [↑↑↑](#howdy){: .back-to-top}
@@ -587,28 +470,16 @@ src="https://storage.googleapis.com/corbs-foto/yolo/yolo/bluebonnet.png"
 ---
 
 ### 9-by-16 Images
+{:.no-toc}
 
 9 by 16 aspect ratio images can be added with the following classes: `is-63-by-112`, `is-72-by-128`, `is-81-by-144`,
 `is-90-by-160`, `is-108-by-192`, `is-126-by-224`, `is-144-by-256`, `is-180-by-320`, `is-225-by-400`, `is-270-by-480`,
 `is-288-by-512`, `is-360-by-640`.
 
-{% include code.html label="9-by-16 images" %}
-{% raw %}
-```html
 {%
-include image/image.html
-classes="image is-225-by-400"
-src="https://storage.googleapis.com/corbs-foto/yolo/yolo/bluebonnet.png"
-%}
-```
-{% endraw %}
-
-> __Tip:__ Click to enlarge.
-
-{%
-include image/image.html
-classes="image is-225-by-400"
-src="https://storage.googleapis.com/corbs-foto/yolo/yolo/bluebonnet.png"
+  include image/image.html
+  classes="image is-225-by-400"
+  src="https://storage.googleapis.com/corbs-foto/yolo/yolo/bluebonnet.png"
 %}
 
 [↑↑↑](#howdy){: .back-to-top}

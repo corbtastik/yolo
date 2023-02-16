@@ -5,6 +5,32 @@ links:
 - jekyll,https://jekyllrb.com
 ---
 
+## Design Notes
+
+* 3 Key Colors - primary, secondary, tertiary
+* 3 Container Colors - primary-container, secondary-container, tertiary-container
+* 6 On Colors
+  * 3 On Key Colors - on-primary, on-secondary, on-tertiary
+  * 3 On Container Colors - on-primary-container, on-secondary-container, on-tertiary-container
+* 3 General Colors
+  * 1 for links
+  * Neutral
+  * On Neutral
+
+### Requirements
+
+* Support dark and light modes
+* Support independent color control for prominent text (headers)
+* Support independent color control for prominent elements (tables, pills, buttons, icons)
+* Support mono themes
+  * Sidebar is same tonal palette as primary color
+  * Code background is same tonal palette as primary color
+  * Code highlighting is same tonal palette as primary color
+* Support duo themes
+  * Sidebar is contrasting tonal palette from primary color
+  * Code background is contrasting tonal palette from primary color
+  * Code highlighting is contrasting tonal palette from primary color
+
 ## Themes
 
 Yolo doesn't implement an "according to hoyle" [gem based theme](https://jekyllrb.com/docs/themes/), but the colors and fonts can be customized as outlined below.

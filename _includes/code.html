@@ -1,7 +1,8 @@
 <div class="code-header">
-    {% if include.label %}
-    {{ include.label }}
-    {% else %}
-    <span>Copy</span>
-    {% endif %}
+    <span class="code-label">
+        {% if include.label %}
+        {{ include.label }}
+        {% endif %}
+    </span>
+    <span class="copy-icon material-icons md-24">copy_all</span>
 </div>

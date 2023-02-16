@@ -72,7 +72,7 @@
   }
 
   blockquote {
-    border-left: .25rem solid var(--tertiary-color);;
+    border-left: .25rem solid var(--tertiary-color);
     border-top-right-radius: .25rem;
     border-bottom-right-radius: .25rem;
     background-color: var(--primary-container-color);
@@ -83,46 +83,46 @@
     border-bottom: 1px dashed var(--tertiary-color);
   }
 
-  pre, code {
-    color: var(--on-primary-container-color);
-  }
+  //pre, code {
+  //  color: var(--on-primary-container-color);
+  //}
 
-  b, strong, em, abbr, cite, del, ins, sup, sub {
-    color: var(--on-primary-color);
-  }
+  //b, strong, em, abbr, cite, del, ins, sup, sub {
+  //  color: var(--on-primary-color);
+  //}
 
   /* Code in text */
-  p > code,
-  blockquote > code,
-  h1 > code,
-  h2 > code,
-  h3 > code,
-  h4 > code,
-  h5 > code,
-  h6 > code,
-  li > code,
-  dd > code,
-  td > code {
-    color: var(--on-primary-container-color);
-  }
+  //p > code,
+  //blockquote > code,
+  //h1 > code,
+  //h2 > code,
+  //h3 > code,
+  //h4 > code,
+  //h5 > code,
+  //h6 > code,
+  //li > code,
+  //dd > code,
+  //td > code {
+  //  color: var(--on-primary-container-color);
+  //}
 
   ul {
-    li {
-      color: var(--on-primary-color);
-    }
-    ::before {
+    //li {
+    //  color: var(--on-primary-color);
+    //}
+    li::before {
       color: var(--tertiary-color);
     }
-    ::marker {
+    li::marker {
       color: var(--tertiary-color);
     }
   }
 
   ol {
-    li {
-      color: var(--on-primary-color);
-    }
-    ::marker {
+    //li {
+    //  color: var(--on-primary-color);
+    //}
+    li::marker {
       color: var(--tertiary-color);
     }
   }
