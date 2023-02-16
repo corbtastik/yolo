@@ -3,22 +3,24 @@
 // ----------------------------------------------------------------------------
 // Light mode
 :root {
-  --primary-color: #ccd8ff;
-  --on-primary-color: #000928;
-  --primary-container-color: #d2bdfb;
-  --on-primary-container-color: #04000c;
+  --primary-color: #ecf6ff;
+  --on-primary-color: #011141;
+  --primary-container-color: #f8faff;
+  --on-primary-container-color: #3f2390;
 
-  --secondary-color: #000928;
-  --on-secondary-color: #00b0ff;
-  --secondary-container-color: #04000c;
+  --secondary-color: #070f62;
+  --on-secondary-color: #edf5fb;
+  --secondary-container-color: #04093e;
   --on-secondary-container-color: #edf5fb;
 
-  --tertiary-color: #000928;
-  --on-tertiary-color: #fb1d9e;
+  --tertiary-color: #774bd5;
+  --on-tertiary-color: #f8faff;
   --tertiary-container-color: #bfa3f3;
-  --on-tertiary-container-color: #04000c;
+  --on-tertiary-container-color: #140233;
 
   --link-color: #0091ea;
+  --neutral-color: #212121;
+  --on-neutral-color: #e0e0e0;
 
   --font-family-primary: "JetBrains Mono", monospace;
   --font-family-secondary: "Red Hat Text", sans-serif;
@@ -42,6 +44,8 @@
   --on-tertiary-container-color: #ff82ba;
 
   --link-color: #65e9fc;
+  --neutral-color: #e0e0e0;
+  --on-neutral-color: #212121;
 
   --font-family-primary: "JetBrains Mono", monospace;
   --font-family-secondary: "Red Hat Text", sans-serif;

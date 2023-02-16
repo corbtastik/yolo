@@ -5,6 +5,8 @@ links:
 - jekyll,https://jekyllrb.com
 ---
 
+## Howdy
+
 Yolo is laser focused on static single page sites, and while anyone can Yolo, it's purposely built for writers,
 techies, and picture taking folk.
 
@@ -42,7 +44,7 @@ jekyll build
 jekyll serve
 ```
 
-[↑↑↑](#){: .back-to-top}
+[↑↑↑](#howdy){: .back-to-top}
 
 ---
 
@@ -56,15 +58,41 @@ Yolo doesn't implement an "according to hoyle" [gem based theme](https://jekyllr
 
 1. Create a new scss file in `_sass/yolo/themes/`.
 2. Customize the theme values for light and dark modes.
-3. Enable by setting `theme.name` in `_data/_settings.yml`.
+3. Enable by setting `theme.name` in `_data/settings.yml`.
 
-[↑↑↑](#){: .back-to-top}
+[↑↑↑](#howdy){: .back-to-top}
 
 ---
 
-### Colors
+## Colors
 
-Yolo's colors can be customized as outlined in [Themes](#themes).
+Colors in Yolo loosely follows Google's [Material Design v3 Color System](https://m3.material.io/styles/color/overview).
+
+### Key Colors
+
+Key colors provide the foundation of your theme and should [contrast](https://en.wikipedia.org/wiki/Contrast_(vision)) or [complement](https://en.wikipedia.org/wiki/Complementary_colors) each other in [hue](https://en.wikipedia.org/wiki/Hue).
+
+There are __3__ key color variables for both __light__ and __dark__ modes.
+
+1. `primary-color`: Defines the color for the page background.
+2. `secondary-color`: Defines the color for prominent elements.
+3. `tertiary-color`: Defines the color for accenting elements.
+
+You provide hex values for both modes, for example the `primary-color` for __light__ mode will be different from __dark__ mode.
+
+#### Primary
+
+The `primary-color` is applied to the page background which will occupy most of the space. For __light__ mode the intent should be to define a "lighter" color than what you specify for __dark__ mode.
+
+#### Secondary
+
+The `secondary-color` is applied to visually prominent elements like h1-h6 headers, tables, code headers, buttons, and pills. 
+
+#### Tertiary
+
+The `tertiary-color` is applied to accent elements like blockquotes, horizontal rules, list bullets, numbers, as well as the hover over color. 
+
+### Swatches
 
 {% include flexbox.html columns="1" fill="primary-color" %}
 {% include flexbox.html columns="1" fill="on-primary-color" %}
@@ -78,29 +106,21 @@ Yolo's colors can be customized as outlined in [Themes](#themes).
 {% include flexbox.html columns="1" fill="on-tertiary-color" %}
 {% include flexbox.html columns="1" fill="tertiary-container-color" %}
 {% include flexbox.html columns="1" fill="on-tertiary-container-color" %}
-{% include flexbox.html columns="1" fill="accent-color" %}
-{% include flexbox.html columns="1" fill="on-accent-color" %}
 {% include flexbox.html columns="1" fill="link-color" %}
 {% include flexbox.html columns="1" fill="neutral-color" %}
 {% include flexbox.html columns="1" fill="on-neutral-color" %}
-{% include flexbox.html columns="1" fill="error-color" %}
-{% include flexbox.html columns="1" fill="on-error-color" %}
-{% include flexbox.html columns="1" fill="warn-color" %}
-{% include flexbox.html columns="1" fill="on-warn-color" %}
-{% include flexbox.html columns="1" fill="info-color" %}
-{% include flexbox.html columns="1" fill="on-info-color" %}
 
-[↑↑↑](#){: .back-to-top}
+[↑↑↑](#howdy){: .back-to-top}
 
 ---
 
-### Typography
+## Typography
 
 Yolo's fonts can be customized as outlined in [Themes](#themes).
 
 {% include typography.html %}
 
-[↑↑↑](#){: .back-to-top}
+[↑↑↑](#howdy){: .back-to-top}
 
 ---
 
@@ -117,7 +137,7 @@ Yolo's fonts can be customized as outlined in [Themes](#themes).
 * [Videos](#videos)
 * [Prezos](#prezos)
 
-[↑↑↑](#){: .back-to-top}
+[↑↑↑](#howdy){: .back-to-top}
 
 ---
 
@@ -140,7 +160,7 @@ H1 is reserved for the site header and not shown here.
 ###### H6 Heading
 {:.no-toc}
 
-[↑↑↑](#){: .back-to-top}
+[↑↑↑](#howdy){: .back-to-top}
 
 ---
 
@@ -148,7 +168,7 @@ H1 is reserved for the site header and not shown here.
 
 [Baseball](https://en.wikipedia.org/wiki/Baseball) is a bat-and-ball sport played between two teams of nine players each, taking turns batting and fielding. The game is in play when a player on the fielding team, called the pitcher, throws a ball that a player on the batting team tries to hit with a bat. The objective of the offensive team (batting team) is to hit the ball into the field of play, away from the other team's players, allowing its players to run the bases, having them advance counter-clockwise around four bases to score what are called "runs". - copied from [Wikipedia](https://en.wikipedia.org/wiki/Baseball).
 
-[↑↑↑](#){: .back-to-top}
+[↑↑↑](#howdy){: .back-to-top}
 
 ---
 
@@ -192,7 +212,7 @@ H1 is reserved for the site header and not shown here.
 > 5. __Home Runs:__ Hits where the batter touches all four bases safely.
 > 6. __Batting Average:__ Hits divided by at bats.
 
-[↑↑↑](#){: .back-to-top}
+[↑↑↑](#howdy){: .back-to-top}
 
 ---
 
@@ -209,7 +229,7 @@ H1 is reserved for the site header and not shown here.
 - Subscript <sub>text</sub>
 - Inline code `SELECT * FROM players;`
 
-[↑↑↑](#){: .back-to-top}
+[↑↑↑](#howdy){: .back-to-top}
 
 ---
 
@@ -233,7 +253,7 @@ fi
 say_howdy $1
 ```
 
-[↑↑↑](#){: .back-to-top}
+[↑↑↑](#howdy){: .back-to-top}
 
 {% include code.html label="C snippet" %}
 ```c
@@ -249,7 +269,7 @@ int main(int argc, char **argv) {
 }
 ```
 
-[↑↑↑](#){: .back-to-top}
+[↑↑↑](#howdy){: .back-to-top}
 
 {% include code.html label="Java snippet" %}
 ```java
@@ -265,24 +285,24 @@ public class Howdy {
 }
 ```
 
-[↑↑↑](#){: .back-to-top}
+[↑↑↑](#howdy){: .back-to-top}
 
 {% include code.html label="JavaScript snippet" %}
 ```javascript
 function sayHowdy(name) {
-    console.log("Howdy " + name + "!");
+  console.log("Howdy " + name + "!");
 }
 
 if(process.argv.length != 3) {
-    console.log("Usage: Howdy <NAME>");
-    process.exit(1);
+  console.log("Usage: Howdy <NAME>");
+  process.exit(1);
 }
 
 // Say Howdy
 sayHowdy(process.argv[2]);
 ```
 
-[↑↑↑](#){: .back-to-top}
+[↑↑↑](#howdy){: .back-to-top}
 
 {% include code.html label="Kotlin snippet" %}
 ```kotlin
@@ -297,7 +317,7 @@ fun main(args: Array<String>): Int {
 }
 ```
 
-[↑↑↑](#){: .back-to-top}
+[↑↑↑](#howdy){: .back-to-top}
 
 ---
 
@@ -311,9 +331,9 @@ fun main(args: Array<String>): Int {
 * Ebbets Field
 
 * Boston Red Stockings
-  * Boston Red Caps
-    * Boston Beaneaters
-      * Boston Red Sox
+    * Boston Red Caps
+        * Boston Beaneaters
+            * Boston Red Sox
 
 #### Ordered
 {:.no-toc}
@@ -323,7 +343,7 @@ fun main(args: Array<String>): Int {
 3. Dale Murphy
 4. Mookie Wilson
 
-[↑↑↑](#){: .back-to-top}
+[↑↑↑](#howdy){: .back-to-top}
 
 ---
 
@@ -357,7 +377,7 @@ fun main(args: Array<String>): Int {
 | `git status` |  `git status`  |  `git status` |
 | `git diff`   |   `git diff`   |    `git diff` |
 
-[↑↑↑](#){: .back-to-top}
+[↑↑↑](#howdy){: .back-to-top}
 
 ---
 
@@ -377,7 +397,7 @@ fun main(args: Array<String>): Int {
 
 ![BIG yawn Bucky](assets/images/bucky.png "Sleepy Bucky")
 
-[↑↑↑](#){: .back-to-top}
+[↑↑↑](#howdy){: .back-to-top}
 
 ---
 
@@ -403,9 +423,9 @@ Thumbnails are 128px x 128px and use the `thumbnail` class.
 {% raw %}
 ```html
 {%
-  include image/image.html
-  classes="thumbnail"
-  src="https://storage.googleapis.com/corbs-foto/yolo/yolo/big-face-bucky.png"
+include image/image.html
+classes="thumbnail"
+src="https://storage.googleapis.com/corbs-foto/yolo/yolo/big-face-bucky.png"
 %}
 ```
 {% endraw %}
@@ -418,7 +438,7 @@ classes="thumbnail"
 src="https://storage.googleapis.com/corbs-foto/yolo/yolo/big-face-bucky.png"
 %}
 
-[↑↑↑](#){: .back-to-top}
+[↑↑↑](#howdy){: .back-to-top}
 
 ---
 
@@ -431,9 +451,9 @@ Square images can be added with the following classes: `is-16`, `is-24`, `is-32`
 {% raw %}
 ```html
 {%
-  include image/image.html
-  classes="image is-256"
-  src="https://storage.googleapis.com/corbs-foto/yolo/yolo/drive-in.png"
+include image/image.html
+classes="image is-256"
+src="https://storage.googleapis.com/corbs-foto/yolo/yolo/drive-in.png"
 %}
 ```
 {% endraw %}
@@ -446,7 +466,7 @@ classes="image is-256"
 src="https://storage.googleapis.com/corbs-foto/yolo/yolo/drive-in.png"
 %}
 
-[↑↑↑](#){: .back-to-top}
+[↑↑↑](#howdy){: .back-to-top}
 
 ---
 
@@ -460,9 +480,9 @@ Circle images can be added with the following classes: `is-circle-16`, `is-circl
 {% raw %}
 ```html
 {%
-  include image/image.html
-  classes="is-circle-256"
-  src="https://storage.googleapis.com/corbs-foto/yolo/yolo/big-face-bucky.png"
+include image/image.html
+classes="is-circle-256"
+src="https://storage.googleapis.com/corbs-foto/yolo/yolo/big-face-bucky.png"
 %}
 ```
 {% endraw %}
@@ -475,7 +495,7 @@ classes="is-circle-256"
 src="https://storage.googleapis.com/corbs-foto/yolo/yolo/big-face-bucky.png"
 %}
 
-[↑↑↑](#){: .back-to-top}
+[↑↑↑](#howdy){: .back-to-top}
 
 ---
 
@@ -489,9 +509,9 @@ src="https://storage.googleapis.com/corbs-foto/yolo/yolo/big-face-bucky.png"
 {% raw %}
 ```html
 {%
-  include image/image.html
-  classes="image is-256-by-192"
-  src="https://storage.googleapis.com/corbs-foto/yolo/yolo/bluebonnet.png"
+include image/image.html
+classes="image is-256-by-192"
+src="https://storage.googleapis.com/corbs-foto/yolo/yolo/bluebonnet.png"
 %}
 ```
 {% endraw %}
@@ -504,7 +524,7 @@ classes="image is-256-by-192"
 src="https://storage.googleapis.com/corbs-foto/yolo/yolo/bluebonnet.png"
 %}
 
-[↑↑↑](#){: .back-to-top}
+[↑↑↑](#howdy){: .back-to-top}
 
 ---
 
@@ -518,9 +538,9 @@ src="https://storage.googleapis.com/corbs-foto/yolo/yolo/bluebonnet.png"
 {% raw %}
 ```html
 {%
-  include image/image.html
-  classes="image is-240-by-320"
-  src="https://storage.googleapis.com/corbs-foto/yolo/yolo/bluebonnet.png"
+include image/image.html
+classes="image is-240-by-320"
+src="https://storage.googleapis.com/corbs-foto/yolo/yolo/bluebonnet.png"
 %}
 ```
 {% endraw %}
@@ -533,7 +553,7 @@ classes="image is-240-by-320"
 src="https://storage.googleapis.com/corbs-foto/yolo/yolo/bluebonnet.png"
 %}
 
-[↑↑↑](#){: .back-to-top}
+[↑↑↑](#howdy){: .back-to-top}
 
 ---
 
@@ -547,9 +567,9 @@ src="https://storage.googleapis.com/corbs-foto/yolo/yolo/bluebonnet.png"
 {% raw %}
 ```html
 {%
-  include image/image.html
-  classes="image is-256-by-144"
-  src="https://storage.googleapis.com/corbs-foto/yolo/yolo/bluebonnet.png"
+include image/image.html
+classes="image is-256-by-144"
+src="https://storage.googleapis.com/corbs-foto/yolo/yolo/bluebonnet.png"
 %}
 ```
 {% endraw %}
@@ -562,7 +582,7 @@ classes="image is-256-by-144"
 src="https://storage.googleapis.com/corbs-foto/yolo/yolo/bluebonnet.png"
 %}
 
-[↑↑↑](#){: .back-to-top}
+[↑↑↑](#howdy){: .back-to-top}
 
 ---
 
@@ -576,9 +596,9 @@ src="https://storage.googleapis.com/corbs-foto/yolo/yolo/bluebonnet.png"
 {% raw %}
 ```html
 {%
-  include image/image.html
-  classes="image is-225-by-400"
-  src="https://storage.googleapis.com/corbs-foto/yolo/yolo/bluebonnet.png"
+include image/image.html
+classes="image is-225-by-400"
+src="https://storage.googleapis.com/corbs-foto/yolo/yolo/bluebonnet.png"
 %}
 ```
 {% endraw %}
@@ -591,7 +611,7 @@ classes="image is-225-by-400"
 src="https://storage.googleapis.com/corbs-foto/yolo/yolo/bluebonnet.png"
 %}
 
-[↑↑↑](#){: .back-to-top}
+[↑↑↑](#howdy){: .back-to-top}
 
 ---
 
@@ -636,7 +656,7 @@ A custom data file can be added to create an Image Grid.
 
 {% include image/grid.html ig-data="ig-pets" ig-columns="2" %}
 
-[↑↑↑](#){: .back-to-top}
+[↑↑↑](#howdy){: .back-to-top}
 
 ---
 
@@ -680,7 +700,7 @@ A custom data file can be added to create a Lightbox.
 
 {% include image/lightbox.html lb-data="lb-marfa" %}
 
-[↑↑↑](#){: .back-to-top}
+[↑↑↑](#howdy){: .back-to-top}
 
 ---
 
@@ -688,7 +708,7 @@ A custom data file can be added to create a Lightbox.
 
 {% include video.html %}
 
-[↑↑↑](#){: .back-to-top}
+[↑↑↑](#howdy){: .back-to-top}
 
 ---
 
@@ -744,7 +764,7 @@ Yolo has basic support for embedding Google Slides.
 
 {% include prezo.html title="yolo-on" aspect-ratio="is-1-by-1" %}
 
-[↑↑↑](#){: .back-to-top}
+[↑↑↑](#howdy){: .back-to-top}
 
 ---
 
@@ -812,7 +832,7 @@ The `Makefile` automates the build and run process, with `make yolo-pod`, which:
 make yolo-pod
 ```
 
-[↑↑↑](#){: .back-to-top}
+[↑↑↑](#howdy){: .back-to-top}
 
 ---
 
@@ -845,7 +865,7 @@ _"The modern CSS framework that just works"_, true dat. Bulma is not included as
 
 > Sanks [Bulma](https://bulma.io/) people.
 
-[↑↑↑](#){: .back-to-top}
+[↑↑↑](#howdy){: .back-to-top}
 
 ---
 
@@ -875,4 +895,4 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 ```
 
-[↑↑↑](#){: .back-to-top}
+[↑↑↑](#howdy){: .back-to-top}

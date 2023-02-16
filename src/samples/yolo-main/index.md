@@ -270,12 +270,12 @@ public class Howdy {
 {% include code.html label="JavaScript snippet" %}
 ```javascript
 function sayHowdy(name) {
-    console.log("Howdy " + name + "!");
+  console.log("Howdy " + name + "!");
 }
 
 if(process.argv.length != 3) {
-    console.log("Usage: Howdy <NAME>");
-    process.exit(1);
+  console.log("Usage: Howdy <NAME>");
+  process.exit(1);
 }
 
 // Say Howdy
@@ -403,9 +403,9 @@ Thumbnails are 128px x 128px and use the `thumbnail` class.
 {% raw %}
 ```html
 {%
-  include image/image.html
-  classes="thumbnail"
-  src="https://storage.googleapis.com/corbs-foto/yolo/yolo/big-face-bucky.png"
+include image/image.html
+classes="thumbnail"
+src="https://storage.googleapis.com/corbs-foto/yolo/yolo/big-face-bucky.png"
 %}
 ```
 {% endraw %}
@@ -431,9 +431,9 @@ Square images can be added with the following classes: `is-16`, `is-24`, `is-32`
 {% raw %}
 ```html
 {%
-  include image/image.html
-  classes="image is-256"
-  src="https://storage.googleapis.com/corbs-foto/yolo/yolo/drive-in.png"
+include image/image.html
+classes="image is-256"
+src="https://storage.googleapis.com/corbs-foto/yolo/yolo/drive-in.png"
 %}
 ```
 {% endraw %}
@@ -460,9 +460,9 @@ Circle images can be added with the following classes: `is-circle-16`, `is-circl
 {% raw %}
 ```html
 {%
-  include image/image.html
-  classes="is-circle-256"
-  src="https://storage.googleapis.com/corbs-foto/yolo/yolo/big-face-bucky.png"
+include image/image.html
+classes="is-circle-256"
+src="https://storage.googleapis.com/corbs-foto/yolo/yolo/big-face-bucky.png"
 %}
 ```
 {% endraw %}
@@ -489,9 +489,9 @@ src="https://storage.googleapis.com/corbs-foto/yolo/yolo/big-face-bucky.png"
 {% raw %}
 ```html
 {%
-  include image/image.html
-  classes="image is-256-by-192"
-  src="https://storage.googleapis.com/corbs-foto/yolo/yolo/bluebonnet.png"
+include image/image.html
+classes="image is-256-by-192"
+src="https://storage.googleapis.com/corbs-foto/yolo/yolo/bluebonnet.png"
 %}
 ```
 {% endraw %}
@@ -518,9 +518,9 @@ src="https://storage.googleapis.com/corbs-foto/yolo/yolo/bluebonnet.png"
 {% raw %}
 ```html
 {%
-  include image/image.html
-  classes="image is-240-by-320"
-  src="https://storage.googleapis.com/corbs-foto/yolo/yolo/bluebonnet.png"
+include image/image.html
+classes="image is-240-by-320"
+src="https://storage.googleapis.com/corbs-foto/yolo/yolo/bluebonnet.png"
 %}
 ```
 {% endraw %}
@@ -547,9 +547,9 @@ src="https://storage.googleapis.com/corbs-foto/yolo/yolo/bluebonnet.png"
 {% raw %}
 ```html
 {%
-  include image/image.html
-  classes="image is-256-by-144"
-  src="https://storage.googleapis.com/corbs-foto/yolo/yolo/bluebonnet.png"
+include image/image.html
+classes="image is-256-by-144"
+src="https://storage.googleapis.com/corbs-foto/yolo/yolo/bluebonnet.png"
 %}
 ```
 {% endraw %}
@@ -576,9 +576,9 @@ src="https://storage.googleapis.com/corbs-foto/yolo/yolo/bluebonnet.png"
 {% raw %}
 ```html
 {%
-  include image/image.html
-  classes="image is-225-by-400"
-  src="https://storage.googleapis.com/corbs-foto/yolo/yolo/bluebonnet.png"
+include image/image.html
+classes="image is-225-by-400"
+src="https://storage.googleapis.com/corbs-foto/yolo/yolo/bluebonnet.png"
 %}
 ```
 {% endraw %}
