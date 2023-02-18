@@ -95,11 +95,11 @@ $alignments: ('centered': 'center', 'justified': 'justify', 'left': 'left', 'rig
   font-weight: $weight-bold !important;
 }
 .is-family-primary {
-  font-family: $family-primary !important;
+  font-family: var(--font-family-primary) !important;
 }
 .is-family-secondary {
-  font-family: $family-secondary !important;
+  font-family: var(--font-family-secondary) !important;
 }
 .is-family-monospace {
-  font-family: $family-monospace !important;
+  font-family: var(--font-family-monospace) !important;
 }

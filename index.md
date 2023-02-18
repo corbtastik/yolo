@@ -267,21 +267,6 @@ sayHowdy(process.argv[2]);
 
 [↑↑↑](#howdy){: .back-to-top}
 
-{% include code.html label="Kotlin snippet" %}
-```kotlin
-// Say Howdy
-fun main(args: Array<String>): Int {
-    if(args.size != 1) {
-        println("Usage: Howdy <NAME>")
-        return 1
-    }
-    println("Howdy " + args[0] + "!")
-    return 0
-}
-```
-
-[↑↑↑](#howdy){: .back-to-top}
-
 ---
 
 ## Lists
@@ -695,46 +680,13 @@ The `Makefile` automates the build and run process, with `make yolo-pod`, which:
 * Creates the `yoloc` image.
 * Uses `yoloc` to build your `_site`.
 * Creates the `yolo` image to run your site.
-* Starts a yolo container from the `yolo` image, on [`http://localhost:9696`](http://localhost:9696).
+* Starts a yolo container from the `yolo` image, on [http://localhost:9696](http://localhost:9696).
 
 {% include code.html label="Makefile build and run" %}
 ```bash
 # Build and run with make
 make yolo-pod
 ```
-
-[↑↑↑](#howdy){: .back-to-top}
-
----
-
-## Thanks
-
-I'm a developer by trade with roots in C and Java. I once read something like - _"write code every day"_ and although I haven't, I like to try. I enjoy frontend development but consider myself a hack. I get by, but get by with a little help from my friends.
-
-> Many thanks for these resources and the folks behind them.
-
-### [w3schools](https://www.w3schools.com/)
-{:.no-toc}
-
-When I want an unvarnished take on HTML, CSS, and Javascript I go to [w3schools](https://www.w3schools.com/). That and every time I google for frontend related stuff [w3schools](https://www.w3schools.com/) comes up. Great reference material, some of which guided the [Yolo Lightbox](#image-lightbox) implementation.
-
-> Sanks [w3schools](https://www.w3schools.com/) people.
-
-### [Solo](http://chibicode.github.io/solo/)
-{:.no-toc}
-
-Years ago I googled _"minimal jekyll theme"_, which led me to [Solo](http://chibicode.github.io/solo/). It was exactly what I was looking for, simple to get started and customize. Not to mention there's a quirky beauty in its look. Over the years I've used Solo for single page "technical" docs.
-
-Yolo is cut from the cloth of "[Solo](http://chibicode.github.io/solo)" which was previously developed by [Shu Uesugi](https://github.com/chibicode).
-
-> Well done [Shu Uesugi](https://github.com/chibicode), sanks amigo.
-
-### [Bulma](https://bulma.io/)
-{:.no-toc}
-
-_"The modern CSS framework that just works"_, true dat. Bulma is not included as a library, but Yolo contains slightly modified scss from select areas, namely flexbox, typography and image styling. For my tastes Bulma is the best css framework, they be awesome yo.
-
-> Sanks [Bulma](https://bulma.io/) people.
 
 [↑↑↑](#howdy){: .back-to-top}
 

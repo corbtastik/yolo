@@ -4,6 +4,8 @@
 @charset "utf-8";
 
 @import "yolo/variables";
+@import "yolo/theme";
+@import "yolo/themes/{{ site.data.settings.theme.name | default: 'corbs' }}";
 @import "yolo/normalize";
 @import "yolo/base";
 @import "yolo/responsiveness";
@@ -13,8 +15,6 @@
 @import "yolo/images";
 @import "yolo/lightbox";
 @import "yolo/navigation";
-@import "yolo/theme";
-@import "yolo/themes/{{ site.data.settings.theme.name | default: 'yolo' }}";
 @import "yolo/yolo";
 
 {% if site.data.settings.sidebar %}

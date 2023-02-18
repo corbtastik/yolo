@@ -58,9 +58,11 @@
 // See: _sass/yolo/themes for specific theme colors.
 // ----------------------------------------------------------------------------
 .yolo-themed {
-  color: var(--on-primary-color);
-  background-color: var(--primary-color);
-  font-family: var(--font-family-primary);
+  body {
+    color: var(--on-primary-color);
+    background-color: var(--primary-color);
+    font-family: var(--font-family-primary);
+  }
 
   a {
     color: var(--link-color);
@@ -77,39 +79,23 @@
     border-bottom-right-radius: .25rem;
     background-color: var(--primary-container-color);
     color: var(--on-primary-container-color);
+    b, strong, em, abbr, cite, del, ins, sup, sub, code {
+      color: var(--on-primary-container-color);
+    }
+    .highlighter-rouge, .highlight {
+      color: var(--on-primary-container-color);
+    }
   }
 
   hr {
     border-bottom: 1px dashed var(--tertiary-color);
   }
 
-  //pre, code {
-  //  color: var(--on-primary-container-color);
-  //}
-
-  //b, strong, em, abbr, cite, del, ins, sup, sub {
-  //  color: var(--on-primary-color);
-  //}
-
-  /* Code in text */
-  //p > code,
-  //blockquote > code,
-  //h1 > code,
-  //h2 > code,
-  //h3 > code,
-  //h4 > code,
-  //h5 > code,
-  //h6 > code,
-  //li > code,
-  //dd > code,
-  //td > code {
-  //  color: var(--on-primary-container-color);
-  //}
+  b, strong, em, abbr, cite, del, ins, sup, sub {
+    color: var(--on-primary-color);
+  }
 
   ul {
-    //li {
-    //  color: var(--on-primary-color);
-    //}
     li::before {
       color: var(--tertiary-color);
     }
@@ -119,9 +105,6 @@
   }
 
   ol {
-    //li {
-    //  color: var(--on-primary-color);
-    //}
     li::marker {
       color: var(--tertiary-color);
     }
@@ -229,7 +212,6 @@
     color: var(--on-primary-container-color);
   }
 
-  // info styling
   .info {
     margin: 1rem 0;
 
@@ -341,6 +323,15 @@
     background-color: var(--on-info-color);
     color: var(--info-color);
   }
+
+  .highlighter-rouge, .highlight {
+    color: var(--on-primary-color);
+  }
+
+  .highlight .hll {
+    background-color: var(--syntax03);
+  }
+
   .highlight {
     background: var(--primary-container-color);
     color: var(--on-primary-container-color);

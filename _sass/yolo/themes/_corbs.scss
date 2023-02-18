@@ -23,6 +23,17 @@
   --font-family-primary: "JetBrains Mono", monospace;
   --font-family-secondary: "Red Hat Text", sans-serif;
   --font-family-monospace: "Inconsolata", monospace;
+
+  --syntax01: #a0a0a0;
+  --syntax02: #e4e8eb;
+  --syntax03: #dfe2e5;
+  --syntax04: #ffab00;
+  --syntax05: #e040fb;
+  --syntax06: #00e676;
+  --syntax07: #4ffbfb;
+  --syntax08: #609dfc;
+  --syntax09: #bd9ef8;
+  --syntax10: #ff4081;
 }
 // Dark mode
 :root[dark] {
@@ -46,4 +57,15 @@
   --font-family-primary: "JetBrains Mono", monospace;
   --font-family-secondary: "Red Hat Text", sans-serif;
   --font-family-monospace: "Inconsolata", monospace;
+
+  --syntax01: #a0a0a0;
+  --syntax02: #e4e8eb;
+  --syntax03: #dfe2e5;
+  --syntax04: #ffab00;
+  --syntax05: #e040fb;
+  --syntax06: #00e676;
+  --syntax07: #4ffbfb;
+  --syntax08: #609dfc;
+  --syntax09: #bd9ef8;
+  --syntax10: #ff4081;
 }

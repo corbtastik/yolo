@@ -8,7 +8,7 @@
 html {
   font-size: $size-6;
   line-height: 1.5;
-  font-family: $family-primary;
+  font-family: var(--font-family-primary);
 }
 
 body {
@@ -71,7 +71,7 @@ p, ul, ol, dl, table, pre, blockquote {
 }
 
 pre, code {
-  font-family: $family-monospace;
+  font-family: var(--font-family-monospace);
   overflow-x: auto;
 }
 
@@ -126,7 +126,7 @@ th {
 }
 
 thead {
-  font-family: $family-secondary;
+  font-family: var(--font-family-secondary);
 }
 
 thead tr:first-child th:first-child {
