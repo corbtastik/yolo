@@ -26,3 +26,57 @@ $rtl: false !default;
 $gap: 32px !default;
 $tablet: 769px !default;
 $desktop: 960px + (2 * $gap) !default;
+// ----------------------------------------------------------------------------
+// Variables that apply to light mode that are not part of a custom theme
+// ----------------------------------------------------------------------------
+:root {
+  // Syntax Highlighting on light
+  --syntax01: #8f8f8f;
+  --syntax02: #011842;
+  --syntax03: #393939;
+  --syntax04: #eb6302;
+  --syntax05: #c500e3;
+  --syntax06: #01c72b;
+  --syntax07: #019e9e;
+  --syntax08: #1b3df8;
+  --syntax09: #5923ca;
+  --syntax10: #db0c4d;
+  // Error, Warn and Info colors on light
+  --error-color: #b71c1c;
+  --on-error-color: #ffcdd2;
+  --warn-color: #212121;
+  --on-warn-color: #ffee58;
+  --info-color: #1565c0;
+  --on-info-color: #bbdefb;
+  // Neutral colors on light
+  --neutral-color: #212121;
+  --on-neutral-color: #e0e0e0;
+}
+// ----------------------------------------------------------------------------
+// Variables that apply to light mode that are not part of a custom theme
+// ----------------------------------------------------------------------------
+:root[dark] {
+  // Syntax Highlighting on dark
+  --syntax01: #a0a0a0;
+  --syntax02: #e4e8eb;
+  --syntax03: #dfe2e5;
+  --syntax04: #ffab00;
+  --syntax05: #e040fb;
+  --syntax06: #00e676;
+  --syntax07: #4ffbfb;
+  --syntax08: #609dfc;
+  --syntax09: #bd9ef8;
+  --syntax10: #ff4081;
+  // Error, Warn and Info colors on dark
+  --error-color: #ffcdd2;
+  --on-error-color: #b71c1c;
+  --warn-color: #ffee58;
+  --on-warn-color: #212121;
+  --info-color: #bbdefb;
+  --on-info-color: #1565c0;
+  // Neutral colors on dark
+  --neutral-color: #e0e0e0;
+  --on-neutral-color: #212121;
+}
+
+$corbs-color: red;
