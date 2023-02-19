@@ -4,7 +4,22 @@
 @charset "utf-8";
 
 @import "yolo/variables";
+// Import the custom color theme from _data/settings.yml
 @import "yolo/themes/{{ site.data.settings.theme.name | default: 'corbs' }}";
+// Check if user wants syntax highlighting on a dark container when light mode is on
+// Otherwise use default of light container
+{% if site.data.settings.theme.syntax.light %}
+@import "yolo/themes/{{ site.data.settings.theme.syntax.light }}";
+{% else %}
+@import "yolo/themes/syntax-on-light";
+{% endif %}
+// Check if user wants syntax highlighting on a light container when dark mode is on
+// Otherwise use default of dark container
+{% if site.data.settings.theme.syntax.dark %}
+@import "yolo/themes/{{ site.data.settings.theme.syntax.dark }}";
+{% else %}
+@import "yolo/themes/syntax-on-dark";
+{% endif %}
 @import "yolo/theme";
 @import "yolo/normalize";
 @import "yolo/base";

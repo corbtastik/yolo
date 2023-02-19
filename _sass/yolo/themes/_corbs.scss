@@ -2,38 +2,23 @@
 // corbs theme
 // ----------------------------------------------------------------------------
 // Light mode
-:root {
+:root[light] {
   --primary-color: #d2d2f3;
   --on-primary-color: #011141;
   --primary-container-color: #070831;
   --on-primary-container-color: #949bfa;
-
   --secondary-color: #5815c0;
   --on-secondary-color: #d2d2f3;
   --secondary-container-color: #100423;
   --on-secondary-container-color: #d7c6f3;
-
   --tertiary-color: #d80f8a;
   --on-tertiary-color: #f8faff;
   --tertiary-container-color: #b5036a;
   --on-tertiary-container-color: #f6a5d4;
-
   --link-color: #0091ea;
-
   --font-family-primary: "JetBrains Mono", monospace;
   --font-family-secondary: "Red Hat Text", sans-serif;
-  --font-family-monospace: "Inconsolata", monospace;
-
-  --syntax01: #a0a0a0;
-  --syntax02: #e4e8eb;
-  --syntax03: #dfe2e5;
-  --syntax04: #ffab00;
-  --syntax05: #e040fb;
-  --syntax06: #00e676;
-  --syntax07: #4ffbfb;
-  --syntax08: #609dfc;
-  --syntax09: #bd9ef8;
-  --syntax10: #ff4081;
+  --font-family-monospace: "Source Code Pro", monospace;
 }
 // Dark mode
 :root[dark] {
@@ -41,33 +26,16 @@
   --on-primary-color: #b1b6fa;
   --primary-container-color: #040511;
   --on-primary-container-color: #7c85fa;
-
   --secondary-color: #fb1d9e;
   --on-secondary-color: #19010f;
   --secondary-container-color: #b5036a;
   --on-secondary-container-color: #f6a5d4;
-
   --tertiary-color: #0ca9f4;
   --on-tertiary-color: #010d13;
   --tertiary-container-color: #085f89;
   --on-tertiary-container-color: #ecf8fe;
-
   --link-color: #65cffc;
-
   --font-family-primary: "JetBrains Mono", monospace;
   --font-family-secondary: "Red Hat Text", sans-serif;
-  --font-family-monospace: "Inconsolata", monospace;
-
-  --syntax01: #a0a0a0;
-  --syntax02: #e4e8eb;
-  --syntax03: #dfe2e5;
-  --syntax04: #ffab00;
-  --syntax05: #e040fb;
-  --syntax06: #00e676;
-  --syntax07: #4ffbfb;
-  --syntax08: #609dfc;
-  --syntax09: #bd9ef8;
-  --syntax10: #ff4081;
+  --font-family-monospace: "Source Code Pro", monospace;
 }
-
-$corbs-color: magenta;

@@ -7,6 +7,9 @@ title: Yolo on my friend
 description: Loveable single pages
 theme:
   name: corbs
+  syntax:
+    light: syntax-on-dark
+    dark: syntax-on-dark
 align: left
 #header:
 #  logo: assets/images/logo.png
