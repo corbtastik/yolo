@@ -1,27 +1,183 @@
 // ----------------------------------------------------------------------------
-// material v2 scheme
+// material scheme
 // ----------------------------------------------------------------------------
 :root[light] {
-  --syntax01: #9e9e9e;
-  --syntax02: #022072;
-  --syntax03: #424242;
-  --syntax04: #fb8d00;
-  --syntax05: #e03ffb;
-  --syntax06: #00c854;
-  --syntax07: #0bbcd4;
-  --syntax08: #1d75d3;
-  --syntax09: #5f35b1;
-  --syntax10: #d50201;
+  --syntax-text: #424242;
+  --syntax-container-color: #fafafa;
+  --syntax-highlight-color: #ffeb3b;
+
+  --syntax-line-number-color: #616161;
+  --syntax-line-number-background-color: #eeeeee;
+  --syntax-line-number-special-color: #0bbcd4;
+  --syntax-line-number-special-background-color: #e0e0e0;
+
+  --syntax-error: #c62928;
+  --syntax-punctuation: #273239;
+  --syntax-text-whitespace: #273239;
+
+  --syntax-comment-hashbang: #b5036a;
+  --syntax-comment-multiline: #b5036a;
+  --syntax-comment-preproc: #b5036a;
+  --syntax-comment-preprocfile: #b5036a;
+  --syntax-comment-single: #b5036a;
+  --syntax-comment-special: #b5036a;
+  --syntax-comment: #b5036a;
+
+  --syntax-generic-deleted: #c62928;
+  --syntax-generic-emph: #273239;
+  --syntax-generic-error: #c62928;
+  --syntax-generic-heading: #273239;
+  --syntax-generic-inserted: #273239;
+  --syntax-generic-output: #273239;
+  --syntax-generic-prompt: #273239;
+  --syntax-generic-strong: #273239;
+  --syntax-generic-subheading: #273239;
+  --syntax-generic-traceback: #273239;
+
+  --syntax-keyword-constant: #fb1d9e;
+  --syntax-keyword-declaration: #0ca9f4;
+  --syntax-keyword-namespace: #fb1d9e;
+  --syntax-keyword-pseudo: #fb1d9e;
+  --syntax-keyword-reserved: #fb1d9e;
+  --syntax-keyword-type: #0ca9f4;
+  --syntax-keyword: #fb1d9e;
+
+  --syntax-literal-date: #273239;
+  --syntax-literal: #273239;
+
+  --syntax-name-attribute: #50fa7b;
+  --syntax-name-builtin-pseudo: #273239;
+  --syntax-name-builtin: #0ca9f4;
+  --syntax-name-class: #50fa7b;
+  --syntax-name-constant: #273239;
+  --syntax-name-decorator: #273239;
+  --syntax-name-entity: #273239;
+  --syntax-name-exception: #273239;
+  --syntax-name-function-magic: #50fa7b;
+  --syntax-name-function: #50fa7b;
+  --syntax-name-label: #0ca9f4;
+  --syntax-name-namespace: #273239;
+  --syntax-name-other: #273239;
+  --syntax-name-tag: #fb1d9e;
+  --syntax-name-variable-class: #0ca9f4;
+  --syntax-name-variable-global: #0ca9f4;
+  --syntax-name-variable-instance: #0ca9f4;
+  --syntax-name-variable: #0ca9f4;
+  --syntax-name: #273239;
+
+  --syntax-number-bin: #65cffc;
+  --syntax-number-float: #65cffc;
+  --syntax-number-hex: #65cffc;
+  --syntax-number-integer-long: #65cffc;
+  --syntax-number-integer: #65cffc;
+  --syntax-number-oct: #65cffc;
+  --syntax-number: #65cffc;
+
+  --syntax-operator-word: #fb1d9e;
+  --syntax-operator: #fb1d9e;
+
+  --syntax-string-affix: #7c85fa;
+  --syntax-string-backtick: #7c85fa;
+  --syntax-string-char: #7c85fa;
+  --syntax-string-delimiter: #7c85fa;
+  --syntax-string-doc: #7c85fa;
+  --syntax-string-double: #7c85fa;
+  --syntax-string-escape: #7c85fa;
+  --syntax-string-heredoc: #7c85fa;
+  --syntax-string-interpol: #7c85fa;
+  --syntax-string-other: #7c85fa;
+  --syntax-string-regex: #7c85fa;
+  --syntax-string-single: #7c85fa;
+  --syntax-string-symbol: #7c85fa;
+  --syntax-string: #7c85fa;
 }
 :root[dark] {
-  --syntax01: #9e9e9e;
-  --syntax02: #f5f5f5;
-  --syntax03: #cfd8dd;
-  --syntax04: #ffb74d;
-  --syntax05: #e03ffb;
-  --syntax06: #01e676;
-  --syntax07: #1bffff;
-  --syntax08: #43a5f5;
-  --syntax09: #b488ff;
-  --syntax10: #ff4082;
+  --syntax-text: #ecedff;
+  --syntax-container-color: #040511;
+  --syntax-highlight-color: #44475a;
+
+  --syntax-line-number-color: #ecf8fe;
+  --syntax-line-number-background-color: #085f89;
+  --syntax-line-number-special-color: #0ca9f4;
+  --syntax-line-number-special-background-color: #010d13;
+
+  --syntax-error: #ecedff;
+  --syntax-punctuation: #ecedff;
+  --syntax-text-whitespace: #ecedff;
+
+  --syntax-comment-hashbang: #b5036a;
+  --syntax-comment-multiline: #b5036a;
+  --syntax-comment-preproc: #b5036a;
+  --syntax-comment-preprocfile: #b5036a;
+  --syntax-comment-single: #b5036a;
+  --syntax-comment-special: #b5036a;
+  --syntax-comment: #b5036a;
+
+  --syntax-generic-deleted: #b71c1c;
+  --syntax-generic-emph: #ecedff;
+  --syntax-generic-error: #ecedff;
+  --syntax-generic-heading: #ecedff;
+  --syntax-generic-inserted: #ecedff;
+  --syntax-generic-output: #ecedff;
+  --syntax-generic-prompt: #ecedff;
+  --syntax-generic-strong: #ecedff;
+  --syntax-generic-subheading: #ecedff;
+  --syntax-generic-traceback: #ecedff;
+
+  --syntax-keyword-constant: #fb1d9e;
+  --syntax-keyword-declaration: #0ca9f4;
+  --syntax-keyword-namespace: #fb1d9e;
+  --syntax-keyword-pseudo: #fb1d9e;
+  --syntax-keyword-reserved: #fb1d9e;
+  --syntax-keyword-type: #0ca9f4;
+  --syntax-keyword: #fb1d9e;
+
+  --syntax-literal-date: #ecedff;
+  --syntax-literal: #ecedff;
+
+  --syntax-name-attribute: #50fa7b;
+  --syntax-name-builtin-pseudo: #ecedff;
+  --syntax-name-builtin: #0ca9f4;
+  --syntax-name-class: #50fa7b;
+  --syntax-name-constant: #ecedff;
+  --syntax-name-decorator: #ecedff;
+  --syntax-name-entity: #ecedff;
+  --syntax-name-exception: #ecedff;
+  --syntax-name-function-magic: #50fa7b;
+  --syntax-name-function: #50fa7b;
+  --syntax-name-label: #0ca9f4;
+  --syntax-name-namespace: #ecedff;
+  --syntax-name-other: #ecedff;
+  --syntax-name-tag: #fb1d9e;
+  --syntax-name-variable-class: #0ca9f4;
+  --syntax-name-variable-global: #0ca9f4;
+  --syntax-name-variable-instance: #0ca9f4;
+  --syntax-name-variable: #0ca9f4;
+  --syntax-name: #ecedff;
+
+  --syntax-number-bin: #65cffc;
+  --syntax-number-float: #65cffc;
+  --syntax-number-hex: #65cffc;
+  --syntax-number-integer-long: #65cffc;
+  --syntax-number-integer: #65cffc;
+  --syntax-number-oct: #65cffc;
+  --syntax-number: #65cffc;
+
+  --syntax-operator-word: #fb1d9e;
+  --syntax-operator: #fb1d9e;
+
+  --syntax-string-affix: #7c85fa;
+  --syntax-string-backtick: #7c85fa;
+  --syntax-string-char: #7c85fa;
+  --syntax-string-delimiter: #7c85fa;
+  --syntax-string-doc: #7c85fa;
+  --syntax-string-double: #7c85fa;
+  --syntax-string-escape: #7c85fa;
+  --syntax-string-heredoc: #7c85fa;
+  --syntax-string-interpol: #7c85fa;
+  --syntax-string-other: #7c85fa;
+  --syntax-string-regex: #7c85fa;
+  --syntax-string-single: #7c85fa;
+  --syntax-string-symbol: #7c85fa;
+  --syntax-string: #7c85fa;
 }

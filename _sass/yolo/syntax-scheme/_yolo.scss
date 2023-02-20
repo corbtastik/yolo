@@ -2,26 +2,182 @@
 // yolo scheme
 // ----------------------------------------------------------------------------
 :root[light] {
-  --syntax01: #a0a0a0;
-  --syntax02: #e4e8eb;
-  --syntax03: #dfe2e5;
-  --syntax04: #ffab00;
-  --syntax05: #e040fb;
-  --syntax06: #00e676;
-  --syntax07: #4ffbfb;
-  --syntax08: #609dfc;
-  --syntax09: #bd9ef8;
-  --syntax10: #ff4081;
+  --syntax-text: #d2d2f3;
+  --syntax-container-color: #070831;
+  --syntax-highlight-color: #44475a;
+
+  --syntax-line-number-color: #ecf8fe;
+  --syntax-line-number-background-color: #085f89;
+  --syntax-line-number-special-color: #0ca9f4;
+  --syntax-line-number-special-background-color: #010d13;
+
+  --syntax-error: #ecedff;
+  --syntax-punctuation: #ecedff;
+  --syntax-text-whitespace: #ecedff;
+
+  --syntax-comment-hashbang: #9e9e9e;
+  --syntax-comment-multiline: #9e9e9e;
+  --syntax-comment-preproc: #9e9e9e;
+  --syntax-comment-preprocfile: #9e9e9e;
+  --syntax-comment-single: #9e9e9e;
+  --syntax-comment-special: #9e9e9e;
+  --syntax-comment: #9e9e9e;
+
+  --syntax-generic-deleted: #b71c1c;
+  --syntax-generic-emph: #ecedff;
+  --syntax-generic-error: #ecedff;
+  --syntax-generic-heading: #ecedff;
+  --syntax-generic-inserted: #ecedff;
+  --syntax-generic-output: #ecedff;
+  --syntax-generic-prompt: #ecedff;
+  --syntax-generic-strong: #ecedff;
+  --syntax-generic-subheading: #ecedff;
+  --syntax-generic-traceback: #ecedff;
+
+  --syntax-keyword-constant: #e91e64;
+  --syntax-keyword-declaration: #e91e64;
+  --syntax-keyword-namespace: #e91e64;
+  --syntax-keyword-pseudo: #e91e64;
+  --syntax-keyword-reserved: #e91e64;
+  --syntax-keyword-type: #0ca9f4;
+  --syntax-keyword: #e91e64;
+
+  --syntax-literal-date: #ecedff;
+  --syntax-literal: #ecedff;
+
+  --syntax-name-attribute: #01e676;
+  --syntax-name-builtin-pseudo: #ecedff;
+  --syntax-name-builtin: #0ca9f4;
+  --syntax-name-class: #01e676;
+  --syntax-name-constant: #ecedff;
+  --syntax-name-decorator: #ecedff;
+  --syntax-name-entity: #ecedff;
+  --syntax-name-exception: #ecedff;
+  --syntax-name-function-magic: #01e676;
+  --syntax-name-function: #01e676;
+  --syntax-name-label: #0ca9f4;
+  --syntax-name-namespace: #ecedff;
+  --syntax-name-other: #ecedff;
+  --syntax-name-tag: #e91e64;
+  --syntax-name-variable-class: #0ca9f4;
+  --syntax-name-variable-global: #0ca9f4;
+  --syntax-name-variable-instance: #0ca9f4;
+  --syntax-name-variable: #0ca9f4;
+  --syntax-name: #ecedff;
+
+  --syntax-number-bin: #1bffff;
+  --syntax-number-float: #1bffff;
+  --syntax-number-hex: #1bffff;
+  --syntax-number-integer-long: #1bffff;
+  --syntax-number-integer: #1bffff;
+  --syntax-number-oct: #1bffff;
+  --syntax-number: #1bffff;
+
+  --syntax-operator-word: #e91e64;
+  --syntax-operator: #e91e64;
+
+  --syntax-string-affix: #7d4cff;
+  --syntax-string-backtick: #7d4cff;
+  --syntax-string-char: #7d4cff;
+  --syntax-string-delimiter: #7d4cff;
+  --syntax-string-doc: #7d4cff;
+  --syntax-string-double: #7d4cff;
+  --syntax-string-escape: #7d4cff;
+  --syntax-string-heredoc: #7d4cff;
+  --syntax-string-interpol: #7d4cff;
+  --syntax-string-other: #7d4cff;
+  --syntax-string-regex: #7d4cff;
+  --syntax-string-single: #7d4cff;
+  --syntax-string-symbol: #7d4cff;
+  --syntax-string: #7d4cff;
 }
 :root[dark] {
-  --syntax01: #a0a0a0;
-  --syntax02: #e4e8eb;
-  --syntax03: #dfe2e5;
-  --syntax04: #ffab00;
-  --syntax05: #e040fb;
-  --syntax06: #00e676;
-  --syntax07: #4ffbfb;
-  --syntax08: #609dfc;
-  --syntax09: #bd9ef8;
-  --syntax10: #ff4081;
+  --syntax-text: #ecedff;
+  --syntax-container-color: #040511;
+  --syntax-highlight-color: #44475a;
+
+  --syntax-line-number-color: #ecf8fe;
+  --syntax-line-number-background-color: #085f89;
+  --syntax-line-number-special-color: #0ca9f4;
+  --syntax-line-number-special-background-color: #010d13;
+
+  --syntax-error: #ecedff;
+  --syntax-punctuation: #ecedff;
+  --syntax-text-whitespace: #ecedff;
+
+  --syntax-comment-hashbang: #b5036a;
+  --syntax-comment-multiline: #b5036a;
+  --syntax-comment-preproc: #b5036a;
+  --syntax-comment-preprocfile: #b5036a;
+  --syntax-comment-single: #b5036a;
+  --syntax-comment-special: #b5036a;
+  --syntax-comment: #b5036a;
+
+  --syntax-generic-deleted: #b71c1c;
+  --syntax-generic-emph: #ecedff;
+  --syntax-generic-error: #ecedff;
+  --syntax-generic-heading: #ecedff;
+  --syntax-generic-inserted: #ecedff;
+  --syntax-generic-output: #ecedff;
+  --syntax-generic-prompt: #ecedff;
+  --syntax-generic-strong: #ecedff;
+  --syntax-generic-subheading: #ecedff;
+  --syntax-generic-traceback: #ecedff;
+
+  --syntax-keyword-constant: #fb1d9e;
+  --syntax-keyword-declaration: #0ca9f4;
+  --syntax-keyword-namespace: #fb1d9e;
+  --syntax-keyword-pseudo: #fb1d9e;
+  --syntax-keyword-reserved: #fb1d9e;
+  --syntax-keyword-type: #0ca9f4;
+  --syntax-keyword: #fb1d9e;
+
+  --syntax-literal-date: #ecedff;
+  --syntax-literal: #ecedff;
+
+  --syntax-name-attribute: #50fa7b;
+  --syntax-name-builtin-pseudo: #ecedff;
+  --syntax-name-builtin: #0ca9f4;
+  --syntax-name-class: #50fa7b;
+  --syntax-name-constant: #ecedff;
+  --syntax-name-decorator: #ecedff;
+  --syntax-name-entity: #ecedff;
+  --syntax-name-exception: #ecedff;
+  --syntax-name-function-magic: #50fa7b;
+  --syntax-name-function: #50fa7b;
+  --syntax-name-label: #0ca9f4;
+  --syntax-name-namespace: #ecedff;
+  --syntax-name-other: #ecedff;
+  --syntax-name-tag: #fb1d9e;
+  --syntax-name-variable-class: #0ca9f4;
+  --syntax-name-variable-global: #0ca9f4;
+  --syntax-name-variable-instance: #0ca9f4;
+  --syntax-name-variable: #0ca9f4;
+  --syntax-name: #ecedff;
+
+  --syntax-number-bin: #65cffc;
+  --syntax-number-float: #65cffc;
+  --syntax-number-hex: #65cffc;
+  --syntax-number-integer-long: #65cffc;
+  --syntax-number-integer: #65cffc;
+  --syntax-number-oct: #65cffc;
+  --syntax-number: #65cffc;
+
+  --syntax-operator-word: #fb1d9e;
+  --syntax-operator: #fb1d9e;
+
+  --syntax-string-affix: #7c85fa;
+  --syntax-string-backtick: #7c85fa;
+  --syntax-string-char: #7c85fa;
+  --syntax-string-delimiter: #7c85fa;
+  --syntax-string-doc: #7c85fa;
+  --syntax-string-double: #7c85fa;
+  --syntax-string-escape: #7c85fa;
+  --syntax-string-heredoc: #7c85fa;
+  --syntax-string-interpol: #7c85fa;
+  --syntax-string-other: #7c85fa;
+  --syntax-string-regex: #7c85fa;
+  --syntax-string-single: #7c85fa;
+  --syntax-string-symbol: #7c85fa;
+  --syntax-string: #7c85fa;
 }

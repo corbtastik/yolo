@@ -7,7 +7,7 @@ title: Yolo on my friend
 description: Loveable single pages
 theme:
   name: solo
-  syntax: alpha
+  syntax: dracula
 align: left
 #header:
 #  logo: assets/images/logo.png

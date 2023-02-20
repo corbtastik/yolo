@@ -1,0 +1,269 @@
+:root[light] {
+  --syntax-text: #f8f8f2;
+  --syntax-container-color: #282a36;
+  --syntax-highlight-color: #44475a;
+
+  --syntax-line-number-color: #63efff;
+  --syntax-line-number-background-color: #44475a;
+  --syntax-line-number-special-color: #50fa7b;
+  --syntax-line-number-special-background-color: #6272a4;
+
+  --syntax-error: #f8f8f2;
+  --syntax-punctuation: #f8f8f2;
+  --syntax-text-whitespace: #f8f8f2;
+
+  --syntax-comment-hashbang: #6272a4;
+  --syntax-comment-multiline: #6272a4;
+  --syntax-comment-preproc: #ff79c6;
+  --syntax-comment-preprocfile: #ff79c6;
+  --syntax-comment-single: #6272a4;
+  --syntax-comment-special: #6272a4;
+  --syntax-comment: #6272a4;
+
+  --syntax-generic-deleted: #8b080b;
+  --syntax-generic-emph: #f8f8f2;
+  --syntax-generic-error: #f8f8f2;
+  --syntax-generic-heading: #f8f8f2;
+  --syntax-generic-inserted: #f8f8f2;
+  --syntax-generic-output: #44475a;
+  --syntax-generic-prompt: #f8f8f2;
+  --syntax-generic-strong: #f8f8f2;
+  --syntax-generic-subheading: #f8f8f2;
+  --syntax-generic-traceback: #f8f8f2;
+
+  --syntax-keyword-constant: #ff79c6;
+  --syntax-keyword-declaration: #8be9fd;
+  --syntax-keyword-namespace: #ff79c6;
+  --syntax-keyword-pseudo: #ff79c6;
+  --syntax-keyword-reserved: #ff79c6;
+  --syntax-keyword-type: #8be9fd;
+  --syntax-keyword: #ff79c6;
+
+  --syntax-literal-date: #f8f8f2;
+  --syntax-literal: #f8f8f2;
+
+  --syntax-name-attribute: #50fa7b;
+  --syntax-name-builtin-pseudo: #f8f8f2;
+  --syntax-name-builtin: #8be9fd;
+  --syntax-name-class: #50fa7b;
+  --syntax-name-constant: #f8f8f2;
+  --syntax-name-decorator: #f8f8f2;
+  --syntax-name-entity: #f8f8f2;
+  --syntax-name-exception: #f8f8f2;
+  --syntax-name-function-magic: #50fa7b;
+  --syntax-name-function: #50fa7b;
+  --syntax-name-label: #8be9fd;
+  --syntax-name-namespace: #f8f8f2;
+  --syntax-name-other: #f8f8f2;
+  --syntax-name-tag: #ff79c6;
+  --syntax-name-variable-class: #8be9fd;
+  --syntax-name-variable-global: #8be9fd;
+  --syntax-name-variable-instance: #8be9fd;
+  --syntax-name-variable: #8be9fd;
+  --syntax-name: #f8f8f2;
+
+  --syntax-number-bin: #ffb86c;
+  --syntax-number-float: #ffb86c;
+  --syntax-number-hex: #ffb86c;
+  --syntax-number-integer-long: #ffb86c;
+  --syntax-number-integer: #ffb86c;
+  --syntax-number-oct: #ffb86c;
+  --syntax-number: #ffb86c;
+
+  --syntax-operator-word: #ff79c6;
+  --syntax-operator: #ff79c6;
+
+  --syntax-string-affix: #bd93f9;
+  --syntax-string-backtick: #bd93f9;
+  --syntax-string-char: #bd93f9;
+  --syntax-string-delimiter: #bd93f9;
+  --syntax-string-doc: #bd93f9;
+  --syntax-string-double: #bd93f9;
+  --syntax-string-escape: #bd93f9;
+  --syntax-string-heredoc: #bd93f9;
+  --syntax-string-interpol: #bd93f9;
+  --syntax-string-other: #bd93f9;
+  --syntax-string-regex: #bd93f9;
+  --syntax-string-single: #bd93f9;
+  --syntax-string-symbol: #bd93f9;
+  --syntax-string: #bd93f9;
+  //--syntax-text: #2a2d38;
+  //--syntax-container-color: #dcdde5;
+  //--syntax-highlight-color: #44475a;
+  //
+  //--syntax-line-number-color: #0bbcd4;
+  //--syntax-line-number-background-color: #44475a;
+  //--syntax-line-number-special-color: #089e2b;
+  //--syntax-line-number-special-background-color: #3c4769;
+  //
+  //--syntax-error: #2a2d38;
+  //--syntax-punctuation: #2a2d38;
+  //--syntax-text-whitespace: #2a2d38;
+  //
+  //--syntax-comment-hashbang: #3c4769;
+  //--syntax-comment-multiline: #3c4769;
+  //--syntax-comment-preproc: #d7047a;
+  //--syntax-comment-preprocfile: #d7047a;
+  //--syntax-comment-single: #3c4769;
+  //--syntax-comment-special: #3c4769;
+  //--syntax-comment: #3c4769;
+  //
+  //--syntax-generic-deleted: #8b080b;
+  //--syntax-generic-emph: #2a2d38;
+  //--syntax-generic-error: #2a2d38;
+  //--syntax-generic-heading: #2a2d38;
+  //--syntax-generic-inserted: #2a2d38;
+  //--syntax-generic-output: #44475a;
+  //--syntax-generic-prompt: #2a2d38;
+  //--syntax-generic-strong: #2a2d38;
+  //--syntax-generic-subheading: #2a2d38;
+  //--syntax-generic-traceback: #2a2d38;
+  //
+  //--syntax-keyword-constant: #d7047a;
+  //--syntax-keyword-declaration: #0ec6f2;
+  //--syntax-keyword-namespace: #d7047a;
+  //--syntax-keyword-pseudo: #d7047a;
+  //--syntax-keyword-reserved: #d7047a;
+  //--syntax-keyword-type: #0ec6f2;
+  //--syntax-keyword: #d7047a;
+  //
+  //--syntax-literal-date: #2a2d38;
+  //--syntax-literal: #2a2d38;
+  //
+  //--syntax-name-attribute: #089e2b;
+  //--syntax-name-builtin-pseudo: #2a2d38;
+  //--syntax-name-builtin: #0ec6f2;
+  //--syntax-name-class: #089e2b;
+  //--syntax-name-constant: #2a2d38;
+  //--syntax-name-decorator: #2a2d38;
+  //--syntax-name-entity: #2a2d38;
+  //--syntax-name-exception: #2a2d38;
+  //--syntax-name-function-magic: #089e2b;
+  //--syntax-name-function: #089e2b;
+  //--syntax-name-label: #0ec6f2;
+  //--syntax-name-namespace: #2a2d38;
+  //--syntax-name-other: #2a2d38;
+  //--syntax-name-tag: #d7047a;
+  //--syntax-name-variable-class: #0ec6f2;
+  //--syntax-name-variable-global: #0ec6f2;
+  //--syntax-name-variable-instance: #0ec6f2;
+  //--syntax-name-variable: #0ec6f2;
+  //--syntax-name: #2a2d38;
+  //
+  //--syntax-number-bin: #f57f00;
+  //--syntax-number-float: #f57f00;
+  //--syntax-number-hex: #f57f00;
+  //--syntax-number-integer-long: #f57f00;
+  //--syntax-number-integer: #f57f00;
+  //--syntax-number-oct: #f57f00;
+  //--syntax-number: #f57f00;
+  //
+  //--syntax-operator-word: #d7047a;
+  //--syntax-operator: #d7047a;
+  //
+  //--syntax-string-affix: #7316f2;
+  //--syntax-string-backtick: #7316f2;
+  //--syntax-string-char: #7316f2;
+  //--syntax-string-delimiter: #7316f2;
+  //--syntax-string-doc: #7316f2;
+  //--syntax-string-double: #7316f2;
+  //--syntax-string-escape: #7316f2;
+  //--syntax-string-heredoc: #7316f2;
+  //--syntax-string-interpol: #7316f2;
+  //--syntax-string-other: #7316f2;
+  //--syntax-string-regex: #7316f2;
+  //--syntax-string-single: #7316f2;
+  //--syntax-string-symbol: #7316f2;
+  //--syntax-string: #7316f2;
+}
+:root[dark] {
+  --syntax-text: #f8f8f2;
+  --syntax-container-color: #282a36;
+  --syntax-highlight-color: #44475a;
+
+  --syntax-line-number-color: #63efff;
+  --syntax-line-number-background-color: #44475a;
+  --syntax-line-number-special-color: #50fa7b;
+  --syntax-line-number-special-background-color: #6272a4;
+
+  --syntax-error: #f8f8f2;
+  --syntax-punctuation: #f8f8f2;
+  --syntax-text-whitespace: #f8f8f2;
+
+  --syntax-comment-hashbang: #6272a4;
+  --syntax-comment-multiline: #6272a4;
+  --syntax-comment-preproc: #ff79c6;
+  --syntax-comment-preprocfile: #ff79c6;
+  --syntax-comment-single: #6272a4;
+  --syntax-comment-special: #6272a4;
+  --syntax-comment: #6272a4;
+
+  --syntax-generic-deleted: #8b080b;
+  --syntax-generic-emph: #f8f8f2;
+  --syntax-generic-error: #f8f8f2;
+  --syntax-generic-heading: #f8f8f2;
+  --syntax-generic-inserted: #f8f8f2;
+  --syntax-generic-output: #44475a;
+  --syntax-generic-prompt: #f8f8f2;
+  --syntax-generic-strong: #f8f8f2;
+  --syntax-generic-subheading: #f8f8f2;
+  --syntax-generic-traceback: #f8f8f2;
+
+  --syntax-keyword-constant: #ff79c6;
+  --syntax-keyword-declaration: #8be9fd;
+  --syntax-keyword-namespace: #ff79c6;
+  --syntax-keyword-pseudo: #ff79c6;
+  --syntax-keyword-reserved: #ff79c6;
+  --syntax-keyword-type: #8be9fd;
+  --syntax-keyword: #ff79c6;
+
+  --syntax-literal-date: #f8f8f2;
+  --syntax-literal: #f8f8f2;
+
+  --syntax-name-attribute: #50fa7b;
+  --syntax-name-builtin-pseudo: #f8f8f2;
+  --syntax-name-builtin: #8be9fd;
+  --syntax-name-class: #50fa7b;
+  --syntax-name-constant: #f8f8f2;
+  --syntax-name-decorator: #f8f8f2;
+  --syntax-name-entity: #f8f8f2;
+  --syntax-name-exception: #f8f8f2;
+  --syntax-name-function-magic: #50fa7b;
+  --syntax-name-function: #50fa7b;
+  --syntax-name-label: #8be9fd;
+  --syntax-name-namespace: #f8f8f2;
+  --syntax-name-other: #f8f8f2;
+  --syntax-name-tag: #ff79c6;
+  --syntax-name-variable-class: #8be9fd;
+  --syntax-name-variable-global: #8be9fd;
+  --syntax-name-variable-instance: #8be9fd;
+  --syntax-name-variable: #8be9fd;
+  --syntax-name: #f8f8f2;
+
+  --syntax-number-bin: #ffb86c;
+  --syntax-number-float: #ffb86c;
+  --syntax-number-hex: #ffb86c;
+  --syntax-number-integer-long: #ffb86c;
+  --syntax-number-integer: #ffb86c;
+  --syntax-number-oct: #ffb86c;
+  --syntax-number: #ffb86c;
+
+  --syntax-operator-word: #ff79c6;
+  --syntax-operator: #ff79c6;
+
+  --syntax-string-affix: #bd93f9;
+  --syntax-string-backtick: #bd93f9;
+  --syntax-string-char: #bd93f9;
+  --syntax-string-delimiter: #bd93f9;
+  --syntax-string-doc: #bd93f9;
+  --syntax-string-double: #bd93f9;
+  --syntax-string-escape: #bd93f9;
+  --syntax-string-heredoc: #bd93f9;
+  --syntax-string-interpol: #bd93f9;
+  --syntax-string-other: #bd93f9;
+  --syntax-string-regex: #bd93f9;
+  --syntax-string-single: #bd93f9;
+  --syntax-string-symbol: #bd93f9;
+  --syntax-string: #bd93f9;
+}
+
