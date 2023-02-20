@@ -6,10 +6,8 @@ version: v1.3
 title: Yolo on my friend
 description: Loveable single pages
 theme:
-  name: corbs
-  syntax:
-    light: syntax-on-dark
-    dark: syntax-on-dark
+  name: solo
+  syntax: alpha
 align: left
 #header:
 #  logo: assets/images/logo.png

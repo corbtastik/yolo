@@ -26,28 +26,3 @@ $rtl: false !default;
 $gap: 32px !default;
 $tablet: 769px !default;
 $desktop: 960px + (2 * $gap) !default;
-
-:root[light] {
-  // Error, Warn and Info colors on light
-  --error-color: #b71c1c;
-  --on-error-color: #ffcdd2;
-  --warn-color: #212121;
-  --on-warn-color: #ffee58;
-  --info-color: #1565c0;
-  --on-info-color: #bbdefb;
-  // Neutral colors on light
-  --neutral-color: #212121;
-  --on-neutral-color: #e0e0e0;
-}
-:root[dark] {
-  // Error, Warn and Info colors on dark
-  --error-color: #ffcdd2;
-  --on-error-color: #b71c1c;
-  --warn-color: #ffee58;
-  --on-warn-color: #212121;
-  --info-color: #bbdefb;
-  --on-info-color: #1565c0;
-  // Neutral colors on dark
-  --neutral-color: #e0e0e0;
-  --on-neutral-color: #212121;
-}

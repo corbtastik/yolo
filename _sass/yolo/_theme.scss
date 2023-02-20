@@ -272,13 +272,9 @@
     color: var(--info-color);
   }
 
-  .highlighter-rouge, .highlight {
-    color: var(--on-primary-color);
-  }
-
-  .highlight .hll {
-    background-color: var(--syntax03);
-  }
+  //.highlight .hll {
+  //  background-color: var(--syntax03);
+  //}
 
   .highlight {
     background: var(--primary-container-color);

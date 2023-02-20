@@ -279,9 +279,9 @@ sayHowdy(process.argv[2]);
 * Ebbets Field
 
 * Boston Red Stockings
-    * Boston Red Caps
-        * Boston Beaneaters
-            * Boston Red Sox
+  * Boston Red Caps
+    * Boston Beaneaters
+      * Boston Red Sox
 
 ### Ordered
 {:.no-toc}
@@ -361,9 +361,9 @@ You can use yolo Styled Images in addition to markdown images if you're looking 
 Thumbnails are 128px x 128px and use the `thumbnail` class.
 
 {%
-  include image/image.html
-  classes="thumbnail"
-  src="https://storage.googleapis.com/corbs-foto/yolo/yolo/big-face-bucky.png"
+include image/image.html
+classes="thumbnail"
+src="https://storage.googleapis.com/corbs-foto/yolo/yolo/big-face-bucky.png"
 %}
 
 [↑↑↑](#howdy){: .back-to-top}
@@ -377,9 +377,9 @@ Square images can be added with the following classes: `is-16`, `is-24`, `is-32`
 `is-192`, `is-256`, `is-384`, `is-448`, `is-512`, `is-640`.
 
 {%
-  include image/image.html
-  classes="image is-256"
-  src="https://storage.googleapis.com/corbs-foto/yolo/yolo/drive-in.png"
+include image/image.html
+classes="image is-256"
+src="https://storage.googleapis.com/corbs-foto/yolo/yolo/drive-in.png"
 %}
 
 [↑↑↑](#howdy){: .back-to-top}
@@ -394,9 +394,9 @@ Circle images can be added with the following classes: `is-circle-16`, `is-circl
 `is-circle-448`, `is-circle-512`, `is-circle-640`.
 
 {%
-  include image/image.html
-  classes="is-circle-256"
-  src="https://storage.googleapis.com/corbs-foto/yolo/yolo/big-face-bucky.png"
+include image/image.html
+classes="is-circle-256"
+src="https://storage.googleapis.com/corbs-foto/yolo/yolo/big-face-bucky.png"
 %}
 
 [↑↑↑](#howdy){: .back-to-top}
@@ -411,9 +411,9 @@ Circle images can be added with the following classes: `is-circle-16`, `is-circl
 `is-480-by-360`, `is-512-by-384`, `is-640-by-480`.
 
 {%
-  include image/image.html
-  classes="image is-256-by-192"
-  src="https://storage.googleapis.com/corbs-foto/yolo/yolo/bluebonnet.png"
+include image/image.html
+classes="image is-256-by-192"
+src="https://storage.googleapis.com/corbs-foto/yolo/yolo/bluebonnet.png"
 %}
 
 [↑↑↑](#howdy){: .back-to-top}
@@ -428,9 +428,9 @@ Circle images can be added with the following classes: `is-circle-16`, `is-circl
 `is-360-by-480`, `is-384-by-512`, `is-480-by-640`.
 
 {%
-  include image/image.html
-  classes="image is-240-by-320"
-  src="https://storage.googleapis.com/corbs-foto/yolo/yolo/bluebonnet.png"
+include image/image.html
+classes="image is-240-by-320"
+src="https://storage.googleapis.com/corbs-foto/yolo/yolo/bluebonnet.png"
 %}
 
 [↑↑↑](#howdy){: .back-to-top}
@@ -445,9 +445,9 @@ Circle images can be added with the following classes: `is-circle-16`, `is-circl
 `is-512-by-288`, `is-640-by-360`.
 
 {%
-  include image/image.html
-  classes="image is-256-by-144"
-  src="https://storage.googleapis.com/corbs-foto/yolo/yolo/bluebonnet.png"
+include image/image.html
+classes="image is-256-by-144"
+src="https://storage.googleapis.com/corbs-foto/yolo/yolo/bluebonnet.png"
 %}
 
 [↑↑↑](#howdy){: .back-to-top}
@@ -462,9 +462,9 @@ Circle images can be added with the following classes: `is-circle-16`, `is-circl
 `is-288-by-512`, `is-360-by-640`.
 
 {%
-  include image/image.html
-  classes="image is-225-by-400"
-  src="https://storage.googleapis.com/corbs-foto/yolo/yolo/bluebonnet.png"
+include image/image.html
+classes="image is-225-by-400"
+src="https://storage.googleapis.com/corbs-foto/yolo/yolo/bluebonnet.png"
 %}
 
 [↑↑↑](#howdy){: .back-to-top}

@@ -1,54 +1,66 @@
 // ----------------------------------------------------------------------------
 // skeletor theme
 // ----------------------------------------------------------------------------
-// Light mode
-:root {
+:root[light] {
+  // primary colors
   --primary-color: #dbddf8;
   --on-primary-color: #1a0037;
   --primary-container-color: #f4f5fb;
   --on-primary-container-color: #6843c8;
-
+  // secondary colors
   --secondary-color: #502eb9;
   --on-secondary-color: #fff;
   --secondary-container-color: #424242;
   --on-secondary-container-color: #f5f5f5;
-
+  // tertiary colors
   --tertiary-color: #1f56d8;
   --on-tertiary-color: #fafafa;
   --tertiary-container-color: #0b1e4a;
   --on-tertiary-container-color: #f5f5f5;
-
-  --accent-color: #4a23b3;
-  --on-accent-color: #fff;
-
+  // general colors
   --link-color: #1291f4;
-
+  --neutral-color: #212121;
+  --on-neutral-color: #e0e0e0;
+  // error, warn and info colors
+  --error-color: #b71c1c;
+  --on-error-color: #ffcdd2;
+  --warn-color: #212121;
+  --on-warn-color: #ffee58;
+  --info-color: #1565c0;
+  --on-info-color: #bbdefb;
+  // font families
   --font-family-primary: "Inconsolata", monospace;
   --font-family-secondary: "Red Hat Text", sans-serif;
   --font-family-monospace: "JetBrains Mono", monospace;
 }
-// Dark mode
 :root[dark] {
+  // primary colors
   --primary-color: #1a0037;
   --on-primary-color: #bdb7cf;
   --primary-container-color: #100020;
   --on-primary-container-color: #b4a9e9;
-
+  // secondary colors
   --secondary-color: #8f67fe;
   --on-secondary-color: #000;
   --secondary-container-color: #fafafa;
   --on-secondary-container-color: #424242;
-
+  // tertiary colors
   --tertiary-color: #437cf4;
   --on-tertiary-color: #fafafa;
   --tertiary-container-color: #0b1e4a;
   --on-tertiary-container-color: #fafafa;
-
-  --accent-color: #8457ff;
-  --on-accent-color: #fff;
-
+  // general colors
   --link-color: #65e9fc;
-
+  --neutral-color: #212121;
+  --on-neutral-color: #e0e0e0;
+  // error, warn and info colors
+  --error-color: #b71c1c;
+  --on-error-color: #ffcdd2;
+  --warn-color: #212121;
+  --on-warn-color: #ffee58;
+  --info-color: #1565c0;
+  --on-info-color: #bbdefb;
+  // font families
   --font-family-primary: "Inconsolata", monospace;
   --font-family-secondary: "Red Hat Text", sans-serif;
   --font-family-monospace: "JetBrains Mono", monospace;

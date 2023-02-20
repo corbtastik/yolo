@@ -1,0 +1,27 @@
+// ----------------------------------------------------------------------------
+// alpha scheme
+// ----------------------------------------------------------------------------
+:root[light] {
+  --syntax01: #9e9e9e;
+  --syntax02: #e0e0e0;
+  --syntax03: #424242; // not used? For .hll, what is that?
+  --syntax04: #fb8d00;
+  --syntax05: #e03ffb;
+  --syntax06: #00c854;
+  --syntax07: #0bbcd4;
+  --syntax08: #1d75d3;
+  --syntax09: #5f35b1;
+  --syntax10: #d50201;
+}
+:root[dark] {
+  --syntax01: #9e9e9e;
+  --syntax02: #e0e0e0; //
+  --syntax03: #cfd8dd; // not used? For .hll, what is that?
+  --syntax04: #ff4082; //
+  --syntax05: #ffab40; //
+  --syntax06: #ffff04; //
+  --syntax07: #01e676; //
+  --syntax08: #1bffff; //
+  --syntax09: #42c5ff; //
+  --syntax10: #7d4cff; //
+}

@@ -1,54 +1,66 @@
 // ----------------------------------------------------------------------------
 // weekly theme
 // ----------------------------------------------------------------------------
-// Light mode
-:root {
+:root[light] {
+  // primary colors
   --primary-color: #eceff1;
   --on-primary-color: #37474f;
   --primary-container-color: #fafafa;
   --on-primary-container-color: #000928;
-
+  // secondary colors
   --secondary-color: #1a237e;
   --on-secondary-color: #fff;
   --secondary-container-color: #424242;
   --on-secondary-container-color: #f5f5f5;
-
+  // tertiary colors
   --tertiary-color: #1f56d8;
   --on-tertiary-color: #fafafa;
   --tertiary-container-color: #0b1e4a;
   --on-tertiary-container-color: #f5f5f5;
-
-  --accent-color: #4a23b3;
-  --on-accent-color: #fff;
-
+  // general colors
   --link-color: #0091ea;
-
+  --neutral-color: #212121;
+  --on-neutral-color: #e0e0e0;
+  // error, warn and info colors
+  --error-color: #b71c1c;
+  --on-error-color: #ffcdd2;
+  --warn-color: #212121;
+  --on-warn-color: #ffee58;
+  --info-color: #1565c0;
+  --on-info-color: #bbdefb;
+  // font families
   --font-family-primary: "Red Hat Text", sans-serif;
   --font-family-secondary: "Open Sans", sans-serif;
   --font-family-monospace: "Red Hat Mono", monospace;
 }
-// Dark mode
 :root[dark] {
+  // primary colors
   --primary-color: #020c2a;
   --on-primary-color: #eceff1;
   --primary-container-color: #000a12;
-  --on-primary-container-color: #c4feee;
-
+  --on-primary-container-color: #c5caea;
+  // secondary colors
   --secondary-color: #8457ff;
   --on-secondary-color: #000;
   --secondary-container-color: #100a20;
   --on-secondary-container-color: #dcedf8;
-
+  // tertiary colors
   --tertiary-color: #17a3f7;
   --on-tertiary-color: #000;
   --tertiary-container-color: #082c41;
   --on-tertiary-container-color: #dcedf8;
-
-  --accent-color: #8457ff;
-  --on-accent-color: #fff;
-
+  // general colors
   --link-color: #65e9fc;
-
+  --neutral-color: #212121;
+  --on-neutral-color: #e0e0e0;
+  // error, warn and info colors
+  --error-color: #b71c1c;
+  --on-error-color: #ffcdd2;
+  --warn-color: #212121;
+  --on-warn-color: #ffee58;
+  --info-color: #1565c0;
+  --on-info-color: #bbdefb;
+  // font families
   --font-family-primary: "Red Hat Text", sans-serif;
   --font-family-secondary: "Open Sans", sans-serif;
   --font-family-monospace: "Red Hat Mono", monospace;
