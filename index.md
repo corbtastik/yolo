@@ -44,7 +44,7 @@ jekyll build
 jekyll serve
 ```
 
-[↑↑↑](#howdy){: .back-to-top}
+{% include arrow.html link="#howdy" %}
 
 ---
 
@@ -121,7 +121,7 @@ The `neutral-color` and `on-neutral-color` variables are general use colors.
 {% include flexbox.html columns="1" fill="neutral-color" %}
 {% include flexbox.html columns="1" fill="on-neutral-color" %}
 
-[↑↑↑](#howdy){: .back-to-top}
+{% include arrow.html link="#howdy" %}
 
 ---
 
@@ -132,7 +132,7 @@ Yolo's fonts can be customized as outlined in [Themes](#themes).
 
 {% include typography.html %}
 
-[↑↑↑](#howdy){: .back-to-top}
+{% include arrow.html link="#howdy" %}
 
 ---
 
@@ -155,7 +155,7 @@ Yolo's fonts can be customized as outlined in [Themes](#themes).
 ###### H6 Heading
 {:.no-toc}
 
-[↑↑↑](#howdy){: .back-to-top}
+{% include arrow.html link="#howdy" %}
 
 ---
 
@@ -163,7 +163,7 @@ Yolo's fonts can be customized as outlined in [Themes](#themes).
 
 [Baseball](https://en.wikipedia.org/wiki/Baseball) is a bat-and-ball sport played between two teams of nine players each, taking turns batting and fielding. The game is in play when a player on the fielding team, called the pitcher, throws a ball that a player on the batting team tries to hit with a bat. The objective of the offensive team (batting team) is to hit the ball into the field of play, away from the other team's players, allowing its players to run the bases, having them advance counter-clockwise around four bases to score what are called "runs". - copied from [Wikipedia](https://en.wikipedia.org/wiki/Baseball).
 
-[↑↑↑](#howdy){: .back-to-top}
+{% include arrow.html link="#howdy" %}
 
 ---
 
@@ -207,7 +207,7 @@ Yolo's fonts can be customized as outlined in [Themes](#themes).
 > 5. __Home Runs:__ Hits where the batter touches all four bases safely.
 > 6. __Batting Average:__ Hits divided by at bats.
 
-[↑↑↑](#howdy){: .back-to-top}
+{% include arrow.html link="#howdy" %}
 
 ---
 
@@ -224,7 +224,7 @@ Yolo's fonts can be customized as outlined in [Themes](#themes).
 - Subscript <sub>text</sub>
 - Inline code `SELECT * FROM players;`
 
-[↑↑↑](#howdy){: .back-to-top}
+{% include arrow.html link="#howdy" %}
 
 ---
 
@@ -248,7 +248,7 @@ fi
 say_howdy $1
 ```
 
-[↑↑↑](#howdy){: .back-to-top}
+{% include arrow.html link="#howdy" %}
 
 {% include code.html label="JavaScript snippet" %}
 ```javascript
@@ -265,7 +265,7 @@ if(process.argv.length != 3) {
 sayHowdy(process.argv[2]);
 ```
 
-[↑↑↑](#howdy){: .back-to-top}
+{% include arrow.html link="#howdy" %}
 
 ---
 
@@ -291,7 +291,7 @@ sayHowdy(process.argv[2]);
 3. Dale Murphy
 4. Mookie Wilson
 
-[↑↑↑](#howdy){: .back-to-top}
+{% include arrow.html link="#howdy" %}
 
 ---
 
@@ -323,7 +323,7 @@ sayHowdy(process.argv[2]);
 | `git status` |  `git status`  |  `git status` |
 | `git diff`   |   `git diff`   |    `git diff` |
 
-[↑↑↑](#howdy){: .back-to-top}
+{% include arrow.html link="#howdy" %}
 
 ---
 
@@ -343,7 +343,7 @@ sayHowdy(process.argv[2]);
 
 ![BIG yawn Bucky](assets/images/bucky.png "Sleepy Bucky")
 
-[↑↑↑](#howdy){: .back-to-top}
+{% include arrow.html link="#howdy" %}
 
 ---
 
@@ -366,7 +366,7 @@ classes="thumbnail"
 src="https://storage.googleapis.com/corbs-foto/yolo/yolo/big-face-bucky.png"
 %}
 
-[↑↑↑](#howdy){: .back-to-top}
+{% include arrow.html link="#howdy" %}
 
 ---
 
@@ -382,7 +382,7 @@ classes="image is-256"
 src="https://storage.googleapis.com/corbs-foto/yolo/yolo/drive-in.png"
 %}
 
-[↑↑↑](#howdy){: .back-to-top}
+{% include arrow.html link="#howdy" %}
 
 ---
 
@@ -399,7 +399,7 @@ classes="is-circle-256"
 src="https://storage.googleapis.com/corbs-foto/yolo/yolo/big-face-bucky.png"
 %}
 
-[↑↑↑](#howdy){: .back-to-top}
+{% include arrow.html link="#howdy" %}
 
 ---
 
@@ -416,7 +416,7 @@ classes="image is-256-by-192"
 src="https://storage.googleapis.com/corbs-foto/yolo/yolo/bluebonnet.png"
 %}
 
-[↑↑↑](#howdy){: .back-to-top}
+{% include arrow.html link="#howdy" %}
 
 ---
 
@@ -433,7 +433,7 @@ classes="image is-240-by-320"
 src="https://storage.googleapis.com/corbs-foto/yolo/yolo/bluebonnet.png"
 %}
 
-[↑↑↑](#howdy){: .back-to-top}
+{% include arrow.html link="#howdy" %}
 
 ---
 
@@ -450,7 +450,7 @@ classes="image is-256-by-144"
 src="https://storage.googleapis.com/corbs-foto/yolo/yolo/bluebonnet.png"
 %}
 
-[↑↑↑](#howdy){: .back-to-top}
+{% include arrow.html link="#howdy" %}
 
 ---
 
@@ -467,7 +467,7 @@ classes="image is-225-by-400"
 src="https://storage.googleapis.com/corbs-foto/yolo/yolo/bluebonnet.png"
 %}
 
-[↑↑↑](#howdy){: .back-to-top}
+{% include arrow.html link="#howdy" %}
 
 ---
 
@@ -512,7 +512,7 @@ A custom data file can be added to create an Image Grid.
 
 {% include image/grid.html ig-data="ig-pets" ig-columns="2" %}
 
-[↑↑↑](#howdy){: .back-to-top}
+{% include arrow.html link="#howdy" %}
 
 ---
 
@@ -556,7 +556,7 @@ A custom data file can be added to create a Lightbox.
 
 {% include image/lightbox.html lb-data="lb-marfa" %}
 
-[↑↑↑](#howdy){: .back-to-top}
+{% include arrow.html link="#howdy" %}
 
 ---
 
@@ -564,7 +564,7 @@ A custom data file can be added to create a Lightbox.
 
 {% include video.html %}
 
-[↑↑↑](#howdy){: .back-to-top}
+{% include arrow.html link="#howdy" %}
 
 ---
 
@@ -620,7 +620,7 @@ Yolo has basic support for embedding Google Slides.
 
 {% include prezo.html title="yolo-on" aspect-ratio="is-1-by-1" %}
 
-[↑↑↑](#howdy){: .back-to-top}
+{% include arrow.html link="#howdy" %}
 
 ---
 
@@ -688,7 +688,7 @@ The `Makefile` automates the build and run process, with `make yolo-pod`, which:
 make yolo-pod
 ```
 
-[↑↑↑](#howdy){: .back-to-top}
+{% include arrow.html link="#howdy" %}
 
 ---
 
@@ -697,7 +697,7 @@ make yolo-pod
 ```text
 MIT License (MIT)
 
-Copyright (c) 2022 Corbs
+Copyright (c) 2023 Corbs
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -718,4 +718,4 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 ```
 
-[↑↑↑](#howdy){: .back-to-top}
+{% include arrow.html link="#howdy" %}

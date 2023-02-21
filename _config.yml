@@ -27,4 +27,4 @@ exclude:
 # -----------------------------------------------------------------------------
 sass:
   sass_dir: _sass
-  style: uncompressed
+  style: compressed

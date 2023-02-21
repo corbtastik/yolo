@@ -9,6 +9,10 @@ links:
 
 > __Tip:__ Click header to copy a snippet.
 
+---
+
+## Bash
+
 {% include code.html label="Bash snippet" %}
 ```bash
 #!/bin/bash
@@ -25,7 +29,11 @@ fi
 say_howdy $1
 ```
 
-[↑↑↑](#code){: .back-to-top}
+{% include arrow.html link="#code" %}
+
+---
+
+## C
 
 {% include code.html label="C snippet" %}
 ```c
@@ -41,7 +49,11 @@ int main(int argc, char **argv) {
 }
 ```
 
-[↑↑↑](#code){: .back-to-top}
+{% include arrow.html link="#code" %}
+
+---
+
+## C++
 
 {% include code.html label="C++ snippet" %}
 ```c++
@@ -58,7 +70,11 @@ int main(int argc, char** argv) {
 }
 ```
 
-[↑↑↑](#code){: .back-to-top}
+{% include arrow.html link="#code" %}
+
+---
+
+## Dart
 
 {% include code.html label="Dart snippet" %}
 ```dart
@@ -75,7 +91,11 @@ void main(List<String> args) {
 }
 ```
 
-[↑↑↑](#code){: .back-to-top}
+{% include arrow.html link="#code" %}
+
+---
+
+## Go
 
 {% include code.html label="Go snippet" %}
 ```go
@@ -97,7 +117,11 @@ func main () {
 }
 ```
 
-[↑↑↑](#code){: .back-to-top}
+{% include arrow.html link="#code" %}
+
+---
+
+## HTML
 
 {% include code.html label="HTML snippet" %}
 ```html
@@ -113,7 +137,11 @@ func main () {
 </html>
 ```
 
-[↑↑↑](#code){: .back-to-top}
+{% include arrow.html link="#code" %}
+
+---
+
+## JSON
 
 {% include code.html label="JSON snippet" %}
 ```json
@@ -142,7 +170,11 @@ func main () {
 }
 ```
 
-[↑↑↑](#code){: .back-to-top}
+{% include arrow.html link="#code" %}
+
+---
+
+## Java
 
 {% include code.html label="Java snippet" %}
 ```java
@@ -158,7 +190,11 @@ public class Howdy {
 }
 ```
 
-[↑↑↑](#code){: .back-to-top}
+{% include arrow.html link="#code" %}
+
+---
+
+## JavaScript
 
 {% include code.html label="JavaScript snippet" %}
 ```javascript
@@ -175,7 +211,11 @@ if(process.argv.length != 3) {
 sayHowdy(process.argv[2]);
 ```
 
-[↑↑↑](#code){: .back-to-top}
+{% include arrow.html link="#code" %}
+
+---
+
+## Kotlin
 
 {% include code.html label="Kotlin snippet" %}
 ```kotlin
@@ -190,7 +230,11 @@ fun main(args: Array<String>): Int {
 }
 ```
 
-[↑↑↑](#code){: .back-to-top}
+{% include arrow.html link="#code" %}
+
+---
+
+## Markdown
 
 {% include code.html label="Markdown snippet" %}
 ```markdown
@@ -203,7 +247,11 @@ fun main(args: Array<String>): Int {
 * `document`!
 ```
 
-[↑↑↑](#code){: .back-to-top}
+{% include arrow.html link="#code" %}
+
+---
+
+## Python
 
 {% include code.html label="Python snippet" %}
 ```python
@@ -220,7 +268,11 @@ if len(sys.argv) != 2:
 sayHowdy(sys.argv[1])
 ```
 
-[↑↑↑](#code){: .back-to-top}
+{% include arrow.html link="#code" %}
+
+---
+
+## SCSS
 
 {% include code.html label="SCSS snippet" %}
 ```scss
@@ -240,7 +292,11 @@ sayHowdy(sys.argv[1])
 }
 ```
 
-[↑↑↑](#code){: .back-to-top}
+{% include arrow.html link="#code" %}
+
+---
+
+## SQL
 
 {% include code.html label="SQL snippet" %}
 ```sql
@@ -252,29 +308,30 @@ AND   price > 5000
 AND   price <= 10000
 ```
 
-[↑↑↑](#code){: .back-to-top}
+{% include arrow.html link="#code" %}
+
+---
+
+## YAML
 
 {% include code.html label="YAML snippet" %}
 ```yaml
-apiVersion: v1
-kind: Service
-metadata:
-  name: minio-server-lb
-  namespace: minio
-  labels:
-    app/name: minio
-spec:
-  ports:
-    - port: 9000
-      targetPort: 9000
-      protocol: TCP
-  selector:
-    app/name: minio
-    app/component: backend
-  type: LoadBalancer
+# -----------------------------------------------------------------------------
+# Yolo site settings. see: _config.yml for jekyll settings
+# -----------------------------------------------------------------------------
+name: Yolo
+version: v1.3
+title: Yolo on my friend
+description: Loveable single pages
+theme:
+  name: solo
+  syntax: monokai
+align: left
+sidebar:
+  logo: assets/images/logo.png
 ```
 
-[↑↑↑](#code){: .back-to-top}
+{% include arrow.html link="#code" %}
 
 ---
 
@@ -283,7 +340,7 @@ spec:
 ```text
 MIT License (MIT)
 
-Copyright (c) 2022 Corbs
+Copyright (c) 2023 Corbs
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -304,4 +361,4 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 ```
 
-[↑↑↑](#code){: .back-to-top}
+{% include arrow.html link="#code" %}

@@ -128,7 +128,10 @@
   }
 
   .back-to-top {
-    color: var(--link-color);
+    color: var(--secondary-color);
+    span:hover {
+      color: var(--tertiary-color);
+    }
   }
 
   .code-header {
@@ -138,9 +141,6 @@
     &:is(.copied, :hover) {
       background-color: var(--tertiary-color);
       color: var(--on-tertiary-color);
-    }
-    &.copied {
-      background-color: var(--secondary-color);
     }
   }
 
