@@ -5,232 +5,13 @@ links:
 - jekyll,https://jekyllrb.com
 ---
 
-## Howdy
-
-Yolo is laser focused on static single page sites, and while anyone can Yolo, it's purposely built for writers,
-techies, and picture taking folk.
-
-> _I don't always use single-page sites but when I do, I [yolo](https://github.com/corbtastik/yolo)._
-
-##### Goals for Yolo
-{:.no-toc}
-
-###### 1. Live the best single page life.
-{:.no-toc}
-
-Pamper single page sites like we pamper our pets.
-
-###### 2. Strive for simplicity.
-{:.no-toc}
-
-No dependencies other than [jekyll](https://jekyllrb.com/).
-
-###### 3. Make it customizable
-{:.no-toc}
-
-Bring your own [colors](#colors) and [fonts](#typography).
-
----
-
-## Getting Started
-
-You need [jekyll](https://jekyllrb.com/).
-
-{% include code.html label="Get Yolo" %}
-```bash
-git clone https://github.com/corbtastik/yolo.git
-cd yolo
-jekyll build
-jekyll serve
-```
-
-{% include arrow.html link="#howdy" %}
-
----
-
-## Themes
-
-Yolo doesn't implement an "according to hoyle" [gem based theme](https://jekyllrb.com/docs/themes/), but the colors and fonts can be customized as outlined below.
-
-> __Note:__
->   * "Theming" for Yolo is accomplished by providing a custom scss file in `_sass/yolo/themes`. Each theme must specify "light" and "dark" values to support switching between the two modes.
->   * Add font-family in `_data/fonts.yml` to customize what fonts are available.
-
-1. Create a new scss file in `_sass/yolo/themes/`.
-2. Customize the theme values for light and dark modes.
-3. Enable by setting `theme.name` in `_data/settings.yml`.
-
----
-
-### Key Colors
-{:.no-toc}
-
-Key colors provide the foundation of your theme and should [contrast](https://en.wikipedia.org/wiki/Contrast_(vision)) or [complement](https://en.wikipedia.org/wiki/Complementary_colors) each other in [hue](https://en.wikipedia.org/wiki/Hue).
-
-There are __3__ key color variables for both __light__ and __dark__ modes.
-
-{% include flexbox.html columns="1" fill="primary-color" %}
-{% include flexbox.html columns="1" fill="secondary-color" %}
-{% include flexbox.html columns="1" fill="tertiary-color" %}
-
----
-
-### Container Colors
-{:.no-toc}
-
-Each key color has 1 corresponding "_container_" color, which represents a container inset within the `primary-color`.
-
-> __Note:__ The `primary-container-color` is applied to the background of code blocks, and blockquotes such as this.
-> > Thus, if your `primary-color` is white, then you might select a grey color for the `primary-container-color` to create a slight contrast between the two.
-
-{% include flexbox.html columns="1" fill="primary-container-color" %}
-{% include flexbox.html columns="1" fill="secondary-container-color" %}
-{% include flexbox.html columns="1" fill="tertiary-container-color" %}
-
----
-
-### On Colors
-{:.no-toc}
-
-On colors are for elements that are placed "_on_" the corresponding key or container color. On colors should contrast with the color they are being placed on top of to increase readability.
-
-> __Example:__ If your `primary-color` is white then a logical `on-primary-color` would be black.
-
-{% include flexbox.html columns="1" fill="on-primary-color" %}
-{% include flexbox.html columns="1" fill="on-primary-container-color" %}
-{% include flexbox.html columns="1" fill="on-secondary-color" %}
-{% include flexbox.html columns="1" fill="on-secondary-container-color" %}
-{% include flexbox.html columns="1" fill="on-tertiary-color" %}
-{% include flexbox.html columns="1" fill="on-tertiary-container-color" %}
-
----
-
-### General Colors
-{:.no-toc}
-
-Links are prominent on web pages, so it gets its own variable - [link-color](https://github.com/corbtastik/yolo).
-
-> __Note:__ Generally, it's a good idea to have a distinct color, consistency applied to links.
-
-{% include flexbox.html columns="1" fill="link-color" %}
-
-The `neutral-color` and `on-neutral-color` variables are general use colors.
-
-> __Note:__ As mentioned in the "[On Colors](#on-colors)" section, it's best to have an "on" color that contrasts with the underlying color.
-
-{% include flexbox.html columns="1" fill="neutral-color" %}
-{% include flexbox.html columns="1" fill="on-neutral-color" %}
-
-{% include arrow.html link="#howdy" %}
-
----
-
-### Typography
-{:.no-toc}
-
-Yolo's fonts can be customized as outlined in [Themes](#themes).
-
-{% include typography.html %}
-
-{% include arrow.html link="#howdy" %}
-
----
-
-## Headers
-
-> __Note:__ H1 is reserved for the site header and not shown here.
-
-## H2 Heading
-{:.no-toc}
-
-### H3 Heading
-{:.no-toc}
-
-#### H4 Heading
-{:.no-toc}
-
-##### H5 Heading
-{:.no-toc}
-
-###### H6 Heading
-{:.no-toc}
-
-{% include arrow.html link="#howdy" %}
-
----
-
-## Paragraph text
-
-[Baseball](https://en.wikipedia.org/wiki/Baseball) is a bat-and-ball sport played between two teams of nine players each, taking turns batting and fielding. The game is in play when a player on the fielding team, called the pitcher, throws a ball that a player on the batting team tries to hit with a bat. The objective of the offensive team (batting team) is to hit the ball into the field of play, away from the other team's players, allowing its players to run the bases, having them advance counter-clockwise around four bases to score what are called "runs". - copied from [Wikipedia](https://en.wikipedia.org/wiki/Baseball).
-
-{% include arrow.html link="#howdy" %}
-
----
-
-## Blockquotes
-
-### Single Blockquote
-{:.no-toc}
-
-> In the United States and Canada, professional Major League Baseball (MLB) teams are divided into the National League (NL) and American League (AL), each with three divisions: East, West, and Central. The MLB champion is determined by playoffs that culminate in the World Series.
-
-### Two paragraph Blockquote
-{:.no-toc}
-
-> A baseball game is played between two teams,
-> each usually composed of nine players, that take turns playing offense (batting and baserunning)
-> and defense (pitching and fielding).
->
-> The game is played on a field whose primary boundaries, the foul lines,
-> extend forward from home plate at 45-degree angles.
-> The 90-degree area within the foul lines is referred to as fair territory;
-> the 270-degree area outside them is foul territory.
-
-### Nested Blockquote
-{:.no-toc}
-
-> The number of players on a baseball roster, or squad, varies by league and by the level of organized play. A Major League Baseball (MLB) team has a roster of 25 players with specific roles. A typical roster features the following players:
->
-> > Eight position players: the catcher, four infielders, and three outfielders—all of whom play on a regular basis.
->
-> Most baseball leagues worldwide have the DH rule.
-
-### Blockquote w/ markdown
-{:.no-toc}
-
-> ### Baseball Statistics
-> {:.no-toc}
-> 1. __At Bats:__ Plate appearances, excluding walks and hit by pitches.
-> 2. __Hits:__ Number of times a base is reached safely.
-> 3. __Runs:__ Number of times runners reach home safely.
-> 4. __RBIs:__ Number of runners who scored due to a batter's action.
-> 5. __Home Runs:__ Hits where the batter touches all four bases safely.
-> 6. __Batting Average:__ Hits divided by at bats.
-
-{% include arrow.html link="#howdy" %}
-
----
-
-## Inline Text
-
-- Just plain text
-- **Bold text**
-- *Italicize text*
-- <abbr title="Abbreviation">Abbr (abbreviation)</abbr>
-- <cite>Citation</cite>
-- <del>Deleted</del>
-- <ins>Underlined</ins>
-- Superscript <sup>text</sup>
-- Subscript <sub>text</sub>
-- Inline code `SELECT * FROM players;`
-
-{% include arrow.html link="#howdy" %}
-
----
-
 ## Code
 
 > __Tip:__ Click header to copy a snippet.
+
+---
+
+## Bash
 
 {% include code.html label="Bash snippet" %}
 ```bash
@@ -248,7 +29,58 @@ fi
 say_howdy $1
 ```
 
-{% include arrow.html link="#howdy" %}
+{% include arrow.html link="#code" %}
+
+---
+
+## C
+
+{% include code.html label="C snippet" %}
+```c
+#include <stdio.h>
+// Say Howdy
+int main(int argc, char **argv) {
+    if(argc != 2) {
+        printf("Usage: Howdy <NAME>");
+        return 1;
+    }
+    printf("Howdy %s!\n", argv[1]);
+    return 0;
+}
+```
+
+{% include arrow.html link="#code" %}
+
+---
+
+## JSON
+
+{% include code.html label="JSON snippet" %}
+```json
+{
+  "site": "yolo-main",
+  "config": "_config.yml",
+  "index": "index.md",
+  "data": [
+    "settings.yml",
+    "fonts.yml",
+    "images.yml"
+  ],
+  "assets": {
+    "images": [
+      "error.png",
+      "logo.png"
+    ]
+  },
+  "theme": "_yolo.scss"
+}
+```
+
+{% include arrow.html link="#code" %}
+
+---
+
+## JavaScript
 
 {% include code.html label="JavaScript snippet" %}
 ```javascript
@@ -265,457 +97,51 @@ if(process.argv.length != 3) {
 sayHowdy(process.argv[2]);
 ```
 
-{% include arrow.html link="#howdy" %}
+{% include arrow.html link="#code" %}
 
 ---
 
-## Lists
-
-### Unordered
-{:.no-toc}
-
-* Arlington Stadium
-* Rangers Ballpark in Arlington
-* Ebbets Field
-
-* Boston Red Stockings
-    * Boston Red Caps
-        * Boston Beaneaters
-            * Boston Red Sox
-
-### Ordered
-{:.no-toc}
-
-1. Babe Ruth
-2. Willie Mays
-3. Dale Murphy
-4. Mookie Wilson
-
-{% include arrow.html link="#howdy" %}
-
----
-
-## Tables
-
-### Basic
-{:.no-toc}
-
-| Player                                                                                                   | BA   | HR  |
-|----------------------------------------------------------------------------------------------------------|------|-----|
-| <a href="https://www.baseball-reference.com/players/a/aaronha01.shtml" target="_blank">Hank Aaron</a>    | .305 | 755 |
-| <a href="https://www.baseball-reference.com/players/r/ruthba01.shtml" target="_blank">Babe Ruth</a>      | .342 | 714 |
-| <a href="https://www.baseball-reference.com/players/w/wilsomo01.shtml" target="_blank">Mookie Wilson</a> | .274 | 67  |
-
-### Formatted content
-{:.no-toc}
-
-| Command      | Description                                        |
-|--------------|----------------------------------------------------|
-| `git rm`     | <del>Remove</del> a file from the index            |
-| `git status` | List all *new or modified* files                   |
-| `git diff`   | Show file differences that **haven't been** staged |
-
-### Cell alignment
-{:.no-toc}
-
-| Left-aligned | Center-aligned | Right-aligned |
-|:-------------|:--------------:|--------------:|
-| `git status` |  `git status`  |  `git status` |
-| `git diff`   |   `git diff`   |    `git diff` |
-
-{% include arrow.html link="#howdy" %}
-
----
-
-## Markdown Images
-
-> Images added via markdown receive styling from the `<img>` element, they're not styled with `yolo` classes.
-
-{% include code.html label="Markdown images" %}
-{% raw %}
-```markdown
-![Moonie Moonpie](assets/images/moonpie.png "Sweet Moonpie")
-![BIG yawn Bucky](assets/images/bucky.png "Sleepy Bucky")
-```
-{% endraw %}
-
-![Moonie Moonpie](assets/images/moonpie.png "Sweet Moonpie")
-
-![BIG yawn Bucky](assets/images/bucky.png "Sleepy Bucky")
-
-{% include arrow.html link="#howdy" %}
-
----
-
-## Styled Images
-
-You can use yolo Styled Images in addition to markdown images if you're looking for a little eye-candy. Yolo includes support for common aspect ratios, an [image-grid](#image-grid) and [image-lightbox](#image-lightbox).
-
-> __Tip:__ Click an image to enlarge.
-
----
-
-### Thumbnail Images
-{:.no-toc}
-
-Thumbnails are 128px x 128px and use the `thumbnail` class.
-
-{%
-include image/image.html
-classes="thumbnail"
-src="https://storage.googleapis.com/corbs-foto/yolo/yolo/big-face-bucky.png"
-%}
-
-{% include arrow.html link="#howdy" %}
-
----
-
-### Square Images
-{:.no-toc}
-
-Square images can be added with the following classes: `is-16`, `is-24`, `is-32`, `is-48`, `is-64`, `is-96`, `is-128`,
-`is-192`, `is-256`, `is-384`, `is-448`, `is-512`, `is-640`.
-
-{%
-include image/image.html
-classes="image is-256"
-src="https://storage.googleapis.com/corbs-foto/yolo/yolo/drive-in.png"
-%}
-
-{% include arrow.html link="#howdy" %}
-
----
-
-### Circle Images
-{:.no-toc}
-
-Circle images can be added with the following classes: `is-circle-16`, `is-circle-24`, `is-circle-32`,
-`is-circle-48`, `is-circle-64`, `is-circle-96`, `is-circle-128`, `is-circle-192`, `is-circle-256`, `is-circle-384`,
-`is-circle-448`, `is-circle-512`, `is-circle-640`.
-
-{%
-include image/image.html
-classes="is-circle-256"
-src="https://storage.googleapis.com/corbs-foto/yolo/yolo/big-face-bucky.png"
-%}
-
-{% include arrow.html link="#howdy" %}
-
----
-
-### 4-by-3 Images
-{:.no-toc}
-
-4 by 3 aspect ratio images can be added with the following classes: `is-100-by-75`, `is-120-by-90`, `is-128-by-96`,
-`is-160-by-120`, `is-200-by-150`, `is-240-by-180`, `is-256-by-192`, `is-320-by-240`, `is-400-by-300`,
-`is-480-by-360`, `is-512-by-384`, `is-640-by-480`.
-
-{%
-include image/image.html
-classes="image is-256-by-192"
-src="https://storage.googleapis.com/corbs-foto/yolo/yolo/bluebonnet.png"
-%}
-
-{% include arrow.html link="#howdy" %}
-
----
-
-### 3-by-4 Images
-{:.no-toc}
-
-3 by 4 aspect ratio images can be added with the following classes: `is-75-by-100`, `is-90-by-120`, `is-96-by-128`,
-`is-120-by-160`, `is-150-by-200`, `is-180-by-240`, `is-192-by-256`, `is-240-by-320`, `is-300-by-400`,
-`is-360-by-480`, `is-384-by-512`, `is-480-by-640`.
-
-{%
-include image/image.html
-classes="image is-240-by-320"
-src="https://storage.googleapis.com/corbs-foto/yolo/yolo/bluebonnet.png"
-%}
-
-{% include arrow.html link="#howdy" %}
-
----
-
-### 16-by-9 Images
-{:.no-toc}
-
-16 by 9 aspect ratio images can be added with the following classes: `is-112-by-63`, `is-128-by-72`, `is-144-by-81`,
-`is-160-by-90`, `is-192-by-108`, `is-224-by-126`, `is-256-by-144`, `is-320-by-180`, `is-400-by-225`, `is-480-by-270`,
-`is-512-by-288`, `is-640-by-360`.
-
-{%
-include image/image.html
-classes="image is-256-by-144"
-src="https://storage.googleapis.com/corbs-foto/yolo/yolo/bluebonnet.png"
-%}
-
-{% include arrow.html link="#howdy" %}
-
----
-
-### 9-by-16 Images
-{:.no-toc}
-
-9 by 16 aspect ratio images can be added with the following classes: `is-63-by-112`, `is-72-by-128`, `is-81-by-144`,
-`is-90-by-160`, `is-108-by-192`, `is-126-by-224`, `is-144-by-256`, `is-180-by-320`, `is-225-by-400`, `is-270-by-480`,
-`is-288-by-512`, `is-360-by-640`.
-
-{%
-include image/image.html
-classes="image is-225-by-400"
-src="https://storage.googleapis.com/corbs-foto/yolo/yolo/bluebonnet.png"
-%}
-
-{% include arrow.html link="#howdy" %}
-
----
-
-## Image Grid
-
-The Image Grid is similar to the [Lightbox](#image-lightbox), except it shows images inline, instead of in a modal.
-
-> __Tip:__ Click an image to enlarge, click again to minimize.
-
-* Add image data into `_data/ig-images.yml`.
-* Include `image/grid.html` on your page.
-
-### Default data file
-{:.no-toc}
-
-The `_data/ig-images.yml` file is the default data file, just replace with your data to display images.
-
-{% include code.html label="Images from: _data/ig-images.yml" %}
-{% raw %}
-```html
-{% include "image/grid.html" %}
-```
-{% endraw %}
-
-{% include image/grid.html %}
-
-### Custom data file
-{:.no-toc}
-
-A custom data file can be added to create an Image Grid.
-
-* Create a new file in `_data/` and prefix name with `ig-`.
-* Use the data file name (w/o `.yml` ext) as the value to `ig-data`.
-* Customize the number of columns by setting `ig-columns`.
-
-{% include code.html label="Images from: _data/ig-pets.yml" %}
-{% raw %}
-```html
-{% include image/grid.html ig-data="ig-pets" ig-columns="2" %}
-```
-{% endraw %}
-
-{% include image/grid.html ig-data="ig-pets" ig-columns="2" %}
-
-{% include arrow.html link="#howdy" %}
-
----
-
-## Image Lightbox
-
-Yolo includes a Lightbox to showcase pics.
-
-> __Tip:__ Click an image to open Lightbox, click left or right, key `<` or `>` to move.
-
-* Add image data into `_data/lb-images.yml`.
-* Include `image/lightbox.html` on your page.
-
-### Default data file
-{:.no-toc}
-
-The `_data/lb-images.yml` file is the default Lightbox data file, just replace with your data to display images.
-
-{% include code.html label="Images from: _data/lb-images.yml" %}
-{% raw %}
-```html
-{% include image/lightbox.html %}
-```
-{% endraw %}
-
-{% include image/lightbox.html %}
-
-### Custom data file
-{:.no-toc}
-
-A custom data file can be added to create a Lightbox.
-
-* Create a new file in `_data` and prefix name with `lb-`.
-* Use the data file name (w/o `.yml` ext) as the value to `lb-data`.
-
-{% include code.html label="Images from: _data/lb-marfa.yml" %}
-{% raw %}
-```html
-{% include image/lightbox.html lb-data="lb-marfa" %}
-```
-{% endraw %}
-
-{% include image/lightbox.html lb-data="lb-marfa" %}
-
-{% include arrow.html link="#howdy" %}
-
----
-
-## Videos
-
-{% include video.html %}
-
-{% include arrow.html link="#howdy" %}
-
----
-
-## Prezos
-
-Yolo has basic support for embedding Google Slides.
-
-* Enter prezo data into `_data/prezos.yml`
-* Include `prezo.html` on your page.
-* Set `title` value to match prezo in `_data/prezos.yml`.
-* By default, prezos are displayed with a `is-16-by-9` aspect ratio.
-* Optionally set `aspect-ratio` to `is-16-by-9`, `is-4-by-3`, or `is-1-by-1`.
-
-#### Sample 1
-{:.no-toc}
-
-{% include code.html label="16-by-9 aspect ratio (default)" %}
-{% raw %}
-```html
-{% include prezo.html title="blinged-macmini" %}
-```
-{% endraw %}
-
-> Aspect ratio `is-16-by-9`.
-
-{% include prezo.html title="blinged-macmini" %}
-
-#### Sample 2
-{:.no-toc}
-
-{% include code.html label="4-by-3 aspect ratio" %}
-{% raw %}
-```html
-{% include prezo.html title="one-awesome-prezo" aspect-ratio="is-4-by-3" %}
-```
-{% endraw %}
-
-> Aspect ratio `is-4-by-3`.
-
-{% include prezo.html title="one-awesome-prezo" aspect-ratio="is-4-by-3" %}
-
-#### Sample 3
-{:.no-toc}
-
-{% include code.html label="1-by-1 aspect ratio" %}
-{% raw %}
-```html
-{% include prezo.html title="yolo-on" aspect-ratio="is-1-by-1" %}
-```
-{% endraw %}
-
-> Aspect ratio `is-1-by-1`.
-
-{% include prezo.html title="yolo-on" aspect-ratio="is-1-by-1" %}
-
-{% include arrow.html link="#howdy" %}
-
----
-
-## Containers
-
-This section "contains" information on building and running your single page Yolo site as a container.
-
-> The project `Makefile` includes targets for building a container with [podman](https://podman.io/).
-
-### Tools
-{:.no-toc}
-
-* [Podman](https://podman.io/)
-* Make (_optional but recommended_)
-
-<ins>Two</ins> container images are built using the Makefile.
-
-* The <ins>first</ins> is `yoloc` which is a "builder" image, to "build" your site.
-* The <ins>second</ins> is `yolo`, to "run" your site.
-
-### yoloc
-{:.no-toc}
-
-Yoloc is a "builder" image based on [ubi8-minimal](https://developers.redhat.com/products/rhel/ubi), with the following packages added:
-
-* gcc
-* gcc-c++
-* make
-* ruby
-* ruby-devel
-* jekyll
-
-> Yoloc isn't a runtime image, meaning it doesn't run a server process, it's a build time image, with the tooling needed to run `jekyll build`. The output `_site` will be passed to the `yolo` container, where it's served by [apache httpd](https://httpd.apache.org/).
-
-### yolo
-{:.no-toc}
-
-The Yolo image is a runtime image based on [ubi8-minimal](https://developers.redhat.com/products/rhel/ubi), with [apache httpd](https://httpd.apache.org/) installed. Your yolo `_site` is configured in `/var/www/html` where it's served by apache on port `9696`.
-
-### Building and running
-{:.no-toc}
-
-{% include code.html label="Podman build and run" %}
-```bash
-# First build yoloc
-podman build -f ./src/yoloc.Containerfile -t yoloc:latest ./src
-
-# Then build yolo
-podman build -f Containerfile -t yolo:latest .
-
-# Now run and access on http://localhost:9696
-podman run --name yolo -d -p 9696:9696 yolo:latest
+## SCSS
+
+{% include code.html label="SCSS snippet" %}
+```scss
+.light-mode {
+  color: $light-secondary-color;
+  background-color: $light-primary-color;
+  font-family: $family-primary;
+
+  a {
+    color: $light-link-color;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    color: $light-accent-color;
+    font-family: $family-secondary, sans-serif;
+  }
+}
 ```
 
-The `Makefile` automates the build and run process, with `make yolo-pod`, which:
-
-* Creates the `yoloc` image.
-* Uses `yoloc` to build your `_site`.
-* Creates the `yolo` image to run your site.
-* Starts a yolo container from the `yolo` image, on [http://localhost:9696](http://localhost:9696).
-
-{% include code.html label="Makefile build and run" %}
-```bash
-# Build and run with make
-make yolo-pod
-```
-
-{% include arrow.html link="#howdy" %}
+{% include arrow.html link="#code" %}
 
 ---
 
-## License
+## YAML
 
-```text
-MIT License (MIT)
-
-Copyright (c) 2023 Corbs
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+{% include code.html label="YAML snippet" %}
+```yaml
+# -----------------------------------------------------------------------------
+# Yolo site settings. see: _config.yml for jekyll settings
+# -----------------------------------------------------------------------------
+name: Yolo
+version: v1.3
+title: Yolo on my friend
+description: Loveable single pages
+theme:
+  name: solo
+  syntax: monokai
+align: left
+sidebar:
+  logo: assets/images/logo.png
 ```
 
-{% include arrow.html link="#howdy" %}
+{% include arrow.html link="#code" %}
