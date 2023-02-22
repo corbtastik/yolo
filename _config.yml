@@ -12,6 +12,15 @@ url: ""
 # markdown: The markdown processor to use, kramdown is the jekyll default.
 # -----------------------------------------------------------------------------
 markdown: kramdown
+#kramdown:
+#  syntax_highlighter: rouge
+#  syntax_highlighter_opts: # Rouge Options › https://github.com/jneen/rouge#full-options
+#    css_class: highlight
+#    span:
+#      line_numbers: false
+#    block:
+#      line_numbers: true
+#      start_line: 1
 # -----------------------------------------------------------------------------
 # exclude: List of files and folders to exclude from jekyll
 # -----------------------------------------------------------------------------
