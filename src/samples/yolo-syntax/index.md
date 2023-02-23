@@ -5,13 +5,43 @@ links:
 - jekyll,https://jekyllrb.com
 ---
 
-## Code
+## Syntax Highlighting
 
-> __Tip:__ Click header to copy a snippet.
+Yolo uses Jekyll's [default syntax highlighting](https://jekyllrb.com/docs/liquid/tags/#code-snippet-highlighting) capabilities provided by [rouge](https://github.com/rouge-ruby/rouge), and adds the ability to use custom `syntax-scheme(s)` for light and dark modes.
+
+The following `syntax-scheme(s)` are provided out-of-the-box.
+
+* __arcade:__ _An 80s mall arcade theme_
+* __dracula:__ _The epic [dark theme](https://draculatheme.com/)_
+* __monokai:__ _The [classic theme](https://monokai.pro/) for focusing_
+* __newspaper:__ _Read all about this greyscale theme_
+* __solo:__ _A theme for minimalists_
+* __sprinkles:__ _A theme that pairs well with cup cakes_
+* __yolo:__ _The default theme for Yolo sites_
+
+Creating a custom `syntax-scheme` is done by adding a `scss` file into `_sass/yolo/syntax-scheme` and setting values for each color property for both __light__ and __dark__ modes.
+
+To enable a specific `syntax-scheme` add it to your `settings.yml` file, as shown below.
+
+```yaml
+# -------------------------------------
+# Yolo site settings
+# -------------------------------------
+name: Yolo
+title: Yolo on my friend
+description: Loveable single pages
+theme:
+  name: solo
+  syntax: arcade
+```
 
 ---
 
-## Bash
+## Samples
+
+> __Tip:__ Click header to copy a snippet.
+
+### Bash
 
 {% include code.html label="Bash snippet" %}
 ```bash
@@ -29,11 +59,11 @@ fi
 say_howdy $1
 ```
 
-{% include arrow.html link="#code" %}
+{% include arrow.html link="#syntax-highlighting" %}
 
 ---
 
-## C
+### C
 
 {% include code.html label="C snippet" %}
 ```c
@@ -49,11 +79,11 @@ int main(int argc, char **argv) {
 }
 ```
 
-{% include arrow.html link="#code" %}
+{% include arrow.html link="#syntax-highlighting" %}
 
 ---
 
-## C++
+### C++
 
 {% include code.html label="C++ snippet" %}
 ```c++
@@ -70,11 +100,11 @@ int main(int argc, char** argv) {
 }
 ```
 
-{% include arrow.html link="#code" %}
+{% include arrow.html link="#syntax-highlighting" %}
 
 ---
 
-## Dart
+### Dart
 
 {% include code.html label="Dart snippet" %}
 ```dart
@@ -91,11 +121,11 @@ void main(List<String> args) {
 }
 ```
 
-{% include arrow.html link="#code" %}
+{% include arrow.html link="#syntax-highlighting" %}
 
 ---
 
-## Go
+### Go
 
 {% include code.html label="Go snippet" %}
 ```go
@@ -117,11 +147,11 @@ func main () {
 }
 ```
 
-{% include arrow.html link="#code" %}
+{% include arrow.html link="#syntax-highlighting" %}
 
 ---
 
-## HTML
+### HTML
 
 {% include code.html label="HTML snippet" %}
 ```html
@@ -137,11 +167,11 @@ func main () {
 </html>
 ```
 
-{% include arrow.html link="#code" %}
+{% include arrow.html link="#syntax-highlighting" %}
 
 ---
 
-## JSON
+### JSON
 
 {% include code.html label="JSON snippet" %}
 ```json
@@ -170,11 +200,11 @@ func main () {
 }
 ```
 
-{% include arrow.html link="#code" %}
+{% include arrow.html link="#syntax-highlighting" %}
 
 ---
 
-## Java
+### Java
 
 {% include code.html label="Java snippet" %}
 ```java
@@ -190,11 +220,11 @@ public class Howdy {
 }
 ```
 
-{% include arrow.html link="#code" %}
+{% include arrow.html link="#syntax-highlighting" %}
 
 ---
 
-## JavaScript
+### JavaScript
 
 {% include code.html label="JavaScript snippet" %}
 ```javascript
@@ -211,11 +241,11 @@ if(process.argv.length != 3) {
 sayHowdy(process.argv[2]);
 ```
 
-{% include arrow.html link="#code" %}
+{% include arrow.html link="#syntax-highlighting" %}
 
 ---
 
-## Kotlin
+### Kotlin
 
 {% include code.html label="Kotlin snippet" %}
 ```kotlin
@@ -230,11 +260,11 @@ fun main(args: Array<String>): Int {
 }
 ```
 
-{% include arrow.html link="#code" %}
+{% include arrow.html link="#syntax-highlighting" %}
 
 ---
 
-## Markdown
+### Markdown
 
 {% include code.html label="Markdown snippet" %}
 ```markdown
@@ -247,11 +277,11 @@ fun main(args: Array<String>): Int {
 * `document`!
 ```
 
-{% include arrow.html link="#code" %}
+{% include arrow.html link="#syntax-highlighting" %}
 
 ---
 
-## Python
+### Python
 
 {% include code.html label="Python snippet" %}
 ```python
@@ -268,11 +298,11 @@ if len(sys.argv) != 2:
 sayHowdy(sys.argv[1])
 ```
 
-{% include arrow.html link="#code" %}
+{% include arrow.html link="#syntax-highlighting" %}
 
 ---
 
-## SCSS
+### SCSS
 
 {% include code.html label="SCSS snippet" %}
 ```scss
@@ -292,11 +322,11 @@ sayHowdy(sys.argv[1])
 }
 ```
 
-{% include arrow.html link="#code" %}
+{% include arrow.html link="#syntax-highlighting" %}
 
 ---
 
-## SQL
+### SQL
 
 {% include code.html label="SQL snippet" %}
 ```sql
@@ -308,17 +338,17 @@ AND   price > 5000
 AND   price <= 10000
 ```
 
-{% include arrow.html link="#code" %}
+{% include arrow.html link="#syntax-highlighting" %}
 
 ---
 
-## YAML
+### YAML
 
 {% include code.html label="YAML snippet" %}
 ```yaml
-# -----------------------------------------------------------------------------
+# ---------------------------------------------------------
 # Yolo site settings. see: _config.yml for jekyll settings
-# -----------------------------------------------------------------------------
+# ---------------------------------------------------------
 name: Yolo
 version: v1.3
 title: Yolo on my friend
@@ -331,7 +361,7 @@ sidebar:
   logo: assets/images/logo.png
 ```
 
-{% include arrow.html link="#code" %}
+{% include arrow.html link="#syntax-highlighting" %}
 
 ---
 
@@ -354,11 +384,11 @@ copies or substantial portions of the Software.
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
 AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 ```
 
-{% include arrow.html link="#code" %}
+{% include arrow.html link="#syntax-highlighting" %}

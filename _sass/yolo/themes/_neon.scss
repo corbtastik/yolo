@@ -1,22 +1,21 @@
 // ----------------------------------------------------------------------------
-// yolo theme
+// neon theme
 // ----------------------------------------------------------------------------
-// Light mode
 :root[light] {
-  --primary-color: #d2d2f3;
-  --on-primary-color: #011141;
-  --primary-container-color: #070831;
-  --on-primary-container-color: #949bfa;
-  --secondary-color: #5815c0;
-  --on-secondary-color: #d2d2f3;
-  --secondary-container-color: #100423;
-  --on-secondary-container-color: #d7c6f3;
-  --tertiary-color: #d80f8a;
-  --on-tertiary-color: #f8faff;
+  --primary-color: #dee1f7;
+  --on-primary-color: #060823;
+  --primary-container-color: #251359;
+  --on-primary-container-color: #bf3efd;
+  --secondary-color: #1042ff;
+  --on-secondary-color: #ebefff;
+  --secondary-container-color: #bf3efd;
+  --on-secondary-container-color: #f5ebff;
+  --tertiary-color: #f9246c;
+  --on-tertiary-color: #feebf2;
   --tertiary-container-color: #b5036a;
-  --on-tertiary-container-color: #f6a5d4;
-  --link-color: #0091ea;
-  --font-family-primary: "JetBrains Mono", monospace;
+  --on-tertiary-container-color: #f6a5d4; 
+  --link-color: #4597ff;
+  --font-family-primary: "Red Hat Mono", monospace;
   --font-family-secondary: "Red Hat Text", sans-serif;
   --font-family-monospace: "Source Code Pro", monospace;
   // Error, Warn and Info colors on light
@@ -30,22 +29,21 @@
   --neutral-color: #212121;
   --on-neutral-color: #e0e0e0;
 }
-// Dark mode
 :root[dark] {
-  --primary-color: #070831;
-  --on-primary-color: #b1b6fa;
-  --primary-container-color: #040511;
-  --on-primary-container-color: #7c85fa;
-  --secondary-color: #fb1d9e;
-  --on-secondary-color: #19010f;
+  --primary-color: #060823;
+  --on-primary-color: #cacef7;
+  --primary-container-color: #251359;
+  --on-primary-container-color: #bf3efd;
+  --secondary-color: #f9246c;
+  --on-secondary-color: #090b35;
   --secondary-container-color: #b5036a;
   --on-secondary-container-color: #f6a5d4;
-  --tertiary-color: #0ca9f4;
-  --on-tertiary-color: #010d13;
-  --tertiary-container-color: #085f89;
-  --on-tertiary-container-color: #ecf8fe;
-  --link-color: #65cffc;
-  --font-family-primary: "JetBrains Mono", monospace;
+  --tertiary-color: #3b6afe;
+  --on-tertiary-color: #090b35;
+  --tertiary-container-color: #bf3efd;
+  --on-tertiary-container-color: #f5ebff;
+  --link-color: #4f9dff;
+  --font-family-primary: "Red Hat Mono", monospace;
   --font-family-secondary: "Red Hat Text", sans-serif;
   --font-family-monospace: "Source Code Pro", monospace;
   // Error, Warn and Info colors on dark

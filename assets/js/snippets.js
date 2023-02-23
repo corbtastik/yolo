@@ -1,3 +1,7 @@
+/**
+ * On DOMContentLoaded setup click event listeners for each snippet header.
+ * When clicked copy the code snippet to clipboard.
+ */
 document.addEventListener("DOMContentLoaded", function() {
   'use strict';
 
@@ -5,16 +9,26 @@ document.addEventListener("DOMContentLoaded", function() {
    * Selects the highlighter-rouge block that is a sibling of the preceding code-header element.
    * @type {NodeListOf<Element>}
    */
-  const blocks = document.querySelectorAll(
-    '.code-header + .highlighter-rouge');
-  const elements = document.querySelectorAll(
-    '.code-header');
+  const snippetBlocks = document.querySelectorAll('.code-header + .highlighter-rouge');
+  /**
+   * Selects all code-header elements.
+   * @type {NodeListOf<Element>}
+   */
+  const snippetHeaders = document.querySelectorAll('.code-header');
 
-  blocks.forEach((element, index) => {
-    console.log(element.toString());
-  });
-
-  elements.forEach((element, index) => {
-    console.log(element.toString());
+  snippetHeaders.forEach((element, index) => {
+    const code = snippetBlocks[index].innerText;
+    element.addEventListener('click', () => {
+      window.navigator.clipboard.writeText(code).then(r => {
+        console.log("snippets copy to clipboard.");
+      });
+      element.classList.add('copied');
+      const infoText = element.innerHTML.trim();
+      element.innerHTML = element.innerHTML + " copied!"
+      setTimeout(() => {
+        element.innerHTML = infoText;
+        element.classList.remove('copied');
+      }, 2000);
+    });
   });
 });

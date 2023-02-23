@@ -241,8 +241,6 @@
             const yolo = new Yolo();
             // Initialize image scaling
             yolo.scaleImages();
-            // Initialize copy code snippets
-            yolo.copySnippet();
             // Initialize sidebar
             yolo.initSidebar();
             // Initialize toc on page/post and sidebar
@@ -285,28 +283,6 @@
             image.addEventListener("click", () => {
                 Console.log("Yolo.scaleImage to max: " + image.src);
                 image.classList.toggle("max");
-            });
-        });
-    };
-
-    Yolo.prototype.copySnippet = function() {
-        const blocks = document.querySelectorAll(
-            '.code-header + .highlighter-rouge');
-        const elements = document.querySelectorAll(
-            '.code-header');
-        elements.forEach((element, index) => {
-            const code = blocks[index].innerText;
-            element.addEventListener('click', () => {
-                window.navigator.clipboard.writeText(code).then(r => {
-                    Console.log("Yolo.copySnippet to clipboard.");
-                });
-                element.classList.add('copied');
-                const infoText = element.innerHTML.trim();
-                element.innerHTML = element.innerHTML + " copied!"
-                setTimeout(() => {
-                    element.innerHTML = infoText;
-                    element.classList.remove('copied');
-                }, 2000);
             });
         });
     };

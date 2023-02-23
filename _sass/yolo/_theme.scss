@@ -158,6 +158,17 @@
   .sidebar {
     background-color: var(--primary-container-color);
     color: var(--on-primary-container-color);
+    
+    .nav-menu {
+      ul {
+        li::before {
+          color: var(--on-primary-container-color);
+        }
+        li::marker {
+          color: var(--on-primary-container-color);
+        }
+      } 
+    }
   }
 
   .info {
