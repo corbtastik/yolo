@@ -31,9 +31,11 @@ yolo-pod: yolo
 # Publish to surge.sh
 # -----------------------------------------------------------------------------
 surge:
+	@$(call is_defined, SURGE_NAME, SURGE_NAME is required: usage SURGE_NAME=my-yolo)
+	@echo "Uploading: https://corbtastik-yolo-$(SURGE_NAME).surge.sh"
 	@jekyll clean
 	@jekyll build
-	@surge _site/ corbtastik-yolo.surge.sh
+	@surge _site/ corbtastik-yolo-$(SURGE_NAME).surge.sh
 # -----------------------------------------------------------------------------
 # Create new Yolo sites
 # -----------------------------------------------------------------------------
