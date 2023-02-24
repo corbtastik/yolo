@@ -18,14 +18,8 @@
 # Serif fonts
 - name: "Hepta Slab"
   weights: "200,300,400,700"
-- name: "Anonymous Pro"
-  weights: "0,400;0,700;1,400;1,700"
-- name: "Roboto Slab"
-  weights: "100;200;300;400;700"
 - name: "Roboto Serif"
   weights: "0,200;0,400;0,700;1,200;1,300;1,400;1,700"
-- name: "Lora"
-  weights: "0,400;0,500;0,700;1,400;1,500;1,700"
 - name: "Bitter"
   weights: "0,200;0,300;0,400;0,700;1,200;1,300;1,400;1,700"
 # Monospace fonts

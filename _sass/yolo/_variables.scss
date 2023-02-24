@@ -1,10 +1,22 @@
 // ----------------------------------------------------------------------------
-// Default Typography fonts, sizes and weights
+// Default Typography fonts, error, warn and info colors
 // ----------------------------------------------------------------------------
-$family-primary: "Inconsolata", monospace !default;
-$family-secondary: "Montserrat", sans-serif !default;
-$family-monospace: "Source Code Pro", monospace !default;
-
+:root {
+  // error, warn and info colors
+  --error-color: #b71c1c;
+  --on-error-color: #ffcdd2;
+  --warn-color: #ffee58;
+  --on-warn-color: #212121;
+  --info-color: #1565c0;
+  --on-info-color: #bbdefb;
+  // font families
+  --font-family-primary: "Inconsolata", monospace;
+  --font-family-secondary: "Montserrat", sans-serif;
+  --font-family-monospace: "Source Code Pro", monospace;
+}
+// ----------------------------------------------------------------------------
+// Font sizes
+// ----------------------------------------------------------------------------
 $size-1: 3rem !default;
 $size-2: 2.5rem !default;
 $size-3: 2rem !default;
@@ -12,7 +24,9 @@ $size-4: 1.5rem !default;
 $size-5: 1.25rem !default;
 $size-6: 1rem !default;
 $size-7: 0.75rem !default;
-
+// ----------------------------------------------------------------------------
+// Font weights
+// ----------------------------------------------------------------------------
 $weight-light: 300 !default;
 $weight-normal: 400 !default;
 $weight-medium: 500 !default;

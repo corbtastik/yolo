@@ -2,58 +2,52 @@
 // neon theme
 // ----------------------------------------------------------------------------
 :root[light] {
+  // primary colors
   --primary-color: #dee1f7;
   --on-primary-color: #060823;
   --primary-container-color: #251359;
   --on-primary-container-color: #bf3efd;
+  // secondary colors  
   --secondary-color: #1042ff;
   --on-secondary-color: #ebefff;
   --secondary-container-color: #bf3efd;
   --on-secondary-container-color: #f5ebff;
+  // tertiary colors  
   --tertiary-color: #f9246c;
   --on-tertiary-color: #feebf2;
   --tertiary-container-color: #b5036a;
   --on-tertiary-container-color: #f6a5d4; 
+  // general colors    
   --link-color: #4597ff;
+  --neutral-color: #212121;
+  --on-neutral-color: #e0e0e0;
+  // font families  
   --font-family-primary: "Red Hat Mono", monospace;
   --font-family-secondary: "Red Hat Text", sans-serif;
   --font-family-monospace: "Source Code Pro", monospace;
-  // Error, Warn and Info colors on light
-  --error-color: #b71c1c;
-  --on-error-color: #ffcdd2;
-  --warn-color: #212121;
-  --on-warn-color: #ffee58;
-  --info-color: #bbdefb;
-  --on-info-color: #1565c0;
-  // Neutral colors on light
-  --neutral-color: #212121;
-  --on-neutral-color: #e0e0e0;
 }
 :root[dark] {
+  // primary colors
   --primary-color: #060823;
   --on-primary-color: #cacef7;
   --primary-container-color: #251359;
   --on-primary-container-color: #bf3efd;
+  // secondary colors  
   --secondary-color: #f9246c;
   --on-secondary-color: #090b35;
   --secondary-container-color: #b5036a;
   --on-secondary-container-color: #f6a5d4;
+  // tertiary colors  
   --tertiary-color: #3b6afe;
   --on-tertiary-color: #090b35;
   --tertiary-container-color: #bf3efd;
   --on-tertiary-container-color: #f5ebff;
+  // general colors  
   --link-color: #4f9dff;
+  --neutral-color: #e0e0e0;
+  --on-neutral-color: #212121;  
+  // font families  
   --font-family-primary: "Red Hat Mono", monospace;
   --font-family-secondary: "Red Hat Text", sans-serif;
   --font-family-monospace: "Source Code Pro", monospace;
-  // Error, Warn and Info colors on dark
-  --error-color: #ffcdd2;
-  --on-error-color: #b71c1c;
-  --warn-color: #ffee58;
-  --on-warn-color: #212121;
-  --info-color: #bbdefb;
-  --on-info-color: #1565c0;
-  // Neutral colors on dark
-  --neutral-color: #e0e0e0;
-  --on-neutral-color: #212121;
 }

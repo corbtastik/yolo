@@ -1,61 +1,53 @@
 // ----------------------------------------------------------------------------
 // yolo theme
 // ----------------------------------------------------------------------------
-// Light mode
 :root[light] {
+  // primary colors
   --primary-color: #d2d2f3;
   --on-primary-color: #011141;
   --primary-container-color: #070831;
   --on-primary-container-color: #949bfa;
+  // secondary colors  
   --secondary-color: #5815c0;
   --on-secondary-color: #d2d2f3;
   --secondary-container-color: #100423;
   --on-secondary-container-color: #d7c6f3;
+  // tertiary colors
   --tertiary-color: #d80f8a;
   --on-tertiary-color: #f8faff;
   --tertiary-container-color: #b5036a;
   --on-tertiary-container-color: #f6a5d4;
+  // general colors
   --link-color: #0091ea;
+  --neutral-color: #212121;
+  --on-neutral-color: #e0e0e0;
+  // font families
   --font-family-primary: "JetBrains Mono", monospace;
   --font-family-secondary: "Red Hat Text", sans-serif;
   --font-family-monospace: "Source Code Pro", monospace;
-  // Error, Warn and Info colors on light
-  --error-color: #b71c1c;
-  --on-error-color: #ffcdd2;
-  --warn-color: #212121;
-  --on-warn-color: #ffee58;
-  --info-color: #bbdefb;
-  --on-info-color: #1565c0;
-  // Neutral colors on light
-  --neutral-color: #212121;
-  --on-neutral-color: #e0e0e0;
 }
-// Dark mode
 :root[dark] {
+  // primary colors
   --primary-color: #070831;
   --on-primary-color: #b1b6fa;
   --primary-container-color: #040511;
   --on-primary-container-color: #7c85fa;
+  // secondary colors  
   --secondary-color: #fb1d9e;
   --on-secondary-color: #19010f;
   --secondary-container-color: #b5036a;
   --on-secondary-container-color: #f6a5d4;
+  // tertiary colors
   --tertiary-color: #0ca9f4;
   --on-tertiary-color: #010d13;
   --tertiary-container-color: #085f89;
   --on-tertiary-container-color: #ecf8fe;
+  // general colors
   --link-color: #65cffc;
+  --neutral-color: #e0e0e0;
+  --on-neutral-color: #212121;  
+  // font families
   --font-family-primary: "JetBrains Mono", monospace;
   --font-family-secondary: "Red Hat Text", sans-serif;
   --font-family-monospace: "Source Code Pro", monospace;
-  // Error, Warn and Info colors on dark
-  --error-color: #ffcdd2;
-  --on-error-color: #b71c1c;
-  --warn-color: #ffee58;
-  --on-warn-color: #212121;
-  --info-color: #bbdefb;
-  --on-info-color: #1565c0;
-  // Neutral colors on dark
-  --neutral-color: #e0e0e0;
-  --on-neutral-color: #212121;
 }

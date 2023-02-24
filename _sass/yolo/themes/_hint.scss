@@ -1,0 +1,53 @@
+// ----------------------------------------------------------------------------
+// hint theme
+// ----------------------------------------------------------------------------
+:root[light] {
+  // primary colors
+  --primary-color: #fefcfb;
+  --on-primary-color: #091129;
+  --primary-container-color: #091129;
+  --on-primary-container-color: #fefcfb;
+  // secondary colors
+  --secondary-color: #06a6dc;
+  --on-secondary-color: #ebfaff;
+  --secondary-container-color: #033c50;
+  --on-secondary-container-color: #ebfaff;
+  // tertiary colors
+  --tertiary-color: #f72685;
+  --on-tertiary-color: #feebf4;
+  --tertiary-container-color: #0b1e4a;
+  --on-tertiary-container-color: #fafafa;
+  // general colors
+  --link-color: #339ff4;
+  --neutral-color: #212121;
+  --on-neutral-color: #e0e0e0;
+  // font families
+  --font-family-primary: "Inconsolata", monospace;
+  --font-family-secondary: "Montserrat", sans-serif;
+  --font-family-monospace: "Source Code Pro", monospace;
+}
+:root[dark] {
+  // primary colors
+  --primary-color: #091129;
+  --on-primary-color: #fefcfb;
+  --primary-container-color: #fefcfb;
+  --on-primary-container-color: #091129;
+  // secondary colors
+  --secondary-color: #06a6dc;
+  --on-secondary-color: #ebfaff;
+  --secondary-container-color: #033c50;
+  --on-secondary-container-color: #ebfaff;
+  // tertiary colors
+  --tertiary-color: #f72685;
+  --on-tertiary-color: #feebf4;
+  --tertiary-container-color: #0b1e4a;
+  --on-tertiary-container-color: #fafafa;
+  // general colors
+  --link-color: #339ff4;
+  --neutral-color: #e0e0e0;
+  --on-neutral-color: #212121;
+  // font families
+  --font-family-primary: "Inconsolata", monospace;
+  --font-family-secondary: "Montserrat", sans-serif;
+  --font-family-monospace: "Source Code Pro", monospace;
+}

@@ -1,0 +1,53 @@
+// ----------------------------------------------------------------------------
+// newspaper theme
+// ----------------------------------------------------------------------------
+:root[light] {
+  // primary colors
+  --primary-color: #e0e0e0;
+  --on-primary-color: #0a0a0a;
+  --primary-container-color: #141414;
+  --on-primary-container-color: #f5f5f5;
+  // secondary colors
+  --secondary-color: #5c5c5c;
+  --on-secondary-color: #e0e0e0;
+  --secondary-container-color: #0a0a0a;
+  --on-secondary-container-color: #e0e0e0;
+  // tertiary colors
+  --tertiary-color: #1f56d8;
+  --on-tertiary-color: #e0e0e0;
+  --tertiary-container-color: #cccccc;
+  --on-tertiary-container-color: #0a0a0a;
+  // general colors
+  --link-color: #0091ea;
+  --neutral-color: #212121;
+  --on-neutral-color: #e0e0e0;
+  // font families
+  --font-family-primary: "Hepta Slab", serif;
+  --font-family-secondary: "Red Hat Text", sans-serif;
+  --font-family-monospace: "Red Hat Mono", monospace;
+}
+:root[dark] {
+  // primary colors
+  --primary-color: #141414;
+  --on-primary-color: #e0e0e0;
+  --primary-container-color: #0a0a0a;
+  --on-primary-container-color: #999999;
+  // secondary colors
+  --secondary-color: #e0e0e0;
+  --on-secondary-color: #5c5c5c;
+  --secondary-container-color: #e0e0e0;
+  --on-secondary-container-color: #0a0a0a;
+  // tertiary colors
+  --tertiary-color: #1f56d8;
+  --on-tertiary-color: #e0e0e0;
+  --tertiary-container-color: #cccccc;
+  --on-tertiary-container-color: #0a0a0a;
+  // general colors
+  --link-color: #0091ea;
+  --neutral-color: #212121;
+  --on-neutral-color: #e0e0e0;
+  // font families
+  --font-family-primary: "Hepta Slab", serif;  
+  --font-family-secondary: "Red Hat Text", sans-serif;
+  --font-family-monospace: "Red Hat Mono", monospace;
+}
