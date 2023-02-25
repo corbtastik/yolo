@@ -118,41 +118,40 @@ ol {
 
 table {
   width: 100%;
-  border-spacing: 0;
-}
-
-th {
-  font-weight: bold;
-}
-
-thead {
-  font-family: var(--font-family-secondary);
-}
-
-thead tr:first-child th:first-child {
-  border-radius: 0.3em 0 0 0;
-}
-thead tr:first-child th:last-child {
-  border-radius: 0 0.3em 0 0;
-}
-tbody tr:last-child td:first-child {
-  border-radius: 0 0 0 0;
-}
-tbody tr:last-child td:last-child {
-  border-radius: 0 0 0 0;
-}
-
-th,
-tr,
-td {
   vertical-align: middle;
   text-align: left;
-  padding: 0.3em 0.4em 0.3em 0.4em;
+  border-radius: 0.3em;
+  border-spacing: 0;
+  border-collapse: separate;
+  border: 1px solid inherit;
+  overflow: hidden;
+  th {
+    font-weight: bold;
+    padding: 0.3em 0.4em 0.3em 0.4em;    
+  }
+  td {
+    font-weight: normal;
+    padding: 0.3em 0.4em 0.3em 0.4em;    
+  }
+  th:not(:last-child),
+  td:not(:last-child) {
+    border-right: 1px solid inherit;
+  }
+  thead>tr:not(:last-child)>th,
+  thead>tr:not(:last-child)>td,
+  tbody>tr:not(:last-child)>th,
+  tbody>tr:not(:last-child)>td,
+  tfoot>tr:not(:last-child)>th,
+  tfoot>tr:not(:last-child)>td,
+  tr:not(:last-child)>td,
+  tr:not(:last-child)>th,
+  thead:not(:last-child),
+  tbody:not(:last-child),
+  tfoot:not(:last-child) {
+    border-bottom: 1px solid inherit;
+  }
 }
 
-/*
- * Added by corbs
- */
 figure {
   figcaption {
     padding-top: 0.25em;
