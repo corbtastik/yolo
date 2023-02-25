@@ -12,23 +12,23 @@ techies, and picture taking folk.
 
 > _I don't always use single-page sites but when I do, I [yolo](https://github.com/corbtastik/yolo)._
 
-##### Goals for Yolo
+### Goals for Yolo
 {:.no-toc}
 
-###### 1. Live the best single page life.
+#### 1. Live the best single page life.
 {:.no-toc}
 
-Pamper single page sites like we pamper our pets.
+* Pamper single page sites like we pamper our pets.
 
-###### 2. Strive for simplicity.
+#### 2. Strive for simplicity.
 {:.no-toc}
 
-No dependencies other than [jekyll](https://jekyllrb.com/).
+* No dependencies other than [jekyll](https://jekyllrb.com/).
 
-###### 3. Make it customizable
+#### 3. Make it customizable
 {:.no-toc}
 
-Bring your own [colors](#colors) and [fonts](#typography).
+* Bring your own [theme](#themes) and [syntax-highlighting](#syntax-highlighting).
 
 ---
 
@@ -236,10 +236,12 @@ The following `syntax-theme(s)` are provided out-of-the-box.
 
 | Syntax Theme                                            | Description                            |
 |---------------------------------------------------------|----------------------------------------|
-| [arcade](https://corbtastik-yolo-arcade.surge.sh)       | An 80s mall arcade theme               |
-| [hint](https://corbtastik-yolo-hint.surge.sh)           | A hint of blue and pink theme          |
+| [dracula](https://corbtastik-yolo-dracula.surge.sh)     | A theme for Transylvanian vampires     |
+| [monokai](https://corbtastik-yolo-monokai.surge.sh)     | The classic theme for focusing         |
 | [neon](https://corbtastik-yolo-neon.surge.sh)           | A bright fluorescent dark theme        |
 | [newspaper](https://corbtastik-yolo-newspaper.surge.sh) | Read all about this greyscale theme    |
+| [reveal](https://corbtastik-yolo-reveal.surge.sh)       | A theme for big reveals                |
+| [solo](https://corbtastik-yolo-solo.surge.sh)           | Minimal black and white theme          |
 | [sprinkles](https://corbtastik-yolo-sprinkles.surge.sh) | A theme that pairs well with cup cakes |
 | [yolo](https://corbtastik-yolo.surge.sh)                | The default theme for Yolo sites       |
 

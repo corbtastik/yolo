@@ -7,22 +7,28 @@ links:
 
 ## Syntax Highlighting
 
-Yolo uses Jekyll's [default syntax highlighting](https://jekyllrb.com/docs/liquid/tags/#code-snippet-highlighting) capabilities provided by [rouge](https://github.com/rouge-ruby/rouge), and adds the ability to use custom `syntax-scheme(s)` for light and dark modes.
+Yolo uses Jekyll's [default syntax highlighting](https://jekyllrb.com/docs/liquid/tags/#code-snippet-highlighting) capabilities provided by [rouge](https://github.com/rouge-ruby/rouge), and adds the ability to use custom `syntax-theme(s)` for light and dark modes.
 
-The following `syntax-scheme(s)` are provided out-of-the-box.
+The following `syntax-theme(s)` are provided out-of-the-box.
 
-* __arcade:__ _An 80s mall arcade theme_
-* __dracula:__ _The epic [dark theme](https://draculatheme.com/)_
-* __monokai:__ _The [classic theme](https://monokai.pro/) for focusing_
-* __newspaper:__ _Read all about this greyscale theme_
-* __solo:__ _A theme for minimalists_
-* __sprinkles:__ _A theme that pairs well with cup cakes_
-* __yolo:__ _The default theme for Yolo sites_
+| Syntax Theme                                            | Description                            |
+|---------------------------------------------------------|----------------------------------------|
+| [dracula](https://corbtastik-yolo-dracula.surge.sh)     | A theme for Transylvanian vampires     |
+| [monokai](https://corbtastik-yolo-monokai.surge.sh)     | The classic theme for focusing         |
+| [neon](https://corbtastik-yolo-neon.surge.sh)           | A bright fluorescent dark theme        |
+| [newspaper](https://corbtastik-yolo-newspaper.surge.sh) | Read all about this greyscale theme    |
+| [reveal](https://corbtastik-yolo-reveal.surge.sh)       | A theme for big reveals                |
+| [solo](https://corbtastik-yolo-solo.surge.sh)           | Minimal black and white theme          |
+| [sprinkles](https://corbtastik-yolo-sprinkles.surge.sh) | A theme that pairs well with cup cakes |
+| [yolo](https://corbtastik-yolo.surge.sh)                | The default theme for Yolo sites       |
 
-Creating a custom `syntax-scheme` is done by adding a `scss` file into `_sass/yolo/syntax-scheme` and setting values for each color property for both __light__ and __dark__ modes.
+### Custom Syntax Theme
+{:.no-toc}
 
-To enable a specific `syntax-scheme` add it to your `settings.yml` file, as shown below.
+1. Creating a custom `syntax-theme` is done by adding a `scss` file into `_sass/yolo/syntax-theme` and setting values for each color property for both __light__ and __dark__ modes.
+2. To enable a specific `syntax-theme` add it to your `settings.yml` file, as shown below.
 
+{% include code.html label="Configure the syntax-theme" %}
 ```yaml
 # -------------------------------------
 # Yolo site settings
@@ -31,8 +37,8 @@ name: Yolo
 title: Yolo on my friend
 description: Loveable single pages
 theme:
-  name: solo
-  syntax: arcade
+  name: neon
+  syntax: neon   # references _sass/yolo/syntax-theme/_neon.scss
 ```
 
 ---

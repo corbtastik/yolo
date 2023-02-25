@@ -1,0 +1,53 @@
+// ----------------------------------------------------------------------------
+// solo theme
+// ----------------------------------------------------------------------------
+:root[light] {
+  // primary colors
+  --primary-color: #fff;
+  --on-primary-color: #000;
+  --primary-container-color: #000;
+  --on-primary-container-color: #fff;
+  // secondary colors
+  --secondary-color: #000;
+  --on-secondary-color: #fff;
+  --secondary-container-color: #fff;
+  --on-secondary-container-color: #000;
+  // tertiary colors
+  --tertiary-color: #06c7ad;
+  --on-tertiary-color: #fff;
+  --tertiary-container-color: #fff;
+  --on-tertiary-container-color: #06c7ad;
+  // general colors
+  --link-color: #0091ea;
+  --neutral-color: #000;
+  --on-neutral-color: #fff;
+  // font families
+  --font-family-primary: "Source Code Pro", monospace;
+  --font-family-secondary: "Open Sans", sans-serif;
+  --font-family-monospace: "Red Hat Mono", monospace;
+}
+:root[dark] {
+  // primary colors
+  --primary-color: #000;
+  --on-primary-color: #fff;
+  --primary-container-color: #fff;
+  --on-primary-container-color: #000;
+  // secondary colors
+  --secondary-color: #fff;
+  --on-secondary-color: #000;
+  --secondary-container-color: #000;
+  --on-secondary-container-color: #fff;
+  // tertiary colors
+  --tertiary-color: #08dbbe;
+  --on-tertiary-color: #fff;
+  --tertiary-container-color: #fff;
+  --on-tertiary-container-color: #08dbbe;
+  // general colors
+  --link-color: #4995ef;
+  --neutral-color: #fff;
+  --on-neutral-color: #000;
+  // font families
+  --font-family-primary: "Source Code Pro", monospace;
+  --font-family-secondary: "Open Sans", sans-serif;
+  --font-family-monospace: "Red Hat Mono", monospace;
+}
