@@ -37,6 +37,11 @@ surge:
 	@jekyll build
 	@surge _site/ corbtastik-yolo-$(SURGE_NAME).surge.sh
 # -----------------------------------------------------------------------------
+# Publish all syntax-theme samples to surge.sh
+# -----------------------------------------------------------------------------
+surge-syntax:
+	@echo "Deloying all syntax-theme samples to surge.sh"
+# -----------------------------------------------------------------------------
 # Create new Yolo sites
 # -----------------------------------------------------------------------------
 starter:
