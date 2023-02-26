@@ -1,0 +1,49 @@
+// ----------------------------------------------------------------------------
+// dusk theme
+// ----------------------------------------------------------------------------
+:root[light] {
+  // primary colors
+  --primary-color: #fff3eb;
+  --on-primary-color: #20142e;
+  --primary-container-color: #380749;
+  --on-primary-container-color: #f45e02;
+  // secondary colors  
+  --secondary-color: #d40278;
+  --on-secondary-color: #fcd9ef;
+  --secondary-container-color: #2e2157;
+  --on-secondary-container-color: #ffd0b2;
+  // tertiary colors  
+  --tertiary-color: #f45e02;
+  --on-tertiary-color: #fff3eb;
+  // general colors  
+  --link-color: #00a0ff;
+  --neutral-color: #212121;
+  --on-neutral-color: #e0e0e0;  
+  // font families  
+  --font-family-primary: "Red Hat Mono", monospace;
+  --font-family-secondary: "Red Hat Text", sans-serif;
+  --font-family-monospace: "Source Code Pro", monospace;
+}
+:root[dark] {
+  // primary colors
+  --primary-color: #20142e;
+  --on-primary-color: #f549b3;
+  --primary-container-color: #460a5b;
+  --on-primary-container-color: #fe6c11;
+  // secondary colors  
+  --secondary-color: #b5036a;
+  --on-secondary-color: #0d0221;
+  --secondary-container-color: #2e2157;
+  --on-secondary-container-color: #ffd0b2;
+  // tertiary colors  
+  --tertiary-color: #fe6c11;
+  --on-tertiary-color: #0d0221;
+  // general colors  
+  --link-color: #b2feff;
+  --neutral-color: #e0e0e0;
+  --on-neutral-color: #212121;  
+  // font families  
+  --font-family-primary: "Red Hat Mono", monospace;
+  --font-family-secondary: "Red Hat Text", sans-serif;
+  --font-family-monospace: "Source Code Pro", monospace;
+}

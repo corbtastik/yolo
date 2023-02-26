@@ -96,18 +96,18 @@ echo "======================================================================="
 #------------------------------------------------------------------------------
 # Execute save commands
 #------------------------------------------------------------------------------
-cp ./index.md $(echo $SAVE_INDEX_FILE)
-cp ./_config.yml $(echo $SAVE_CONFIG_FILE)
-cp $(echo $SAVE_THEME_FILE) ./src/samples/$SAVE_SITE/_sass/yolo/themes/
-cp $(echo $SAVE_DATA_FILES) ./src/samples/$SAVE_SITE/_data/
-cp $(echo $SAVE_IMAGE_FILES) ./src/samples/$SAVE_SITE/assets/images/
-cp ./yolo.json ./src/samples/$SAVE_SITE/
+# cp ./index.md $(echo $SAVE_INDEX_FILE)
+# cp ./_config.yml $(echo $SAVE_CONFIG_FILE)
+# cp $(echo $SAVE_THEME_FILE) ./src/samples/$SAVE_SITE/_sass/yolo/themes/
+# cp $(echo $SAVE_DATA_FILES) ./src/samples/$SAVE_SITE/_data/
+# cp $(echo $SAVE_IMAGE_FILES) ./src/samples/$SAVE_SITE/assets/images/
+# cp ./yolo.json ./src/samples/$SAVE_SITE/
 #------------------------------------------------------------------------------
 # Execute open commands
 #------------------------------------------------------------------------------
-cp $(echo $OPEN_INDEX_FILE) ./index.md
-cp $(echo $OPEN_CONFIG_FILE) ./_config.yml
-cp $(echo $OPEN_THEME_FILE) ./_sass/yolo/themes/
-cp $(echo $OPEN_DATA_FILES) _data/
-cp $(echo $OPEN_IMAGE_FILES) ./assets/images/
-cp ./src/samples/$OPEN_SITE/yolo.json ./
+# cp $(echo $OPEN_INDEX_FILE) ./index.md
+# cp $(echo $OPEN_CONFIG_FILE) ./_config.yml
+# cp $(echo $OPEN_THEME_FILE) ./_sass/yolo/themes/
+# cp $(echo $OPEN_DATA_FILES) _data/
+# cp $(echo $OPEN_IMAGE_FILES) ./assets/images/
+# cp ./src/samples/$OPEN_SITE/yolo.json ./

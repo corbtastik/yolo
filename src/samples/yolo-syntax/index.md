@@ -14,6 +14,7 @@ The following `syntax-theme(s)` are provided out-of-the-box.
 | Syntax Theme                                            | Description                            |
 |---------------------------------------------------------|----------------------------------------|
 | [dracula](https://corbtastik-yolo-dracula.surge.sh)     | A theme for Transylvanian vampires     |
+| [dusk](https://corbtastik-yolo-dusk.surge.sh)           | A sunset lovers theme                  |
 | [monokai](https://corbtastik-yolo-monokai.surge.sh)     | The classic theme for focusing         |
 | [neon](https://corbtastik-yolo-neon.surge.sh)           | A bright fluorescent dark theme        |
 | [newspaper](https://corbtastik-yolo-newspaper.surge.sh) | Read all about this greyscale theme    |

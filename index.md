@@ -85,7 +85,6 @@ Each key color has 1 corresponding "_container_" color, which represents a conta
 
 {% include flexbox.html columns="1" fill="primary-container-color" %}
 {% include flexbox.html columns="1" fill="secondary-container-color" %}
-{% include flexbox.html columns="1" fill="tertiary-container-color" %}
 
 ---
 
@@ -101,7 +100,6 @@ On colors are for elements that are placed "_on_" the corresponding key or conta
 {% include flexbox.html columns="1" fill="on-secondary-color" %}
 {% include flexbox.html columns="1" fill="on-secondary-container-color" %}
 {% include flexbox.html columns="1" fill="on-tertiary-color" %}
-{% include flexbox.html columns="1" fill="on-tertiary-container-color" %}
 
 ---
 

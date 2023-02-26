@@ -6,7 +6,8 @@ version: v1.3
 title: Dallas is a jewel
 description: Dallas is a beautiful sight...
 theme:
-  name: corbs
+  name: neon
+  syntax: neon
 align: left
 header:
   logo: assets/images/logo.png
