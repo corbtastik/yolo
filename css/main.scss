@@ -3,12 +3,10 @@
 ---
 @charset "utf-8";
 
-@import "yolo/variables";
+@import "yolo/base/_all";
 @import "yolo/themes/{{ site.data.settings.theme.name | default: 'yolo' }}";
 @import "yolo/syntax-themes/{{ site.data.settings.theme.syntax | default: 'yolo' }}";
 @import "yolo/theme";
-@import "yolo/normalize";
-@import "yolo/base";
 @import "yolo/responsiveness";
 @import "yolo/layout";
 @import "yolo/typography";
