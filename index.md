@@ -236,7 +236,7 @@ The following `syntax-theme(s)` are provided out-of-the-box.
 |---------------------------------------------------------|----------------------------------------|
 | [dracula](https://corbtastik-yolo-dracula.surge.sh)     | A theme for Transylvanian vampires     |
 | [monokai](https://corbtastik-yolo-monokai.surge.sh)     | The classic theme for focusing         |
-| [neon](https://corbtastik-yolo-neon.surge.sh)           | A bright fluorescent dark theme        |
+| [neo](https://corbtastik-yolo-neo.surge.sh)             | A bright fluorescent theme             |
 | [newspaper](https://corbtastik-yolo-newspaper.surge.sh) | Read all about this greyscale theme    |
 | [reveal](https://corbtastik-yolo-reveal.surge.sh)       | A theme for big reveals                |
 | [solo](https://corbtastik-yolo-solo.surge.sh)           | Minimal black and white theme          |

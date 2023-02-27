@@ -1,0 +1,49 @@
+// ----------------------------------------------------------------------------
+// nono theme
+// ----------------------------------------------------------------------------
+:root[light] {
+  // primary colors
+  --primary-color: default;
+  --on-primary-color: default;
+  --primary-container-color: default;
+  --on-primary-container-color: default;
+  // secondary colors
+  --secondary-color: default;
+  --on-secondary-color: default;
+  --secondary-container-color: default;
+  --on-secondary-container-color: default;
+  // tertiary colors
+  --tertiary-color: default;
+  --on-tertiary-color: default;
+  // general colors
+  --link-color: #4597ff;
+  --neutral-color: default;
+  --on-neutral-color: default;
+  // font families
+  --font-family-primary: "Red Hat Mono", monospace;
+  --font-family-secondary: "Red Hat Text", sans-serif;
+  --font-family-monospace: "Red Hat Mono", monospace;
+}
+:root[dark] {
+  // primary colors
+  --primary-color: default;
+  --on-primary-color: default;
+  --primary-container-color: default;
+  --on-primary-container-color: default;
+  // secondary colors
+  --secondary-color: default;
+  --on-secondary-color: default;
+  --secondary-container-color: default;
+  --on-secondary-container-color: default;
+  // tertiary colors
+  --tertiary-color: default;
+  --on-tertiary-color: default;
+  // general colors
+  --link-color: #4597ff;
+  --neutral-color: default;
+  --on-neutral-color: default;
+  // font families
+  --font-family-primary: "Red Hat Mono", monospace;  
+  --font-family-secondary: "Red Hat Text", sans-serif;
+  --font-family-monospace: "Red Hat Mono", monospace;
+}
