@@ -36,7 +36,7 @@ techies, and picture taking folk.
 
 You need [jekyll](https://jekyllrb.com/).
 
-{% include code.html label="Get Yolo" %}
+{% include components/code.html label="Get Yolo" %}
 ```bash
 git clone https://github.com/corbtastik/yolo.git
 cd yolo
@@ -44,7 +44,7 @@ jekyll build
 jekyll serve
 ```
 
-{% include arrow.html link="#howdy" %}
+{% include components/arrow.html link="#howdy" %}
 
 ---
 
@@ -69,9 +69,9 @@ Key colors provide the foundation of your theme and should [contrast](https://en
 
 There are __3__ key color variables for both __light__ and __dark__ modes.
 
-{% include flexbox.html columns="1" fill="primary-color" %}
-{% include flexbox.html columns="1" fill="secondary-color" %}
-{% include flexbox.html columns="1" fill="tertiary-color" %}
+{% include components/flexbox.html columns="1" fill="primary-color" %}
+{% include components/flexbox.html columns="1" fill="secondary-color" %}
+{% include components/flexbox.html columns="1" fill="tertiary-color" %}
 
 ---
 
@@ -83,8 +83,8 @@ Each key color has 1 corresponding "_container_" color, which represents a conta
 > __Note:__ The `primary-container-color` is applied to the background of code blocks, and blockquotes such as this.
 > > Thus, if your `primary-color` is white, then you might select a grey color for the `primary-container-color` to create a slight contrast between the two.
 
-{% include flexbox.html columns="1" fill="primary-container-color" %}
-{% include flexbox.html columns="1" fill="secondary-container-color" %}
+{% include components/flexbox.html columns="1" fill="primary-container-color" %}
+{% include components/flexbox.html columns="1" fill="secondary-container-color" %}
 
 ---
 
@@ -95,11 +95,11 @@ On colors are for elements that are placed "_on_" the corresponding key or conta
 
 > __Example:__ If your `primary-color` is white then a logical `on-primary-color` would be black.
 
-{% include flexbox.html columns="1" fill="on-primary-color" %}
-{% include flexbox.html columns="1" fill="on-primary-container-color" %}
-{% include flexbox.html columns="1" fill="on-secondary-color" %}
-{% include flexbox.html columns="1" fill="on-secondary-container-color" %}
-{% include flexbox.html columns="1" fill="on-tertiary-color" %}
+{% include components/flexbox.html columns="1" fill="on-primary-color" %}
+{% include components/flexbox.html columns="1" fill="on-primary-container-color" %}
+{% include components/flexbox.html columns="1" fill="on-secondary-color" %}
+{% include components/flexbox.html columns="1" fill="on-secondary-container-color" %}
+{% include components/flexbox.html columns="1" fill="on-tertiary-color" %}
 
 ---
 
@@ -110,16 +110,16 @@ Links are prominent on web pages, so it gets its own variable - [link-color](htt
 
 > __Note:__ Generally, it's a good idea to have a distinct color, consistency applied to links.
 
-{% include flexbox.html columns="1" fill="link-color" %}
+{% include components/flexbox.html columns="1" fill="link-color" %}
 
 The `neutral-color` and `on-neutral-color` variables are general use colors.
 
 > __Note:__ As mentioned in the "[On Colors](#on-colors)" section, it's best to have an "on" color that contrasts with the underlying color.
 
-{% include flexbox.html columns="1" fill="neutral-color" %}
-{% include flexbox.html columns="1" fill="on-neutral-color" %}
+{% include components/flexbox.html columns="1" fill="neutral-color" %}
+{% include components/flexbox.html columns="1" fill="on-neutral-color" %}
 
-{% include arrow.html link="#howdy" %}
+{% include components/arrow.html link="#howdy" %}
 
 ---
 
@@ -128,9 +128,167 @@ The `neutral-color` and `on-neutral-color` variables are general use colors.
 
 Yolo's fonts can be customized as outlined in [Themes](#themes).
 
-{% include typography.html %}
+#### Three Families
+{:.no-toc}
 
-{% include arrow.html link="#howdy" %}
+Primary Font Family - body and most text
+{:.is-family-primary}
+Secondary Font Family - headers and accent text
+{:.is-family-secondary}
+Monospaced Font Family - code
+{:.is-family-monospace}
+
+##### Primary
+{:.no-toc}
+
+size-7 text
+{:.is-family-primary .is-size-7}
+
+size-6 text
+{:.is-family-primary .is-size-6}
+
+size-5 text
+{:.is-family-primary .is-size-5}
+
+size-4 text
+{:.is-family-primary .is-size-4}
+
+size-3 text
+{:.is-family-primary .is-size-3}
+
+size-2 text
+{:.is-family-primary .is-size-2}
+
+size-1 text
+{:.is-family-primary .is-size-1}
+
+##### Secondary
+{:.no-toc}
+
+size-7 text
+{:.is-family-secondary .is-size-7}
+
+size-6 text
+{:.is-family-secondary .is-size-6}
+
+size-5 text
+{:.is-family-secondary .is-size-5}
+
+size-4 text
+{:.is-family-secondary .is-size-4}
+
+size-3 text
+{:.is-family-secondary .is-size-3}
+
+size-2 text
+{:.is-family-secondary .is-size-2}
+
+size-1 text
+{:.is-family-secondary .is-size-1}
+
+##### Monospace
+{:.no-toc}
+
+size-7 text
+{:.is-family-monospace .is-size-7}
+
+size-6 text
+{:.is-family-monospace .is-size-6}
+
+size-5 text
+{:.is-family-monospace .is-size-5}
+
+size-4 text
+{:.is-family-monospace .is-size-4}
+
+size-3 text
+{:.is-family-monospace .is-size-3}
+
+size-2 text
+{:.is-family-monospace .is-size-2}
+
+size-1 text
+{:.is-family-monospace .is-size-1}
+
+{% include components/arrow.html link="#howdy" %}
+
+---
+
+## Syntax Highlighting
+
+Yolo uses Jekyll's [default syntax highlighting](https://jekyllrb.com/docs/liquid/tags/#code-snippet-highlighting) capabilities provided by [rouge](https://github.com/rouge-ruby/rouge), and adds the ability to use custom `syntax-theme(s)` for light and dark modes.
+
+The following `syntax-theme(s)` are provided out-of-the-box.
+
+| Syntax Theme                                            | Description                            |
+|---------------------------------------------------------|----------------------------------------|
+| [dracula](https://corbtastik-yolo-dracula.surge.sh)     | A theme for Transylvanian vampires     |
+| [monokai](https://corbtastik-yolo-monokai.surge.sh)     | The classic theme for focusing         |
+| [neo](https://corbtastik-yolo-neo.surge.sh)             | A bright fluorescent theme             |
+| [newspaper](https://corbtastik-yolo-newspaper.surge.sh) | Read all about this greyscale theme    |
+| [reveal](https://corbtastik-yolo-reveal.surge.sh)       | A theme for big reveals                |
+| [solo](https://corbtastik-yolo-solo.surge.sh)           | Minimal black and white theme          |
+| [sprinkles](https://corbtastik-yolo-sprinkles.surge.sh) | A theme that pairs well with cup cakes |
+| [yolo](https://corbtastik-yolo.surge.sh)                | The default theme for Yolo sites       |
+
+### Custom Syntax Theme
+{:.no-toc}
+
+1. Creating a custom `syntax-theme` is done by adding a `scss` file into `_sass/yolo/syntax-theme` and setting values for each color property for both __light__ and __dark__ modes.
+2. To enable a specific `syntax-theme` add it to your `settings.yml` file, as shown below.
+
+{% include components/code.html label="Configure the syntax-theme" %}
+```yaml
+# -------------------------------------
+# Yolo site settings
+# -------------------------------------
+name: Yolo
+title: Yolo on my friend
+description: Loveable single pages
+theme:
+  name: neon
+  syntax: neon   # references _sass/yolo/syntax-theme/_neon.scss
+```
+
+### Samples
+{:.no-toc}
+
+> __Tip:__ Click header to copy a snippet.
+
+{% include components/code.html label="Bash snippet" %}
+```bash
+#!/bin/bash
+function say_howdy() {
+  echo "Howdy $1!"
+}
+
+if [ $# -ne 1 ]; then
+    echo "Usage: Howdy <NAME>"
+    exit 1
+fi
+
+# Say Howdy
+say_howdy $1
+```
+
+{% include components/arrow.html link="#howdy" %}
+
+{% include components/code.html label="JavaScript snippet" %}
+```javascript
+function sayHowdy(name) {
+  console.log("Howdy " + name + "!");
+}
+
+if(process.argv.length != 3) {
+  console.log("Usage: Howdy <NAME>");
+  process.exit(1);
+}
+
+// Say Howdy
+sayHowdy(process.argv[2]);
+```
+
+{% include components/arrow.html link="#howdy" %}
 
 ---
 
@@ -153,7 +311,7 @@ Yolo's fonts can be customized as outlined in [Themes](#themes).
 ###### H6 Heading
 {:.no-toc}
 
-{% include arrow.html link="#howdy" %}
+{% include components/arrow.html link="#howdy" %}
 
 ---
 
@@ -161,7 +319,7 @@ Yolo's fonts can be customized as outlined in [Themes](#themes).
 
 [Baseball](https://en.wikipedia.org/wiki/Baseball) is a bat-and-ball sport played between two teams of nine players each, taking turns batting and fielding. The game is in play when a player on the fielding team, called the pitcher, throws a ball that a player on the batting team tries to hit with a bat. The objective of the offensive team (batting team) is to hit the ball into the field of play, away from the other team's players, allowing its players to run the bases, having them advance counter-clockwise around four bases to score what are called "runs". - copied from [Wikipedia](https://en.wikipedia.org/wiki/Baseball).
 
-{% include arrow.html link="#howdy" %}
+{% include components/arrow.html link="#howdy" %}
 
 ---
 
@@ -205,7 +363,7 @@ Yolo's fonts can be customized as outlined in [Themes](#themes).
 > 5. __Home Runs:__ Hits where the batter touches all four bases safely.
 > 6. __Batting Average:__ Hits divided by at bats.
 
-{% include arrow.html link="#howdy" %}
+{% include components/arrow.html link="#howdy" %}
 
 ---
 
@@ -222,85 +380,7 @@ Yolo's fonts can be customized as outlined in [Themes](#themes).
 - Subscript <sub>text</sub>
 - Inline code `SELECT * FROM players;`
 
-{% include arrow.html link="#howdy" %}
-
----
-
-## Syntax Highlighting
-
-Yolo uses Jekyll's [default syntax highlighting](https://jekyllrb.com/docs/liquid/tags/#code-snippet-highlighting) capabilities provided by [rouge](https://github.com/rouge-ruby/rouge), and adds the ability to use custom `syntax-theme(s)` for light and dark modes.
-
-The following `syntax-theme(s)` are provided out-of-the-box.
-
-| Syntax Theme                                            | Description                            |
-|---------------------------------------------------------|----------------------------------------|
-| [dracula](https://corbtastik-yolo-dracula.surge.sh)     | A theme for Transylvanian vampires     |
-| [monokai](https://corbtastik-yolo-monokai.surge.sh)     | The classic theme for focusing         |
-| [neon](https://corbtastik-yolo-neon.surge.sh)           | A bright fluorescent dark theme        |
-| [newspaper](https://corbtastik-yolo-newspaper.surge.sh) | Read all about this greyscale theme    |
-| [reveal](https://corbtastik-yolo-reveal.surge.sh)       | A theme for big reveals                |
-| [solo](https://corbtastik-yolo-solo.surge.sh)           | Minimal black and white theme          |
-| [sprinkles](https://corbtastik-yolo-sprinkles.surge.sh) | A theme that pairs well with cup cakes |
-| [yolo](https://corbtastik-yolo.surge.sh)                | The default theme for Yolo sites       |
-
-### Custom Syntax Theme
-{:.no-toc}
-
-1. Creating a custom `syntax-theme` is done by adding a `scss` file into `_sass/yolo/syntax-theme` and setting values for each color property for both __light__ and __dark__ modes.
-2. To enable a specific `syntax-theme` add it to your `settings.yml` file, as shown below.
-
-{% include code.html label="Configure the syntax-theme" %}
-```yaml
-# -------------------------------------
-# Yolo site settings
-# -------------------------------------
-name: Yolo
-title: Yolo on my friend
-description: Loveable single pages
-theme:
-  name: neon
-  syntax: neon   # references _sass/yolo/syntax-theme/_neon.scss
-```
-
-### Samples
-{:.no-toc}
-
-> __Tip:__ Click header to copy a snippet.
-
-{% include code.html label="Bash snippet" %}
-```bash
-#!/bin/bash
-function say_howdy() {
-  echo "Howdy $1!"
-}
-
-if [ $# -ne 1 ]; then
-    echo "Usage: Howdy <NAME>"
-    exit 1
-fi
-
-# Say Howdy
-say_howdy $1
-```
-
-{% include arrow.html link="#howdy" %}
-
-{% include code.html label="JavaScript snippet" %}
-```javascript
-function sayHowdy(name) {
-  console.log("Howdy " + name + "!");
-}
-
-if(process.argv.length != 3) {
-  console.log("Usage: Howdy <NAME>");
-  process.exit(1);
-}
-
-// Say Howdy
-sayHowdy(process.argv[2]);
-```
-
-{% include arrow.html link="#howdy" %}
+{% include components/arrow.html link="#howdy" %}
 
 ---
 
@@ -326,7 +406,7 @@ sayHowdy(process.argv[2]);
 3. Dale Murphy
 4. Mookie Wilson
 
-{% include arrow.html link="#howdy" %}
+{% include components/arrow.html link="#howdy" %}
 
 ---
 
@@ -358,7 +438,7 @@ sayHowdy(process.argv[2]);
 | `git status` |  `git status`  |  `git status` |
 | `git diff`   |   `git diff`   |    `git diff` |
 
-{% include arrow.html link="#howdy" %}
+{% include components/arrow.html link="#howdy" %}
 
 ---
 
@@ -366,7 +446,7 @@ sayHowdy(process.argv[2]);
 
 > Images added via markdown receive styling from the `<img>` element, they're not styled with `yolo` classes.
 
-{% include code.html label="Markdown images" %}
+{% include components/code.html label="Markdown images" %}
 {% raw %}
 ```markdown
 ![Moonie Moonpie](assets/images/moonpie.png "Sweet Moonpie")
@@ -378,7 +458,7 @@ sayHowdy(process.argv[2]);
 
 ![BIG yawn Bucky](assets/images/bucky.png "Sleepy Bucky")
 
-{% include arrow.html link="#howdy" %}
+{% include components/arrow.html link="#howdy" %}
 
 ---
 
@@ -401,7 +481,7 @@ classes="thumbnail"
 src="https://storage.googleapis.com/corbs-foto/yolo/yolo/big-face-bucky.png"
 %}
 
-{% include arrow.html link="#howdy" %}
+{% include components/arrow.html link="#howdy" %}
 
 ---
 
@@ -417,7 +497,7 @@ classes="image is-256"
 src="https://storage.googleapis.com/corbs-foto/yolo/yolo/drive-in.png"
 %}
 
-{% include arrow.html link="#howdy" %}
+{% include components/arrow.html link="#howdy" %}
 
 ---
 
@@ -434,7 +514,7 @@ classes="is-circle-256"
 src="https://storage.googleapis.com/corbs-foto/yolo/yolo/big-face-bucky.png"
 %}
 
-{% include arrow.html link="#howdy" %}
+{% include components/arrow.html link="#howdy" %}
 
 ---
 
@@ -451,7 +531,7 @@ classes="image is-256-by-192"
 src="https://storage.googleapis.com/corbs-foto/yolo/yolo/bluebonnet.png"
 %}
 
-{% include arrow.html link="#howdy" %}
+{% include components/arrow.html link="#howdy" %}
 
 ---
 
@@ -468,7 +548,7 @@ classes="image is-240-by-320"
 src="https://storage.googleapis.com/corbs-foto/yolo/yolo/bluebonnet.png"
 %}
 
-{% include arrow.html link="#howdy" %}
+{% include components/arrow.html link="#howdy" %}
 
 ---
 
@@ -485,7 +565,7 @@ classes="image is-256-by-144"
 src="https://storage.googleapis.com/corbs-foto/yolo/yolo/bluebonnet.png"
 %}
 
-{% include arrow.html link="#howdy" %}
+{% include components/arrow.html link="#howdy" %}
 
 ---
 
@@ -502,7 +582,7 @@ classes="image is-225-by-400"
 src="https://storage.googleapis.com/corbs-foto/yolo/yolo/bluebonnet.png"
 %}
 
-{% include arrow.html link="#howdy" %}
+{% include components/arrow.html link="#howdy" %}
 
 ---
 
@@ -520,7 +600,7 @@ The Image Grid is similar to the [Lightbox](#image-lightbox), except it shows im
 
 The `_data/ig-images.yml` file is the default data file, just replace with your data to display images.
 
-{% include code.html label="Images from: _data/ig-images.yml" %}
+{% include components/code.html label="Images from: _data/ig-images.yml" %}
 {% raw %}
 ```html
 {% include "image/grid.html" %}
@@ -538,7 +618,7 @@ A custom data file can be added to create an Image Grid.
 * Use the data file name (w/o `.yml` ext) as the value to `ig-data`.
 * Customize the number of columns by setting `ig-columns`.
 
-{% include code.html label="Images from: _data/ig-pets.yml" %}
+{% include components/code.html label="Images from: _data/ig-pets.yml" %}
 {% raw %}
 ```html
 {% include image/grid.html ig-data="ig-pets" ig-columns="2" %}
@@ -547,7 +627,7 @@ A custom data file can be added to create an Image Grid.
 
 {% include image/grid.html ig-data="ig-pets" ig-columns="2" %}
 
-{% include arrow.html link="#howdy" %}
+{% include components/arrow.html link="#howdy" %}
 
 ---
 
@@ -565,7 +645,7 @@ Yolo includes a Lightbox to showcase pics.
 
 The `_data/lb-images.yml` file is the default Lightbox data file, just replace with your data to display images.
 
-{% include code.html label="Images from: _data/lb-images.yml" %}
+{% include components/code.html label="Images from: _data/lb-images.yml" %}
 {% raw %}
 ```html
 {% include image/lightbox.html %}
@@ -582,7 +662,7 @@ A custom data file can be added to create a Lightbox.
 * Create a new file in `_data` and prefix name with `lb-`.
 * Use the data file name (w/o `.yml` ext) as the value to `lb-data`.
 
-{% include code.html label="Images from: _data/lb-marfa.yml" %}
+{% include components/code.html label="Images from: _data/lb-marfa.yml" %}
 {% raw %}
 ```html
 {% include image/lightbox.html lb-data="lb-marfa" %}
@@ -591,15 +671,15 @@ A custom data file can be added to create a Lightbox.
 
 {% include image/lightbox.html lb-data="lb-marfa" %}
 
-{% include arrow.html link="#howdy" %}
+{% include components/arrow.html link="#howdy" %}
 
 ---
 
 ## Videos
 
-{% include video.html %}
+{% include components/video.html %}
 
-{% include arrow.html link="#howdy" %}
+{% include components/arrow.html link="#howdy" %}
 
 ---
 
@@ -616,46 +696,46 @@ Yolo has basic support for embedding Google Slides.
 #### Sample 1
 {:.no-toc}
 
-{% include code.html label="16-by-9 aspect ratio (default)" %}
+{% include components/code.html label="16-by-9 aspect ratio (default)" %}
 {% raw %}
 ```html
-{% include prezo.html title="blinged-macmini" %}
+{% include components/prezo.html title="blinged-macmini" %}
 ```
 {% endraw %}
 
 > Aspect ratio `is-16-by-9`.
 
-{% include prezo.html title="blinged-macmini" %}
+{% include components/prezo.html title="blinged-macmini" %}
 
 #### Sample 2
 {:.no-toc}
 
-{% include code.html label="4-by-3 aspect ratio" %}
+{% include components/code.html label="4-by-3 aspect ratio" %}
 {% raw %}
 ```html
-{% include prezo.html title="one-awesome-prezo" aspect-ratio="is-4-by-3" %}
+{% include components/prezo.html title="one-awesome-prezo" aspect-ratio="is-4-by-3" %}
 ```
 {% endraw %}
 
 > Aspect ratio `is-4-by-3`.
 
-{% include prezo.html title="one-awesome-prezo" aspect-ratio="is-4-by-3" %}
+{% include components/prezo.html title="one-awesome-prezo" aspect-ratio="is-4-by-3" %}
 
 #### Sample 3
 {:.no-toc}
 
-{% include code.html label="1-by-1 aspect ratio" %}
+{% include components/code.html label="1-by-1 aspect ratio" %}
 {% raw %}
 ```html
-{% include prezo.html title="yolo-on" aspect-ratio="is-1-by-1" %}
+{% include components/prezo.html title="yolo-on" aspect-ratio="is-1-by-1" %}
 ```
 {% endraw %}
 
 > Aspect ratio `is-1-by-1`.
 
-{% include prezo.html title="yolo-on" aspect-ratio="is-1-by-1" %}
+{% include components/prezo.html title="yolo-on" aspect-ratio="is-1-by-1" %}
 
-{% include arrow.html link="#howdy" %}
+{% include components/arrow.html link="#howdy" %}
 
 ---
 
@@ -698,7 +778,7 @@ The Yolo image is a runtime image based on [ubi8-minimal](https://developers.red
 ### Building and running
 {:.no-toc}
 
-{% include code.html label="Podman build and run" %}
+{% include components/code.html label="Podman build and run" %}
 ```bash
 # First build yoloc
 podman build -f ./src/yoloc.Containerfile -t yoloc:latest ./src
@@ -717,13 +797,13 @@ The `Makefile` automates the build and run process, with `make yolo-pod`, which:
 * Creates the `yolo` image to run your site.
 * Starts a yolo container from the `yolo` image, on [http://localhost:9696](http://localhost:9696).
 
-{% include code.html label="Makefile build and run" %}
+{% include components/code.html label="Makefile build and run" %}
 ```bash
 # Build and run with make
 make yolo-pod
 ```
 
-{% include arrow.html link="#howdy" %}
+{% include components/arrow.html link="#howdy" %}
 
 ---
 
@@ -753,4 +833,4 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 ```
 
-{% include arrow.html link="#howdy" %}
+{% include components/arrow.html link="#howdy" %}

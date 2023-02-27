@@ -6,10 +6,10 @@ version: v1.3
 title: Yolo on my friend
 description: Loveable single pages
 theme:
-  name: yolo
-  syntax: yolo
+  name: neo
+  syntax: neo
 align: left
-#header:
+# header:
 #  logo: assets/images/logo.png
 sidebar:
   logo: assets/images/logo.png
