@@ -1,0 +1,49 @@
+// ----------------------------------------------------------------------------
+// nono theme
+// ----------------------------------------------------------------------------
+:root[light] {
+  // primary colors
+  --primary-color: #fff;
+  --on-primary-color: #000;
+  --primary-container-color: #fff;
+  --on-primary-container-color: #000;
+  // secondary colors
+  --secondary-color: #000;
+  --on-secondary-color: #fff;
+  --secondary-container-color: #fff;
+  --on-secondary-container-color: #000;
+  // tertiary colors
+  --tertiary-color: #4597ff;
+  --on-tertiary-color: #fff;
+  // general colors
+  --link-color: #4597ff;
+  --neutral-color: #000;
+  --on-neutral-color: #fff;
+  // font families
+  --font-family-primary: "Red Hat Mono", monospace;
+  --font-family-secondary: "Red Hat Text", sans-serif;
+  --font-family-monospace: "Red Hat Mono", monospace;
+}
+:root[dark] {
+  // primary colors
+  --primary-color: #000;
+  --on-primary-color: #fff;
+  --primary-container-color: #000;
+  --on-primary-container-color: #fff;
+  // secondary colors
+  --secondary-color: #fff;
+  --on-secondary-color: #000;
+  --secondary-container-color: #fff;
+  --on-secondary-container-color: #000;
+  // tertiary colors
+  --tertiary-color: #4597ff;
+  --on-tertiary-color: #000;
+  // general colors
+  --link-color: #4597ff;
+  --neutral-color: #fff;
+  --on-neutral-color: #000;
+  // font families
+  --font-family-primary: "Red Hat Mono", monospace;  
+  --font-family-secondary: "Red Hat Text", sans-serif;
+  --font-family-monospace: "Red Hat Mono", monospace;
+}

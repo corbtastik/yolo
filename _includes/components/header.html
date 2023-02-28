@@ -11,13 +11,13 @@
             <span>
             {% for link in page.links %}
             {% assign linkref = link | split: "," %}
-                <a href="{{ linkref[1] }}" class="pill">{{ linkref[0] }}</a>
+                <a href="{{ linkref[1] }}" class="yolo-pill">{{ linkref[0] }}</a>
             {% endfor %}
             </span>
         </p>
     </div>
     <div class="column">
-        <div class="toggle-flexbox">
+        <div class="toggle-container">
             <div class="toggle-button">
                 <span id="theme-toggle" class="material-icons md-36">light_mode</span>
             </div>

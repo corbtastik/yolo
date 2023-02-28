@@ -1,7 +1,7 @@
 @charset "utf-8";
 // ----------------------------------------------------------------------------
-// Base scss module
+// Core scss module
 // ----------------------------------------------------------------------------
-@import "variables";
-@import "normalize";
-@import "base";
+@import "responsiveness";
+@import "layout";
+@import "typography";

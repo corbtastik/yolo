@@ -1,7 +1,9 @@
 @charset "utf-8";
 // ----------------------------------------------------------------------------
-// Base scss module
+// Components scss module
 // ----------------------------------------------------------------------------
-@import "variables";
-@import "normalize";
-@import "base";
+@import "images";
+@import "lightbox";
+@import "navigation";
+@import "other";
+//@import "sidebar";

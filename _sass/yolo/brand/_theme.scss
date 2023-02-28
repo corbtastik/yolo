@@ -107,10 +107,13 @@
 
   .lb-modal {
     background-color: var(--primary-container-color);
+    .caption {
+      color: var(--on-primary-container-color);
+    }
   }
 
   .lb-close {
-    color: var(--secondary-color);
+    color: var(--on-primary-container-color);
   }
 
   .lb-close:hover,
@@ -145,6 +148,10 @@
     }
   }
 
+  .caption {
+    color: var(--on-primary-color);
+  }
+
   .code-header {
     background-color: var(--secondary-color);
     color: var(--on-secondary-color);
@@ -155,13 +162,13 @@
     }
   }
 
-  .pill {
+  .yolo-pill {
     background-color: var(--secondary-color);
     color: var(--on-secondary-color);
     font-family: var(--font-family-monospace);
   }
 
-  .pill:hover {
+  .yolo-pill:hover {
     background-color: var(--tertiary-color);
     color: var(--on-tertiary-color);
   }

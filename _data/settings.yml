@@ -5,8 +5,8 @@ name: Yolo
 version: v1.3
 title: Yolo on my friend
 description: Loveable single pages
-theme:
-  name: neo
+brand:
+  theme: neo
   syntax: neo
 align: left
 # header:
