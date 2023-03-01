@@ -9,12 +9,12 @@ document.addEventListener("DOMContentLoaded", function() {
    * Selects the highlighter-rouge block that is a sibling of the preceding code-header element.
    * @type {NodeListOf<Element>}
    */
-  const snippetBlocks = document.querySelectorAll('.code-header + .highlighter-rouge');
+  const snippetBlocks = document.querySelectorAll('.yolo-code-header + .highlighter-rouge');
   /**
    * Selects all code-header elements.
    * @type {NodeListOf<Element>}
    */
-  const snippetHeaders = document.querySelectorAll('.code-header');
+  const snippetHeaders = document.querySelectorAll('.yolo-code-header');
 
   snippetHeaders.forEach((element, index) => {
     const code = snippetBlocks[index].innerText;
