@@ -1,0 +1,70 @@
+.flex-item {
+    background-color: #00b3ff;
+    width: 3em;
+    height: 3em;
+    margin: 0.2em;
+    border-radius: 0.2em;
+}
+
+.flex-item.red {
+    background-color: #C12123;
+}
+
+.flex-item.blue {
+    background-color: #254AB9;
+}
+
+.flex-item.yellow {
+    background-color: #FEFF20;
+}
+
+.flex-item.green {
+    background-color: #23C649;
+}
+
+.flex-item.white {
+    background-color: #CDCDCD;
+}
+
+.flex-item.orange {
+    background-color: #CE4B23;
+}
+
+.rubik-cube-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+#site-button-ajax {
+    background-color: var(--secondary-color);
+    color: var(--on-secondary-color);
+    margin-top: 1em;
+    margin-bottom: 1em;
+    border: none;
+    padding: 0.5em;
+    border-radius: 0.25em;
+    width: 8em;
+}
+
+#site-button-ajax:hover {
+    background-color: var(--tertiary-color);
+    color: var(--on-tertiary-color);
+}
+
+#site-button-fetch {
+    background-color: var(--secondary-color);
+    color: var(--on-secondary-color);
+    margin-top: 1em;
+    margin-bottom: 1em;
+    border: none;
+    padding: 0.5em;
+    border-radius: 0.25em;
+    width: 8em;
+}
+
+#site-button-fetch:hover {
+    background-color: var(--tertiary-color);
+    color: var(--on-tertiary-color);
+}

@@ -32,7 +32,7 @@
                  onclick="Yolo.imageGrid('{{ ig_data }}').closeImage('{{ ig_data }}-image-{{ i }}');"
                  alt="{{ ig_image.description }}"
                  src="{{ ig_image.src }}">
-            <div id="{{ ig_data }}-caption-{{ i }}" class="caption">
+            <div id="{{ ig_data }}-caption-{{ i }}" class="yolo-caption">
                 <p>{{ ig_image.description }}</p>
             </div>
             {% endfor %}

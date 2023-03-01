@@ -3,6 +3,11 @@
 // ----------------------------------------------------------------------------
 @import "../base/variables";
 
+.yolo-caption {
+  text-align: center;
+  padding: 1rem;
+}
+
 // Yolo page header
 .yolo-header {
   .logo {
@@ -30,7 +35,7 @@
   text-align: right;
 }
 
-.toggle-container {
+.yolo-toggle-container {
   position: relative;
   display: flex;
   justify-content: flex-end;
@@ -46,14 +51,8 @@
   }
 }
 
-// captioned elements
-.caption {
-  text-align: center;
-  padding: 1rem;
-}
-
 // back to top link
-.back-to-top {
+.yolo-to-top {
   display: block;
   text-align: right;
   text-decoration: none;

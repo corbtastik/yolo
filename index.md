@@ -3,6 +3,10 @@ layout: default
 links:
 - yolo,https://github.com/corbtastik/yolo
 - jekyll,https://jekyllrb.com
+ext_js:
+  - custom
+ext_css:
+  - custom
 ---
 
 ## Howdy
@@ -734,6 +738,97 @@ Yolo has basic support for embedding Google Slides.
 > Aspect ratio `is-1-by-1`.
 
 {% include components/prezo.html title="yolo-on" aspect-ratio="is-1-by-1" %}
+
+{% include components/arrow.html link="#howdy" %}
+
+---
+
+## Custom CSS
+
+You can insert custom CSS styling by adding the names of your `.css` files to the `ext_css` front-matter variable.
+
+{% include components/code.html label="Front Matter for custom CSS" %}
+```yaml
+layout: default
+links:
+  - yolo,https://github.com/corbtastik/yolo
+  - jekyll,https://jekyllrb.com
+ext_css:
+  - custom # CSS filename in /assets/ext/css/ without .css ext
+```
+
+This adds `<link>` elements into `<head>`, __after__ `main.css`.
+
+```html
+<!-- Default site stylesheet -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<!-- Custom stylesheets added by `ext_css` front-matter -->
+<link rel="stylesheet" href="/assets/ext/css/custom.css">
+```
+
+> The `custom.css` file styles a flexbox to look like a Rubik cube.
+
+<div class="rubik-cube-row">
+    <div class="flex-item red"></div>
+    <div class="flex-item yellow"></div>
+    <div class="flex-item green"></div>
+</div>
+<div class="rubik-cube-row">
+    <div class="flex-item blue"></div>
+    <div class="flex-item orange"></div>
+    <div class="flex-item white"></div>
+</div>
+<div class="rubik-cube-row">
+    <div class="flex-item yellow"></div>
+    <div class="flex-item red"></div>
+    <div class="flex-item blue"></div>
+</div>
+
+{% include components/arrow.html link="#howdy" %}
+
+---
+
+## Custom JavaScript
+
+You can add custom JavaScript to a Yolo page by adding front matter as shown below.
+
+{% include components/code.html label="Front Matter for custom JavaScript" %}
+```yaml
+layout: default
+links:
+  - yolo,https://github.com/corbtastik/yolo
+  - jekyll,https://jekyllrb.com
+ext_js:
+  - custom # JavaScript filename in /assets/ext/js/ without .js ext
+```
+
+This adds the following `<script>` tag before the closing `</body>` tag.
+
+```html
+<body>
+    <!-- Your post content here -->
+    <script src="/assets/ext/js/custom.js"></script>
+</body>
+```
+
+The `custom.js` includes functions to make requests for [`site.json`](/site.json) (_located at the site root_) and then displays the response.
+
+* The first function uses [XMLHttpRequest](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest).
+* The second function uses [Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API).
+
+### XMLHttpRequest sample
+{:.no-toc}
+
+<button id="site-button-ajax" type="button">
+    Yolo Info (AJAX)
+</button>
+
+### Fetch API sample
+{:.no-toc}
+
+<button id="site-button-fetch" type="button">
+    Yolo Info (Fetch)
+</button>
 
 {% include components/arrow.html link="#howdy" %}
 

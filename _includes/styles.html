@@ -1,6 +1,16 @@
+<!-- Fonts -->
 {% if site.data.fonts.size > 0 %}
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family={% for font in site.data.fonts %}{{ font.name | replace: ' ', '+' }}{% if font.weights %}:{% endif %}{{ font.weights | remove: ' ' }}{% if forloop.last != true %}|{% endif %}{% endfor %}">
 {% endif %}
-<link rel="stylesheet" href="css/main.css">
+<!-- Material Icons -->
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<!-- Main site stylesheet, generated via sass -->
+<link rel="stylesheet" href="{{ '/css/main.css' | relative_url }}" />
+<!-- Add custom css if ext_css front-matter exists -->
+{% if page.ext_css.size > 0 %}
+{% for css_name in page.ext_css %}
+<link rel="stylesheet" href="{{ site.baseurl }}/assets/ext/css/{{ css_name }}.css" />
+{% endfor %}
+{% endif %}

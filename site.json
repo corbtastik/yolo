@@ -1,0 +1,15 @@
+---
+layout: null
+permalink: site.json
+---
+{
+  "name": "{{ site.data.settings.name }}",
+  "title": "{{ site.data.settings.title }}",
+  "description": "{{ site.data.settings.description }}",
+  "version": "{{ site.data.settings.version }}",
+  "brand": {
+    "theme": "{{ site.data.settings.brand.theme }}",
+    "syntax": "{{ site.data.settings.brand.syntax }}"
+  },
+  "buildDate": "{{ "now" | date: "%Y-%m-%d %H:%M" }}"
+}
