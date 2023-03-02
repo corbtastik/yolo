@@ -67,58 +67,28 @@
     if(document.getElementById(targetId)) {
       document.getElementById(targetId).remove();
     }
-
     // Create an unordered list to render site-info into
-    const element = document.createElement("ul");
-    element.setAttribute("id", targetId);
+    const ulElement = document.createElement("ul");
+    ulElement.setAttribute("id", targetId);
     // Get the parent element
     const parent = document.getElementById(buttonId).parentElement;
     // Append dynamic data to parent element
-    parent.append(element);
-
+    parent.append(ulElement);
     // Create textNodes for each site-info property
-    const retrievedAtNode = document.createTextNode("Retrieved at: " + new Date().toLocaleString());
-    const nameNode = document.createTextNode("Name: " + siteInfo.name);
-    const titleNode = document.createTextNode("Title: " + siteInfo.title);
-    const descriptionNode = document.createTextNode("Description: " + siteInfo.description);    
-    const versionNode = document.createTextNode("Version: " + siteInfo.version);
-    const brandThemeNode = document.createTextNode("Brand Theme: " + siteInfo.brand.theme);
-    const brandSyntaxNode = document.createTextNode("Brand Syntax: " + siteInfo.brand.syntax);
-    const buildDateNode = document.createTextNode("Build Date: " + siteInfo.buildDate);
-
-    // Add retrieve time first
-    let listItem = document.createElement("li");
-    listItem.appendChild(retrievedAtNode);
-    document.getElementById(targetId).appendChild(listItem);
-
-    // Append each list item as a child of the unordered list
-    listItem = document.createElement("li");
-    listItem.appendChild(nameNode);
-    document.getElementById(targetId).appendChild(listItem);
-        
-    listItem = document.createElement("li");
-    listItem.appendChild(titleNode);
-    document.getElementById(targetId).appendChild(listItem);
-
-    listItem = document.createElement("li");
-    listItem.appendChild(descriptionNode);
-    document.getElementById(targetId).appendChild(listItem);
-
-    listItem = document.createElement("li");
-    listItem.appendChild(versionNode);
-    document.getElementById(targetId).appendChild(listItem);
-    
-    listItem = document.createElement("li");
-    listItem.appendChild(brandThemeNode);
-    document.getElementById(targetId).appendChild(listItem);
-
-    listItem = document.createElement("li");
-    listItem.appendChild(brandSyntaxNode);
-    document.getElementById(targetId).appendChild(listItem);
-
-    listItem = document.createElement("li");
-    listItem.appendChild(buildDateNode);
-    document.getElementById(targetId).appendChild(listItem);
+    const textNodes = [
+      document.createTextNode("Retrieved at: " + new Date().toLocaleString()),
+      document.createTextNode("Name: " + siteInfo.name),
+      document.createTextNode("Title: " + siteInfo.title),
+      document.createTextNode("Description: " + siteInfo.description),
+      document.createTextNode("Version: " + siteInfo.version),
+      document.createTextNode("Brand Theme: " + siteInfo.brand.theme),
+      document.createTextNode("Brand Syntax: " + siteInfo.brand.syntax),
+      document.createTextNode("Build Date: " + siteInfo.buildDate)
+    ].forEach((textNode) => {
+      let listItem = document.createElement("li");
+      listItem.appendChild(textNode);
+      ulElement.appendChild(listItem);
+    });
   }
 
   /*

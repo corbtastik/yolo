@@ -749,10 +749,6 @@ You can insert custom CSS styling by adding the names of your `.css` files to th
 
 {% include components/code.html label="Front Matter for custom CSS" %}
 ```yaml
-layout: default
-links:
-  - yolo,https://github.com/corbtastik/yolo
-  - jekyll,https://jekyllrb.com
 ext_css:
   - custom # CSS filename in /assets/ext/css/ without .css ext
 ```
@@ -776,7 +772,7 @@ This adds `<link>` elements into `<head>`, __after__ `main.css`.
 <div class="rubik-cube-row">
     <div class="flex-item blue"></div>
     <div class="flex-item orange"></div>
-    <div class="flex-item white"></div>
+    <div class="flex-item yellow"></div>
 </div>
 <div class="rubik-cube-row">
     <div class="flex-item yellow"></div>
@@ -794,10 +790,6 @@ You can add custom JavaScript to a Yolo page by adding front matter as shown bel
 
 {% include components/code.html label="Front Matter for custom JavaScript" %}
 ```yaml
-layout: default
-links:
-  - yolo,https://github.com/corbtastik/yolo
-  - jekyll,https://jekyllrb.com
 ext_js:
   - custom # JavaScript filename in /assets/ext/js/ without .js ext
 ```
@@ -820,14 +812,14 @@ The `custom.js` includes functions to make requests for [`site.json`](/site.json
 {:.no-toc}
 
 <button id="site-button-ajax" type="button">
-    Yolo Info (AJAX)
+    Site Info (AJAX)
 </button>
 
 ### Fetch API sample
 {:.no-toc}
 
 <button id="site-button-fetch" type="button">
-    Yolo Info (Fetch)
+    Site Info (Fetch)
 </button>
 
 {% include components/arrow.html link="#howdy" %}
