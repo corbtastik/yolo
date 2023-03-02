@@ -52,17 +52,34 @@ jekyll serve
 
 ---
 
-## Themes
+## Branding
+
+Yolo implements "branding" on two fronts, __themes__ and __syntax themes__.
 
 Yolo doesn't implement an "according to hoyle" [gem based theme](https://jekyllrb.com/docs/themes/), but the colors and fonts can be customized as outlined below.
 
 > __Note:__
->   * "Theming" for Yolo is accomplished by providing a custom scss file in `_sass/yolo/themes`. Each theme must specify "light" and "dark" values to support switching between the two modes.
+>   * "Theming" for Yolo is accomplished by providing a custom `scss` file in `_sass/yolo/themes`. Each theme must specify "light" and "dark" values to support switching between the two modes.
 >   * Add font-family in `_data/fonts.yml` to customize what fonts are available.
 
-1. Create a new scss file in `_sass/yolo/themes/`.
+1. Create a new `scss` file in `_sass/yolo/themes/`.
 2. Customize the theme values for light and dark modes.
-3. Enable by setting `theme.name` in `_data/settings.yml`.
+3. Enable by setting `brand.theme` in `_data/settings.yml`.
+
+### Theme Set
+{:.no-toc}
+
+The following __themes__ are included out-of-the-box.
+
+| Theme                                                   | Description                             |
+|---------------------------------------------------------|-----------------------------------------|
+| [domino](https://corbtastik-yolo-domino.surge.sh)       | Ebony and ivory with a touch of green   |
+| [dusk](https://corbtastik-yolo-dusk.surge.sh)           | Reminiscent of a good ole Texas evening |
+| [newspaper](https://corbtastik-yolo-newspaper.surge.sh) | Read all about this greyscale theme     |
+| [newwave](https://corbtastik-yolo-newwave.surge.sh)     | A bright fluorescent 80s'ish theme      |
+| [reveal](https://corbtastik-yolo-reveal.surge.sh)       | A theme for those big reveals           |
+| [rgb](https://corbtastik-yolo-rgb.surge.sh)             | A minimal black and white theme         |
+| [yolo](https://corbtastik-yolo.surge.sh)                | The default theme for Yolo sites        |
 
 ---
 

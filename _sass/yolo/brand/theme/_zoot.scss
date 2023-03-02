@@ -1,0 +1,49 @@
+// ----------------------------------------------------------------------------
+// zoot theme
+// ----------------------------------------------------------------------------
+:root[light] {
+  // primary colors
+  --primary-color: #edf2f4;
+  --on-primary-color: #2b2d43;
+  --primary-container-color: #101119;
+  --on-primary-container-color: #edf2f4;
+  // secondary colors  
+  --secondary-color: #414363;
+  --on-secondary-color: #edf2f4;
+  --secondary-container-color: #edf2f4;
+  --on-secondary-container-color: #414363;
+  // tertiary colors
+  --tertiary-color: #d90529;
+  --on-tertiary-color: #edf2f4;
+  // general colors
+  --link-color: #ef243c;
+  --neutral-color: #212121;
+  --on-neutral-color: #e0e0e0;
+  // font families
+  --font-family-primary: "Red Hat Text", sans-serif;
+  --font-family-secondary: "Red Hat Text", sans-serif;
+  --font-family-monospace: "Red Hat Mono", monospace;
+}
+:root[dark] {
+  // primary colors
+  --primary-color: #101119;
+  --on-primary-color: #f5f5f5;
+  --primary-container-color: #8c041a;
+  --on-primary-container-color: #f5f5f5;
+  // secondary colors  
+  --secondary-color: #fff;
+  --on-secondary-color: #101119;
+  --secondary-container-color: #101119;
+  --on-secondary-container-color: #fff;
+  // tertiary colors
+  --tertiary-color: #fa1137;
+  --on-tertiary-color: #101119;
+  // general colors
+  --link-color: #32cdff;
+  --neutral-color: #e0e0e0;
+  --on-neutral-color: #212121;
+  // font families
+  --font-family-primary: "Red Hat Text", sans-serif;
+  --font-family-secondary: "Red Hat Text", sans-serif;
+  --font-family-monospace: "Red Hat Mono", monospace;
+}
