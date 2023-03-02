@@ -1,0 +1,49 @@
+// ----------------------------------------------------------------------------
+// seaside theme
+// ----------------------------------------------------------------------------
+:root[light] {
+  // primary colors
+  --primary-color: #eefafc;
+  --on-primary-color: #0a3e47;
+  --primary-container-color: #dbf5fa;
+  --on-primary-container-color: #0a3e47;
+  // secondary colors  
+  --secondary-color: #015d8f;
+  --on-secondary-color: #ecf8ff;
+  --secondary-container-color: #ecf8ff;
+  --on-secondary-container-color: #015d8f;
+  // tertiary colors
+  --tertiary-color: #f95838;
+  --on-tertiary-color: #f9e1dc;
+  // general colors
+  --link-color: #0bb4d8;
+  --neutral-color: #212121;
+  --on-neutral-color: #e0e0e0;
+  // font families
+  --font-family-primary: "Poppins", sans-serif;
+  --font-family-secondary: "Raleway", sans-serif;
+  --font-family-monospace: "Source Code Pro", monospace;
+}
+:root[dark] {
+  // primary colors
+  --primary-color: #001b29;
+  --on-primary-color: #eefafc;
+  --primary-container-color: #dbf5fa;
+  --on-primary-container-color: #0a3e47;
+  // secondary colors  
+  --secondary-color: #5de4ff;
+  --on-secondary-color: #001b29;
+  --secondary-container-color: #001b29;
+  --on-secondary-container-color: #90e0ef;
+  // tertiary colors
+  --tertiary-color: #f95838;
+  --on-tertiary-color: #250600;
+  // general colors
+  --link-color: #0692e0;
+  --neutral-color: #e0e0e0;
+  --on-neutral-color: #212121;
+  // font families
+  --font-family-primary: "Poppins", sans-serif;
+  --font-family-secondary: "Raleway", sans-serif;
+  --font-family-monospace: "Source Code Pro", monospace;
+}
