@@ -6,8 +6,8 @@ version: v1.3
 title: Yolo on my friend
 description: Loveable single pages
 brand:
-  theme: zoot
-  syntax: domino
+  theme: wip
+  syntax: newspaper
 align: left
 # header:
 #  logo: assets/images/logo.png

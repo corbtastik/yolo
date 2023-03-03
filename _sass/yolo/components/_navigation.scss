@@ -5,9 +5,20 @@
     list-style-type: none;
     margin-bottom: 0;
     padding: 0.75rem 0.5rem 0;
+
     li {
       margin-bottom: 0.75rem;
+      a {
+        text-decoration: none;
+        &:hover {
+          text-decoration: underline;
+        }
+        &:focus {
+          text-decoration: underline;
+        }
+      }
     }
+
     li:before {
       content: "+ ";
     }

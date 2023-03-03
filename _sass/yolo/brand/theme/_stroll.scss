@@ -1,27 +1,27 @@
 // ----------------------------------------------------------------------------
-// willow theme
+// stroll theme
 // ----------------------------------------------------------------------------
 :root[light] {
   // primary colors
-  --primary-color: #f0faf2;
-  --on-primary-color: #062319;
-  --primary-container-color: #0c4534;
-  --on-primary-container-color: #f0faf2;
+  --primary-color: #ffd166;
+  --on-primary-color: #083b4c;
+  --primary-container-color: #ef486f;
+  --on-primary-container-color: #fdecf0;
   // secondary colors  
-  --secondary-color: #114b5f;
-  --on-secondary-color: #eef8fd;
-  --secondary-container-color: #eef8fd;
-  --on-secondary-container-color: #114b5f;
+  --secondary-color: #083b4c;
+  --on-secondary-color: #ffd166;
+  --secondary-container-color: #ffd166;
+  --on-secondary-container-color: #083b4c;
   // tertiary colors
-  --tertiary-color: #4bbf64;
-  --on-tertiary-color: #f0faf2;
+  --tertiary-color: #9e0159;
+  --on-tertiary-color: #083b4c;
   // general colors
-  --link-color: #30afda;
+  --link-color: #138ab2;
   --neutral-color: #212121;
   --on-neutral-color: #e0e0e0;
   // font families
   --font-family-primary: "Poppins", sans-serif;
-  --font-family-secondary: "Raleway", sans-serif;
+  --font-family-secondary: "Montserrat", sans-serif;
   --font-family-monospace: "Source Code Pro", monospace;
 }
 :root[dark] {
@@ -44,6 +44,6 @@
   --on-neutral-color: #e0e0e0;
   // font families
   --font-family-primary: "Poppins", sans-serif;
-  --font-family-secondary: "Raleway", sans-serif;
+  --font-family-secondary: "Montserrat", sans-serif;
   --font-family-monospace: "Source Code Pro", monospace;
 }

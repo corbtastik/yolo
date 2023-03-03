@@ -88,6 +88,15 @@
   .yolo-header {
     .tag {
       color: var(--on-primary-color);
+      a {
+        color: var(--on-primary-color);
+        &:hover {
+          color: var(--tertiary-color);
+        }
+        &:focus {
+          color: var(--tertiary-color);
+        }
+      }
     }
     .description {
       color: var(--tertiary-color);
@@ -176,16 +185,26 @@
   .sidebar {
     background-color: var(--primary-container-color);
     color: var(--on-primary-container-color);
-    
     .nav-menu {
       ul {
+        li {
+          a {
+            color: var(--on-primary-container-color);
+            &:hover {
+              color: var(--on-primary-color);
+            }
+            &:focus {
+              color: var(--on-primary-color);
+            }
+          }
+        }
         li::before {
           color: var(--on-primary-container-color);
         }
         li::marker {
           color: var(--on-primary-container-color);
         }
-      } 
+      }
     }
   }
 
