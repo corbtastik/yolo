@@ -1,0 +1,49 @@
+// ----------------------------------------------------------------------------
+// green theme
+// ----------------------------------------------------------------------------
+:root[light] {
+  // primary colors
+  --primary-color: #f4fff4;
+  --on-primary-color: #006e2e;
+  --primary-container-color: #00c854;
+  --on-primary-container-color: #f4fff4;
+  // secondary colors  
+  --secondary-color: #00c854;
+  --on-secondary-color: #f4fff4;
+  --secondary-container-color: #f4fff4;
+  --on-secondary-container-color: #00c854;
+  // tertiary colors
+  --tertiary-color: #008343;
+  --on-tertiary-color: #f4fff4;
+  // general colors
+  --link-color: #000;
+  --neutral-color: #212121;
+  --on-neutral-color: #e0e0e0;
+  // font families
+  --font-family-primary: "Poppins", sans-serif;
+  --font-family-secondary: "Red Hat Text", sans-serif;
+  --font-family-monospace: "Source Code Pro", monospace;
+}
+:root[dark] {
+  // primary colors
+  --primary-color: #00a344;
+  --on-primary-color: #f4fff4;
+  --primary-container-color: #f4fff4;
+  --on-primary-container-color: #00a344;
+  // secondary colors  
+  --secondary-color: #f4fff4;
+  --on-secondary-color: #00a344;
+  --secondary-container-color: #00a344;
+  --on-secondary-container-color: #f4fff4;
+  // tertiary colors
+  --tertiary-color: #11ff89;
+  --on-tertiary-color: #00a344;
+  // general colors
+  --link-color: #000;
+  --neutral-color: #212121;
+  --on-neutral-color: #e0e0e0;
+  // font families
+  --font-family-primary: "Poppins", sans-serif;
+  --font-family-secondary: "Red Hat Text", sans-serif;
+  --font-family-monospace: "Source Code Pro", monospace;
+}

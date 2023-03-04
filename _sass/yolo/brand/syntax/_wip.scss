@@ -1,0 +1,172 @@
+// ----------------------------------------------------------------------------
+// wip syntax theme for testing work-in-progess
+// ----------------------------------------------------------------------------
+:root[light] {
+  --syntax-text: #000;
+  --syntax-container-color: #fff;
+
+  --syntax-error: #000;
+  --syntax-punctuation: #000;
+  --syntax-text-whitespace: #000;
+
+  --syntax-comment-hashbang: #000;
+  --syntax-comment-multiline: #000;
+  --syntax-comment-preproc: #000;
+  --syntax-comment-preprocfile: #000;
+  --syntax-comment-single: #000;
+  --syntax-comment-special: #000;
+  --syntax-comment: #000;
+
+  --syntax-generic-deleted: #000;
+  --syntax-generic-emph: #000;
+  --syntax-generic-error: #000;
+  --syntax-generic-heading: #000;
+  --syntax-generic-inserted: #000;
+  --syntax-generic-output: #000;
+  --syntax-generic-prompt: #000;
+  --syntax-generic-strong: #000;
+  --syntax-generic-subheading: #000;
+  --syntax-generic-traceback: #000;
+
+  --syntax-keyword-constant: #000;
+  --syntax-keyword-declaration: #000;
+  --syntax-keyword-namespace: #000;
+  --syntax-keyword-pseudo: #000;
+  --syntax-keyword-reserved: #000;
+  --syntax-keyword-type: #000;
+  --syntax-keyword: #000;
+
+  --syntax-literal-date: #000;
+  --syntax-literal: #000;
+
+  --syntax-name-attribute: #000;
+  --syntax-name-builtin-pseudo: #000;
+  --syntax-name-builtin: #000;
+  --syntax-name-class: #000;
+  --syntax-name-constant: #000;
+  --syntax-name-decorator: #000;
+  --syntax-name-entity: #000;
+  --syntax-name-exception: #000;
+  --syntax-name-function-magic: #000;
+  --syntax-name-function: #000;
+  --syntax-name-label: #000;
+  --syntax-name-namespace: #000;
+  --syntax-name-other: #000;
+  --syntax-name-tag: #000;
+  --syntax-name-variable-class: #000;
+  --syntax-name-variable-global: #000;
+  --syntax-name-variable-instance: #000;
+  --syntax-name-variable: #000;
+  --syntax-name: #000;
+
+  --syntax-number-bin: #000;
+  --syntax-number-float: #000;
+  --syntax-number-hex: #000;
+  --syntax-number-integer-long: #000;
+  --syntax-number-integer: #000;
+  --syntax-number-oct: #000;
+  --syntax-number: #000;
+
+  --syntax-operator-word: #000;
+  --syntax-operator: #000;
+
+  --syntax-string-affix: #000;
+  --syntax-string-backtick: #000;
+  --syntax-string-char: #000;
+  --syntax-string-delimiter: #000;
+  --syntax-string-doc: #000;
+  --syntax-string-double: #000;
+  --syntax-string-escape: #000;
+  --syntax-string-heredoc: #000;
+  --syntax-string-interpol: #000;
+  --syntax-string-other: #000;
+  --syntax-string-regex: #000;
+  --syntax-string-single: #000;
+  --syntax-string-symbol: #000;
+  --syntax-string: #000;
+}
+:root[dark] {
+  --syntax-text: #fff;
+  --syntax-container-color: #000;
+
+  --syntax-error: #fff;
+  --syntax-punctuation: #fff;
+  --syntax-text-whitespace: #fff;
+
+  --syntax-comment-hashbang: #fff;
+  --syntax-comment-multiline: #fff;
+  --syntax-comment-preproc: #fff;
+  --syntax-comment-preprocfile: #fff;
+  --syntax-comment-single: #fff;
+  --syntax-comment-special: #fff;
+  --syntax-comment: #fff;
+
+  --syntax-generic-deleted: #fff;
+  --syntax-generic-emph: #fff;
+  --syntax-generic-error: #fff;
+  --syntax-generic-heading: #fff;
+  --syntax-generic-inserted: #fff;
+  --syntax-generic-output: #fff;
+  --syntax-generic-prompt: #fff;
+  --syntax-generic-strong: #fff;
+  --syntax-generic-subheading: #fff;
+  --syntax-generic-traceback: #fff;
+
+  --syntax-keyword-constant: #fff;
+  --syntax-keyword-declaration: #fff;
+  --syntax-keyword-namespace: #fff;
+  --syntax-keyword-pseudo: #fff;
+  --syntax-keyword-reserved: #fff;
+  --syntax-keyword-type: #fff;
+  --syntax-keyword: #fff;
+
+  --syntax-literal-date: #fff;
+  --syntax-literal: #fff;
+
+  --syntax-name-attribute: #fff;
+  --syntax-name-builtin-pseudo: #fff;
+  --syntax-name-builtin: #fff;
+  --syntax-name-class: #fff;
+  --syntax-name-constant: #fff;
+  --syntax-name-decorator: #fff;
+  --syntax-name-entity: #fff;
+  --syntax-name-exception: #fff;
+  --syntax-name-function-magic: #fff;
+  --syntax-name-function: #fff;
+  --syntax-name-label: #fff;
+  --syntax-name-namespace: #fff;
+  --syntax-name-other: #fff;
+  --syntax-name-tag: #fff;
+  --syntax-name-variable-class: #fff;
+  --syntax-name-variable-global: #fff;
+  --syntax-name-variable-instance: #fff;
+  --syntax-name-variable: #fff;
+  --syntax-name: #fff;
+
+  --syntax-number-bin: #fff;
+  --syntax-number-float: #fff;
+  --syntax-number-hex: #fff;
+  --syntax-number-integer-long: #fff;
+  --syntax-number-integer: #fff;
+  --syntax-number-oct: #fff;
+  --syntax-number: #fff;
+
+  --syntax-operator-word: #fff;
+  --syntax-operator: #fff;
+
+  --syntax-string-affix: #fff;
+  --syntax-string-backtick: #fff;
+  --syntax-string-char: #fff;
+  --syntax-string-delimiter: #fff;
+  --syntax-string-doc: #fff;
+  --syntax-string-double: #fff;
+  --syntax-string-escape: #fff;
+  --syntax-string-heredoc: #fff;
+  --syntax-string-interpol: #fff;
+  --syntax-string-other: #fff;
+  --syntax-string-regex: #fff;
+  --syntax-string-single: #fff;
+  --syntax-string-symbol: #fff;
+  --syntax-string: #fff;
+}
+

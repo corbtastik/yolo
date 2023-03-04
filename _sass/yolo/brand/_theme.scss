@@ -27,8 +27,50 @@
     border-bottom-right-radius: .25rem;
     background-color: var(--primary-container-color);
     color: var(--on-primary-container-color);
+    h1, h2, h3, h4, h5, h6 {
+      color: var(--on-primary-container-color);
+    }
     b, strong, em, abbr, cite, del, ins, sup, sub, code {
       color: var(--on-primary-container-color);
+    }
+    ul {
+      li::before {
+        color: var(--on-primary-container-color);
+      }
+      li::marker {
+        color: var(--on-primary-container-color);
+      }
+    }
+
+    ol {
+      li::marker {
+        color: var(--on-primary-container-color);
+      }
+    }
+    table {
+      background-color: var(--primary-container-color);
+      border: 1px solid var(--on-primary-container-color);
+      th {
+        background-color: var(--on-primary-container-color);
+        color: var(--primary-container-color);
+      }
+      th:not(:last-child),
+      td:not(:last-child) {
+        border-right: 1px solid var(--on-primary-container-color);
+      }
+      thead>tr:not(:last-child)>th,
+      thead>tr:not(:last-child)>td,
+      tbody>tr:not(:last-child)>th,
+      tbody>tr:not(:last-child)>td,
+      tfoot>tr:not(:last-child)>th,
+      tfoot>tr:not(:last-child)>td,
+      tr:not(:last-child)>td,
+      tr:not(:last-child)>th,
+      thead:not(:last-child),
+      tbody:not(:last-child),
+      tfoot:not(:last-child) {
+        border-bottom: 1px solid var(--on-primary-container-color);
+      }
     }
     .highlighter-rouge, .highlight {
       color: var(--on-primary-container-color);
@@ -122,12 +164,12 @@
   }
 
   .lb-close {
-    color: var(--on-primary-container-color);
+    color: var(--tertiary-color);
   }
 
   .lb-close:hover,
   .lb-close:focus {
-    color: var(--tertiary-color);
+    color: var(--link-color);
   }
 
   .lb-nav {
@@ -191,10 +233,10 @@
           a {
             color: var(--on-primary-container-color);
             &:hover {
-              color: var(--on-primary-color);
+              color: var(--link-color);
             }
             &:focus {
-              color: var(--on-primary-color);
+              color: var(--link-color);
             }
           }
         }

@@ -375,14 +375,33 @@ sayHowdy(process.argv[2]);
 ### Blockquote w/ markdown
 {:.no-toc}
 
-> ### Baseball Statistics
+> #### Embedded Markdown
 > {:.no-toc}
-> 1. __At Bats:__ Plate appearances, excluding walks and hit by pitches.
-> 2. __Hits:__ Number of times a base is reached safely.
-> 3. __Runs:__ Number of times runners reach home safely.
-> 4. __RBIs:__ Number of runners who scored due to a batter's action.
-> 5. __Home Runs:__ Hits where the batter touches all four bases safely.
-> 6. __Batting Average:__ Hits divided by at bats.
+> - Just plain text
+> - **Bold text**
+> - *Italicize text*
+> - <abbr title="Abbreviation">Abbr (abbreviation)</abbr>
+> - <cite>Citation</cite>
+> - <del>Deleted</del>
+> - <ins>Underlined</ins>
+> - Superscript <sup>text</sup>
+> - Subscript <sub>text</sub>
+> - Inline code `SELECT * FROM players;`
+> 
+> | First   | Last   | HR  |
+> |---------|--------|-----|
+> | Hank    | Aaron  | 755 |
+> | Babe    | Ruth   | 714 |
+> | Mookie  | Wilson | 67  |
+> 
+> ![Moonie Moonpie](assets/images/moonpie.png "Sweet Moonpie")
+>
+> ```bash
+> #!/bin/bash
+> function say_howdy() {
+>   echo "Howdy $1!"
+> }
+>```
 
 {% include components/arrow.html link="#howdy" %}
 

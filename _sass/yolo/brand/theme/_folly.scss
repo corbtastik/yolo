@@ -3,20 +3,20 @@
 // ----------------------------------------------------------------------------
 :root[light] {
   // primary colors
-  --primary-color: #ffbd01;
-  --on-primary-color: #3a0099;
-  --primary-container-color: #9e0159;
-  --on-primary-container-color: #ffbd01;
+  --primary-color: #fece47;
+  --on-primary-color: #8f0051;
+  --primary-container-color: #ff6a1e;
+  --on-primary-container-color: #8f0051;
   // secondary colors  
   --secondary-color: #3a0099;
   --on-secondary-color: #ffbd01;
   --secondary-container-color: #ffbd01;
-  --on-secondary-container-color: #9e0159;
+  --on-secondary-container-color: #8f0051;
   // tertiary colors
-  --tertiary-color: #ff5500;
-  --on-tertiary-color: #ffbd01;
+  --tertiary-color: #d90529;
+  --on-tertiary-color: #fece47;
   // general colors
-  --link-color: #138ab2;
+  --link-color: #5300e0;
   --neutral-color: #212121;
   --on-neutral-color: #e0e0e0;
   // font families
@@ -26,22 +26,22 @@
 }
 :root[dark] {
   // primary colors
-  --primary-color: #3a0099;
-  --on-primary-color: #ffbd01;
-  --primary-container-color: #ffbd01;
-  --on-primary-container-color: #3a0099;
+  --primary-color: #1f0053;
+  --on-primary-color: #fece47;
+  --primary-container-color: #ff6a1e;
+  --on-primary-container-color: #8f0051;
   // secondary colors  
   --secondary-color: #ffbd01;
   --on-secondary-color: #3a0099;
-  --secondary-container-color: #ffbd01;
-  --on-secondary-container-color: #9e0159;
+  --secondary-container-color: #3a0099;
+  --on-secondary-container-color: #ffbd01;
   // tertiary colors
-  --tertiary-color: #ff5500;
-  --on-tertiary-color: #ffbd01;
+  --tertiary-color: #d90529;
+  --on-tertiary-color: #1f0053;
   // general colors
-  --link-color: #138ab2;
-  --neutral-color: #212121;
-  --on-neutral-color: #e0e0e0;
+  --link-color: #7f32ff;
+  --neutral-color: #e0e0e0;
+  --on-neutral-color: #212121;
   // font families
   --font-family-primary: "Poppins", sans-serif;
   --font-family-secondary: "Montserrat", sans-serif;

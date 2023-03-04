@@ -6,8 +6,8 @@ version: v1.3
 title: Yolo on my friend
 description: Loveable single pages
 brand:
-  theme: wip
-  syntax: newspaper
+  theme: newwave
+  syntax: yolo
 align: left
 # header:
 #  logo: assets/images/logo.png
