@@ -6,8 +6,8 @@ version: v1.3
 title: Yolo on my friend
 description: Loveable single pages
 brand:
-  theme: bubblegum
-  syntax: domino
+  theme: newwave
+  syntax: newwave
 align: left
 # header:
 #  logo: assets/images/logo.png

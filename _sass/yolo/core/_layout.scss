@@ -42,10 +42,8 @@
 }
 
 // ----------------------------------------------------------------------------
-// flexbox classes
+// Cells for Flexbox items
 // ----------------------------------------------------------------------------
-$column-gap: 0.50rem !default;
-
 .cell {
   background-color: inherit;
   color: inherit;
@@ -54,6 +52,28 @@ $column-gap: 0.50rem !default;
   position: relative;
   text-align: left;
 }
+
+.cell-header {
+  background-color: inherit;
+  color: inherit;
+  border-radius: 0;
+  padding: .25rem .5rem;
+  position: relative;
+  text-align: center;
+  font-weight: bold;
+  font-family: var(--font-family-secondary);
+  &.is-left {
+    border-radius: 0.2rem 0 0 0.2rem;
+  }
+  &.is-right {
+    border-radius: 0 0.2rem 0.2rem 0;
+  }
+}
+
+// ----------------------------------------------------------------------------
+// flexbox classes
+// ----------------------------------------------------------------------------
+$column-gap: 0.50rem !default;
 
 .column {
   display: block;

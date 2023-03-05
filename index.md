@@ -19,20 +19,12 @@ techies, and picture taking folk.
 ### Goals for Yolo
 {:.no-toc}
 
-#### 1. Live the best single page life.
-{:.no-toc}
-
-* Pamper single page sites like we pamper our pets.
-
-#### 2. Strive for simplicity.
-{:.no-toc}
-
-* No dependencies other than [jekyll](https://jekyllrb.com/).
-
-#### 3. Make it customizable
-{:.no-toc}
-
-* Bring your own [theme](#themes) and [syntax-highlighting](#syntax-highlighting).
+1. Live the best single page life.
+  * _Pamper single pages like we pamper our pets._
+1. Strive for simplicity.
+  * _No dependencies other than [jekyll](https://jekyllrb.com/)._
+1. Make it customizable.
+  * _Bring your own [brand](#branding)._
 
 ---
 
@@ -54,192 +46,90 @@ jekyll serve
 
 ## Branding
 
-Yolo implements "branding" on two fronts, __themes__ and __syntax themes__.
+Branding isn't implemented as a typical [gem based Jekyll theme](https://jekyllrb.com/docs/themes/), but the colors and fonts can be customized as described below.
 
-Yolo doesn't implement an "according to hoyle" [gem based theme](https://jekyllrb.com/docs/themes/), but the colors and fonts can be customized as outlined below.
+> Yolo implements "branding" on two fronts, [themes](#themes) and [syntax themes](#syntax-themes).
 
-> __Note:__
->   * "Theming" for Yolo is accomplished by providing a custom `scss` file in `_sass/yolo/themes`. Each theme must specify "light" and "dark" values to support switching between the two modes.
->   * Add font-family in `_data/fonts.yml` to customize what fonts are available.
+## Themes
 
-1. Create a new `scss` file in `_sass/yolo/themes/`.
-2. Customize the theme values for light and dark modes.
+1. Create a new `scss` file in `_sass/yolo/brand/themes/`.
+2. Customize the theme values for __light__ and __dark__ modes.
 3. Enable by setting `brand.theme` in `_data/settings.yml`.
 
-### Theme Set
-{:.no-toc}
+The following Yolo __themes__ are included out-of-the-box.
 
-The following __themes__ are included out-of-the-box.
-
-| Theme                                                   | Description                             |
-|---------------------------------------------------------|-----------------------------------------|
-| [domino](https://corbtastik-yolo-domino.surge.sh)       | Ebony and ivory with a touch of green   |
-| [dusk](https://corbtastik-yolo-dusk.surge.sh)           | Reminiscent of a good ole Texas evening |
-| [newspaper](https://corbtastik-yolo-newspaper.surge.sh) | Read all about this greyscale theme     |
-| [newwave](https://corbtastik-yolo-newwave.surge.sh)     | A bright fluorescent 80s'ish theme      |
-| [reveal](https://corbtastik-yolo-reveal.surge.sh)       | A theme for those big reveals           |
-| [rgb](https://corbtastik-yolo-rgb.surge.sh)             | A minimal black and white theme         |
-| [yolo](https://corbtastik-yolo.surge.sh)                | The default theme for Yolo sites        |
-
----
-
-{% include components/brand.html %}
-
-### Key Colors
-{:.no-toc}
-
-Key colors provide the foundation of your theme and should [contrast](https://en.wikipedia.org/wiki/Contrast_(vision)) or [complement](https://en.wikipedia.org/wiki/Complementary_colors) each other in [hue](https://en.wikipedia.org/wiki/Hue).
-
-There are __3__ key color variables for both __light__ and __dark__ modes.
-
-{% include components/flexbox.html columns="1" fill="primary-color" %}
-{% include components/flexbox.html columns="1" fill="secondary-color" %}
-{% include components/flexbox.html columns="1" fill="tertiary-color" %}
+| Theme                                                     | Description                             |
+|-----------------------------------------------------------|-----------------------------------------|
+| [bluebonnet](https://corbtastik-yolo-bluebonnet.surge.sh) | Theme description                       |
+| [bubblegum](https://corbtastik-yolo-bubblegum.surge.sh)   | Theme description                       |
+| [cooleo](https://corbtastik-yolo-cooleo.surge.sh)         | Theme description                       |
+| [corbs](https://corbtastik-yolo-corbs.surge.sh)           | Theme description                       |
+| [domino](https://corbtastik-yolo-domino.surge.sh)         | Ebony and ivory with a touch of green   |
+| [dusk](https://corbtastik-yolo-dusk.surge.sh)             | Reminiscent of a good ole Texas evening |
+| [folly](https://corbtastik-yolo-folly.surge.sh)           | Theme description                       |
+| [grape](https://corbtastik-yolo-grape.surge.sh)           | Theme description                       |
+| [mint](https://corbtastik-yolo-mint.surge.sh)             | Theme description                       |
+| [newspaper](https://corbtastik-yolo-newspaper.surge.sh)   | Read all about this greyscale theme     |
+| [newwave](https://corbtastik-yolo-newwave.surge.sh)       | A bright fluorescent 80s'ish theme      |
+| [reveal](https://corbtastik-yolo-reveal.surge.sh)         | A theme for those big reveals           |
+| [seaside](https://corbtastik-yolo-seaside.surge.sh)       | Theme description                       |
+| [yolo](https://corbtastik-yolo.surge.sh)                  | The default theme for Yolo sites        |
+| [zoot](https://corbtastik-yolo-zoot.surge.sh)             | Theme description                       |
 
 ---
 
-### Container Colors
+### Colors
 {:.no-toc}
 
-Each key color has 1 corresponding "_container_" color, which represents a container inset within the `primary-color`.
+> __Remember:__ You must specify values for all color variables for both __light__ and __dark__ mode.
 
-> __Note:__ The `primary-container-color` is applied to the background of code blocks, and blockquotes such as this.
-> > Thus, if your `primary-color` is white, then you might select a grey color for the `primary-container-color` to create a slight contrast between the two.
-
-{% include components/flexbox.html columns="1" fill="primary-container-color" %}
-{% include components/flexbox.html columns="1" fill="secondary-container-color" %}
-
----
-
-### On Colors
+#### Key Colors
 {:.no-toc}
 
-On colors are for elements that are placed "_on_" the corresponding key or container color. On colors should contrast with the color they are being placed on top of to increase readability.
+"_Key_" colors provide the foundation of your theme and should [contrast](https://en.wikipedia.org/wiki/Contrast_(vision)) or [complement](https://en.wikipedia.org/wiki/Complementary_colors) each other in [hue](https://en.wikipedia.org/wiki/Hue).
 
-> __Example:__ If your `primary-color` is white then a logical `on-primary-color` would be black.
+#### Container Colors
+{:.no-toc}
 
-{% include components/flexbox.html columns="1" fill="on-primary-color" %}
-{% include components/flexbox.html columns="1" fill="on-primary-container-color" %}
-{% include components/flexbox.html columns="1" fill="on-secondary-color" %}
-{% include components/flexbox.html columns="1" fill="on-secondary-container-color" %}
-{% include components/flexbox.html columns="1" fill="on-tertiary-color" %}
+"_Container_" colors represents an inset or sibling element of a primary or secondary colored element.
 
----
+> __Note:__ There isn't a `tertiary-container-color`, as `tertiary-color` is meant to standalone as an accent color.
 
-### General Colors
+#### On Colors
+{:.no-toc}
+
+"_On_" colors are placed "_on_" the corresponding key or container color.
+
+> __Note:__ On colors should contrast with the underlying color to increase readability.
+
+#### Link Color
 {:.no-toc}
 
 Links are prominent on web pages, so it gets its own variable - [link-color](https://github.com/corbtastik/yolo).
 
-> __Note:__ Generally, it's a good idea to have a distinct color, consistency applied to links.
+> __Note:__ It's a good idea to consistently apply a distinct color for your links.
 
-{% include components/flexbox.html columns="1" fill="link-color" %}
+#### Neutral Colors
+{:.no-toc}
 
 The `neutral-color` and `on-neutral-color` variables are general use colors.
 
-> __Note:__ As mentioned in the "[On Colors](#on-colors)" section, it's best to have an "on" color that contrasts with the underlying color.
+### Theme Swatches
+{:.no-toc}
 
-{% include components/flexbox.html columns="1" fill="neutral-color" %}
-{% include components/flexbox.html columns="1" fill="on-neutral-color" %}
+{% include demo/theme-swatches.html %}
 
 {% include components/arrow.html link="#howdy" %}
 
 ---
 
-### Typography
-{:.no-toc}
-
-Yolo's fonts can be customized as outlined in [Themes](#themes).
-
-#### Three Families
-{:.no-toc}
-
-Primary Font Family - body and most text
-{:.is-family-primary}
-Secondary Font Family - headers and accent text
-{:.is-family-secondary}
-Monospaced Font Family - code
-{:.is-family-monospace}
-
-##### Primary
-{:.no-toc}
-
-size-7 text
-{:.is-family-primary .is-size-7}
-
-size-6 text
-{:.is-family-primary .is-size-6}
-
-size-5 text
-{:.is-family-primary .is-size-5}
-
-size-4 text
-{:.is-family-primary .is-size-4}
-
-size-3 text
-{:.is-family-primary .is-size-3}
-
-size-2 text
-{:.is-family-primary .is-size-2}
-
-size-1 text
-{:.is-family-primary .is-size-1}
-
-##### Secondary
-{:.no-toc}
-
-size-7 text
-{:.is-family-secondary .is-size-7}
-
-size-6 text
-{:.is-family-secondary .is-size-6}
-
-size-5 text
-{:.is-family-secondary .is-size-5}
-
-size-4 text
-{:.is-family-secondary .is-size-4}
-
-size-3 text
-{:.is-family-secondary .is-size-3}
-
-size-2 text
-{:.is-family-secondary .is-size-2}
-
-size-1 text
-{:.is-family-secondary .is-size-1}
-
-##### Monospace
-{:.no-toc}
-
-size-7 text
-{:.is-family-monospace .is-size-7}
-
-size-6 text
-{:.is-family-monospace .is-size-6}
-
-size-5 text
-{:.is-family-monospace .is-size-5}
-
-size-4 text
-{:.is-family-monospace .is-size-4}
-
-size-3 text
-{:.is-family-monospace .is-size-3}
-
-size-2 text
-{:.is-family-monospace .is-size-2}
-
-size-1 text
-{:.is-family-monospace .is-size-1}
-
-{% include components/arrow.html link="#howdy" %}
-
----
-
-## Syntax Highlighting
+## Syntax Themes
 
 Yolo uses Jekyll's [default syntax highlighting](https://jekyllrb.com/docs/liquid/tags/#code-snippet-highlighting) capabilities provided by [rouge](https://github.com/rouge-ruby/rouge), and adds the ability to use custom `syntax-theme(s)` for light and dark modes.
+
+1. Create a new `scss` file in `_sass/yolo/brand/syntax`.
+2. Customize the syntax-theme values for __light__ and __dark__ modes.
+3. Enable by setting `brand.syntax` in `_data/settings.yml`.
 
 The following `syntax-theme(s)` are provided out-of-the-box.
 
@@ -254,26 +144,12 @@ The following `syntax-theme(s)` are provided out-of-the-box.
 | [sprinkles](https://corbtastik-yolo-sprinkles.surge.sh) | A theme that pairs well with cup cakes |
 | [yolo](https://corbtastik-yolo.surge.sh)                | The default theme for Yolo sites       |
 
-### Custom Syntax Theme
+### Syntax Theme Swatches
 {:.no-toc}
 
-1. Creating a custom `syntax-theme` is done by adding a `scss` file into `_sass/yolo/syntax-theme` and setting values for each color property for both __light__ and __dark__ modes.
-2. To enable a specific `syntax-theme` add it to your `settings.yml` file, as shown below.
+{% include demo/syntax-theme-swatches.html %}
 
-{% include components/code.html label="Configure the syntax-theme" %}
-```yaml
-# -------------------------------------
-# Yolo site settings
-# -------------------------------------
-name: Yolo
-title: Yolo on my friend
-description: Loveable single pages
-theme:
-  name: neon
-  syntax: neon   # references _sass/yolo/syntax-theme/_neon.scss
-```
-
-### Samples
+### Snippets
 {:.no-toc}
 
 > __Tip:__ Click header to copy a snippet.
@@ -310,6 +186,96 @@ if(process.argv.length != 3) {
 // Say Howdy
 sayHowdy(process.argv[2]);
 ```
+
+{% include components/arrow.html link="#howdy" %}
+
+---
+
+## Typography
+
+Yolo's fonts can be customized as outlined in [Themes](#themes).
+
+### Three Families
+{:.no-toc}
+
+Primary Font Family - body and most text
+{:.is-family-primary}
+Secondary Font Family - headers and accent text
+{:.is-family-secondary}
+Monospaced Font Family - code
+{:.is-family-monospace}
+
+#### Primary
+{:.no-toc}
+
+size-7 text
+{:.is-family-primary .is-size-7}
+
+size-6 text
+{:.is-family-primary .is-size-6}
+
+size-5 text
+{:.is-family-primary .is-size-5}
+
+size-4 text
+{:.is-family-primary .is-size-4}
+
+size-3 text
+{:.is-family-primary .is-size-3}
+
+size-2 text
+{:.is-family-primary .is-size-2}
+
+size-1 text
+{:.is-family-primary .is-size-1}
+
+#### Secondary
+{:.no-toc}
+
+size-7 text
+{:.is-family-secondary .is-size-7}
+
+size-6 text
+{:.is-family-secondary .is-size-6}
+
+size-5 text
+{:.is-family-secondary .is-size-5}
+
+size-4 text
+{:.is-family-secondary .is-size-4}
+
+size-3 text
+{:.is-family-secondary .is-size-3}
+
+size-2 text
+{:.is-family-secondary .is-size-2}
+
+size-1 text
+{:.is-family-secondary .is-size-1}
+
+#### Monospace
+{:.no-toc}
+
+size-7 text
+{:.is-family-monospace .is-size-7}
+
+size-6 text
+{:.is-family-monospace .is-size-6}
+
+size-5 text
+{:.is-family-monospace .is-size-5}
+
+size-4 text
+{:.is-family-monospace .is-size-4}
+
+size-3 text
+{:.is-family-monospace .is-size-3}
+
+size-2 text
+{:.is-family-monospace .is-size-2}
+
+size-1 text
+{:.is-family-monospace .is-size-1}
 
 {% include components/arrow.html link="#howdy" %}
 

@@ -52,7 +52,7 @@
   .highlight {
     background: var(--syntax-container-color);
     color: var(--syntax-text);
-    .hll { color: yellow; }
+    .hll { color: var(--syntax-highlight-line); }
     .bp  { color: var(--syntax-name-builtin-pseudo); }
     .c   { color: var(--syntax-comment); }
     .c1  { color: var(--syntax-comment-single); }
@@ -128,4 +128,18 @@
     .vm  { color: var(--syntax-name-variable-magic); }
     .w   { color: var(--syntax-text-whitespace); }
   }
+
+  .syntax-container-color {
+    background-color: var(--syntax-container-color);
+    color: var(--syntax-text);
+  }
+  .syntax-text-color {
+    background-color: var(--syntax-text);
+    color: var(--syntax-container-color);
+  }
+  .syntax-highlight-line-color {
+    background-color: var(--syntax-highlight-line);
+    color: var(--syntax-text);
+  }
+
 }

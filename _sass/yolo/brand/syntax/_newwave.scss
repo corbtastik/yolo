@@ -4,7 +4,7 @@
 :root[light] {
   --syntax-text: #cacef7;
   --syntax-container-color: #241057;
-  --syntax-highlight-color: #44475a;
+  --syntax-highlight-line: #f9246c;
 
   --syntax-error: #b71c1c;
   --syntax-punctuation: #4f9dff;
@@ -89,7 +89,7 @@
 :root[dark] {
   --syntax-text: #cacef7;
   --syntax-container-color: #241057;
-  --syntax-highlight-color: #44475a;
+  --syntax-highlight-line: #f9246c;
 
   --syntax-error: #b71c1c;
   --syntax-punctuation: #4f9dff;
