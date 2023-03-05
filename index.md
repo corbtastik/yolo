@@ -83,6 +83,8 @@ The following __themes__ are included out-of-the-box.
 
 ---
 
+{% include components/brand.html %}
+
 ### Key Colors
 {:.no-toc}
 

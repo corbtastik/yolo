@@ -3,20 +3,20 @@
 // ----------------------------------------------------------------------------
 :root[light] {
   // primary colors
-  --primary-color: #fece47;
-  --on-primary-color: #8f0051;
-  --primary-container-color: #ff6a1e;
-  --on-primary-container-color: #8f0051;
+  --primary-color: #ff6a1e;
+  --on-primary-color: #1f0053;
+  --primary-container-color: #1f0053;
+  --on-primary-container-color: #ff6a1e;
   // secondary colors  
-  --secondary-color: #3a0099;
-  --on-secondary-color: #ffbd01;
-  --secondary-container-color: #ffbd01;
-  --on-secondary-container-color: #8f0051;
+  --secondary-color: #1f0053;
+  --on-secondary-color: #ff6a1e;
+  --secondary-container-color: #1f0053;
+  --on-secondary-container-color: #ff6a1e;
   // tertiary colors
-  --tertiary-color: #d90529;
-  --on-tertiary-color: #fece47;
+  --tertiary-color: #ffc9ad;
+  --on-tertiary-color: #1f0053;
   // general colors
-  --link-color: #5300e0;
+  --link-color: #ffe4d6;
   --neutral-color: #212121;
   --on-neutral-color: #e0e0e0;
   // font families
@@ -27,19 +27,19 @@
 :root[dark] {
   // primary colors
   --primary-color: #1f0053;
-  --on-primary-color: #fece47;
+  --on-primary-color: #ff6a1e;
   --primary-container-color: #ff6a1e;
-  --on-primary-container-color: #8f0051;
+  --on-primary-container-color: #1f0053;
   // secondary colors  
-  --secondary-color: #ffbd01;
-  --on-secondary-color: #3a0099;
-  --secondary-container-color: #3a0099;
-  --on-secondary-container-color: #ffbd01;
+  --secondary-color: #ff6a1e;
+  --on-secondary-color: #1f0053;
+  --secondary-container-color: #ff6a1e;
+  --on-secondary-container-color: #1f0053;
   // tertiary colors
-  --tertiary-color: #d90529;
+  --tertiary-color: #ffc9ad;
   --on-tertiary-color: #1f0053;
   // general colors
-  --link-color: #7f32ff;
+  --link-color: #ffe4d6;
   --neutral-color: #e0e0e0;
   --on-neutral-color: #212121;
   // font families
