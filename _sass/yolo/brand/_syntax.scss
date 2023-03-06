@@ -141,5 +141,118 @@
     background-color: var(--syntax-highlight-line);
     color: var(--syntax-text);
   }
+  .syntax-error-color {
+    background-color: var(--syntax-error);
+    color: var(--syntax-text);
+  }
+  .syntax-punctuation-color {
+    background-color: var(--syntax-punctuation);
+    color: var(--syntax-text);
+  }
+  .syntax-text-whitespace-color {
+    background-color: var(--syntax-text-whitespace);
+    color: var(--syntax-container-color);
+  }
+  .syntax-comment-color {
+    background-color: var(--syntax-comment);
+    color: var(--syntax-text);
+  }
+  .syntax-comment-hashbang-color {
+    background-color: var(--syntax-comment-hashbang-color);
+    color: var(--syntax-text);
+  }
+  .syntax-comment-multiline-color {
+    background-color: var(--syntax-comment-multiline);
+    color: var(--syntax-text);
+  }
+  .syntax-comment-preproc-color {
+    background-color: var(--syntax-comment-preproc);
+    color: var(--syntax-text);
+  }
+  .syntax-comment-preprocfile-color {
+    background-color: var(--syntax-comment-preprocfile);
+    color: var(--syntax-text);
+  }
+  .syntax-comment-single-color {
+    background-color: var(--syntax-comment-single);
+    color: var(--syntax-text);
+  }
+  .syntax-comment-special-color {
+    background-color: var(--syntax-comment-special);
+    color: var(--syntax-text);
+  }
+  .syntax-generic-deleted-color {
+    background-color: var(--syntax-generic-deleted);
+    color: var(--syntax-text);
+  }
+  .syntax-generic-emph-color {
+    background-color: var(--syntax-generic-emph);
+    color: var(--syntax-text);
+  }
+  .syntax-generic-error-color {
+    background-color: var(--syntax-generic-error);
+    color: var(--syntax-text);
+  }
+  .syntax-generic-heading-color {
+    background-color: var(--syntax-generic-heading);
+    color: var(--syntax-text);
+  }
+  .syntax-generic-inserted-color {
+    background-color: var(--syntax-generic-inserted);
+    color: var(--syntax-text);
+  }
+  .syntax-generic-output-color {
+    background-color: var(--syntax-generic-output);
+    color: var(--syntax-text);
+  }
+  .syntax-generic-prompt-color {
+    background-color: var(--syntax-generic-prompt);
+    color: var(--syntax-text);
+  }
+  .syntax-generic-strong-color {
+    background-color: var(--syntax-generic-strong);
+    color: var(--syntax-text);
+  }
+  .syntax-generic-subheading-color {
+    background-color: var(--syntax-generic-subheading);
+    color: var(--syntax-text);
+  }
+  .syntax-generic-traceback-color {
+    background-color: var(--syntax-generic-traceback);
+    color: var(--syntax-text);
+  }
+  .syntax-keyword-color {
+    background-color: var(--syntax-keyword);
+    color: var(--syntax-text);
+  }
+  .syntax-keyword-constant-color {
+    background-color: var(--syntax-keyword-constant);
+    color: var(--syntax-text);
+  }
+  .syntax-keyword-declaration-color {
+    background-color: var(--syntax-keyword-declaration);
+    color: var(--syntax-text);
+  }
+  .syntax-keyword-namespace-color {
+    background-color: var(--syntax-keyword-namespace);
+    color: var(--syntax-text);
+  }
+  .syntax-keyword-pseudo-color {
+    background-color: var(--syntax-keyword-pseudo);
+    color: var(--syntax-text);
+  }
+  .syntax-keyword-reserved-color {
+    background-color: var(--syntax-keyword-reserved);
+    color: var(--syntax-text);
+  }
+  .syntax-keyword-type-color {
+    background-color: var(--syntax-keyword-type);
+    color: var(--syntax-text);
+  }
+  // template
+  //.syntax--color {
+  //  background-color: var(--syntax-highlight-line);
+  //  color: var(--syntax-text);
+  //}
 
 }
