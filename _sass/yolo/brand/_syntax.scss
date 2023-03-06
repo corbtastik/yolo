@@ -249,6 +249,26 @@
     background-color: var(--syntax-keyword-type);
     color: var(--syntax-text);
   }
+  .syntax-literal-color {
+    background-color: var(--syntax-literal);
+    color: var(--syntax-text);
+  }
+  .syntax-literal-date-color {
+    background-color: var(--syntax-literal-date);
+    color: var(--syntax-text);
+  }
+  .syntax-name-attribute-color {
+    background-color: var(--syntax-name-attribute);
+    color: var(--syntax-text);
+  }
+  .syntax-name-builtin-pseudo {
+    background-color: var(--syntax-name-builtin-pseudo);
+    color: var(--syntax-text);
+  }
+  .syntax-name-builtin {
+    background-color: var(--syntax-name-builtin);
+    color: var(--syntax-text);
+  }
   // template
   //.syntax--color {
   //  background-color: var(--syntax-highlight-line);
