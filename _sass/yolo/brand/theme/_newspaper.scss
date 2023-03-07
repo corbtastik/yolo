@@ -1,49 +1,48 @@
 // ----------------------------------------------------------------------------
-// newspaper theme
+// newspaper light-mode
 // ----------------------------------------------------------------------------
-:root[light] {
-  // primary colors
-  --primary-color: #e0e0e0;
-  --on-primary-color: #0a0a0a;
-  --primary-container-color: #141414;
-  --on-primary-container-color: #f5f5f5;
-  // secondary colors
-  --secondary-color: #5c5c5c;
-  --on-secondary-color: #e0e0e0;
-  --secondary-container-color: #0a0a0a;
-  --on-secondary-container-color: #e0e0e0;
-  // tertiary colors
-  --tertiary-color: #1f56d8;
-  --on-tertiary-color: #e0e0e0;
-  // general colors
-  --link-color: #0091ea;
-  --neutral-color: #212121;
-  --on-neutral-color: #e0e0e0;
-  // font families
-  --font-family-primary: "Hepta Slab", serif;
-  --font-family-secondary: "Red Hat Text", sans-serif;
-  --font-family-monospace: "Red Hat Mono", monospace;
-}
-:root[dark] {
-  // primary colors
-  --primary-color: #141414;
-  --on-primary-color: #e0e0e0;
-  --primary-container-color: #e0e0e0;
-  --on-primary-container-color: #0a0a0a;
-  // secondary colors
-  --secondary-color: #e0e0e0;
-  --on-secondary-color: #5c5c5c;
-  --secondary-container-color: #e0e0e0;
-  --on-secondary-container-color: #0a0a0a;
-  // tertiary colors
-  --tertiary-color: #1f56d8;
-  --on-tertiary-color: #e0e0e0;
-  // general colors
-  --link-color: #0091ea;
-  --neutral-color: #212121;
-  --on-neutral-color: #e0e0e0;
-  // font families
-  --font-family-primary: "Hepta Slab", serif;  
-  --font-family-secondary: "Red Hat Text", sans-serif;
-  --font-family-monospace: "Red Hat Mono", monospace;
-}
+// primary colors
+$light-primary-color: #e0e0e0;
+$light-on-primary-color: #0a0a0a;
+$light-primary-container-color: #141414;
+$light-on-primary-container-color: #f5f5f5;
+// secondary colors
+$light-secondary-color: #5c5c5c;
+$light-on-secondary-color: #e0e0e0;
+$light-secondary-container-color: #0a0a0a;
+$light-on-secondary-container-color: #e0e0e0;
+// tertiary colors
+$light-tertiary-color: #0091ea;
+$light-on-tertiary-color: #e0e0e0;
+// general colors
+$light-link-color: #f72685;
+$light-neutral-color: #212121;
+$light-on-neutral-color: #e0e0e0;
+// font families
+$light-font-family-primary: "Hepta Slab", serif;
+$light-font-family-secondary: "Red Hat Text", sans-serif;
+$light-font-family-monospace: "Red Hat Mono", monospace;
+// ----------------------------------------------------------------------------
+// newspaper dark-mode
+// ----------------------------------------------------------------------------
+// primary colors
+$dark-primary-color: #141414;
+$dark-on-primary-color: #e0e0e0;
+$dark-primary-container-color: #e0e0e0;
+$dark-on-primary-container-color: #0a0a0a;
+// secondary colors
+$dark-secondary-color: #e0e0e0;
+$dark-on-secondary-color: #5c5c5c;
+$dark-secondary-container-color: #e0e0e0;
+$dark-on-secondary-container-color: #0a0a0a;
+// tertiary colors
+$dark-tertiary-color: #0091ea;
+$dark-on-tertiary-color: #e0e0e0;
+// general colors
+$dark-link-color: #f72685;
+$dark-neutral-color: #212121;
+$dark-on-neutral-color: #e0e0e0;
+// font families
+$dark-font-family-primary: "Hepta Slab", serif;
+$dark-font-family-secondary: "Red Hat Text", sans-serif;
+$dark-font-family-monospace: "Red Hat Mono", monospace;

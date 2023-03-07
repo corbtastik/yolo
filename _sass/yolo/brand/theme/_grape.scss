@@ -1,49 +1,48 @@
 // ----------------------------------------------------------------------------
-// grape theme
+// grape light-mode
 // ----------------------------------------------------------------------------
-:root[light] {
-  // primary colors
-  --primary-color: #f3e6f5;
-  --on-primary-color: #4a138c;
-  --primary-container-color: #4a138c;
-  --on-primary-container-color: #fff0f3;
-  // secondary colors  
-  --secondary-color: #4a138c;
-  --on-secondary-color: #f3e6f5;
-  --secondary-container-color: #4a138c;
-  --on-secondary-container-color: #f3e6f5;
-  // tertiary colors
-  --tertiary-color: #ab00ff;
-  --on-tertiary-color: #f3e6f5;
-  // general colors
-  --link-color: #ab00ff;
-  --neutral-color: #212121;
-  --on-neutral-color: #e0e0e0;
-  // font families
-  --font-family-primary: "Poppins", sans-serif;
-  --font-family-secondary: "Red Hat Text", sans-serif;
-  --font-family-monospace: "Source Code Pro", monospace;
-}
-:root[dark] {
-  // primary colors
-  --primary-color: #4a138c;
-  --on-primary-color: #f3e6f5;
-  --primary-container-color: #f3e6f5;
-  --on-primary-container-color: #4a138c;
-  // secondary colors  
-  --secondary-color: #f3e6f5;
-  --on-secondary-color: #4a138c;
-  --secondary-container-color: #f3e6f5;
-  --on-secondary-container-color: #4a138c;
-  // tertiary colors
-  --tertiary-color: #c349ff;
-  --on-tertiary-color: #4a138c;
-  // general colors
-  --link-color: #c349ff;
-  --neutral-color: #212121;
-  --on-neutral-color: #e0e0e0;
-  // font families
-  --font-family-primary: "Poppins", sans-serif;
-  --font-family-secondary: "Red Hat Text", sans-serif;
-  --font-family-monospace: "Source Code Pro", monospace;
-}
+// primary colors
+$light-primary-color: #f3e6f5;
+$light-on-primary-color: #4a138c;
+$light-primary-container-color: #4a138c;
+$light-on-primary-container-color: #fff0f3;
+// secondary colors  
+$light-secondary-color: #4a138c;
+$light-on-secondary-color: #f3e6f5;
+$light-secondary-container-color: #4a138c;
+$light-on-secondary-container-color: #f3e6f5;
+// tertiary colors
+$light-tertiary-color: #ab00ff;
+$light-on-tertiary-color: #f3e6f5;
+// general colors
+$light-link-color: #ab00ff;
+$light-neutral-color: #212121;
+$light-on-neutral-color: #e0e0e0;
+// font families
+$light-font-family-primary: "Poppins", sans-serif;
+$light-font-family-secondary: "Red Hat Text", sans-serif;
+$light-font-family-monospace: "Source Code Pro", monospace;
+// ----------------------------------------------------------------------------
+// grape dark-mode
+// ----------------------------------------------------------------------------
+// primary colors
+$dark-primary-color: #4a138c;
+$dark-on-primary-color: #f3e6f5;
+$dark-primary-container-color: #f3e6f5;
+$dark-on-primary-container-color: #4a138c;
+// secondary colors  
+$dark-secondary-color: #f3e6f5;
+$dark-on-secondary-color: #4a138c;
+$dark-secondary-container-color: #f3e6f5;
+$dark-on-secondary-container-color: #4a138c;
+// tertiary colors
+$dark-tertiary-color: #c349ff;
+$dark-on-tertiary-color: #4a138c;
+// general colors
+$dark-link-color: #c349ff;
+$dark-neutral-color: #212121;
+$dark-on-neutral-color: #e0e0e0;
+// font families
+$dark-font-family-primary: "Poppins", sans-serif;
+$dark-font-family-secondary: "Red Hat Text", sans-serif;
+$dark-font-family-monospace: "Source Code Pro", monospace;

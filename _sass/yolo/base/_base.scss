@@ -8,7 +8,6 @@
 html {
   font-size: $size-6;
   line-height: 1.5;
-  font-family: var(--font-family-primary);
 }
 
 body {
@@ -32,27 +31,27 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: 2.75rem;
+  font-size: $size-1;
 }
 
 h2 {
-  font-size: 2rem;
+  font-size: $size-2;
 }
 
 h3 {
-  font-size: 1.75rem;
+  font-size: $size-3;
 }
 
 h4 {
-  font-size: 1.5rem;
+  font-size: $size-4;
 }
 
 h5 {
-  font-size: 1.25rem;
+  font-size: $size-5;
 }
 
 h6 {
-  font-size: 1rem;
+  font-size: $size-6;
 }
 
 p, dl {
@@ -61,16 +60,14 @@ p, dl {
 }
 
 code {
-  font-family: var(--font-family-monospace);
   overflow-x: auto;
 }
 
 pre {
-  font-family: var(--font-family-monospace);
   overflow-x: auto;
   margin-top: 0;
   margin-bottom: 1rem;
-  font-size: 0.8rem;
+  font-size: $size-7;
 }
 
 ul, ol {

@@ -1,8 +1,6 @@
 // ----------------------------------------------------------------------------
 // Syntax highlighting
 // ----------------------------------------------------------------------------
-@import "../base/variables";
-
 .highlighter-rouge, .highlight {
   position: relative;
   border-bottom-right-radius: 0.3em;
@@ -28,16 +26,14 @@
     width: calc(100% - 1em);
     border: 0;
 
-    /* line numbers*/
     &.gutter {
       padding-right: 1em;
       width: 1em;
-      color: var(--syntax01);
-      border-right: 1px solid var(--syntax01);
+      color: var(--tertiary-color);
+      border-right: 1px solid var(--tertiary-color);
       text-align: right;
     }
 
-    /* code */
     &.code {
       padding-left: 1em;
     }

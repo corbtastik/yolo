@@ -94,12 +94,3 @@ $alignments: ('centered': 'center', 'justified': 'justify', 'left': 'left', 'rig
 .has-text-weight-bold {
   font-weight: $weight-bold !important;
 }
-.is-family-primary {
-  font-family: var(--font-family-primary) !important;
-}
-.is-family-secondary {
-  font-family: var(--font-family-secondary) !important;
-}
-.is-family-monospace {
-  font-family: var(--font-family-monospace) !important;
-}

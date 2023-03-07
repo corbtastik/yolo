@@ -1,49 +1,48 @@
 // ----------------------------------------------------------------------------
-// folly theme
+// folly light-mode
 // ----------------------------------------------------------------------------
-:root[light] {
-  // primary colors
-  --primary-color: #ff6a1e;
-  --on-primary-color: #1f0053;
-  --primary-container-color: #1f0053;
-  --on-primary-container-color: #ff6a1e;
-  // secondary colors  
-  --secondary-color: #1f0053;
-  --on-secondary-color: #ff6a1e;
-  --secondary-container-color: #1f0053;
-  --on-secondary-container-color: #ff6a1e;
-  // tertiary colors
-  --tertiary-color: #ffc9ad;
-  --on-tertiary-color: #1f0053;
-  // general colors
-  --link-color: #ffe4d6;
-  --neutral-color: #212121;
-  --on-neutral-color: #e0e0e0;
-  // font families
-  --font-family-primary: "Poppins", sans-serif;
-  --font-family-secondary: "Montserrat", sans-serif;
-  --font-family-monospace: "Source Code Pro", monospace;
-}
-:root[dark] {
-  // primary colors
-  --primary-color: #1f0053;
-  --on-primary-color: #ff6a1e;
-  --primary-container-color: #ff6a1e;
-  --on-primary-container-color: #1f0053;
-  // secondary colors  
-  --secondary-color: #ff6a1e;
-  --on-secondary-color: #1f0053;
-  --secondary-container-color: #ff6a1e;
-  --on-secondary-container-color: #1f0053;
-  // tertiary colors
-  --tertiary-color: #ffc9ad;
-  --on-tertiary-color: #1f0053;
-  // general colors
-  --link-color: #ffe4d6;
-  --neutral-color: #e0e0e0;
-  --on-neutral-color: #212121;
-  // font families
-  --font-family-primary: "Poppins", sans-serif;
-  --font-family-secondary: "Montserrat", sans-serif;
-  --font-family-monospace: "Source Code Pro", monospace;
-}
+// primary colors
+$light-primary-color: #ff6a1e;
+$light-on-primary-color: #1f0053;
+$light-primary-container-color: #1f0053;
+$light-on-primary-container-color: #ff6a1e;
+// secondary colors  
+$light-secondary-color: #1f0053;
+$light-on-secondary-color: #ff6a1e;
+$light-secondary-container-color: #1f0053;
+$light-on-secondary-container-color: #ff6a1e;
+// tertiary colors
+$light-tertiary-color: #ffc9ad;
+$light-on-tertiary-color: #1f0053;
+// general colors
+$light-link-color: #ffe4d6;
+$light-neutral-color: #212121;
+$light-on-neutral-color: #e0e0e0;
+// font families
+$light-font-family-primary: "Poppins", sans-serif;
+$light-font-family-secondary: "Montserrat", sans-serif;
+$light-font-family-monospace: "Source Code Pro", monospace;
+// ----------------------------------------------------------------------------
+// folly dark-mode
+// ----------------------------------------------------------------------------
+// primary colors
+$dark-primary-color: #1f0053;
+$dark-on-primary-color: #ff6a1e;
+$dark-primary-container-color: #ff6a1e;
+$dark-on-primary-container-color: #1f0053;
+// secondary colors  
+$dark-secondary-color: #ff6a1e;
+$dark-on-secondary-color: #1f0053;
+$dark-secondary-container-color: #ff6a1e;
+$dark-on-secondary-container-color: #1f0053;
+// tertiary colors
+$dark-tertiary-color: #ffc9ad;
+$dark-on-tertiary-color: #1f0053;
+// general colors
+$dark-link-color: #ffe4d6;
+$dark-neutral-color: #e0e0e0;
+$dark-on-neutral-color: #212121;
+// font families
+$dark-font-family-primary: "Poppins", sans-serif;
+$dark-font-family-secondary: "Montserrat", sans-serif;
+$dark-font-family-monospace: "Source Code Pro", monospace;

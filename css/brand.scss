@@ -4,37 +4,43 @@
 @charset "utf-8";
 // ----------------------------------------------------------------------------
 // Brand scss module
+// For light and dark modes:
+//  1. Read brand-theme SASS variables and generate global CSS variables
+//  2. Read brand-syntax SASS variables and generate global CSS variables
 // ----------------------------------------------------------------------------
 @use "sass:meta";
 @use "sass:string";
-@use "yolo/brand/theme/{{ site.data.settings.brand.theme | default: 'yolo' }}";
-@use "yolo/brand/syntax/{{ site.data.settings.brand.syntax | default: 'yolo' }}-light";
-@use "yolo/brand/syntax/{{ site.data.settings.brand.syntax | default: 'yolo' }}-dark";
+@use "yolo/brand/theme/{{ site.data.settings.brand.theme | default: 'yolo' }}" as brand-theme;
+@use "yolo/brand/syntax/{{ site.data.settings.brand.syntax | default: 'yolo' }}" as brand-syntax;
 // ----------------------------------------------------------------------------
 // Generate CSS global-variables used for light/dark mode switch
 // ----------------------------------------------------------------------------
 :root[light] {
   // brand-theme
-  @each $name, $value in meta.module-variables("{{ site.data.settings.brand.theme }}") {
+  @each $name, $value in meta.module-variables("brand-theme") {
     @if string.slice($name, 1, 6) == "light-" {
       --#{string.slice($name, 7)}: #{$value};
     }
   }
   // brand-syntax
-  @each $name, $value in meta.module-variables("{{ site.data.settings.brand.syntax }}-light") {
-    --#{$name}: #{$value};
+  @each $name, $value in meta.module-variables("brand-syntax") {
+    @if string.slice($name, 1, 6) == "light-" {
+      --#{string.slice($name, 7)}: #{$value};
+    }
   }
 }
 :root[dark] {
   // brand-theme
-  @each $name, $value in meta.module-variables("{{ site.data.settings.brand.theme }}") {
+  @each $name, $value in meta.module-variables("brand-theme") {
     @if string.slice($name, 1, 5) == "dark-" {
       --#{string.slice($name, 6)}: #{$value};
     }
   }
   // brand-syntax
-  @each $name, $value in meta.module-variables("{{ site.data.settings.brand.syntax }}-dark") {
-    --#{$name}: #{$value};
+  @each $name, $value in meta.module-variables("brand-syntax") {
+    @if string.slice($name, 1, 5) == "dark-" {
+      --#{string.slice($name, 6)}: #{$value};
+    }
   }
 }
 // ----------------------------------------------------------------------------

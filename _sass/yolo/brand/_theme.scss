@@ -6,10 +6,14 @@
 // See: _sass/yolo/themes for specific theme colors.
 // ----------------------------------------------------------------------------
 .yolo-themed {
+  html {
+    font-family: var(--font-family-primary);
+  }
+
   body {
+    font-family: var(--font-family-primary);
     color: var(--on-primary-color);
     background-color: var(--primary-color);
-    font-family: var(--font-family-primary);
   }
 
   a {
@@ -83,6 +87,10 @@
 
   b, strong, em, abbr, cite, del, ins, sup, sub {
     color: var(--on-primary-color);
+  }
+
+  code, pre {
+    font-family: var(--font-family-monospace);
   }
 
   ul {
@@ -249,7 +257,16 @@
       }
     }
   }
-  // CSS classes for theme colors
+  // CSS classes for theme colors and fonts
+  .is-family-primary {
+    font-family: var(--font-family-primary) !important;
+  }
+  .is-family-secondary {
+    font-family: var(--font-family-secondary) !important;
+  }
+  .is-family-monospace {
+    font-family: var(--font-family-monospace) !important;
+  }
   .primary-color {
     background-color: var(--primary-color);
     color: var(--on-primary-color);
@@ -573,6 +590,7 @@
   }
   // Syntax Highlighting
   .highlight {
+    font-family: var(--font-family-monospace);
     background: var(--syntax-container-color);
     color: var(--syntax-text);
     .hll { color: var(--syntax-highlight-line); }

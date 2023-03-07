@@ -1,49 +1,48 @@
 // ----------------------------------------------------------------------------
-// yolo theme
+// yolo light-mode
 // ----------------------------------------------------------------------------
-:root[light] {
-  // primary colors
-  --primary-color: #d2d2f3;
-  --on-primary-color: #011141;
-  --primary-container-color: #070831;
-  --on-primary-container-color: #50fa7b;
-  // secondary colors  
-  --secondary-color: #5815c0;
-  --on-secondary-color: #d2d2f3;
-  --secondary-container-color: #100423;
-  --on-secondary-container-color: #d7c6f3;
-  // tertiary colors
-  --tertiary-color: #d80f8a;
-  --on-tertiary-color: #f8faff;
-  // general colors
-  --link-color: #0091ea;
-  --neutral-color: #212121;
-  --on-neutral-color: #e0e0e0;
-  // font families
-  --font-family-primary: "Red Hat Mono", monospace;
-  --font-family-secondary: "Red Hat Text", sans-serif;
-  --font-family-monospace: "Source Code Pro", monospace;
-}
-:root[dark] {
-  // primary colors
-  --primary-color: #0a0b47;
-  --on-primary-color: #b1b6fa;
-  --primary-container-color: #070831;
-  --on-primary-container-color: #50fa7b;
-  // secondary colors  
-  --secondary-color: #fb1d9e;
-  --on-secondary-color: #19010f;
-  --secondary-container-color: #b5036a;
-  --on-secondary-container-color: #f6a5d4;
-  // tertiary colors
-  --tertiary-color: #0ca9f4;
-  --on-tertiary-color: #010d13;
-  // general colors
-  --link-color: #65cffc;
-  --neutral-color: #e0e0e0;
-  --on-neutral-color: #212121;  
-  // font families
-  --font-family-primary: "Red Hat Mono", monospace;
-  --font-family-secondary: "Red Hat Text", sans-serif;
-  --font-family-monospace: "Source Code Pro", monospace;
-}
+// primary colors
+$light-primary-color: #d2d2f3;
+$light-on-primary-color: #011141;
+$light-primary-container-color: #070831;
+$light-on-primary-container-color: #50fa7b;
+// secondary colors  
+$light-secondary-color: #5815c0;
+$light-on-secondary-color: #d2d2f3;
+$light-secondary-container-color: #100423;
+$light-on-secondary-container-color: #d7c6f3;
+// tertiary colors
+$light-tertiary-color: #d80f8a;
+$light-on-tertiary-color: #f8faff;
+// general colors
+$light-link-color: #0091ea;
+$light-neutral-color: #212121;
+$light-on-neutral-color: #e0e0e0;
+// font families
+$light-font-family-primary: "Red Hat Mono", monospace;
+$light-font-family-secondary: "Red Hat Text", sans-serif;
+$light-font-family-monospace: "Source Code Pro", monospace;
+// ----------------------------------------------------------------------------
+// yolo dark-mode
+// ----------------------------------------------------------------------------
+// primary colors
+$dark-primary-color: #0a0b47;
+$dark-on-primary-color: #b1b6fa;
+$dark-primary-container-color: #070831;
+$dark-on-primary-container-color: #50fa7b;
+// secondary colors  
+$dark-secondary-color: #fb1d9e;
+$dark-on-secondary-color: #19010f;
+$dark-secondary-container-color: #b5036a;
+$dark-on-secondary-container-color: #f6a5d4;
+// tertiary colors
+$dark-tertiary-color: #0ca9f4;
+$dark-on-tertiary-color: #010d13;
+// general colors
+$dark-link-color: #65cffc;
+$dark-neutral-color: #e0e0e0;
+$dark-on-neutral-color: #212121;
+// font families
+$dark-font-family-primary: "Red Hat Mono", monospace;
+$dark-font-family-secondary: "Red Hat Text", sans-serif;
+$dark-font-family-monospace: "Source Code Pro", monospace;

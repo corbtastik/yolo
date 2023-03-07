@@ -1,49 +1,48 @@
 // ----------------------------------------------------------------------------
-// reveal theme
+// reveal light-mode
 // ----------------------------------------------------------------------------
-:root[light] {
-  // primary colors
-  --primary-color: #fefcfb;
-  --on-primary-color: #091129;
-  --primary-container-color: #091129;
-  --on-primary-container-color: #f72685;
-  // secondary colors
-  --secondary-color: #06a6dc;
-  --on-secondary-color: #ebfaff;
-  --secondary-container-color: #033c50;
-  --on-secondary-container-color: #ebfaff;
-  // tertiary colors
-  --tertiary-color: #f72685;
-  --on-tertiary-color: #feebf4;
-  // general colors
-  --link-color: #339ff4;
-  --neutral-color: #212121;
-  --on-neutral-color: #e0e0e0;
-  // font families
-  --font-family-primary: "Inconsolata", monospace;
-  --font-family-secondary: "Montserrat", sans-serif;
-  --font-family-monospace: "Source Code Pro", monospace;
-}
-:root[dark] {
-  // primary colors
-  --primary-color: #091129;
-  --on-primary-color: #fefcfb;
-  --primary-container-color: #fefcfb;
-  --on-primary-container-color: #ec0a6f;
-  // secondary colors
-  --secondary-color: #06a6dc;
-  --on-secondary-color: #091129;
-  --secondary-container-color: #033c50;
-  --on-secondary-container-color: #ebfaff;
-  // tertiary colors
-  --tertiary-color: #f72685;
-  --on-tertiary-color: #091129;
-  // general colors
-  --link-color: #339ff4;
-  --neutral-color: #e0e0e0;
-  --on-neutral-color: #212121;
-  // font families
-  --font-family-primary: "Inconsolata", monospace;
-  --font-family-secondary: "Montserrat", sans-serif;
-  --font-family-monospace: "Source Code Pro", monospace;
-}
+// primary colors
+$light-primary-color: #fefcfb;
+$light-on-primary-color: #091129;
+$light-primary-container-color: #091129;
+$light-on-primary-container-color: #f72685;
+// secondary colors
+$light-secondary-color: #06a6dc;
+$light-on-secondary-color: #ebfaff;
+$light-secondary-container-color: #033c50;
+$light-on-secondary-container-color: #ebfaff;
+// tertiary colors
+$light-tertiary-color: #f72685;
+$light-on-tertiary-color: #feebf4;
+// general colors
+$light-link-color: #339ff4;
+$light-neutral-color: #212121;
+$light-on-neutral-color: #e0e0e0;
+// font families
+$light-font-family-primary: "Inconsolata", monospace;
+$light-font-family-secondary: "Montserrat", sans-serif;
+$light-font-family-monospace: "Source Code Pro", monospace;
+// ----------------------------------------------------------------------------
+// reveal dark-mode
+// ----------------------------------------------------------------------------
+// primary colors
+$dark-primary-color: #091129;
+$dark-on-primary-color: #fefcfb;
+$dark-primary-container-color: #fefcfb;
+$dark-on-primary-container-color: #ec0a6f;
+// secondary colors
+$dark-secondary-color: #06a6dc;
+$dark-on-secondary-color: #091129;
+$dark-secondary-container-color: #033c50;
+$dark-on-secondary-container-color: #ebfaff;
+// tertiary colors
+$dark-tertiary-color: #f72685;
+$dark-on-tertiary-color: #091129;
+// general colors
+$dark-link-color: #339ff4;
+$dark-neutral-color: #e0e0e0;
+$dark-on-neutral-color: #212121;
+// font families
+$dark-font-family-primary: "Inconsolata", monospace;
+$dark-font-family-secondary: "Montserrat", sans-serif;
+$dark-font-family-monospace: "Source Code Pro", monospace;

@@ -1,49 +1,48 @@
 // ----------------------------------------------------------------------------
-// onebit theme
+// domino light-mode
 // ----------------------------------------------------------------------------
-:root[light] {
-  // primary colors
-  --primary-color: #fff;
-  --on-primary-color: #000;
-  --primary-container-color: #000;
-  --on-primary-container-color: #fff;
-  // secondary colors
-  --secondary-color: #000;
-  --on-secondary-color: #fff;
-  --secondary-container-color: #000;
-  --on-secondary-container-color: #fff;
-  // tertiary colors
-  --tertiary-color: #00c853;
-  --on-tertiary-color: #000;
-  // general colors
-  --link-color: #0091ea;
-  --neutral-color: #000;
-  --on-neutral-color: #fff;
-  // font families
-  --font-family-primary: "Source Code Pro", monospace;
-  --font-family-secondary: "Open Sans", sans-serif;
-  --font-family-monospace: "Red Hat Mono", monospace;
-}
-:root[dark] {
-  // primary colors
-  --primary-color: #000;
-  --on-primary-color: #fff;
-  --primary-container-color: #fff;
-  --on-primary-container-color: #000;
-  // secondary colors
-  --secondary-color: #fff;
-  --on-secondary-color: #000;
-  --secondary-container-color: #fff;
-  --on-secondary-container-color: #000;
-  // tertiary colors
-  --tertiary-color: #00e676;
-  --on-tertiary-color: #000;
-  // general colors
-  --link-color: #4995ef;
-  --neutral-color: #fff;
-  --on-neutral-color: #000;
-  // font families
-  --font-family-primary: "Source Code Pro", monospace;
-  --font-family-secondary: "Open Sans", sans-serif;
-  --font-family-monospace: "Red Hat Mono", monospace;
-}
+// primary colors
+$light-primary-color: #fff;
+$light-on-primary-color: #000;
+$light-primary-container-color: #000;
+$light-on-primary-container-color: #fff;
+// secondary colors
+$light-secondary-color: #000;
+$light-on-secondary-color: #fff;
+$light-secondary-container-color: #000;
+$light-on-secondary-container-color: #fff;
+// tertiary colors
+$light-tertiary-color: #00c853;
+$light-on-tertiary-color: #000;
+// general colors
+$light-link-color: #0091ea;
+$light-neutral-color: #000;
+$light-on-neutral-color: #fff;
+// font families
+$light-font-family-primary: "Source Code Pro", monospace;
+$light-font-family-secondary: "Open Sans", sans-serif;
+$light-font-family-monospace: "Red Hat Mono", monospace;
+// ----------------------------------------------------------------------------
+// domino dark-mode
+// ----------------------------------------------------------------------------
+// primary colors
+$dark-primary-color: #000;
+$dark-on-primary-color: #fff;
+$dark-primary-container-color: #fff;
+$dark-on-primary-container-color: #000;
+// secondary colors
+$dark-secondary-color: #fff;
+$dark-on-secondary-color: #000;
+$dark-secondary-container-color: #fff;
+$dark-on-secondary-container-color: #000;
+// tertiary colors
+$dark-tertiary-color: #00e676;
+$dark-on-tertiary-color: #000;
+// general colors
+$dark-link-color: #4995ef;
+$dark-neutral-color: #fff;
+$dark-on-neutral-color: #000;
+// font families
+$dark-font-family-primary: "Source Code Pro", monospace;
+$dark-font-family-secondary: "Open Sans", sans-serif;
+$dark-font-family-monospace: "Red Hat Mono", monospace;
