@@ -564,3 +564,45 @@ $column-gap: 0.50rem !default;
     }
   }
 }
+
+@if $variable-columns {
+  .columns.is-variable {
+    --columnGap: 0.75rem;
+    margin-left: calc(-1 * var(--columnGap));
+    margin-right: calc(-1 * var(--columnGap));
+    > .column {
+      padding-left: var(--columnGap);
+      padding-right: var(--columnGap);
+    }
+    @for $i from 0 through 8 {
+      &.is-#{$i} {
+        --columnGap: #{$i * 0.25rem};
+      }
+      @include mobile {
+        &.is-#{$i}-mobile {
+          --columnGap: #{$i * 0.25rem};
+        }
+      }
+      @include tablet {
+        &.is-#{$i}-tablet {
+          --columnGap: #{$i * 0.25rem};
+        }
+      }
+      @include tablet-only {
+        &.is-#{$i}-tablet-only {
+          --columnGap: #{$i * 0.25rem};
+        }
+      }
+      @include touch {
+        &.is-#{$i}-touch {
+          --columnGap: #{$i * 0.25rem};
+        }
+      }
+      @include desktop {
+        &.is-#{$i}-desktop {
+          --columnGap: #{$i * 0.25rem};
+        }
+      }
+    }
+  }
+}

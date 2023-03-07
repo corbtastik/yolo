@@ -2,51 +2,6 @@
 // ----------------------------------------------------------------------------
 // Utilities scss module
 // ----------------------------------------------------------------------------
-// Left align content, right margin auto, left margin 0
-.left {
-  margin-right: auto;
-  margin-left: 0;
-}
-
-// Center content, left/right auto, top/bottom 0 margin
-.center {
-  margin: 0 auto;
-}
-
-// No display
-.no-display {
-  display: none;
-  overflow: auto;
-}
-
-// No bullets on lists
-.no-bullets {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-}
-
-// material-icon styling
-.material-icons.primary-color {
-  color: red;
-}
-
-.material-icons.md-18 {
-  font-size: 18px;
-}
-
-.material-icons.md-24 {
-  font-size: 24px;
-}
-
-.material-icons.md-36 {
-  font-size: 36px;
-}
-
-.material-icons.md-48 {
-  font-size: 48px;
-}
-
-.material-icons {
-  vertical-align: middle;
-}
+@import "other";
+@import "material-icons";
+@import "color";

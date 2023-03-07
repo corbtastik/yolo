@@ -1,0 +1,13 @@
+// ----------------------------------------------------------------------------
+// Color utilities
+// ----------------------------------------------------------------------------
+@mixin on-color($background-color) {
+
+  @if(lightness($background-color) > 50) {
+    // light background
+    color: #000;
+  } @else {
+    // dark background
+    color: #fff;
+  }
+}

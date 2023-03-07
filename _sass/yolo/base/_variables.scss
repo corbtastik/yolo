@@ -34,6 +34,7 @@ $weight-bold: 700 !default;
 // ----------------------------------------------------------------------------
 // Layouts and responsiveness
 // ----------------------------------------------------------------------------
+$variable-columns: true !default;
 $gap: 32px !default;
 $tablet: 769px !default;
 $desktop: 960px + (2 * $gap) !default;

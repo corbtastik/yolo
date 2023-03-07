@@ -17,6 +17,6 @@
 {% if site.data.settings.sidebar %}
 @import "yolo/components/sidebar";
 {% endif %}
-@import "yolo/brand/theme/{{ site.data.settings.brand.theme | default: 'yolo' }}";
-@import "yolo/brand/syntax/{{ site.data.settings.brand.syntax | default: 'yolo' }}";
-@import "yolo/brand/all";
+//@import "yolo/brand/theme/{{ site.data.settings.brand.theme | default: 'yolo' }}";
+//@import "yolo/brand/syntax/{{ site.data.settings.brand.syntax | default: 'yolo' }}";
+//@import "yolo/brand/all";
