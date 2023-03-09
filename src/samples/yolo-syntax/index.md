@@ -23,13 +23,17 @@ The following `syntax-theme(s)` are provided out-of-the-box.
 | [sprinkles](https://corbtastik-yolo-sprinkles.surge.sh) | A theme that pairs well with cup cakes |
 | [yolo](https://corbtastik-yolo.surge.sh)                | The default theme for Yolo sites       |
 
+## Syntax Swatches
+
+{% include demo/syntax-theme-swatches.html %}
+
 ### Custom Syntax Theme
 {:.no-toc}
 
 1. Creating a custom `syntax-theme` is done by adding a `scss` file into `_sass/yolo/syntax-theme` and setting values for each color property for both __light__ and __dark__ modes.
 2. To enable a specific `syntax-theme` add it to your `settings.yml` file, as shown below.
 
-{% include code.html label="Configure the syntax-theme" %}
+{% include components/code.html label="Configure the syntax-theme" %}
 ```yaml
 # -------------------------------------
 # Yolo site settings
@@ -50,7 +54,7 @@ theme:
 
 ### Bash
 
-{% include code.html label="Bash snippet" %}
+{% include components/code.html label="Bash snippet" %}
 ```bash
 #!/bin/bash
 function say_howdy() {
@@ -66,13 +70,13 @@ fi
 say_howdy $1
 ```
 
-{% include arrow.html link="#syntax-highlighting" %}
+{% include components/arrow.html link="#syntax-highlighting" %}
 
 ---
 
 ### C
 
-{% include code.html label="C snippet" %}
+{% include components/code.html label="C snippet" %}
 ```c
 #include <stdio.h>
 // Say Howdy
@@ -86,13 +90,13 @@ int main(int argc, char **argv) {
 }
 ```
 
-{% include arrow.html link="#syntax-highlighting" %}
+{% include components/arrow.html link="#syntax-highlighting" %}
 
 ---
 
 ### C++
 
-{% include code.html label="C++ snippet" %}
+{% include components/code.html label="C++ snippet" %}
 ```c++
 #include <iostream>
 using namespace std;
@@ -107,13 +111,13 @@ int main(int argc, char** argv) {
 }
 ```
 
-{% include arrow.html link="#syntax-highlighting" %}
+{% include components/arrow.html link="#syntax-highlighting" %}
 
 ---
 
 ### Dart
 
-{% include code.html label="Dart snippet" %}
+{% include components/code.html label="Dart snippet" %}
 ```dart
 import 'dart:io';
 // Say Howdy
@@ -128,13 +132,13 @@ void main(List<String> args) {
 }
 ```
 
-{% include arrow.html link="#syntax-highlighting" %}
+{% include components/arrow.html link="#syntax-highlighting" %}
 
 ---
 
 ### Go
 
-{% include code.html label="Go snippet" %}
+{% include components/code.html label="Go snippet" %}
 ```go
 package main
 
@@ -154,13 +158,13 @@ func main () {
 }
 ```
 
-{% include arrow.html link="#syntax-highlighting" %}
+{% include components/arrow.html link="#syntax-highlighting" %}
 
 ---
 
 ### HTML
 
-{% include code.html label="HTML snippet" %}
+{% include components/code.html label="HTML snippet" %}
 ```html
 <!DOCTYPE html>
 <html lang="en">
@@ -174,13 +178,13 @@ func main () {
 </html>
 ```
 
-{% include arrow.html link="#syntax-highlighting" %}
+{% include components/arrow.html link="#syntax-highlighting" %}
 
 ---
 
 ### JSON
 
-{% include code.html label="JSON snippet" %}
+{% include components/code.html label="JSON snippet" %}
 ```json
 {
   "apiVersion": "v1",
@@ -207,13 +211,13 @@ func main () {
 }
 ```
 
-{% include arrow.html link="#syntax-highlighting" %}
+{% include components/arrow.html link="#syntax-highlighting" %}
 
 ---
 
 ### Java
 
-{% include code.html label="Java snippet" %}
+{% include components/code.html label="Java snippet" %}
 ```java
 // Say Howdy
 public class Howdy {
@@ -227,13 +231,13 @@ public class Howdy {
 }
 ```
 
-{% include arrow.html link="#syntax-highlighting" %}
+{% include components/arrow.html link="#syntax-highlighting" %}
 
 ---
 
 ### JavaScript
 
-{% include code.html label="JavaScript snippet" %}
+{% include components/code.html label="JavaScript snippet" %}
 ```javascript
 function sayHowdy(name) {
   console.log("Howdy " + name + "!");
@@ -248,13 +252,13 @@ if(process.argv.length != 3) {
 sayHowdy(process.argv[2]);
 ```
 
-{% include arrow.html link="#syntax-highlighting" %}
+{% include components/arrow.html link="#syntax-highlighting" %}
 
 ---
 
 ### Kotlin
 
-{% include code.html label="Kotlin snippet" %}
+{% include components/code.html label="Kotlin snippet" %}
 ```kotlin
 // Say Howdy
 fun main(args: Array<String>): Int {
@@ -267,13 +271,13 @@ fun main(args: Array<String>): Int {
 }
 ```
 
-{% include arrow.html link="#syntax-highlighting" %}
+{% include components/arrow.html link="#syntax-highlighting" %}
 
 ---
 
 ### Markdown
 
-{% include code.html label="Markdown snippet" %}
+{% include components/code.html label="Markdown snippet" %}
 ```markdown
 # Markdown
 
@@ -284,13 +288,13 @@ fun main(args: Array<String>): Int {
 * `document`!
 ```
 
-{% include arrow.html link="#syntax-highlighting" %}
+{% include components/arrow.html link="#syntax-highlighting" %}
 
 ---
 
 ### Python
 
-{% include code.html label="Python snippet" %}
+{% include components/code.html label="Python snippet" %}
 ```python
 import sys
 
@@ -305,13 +309,13 @@ if len(sys.argv) != 2:
 sayHowdy(sys.argv[1])
 ```
 
-{% include arrow.html link="#syntax-highlighting" %}
+{% include components/arrow.html link="#syntax-highlighting" %}
 
 ---
 
 ### SCSS
 
-{% include code.html label="SCSS snippet" %}
+{% include components/code.html label="SCSS snippet" %}
 ```scss
 .light-theme {
   color: $light-secondary-color;
@@ -329,13 +333,13 @@ sayHowdy(sys.argv[1])
 }
 ```
 
-{% include arrow.html link="#syntax-highlighting" %}
+{% include components/arrow.html link="#syntax-highlighting" %}
 
 ---
 
 ### SQL
 
-{% include code.html label="SQL snippet" %}
+{% include components/code.html label="SQL snippet" %}
 ```sql
 -- Select orders for micky
 SELECT *
@@ -345,13 +349,13 @@ AND   price > 5000
 AND   price <= 10000
 ```
 
-{% include arrow.html link="#syntax-highlighting" %}
+{% include components/arrow.html link="#syntax-highlighting" %}
 
 ---
 
 ### YAML
 
-{% include code.html label="YAML snippet" %}
+{% include components/code.html label="YAML snippet" %}
 ```yaml
 # ---------------------------------------------------------
 # Yolo site settings. see: _config.yml for jekyll settings
@@ -368,7 +372,7 @@ sidebar:
   logo: assets/images/logo.png
 ```
 
-{% include arrow.html link="#syntax-highlighting" %}
+{% include components/arrow.html link="#syntax-highlighting" %}
 
 ---
 
@@ -398,4 +402,4 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 ```
 
-{% include arrow.html link="#syntax-highlighting" %}
+{% include components/arrow.html link="#syntax-highlighting" %}

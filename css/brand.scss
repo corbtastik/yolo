@@ -13,7 +13,7 @@
 @use "yolo/brand/theme/{{ site.data.settings.brand.theme | default: 'yolo' }}" as brand-theme;
 @use "yolo/brand/syntax/{{ site.data.settings.brand.syntax | default: 'yolo' }}" as brand-syntax;
 // ----------------------------------------------------------------------------
-// Generate CSS global-variables used for light/dark mode switch
+// Generate CSS global-variables used for skinning light/dark modes
 // ----------------------------------------------------------------------------
 :root[light] {
   // brand-theme
@@ -46,4 +46,5 @@
 // ----------------------------------------------------------------------------
 // Import brand sass after brand-theme and brand-syntax vars are set above.
 // ----------------------------------------------------------------------------
+@import "yolo/brand/syntax/{{ site.data.settings.brand.syntax | default: 'yolo' }}";
 @import "yolo/brand/all";
