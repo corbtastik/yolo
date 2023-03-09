@@ -153,6 +153,27 @@
     }
   }
 
+  .yolo-tab {
+    background-color: var(--primary-container-color);
+    button {
+      font-family: var(--font-family-secondary);
+      background-color: var(--secondary-color);
+      color: var(--on-secondary-color);
+      &:hover {
+        background-color: var(--tertiary-color);
+        color: var(--on-tertiary-color);
+      }
+      &.active {
+        background-color: var(--primary-container-color);
+        color: var(--on-primary-container-color);
+      }
+    }
+  }
+  .yolo-tab-content {
+    background-color: var(--primary-container-color);
+    border: none;
+  }
+
   .toggle-button {
     color: var(--secondary-color);
     &:hover {
