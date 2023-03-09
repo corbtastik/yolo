@@ -149,6 +149,10 @@ The following `syntax-theme(s)` are provided out-of-the-box.
 
 {% include demo/syntax-theme-swatches.html %}
 
+{% include components/arrow.html link="#howdy" %}
+
+---
+
 ### Snippets
 {:.no-toc}
 

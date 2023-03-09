@@ -2,14 +2,31 @@
 # Brand scss file
 ---
 @charset "utf-8";
+@use "sass:meta";
+@use "sass:string";
 // ----------------------------------------------------------------------------
-// Brand scss module
-// For light and dark modes:
+// Pull in user defined brand.theme and brand.syntax as module-variables
+// to convert to CSS globals. For light and dark modes:
 //  1. Read brand-theme SASS variables and generate global CSS variables
 //  2. Read brand-syntax SASS variables and generate global CSS variables
 // ----------------------------------------------------------------------------
-@use "sass:meta";
-@use "sass:string";
+// ***NOTE***
+// ----------------------------------------------------------------------------
+// This is only needed to convert SASS variables to CSS globals. The CSS
+// globals are used to implement "in browser" switching between light and
+// dark modes. This means all color fields in "_theme.scss" and "_syntax.scss"
+// reference global values via CSS "var" syntax (NOT SASS variables). This is
+// because SASS is static and rendered at build-time, whereas CSS is dynamic
+// and rendered at runtime by the browser. Given that, it may seem confusing
+// that we "@import" the same brand.theme and brand.syntax SASS variables again
+// after the ":root" section below. This however is needed to place the SASS
+// variables in-scope for the rest of the downstream theme related SASS files.
+// For example, "_colors.scss" defines CSS selectors for each color and uses
+// SASS variables (ex: ".link-color" = $light-link-color or $dark-link-color)
+// to set the value. The key-point is only "_theme.scss" and "_syntax.scss"
+// should use CSS "var" syntax to reference color values as the elements they
+// style are "skinned" at runtime, everything else should use SASS variables.
+// ----------------------------------------------------------------------------
 @use "yolo/brand/theme/{{ site.data.settings.brand.theme | default: 'yolo' }}" as brand-theme;
 @use "yolo/brand/syntax/{{ site.data.settings.brand.syntax | default: 'yolo' }}" as brand-syntax;
 // ----------------------------------------------------------------------------
@@ -44,7 +61,10 @@
   }
 }
 // ----------------------------------------------------------------------------
-// Import brand sass after brand-theme and brand-syntax vars are set above.
+// Import brand SASS variables after brand.theme and brand.syntax CSS vars are
+// generated as ":root" globals above. This is needed to place the SASS
+// variables in-scope for the rest of the SASS theme files.
 // ----------------------------------------------------------------------------
+@import "yolo/brand/theme/{{ site.data.settings.brand.theme | default: 'yolo' }}";
 @import "yolo/brand/syntax/{{ site.data.settings.brand.syntax | default: 'yolo' }}";
 @import "yolo/brand/all";
