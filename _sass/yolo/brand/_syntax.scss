@@ -57,8 +57,8 @@
     @include on-color($light-syntax-text);
   }
   .syntax-highlight-line-color {
-    background-color: $light-syntax-highlight-color;
-    @include on-color($light-syntax-highlight-color);
+    background-color: $light-syntax-highlight-line;
+    @include on-color($light-syntax-highlight-line);
   }
   .syntax-error-color {
     background-color: $light-syntax-error;
@@ -361,8 +361,8 @@
     @include on-color($dark-syntax-text);
   }
   .syntax-highlight-line-color {
-    background-color: $dark-syntax-highlight-color;
-    @include on-color($dark-syntax-highlight-color);
+    background-color: $dark-syntax-highlight-line;
+    @include on-color($dark-syntax-highlight-line);
   }
   .syntax-error-color {
     background-color: $dark-syntax-error;
