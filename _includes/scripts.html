@@ -4,18 +4,3 @@
 {% endfor %}
 {% endif %}
 <script src="{{ site.baseurl }}{{ '/assets/js/yolo.js' | relative_url }}"></script>
-<script>
-  function openTab(event, tabId) {
-    let i, tabContent, tabLinks;
-    tabContent = document.getElementsByClassName("yolo-tab-content");
-    for (i = 0; i < tabContent.length; i++) {
-      tabContent[i].style.display = "none";
-    }
-    tabLinks = document.getElementsByClassName("yolo-tab-links");
-    for (i = 0; i < tabLinks.length; i++) {
-      tabLinks[i].className = tabLinks[i].className.replace(" active", "");
-    }
-    document.getElementById(tabId).style.display = "block";
-    event.currentTarget.className += " active";
-  }
-</script>

@@ -243,8 +243,10 @@
             yolo.scaleImages();
             // Initialize sidebar
             yolo.initSidebar();
-            // Initialize toc on page/post and sidebar
+            // Initialize toc on the page and sidebar
             yolo.initToc();
+            // Initialize tabs on the page
+            yolo.initTabs();
             return yolo;
         }
     }
@@ -335,7 +337,48 @@
 
     Yolo.prototype.initToc = function() {
         Toc.create();
-    }
+    };
+
+    Yolo.prototype.initTabs = function() {
+        let i, tabButtons = document.querySelectorAll('.yolo-tab-button');
+        const parent = this;
+        for(i = 0; i < tabButtons.length; i++) {
+            tabButtons[i].addEventListener("click", function() {
+                parent.openTab(this);
+            });
+        }
+    };
+
+    Yolo.prototype.openTab = function(tabButton) {
+        // Get the tab element to show/hide from data attribute on DOM
+        const tabId = tabButton.dataset.openTab;
+        const tabElement = document.getElementById(tabId);
+        if(tabElement === null) {
+            Console.error("Yolo.openTab called with non-existent tab: " + tabId);
+            return;
+        }
+        // If an "active" button is clicked then close the open tab and return
+        if(tabButton.classList.contains("active")) {
+            tabButton.classList.remove("active");
+            tabElement.style.display = "none";
+            return;
+        }
+        // Close/hide all tabs
+        let i, tabContent, tabLinks;
+        tabContent = document.getElementsByClassName("yolo-tab-content");
+        for (i = 0; i < tabContent.length; i++) {
+            tabContent[i].style.display = "none";
+        }
+        // Remove "active" from all tabLinks on load.
+        tabLinks = document.getElementsByClassName("yolo-tab-links");
+        for (i = 0; i < tabLinks.length; i++) {
+            tabLinks[i].classList.remove("active");
+        }
+        // Show active tab and add "active" class to tabButton
+        tabElement.style.display = "block";
+        tabButton.classList.add("active");
+    };
+
     // ------------------------------------------------------------------------
     // Expose Yolo on the window object.
     //   Call from HTML: onclick="Yolo.lightbox("lb-images").openModal();"
