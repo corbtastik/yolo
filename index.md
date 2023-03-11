@@ -58,23 +58,23 @@ Branding isn't implemented as a typical [gem based Jekyll theme](https://jekyllr
 
 The following Yolo __themes__ are included out-of-the-box.
 
-| Theme                                                     | Description                             |
-|-----------------------------------------------------------|-----------------------------------------|
-| [bluebonnet](https://corbtastik-yolo-bluebonnet.surge.sh) | Theme description                       |
-| [bubblegum](https://corbtastik-yolo-bubblegum.surge.sh)   | Theme description                       |
-| [cooleo](https://corbtastik-yolo-cooleo.surge.sh)         | Theme description                       |
-| [corbs](https://corbtastik-yolo-corbs.surge.sh)           | Theme description                       |
-| [domino](https://corbtastik-yolo-domino.surge.sh)         | Ebony and ivory with a touch of green   |
-| [dusk](https://corbtastik-yolo-dusk.surge.sh)             | Reminiscent of a good ole Texas evening |
-| [folly](https://corbtastik-yolo-folly.surge.sh)           | Theme description                       |
-| [grape](https://corbtastik-yolo-grape.surge.sh)           | Theme description                       |
-| [mint](https://corbtastik-yolo-mint.surge.sh)             | Theme description                       |
-| [newspaper](https://corbtastik-yolo-newspaper.surge.sh)   | Read all about this greyscale theme     |
-| [newwave](https://corbtastik-yolo-newwave.surge.sh)       | A bright fluorescent 80s'ish theme      |
-| [reveal](https://corbtastik-yolo-reveal.surge.sh)         | A theme for those big reveals           |
-| [seaside](https://corbtastik-yolo-seaside.surge.sh)       | Theme description                       |
-| [yolo](https://corbtastik-yolo.surge.sh)                  | The default theme for Yolo sites        |
-| [zoot](https://corbtastik-yolo-zoot.surge.sh)             | Theme description                       |
+| Theme                                                     |
+|-----------------------------------------------------------|
+| [bluebonnet](https://corbtastik-yolo-bluebonnet.surge.sh) |
+| [bubblegum](https://corbtastik-yolo-bubblegum.surge.sh)   |
+| [cooleo](https://corbtastik-yolo-cooleo.surge.sh)         |
+| [corbs](https://corbtastik-yolo-corbs.surge.sh)           |
+| [domino](https://corbtastik-yolo-domino.surge.sh)         |
+| [dusk](https://corbtastik-yolo-dusk.surge.sh)             |
+| [folly](https://corbtastik-yolo-folly.surge.sh)           |
+| [grape](https://corbtastik-yolo-grape.surge.sh)           |
+| [mint](https://corbtastik-yolo-mint.surge.sh)             |
+| [newspaper](https://corbtastik-yolo-newspaper.surge.sh)   |
+| [newwave](https://corbtastik-yolo-newwave.surge.sh)       |
+| [reveal](https://corbtastik-yolo-reveal.surge.sh)         |
+| [seaside](https://corbtastik-yolo-seaside.surge.sh)       |
+| [yolo](https://corbtastik-yolo.surge.sh)                  |
+| [zoot](https://corbtastik-yolo-zoot.surge.sh)             |
 
 ---
 
@@ -133,16 +133,26 @@ Yolo uses Jekyll's [default syntax highlighting](https://jekyllrb.com/docs/liqui
 
 The following `syntax-theme(s)` are provided out-of-the-box.
 
-| Syntax Theme                                            | Description                            |
-|---------------------------------------------------------|----------------------------------------|
-| [dracula](https://corbtastik-yolo-dracula.surge.sh)     | A theme for Transylvanian vampires     |
-| [monokai](https://corbtastik-yolo-monokai.surge.sh)     | The classic theme for focusing         |
-| [neo](https://corbtastik-yolo-neo.surge.sh)             | A bright fluorescent theme             |
-| [newspaper](https://corbtastik-yolo-newspaper.surge.sh) | Read all about this greyscale theme    |
-| [reveal](https://corbtastik-yolo-reveal.surge.sh)       | A theme for big reveals                |
-| [solo](https://corbtastik-yolo-solo.surge.sh)           | Minimal black and white theme          |
-| [sprinkles](https://corbtastik-yolo-sprinkles.surge.sh) | A theme that pairs well with cup cakes |
-| [yolo](https://corbtastik-yolo.surge.sh)                | The default theme for Yolo sites       |
+| Syntax Theme                                                     |
+|------------------------------------------------------------------|
+| [bluebonnet](https://corbtastik-yolo-syntax-bluebonnet.surge.sh) |
+| [bubblegum](https://corbtastik-yolo-syntax-bubblegum.surge.sh)   |
+| [cooleo](https://corbtastik-yolo-syntax-cooleo.surge.sh)         |
+| [corbs](https://corbtastik-yolo-syntax-corbs.surge.sh)           |
+| [domino](https://corbtastik-yolo-syntax-domino.surge.sh)         |
+| [dracula](https://corbtastik-yolo-dracula.surge.sh)              |
+| [dusk](https://corbtastik-yolo-syntax-dusk.surge.sh)             |
+| [folly](https://corbtastik-yolo-syntax-folly.surge.sh)           |
+| [monokai](https://corbtastik-yolo-syntax-monokai.surge.sh)       |
+| [grape](https://corbtastik-yolo-syntax-grape.surge.sh)           |
+| [mint](https://corbtastik-yolo-syntax-mint.surge.sh)             |
+| [newspaper](https://corbtastik-yolo-syntax-newspaper.surge.sh)   |
+| [newwave](https://corbtastik-yolo-syntax-newwave.surge.sh)       |
+| [reveal](https://corbtastik-yolo-syntax-reveal.surge.sh)         |
+| [seaside](https://corbtastik-yolo-syntax-seaside.surge.sh)       |
+| [sprinkles](https://corbtastik-yolo-syntax-sprinkles.surge.sh)   |
+| [yolo](https://corbtastik-yolo-syntax.surge.sh)                  |
+| [zoot](https://corbtastik-yolo-syntax-zoot.surge.sh)             |
 
 ### Syntax Theme Swatches
 {:.no-toc}

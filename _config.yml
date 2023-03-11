@@ -33,9 +33,9 @@ exclude:
   - "docs/"
 # -----------------------------------------------------------------------------
 # sass_dir: Folder that contains sass/scss files to be processed
-# style: compressed or uncompressed css generation
+# style: compressed or expanded css generation
 # -----------------------------------------------------------------------------
 sass:
   sass_dir: _sass
-  style: expanded
+  style: compressed
   sourcemap: never
