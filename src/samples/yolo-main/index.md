@@ -3,10 +3,10 @@ layout: default
 links:
 - yolo,https://github.com/corbtastik/yolo
 - jekyll,https://jekyllrb.com
-  ext_js:
-  - custom
-    ext_css:
-  - custom
+ext_js:
+- custom
+ext_css:
+- custom
 ---
 
 ## Howdy
@@ -58,23 +58,23 @@ Branding isn't implemented as a typical [gem based Jekyll theme](https://jekyllr
 
 The following Yolo __themes__ are included out-of-the-box.
 
-| Theme                                                     | Description                             |
-|-----------------------------------------------------------|-----------------------------------------|
-| [bluebonnet](https://corbtastik-yolo-bluebonnet.surge.sh) | Theme description                       |
-| [bubblegum](https://corbtastik-yolo-bubblegum.surge.sh)   | Theme description                       |
-| [cooleo](https://corbtastik-yolo-cooleo.surge.sh)         | Theme description                       |
-| [corbs](https://corbtastik-yolo-corbs.surge.sh)           | Theme description                       |
-| [domino](https://corbtastik-yolo-domino.surge.sh)         | Ebony and ivory with a touch of green   |
-| [dusk](https://corbtastik-yolo-dusk.surge.sh)             | Reminiscent of a good ole Texas evening |
-| [folly](https://corbtastik-yolo-folly.surge.sh)           | Theme description                       |
-| [grape](https://corbtastik-yolo-grape.surge.sh)           | Theme description                       |
-| [mint](https://corbtastik-yolo-mint.surge.sh)             | Theme description                       |
-| [newspaper](https://corbtastik-yolo-newspaper.surge.sh)   | Read all about this greyscale theme     |
-| [newwave](https://corbtastik-yolo-newwave.surge.sh)       | A bright fluorescent 80s'ish theme      |
-| [reveal](https://corbtastik-yolo-reveal.surge.sh)         | A theme for those big reveals           |
-| [seaside](https://corbtastik-yolo-seaside.surge.sh)       | Theme description                       |
-| [yolo](https://corbtastik-yolo.surge.sh)                  | The default theme for Yolo sites        |
-| [zoot](https://corbtastik-yolo-zoot.surge.sh)             | Theme description                       |
+| Theme                                                     | Description                                   |
+|-----------------------------------------------------------|-----------------------------------------------|
+| [bluebonnet](https://corbtastik-yolo-bluebonnet.surge.sh) | A nod to the state flower of Texas.           |
+| [bubblegum](https://corbtastik-yolo-bubblegum.surge.sh)   | A theme for hubba bubba enthusiasts.          |
+| [cooleo](https://corbtastik-yolo-cooleo.surge.sh)         | A not cool, but cooleo look.                  |
+| [corbs](https://corbtastik-yolo-corbs.surge.sh)           | A personal fave.                              |
+| [domino](https://corbtastik-yolo-domino.surge.sh)         | A basic black and white theme.                |
+| [dusk](https://corbtastik-yolo-dusk.surge.sh)             | Just a good ole evening look.                 |
+| [folly](https://corbtastik-yolo-folly.surge.sh)           | This theme just lacks good sense.             |
+| [grape](https://corbtastik-yolo-grape.surge.sh)           | For fans of grape soda.                       |
+| [mint](https://corbtastik-yolo-mint.surge.sh)             | A minty fresh feel.                           |
+| [newspaper](https://corbtastik-yolo-newspaper.surge.sh)   | Read all about this theme.                    |
+| [newwave](https://corbtastik-yolo-newwave.surge.sh)       | An 80s florescent vibe.                       |
+| [reveal](https://corbtastik-yolo-reveal.surge.sh)         | A theme for big reveals.                      |
+| [seaside](https://corbtastik-yolo-seaside.surge.sh)       | A peaceful easy seaside theme.                |
+| [yolo](https://corbtastik-yolo.surge.sh)                  | A theme for this zany project.                |
+| [zoot](https://corbtastik-yolo-zoot.surge.sh)             | A throwback to Red Hat Linux 6.2, circa 2000. |
 
 ---
 
@@ -127,27 +127,47 @@ The `neutral-color` and `on-neutral-color` variables are general use colors.
 
 Yolo uses Jekyll's [default syntax highlighting](https://jekyllrb.com/docs/liquid/tags/#code-snippet-highlighting) capabilities provided by [rouge](https://github.com/rouge-ruby/rouge), and adds the ability to use custom `syntax-theme(s)` for light and dark modes.
 
-1. Create a new `scss` file in `_sass/yolo/brand/syntax`.
-2. Customize the syntax-theme values for __light__ and __dark__ modes.
-3. Enable by setting `brand.syntax` in `_data/settings.yml`.
+> __Note__: Every theme included with Yolo has a corresponding syntax theme.
+>   * __See__: `_sass/yolo/brand/theme` for themes.
+>   * __See__: `_sass/yolo/brand/syntax` for syntax themes.
 
-The following `syntax-theme(s)` are provided out-of-the-box.
+When you create a custom `syntax-theme` you specify colors for each syntax token variable, which maps to the appropriate rouge css selector.
 
-| Syntax Theme                                            | Description                            |
-|---------------------------------------------------------|----------------------------------------|
-| [dracula](https://corbtastik-yolo-dracula.surge.sh)     | A theme for Transylvanian vampires     |
-| [monokai](https://corbtastik-yolo-monokai.surge.sh)     | The classic theme for focusing         |
-| [neo](https://corbtastik-yolo-neo.surge.sh)             | A bright fluorescent theme             |
-| [newspaper](https://corbtastik-yolo-newspaper.surge.sh) | Read all about this greyscale theme    |
-| [reveal](https://corbtastik-yolo-reveal.surge.sh)       | A theme for big reveals                |
-| [solo](https://corbtastik-yolo-solo.surge.sh)           | Minimal black and white theme          |
-| [sprinkles](https://corbtastik-yolo-sprinkles.surge.sh) | A theme that pairs well with cup cakes |
-| [yolo](https://corbtastik-yolo.surge.sh)                | The default theme for Yolo sites       |
-
-### Syntax Theme Swatches
+### Custom Syntax Theme
 {:.no-toc}
 
+1. Creating a custom `syntax-theme` is done by adding a `scss` file into `_sass/yolo/brand/syntax` and setting values for each color property for both __light__ and __dark__ modes.
+2. To enable a specific `syntax-theme` add it to your `settings.yml` file, as shown below.
+
+{% include components/code.html label="Configure the syntax-theme" %}
+```yaml
+# -------------------------------------
+# Yolo site settings
+# -------------------------------------
+name: Yolo
+title: Yolo on my friend
+description: Loveable single pages
+brand:
+  # references _sass/yolo/brand/theme/_newwave.scss
+  theme: newwave
+  # references _sass/yolo/brand/syntax/_newwave.scss
+  syntax: newwave
+```
+
+{% include components/arrow.html link="#howdy" %}
+
+---
+
+### Syntax Swatches
+{:.no-toc}
+
+The swatches below show the colors for the `syntax-theme` in use, each swatch has the syntax token and the corresponding css selector in parentheses.
+
 {% include demo/syntax-theme-swatches.html %}
+
+{% include components/arrow.html link="#howdy" %}
+
+---
 
 ### Snippets
 {:.no-toc}
@@ -802,8 +822,8 @@ This adds the following `<script>` tag before the closing `</body>` tag.
 
 ```html
 <body>
-    <!-- Your post content here -->
-    <script src="/assets/ext/js/custom.js"></script>
+<!-- Your post content here -->
+<script src="/assets/ext/js/custom.js"></script>
 </body>
 ```
 

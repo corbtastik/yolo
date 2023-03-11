@@ -5,32 +5,26 @@ links:
 - jekyll,https://jekyllrb.com
 ---
 
-## Syntax Highlighting
+## Syntax Theme
 
 Yolo uses Jekyll's [default syntax highlighting](https://jekyllrb.com/docs/liquid/tags/#code-snippet-highlighting) capabilities provided by [rouge](https://github.com/rouge-ruby/rouge), and adds the ability to use custom `syntax-theme(s)` for light and dark modes.
 
-The following `syntax-theme(s)` are provided out-of-the-box.
+> __Note__: Every theme included with Yolo has a corresponding syntax theme.
+>   * __See__: `_sass/yolo/brand/theme` for themes.
+>   * __See__: `_sass/yolo/brand/syntax` for syntax themes.
 
-| Syntax Theme                                            | Description                            |
-|---------------------------------------------------------|----------------------------------------|
-| [dracula](https://corbtastik-yolo-dracula.surge.sh)     | A theme for Transylvanian vampires     |
-| [dusk](https://corbtastik-yolo-dusk.surge.sh)           | A sunset lovers theme                  |
-| [monokai](https://corbtastik-yolo-monokai.surge.sh)     | The classic theme for focusing         |
-| [neon](https://corbtastik-yolo-neon.surge.sh)           | A bright fluorescent dark theme        |
-| [newspaper](https://corbtastik-yolo-newspaper.surge.sh) | Read all about this greyscale theme    |
-| [reveal](https://corbtastik-yolo-reveal.surge.sh)       | A theme for big reveals                |
-| [solo](https://corbtastik-yolo-solo.surge.sh)           | Minimal black and white theme          |
-| [sprinkles](https://corbtastik-yolo-sprinkles.surge.sh) | A theme that pairs well with cup cakes |
-| [yolo](https://corbtastik-yolo.surge.sh)                | The default theme for Yolo sites       |
+When you create a custom `syntax-theme` you specify colors for each syntax token variable, which maps to the appropriate rouge css selector.
 
 ## Syntax Swatches
+
+The swatches below show the colors for the `syntax-theme` in use, each swatch has the syntax token and the corresponding css selector in parentheses.
 
 {% include demo/syntax-theme-swatches.html %}
 
 ### Custom Syntax Theme
 {:.no-toc}
 
-1. Creating a custom `syntax-theme` is done by adding a `scss` file into `_sass/yolo/syntax-theme` and setting values for each color property for both __light__ and __dark__ modes.
+1. Creating a custom `syntax-theme` is done by adding a `scss` file into `_sass/yolo/brand/syntax` and setting values for each color property for both __light__ and __dark__ modes.
 2. To enable a specific `syntax-theme` add it to your `settings.yml` file, as shown below.
 
 {% include components/code.html label="Configure the syntax-theme" %}
@@ -41,9 +35,11 @@ The following `syntax-theme(s)` are provided out-of-the-box.
 name: Yolo
 title: Yolo on my friend
 description: Loveable single pages
-theme:
-  name: neon
-  syntax: neon   # references _sass/yolo/syntax-theme/_neon.scss
+brand:
+  # references _sass/yolo/brand/theme/_newwave.scss
+  theme: newwave
+  # references _sass/yolo/brand/syntax/_newwave.scss
+  syntax: newwave
 ```
 
 ---
@@ -70,7 +66,7 @@ fi
 say_howdy $1
 ```
 
-{% include components/arrow.html link="#syntax-highlighting" %}
+{% include components/arrow.html link="#syntax-theme" %}
 
 ---
 
@@ -90,7 +86,7 @@ int main(int argc, char **argv) {
 }
 ```
 
-{% include components/arrow.html link="#syntax-highlighting" %}
+{% include components/arrow.html link="#syntax-theme" %}
 
 ---
 
@@ -111,7 +107,7 @@ int main(int argc, char** argv) {
 }
 ```
 
-{% include components/arrow.html link="#syntax-highlighting" %}
+{% include components/arrow.html link="#syntax-theme" %}
 
 ---
 
@@ -132,7 +128,7 @@ void main(List<String> args) {
 }
 ```
 
-{% include components/arrow.html link="#syntax-highlighting" %}
+{% include components/arrow.html link="#syntax-theme" %}
 
 ---
 
@@ -158,7 +154,7 @@ func main () {
 }
 ```
 
-{% include components/arrow.html link="#syntax-highlighting" %}
+{% include components/arrow.html link="#syntax-theme" %}
 
 ---
 
@@ -178,7 +174,7 @@ func main () {
 </html>
 ```
 
-{% include components/arrow.html link="#syntax-highlighting" %}
+{% include components/arrow.html link="#syntax-theme" %}
 
 ---
 
@@ -211,7 +207,7 @@ func main () {
 }
 ```
 
-{% include components/arrow.html link="#syntax-highlighting" %}
+{% include components/arrow.html link="#syntax-theme" %}
 
 ---
 
@@ -231,7 +227,7 @@ public class Howdy {
 }
 ```
 
-{% include components/arrow.html link="#syntax-highlighting" %}
+{% include components/arrow.html link="#syntax-theme" %}
 
 ---
 
@@ -252,7 +248,7 @@ if(process.argv.length != 3) {
 sayHowdy(process.argv[2]);
 ```
 
-{% include components/arrow.html link="#syntax-highlighting" %}
+{% include components/arrow.html link="#syntax-theme" %}
 
 ---
 
@@ -271,7 +267,7 @@ fun main(args: Array<String>): Int {
 }
 ```
 
-{% include components/arrow.html link="#syntax-highlighting" %}
+{% include components/arrow.html link="#syntax-theme" %}
 
 ---
 
@@ -288,7 +284,7 @@ fun main(args: Array<String>): Int {
 * `document`!
 ```
 
-{% include components/arrow.html link="#syntax-highlighting" %}
+{% include components/arrow.html link="#syntax-theme" %}
 
 ---
 
@@ -309,7 +305,7 @@ if len(sys.argv) != 2:
 sayHowdy(sys.argv[1])
 ```
 
-{% include components/arrow.html link="#syntax-highlighting" %}
+{% include components/arrow.html link="#syntax-theme" %}
 
 ---
 
@@ -333,7 +329,7 @@ sayHowdy(sys.argv[1])
 }
 ```
 
-{% include components/arrow.html link="#syntax-highlighting" %}
+{% include components/arrow.html link="#syntax-theme" %}
 
 ---
 
@@ -349,7 +345,7 @@ AND   price > 5000
 AND   price <= 10000
 ```
 
-{% include components/arrow.html link="#syntax-highlighting" %}
+{% include components/arrow.html link="#syntax-theme" %}
 
 ---
 
@@ -372,7 +368,7 @@ sidebar:
   logo: assets/images/logo.png
 ```
 
-{% include components/arrow.html link="#syntax-highlighting" %}
+{% include components/arrow.html link="#syntax-theme" %}
 
 ---
 
@@ -402,4 +398,4 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 ```
 
-{% include components/arrow.html link="#syntax-highlighting" %}
+{% include components/arrow.html link="#syntax-theme" %}
