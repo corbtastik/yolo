@@ -4,9 +4,9 @@ links:
 - yolo,https://github.com/corbtastik/yolo
 - jekyll,https://jekyllrb.com
 ext_js:
-  - custom
+- custom
 ext_css:
-  - custom
+- custom
 ---
 
 ## Howdy
@@ -58,24 +58,23 @@ Branding isn't implemented as a typical [gem based Jekyll theme](https://jekyllr
 
 The following Yolo __themes__ are included out-of-the-box.
 
-| Theme                                                       | Description                                   |
-|-------------------------------------------------------------|-----------------------------------------------|
-| [black-white](https://corbtastik-yolo-black-white.surge.sh) | A minimal black and white theme.              |
-| [bluebonnet](https://corbtastik-yolo-bluebonnet.surge.sh)   | A nod to the state flower of Texas.           |
-| [bubblegum](https://corbtastik-yolo-bubblegum.surge.sh)     | A theme for hubba bubba enthusiasts.          |
-| [cooleo](https://corbtastik-yolo-cooleo.surge.sh)           | A not cool, but cooleo look.                  |
-| [corbs](https://corbtastik-yolo-corbs.surge.sh)             | A personal fave.                              |
-| [domino](https://corbtastik-yolo-domino.surge.sh)           | A basic black and white theme.                |
-| [dusk](https://corbtastik-yolo-dusk.surge.sh)               | Just a good ole evening look.                 |
-| [folly](https://corbtastik-yolo-folly.surge.sh)             | This theme just lacks good sense.             |
-| [grape](https://corbtastik-yolo-grape.surge.sh)             | For fans of grape soda.                       |
-| [mint](https://corbtastik-yolo-mint.surge.sh)               | A minty fresh feel.                           |
-| [newspaper](https://corbtastik-yolo-newspaper.surge.sh)     | Read all about this theme.                    |
-| [newwave](https://corbtastik-yolo-newwave.surge.sh)         | An 80s florescent vibe.                       |
-| [reveal](https://corbtastik-yolo-reveal.surge.sh)           | A theme for big reveals.                      |
-| [seaside](https://corbtastik-yolo-seaside.surge.sh)         | A peaceful easy seaside theme.                |
-| [yolo](https://corbtastik-yolo.surge.sh)                    | A theme for this zany project.                |
-| [zoot](https://corbtastik-yolo-zoot.surge.sh)               | A throwback to Red Hat Linux 6.2, circa 2000. |
+| Theme                                                     | Description                          |
+|-----------------------------------------------------------|--------------------------------------|
+| [bluebonnet](https://corbtastik-yolo-bluebonnet.surge.sh) | A nod to the state flower of Texas.  |
+| [bubblegum](https://corbtastik-yolo-bubblegum.surge.sh)   | A theme for hubba bubba enthusiasts. |
+| [cooleo](https://corbtastik-yolo-cooleo.surge.sh)         | A not cool, but cooleo look.         |
+| [corbs](https://corbtastik-yolo-corbs.surge.sh)           | A personal fave.                     |
+| [domino](https://corbtastik-yolo-domino.surge.sh)         | A basic black and white theme.       |
+| [dusk](https://corbtastik-yolo-dusk.surge.sh)             | Just a good ole evening look.        |
+| [folly](https://corbtastik-yolo-folly.surge.sh)           | This theme just lacks good sense.    |
+| [grape](https://corbtastik-yolo-grape.surge.sh)           | For fans of grape soda.              |
+| [mint](https://corbtastik-yolo-mint.surge.sh)             | A minty fresh feel.                  |
+| [newspaper](https://corbtastik-yolo-newspaper.surge.sh)   | Read all about this theme.           |
+| [newwave](https://corbtastik-yolo-newwave.surge.sh)       | An 80s florescent vibe.              |
+| [reveal](https://corbtastik-yolo-reveal.surge.sh)         | A theme for big reveals.             |
+| [seaside](https://corbtastik-yolo-seaside.surge.sh)       | A peaceful easy seaside theme.       |
+| [yolo](https://corbtastik-yolo.surge.sh)                  | A theme for this zany project.       |
+| [zoot](https://corbtastik-yolo-zoot.surge.sh)             | A throwback to Red Hat Linux 6.2.    |
 
 {% include components/arrow.html link="#howdy" %}
 
@@ -97,7 +96,7 @@ The remaining colors should harmonize with the `primary-color`, `secondary-color
 #### On Colors
 {:.no-toc}
 
-"_On_" colors are placed "_on_" the corresponding "main" or container color.
+"_On_" colors are placed "_on_" the corresponding "main" or "container" color.
 
 > __Note:__ On colors should contrast with the underlying color to increase readability.
 
@@ -115,19 +114,23 @@ Links are prominent on web pages, so it gets its own variable - [link-color](htt
 
 > __Note:__ It's a good idea to consistently apply a distinct color for your links.
 
-#### Neutral Colors
+{% include components/arrow.html link="#howdy" %}
+
+---
+
+### Theme Color Swatches
 {:.no-toc}
 
-The `neutral-color` and `on-neutral-color` variables are general use colors.
+{% include demo/theme-swatches.html %}
 
 {% include components/arrow.html link="#howdy" %}
 
 ---
 
-### Theme Swatches
+### General Color Swatches
 {:.no-toc}
 
-{% include demo/theme-swatches.html %}
+{% include demo/general-color-swatches.html %}
 
 {% include components/arrow.html link="#howdy" %}
 
@@ -229,87 +232,7 @@ sayHowdy(process.argv[2]);
 
 Yolo's fonts can be customized as outlined in [Themes](#themes).
 
-### Three Families
-{:.no-toc}
-
-Primary Font Family - body and most text
-{:.is-family-primary}
-Secondary Font Family - headers and accent text
-{:.is-family-secondary}
-Monospaced Font Family - code
-{:.is-family-monospace}
-
-#### Primary
-{:.no-toc}
-
-size-7 text
-{:.is-family-primary .is-size-7}
-
-size-6 text
-{:.is-family-primary .is-size-6}
-
-size-5 text
-{:.is-family-primary .is-size-5}
-
-size-4 text
-{:.is-family-primary .is-size-4}
-
-size-3 text
-{:.is-family-primary .is-size-3}
-
-size-2 text
-{:.is-family-primary .is-size-2}
-
-size-1 text
-{:.is-family-primary .is-size-1}
-
-#### Secondary
-{:.no-toc}
-
-size-7 text
-{:.is-family-secondary .is-size-7}
-
-size-6 text
-{:.is-family-secondary .is-size-6}
-
-size-5 text
-{:.is-family-secondary .is-size-5}
-
-size-4 text
-{:.is-family-secondary .is-size-4}
-
-size-3 text
-{:.is-family-secondary .is-size-3}
-
-size-2 text
-{:.is-family-secondary .is-size-2}
-
-size-1 text
-{:.is-family-secondary .is-size-1}
-
-#### Monospace
-{:.no-toc}
-
-size-7 text
-{:.is-family-monospace .is-size-7}
-
-size-6 text
-{:.is-family-monospace .is-size-6}
-
-size-5 text
-{:.is-family-monospace .is-size-5}
-
-size-4 text
-{:.is-family-monospace .is-size-4}
-
-size-3 text
-{:.is-family-monospace .is-size-3}
-
-size-2 text
-{:.is-family-monospace .is-size-2}
-
-size-1 text
-{:.is-family-monospace .is-size-1}
+{% include demo/typography-swatches.html %}
 
 {% include components/arrow.html link="#howdy" %}
 
@@ -463,22 +386,14 @@ size-1 text
 | <a href="https://www.baseball-reference.com/players/r/ruthba01.shtml" target="_blank">Babe Ruth</a>      | .342 | 714 |
 | <a href="https://www.baseball-reference.com/players/w/wilsomo01.shtml" target="_blank">Mookie Wilson</a> | .274 | 67  |
 
-### Formatted content
-{:.no-toc}
-
-| Command      | Description                                        |
-|--------------|----------------------------------------------------|
-| `git rm`     | <del>Remove</del> a file from the index            |
-| `git status` | List all *new or modified* files                   |
-| `git diff`   | Show file differences that **haven't been** staged |
-
 ### Cell alignment
 {:.no-toc}
 
-| Left-aligned | Center-aligned | Right-aligned |
-|:-------------|:--------------:|--------------:|
-| `git status` |  `git status`  |  `git status` |
-| `git diff`   |   `git diff`   |    `git diff` |
+| Left-aligned  | Center-aligned | Right-aligned |
+|:--------------|:--------------:|--------------:|
+| Hank Aaron    | Right-fielder  |          .305 |
+| Babe Ruth     |   Outfielder   |          .342 |
+| Mookie Wilson | Center-fielder |          .274 |
 
 {% include components/arrow.html link="#howdy" %}
 
