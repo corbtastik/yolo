@@ -60,6 +60,7 @@ The following Yolo __themes__ are included out-of-the-box.
 
 | Theme                                                     | Description                          |
 |-----------------------------------------------------------|--------------------------------------|
+| [aloha](https://corbtastik-yolo-aloha.surge.sh)           | A lovely hawaiian look.              |
 | [bluebonnet](https://corbtastik-yolo-bluebonnet.surge.sh) | A nod to the state flower of Texas.  |
 | [bubblegum](https://corbtastik-yolo-bubblegum.surge.sh)   | A theme for hubba bubba enthusiasts. |
 | [cooleo](https://corbtastik-yolo-cooleo.surge.sh)         | A not cool, but cooleo look.         |
