@@ -86,10 +86,20 @@ The following Yolo __themes__ are included out-of-the-box.
 
 > __Remember:__ You must specify values for all color variables for both __light__ and __dark__ mode.
 
-#### Key Colors
+There are __3__ main variables that define the colors for a theme.
+
+1. `primary-color`: Page background
+2. `secondary-color`: Headers H1-H6
+3. `tertiary-color`: Accent elements
+
+The remaining colors should harmonize with the `primary-color`, `secondary-color`, and `tertiary-color` you select.
+
+#### On Colors
 {:.no-toc}
 
-"_Key_" colors provide the foundation of your theme and should [contrast](https://en.wikipedia.org/wiki/Contrast_(vision)) or [complement](https://en.wikipedia.org/wiki/Complementary_colors) each other in [hue](https://en.wikipedia.org/wiki/Hue).
+"_On_" colors are placed "_on_" the corresponding "main" or container color.
+
+> __Note:__ On colors should contrast with the underlying color to increase readability.
 
 #### Container Colors
 {:.no-toc}
@@ -97,13 +107,6 @@ The following Yolo __themes__ are included out-of-the-box.
 "_Container_" colors represents an inset or sibling element of a primary or secondary colored element.
 
 > __Note:__ There isn't a `tertiary-container-color`, as `tertiary-color` is meant to standalone as an accent color.
-
-#### On Colors
-{:.no-toc}
-
-"_On_" colors are placed "_on_" the corresponding key or container color.
-
-> __Note:__ On colors should contrast with the underlying color to increase readability.
 
 #### Link Color
 {:.no-toc}
