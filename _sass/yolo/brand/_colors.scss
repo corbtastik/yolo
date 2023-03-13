@@ -37,13 +37,13 @@ $dark-on-info-color: #bbdefb;
   // CSS classes for theme colors and fonts
   // --------------------------------------------------------------------------
   .is-family-primary {
-    font-family: $light-font-family-primary;
+    font-family: $font-family-primary;
   }
   .is-family-secondary {
-    font-family: $light-font-family-secondary;
+    font-family: $font-family-secondary;
   }
   .is-family-monospace {
-    font-family: $light-font-family-monospace;
+    font-family: $font-family-monospace;
   }
   .primary-color {
     background-color: $light-primary-color;
@@ -438,13 +438,13 @@ $dark-on-info-color: #bbdefb;
   // CSS classes for theme colors and fonts
   // --------------------------------------------------------------------------
   .is-family-primary {
-    font-family: $dark-font-family-primary;
+    font-family: $font-family-primary;
   }
   .is-family-secondary {
-    font-family: $dark-font-family-secondary;
+    font-family: $font-family-secondary;
   }
   .is-family-monospace {
-    font-family: $dark-font-family-monospace;
+    font-family: $font-family-monospace;
   }
   .primary-color {
     background-color: $dark-primary-color;

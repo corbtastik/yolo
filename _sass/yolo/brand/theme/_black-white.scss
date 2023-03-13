@@ -1,4 +1,10 @@
 // ----------------------------------------------------------------------------
+// black-white font-families
+// ----------------------------------------------------------------------------
+$font-family-primary: "Poppins", sans-serif;
+$font-family-secondary: "Open Sans", sans-serif;
+$font-family-monospace: "Source Code Pro", monospace;
+// ----------------------------------------------------------------------------
 // white light-mode
 // ----------------------------------------------------------------------------
 // primary colors
@@ -16,10 +22,6 @@ $light-tertiary-color: #000;
 $light-on-tertiary-color: #fff;
 // link colors
 $light-link-color: #0091ea;
-// font families
-$light-font-family-primary: "Open Sans", sans-serif;
-$light-font-family-secondary: "Poppins", sans-serif;
-$light-font-family-monospace: "Red Hat Mono", monospace;
 // ----------------------------------------------------------------------------
 // black dark-mode
 // ----------------------------------------------------------------------------
@@ -38,7 +40,3 @@ $dark-tertiary-color: #fff;
 $dark-on-tertiary-color: #000;
 // link colors
 $dark-link-color: #0091ea;
-// font families
-$dark-font-family-primary: "Open Sans", sans-serif;
-$dark-font-family-secondary: "Poppins", sans-serif;
-$dark-font-family-monospace: "Red Hat Mono", monospace;

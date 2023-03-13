@@ -1,4 +1,10 @@
 // ----------------------------------------------------------------------------
+// bluebonnet font-families
+// ----------------------------------------------------------------------------
+$font-family-primary: "Libre Franklin", sans-serif;
+$font-family-secondary: "Montserrat", sans-serif;
+$font-family-monospace: "Red Hat Mono", monospace;
+// ----------------------------------------------------------------------------
 // bluebonnet light-mode
 // ----------------------------------------------------------------------------
 // primary colors
@@ -16,10 +22,6 @@ $light-tertiary-color: #00a344;
 $light-on-tertiary-color: #edebff;
 // link colors
 $light-link-color: #03a7db;
-// font families
-$light-font-family-primary: "Poppins", sans-serif;
-$light-font-family-secondary: "Red Hat Text", sans-serif;
-$light-font-family-monospace: "Source Code Pro", monospace;
 // ----------------------------------------------------------------------------
 // bluebonnet dark-mode
 // ----------------------------------------------------------------------------
@@ -38,7 +40,3 @@ $dark-tertiary-color: #00d257;
 $dark-on-tertiary-color: #110b53;
 // link colors
 $dark-link-color: #21bced;
-// font families
-$dark-font-family-primary: "Poppins", sans-serif;
-$dark-font-family-secondary: "Red Hat Text", sans-serif;
-$dark-font-family-monospace: "Source Code Pro", monospace;

@@ -1,4 +1,10 @@
 // ----------------------------------------------------------------------------
+// cooleo font-families
+// ----------------------------------------------------------------------------
+$font-family-primary: "Poppins", sans-serif;
+$font-family-secondary: "Red Hat Text", sans-serif;
+$font-family-monospace: "Source Code Pro", monospace;
+// ----------------------------------------------------------------------------
 // cooleo light-mode
 // ----------------------------------------------------------------------------
 // primary colors
@@ -16,10 +22,6 @@ $light-tertiary-color: #fff;
 $light-on-tertiary-color: #f72685;
 // link colors
 $light-link-color: #fff;
-// font families
-$light-font-family-primary: "Poppins", sans-serif;
-$light-font-family-secondary: "Red Hat Text", sans-serif;
-$light-font-family-monospace: "Source Code Pro", monospace;
 // ----------------------------------------------------------------------------
 // cooleo dark-mode
 // ----------------------------------------------------------------------------
@@ -38,7 +40,3 @@ $dark-tertiary-color: #fff;
 $dark-on-tertiary-color: #21065f;
 // link colors
 $dark-link-color: #fff;
-// font families
-$dark-font-family-primary: "Poppins", sans-serif;
-$dark-font-family-secondary: "Red Hat Text", sans-serif;
-$dark-font-family-monospace: "Source Code Pro", monospace;

@@ -1,44 +1,42 @@
 // ----------------------------------------------------------------------------
+// corbs font-families
+// ----------------------------------------------------------------------------
+$font-family-primary: "Source Code Pro", monospace;
+$font-family-secondary: "Red Hat Text", sans-serif;
+$font-family-monospace: "Red Hat Mono", monospace;
+// ----------------------------------------------------------------------------
 // corbs light-mode
 // ----------------------------------------------------------------------------
 // primary colors
-$light-primary-color: #ecefff;
+$light-primary-color: #f1ecff;
 $light-on-primary-color: #3b0aa4;
-$light-primary-container-color: #150244;
-$light-on-primary-container-color: #f72685;
+$light-primary-container-color: #f61379;
+$light-on-primary-container-color: #21065f;
 // secondary colors  
-$light-secondary-color: #3b0aa4;
-$light-on-secondary-color: #ecefff;
-$light-secondary-container-color: #150244;
+$light-secondary-color: #3389ed;
+$light-on-secondary-color: #f1ecff;
+$light-secondary-container-color: #220368;
 $light-on-secondary-container-color: #f72685;
 // tertiary colors
-$light-tertiary-color: #f72685;
-$light-on-tertiary-color: #ecefff;
+$light-tertiary-color: #ac3cf6;
+$light-on-tertiary-color: #f1ecff;
 // link colors
-$light-link-color: #21bced;
-// font families
-$light-font-family-primary: "Source Code Pro", monospace;
-$light-font-family-secondary: "Red Hat Text", sans-serif;
-$light-font-family-monospace: "Red Hat Mono", monospace;
+$light-link-color: #4493ef;
 // ----------------------------------------------------------------------------
 // corbs dark-mode
 // ----------------------------------------------------------------------------
 // primary colors
-$dark-primary-color: #0f0132;
-$dark-on-primary-color: #ecefff;
-$dark-primary-container-color: #280873;
-$dark-on-primary-container-color: #f72685;
+$dark-primary-color: #14043a;
+$dark-on-primary-color: #f83a90;
+$dark-primary-container-color: #f61379;
+$dark-on-primary-container-color: #21065f;
 // secondary colors  
-$dark-secondary-color: #5872ef;
+$dark-secondary-color: #21daff;
 $dark-on-secondary-color: #0f0132;
-$dark-secondary-container-color: #280873;
+$dark-secondary-container-color: #220368;
 $dark-on-secondary-container-color: #f72685;
 // tertiary colors
-$dark-tertiary-color: #f72685;
+$dark-tertiary-color: #ac3cf6;
 $dark-on-tertiary-color: #0f0132;
 // link colors
-$dark-link-color: #32cdff;
-// font families
-$dark-font-family-primary: "Source Code Pro", monospace;
-$dark-font-family-secondary: "Red Hat Text", sans-serif;
-$dark-font-family-monospace: "Red Hat Mono", monospace;
+$dark-link-color: #4493ef;
