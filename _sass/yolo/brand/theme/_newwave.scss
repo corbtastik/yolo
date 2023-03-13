@@ -1,4 +1,10 @@
 // ----------------------------------------------------------------------------
+// newwave font-families
+// ----------------------------------------------------------------------------
+$font-family-primary: "Sono", sans-serif;
+$font-family-secondary: "Ubranist", sans-serif;
+$font-family-monospace: "Source Code Pro", monospace;
+// ----------------------------------------------------------------------------
 // newwave light-mode
 // ----------------------------------------------------------------------------
 // primary colors
@@ -16,10 +22,6 @@ $light-tertiary-color: #f9246c;
 $light-on-tertiary-color: #feebf2;
 // link colors
 $light-link-color: #4597ff;
-// font families
-$light-font-family-primary: "Red Hat Mono", monospace;
-$light-font-family-secondary: "Red Hat Text", sans-serif;
-$light-font-family-monospace: "Source Code Pro", monospace;
 // ----------------------------------------------------------------------------
 // newwave dark-mode
 // ----------------------------------------------------------------------------
@@ -38,7 +40,3 @@ $dark-tertiary-color: #3b6afe;
 $dark-on-tertiary-color: #090b35;
 // link colors
 $dark-link-color: #4f9dff;
-// font families
-$dark-font-family-primary: "Red Hat Mono", monospace;
-$dark-font-family-secondary: "Red Hat Text", sans-serif;
-$dark-font-family-monospace: "Source Code Pro", monospace;

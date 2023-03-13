@@ -33,6 +33,12 @@
 // Generate CSS global-variables used for skinning light/dark modes
 // ----------------------------------------------------------------------------
 :root[light] {
+  // font-families
+  @each $name, $value in meta.module-variables("brand-theme") {
+    @if string.slice($name, 1, 12) == "font-family-" {
+      --#{$name}: #{$value};
+    }
+  }
   // brand-theme
   @each $name, $value in meta.module-variables("brand-theme") {
     @if string.slice($name, 1, 6) == "light-" {
@@ -47,6 +53,12 @@
   }
 }
 :root[dark] {
+  // font-families
+  @each $name, $value in meta.module-variables("brand-theme") {
+    @if string.slice($name, 1, 12) == "font-family-" {
+      --#{$name}: #{$value};
+    }
+  }
   // brand-theme
   @each $name, $value in meta.module-variables("brand-theme") {
     @if string.slice($name, 1, 5) == "dark-" {
