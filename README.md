@@ -47,10 +47,6 @@ Take a gander at the [demo page](https://corbtastik.github.io/yolo/#getting-star
 
 ---
 
-## Backlog
-
-* Automate build and deploy of each Yolo Theme to surge.sh
-
 ## License
 
 [MIT License](/LICENSE)
