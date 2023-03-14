@@ -1,4 +1,10 @@
 // ----------------------------------------------------------------------------
+// grape font-families
+// ----------------------------------------------------------------------------
+$font-family-primary: "Poppins", sans-serif;
+$font-family-secondary: "Red Hat Text", sans-serif;
+$font-family-monospace: "Source Code Pro", monospace;
+// ----------------------------------------------------------------------------
 // grape light-mode
 // ----------------------------------------------------------------------------
 // primary colors
@@ -16,10 +22,6 @@ $light-tertiary-color: #ab00ff;
 $light-on-tertiary-color: #f3e6f5;
 // link colors
 $light-link-color: #ab00ff;
-// font families
-$light-font-family-primary: "Poppins", sans-serif;
-$light-font-family-secondary: "Red Hat Text", sans-serif;
-$light-font-family-monospace: "Source Code Pro", monospace;
 // ----------------------------------------------------------------------------
 // grape dark-mode
 // ----------------------------------------------------------------------------
@@ -38,7 +40,3 @@ $dark-tertiary-color: #c349ff;
 $dark-on-tertiary-color: #4a138c;
 // link colors
 $dark-link-color: #c349ff;
-// font families
-$dark-font-family-primary: "Poppins", sans-serif;
-$dark-font-family-secondary: "Red Hat Text", sans-serif;
-$dark-font-family-monospace: "Source Code Pro", monospace;

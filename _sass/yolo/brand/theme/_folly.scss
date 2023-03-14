@@ -1,4 +1,10 @@
 // ----------------------------------------------------------------------------
+// folly font-families
+// ----------------------------------------------------------------------------
+$font-family-primary: "Poppins", sans-serif;
+$font-family-secondary: "Montserrat", sans-serif;
+$font-family-monospace: "Source Code Pro", monospace;
+// ----------------------------------------------------------------------------
 // folly light-mode
 // ----------------------------------------------------------------------------
 // primary colors
@@ -16,10 +22,6 @@ $light-tertiary-color: #ffc9ad;
 $light-on-tertiary-color: #1f0053;
 // link colors
 $light-link-color: #ffe4d6;
-// font families
-$light-font-family-primary: "Poppins", sans-serif;
-$light-font-family-secondary: "Montserrat", sans-serif;
-$light-font-family-monospace: "Source Code Pro", monospace;
 // ----------------------------------------------------------------------------
 // folly dark-mode
 // ----------------------------------------------------------------------------
@@ -38,7 +40,3 @@ $dark-tertiary-color: #ffc9ad;
 $dark-on-tertiary-color: #1f0053;
 // link colors
 $dark-link-color: #ffe4d6;
-// font families
-$dark-font-family-primary: "Poppins", sans-serif;
-$dark-font-family-secondary: "Montserrat", sans-serif;
-$dark-font-family-monospace: "Source Code Pro", monospace;

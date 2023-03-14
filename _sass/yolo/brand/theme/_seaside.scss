@@ -1,4 +1,10 @@
 // ----------------------------------------------------------------------------
+// seaside font-families
+// ----------------------------------------------------------------------------
+$font-family-primary: "Poppins", sans-serif;
+$font-family-secondary: "Raleway", sans-serif;
+$font-family-monospace: "Source Code Pro", monospace;
+// ----------------------------------------------------------------------------
 // seaside light-mode
 // ----------------------------------------------------------------------------
 // primary colors
@@ -16,10 +22,6 @@ $light-tertiary-color: #f95838;
 $light-on-tertiary-color: #f9e1dc;
 // link colors
 $light-link-color: #0bb4d8;
-// font families
-$light-font-family-primary: "Poppins", sans-serif;
-$light-font-family-secondary: "Raleway", sans-serif;
-$light-font-family-monospace: "Source Code Pro", monospace;
 // ----------------------------------------------------------------------------
 // seaside dark-mode
 // ----------------------------------------------------------------------------
@@ -38,7 +40,3 @@ $dark-tertiary-color: #f95838;
 $dark-on-tertiary-color: #250600;
 // link colors
 $dark-link-color: #0692e0;
-// font families
-$dark-font-family-primary: "Poppins", sans-serif;
-$dark-font-family-secondary: "Raleway", sans-serif;
-$dark-font-family-monospace: "Source Code Pro", monospace;

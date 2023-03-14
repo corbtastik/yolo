@@ -1,4 +1,10 @@
 // ----------------------------------------------------------------------------
+// reveal font-families
+// ----------------------------------------------------------------------------
+$font-family-primary: "Inconsolata", monospace;
+$font-family-secondary: "Montserrat", sans-serif;
+$font-family-monospace: "Source Code Pro", monospace;
+// ----------------------------------------------------------------------------
 // reveal light-mode
 // ----------------------------------------------------------------------------
 // primary colors
@@ -16,10 +22,6 @@ $light-tertiary-color: #f72685;
 $light-on-tertiary-color: #feebf4;
 // link colors
 $light-link-color: #339ff4;
-// font families
-$light-font-family-primary: "Inconsolata", monospace;
-$light-font-family-secondary: "Montserrat", sans-serif;
-$light-font-family-monospace: "Source Code Pro", monospace;
 // ----------------------------------------------------------------------------
 // reveal dark-mode
 // ----------------------------------------------------------------------------
@@ -38,7 +40,3 @@ $dark-tertiary-color: #f72685;
 $dark-on-tertiary-color: #091129;
 // link colors
 $dark-link-color: #339ff4;
-// font families
-$dark-font-family-primary: "Inconsolata", monospace;
-$dark-font-family-secondary: "Montserrat", sans-serif;
-$dark-font-family-monospace: "Source Code Pro", monospace;

@@ -1,4 +1,10 @@
 // ----------------------------------------------------------------------------
+// domino font-families
+// ----------------------------------------------------------------------------
+$font-family-primary: "Open Sans", sans-serif;
+$font-family-secondary: "Red Hat Display", sans-serif;
+$font-family-monospace: "Space Mono", monospace;
+// ----------------------------------------------------------------------------
 // domino light-mode
 // ----------------------------------------------------------------------------
 // primary colors
@@ -16,10 +22,6 @@ $light-tertiary-color: #00c853;
 $light-on-tertiary-color: #000;
 // link colors
 $light-link-color: #0091ea;
-// font families
-$light-font-family-primary: "Source Code Pro", monospace;
-$light-font-family-secondary: "Open Sans", sans-serif;
-$light-font-family-monospace: "Red Hat Mono", monospace;
 // ----------------------------------------------------------------------------
 // domino dark-mode
 // ----------------------------------------------------------------------------
@@ -38,7 +40,3 @@ $dark-tertiary-color: #00e676;
 $dark-on-tertiary-color: #000;
 // link colors
 $dark-link-color: #4995ef;
-// font families
-$dark-font-family-primary: "Source Code Pro", monospace;
-$dark-font-family-secondary: "Open Sans", sans-serif;
-$dark-font-family-monospace: "Red Hat Mono", monospace;

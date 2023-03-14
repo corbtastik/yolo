@@ -1,4 +1,10 @@
 // ----------------------------------------------------------------------------
+// yolo font-families
+// ----------------------------------------------------------------------------
+$font-family-primary: "Red Hat Mono", monospace;
+$font-family-secondary: "Red Hat Text", sans-serif;
+$font-family-monospace: "Source Code Pro", monospace;
+// ----------------------------------------------------------------------------
 // yolo light-mode
 // ----------------------------------------------------------------------------
 // primary colors
@@ -16,10 +22,6 @@ $light-tertiary-color: #d80f8a;
 $light-on-tertiary-color: #f8faff;
 // link colors
 $light-link-color: #0091ea;
-// font families
-$light-font-family-primary: "Red Hat Mono", monospace;
-$light-font-family-secondary: "Red Hat Text", sans-serif;
-$light-font-family-monospace: "Source Code Pro", monospace;
 // ----------------------------------------------------------------------------
 // yolo dark-mode
 // ----------------------------------------------------------------------------
@@ -38,7 +40,3 @@ $dark-tertiary-color: #0ca9f4;
 $dark-on-tertiary-color: #010d13;
 // link colors
 $dark-link-color: #65cffc;
-// font families
-$dark-font-family-primary: "Red Hat Mono", monospace;
-$dark-font-family-secondary: "Red Hat Text", sans-serif;
-$dark-font-family-monospace: "Source Code Pro", monospace;

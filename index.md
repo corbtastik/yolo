@@ -842,7 +842,6 @@ make yolo-pod
 ---
 
 ## Snippet Samples
-{:.no-toc}
 
 ### Bash
 {:.no-toc}
