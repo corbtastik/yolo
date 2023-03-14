@@ -1,42 +1,42 @@
 // ----------------------------------------------------------------------------
 // yolo font-families
 // ----------------------------------------------------------------------------
-$font-family-primary: "Red Hat Mono", monospace;
-$font-family-secondary: "Red Hat Text", sans-serif;
+$font-family-primary: "Montserrat", sans-serif;
+$font-family-secondary: "Poppins", sans-serif;
 $font-family-monospace: "Source Code Pro", monospace;
 // ----------------------------------------------------------------------------
 // yolo light-mode
 // ----------------------------------------------------------------------------
 // primary colors
-$light-primary-color: #d2d2f3;
-$light-on-primary-color: #011141;
-$light-primary-container-color: #070831;
-$light-on-primary-container-color: #50fa7b;
-// secondary colors  
-$light-secondary-color: #5815c0;
-$light-on-secondary-color: #d2d2f3;
-$light-secondary-container-color: #100423;
-$light-on-secondary-container-color: #d7c6f3;
+$light-primary-color: #d7fee1;
+$light-on-primary-color: #13137d;
+$light-primary-container-color: #4ffa7b;
+$light-on-primary-container-color: #0d0e59;
+// secondary colors
+$light-secondary-color: #1818a2;
+$light-on-secondary-color: #d7fee1;
+$light-secondary-container-color: #ebfff0;
+$light-on-secondary-container-color: #00a42c;
 // tertiary colors
-$light-tertiary-color: #d80f8a;
-$light-on-tertiary-color: #f8faff;
+$light-tertiary-color: #21daff;
+$light-on-tertiary-color: #d7fee1;
 // link colors
-$light-link-color: #0091ea;
-// ----------------------------------------------------------------------------
+$light-link-color: #00b3ce;
+// -----------------------------------#ebfff0-----------------------------------------
 // yolo dark-mode
 // ----------------------------------------------------------------------------
 // primary colors
-$dark-primary-color: #0a0b47;
-$dark-on-primary-color: #b1b6fa;
-$dark-primary-container-color: #070831;
-$dark-on-primary-container-color: #50fa7b;
+$dark-primary-color: #080836;
+$dark-on-primary-color: #b0fdc3;
+$dark-primary-container-color: #0d0e59;
+$dark-on-primary-container-color: #4ffa7b;
 // secondary colors  
-$dark-secondary-color: #fb1d9e;
-$dark-on-secondary-color: #19010f;
-$dark-secondary-container-color: #b5036a;
-$dark-on-secondary-container-color: #f6a5d4;
+$dark-secondary-color: #4ffa7b;
+$dark-on-secondary-color: #0d0e59;
+$dark-secondary-container-color: #0d0e59;
+$dark-on-secondary-container-color: #d7f8ff;
 // tertiary colors
-$dark-tertiary-color: #0ca9f4;
-$dark-on-tertiary-color: #010d13;
+$dark-tertiary-color: #21daff;
+$dark-on-tertiary-color: #0a0b47;
 // link colors
-$dark-link-color: #65cffc;
+$dark-link-color: #21daff;
