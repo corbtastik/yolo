@@ -1,9 +1,11 @@
+.env
 .git/
 .idea/
 .jekyll-cache/
+.nova/
 .sass-cache/
+.stash/
 .yolo-build/
-src/
-docs/
 Makefile
-BACKLOG.md
+docs/
+src/
