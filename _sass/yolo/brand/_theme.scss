@@ -248,7 +248,7 @@
   .yolo-pill {
     background-color: var(--secondary-color);
     color: var(--on-secondary-color);
-    font-family: var(--font-family-monospace);
+    font-family: var(--font-family-secondary);
   }
 
   .yolo-pill:hover {
@@ -267,9 +267,11 @@
             color: var(--on-primary-container-color);
             &:hover {
               color: var(--tertiary-color);
+              font-weight: bold;
             }
             &:focus {
               color: var(--tertiary-color);
+              font-weight: bold;
             }
           }
         }

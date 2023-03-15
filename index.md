@@ -48,7 +48,13 @@ jekyll serve
 
 Branding isn't implemented as a typical [gem based Jekyll theme](https://jekyllrb.com/docs/themes/), but the colors and fonts can be customized as described below.
 
-> Yolo implements "branding" on two fronts, [themes](#themes) and [syntax themes](#syntax-themes).
+> Every Yolo "brand" has a "theme" and corresponding "syntax theme".
+>   * __See__: `_sass/yolo/brand/theme` for themes.
+>   * __See__: `_sass/yolo/brand/syntax` for syntax themes.
+
+{% include components/arrow.html link="#howdy" %}
+
+---
 
 ## Themes
 
@@ -56,38 +62,14 @@ Branding isn't implemented as a typical [gem based Jekyll theme](https://jekyllr
 2. Customize the theme values for __light__ and __dark__ modes.
 3. Enable by setting `brand.theme` in `_data/settings.yml`.
 
-The following Yolo __themes__ are included out-of-the-box.
-
-| Theme                                                     | Description                          |
-|-----------------------------------------------------------|--------------------------------------|
-| [aloha](https://corbtastik-yolo-aloha.surge.sh)           | A lovely hawaiian look.              |
-| [bluebonnet](https://corbtastik-yolo-bluebonnet.surge.sh) | A nod to the state flower of Texas.  |
-| [cooleo](https://corbtastik-yolo-cooleo.surge.sh)         | A not cool, but cooleo look.         |
-| [corbs](https://corbtastik-yolo-corbs.surge.sh)           | A personal fave.                     |
-| [domino](https://corbtastik-yolo-domino.surge.sh)         | A basic black and white theme.       |
-| [dusk](https://corbtastik-yolo-dusk.surge.sh)             | Just a good ole evening look.        |
-| [folly](https://corbtastik-yolo-folly.surge.sh)           | This theme just lacks good sense.    |
-| [grape](https://corbtastik-yolo-grape.surge.sh)           | For fans of grape soda.              |
-| [mint](https://corbtastik-yolo-mint.surge.sh)             | A minty fresh feel.                  |
-| [newspaper](https://corbtastik-yolo-newspaper.surge.sh)   | Read all about this theme.           |
-| [newwave](https://corbtastik-yolo-newwave.surge.sh)       | An 80s florescent vibe.              |
-| [reveal](https://corbtastik-yolo-reveal.surge.sh)         | A theme for big reveals.             |
-| [seaside](https://corbtastik-yolo-seaside.surge.sh)       | A peaceful easy seaside theme.       |
-| [yolo](https://corbtastik-yolo.surge.sh)                  | A theme for this zany project.       |
-| [zoot](https://corbtastik-yolo-zoot.surge.sh)             | A throwback to Red Hat Linux 6.2.    |
-
-{% include components/arrow.html link="#howdy" %}
-
----
-
-### Colors
+### Color Variables
 {:.no-toc}
 
 There are __3__ main variables that define the colors for a theme.
 
-1. `primary-color`: Page background
-2. `secondary-color`: Headers H1-H6
-3. `tertiary-color`: Accent elements
+1. __`primary-color`__: Page background
+2. __`secondary-color`__: Headers H1-H6
+3. __`tertiary-color`__: Accent elements
 
 The remaining colors should harmonize with the `primary-color`, `secondary-color`, and `tertiary-color` you select.
 
@@ -118,16 +100,15 @@ Links are prominent on web pages, so it gets its own variable - [link-color](htt
 
 ---
 
-### Theme Color Swatches
+### Color Swatches
+{:.no-toc}
+
+#### Theme Colors:
 {:.no-toc}
 
 {% include demo/theme-swatches.html %}
 
-{% include components/arrow.html link="#howdy" %}
-
----
-
-### General Color Swatches
+#### General Colors:
 {:.no-toc}
 
 {% include demo/general-color-swatches.html %}
@@ -395,7 +376,7 @@ Yolo's fonts can be customized as outlined in [Themes](#themes).
 
 ## Markdown Images
 
-> Images added via markdown receive styling from the `<img>` element, they're not styled with `yolo` classes.
+> Images added via markdown receive styling from the `<img>` element not specific `yolo` classes.
 
 {% include components/code.html label="Markdown images" %}
 {% raw %}
@@ -415,7 +396,7 @@ Yolo's fonts can be customized as outlined in [Themes](#themes).
 
 ## Styled Images
 
-You can use yolo Styled Images in addition to markdown images if you're looking for a little eye-candy. Yolo includes support for common aspect ratios, an [image-grid](#image-grid) and [image-lightbox](#image-lightbox).
+Yolo includes classes for common aspect ratios.
 
 > __Tip:__ Click an image to enlarge.
 
@@ -841,7 +822,7 @@ make yolo-pod
 
 ---
 
-## Snippet Samples
+## More Snippets
 
 ### Bash
 {:.no-toc}

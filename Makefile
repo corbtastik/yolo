@@ -1,16 +1,18 @@
 # -----------------------------------------------------------------------------
-# Yolo Makefile for building a container image
+# Makefile for various Yolo tasks
 # -----------------------------------------------------------------------------
+APP_NAME=yolo
+APP_VERSION=1.4
+IMAGE_NAME=$(APP_NAME)
+IMAGE_TAG=v$(APP_VERSION)
 CONTAINER_REGISTRY=quay.io/corbsmartin
-IMAGE_NAME=yolo
-IMAGE_TAG=v1.4
 # -----------------------------------------------------------------------------
 # Jekyll targets
 # -----------------------------------------------------------------------------
 run:
 	@jekyll serve
 # -----------------------------------------------------------------------------
-# yoloc builder image (ubi8-minimal)
+# yoloc builder image
 # -----------------------------------------------------------------------------
 yoloc:
 	@podman build -f ./src/yoloc.Containerfile -t yoloc:latest ./src
@@ -30,6 +32,12 @@ yolo-pod: yolo
 # -----------------------------------------------------------------------------
 # Publish to surge.sh
 # -----------------------------------------------------------------------------
+surge-yolo:
+	@echo "Deploying to surge: https://corbtastik-$(APP_NAME).surge.sh"
+	@jekyll clean
+	@jekyll build
+	@surge _site/ corbtastik-$(APP_NAME).surge.sh
+
 surge-theme:
 	@$(call is_defined, THEME, THEME is required: usage THEME=newwave)
 	@echo "Uploading: https://corbtastik-yolo-$(SURGE_NAME).surge.sh"
