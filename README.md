@@ -23,7 +23,6 @@ Bring your own colors and fonts.
 
 ## Yolo demo
 
-* Yolo on Github Pages - [https://corbtastik.github.io/yolo](https://corbtastik.github.io/yolo)
 * Yolo on Surge - [https://corbtastik-yolo.surge.sh](https://corbtastik-yolo.surge.sh)
 
 ---
@@ -43,7 +42,7 @@ jekyll serve  # open http://localhost:4000
 
 ## Next Steps
 
-Take a gander at the [demo page](https://corbtastik.github.io/yolo/#getting-started) for info on usage, themes, and customizations.
+Take a gander at the [demo page](https://corbtastik-yolo.surge.sh) for info on usage, themes, and customizations.
 
 ---
 
