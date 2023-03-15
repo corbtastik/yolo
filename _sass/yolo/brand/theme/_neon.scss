@@ -1,0 +1,42 @@
+// ----------------------------------------------------------------------------
+// neon font-families
+// ----------------------------------------------------------------------------
+$font-family-primary: "Montserrat", sans-serif;
+$font-family-secondary: "Poppins", sans-serif;
+$font-family-monospace: "JetBrains Mono", monospace;
+// ----------------------------------------------------------------------------
+// neon light-mode
+// ----------------------------------------------------------------------------
+// primary colors
+$light-primary-color: #fafafa;
+$light-on-primary-color: #6a21eb;
+$light-primary-container-color: #ff1573;
+$light-on-primary-container-color: #fafafa;
+// secondary colors  
+$light-secondary-color: #324eff;
+$light-on-secondary-color: #fafafa;
+$light-secondary-container-color: #141414;
+$light-on-secondary-container-color: #32ff03;
+// tertiary colors
+$light-tertiary-color: #09b0ff;
+$light-on-tertiary-color: #fafafa;
+// link colors
+$light-link-color: #fc00ff;
+// ----------------------------------------------------------------------------
+// neon dark-mode
+// ----------------------------------------------------------------------------
+// primary colors
+$dark-primary-color: #141414;
+$dark-on-primary-color: #32ff03;
+$dark-primary-container-color: #324eff;
+$dark-on-primary-container-color: #fafafa;
+// secondary colors
+$dark-secondary-color: #ff1573;
+$dark-on-secondary-color: #141414;
+$dark-secondary-container-color: #fafafa;
+$dark-on-secondary-container-color: #6a21eb;
+// tertiary colors
+$dark-tertiary-color: #fc00ff;
+$dark-on-tertiary-color: #141414;
+// link colors
+$dark-link-color: #ff5941;
