@@ -1,18 +1,26 @@
-<div class="yolo-header">
-    {% if site.data.settings.header.logo %}
-    <a href="./">
-        <img class="logo" alt="site-logo" src="{{ site.data.settings.header.logo }}" title="Site Logo"/>
-    </a>
-    {% endif %}
-    <div id="theme-dot" class="theme-dot">&#9681;</div>
-    <h1 class="tag no-toc"><a href="./">{{ site.data.settings.name }}</a></h1>
-    <h4 class="description no-toc">{{ site.data.settings.description }}</h4>
-    <p>
-        <span>
-          {% for tag in page.tags %}
-            {% capture tag_name %}{{ tag }}{% endcapture %}
-            <code class="pill">{{ tag_name }}</code>
-          {% endfor %}
-        </span>
-    </p>
+<div class="yolo-header columns">
+    <div class="column">
+        {% if site.data.settings.header.logo %}
+        <a href="./">
+            <img class="logo" alt="site-logo" src="{{ site.data.settings.header.logo }}" title="Site Logo"/>
+        </a>
+        {% endif %}
+        <h1 class="tag no-toc"><a href="./">{{ site.data.settings.name }}</a></h1>
+        <h4 class="description no-toc">{{ site.data.settings.description }}</h4>
+        <p>
+            <span>
+            {% for link in page.links %}
+            {% assign linkref = link | split: "," %}
+                <a href="{{ linkref[1] }}" class="yolo-pill">{{ linkref[0] }}</a>
+            {% endfor %}
+            </span>
+        </p>
+    </div>
+    <div class="column">
+        <div class="yolo-toggle-container">
+            <div class="toggle-button">
+                <span id="theme-toggle" class="material-icons md-36">light_mode</span>
+            </div>
+        </div>
+    </div>
 </div>

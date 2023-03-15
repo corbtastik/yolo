@@ -1,1 +1,6 @@
-<script src="assets/js/yolo.js"></script>
+{% if page.ext_js.size > 0 %}
+{% for js_name in page.ext_js %}
+<script src="{{ site.baseurl }}/assets/ext/js/{{ js_name }}.js"></script>
+{% endfor %}
+{% endif %}
+<script src="{{ site.baseurl }}{{ '/assets/js/yolo.js' | relative_url }}"></script>

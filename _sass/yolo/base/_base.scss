@@ -1,0 +1,158 @@
+// ----------------------------------------------------------------------------
+// Base elements stylesheet
+// - no classes should be defined here (see _yolo.scss)
+// - no colors should be defined here (see _themes.scss)
+// ----------------------------------------------------------------------------
+@import "variables";
+
+html {
+  font-size: $size-6;
+  line-height: 1.5;
+}
+
+body {
+  margin: 1.5rem 0 5rem;
+}
+
+a {
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+  &:focus {
+    text-decoration: underline;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 1rem 0;
+  line-height: 1;
+  text-rendering: optimizeLegibility;
+}
+
+h1 {
+  font-size: $size-1;
+}
+
+h2 {
+  font-size: $size-2;
+}
+
+h3 {
+  font-size: $size-3;
+}
+
+h4 {
+  font-size: $size-4;
+}
+
+h5 {
+  font-size: $size-5;
+}
+
+h6 {
+  font-size: $size-6;
+}
+
+p, dl {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+code {
+  overflow-x: auto;
+}
+
+pre {
+  overflow-x: auto;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: $size-7;
+}
+
+ul, ol {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  padding-left: 1.5rem;
+}
+
+dd {
+  margin-left: 1.5rem;
+}
+
+blockquote {
+  margin: 0 0 1rem;
+  padding: .5rem 1rem;
+  p {
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+ul {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  padding-left: 1.5rem;
+}
+
+ol {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  padding-left: 2.5rem;
+}
+
+hr {
+  border: none;
+  margin: 1.5rem 0;
+  position: relative;
+  top: -1px;
+}
+
+table {
+  width: 100%;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  vertical-align: middle;
+  text-align: left;
+  border-radius: 0.3em;
+  border-spacing: 0;
+  border-collapse: separate;
+  border: 1px solid inherit;
+  overflow: hidden;
+  th {
+    font-weight: bold;
+    padding: 0.3em 0.4em 0.3em 0.4em;    
+  }
+  td {
+    font-weight: normal;
+    padding: 0.3em 0.4em 0.3em 0.4em;    
+  }
+  th:not(:last-child),
+  td:not(:last-child) {
+    border-right: 1px solid inherit;
+  }
+  thead>tr:not(:last-child)>th,
+  thead>tr:not(:last-child)>td,
+  tbody>tr:not(:last-child)>th,
+  tbody>tr:not(:last-child)>td,
+  tfoot>tr:not(:last-child)>th,
+  tfoot>tr:not(:last-child)>td,
+  tr:not(:last-child)>td,
+  tr:not(:last-child)>th,
+  thead:not(:last-child),
+  tbody:not(:last-child),
+  tfoot:not(:last-child) {
+    border-bottom: 1px solid inherit;
+  }
+}
+
+figure {
+  display: block;
+  margin: 0;
+  padding: 0;
+  figcaption {
+    padding-top: 0.25em;
+    padding-bottom: 0.25em;
+  }
+}

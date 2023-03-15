@@ -1,22 +1,55 @@
 // ----------------------------------------------------------------------------
-// Solo theme, a nod to the OG.
+// solo theme
 // ----------------------------------------------------------------------------
-$light-primary-color: #fff;
-$light-secondary-color: #000;
-$light-accent-color: #383838;
-$light-code-background-color: #fff;
-$light-code-color: #000;
-$light-link-color: #2196f3;
-$light-sidebar-color: #fff;
+// Light mode
+:root {
+  --primary-color: #fff;
+  --on-primary-color: #000;
+  --primary-container-color: #f5f5f5;
+  --on-primary-container-color: #424242;
 
-$dark-primary-color: #000;
-$dark-secondary-color: #fff;
-$dark-accent-color: #b3b2b2;
-$dark-code-background-color: #000;
-$dark-code-color: #fff;
-$dark-link-color: #2196f3;
-$dark-sidebar-color: #000;
+  --secondary-color: #000;
+  --on-secondary-color: #fff;
+  --secondary-container-color: #424242;
+  --on-secondary-container-color: #f5f5f5;
 
-$family-primary: "Inconsolata", sans-serif;
-$family-secondary: "Montserrat", sans-serif;
-$family-monospace: "Inconsolata", monospace;
+  --tertiary-color: #1f56d8;
+  --on-tertiary-color: #fafafa;
+  --tertiary-container-color: #0b1e4a;
+  --on-tertiary-container-color: #f5f5f5;
+
+  --accent-color: #4a23b3;
+  --on-accent-color: #fff;
+
+  --link-color: #339ff4;
+
+  --font-family-primary: "Inconsolata", monospace;
+  --font-family-secondary: "Montserrat", sans-serif;
+  --font-family-monospace: "Inconsolata", monospace;
+}
+// Dark mode
+:root[dark] {
+  --primary-color: #000;
+  --on-primary-color: #fafafa;
+  --primary-container-color: #000;
+  --on-primary-container-color: #bfa3f3;
+
+  --secondary-color: #fff;
+  --on-secondary-color: #000;
+  --secondary-container-color: #fafafa;
+  --on-secondary-container-color: #424242;
+
+  --tertiary-color: #147cf3;
+  --on-tertiary-color: #fafafa;
+  --tertiary-container-color: #0b1e4a;
+  --on-tertiary-container-color: #fafafa;
+
+  --accent-color: #8457ff;
+  --on-accent-color: #fff;
+
+  --link-color: #65c7fc;
+
+  --font-family-primary: "Inconsolata", monospace;
+  --font-family-secondary: "Montserrat", sans-serif;
+  --font-family-monospace: "Inconsolata", monospace;
+}

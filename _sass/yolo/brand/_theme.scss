@@ -1,0 +1,287 @@
+// ----------------------------------------------------------------------------
+// Theme stylesheet for all elements that get "skinned".
+// ----------------------------------------------------------------------------
+// Contains selectors for all themed elements.
+// Only colors and fonts should be added here.
+// See: _sass/yolo/themes for specific theme colors.
+// ----------------------------------------------------------------------------
+.yolo-themed {
+  html {
+    font-family: var(--font-family-primary);
+  }
+
+  body {
+    font-family: var(--font-family-primary);
+    color: var(--on-primary-color);
+    background-color: var(--primary-color);
+  }
+
+  a {
+    color: var(--link-color);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    color: var(--secondary-color);
+    font-family: var(--font-family-secondary), sans-serif;
+  }
+
+  blockquote {
+    border-left: .25rem solid var(--tertiary-color);
+    border-top-right-radius: .25rem;
+    border-bottom-right-radius: .25rem;
+    background-color: var(--secondary-container-color);
+    color: var(--on-secondary-container-color);
+    h1, h2, h3, h4, h5, h6 {
+      color: var(--on-secondary-container-color);
+    }
+    b, strong, em, abbr, cite, del, ins, sup, sub, code {
+      color: var(--on-secondary-container-color);
+    }
+    ul {
+      li::before {
+        color: var(--on-secondary-container-color);
+      }
+      li::marker {
+        color: var(--on-secondary-container-color);
+      }
+    }
+
+    ol {
+      li::marker {
+        color: var(--on-secondary-container-color);
+      }
+    }
+    table {
+      background-color: var(--secondary-container-color);
+      border: 1px solid var(--on-secondary-container-color);
+      th {
+        background-color: var(--on-secondary-container-color);
+        color: var(--secondary-container-color);
+      }
+      th:not(:last-child),
+      td:not(:last-child) {
+        border-right: 1px solid var(--on-secondary-container-color);
+      }
+      thead>tr:not(:last-child)>th,
+      thead>tr:not(:last-child)>td,
+      tbody>tr:not(:last-child)>th,
+      tbody>tr:not(:last-child)>td,
+      tfoot>tr:not(:last-child)>th,
+      tfoot>tr:not(:last-child)>td,
+      tr:not(:last-child)>td,
+      tr:not(:last-child)>th,
+      thead:not(:last-child),
+      tbody:not(:last-child),
+      tfoot:not(:last-child) {
+        border-bottom: 1px solid var(--on-secondary-container-color);
+      }
+    }
+    .highlighter-rouge, .highlight {
+      color: var(--on-secondary-container-color);
+    }
+  }
+
+  hr {
+    border-bottom: 1px dashed var(--tertiary-color);
+  }
+
+  b, strong, em, abbr, cite, del, ins, sup, sub {
+    color: var(--on-primary-color);
+  }
+
+  code, pre {
+    font-family: var(--font-family-monospace);
+  }
+
+  ul {
+    li::before {
+      color: var(--tertiary-color);
+    }
+    li::marker {
+      color: var(--tertiary-color);
+    }
+  }
+
+  ol {
+    li::marker {
+      color: var(--tertiary-color);
+    }
+  }
+
+  table {
+    background-color: var(--primary-color);
+    border: 1px solid var(--secondary-color);
+    th {
+      font-family: var(--font-family-secondary);
+      background-color: var(--secondary-color);
+      color: var(--on-secondary-color);
+    }
+    th:not(:last-child),
+    td:not(:last-child) {
+      border-right: 1px solid var(--secondary-color);
+    }
+    thead>tr:not(:last-child)>th,
+    thead>tr:not(:last-child)>td,
+    tbody>tr:not(:last-child)>th,
+    tbody>tr:not(:last-child)>td,
+    tfoot>tr:not(:last-child)>th,
+    tfoot>tr:not(:last-child)>td,
+    tr:not(:last-child)>td,
+    tr:not(:last-child)>th,
+    thead:not(:last-child),
+    tbody:not(:last-child),
+    tfoot:not(:last-child) {
+      border-bottom: 1px solid var(--secondary-color);
+    }
+  }
+
+  .yolo-header {
+    .tag {
+      color: var(--on-primary-color);
+      a {
+        color: var(--on-primary-color);
+        &:hover {
+          color: var(--tertiary-color);
+        }
+        &:focus {
+          color: var(--tertiary-color);
+        }
+      }
+    }
+    .description {
+      color: var(--tertiary-color);
+    }
+  }
+
+  .yolo-tabs {
+    background-color: var(--primary-color);
+    .yolo-tab-button {
+      font-family: var(--font-family-secondary);
+      background-color: var(--secondary-color);
+      color: var(--on-secondary-color);
+      &:hover {
+        background-color: var(--tertiary-color);
+        color: var(--on-tertiary-color);
+      }
+      &.active {
+        background-color: var(--primary-container-color);
+        color: var(--on-primary-container-color);
+      }
+    }
+  }
+  .yolo-tab-content {
+    background-color: var(--primary-container-color);
+    color: var(--on-primary-container-color);
+    h2, h3, h4, h5, h6 {
+      color: var(--on-primary-container-color);
+    }
+  }
+
+  .toggle-button {
+    color: var(--secondary-color);
+    &:hover {
+      color: var(--tertiary-color);
+    }
+  }
+
+  .yolo-footer {
+    color: var(--tertiary-color);
+  }
+
+  .lb-modal {
+    background-color: var(--primary-container-color);
+    .yolo-caption {
+      color: var(--on-primary-container-color);
+    }
+  }
+
+  .lb-close {
+    color: var(--tertiary-color);
+  }
+
+  .lb-close:hover,
+  .lb-close:focus {
+    color: var(--link-color);
+  }
+
+  .lb-nav {
+    &:hover {
+      background-color: rgba(var(--tertiary-color), 0.3);
+    }
+  }
+
+  .lb-prev {
+    color: var(--secondary-color);
+    &:hover {
+      color: var(--tertiary-color);
+    }
+  }
+
+  .lb-next {
+    color: var(--secondary-color);
+    &:hover {
+      color: var(--tertiary-color);
+    }
+  }
+
+  .yolo-to-top {
+    color: var(--secondary-color);
+    span:hover {
+      color: var(--tertiary-color);
+    }
+  }
+
+  .yolo-caption {
+    color: var(--on-primary-color);
+  }
+
+  .yolo-code-header {
+    background-color: var(--secondary-color);
+    color: var(--on-secondary-color);
+    font-family: var(--font-family-secondary);
+    &:is(.copied, :hover) {
+      background-color: var(--tertiary-color);
+      color: var(--on-tertiary-color);
+    }
+  }
+
+  .yolo-pill {
+    background-color: var(--secondary-color);
+    color: var(--on-secondary-color);
+    font-family: var(--font-family-secondary);
+  }
+
+  .yolo-pill:hover {
+    background-color: var(--tertiary-color);
+    color: var(--on-tertiary-color);
+  }
+
+  .sidebar {
+    font-family: var(--font-family-secondary);
+    background-color: var(--primary-container-color);
+    color: var(--on-primary-container-color);
+    .nav-menu {
+      ul {
+        li {
+          a {
+            color: var(--on-primary-container-color);
+            &:hover {
+              color: var(--tertiary-color);
+              font-weight: bold;
+            }
+            &:focus {
+              color: var(--tertiary-color);
+              font-weight: bold;
+            }
+          }
+        }
+        li::before {
+          color: var(--on-primary-container-color);
+        }
+        li::marker {
+          color: var(--on-primary-container-color);
+        }
+      }
+    }
+  }
+}

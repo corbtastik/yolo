@@ -1,16 +1,11 @@
 ---
 layout: default
 tags:
-- yolo
-- skeletor-theme
-- jekyll
+- yolo,https://github.com/corbtastik/yolo
+- skeletor,https://en.wikipedia.org/wiki/Skeletor
 ---
 
 Yolo __[skeletor](https://en.wikipedia.org/wiki/Skeletor)__ theme sample page with mostly plain markdown elements.
-
-{% include toc.html header="h2" text="Table of Contents" %}
-
----
 
 ## Headers
 
@@ -31,7 +26,7 @@ Yolo __[skeletor](https://en.wikipedia.org/wiki/Skeletor)__ theme sample page wi
 ###### H6 Heading
 {:.no-toc}
 
-[↑↑↑](#table-of-contents){: .back-to-top}
+[↑↑↑](#){: .back-to-top}
 
 ---
 
@@ -39,7 +34,7 @@ Yolo __[skeletor](https://en.wikipedia.org/wiki/Skeletor)__ theme sample page wi
 
 [Baseball](https://en.wikipedia.org/wiki/Baseball) is a bat-and-ball sport played between two teams of nine players each, taking turns batting and fielding. The game is in play when a player on the fielding team, called the pitcher, throws a ball that a player on the batting team tries to hit with a bat. The objective of the offensive team (batting team) is to hit the ball into the field of play, away from the other team's players, allowing its players to run the bases, having them advance counter-clockwise around four bases to score what are called "runs". - copied from [Wikipedia](https://en.wikipedia.org/wiki/Baseball).
 
-[↑↑↑](#table-of-contents){: .back-to-top}
+[↑↑↑](#){: .back-to-top}
 
 ---
 
@@ -83,7 +78,7 @@ Yolo __[skeletor](https://en.wikipedia.org/wiki/Skeletor)__ theme sample page wi
 > 5. __Home Runs:__ Hits where the batter touches all four bases safely.
 > 6. __Batting Average:__ Hits divided by at bats.
 
-[↑↑↑](#table-of-contents){: .back-to-top}
+[↑↑↑](#){: .back-to-top}
 
 ---
 
@@ -100,7 +95,7 @@ Yolo __[skeletor](https://en.wikipedia.org/wiki/Skeletor)__ theme sample page wi
 - Subscript <sub>text</sub>
 - Inline code `SELECT * FROM players;`
 
-[↑↑↑](#table-of-contents){: .back-to-top}
+[↑↑↑](#){: .back-to-top}
 
 ---
 
@@ -146,7 +141,7 @@ public class Howdy {
 3. Dale Murphy
 4. Mookie Wilson
 
-[↑↑↑](#table-of-contents){: .back-to-top}
+[↑↑↑](#){: .back-to-top}
 
 ---
 
@@ -180,7 +175,7 @@ public class Howdy {
 | `git status` |  `git status`  |  `git status` |
 | `git diff`   |   `git diff`   |    `git diff` |
 
-[↑↑↑](#table-of-contents){: .back-to-top}
+[↑↑↑](#){: .back-to-top}
 
 ---
 
@@ -200,7 +195,7 @@ public class Howdy {
 
 ![BIG yawn Bucky](assets/images/bucky.png "Sleepy Bucky")
 
-[↑↑↑](#table-of-contents){: .back-to-top}
+[↑↑↑](#){: .back-to-top}
 
 ---
 
@@ -231,4 +226,4 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 ```
 
-[↑↑↑](#table-of-contents){: .back-to-top}
+[↑↑↑](#){: .back-to-top}

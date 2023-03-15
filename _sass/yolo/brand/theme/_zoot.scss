@@ -1,0 +1,42 @@
+// ----------------------------------------------------------------------------
+// zoot font-families
+// ----------------------------------------------------------------------------
+$font-family-primary: "Red Hat Text", sans-serif;
+$font-family-secondary: "Red Hat Display", sans-serif;
+$font-family-monospace: "Red Hat Mono", monospace;
+// ----------------------------------------------------------------------------
+// zoot light-mode
+// ----------------------------------------------------------------------------
+// primary colors
+$light-primary-color: #edf2f4;
+$light-on-primary-color: #2b2d43;
+$light-primary-container-color: #101119;
+$light-on-primary-container-color: #edf2f4;
+// secondary colors  
+$light-secondary-color: #414363;
+$light-on-secondary-color: #edf2f4;
+$light-secondary-container-color: #2b2d43;
+$light-on-secondary-container-color: #edf2f4;
+// tertiary colors
+$light-tertiary-color: #d90529;
+$light-on-tertiary-color: #edf2f4;
+// link colors
+$light-link-color: #ef243c;
+// ----------------------------------------------------------------------------
+// zoot dark-mode
+// ----------------------------------------------------------------------------
+// primary colors
+$dark-primary-color: #101119;
+$dark-on-primary-color: #f5f5f5;
+$dark-primary-container-color: #8c041a;
+$dark-on-primary-container-color: #f5f5f5;
+// secondary colors  
+$dark-secondary-color: #fff;
+$dark-on-secondary-color: #101119;
+$dark-secondary-container-color: #fff;
+$dark-on-secondary-container-color: #101119;
+// tertiary colors
+$dark-tertiary-color: #fa1137;
+$dark-on-tertiary-color: #101119;
+// link colors
+$dark-link-color: #32cdff;

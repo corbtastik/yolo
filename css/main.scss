@@ -2,21 +2,17 @@
 # Main scss file
 ---
 @charset "utf-8";
-
-@import "yolo/variables";
-@import "yolo/themes/{{ site.data.settings.theme.name | default: 'corbs' }}";
-@import "yolo/normalize";
-@import "yolo/base";
-@import "yolo/responsiveness";
-@import "yolo/layout";
-@import "yolo/typography";
-@import "yolo/syntax";
-@import "yolo/images";
-@import "yolo/lightbox";
-@import "yolo/navigation";
-@import "yolo/yolo";
-@import "yolo/theme";
-
+// ----------------------------------------------------------------------------
+// Main scss modules:
+// 1. base
+// 2. utilities
+// 3. core
+// 4. components
+// ----------------------------------------------------------------------------
+@import "yolo/base/all";
+@import "yolo/utilities/all";
+@import "yolo/core/all";
+@import "yolo/components/all";
 {% if site.data.settings.sidebar %}
-@import "yolo/sidebar";
+@import "yolo/components/sidebar";
 {% endif %}

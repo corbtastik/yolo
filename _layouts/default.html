@@ -3,7 +3,7 @@
 {% include head.html %}
 <body id="yolo-site">
   {% if site.data.settings.sidebar %}
-  {% include sidebar.html %}
+  {% include components/sidebar.html %}
   {% endif %}
   <div id="yolo-container" class="container {{ site.data.settings.align | default: 'left' }}">
     <header>

@@ -1,9 +1,8 @@
 ---
 layout: default
 tags:
-- yolo
-- solo-theme
-- jekyll
+- yolo,https://github.com/corbtastik/yolo
+- solo
 ---
 
 Yolo __solo__ theme sample page with mostly plain markdown elements.

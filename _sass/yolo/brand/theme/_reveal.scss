@@ -1,0 +1,42 @@
+// ----------------------------------------------------------------------------
+// reveal font-families
+// ----------------------------------------------------------------------------
+$font-family-primary: "Inconsolata", monospace;
+$font-family-secondary: "Montserrat", sans-serif;
+$font-family-monospace: "Source Code Pro", monospace;
+// ----------------------------------------------------------------------------
+// reveal light-mode
+// ----------------------------------------------------------------------------
+// primary colors
+$light-primary-color: #fefcfb;
+$light-on-primary-color: #091129;
+$light-primary-container-color: #091129;
+$light-on-primary-container-color: #f72685;
+// secondary colors
+$light-secondary-color: #06a6dc;
+$light-on-secondary-color: #ebfaff;
+$light-secondary-container-color: #033c50;
+$light-on-secondary-container-color: #ebfaff;
+// tertiary colors
+$light-tertiary-color: #f72685;
+$light-on-tertiary-color: #feebf4;
+// link colors
+$light-link-color: #339ff4;
+// ----------------------------------------------------------------------------
+// reveal dark-mode
+// ----------------------------------------------------------------------------
+// primary colors
+$dark-primary-color: #091129;
+$dark-on-primary-color: #fefcfb;
+$dark-primary-container-color: #fefcfb;
+$dark-on-primary-container-color: #ec0a6f;
+// secondary colors
+$dark-secondary-color: #06a6dc;
+$dark-on-secondary-color: #091129;
+$dark-secondary-container-color: #033c50;
+$dark-on-secondary-container-color: #ebfaff;
+// tertiary colors
+$dark-tertiary-color: #f72685;
+$dark-on-tertiary-color: #091129;
+// link colors
+$dark-link-color: #339ff4;

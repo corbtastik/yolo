@@ -1,8 +1,10 @@
 {
+
   "site": "yolo-main",
   "config": "_config.yml",
   "index": "index.md",
   "data": [
+    "settings.yml",
     "fonts.yml",
     "ig-images.yml",
     "ig-pets.yml",
@@ -20,5 +22,5 @@
       "moonpie.png"
     ]
   },
-  "theme": "_corbs.scss"
+  "theme": "_yolo.scss"
 }

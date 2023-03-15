@@ -1,0 +1,42 @@
+// ----------------------------------------------------------------------------
+// folly font-families
+// ----------------------------------------------------------------------------
+$font-family-primary: "Poppins", sans-serif;
+$font-family-secondary: "Montserrat", sans-serif;
+$font-family-monospace: "Source Code Pro", monospace;
+// ----------------------------------------------------------------------------
+// folly light-mode
+// ----------------------------------------------------------------------------
+// primary colors
+$light-primary-color: #ff6a1e;
+$light-on-primary-color: #1f0053;
+$light-primary-container-color: #1f0053;
+$light-on-primary-container-color: #ff6a1e;
+// secondary colors  
+$light-secondary-color: #1f0053;
+$light-on-secondary-color: #ff6a1e;
+$light-secondary-container-color: #1f0053;
+$light-on-secondary-container-color: #ff6a1e;
+// tertiary colors
+$light-tertiary-color: #ffc9ad;
+$light-on-tertiary-color: #1f0053;
+// link colors
+$light-link-color: #ffe4d6;
+// ----------------------------------------------------------------------------
+// folly dark-mode
+// ----------------------------------------------------------------------------
+// primary colors
+$dark-primary-color: #1f0053;
+$dark-on-primary-color: #ff6a1e;
+$dark-primary-container-color: #ff6a1e;
+$dark-on-primary-container-color: #1f0053;
+// secondary colors  
+$dark-secondary-color: #ff6a1e;
+$dark-on-secondary-color: #1f0053;
+$dark-secondary-container-color: #ff6a1e;
+$dark-on-secondary-container-color: #1f0053;
+// tertiary colors
+$dark-tertiary-color: #ffc9ad;
+$dark-on-tertiary-color: #1f0053;
+// link colors
+$dark-link-color: #ffe4d6;

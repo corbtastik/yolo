@@ -241,14 +241,12 @@
             const yolo = new Yolo();
             // Initialize image scaling
             yolo.scaleImages();
-            // Initialize copy code snippets
-            yolo.copySnippet();
-            // Initialize dark / light theme toggle
-            // yolo.toggleTheme();
             // Initialize sidebar
             yolo.initSidebar();
-            // Initialize toc on page/post and sidebar
+            // Initialize toc on the page and sidebar
             yolo.initToc();
+            // Initialize tabs on the page
+            yolo.initTabs();
             return yolo;
         }
     }
@@ -287,28 +285,6 @@
             image.addEventListener("click", () => {
                 Console.log("Yolo.scaleImage to max: " + image.src);
                 image.classList.toggle("max");
-            });
-        });
-    };
-
-    Yolo.prototype.copySnippet = function() {
-        const blocks = document.querySelectorAll(
-            '.code-header + .highlighter-rouge');
-        const elements = document.querySelectorAll(
-            '.code-header');
-        elements.forEach((element, index) => {
-            const code = blocks[index].innerText;
-            element.addEventListener('click', () => {
-                window.navigator.clipboard.writeText(code).then(r => {
-                    Console.log("Yolo.copySnippet to clipboard.");
-                });
-                element.classList.add('copied');
-                const infoText = element.innerHTML.trim();
-                element.innerHTML = element.innerHTML + " copied!"
-                setTimeout(() => {
-                    element.innerHTML = infoText;
-                    element.classList.remove('copied');
-                }, 2000);
             });
         });
     };
@@ -359,60 +335,50 @@
         return this.imageGrids.get(name);
     };
 
-    // Yolo.prototype.toggleTheme = function() {
-    //     const yoloSite = document.getElementById("yolo-site");
-    //     const themeDot = document.getElementById("theme-dot");
-    //
-    //     if(yoloSite === null || themeDot === null) {
-    //         Console.error("Yolo Site and/or Theme Dot is null, perhaps verify <body id=\"yolo-site\">");
-    //         return;
-    //     }
-    //
-    //     document.addEventListener('DOMContentLoaded', (event) => {
-    //         const activeTheme = localStorage.getItem("active-theme");
-    //         Console.log("DOM fully loaded and parsed, active-theme: " + activeTheme);
-    //         if(activeTheme === "dark-theme") {
-    //             localStorage.setItem("active-theme", "dark-theme");
-    //             yoloSite.classList.add("dark-theme");
-    //         } else {
-    //             localStorage.setItem("active-theme", "light-theme");
-    //             yoloSite.classList.add("light-theme");
-    //         }
-    //     });
-    //
-    //     window.addEventListener("load", function() {
-    //         const activeTheme = localStorage.getItem("active-theme");
-    //         Console.log("Window load, active-theme: " + activeTheme);
-    //     });
-    //
-    //     themeDot.addEventListener("click", function() {
-    //         const activeTheme = localStorage.getItem("active-theme");
-    //         if(activeTheme === "dark-theme") {
-    //             Console.log("Switching active-theme to light-theme");
-    //             yoloSite.classList.remove("dark-theme");
-    //             localStorage.setItem("active-theme", "light-theme");
-    //             yoloSite.classList.add("light-theme");
-    //         } else if(activeTheme === "light-theme") {
-    //             Console.log("Switching active-theme to dark-theme");
-    //             yoloSite.classList.remove("light-theme");
-    //             localStorage.setItem("active-theme", "dark-theme");
-    //             yoloSite.classList.add("dark-theme");
-    //         } else if(activeTheme == null) {
-    //             Console.log("The active-theme is null, setting to light-theme.");
-    //             localStorage.setItem("active-theme", "light-theme");
-    //             yoloSite.classList.add("light-theme");
-    //         } else {
-    //             Console.error("The active-theme is set to an invalid theme value: "
-    //                 + activeTheme + ", setting to light-theme.");
-    //             localStorage.setItem("active-theme", "light-theme");
-    //             yoloSite.classList.add("light-theme");
-    //         }
-    //     });
-    // }
-
     Yolo.prototype.initToc = function() {
         Toc.create();
-    }
+    };
+
+    Yolo.prototype.initTabs = function() {
+        let i, tabButtons = document.querySelectorAll('.yolo-tab-button');
+        const parent = this;
+        for(i = 0; i < tabButtons.length; i++) {
+            tabButtons[i].addEventListener("click", function() {
+                parent.openTab(this);
+            });
+        }
+    };
+
+    Yolo.prototype.openTab = function(tabButton) {
+        // Get the tab element to show/hide from data attribute on DOM
+        const tabId = tabButton.dataset.openTab;
+        const tabElement = document.getElementById(tabId);
+        if(tabElement === null) {
+            Console.error("Yolo.openTab called with non-existent tab: " + tabId);
+            return;
+        }
+        // If an "active" button is clicked then close the open tab and return
+        if(tabButton.classList.contains("active")) {
+            tabButton.classList.remove("active");
+            tabElement.style.display = "none";
+            return;
+        }
+        // Close/hide all tabs
+        let i, tabContent, tabLinks;
+        tabContent = document.getElementsByClassName("yolo-tab-content");
+        for (i = 0; i < tabContent.length; i++) {
+            tabContent[i].style.display = "none";
+        }
+        // Remove "active" from all tabLinks on load.
+        tabLinks = document.getElementsByClassName("yolo-tab-links");
+        for (i = 0; i < tabLinks.length; i++) {
+            tabLinks[i].classList.remove("active");
+        }
+        // Show active tab and add "active" class to tabButton
+        tabElement.style.display = "block";
+        tabButton.classList.add("active");
+    };
+
     // ------------------------------------------------------------------------
     // Expose Yolo on the window object.
     //   Call from HTML: onclick="Yolo.lightbox("lb-images").openModal();"

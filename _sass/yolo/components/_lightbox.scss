@@ -1,0 +1,119 @@
+// ----------------------------------------------------------------------------
+// lightbox stylesheet
+// ----------------------------------------------------------------------------
+@import "../base/variables";
+
+.lb-container {
+  flex-grow: 1;
+  margin: auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  position: relative;
+  width: 90%;
+}
+
+.lb-container.is-fluid {
+  max-width: none !important;
+  padding-left: 32px;
+  padding-right: 32px;
+  width: 100%;
+}
+
+@media screen and (min-width: $desktop) {
+  .lb-container {
+    max-width: $desktop - (2 * $gap);
+  }
+}
+
+.lb-square {
+  aspect-ratio: 1/1;
+  border-radius: 0.256em;
+  margin: 1rem 0;
+  object-fit: cover;
+  width: 100%;
+}
+
+.lb-item {
+  border-radius: 0.3rem;
+  margin: 1rem 0;
+  position: relative;
+  text-align: center;
+  width: 80%;
+}
+
+.lb-modal {
+  display: none;
+  height: 100%;
+  left: 0;
+  overflow: auto;
+  padding-top: 5rem;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+.lb-modal-content {
+  margin: auto;
+  max-width: 100%;
+  padding: 0;
+  position: relative;
+  width: 100%;
+}
+
+.lb-close {
+  font-size: $size-2;
+  position: absolute;
+  right: 1.5rem;
+  top: 0.5rem;
+  transition: 0.3s;
+}
+
+.lb-close:hover,
+.lb-close:focus {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.lb-slides {
+  display: none;
+}
+
+.lb-nav {
+  -webkit-user-select: none;
+  bottom: 0;
+  color: transparent;
+  display: block;
+  font-size: $size-4;
+  height: 100%;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  transition: 0.6s ease;
+  user-select: none;
+  vertical-align: middle;
+  width: 5%;
+  &:before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+  }
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.lb-prev {
+  border-radius: .3rem 0 0 .3rem;
+  color: transparent;
+  left: 10%;
+  right: 0;
+}
+
+.lb-next {
+  border-radius: 0 .3rem .3rem 0;
+  color: transparent;
+  left: 85%;
+  right: 100%;
+}

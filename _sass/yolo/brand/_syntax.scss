@@ -1,0 +1,129 @@
+// ----------------------------------------------------------------------------
+// Syntax highlighting
+// ----------------------------------------------------------------------------
+.highlighter-rouge, .highlight {
+  position: relative;
+  border-bottom-right-radius: 0.3em;
+  border-bottom-left-radius: 0.3em;
+  font-family: var(--font-family-monospace);
+  line-height: 1.8;
+
+  > pre,
+  pre.highlight {
+    margin-left: 1em;
+    padding-bottom: .5em;
+    padding-top: .5em;
+  }
+}
+
+.highlight table {
+  margin-bottom: 0;
+  font-size: 1em;
+  border: 0;
+
+  td {
+    padding: 0;
+    width: calc(100% - 1em);
+    border: 0;
+
+    &.gutter {
+      padding-right: 1em;
+      width: 1em;
+      color: var(--tertiary-color);
+      border-right: 1px solid var(--tertiary-color);
+      text-align: right;
+    }
+
+    &.code {
+      padding-left: 1em;
+    }
+  }
+
+  pre {
+    margin: 0;
+  }
+}
+
+.yolo-themed {
+  // Syntax Highlighting
+  .highlight {
+    font-family: var(--font-family-monospace);
+    background: var(--syntax-container-color);
+    color: var(--syntax-text);
+    .hll { color: var(--syntax-highlight-line); }
+    .c   { color: var(--syntax-comment); }
+    .c1  { color: var(--syntax-comment-single); }
+    .ch  { color: var(--syntax-comment-hashbang); }
+    .cm  { color: var(--syntax-comment-multiline); }
+    .cp  { color: var(--syntax-comment-preproc); }
+    .cpf { color: var(--syntax-comment-preprocfile); }
+    .cs  { color: var(--syntax-comment-special); }
+    .dl  { color: var(--syntax-string-delimiter); }
+    .err { color: var(--syntax-error); }
+    .gd  { color: var(--syntax-generic-deleted); }
+    .ge  { color: var(--syntax-generic-emph); font-weight: bold; }
+    .gh  { color: var(--syntax-generic-heading); font-weight: bold; }
+    .gi  { color: var(--syntax-generic-inserted); }
+    .go  { color: var(--syntax-generic-output); }
+    .gp  { color: var(--syntax-generic-prompt); }
+    .gr  { color: var(--syntax-generic-error); }
+    .gs  { color: var(--syntax-generic-strong); font-weight: bold; }
+    .gt  { color: var(--syntax-generic-traceback); }
+    .gu  { color: var(--syntax-generic-subheading); }
+    .hll { background-color: var(--syntax-highlight-line); }
+    .k   { color: var(--syntax-keyword); font-weight: bold; }
+    .kc  { color: var(--syntax-keyword-constant); }
+    .kd  { color: var(--syntax-keyword-declaration); }
+    .kn  { color: var(--syntax-keyword-namespace); }
+    .kp  { color: var(--syntax-keyword-pseudo); }
+    .kr  { color: var(--syntax-keyword-reserved); }
+    .kt  { color: var(--syntax-keyword-type); }
+    .l   { color: var(--syntax-literal); }
+    .ld  { color: var(--syntax-literal-date); }
+    .m   { color: var(--syntax-number); }
+    .mb  { color: var(--syntax-number-bin); }
+    .mf  { color: var(--syntax-number-float); }
+    .mh  { color: var(--syntax-number-hex); }
+    .mi  { color: var(--syntax-number-integer); }
+    .il  { color: var(--syntax-number-integer-long); }
+    .mo  { color: var(--syntax-number-oct); }
+    .n   { color: var(--syntax-name); }
+    .na  { color: var(--syntax-name-attribute); }
+    .bp  { color: var(--syntax-name-builtin-pseudo); }
+    .nb  { color: var(--syntax-name-builtin); }
+    .nc  { color: var(--syntax-name-class); font-weight: bold; }
+    .nd  { color: var(--syntax-name-decorator); }
+    .ne  { color: var(--syntax-name-exception); font-weight: bold; }
+    .fm  { color: var(--syntax-name-function-magic); }
+    .nf  { color: var(--syntax-name-function); }
+    .ni  { color: var(--syntax-name-entity); font-weight: bold; }
+    .nl  { color: var(--syntax-name-label); }
+    .nn  { color: var(--syntax-name-namespace); }
+    .no  { color: var(--syntax-name-constant); }
+    .nt  { color: var(--syntax-name-tag); }
+    .nx  { color: var(--syntax-name-other); }
+    .nv  { color: var(--syntax-name-variable); }
+    .vc  { color: var(--syntax-name-variable-class); }
+    .vg  { color: var(--syntax-name-variable-global); }
+    .vi  { color: var(--syntax-name-variable-instance); }
+    .vm  { color: var(--syntax-name-variable-magic); }
+    .o   { color: var(--syntax-operator); }
+    .ow  { color: var(--syntax-operator-word); }
+    .p   { color: var(--syntax-punctuation); }
+    .py  { color: var(--syntax-name-property); }
+    .s   { color: var(--syntax-string); }
+    .s1  { color: var(--syntax-string-single); }
+    .s2  { color: var(--syntax-string-double); }
+    .sa  { color: var(--syntax-string-affix); }
+    .sb  { color: var(--syntax-string-backtick); }
+    .sc  { color: var(--syntax-string-char); }
+    .sd  { color: var(--syntax-string-doc); }
+    .se  { color: var(--syntax-string-escape); }
+    .sh  { color: var(--syntax-string-heredoc); }
+    .si  { color: var(--syntax-string-interpol); }
+    .sr  { color: var(--syntax-string-regex); }
+    .ss  { color: var(--syntax-string-symbol); }
+    .sx  { color: var(--syntax-string-other); }
+    .w   { color: var(--syntax-text-whitespace); }
+  }
+}

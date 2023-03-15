@@ -2,14 +2,14 @@
 # Yolo site settings. see: _config.yml for jekyll settings
 # -----------------------------------------------------------------------------
 name: Yolo
-version: v1.3
+version: v1.4
 title: Yolo on my friend
-description: Loveable single page sites
-theme:
-  name: corbs
-  mode: dark
+description: Loveable single pages
+brand:
+  theme: corbs
+  syntax: corbs
 align: left
-#header:
+# header:
 #  logo: assets/images/logo.png
 sidebar:
   logo: assets/images/logo.png

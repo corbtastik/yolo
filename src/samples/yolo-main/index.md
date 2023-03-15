@@ -1,40 +1,30 @@
 ---
 layout: default
-tags:
-- yolo
-- single-page
-- demo
-- jekyll
+links:
+- yolo,https://github.com/corbtastik/yolo
+- jekyll,https://jekyllrb.com
+ext_js:
+- custom
+ext_css:
+- custom
 ---
+
+## Howdy
 
 Yolo is laser focused on static single page sites, and while anyone can Yolo, it's purposely built for writers,
 techies, and picture taking folk.
 
 > _I don't always use single-page sites but when I do, I [yolo](https://github.com/corbtastik/yolo)._
 
-##### Goals for Yolo
+### Goals for Yolo
 {:.no-toc}
 
-###### 1. Live the best single page life.
-{:.no-toc}
-
-Pamper single page sites like we pamper our pets.
-
-###### 2. Strive for simplicity.
-{:.no-toc}
-
-No dependencies other than [jekyll](https://jekyllrb.com/).
-
-###### 3. Make it customizable
-{:.no-toc}
-
-Bring your own [colors](#colors) and [fonts](#typography).
-
----
-
-{% include toc.html header="h2" text="Table of Contents" %}
-
-[↑↑↑](#){: .back-to-top}
+1. Live the best single page life.
+* _Pamper single pages like we pamper our pets._
+1. Strive for simplicity.
+* _No dependencies other than [jekyll](https://jekyllrb.com/)._
+1. Make it customizable.
+* _Bring your own [brand](#branding)._
 
 ---
 
@@ -42,7 +32,7 @@ Bring your own [colors](#colors) and [fonts](#typography).
 
 You need [jekyll](https://jekyllrb.com/).
 
-{% include code.html label="Get Yolo" %}
+{% include components/code.html label="Get Yolo" %}
 ```bash
 git clone https://github.com/corbtastik/yolo.git
 cd yolo
@@ -50,136 +40,207 @@ jekyll build
 jekyll serve
 ```
 
-[↑↑↑](#table-of-contents){: .back-to-top}
+{% include components/arrow.html link="#howdy" %}
 
 ---
 
+## Branding
+
+Branding isn't implemented as a typical [gem based Jekyll theme](https://jekyllrb.com/docs/themes/), but the colors and fonts can be customized as described below.
+
+> Yolo implements "branding" on two fronts, [themes](#themes) and [syntax themes](#syntax-themes).
+
 ## Themes
 
-Yolo doesn't implement an "according to hoyle" [gem based theme](https://jekyllrb.com/docs/themes/), but the colors and fonts can be customized as outlined below.
+1. Create a new `scss` file in `_sass/yolo/brand/themes/`.
+2. Customize the theme values for __light__ and __dark__ modes.
+3. Enable by setting `brand.theme` in `_data/settings.yml`.
 
-> __Note:__ "Theming" for Yolo is accomplished by providing a custom scss file in `_sass/yolo/themes`. Each theme must specify "light" and "dark" values to support switching between the two modes.
+The following Yolo __themes__ are included out-of-the-box.
 
-##### 1. Create a new scss file for your theme.
-{:.no-toc}
+| Theme                                                     | Description                          |
+|-----------------------------------------------------------|--------------------------------------|
+| [bluebonnet](https://corbtastik-yolo-bluebonnet.surge.sh) | A nod to the state flower of Texas.  |
+| [bubblegum](https://corbtastik-yolo-bubblegum.surge.sh)   | A theme for hubba bubba enthusiasts. |
+| [cooleo](https://corbtastik-yolo-cooleo.surge.sh)         | A not cool, but cooleo look.         |
+| [corbs](https://corbtastik-yolo-corbs.surge.sh)           | A personal fave.                     |
+| [domino](https://corbtastik-yolo-domino.surge.sh)         | A basic black and white theme.       |
+| [dusk](https://corbtastik-yolo-dusk.surge.sh)             | Just a good ole evening look.        |
+| [folly](https://corbtastik-yolo-folly.surge.sh)           | This theme just lacks good sense.    |
+| [grape](https://corbtastik-yolo-grape.surge.sh)           | For fans of grape soda.              |
+| [mint](https://corbtastik-yolo-mint.surge.sh)             | A minty fresh feel.                  |
+| [newspaper](https://corbtastik-yolo-newspaper.surge.sh)   | Read all about this theme.           |
+| [newwave](https://corbtastik-yolo-newwave.surge.sh)       | An 80s florescent vibe.              |
+| [reveal](https://corbtastik-yolo-reveal.surge.sh)         | A theme for big reveals.             |
+| [seaside](https://corbtastik-yolo-seaside.surge.sh)       | A peaceful easy seaside theme.       |
+| [yolo](https://corbtastik-yolo.surge.sh)                  | A theme for this zany project.       |
+| [zoot](https://corbtastik-yolo-zoot.surge.sh)             | A throwback to Red Hat Linux 6.2.    |
 
-{% include code.html label="Create theme scss" %}
-```bash
-# Use whatever NAME you like
-make theme NAME=domino
-```
-
-##### 2. Customize the theme values.
-{:.no-toc}
-
-__Color properties:__
-
-| Light/Dark property       | Description                           |
-|---------------------------|---------------------------------------|
-| `*-primary-color`         | Background color                      |
-| `*-secondary-color`       | Foreground color, text, tables        |
-| `*-accent-color`          | Header color                          |
-| `*-code-background-color` | Background color for code snippets    |
-| `*-code-color`            | Text color for inline code & snippets |
-| `*-link-color`            | Hyperlink color                       |
-| `*-sidebar-color`         | Sidebar background color              |
-
-__Font family properties:__
-
-> __Note:__ Add font-family in `_data/fonts.yml` to customize what fonts are available.
-
-| Font property      | Description                        |
-|--------------------|------------------------------------|
-| `family-primary`   | Family for body and most text      |
-| `family-secondary` | Family for headers and accent text |
-| `family-monospace` | Family for code                    |
-
-__Theme file:__
-
-{% include code.html label="_sass/yolo/themes/_domino.scss" %}
-```scss
-$light-primary-color: #fff;
-$light-secondary-color: #000;
-$light-accent-color: #383838;
-$light-code-background-color: #fff;
-$light-code-color: #000;
-$light-link-color: #2196f3;
-$light-sidebar-color: #fff;
-
-$dark-primary-color: #000;
-$dark-secondary-color: #fff;
-$dark-accent-color: #b3b2b2;
-$dark-code-background-color: #000;
-$dark-code-color: #fff;
-$dark-link-color: #2196f3;
-$dark-sidebar-color: #000;
-
-$family-primary: "Open Sans", sans-serif;
-$family-secondary: "Raleway", sans-serif;
-$family-monospace: "Inconsolata", monospace;
-```
-
-##### 3. Enable by setting `site.style` in `_config.yml`.
-{:.no-toc}
-
-{% include code.html label="Jekyll _config.yml" %}
-```yaml
-# Site customizations
-style: domino
-```
-
-That's it, run Yolo and adjust colors to your liking.
-
-[↑↑↑](#table-of-contents){: .back-to-top}
+{% include components/arrow.html link="#howdy" %}
 
 ---
 
 ### Colors
+{:.no-toc}
 
-Yolo's colors can be customized as outlined in [Yolo Themes](#themes).
+> __Remember:__ You must specify values for all color variables for both __light__ and __dark__ mode.
 
-{% include flexbox.html columns="1" fill="primary-color" %}
-{% include flexbox.html columns="1" fill="secondary-color" %}
-{% include flexbox.html columns="1" fill="accent-color" %}
-{% include flexbox.html columns="1" fill="link-color" %}
-{% include flexbox.html columns="1" fill="code-background-color" %}
-{% include flexbox.html columns="1" fill="code-color" %}
-{% include flexbox.html columns="1" fill="sidebar-color" %}
+There are __3__ main variables that define the colors for a theme.
 
-[↑↑↑](#table-of-contents){: .back-to-top}
+1. `primary-color`: Page background
+2. `secondary-color`: Headers H1-H6
+3. `tertiary-color`: Accent elements
 
----
+The remaining colors should harmonize with the `primary-color`, `secondary-color`, and `tertiary-color` you select.
 
-### Typography
+#### On Colors
+{:.no-toc}
 
-Yolo's fonts can be customized as outlined in [Yolo Themes](#themes).
+"_On_" colors are placed "_on_" the corresponding "main" or "container" color.
 
-{% include typography.html %}
+> __Note:__ On colors should contrast with the underlying color to increase readability.
 
-[↑↑↑](#table-of-contents){: .back-to-top}
+#### Container Colors
+{:.no-toc}
 
----
+"_Container_" colors represents an inset or sibling element of a primary or secondary colored element.
 
-## Elements
+> __Note:__ There isn't a `tertiary-container-color`, as `tertiary-color` is meant to standalone as an accent color.
 
-* [Headers](#headers)
-* [Paragraph Text](#paragraph-text)
-* [Blockquotes](#blockquotes)
-* [Inline Text](#inline-text)
-* [Code](#code)
-* [Lists](#lists)
-* [Tables](#tables)
-* [Markdown Images](#markdown-images)
-* [Videos](#videos)
-* [Prezos](#prezos)
+#### Link Color
+{:.no-toc}
 
-[↑↑↑](#table-of-contents){: .back-to-top}
+Links are prominent on web pages, so it gets its own variable - [link-color](https://github.com/corbtastik/yolo).
+
+> __Note:__ It's a good idea to consistently apply a distinct color for your links.
+
+{% include components/arrow.html link="#howdy" %}
 
 ---
 
-### Headers
+### Theme Color Swatches
+{:.no-toc}
 
-H1 is reserved for the site header and not shown here.
+{% include demo/theme-swatches.html %}
+
+{% include components/arrow.html link="#howdy" %}
+
+---
+
+### General Color Swatches
+{:.no-toc}
+
+{% include demo/general-color-swatches.html %}
+
+{% include components/arrow.html link="#howdy" %}
+
+---
+
+## Syntax Themes
+
+Yolo uses Jekyll's [default syntax highlighting](https://jekyllrb.com/docs/liquid/tags/#code-snippet-highlighting) capabilities provided by [rouge](https://github.com/rouge-ruby/rouge), and adds the ability to use custom `syntax-theme(s)` for light and dark modes.
+
+> __Note__: Every theme included with Yolo has a corresponding syntax theme.
+>   * __See__: `_sass/yolo/brand/theme` for themes.
+>   * __See__: `_sass/yolo/brand/syntax` for syntax themes.
+
+When you create a custom `syntax-theme` you specify colors for each syntax token variable, which maps to the appropriate rouge css selector.
+
+{% include components/arrow.html link="#howdy" %}
+
+---
+
+### Custom Syntax Theme
+{:.no-toc}
+
+1. Creating a custom `syntax-theme` is done by adding a `scss` file into `_sass/yolo/brand/syntax` and setting values for each color property for both __light__ and __dark__ modes.
+2. To enable a specific `syntax-theme` add it to your `settings.yml` file, as shown below.
+
+{% include components/code.html label="Configure the syntax-theme" %}
+```yaml
+# -------------------------------------
+# Yolo site settings
+# -------------------------------------
+name: Yolo
+title: Yolo on my friend
+description: Loveable single pages
+brand:
+  # references _sass/yolo/brand/theme/_newwave.scss
+  theme: newwave
+  # references _sass/yolo/brand/syntax/_newwave.scss
+  syntax: newwave
+```
+
+{% include components/arrow.html link="#howdy" %}
+
+---
+
+### Syntax Swatches
+{:.no-toc}
+
+The swatches below show the colors for the `syntax-theme` in use, each swatch has the syntax token and the corresponding css selector in parentheses.
+
+{% include demo/syntax-theme-swatches.html %}
+
+{% include components/arrow.html link="#howdy" %}
+
+---
+
+### Snippets
+{:.no-toc}
+
+> __Tip:__ Click header to copy a snippet.
+
+{% include components/code.html label="Bash snippet" %}
+```bash
+#!/bin/bash
+function say_howdy() {
+  echo "Howdy $1!"
+}
+
+if [ $# -ne 1 ]; then
+    echo "Usage: Howdy <NAME>"
+    exit 1
+fi
+
+# Say Howdy
+say_howdy $1
+```
+
+{% include components/arrow.html link="#howdy" %}
+
+{% include components/code.html label="JavaScript snippet" %}
+```javascript
+function sayHowdy(name) {
+  console.log("Howdy " + name + "!");
+}
+
+if(process.argv.length != 3) {
+  console.log("Usage: Howdy <NAME>");
+  process.exit(1);
+}
+
+// Say Howdy
+sayHowdy(process.argv[2]);
+```
+
+{% include components/arrow.html link="#howdy" %}
+
+---
+
+## Typography
+
+Yolo's fonts can be customized as outlined in [Themes](#themes).
+
+{% include demo/typography-swatches.html %}
+
+{% include components/arrow.html link="#howdy" %}
+
+---
+
+## Headers
+
+> __Note:__ H1 is reserved for the site header and not shown here.
 
 ## H2 Heading
 {:.no-toc}
@@ -196,26 +257,26 @@ H1 is reserved for the site header and not shown here.
 ###### H6 Heading
 {:.no-toc}
 
-[↑↑↑](#table-of-contents){: .back-to-top}
+{% include components/arrow.html link="#howdy" %}
 
 ---
 
-### Paragraph text
+## Paragraph text
 
 [Baseball](https://en.wikipedia.org/wiki/Baseball) is a bat-and-ball sport played between two teams of nine players each, taking turns batting and fielding. The game is in play when a player on the fielding team, called the pitcher, throws a ball that a player on the batting team tries to hit with a bat. The objective of the offensive team (batting team) is to hit the ball into the field of play, away from the other team's players, allowing its players to run the bases, having them advance counter-clockwise around four bases to score what are called "runs". - copied from [Wikipedia](https://en.wikipedia.org/wiki/Baseball).
 
-[↑↑↑](#table-of-contents){: .back-to-top}
+{% include components/arrow.html link="#howdy" %}
 
 ---
 
-### Blockquotes
+## Blockquotes
 
-#### Single Blockquote
+### Single Blockquote
 {:.no-toc}
 
 > In the United States and Canada, professional Major League Baseball (MLB) teams are divided into the National League (NL) and American League (AL), each with three divisions: East, West, and Central. The MLB champion is determined by playoffs that culminate in the World Series.
 
-#### Two paragraph Blockquote
+### Two paragraph Blockquote
 {:.no-toc}
 
 > A baseball game is played between two teams,
@@ -227,7 +288,7 @@ H1 is reserved for the site header and not shown here.
 > The 90-degree area within the foul lines is referred to as fair territory;
 > the 270-degree area outside them is foul territory.
 
-#### Nested Blockquote
+### Nested Blockquote
 {:.no-toc}
 
 > The number of players on a baseball roster, or squad, varies by league and by the level of organized play. A Major League Baseball (MLB) team has a roster of 25 players with specific roles. A typical roster features the following players:
@@ -236,23 +297,42 @@ H1 is reserved for the site header and not shown here.
 >
 > Most baseball leagues worldwide have the DH rule.
 
-#### Blockquote w/ markdown
+### Blockquote w/ markdown
 {:.no-toc}
 
-> #### Baseball Statistics
+> #### Embedded Markdown
 > {:.no-toc}
-> 1. __At Bats:__ Plate appearances, excluding walks and hit by pitches.
-> 2. __Hits:__ Number of times a base is reached safely.
-> 3. __Runs:__ Number of times runners reach home safely.
-> 4. __RBIs:__ Number of runners who scored due to a batter's action.
-> 5. __Home Runs:__ Hits where the batter touches all four bases safely.
-> 6. __Batting Average:__ Hits divided by at bats.
+> - Just plain text
+> - **Bold text**
+> - *Italicize text*
+> - <abbr title="Abbreviation">Abbr (abbreviation)</abbr>
+> - <cite>Citation</cite>
+> - <del>Deleted</del>
+> - <ins>Underlined</ins>
+> - Superscript <sup>text</sup>
+> - Subscript <sub>text</sub>
+> - Inline code `SELECT * FROM players;`
+>
+> | First   | Last   | HR  |
+> |---------|--------|-----|
+> | Hank    | Aaron  | 755 |
+> | Babe    | Ruth   | 714 |
+> | Mookie  | Wilson | 67  |
+>
+> ![Moonie Moonpie](assets/images/moonpie.png "Sweet Moonpie")
+>
+> ```bash
+> #!/bin/bash
+> function say_howdy() {
+>   echo "Howdy $1!"
+> }
+>```
 
-[↑↑↑](#table-of-contents){: .back-to-top}
+{% include components/arrow.html link="#howdy" %}
 
 ---
 
-### Inline Text
+## Inline Text
 
 - Just plain text
 - **Bold text**
@@ -265,286 +345,13 @@ H1 is reserved for the site header and not shown here.
 - Subscript <sub>text</sub>
 - Inline code `SELECT * FROM players;`
 
-[↑↑↑](#table-of-contents){: .back-to-top}
+{% include components/arrow.html link="#howdy" %}
 
 ---
 
-### Code
+## Lists
 
-> __Tip:__ Click header to copy a snippet.
-
-{% include code.html label="Bash snippet" %}
-```bash
-#!/bin/bash
-function say_howdy() {
-  echo "Howdy $1!"
-}
-
-if [ $# -ne 1 ]; then
-    echo "Usage: Howdy <NAME>"
-    exit 1
-fi
-
-# Say Howdy
-say_howdy $1
-```
-
-[↑↑↑](#table-of-contents){: .back-to-top}
-
-{% include code.html label="C snippet" %}
-```c
-#include <stdio.h>
-// Say Howdy
-int main(int argc, char **argv) {
-    if(argc != 2) {
-        printf("Usage: Howdy <NAME>");
-        return 1;
-    }
-    printf("Howdy %s!\n", argv[1]);
-    return 0;
-}
-```
-
-[↑↑↑](#table-of-contents){: .back-to-top}
-
-{% include code.html label="C++ snippet" %}
-```c++
-#include <iostream>
-using namespace std;
-
-int main(int argc, char** argv) {
-    if(argc != 2) {
-        cout << "Usage: Howdy <NAME>";
-        return 1;
-    }
-    cout << "Howdy " << argv[1];
-    return 0;
-}
-```
-
-[↑↑↑](#table-of-contents){: .back-to-top}
-
-{% include code.html label="Dart snippet" %}
-```dart
-import 'dart:io';
-// Say Howdy
-void main(List<String> args) {
-    exitCode = 0;
-    if(args.length != 1) {
-        stdout.writeln("Usage: Howdy <NAME>");
-        exitCode = 1;
-        return;
-    }
-    stdout.writeln("Howdy ${args[0]}!");
-}
-```
-
-[↑↑↑](#table-of-contents){: .back-to-top}
-
-{% include code.html label="Go snippet" %}
-```go
-package main
-
-import (
-    "os"
-    "fmt"
-)
-
-// Say Howdy
-func main () {
-    if len(os.Args) != 2 {
-        fmt.Println("Usage: Howdy <NAME>")
-        os.Exit(1)
-    }
-    fmt.Println("Howdy " + os.Args[1] + "!")
-    os.Exit(0)
-}
-```
-
-[↑↑↑](#table-of-contents){: .back-to-top}
-
-{% include code.html label="HTML snippet" %}
-```html
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8" />
-    <title>Howdy!</title>
-</head>
-<body>
-    <h1>Howdy from an HTML page!</h1>
-</body>
-</html>
-```
-
-[↑↑↑](#table-of-contents){: .back-to-top}
-
-{% include code.html label="JSON snippet" %}
-```json
-{
-  "apiVersion": "v1",
-  "kind": "Service",
-  "metadata": {
-    "name": "minio-server-lb",
-    "namespace": "minio",
-    "labels": {
-      "app/name": "minio"
-    }
-  },
-  "spec": {
-    "ports": [{
-        "port": 9000,
-        "targetPort": 9000,
-        "protocol": "TCP"
-      }],
-    "selector": {
-      "app/name": "minio",
-      "app/component": "backend"
-    },
-    "type": "LoadBalancer"
-  }
-}
-```
-
-[↑↑↑](#table-of-contents){: .back-to-top}
-
-{% include code.html label="Java snippet" %}
-```java
-// Say Howdy
-public class Howdy {
-    public static void main(String[] args) {
-        if(args.length != 1) {
-            System.out.println("Usage: Howdy <NAME>");
-            System.exit(1);
-        }
-        System.out.println("Howdy " + args[0] + "!");
-    }
-}
-```
-
-[↑↑↑](#table-of-contents){: .back-to-top}
-
-{% include code.html label="JavaScript snippet" %}
-```javascript
-function sayHowdy(name) {
-    console.log("Howdy " + name + "!");
-}
-
-if(process.argv.length != 3) {
-    console.log("Usage: Howdy <NAME>");
-    process.exit(1);
-}
-
-// Say Howdy
-sayHowdy(process.argv[2]);
-```
-
-[↑↑↑](#table-of-contents){: .back-to-top}
-
-{% include code.html label="Kotlin snippet" %}
-```kotlin
-// Say Howdy
-fun main(args: Array<String>): Int {
-    if(args.size != 1) {
-        println("Usage: Howdy <NAME>")
-        return 1
-    }
-    println("Howdy " + args[0] + "!")
-    return 0
-}
-```
-
-[↑↑↑](#table-of-contents){: .back-to-top}
-
-{% include code.html label="Markdown snippet" %}
-```markdown
-# Markdown
-
-* __Howdy__
-* _from_
-* <ins>a</ins>
-* [Markdown](https://en.wikipedia.org/wiki/Markdown)
-* `document`!
-```
-
-[↑↑↑](#table-of-contents){: .back-to-top}
-
-{% include code.html label="Python snippet" %}
-```python
-import sys
-
-def sayHowdy(name):
-    print("Howdy " + name + "!")
-
-if len(sys.argv) != 2:
-    print("Usage: Howdy <NAME>")
-    sys.exit(1)
-
-# Say Howdy
-sayHowdy(sys.argv[1])
-```
-
-[↑↑↑](#table-of-contents){: .back-to-top}
-
-{% include code.html label="SCSS snippet" %}
-```scss
-.light-theme {
-  color: $light-secondary-color;
-  background-color: $light-primary-color;
-  font-family: $family-primary;
-
-  a {
-    color: $light-link-color;
-  }
-
-  h1, h2, h3, h4, h5, h6 {
-    color: $light-accent-color;
-    font-family: $family-secondary, sans-serif;
-  }
-}
-```
-
-[↑↑↑](#table-of-contents){: .back-to-top}
-
-{% include code.html label="SQL snippet" %}
-```sql
--- Select orders for micky
-SELECT *
-FROM orders
-WHERE cust_id = "mickey@mouse.com"
-AND   price > 5000
-AND   price <= 10000
-```
-
-[↑↑↑](#table-of-contents){: .back-to-top}
-
-{% include code.html label="YAML snippet" %}
-```yaml
-apiVersion: v1
-kind: Service
-metadata:
-  name: minio-server-lb
-  namespace: minio
-  labels:
-    app/name: minio
-spec:
-  ports:
-    - port: 9000
-      targetPort: 9000
-      protocol: TCP
-  selector:
-    app/name: minio
-    app/component: backend
-  type: LoadBalancer
-```
-
-[↑↑↑](#table-of-contents){: .back-to-top}
-
----
-
-### Lists
-
-#### Unordered
+### Unordered
 {:.no-toc}
 
 * Arlington Stadium
@@ -556,7 +363,7 @@ spec:
     * Boston Beaneaters
       * Boston Red Sox
 
-#### Ordered
+### Ordered
 {:.no-toc}
 
 1. Babe Ruth
@@ -564,16 +371,14 @@ spec:
 3. Dale Murphy
 4. Mookie Wilson
 
-[↑↑↑](#table-of-contents){: .back-to-top}
+{% include components/arrow.html link="#howdy" %}
 
 ---
 
-### Tables
+## Tables
 
-#### Basic
+### Basic
 {:.no-toc}
-
-> __See:__ [Github markdown tables](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/organizing-information-with-tables)
 
 | Player                                                                                                   | BA   | HR  |
 |----------------------------------------------------------------------------------------------------------|------|-----|
@@ -581,32 +386,24 @@ spec:
 | <a href="https://www.baseball-reference.com/players/r/ruthba01.shtml" target="_blank">Babe Ruth</a>      | .342 | 714 |
 | <a href="https://www.baseball-reference.com/players/w/wilsomo01.shtml" target="_blank">Mookie Wilson</a> | .274 | 67  |
 
-#### Formatted content
+### Cell alignment
 {:.no-toc}
 
-| Command      | Description                                        |
-|--------------|----------------------------------------------------|
-| `git rm`     | <del>Remove</del> a file from the index            |
-| `git status` | List all *new or modified* files                   |
-| `git diff`   | Show file differences that **haven't been** staged |
+| Left-aligned  | Center-aligned | Right-aligned |
+|:--------------|:--------------:|--------------:|
+| Hank Aaron    | Right-fielder  |          .305 |
+| Babe Ruth     |   Outfielder   |          .342 |
+| Mookie Wilson | Center-fielder |          .274 |
 
-#### Cell alignment
-{:.no-toc}
-
-| Left-aligned | Center-aligned | Right-aligned |
-|:-------------|:--------------:|--------------:|
-| `git status` |  `git status`  |  `git status` |
-| `git diff`   |   `git diff`   |    `git diff` |
-
-[↑↑↑](#table-of-contents){: .back-to-top}
+{% include components/arrow.html link="#howdy" %}
 
 ---
 
-### Markdown Images
+## Markdown Images
 
 > Images added via markdown receive styling from the `<img>` element, they're not styled with `yolo` classes.
 
-{% include code.html label="Markdown images" %}
+{% include components/code.html label="Markdown images" %}
 {% raw %}
 ```markdown
 ![Moonie Moonpie](assets/images/moonpie.png "Sweet Moonpie")
@@ -618,7 +415,7 @@ spec:
 
 ![BIG yawn Bucky](assets/images/bucky.png "Sleepy Bucky")
 
-[↑↑↑](#table-of-contents){: .back-to-top}
+{% include components/arrow.html link="#howdy" %}
 
 ---
 
@@ -626,32 +423,14 @@ spec:
 
 You can use yolo Styled Images in addition to markdown images if you're looking for a little eye-candy. Yolo includes support for common aspect ratios, an [image-grid](#image-grid) and [image-lightbox](#image-lightbox).
 
-* [Thumbnail Images](#thumbnail-images)
-* [Square Images](#square-images)
-* [Circle Images](#circle-images)
-* [4-by-3 Images](#4-by-3-images)
-* [3-by-4 Images](#3-by-4-images)
-* [16-by-9 Images](#16-by-9-images)
-* [9-by-16 Images](#9-by-16-images)
+> __Tip:__ Click an image to enlarge.
 
 ---
 
 ### Thumbnail Images
+{:.no-toc}
 
 Thumbnails are 128px x 128px and use the `thumbnail` class.
-
-{% include code.html label="Thumbnail images" %}
-{% raw %}
-```html
-{%
-  include image/image.html
-  classes="thumbnail"
-  src="https://storage.googleapis.com/corbs-foto/yolo/yolo/big-face-bucky.png"
-%}
-```
-{% endraw %}
-
-> __Tip:__ Click to enlarge.
 
 {%
 include image/image.html
@@ -659,27 +438,15 @@ classes="thumbnail"
 src="https://storage.googleapis.com/corbs-foto/yolo/yolo/big-face-bucky.png"
 %}
 
-[↑↑↑](#table-of-contents){: .back-to-top}
+{% include components/arrow.html link="#howdy" %}
 
 ---
 
 ### Square Images
+{:.no-toc}
 
 Square images can be added with the following classes: `is-16`, `is-24`, `is-32`, `is-48`, `is-64`, `is-96`, `is-128`,
 `is-192`, `is-256`, `is-384`, `is-448`, `is-512`, `is-640`.
-
-{% include code.html label="Square images" %}
-{% raw %}
-```html
-{%
-  include image/image.html
-  classes="image is-256"
-  src="https://storage.googleapis.com/corbs-foto/yolo/yolo/drive-in.png"
-%}
-```
-{% endraw %}
-
-> __Tip:__ Click to enlarge.
 
 {%
 include image/image.html
@@ -687,28 +454,16 @@ classes="image is-256"
 src="https://storage.googleapis.com/corbs-foto/yolo/yolo/drive-in.png"
 %}
 
-[↑↑↑](#table-of-contents){: .back-to-top}
+{% include components/arrow.html link="#howdy" %}
 
 ---
 
 ### Circle Images
+{:.no-toc}
 
 Circle images can be added with the following classes: `is-circle-16`, `is-circle-24`, `is-circle-32`,
 `is-circle-48`, `is-circle-64`, `is-circle-96`, `is-circle-128`, `is-circle-192`, `is-circle-256`, `is-circle-384`,
 `is-circle-448`, `is-circle-512`, `is-circle-640`.
-
-{% include code.html label="Circle images" %}
-{% raw %}
-```html
-{%
-  include image/image.html
-  classes="is-circle-256"
-  src="https://storage.googleapis.com/corbs-foto/yolo/yolo/big-face-bucky.png"
-%}
-```
-{% endraw %}
-
-> __Tip:__ Click to enlarge.
 
 {%
 include image/image.html
@@ -716,28 +471,16 @@ classes="is-circle-256"
 src="https://storage.googleapis.com/corbs-foto/yolo/yolo/big-face-bucky.png"
 %}
 
-[↑↑↑](#table-of-contents){: .back-to-top}
+{% include components/arrow.html link="#howdy" %}
 
 ---
 
 ### 4-by-3 Images
+{:.no-toc}
 
 4 by 3 aspect ratio images can be added with the following classes: `is-100-by-75`, `is-120-by-90`, `is-128-by-96`,
 `is-160-by-120`, `is-200-by-150`, `is-240-by-180`, `is-256-by-192`, `is-320-by-240`, `is-400-by-300`,
 `is-480-by-360`, `is-512-by-384`, `is-640-by-480`.
-
-{% include code.html label="4-by-3 images" %}
-{% raw %}
-```html
-{%
-  include image/image.html
-  classes="image is-256-by-192"
-  src="https://storage.googleapis.com/corbs-foto/yolo/yolo/bluebonnet.png"
-%}
-```
-{% endraw %}
-
-> __Tip:__ Click to enlarge.
 
 {%
 include image/image.html
@@ -745,28 +488,16 @@ classes="image is-256-by-192"
 src="https://storage.googleapis.com/corbs-foto/yolo/yolo/bluebonnet.png"
 %}
 
-[↑↑↑](#table-of-contents){: .back-to-top}
+{% include components/arrow.html link="#howdy" %}
 
 ---
 
 ### 3-by-4 Images
+{:.no-toc}
 
 3 by 4 aspect ratio images can be added with the following classes: `is-75-by-100`, `is-90-by-120`, `is-96-by-128`,
 `is-120-by-160`, `is-150-by-200`, `is-180-by-240`, `is-192-by-256`, `is-240-by-320`, `is-300-by-400`,
 `is-360-by-480`, `is-384-by-512`, `is-480-by-640`.
-
-{% include code.html label="3-by-4 images" %}
-{% raw %}
-```html
-{%
-  include image/image.html
-  classes="image is-240-by-320"
-  src="https://storage.googleapis.com/corbs-foto/yolo/yolo/bluebonnet.png"
-%}
-```
-{% endraw %}
-
-> __Tip:__ Click to enlarge.
 
 {%
 include image/image.html
@@ -774,28 +505,16 @@ classes="image is-240-by-320"
 src="https://storage.googleapis.com/corbs-foto/yolo/yolo/bluebonnet.png"
 %}
 
-[↑↑↑](#table-of-contents){: .back-to-top}
+{% include components/arrow.html link="#howdy" %}
 
 ---
 
 ### 16-by-9 Images
+{:.no-toc}
 
 16 by 9 aspect ratio images can be added with the following classes: `is-112-by-63`, `is-128-by-72`, `is-144-by-81`,
 `is-160-by-90`, `is-192-by-108`, `is-224-by-126`, `is-256-by-144`, `is-320-by-180`, `is-400-by-225`, `is-480-by-270`,
 `is-512-by-288`, `is-640-by-360`.
-
-{% include code.html label="16-by-9 images" %}
-{% raw %}
-```html
-{%
-  include image/image.html
-  classes="image is-256-by-144"
-  src="https://storage.googleapis.com/corbs-foto/yolo/yolo/bluebonnet.png"
-%}
-```
-{% endraw %}
-
-> __Tip:__ Click to enlarge.
 
 {%
 include image/image.html
@@ -803,28 +522,16 @@ classes="image is-256-by-144"
 src="https://storage.googleapis.com/corbs-foto/yolo/yolo/bluebonnet.png"
 %}
 
-[↑↑↑](#table-of-contents){: .back-to-top}
+{% include components/arrow.html link="#howdy" %}
 
 ---
 
 ### 9-by-16 Images
+{:.no-toc}
 
 9 by 16 aspect ratio images can be added with the following classes: `is-63-by-112`, `is-72-by-128`, `is-81-by-144`,
 `is-90-by-160`, `is-108-by-192`, `is-126-by-224`, `is-144-by-256`, `is-180-by-320`, `is-225-by-400`, `is-270-by-480`,
 `is-288-by-512`, `is-360-by-640`.
-
-{% include code.html label="9-by-16 images" %}
-{% raw %}
-```html
-{%
-  include image/image.html
-  classes="image is-225-by-400"
-  src="https://storage.googleapis.com/corbs-foto/yolo/yolo/bluebonnet.png"
-%}
-```
-{% endraw %}
-
-> __Tip:__ Click to enlarge.
 
 {%
 include image/image.html
@@ -832,7 +539,7 @@ classes="image is-225-by-400"
 src="https://storage.googleapis.com/corbs-foto/yolo/yolo/bluebonnet.png"
 %}
 
-[↑↑↑](#table-of-contents){: .back-to-top}
+{% include components/arrow.html link="#howdy" %}
 
 ---
 
@@ -850,7 +557,7 @@ The Image Grid is similar to the [Lightbox](#image-lightbox), except it shows im
 
 The `_data/ig-images.yml` file is the default data file, just replace with your data to display images.
 
-{% include code.html label="Images from: _data/ig-images.yml" %}
+{% include components/code.html label="Images from: _data/ig-images.yml" %}
 {% raw %}
 ```html
 {% include "image/grid.html" %}
@@ -868,7 +575,7 @@ A custom data file can be added to create an Image Grid.
 * Use the data file name (w/o `.yml` ext) as the value to `ig-data`.
 * Customize the number of columns by setting `ig-columns`.
 
-{% include code.html label="Images from: _data/ig-pets.yml" %}
+{% include components/code.html label="Images from: _data/ig-pets.yml" %}
 {% raw %}
 ```html
 {% include image/grid.html ig-data="ig-pets" ig-columns="2" %}
@@ -877,7 +584,7 @@ A custom data file can be added to create an Image Grid.
 
 {% include image/grid.html ig-data="ig-pets" ig-columns="2" %}
 
-[↑↑↑](#table-of-contents){: .back-to-top}
+{% include components/arrow.html link="#howdy" %}
 
 ---
 
@@ -895,7 +602,7 @@ Yolo includes a Lightbox to showcase pics.
 
 The `_data/lb-images.yml` file is the default Lightbox data file, just replace with your data to display images.
 
-{% include code.html label="Images from: _data/lb-images.yml" %}
+{% include components/code.html label="Images from: _data/lb-images.yml" %}
 {% raw %}
 ```html
 {% include image/lightbox.html %}
@@ -912,7 +619,7 @@ A custom data file can be added to create a Lightbox.
 * Create a new file in `_data` and prefix name with `lb-`.
 * Use the data file name (w/o `.yml` ext) as the value to `lb-data`.
 
-{% include code.html label="Images from: _data/lb-marfa.yml" %}
+{% include components/code.html label="Images from: _data/lb-marfa.yml" %}
 {% raw %}
 ```html
 {% include image/lightbox.html lb-data="lb-marfa" %}
@@ -921,15 +628,15 @@ A custom data file can be added to create a Lightbox.
 
 {% include image/lightbox.html lb-data="lb-marfa" %}
 
-[↑↑↑](#table-of-contents){: .back-to-top}
+{% include components/arrow.html link="#howdy" %}
 
 ---
 
 ## Videos
 
-{% include video.html %}
+{% include components/video.html %}
 
-[↑↑↑](#table-of-contents){: .back-to-top}
+{% include components/arrow.html link="#howdy" %}
 
 ---
 
@@ -946,46 +653,129 @@ Yolo has basic support for embedding Google Slides.
 #### Sample 1
 {:.no-toc}
 
-{% include code.html label="16-by-9 aspect ratio (default)" %}
+{% include components/code.html label="16-by-9 aspect ratio (default)" %}
 {% raw %}
 ```html
-{% include prezo.html title="blinged-macmini" %}
+{% include components/prezo.html title="blinged-macmini" %}
 ```
 {% endraw %}
 
 > Aspect ratio `is-16-by-9`.
 
-{% include prezo.html title="blinged-macmini" %}
+{% include components/prezo.html title="blinged-macmini" %}
 
 #### Sample 2
 {:.no-toc}
 
-{% include code.html label="4-by-3 aspect ratio" %}
+{% include components/code.html label="4-by-3 aspect ratio" %}
 {% raw %}
 ```html
-{% include prezo.html title="one-awesome-prezo" aspect-ratio="is-4-by-3" %}
+{% include components/prezo.html title="one-awesome-prezo" aspect-ratio="is-4-by-3" %}
 ```
 {% endraw %}
 
 > Aspect ratio `is-4-by-3`.
 
-{% include prezo.html title="one-awesome-prezo" aspect-ratio="is-4-by-3" %}
+{% include components/prezo.html title="one-awesome-prezo" aspect-ratio="is-4-by-3" %}
 
 #### Sample 3
 {:.no-toc}
 
-{% include code.html label="1-by-1 aspect ratio" %}
+{% include components/code.html label="1-by-1 aspect ratio" %}
 {% raw %}
 ```html
-{% include prezo.html title="yolo-on" aspect-ratio="is-1-by-1" %}
+{% include components/prezo.html title="yolo-on" aspect-ratio="is-1-by-1" %}
 ```
 {% endraw %}
 
 > Aspect ratio `is-1-by-1`.
 
-{% include prezo.html title="yolo-on" aspect-ratio="is-1-by-1" %}
+{% include components/prezo.html title="yolo-on" aspect-ratio="is-1-by-1" %}
 
-[↑↑↑](#table-of-contents){: .back-to-top}
+{% include components/arrow.html link="#howdy" %}
+
+---
+
+## Custom CSS
+
+You can insert custom CSS styling by adding the names of your `.css` files to the `ext_css` front-matter variable.
+
+{% include components/code.html label="Front Matter for custom CSS" %}
+```yaml
+ext_css:
+  - custom # CSS filename in /assets/ext/css/ without .css ext
+```
+
+This adds `<link>` elements into `<head>`, __after__ `main.css`.
+
+```html
+<!-- Default site stylesheet -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<!-- Custom stylesheets added by `ext_css` front-matter -->
+<link rel="stylesheet" href="/assets/ext/css/custom.css">
+```
+
+> The `custom.css` file styles a flexbox to look like a Rubik cube.
+
+<div class="rubik-cube-row">
+    <div class="flex-item red"></div>
+    <div class="flex-item yellow"></div>
+    <div class="flex-item green"></div>
+</div>
+<div class="rubik-cube-row">
+    <div class="flex-item blue"></div>
+    <div class="flex-item orange"></div>
+    <div class="flex-item yellow"></div>
+</div>
+<div class="rubik-cube-row">
+    <div class="flex-item yellow"></div>
+    <div class="flex-item red"></div>
+    <div class="flex-item blue"></div>
+</div>
+
+{% include components/arrow.html link="#howdy" %}
+
+---
+
+## Custom JavaScript
+
+You can add custom JavaScript to a Yolo page by adding front matter as shown below.
+
+{% include components/code.html label="Front Matter for custom JavaScript" %}
+```yaml
+ext_js:
+  - custom # JavaScript filename in /assets/ext/js/ without .js ext
+```
+
+This adds the following `<script>` tag before the closing `</body>` tag.
+
+```html
+<body>
+<!-- Your post content here -->
+<script src="/assets/ext/js/custom.js"></script>
+</body>
+```
+
+The `custom.js` includes functions to make requests for [`site.json`](/site.json) (_located at the site root_) and then displays the response.
+
+* The first function uses [XMLHttpRequest](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest).
+* The second function uses [Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API).
+
+### XMLHttpRequest sample
+{:.no-toc}
+
+<button id="site-button-ajax" type="button">
+    Site Info (AJAX)
+</button>
+
+### Fetch API sample
+{:.no-toc}
+
+<button id="site-button-fetch" type="button">
+    Site Info (Fetch)
+</button>
+
+{% include components/arrow.html link="#howdy" %}
 
 ---
 
@@ -1028,7 +818,7 @@ The Yolo image is a runtime image based on [ubi8-minimal](https://developers.red
 ### Building and running
 {:.no-toc}
 
-{% include code.html label="Podman build and run" %}
+{% include components/code.html label="Podman build and run" %}
 ```bash
 # First build yoloc
 podman build -f ./src/yoloc.Containerfile -t yoloc:latest ./src
@@ -1045,48 +835,15 @@ The `Makefile` automates the build and run process, with `make yolo-pod`, which:
 * Creates the `yoloc` image.
 * Uses `yoloc` to build your `_site`.
 * Creates the `yolo` image to run your site.
-* Starts a yolo container from the `yolo` image, on [`http://localhost:9696`](http://localhost:9696).
+* Starts a yolo container from the `yolo` image, on [http://localhost:9696](http://localhost:9696).
 
-{% include code.html label="Makefile build and run" %}
+{% include components/code.html label="Makefile build and run" %}
 ```bash
 # Build and run with make
 make yolo-pod
 ```
 
-[↑↑↑](#table-of-contents){: .back-to-top}
-
----
-
-## Thanks
-
-I'm a developer by trade with roots in C and Java. I once read something like - _"write code every day"_ and although I haven't, I like to try. I enjoy frontend development but consider myself a hack. I get by, but get by with a little help from my friends.
-
-> Many thanks for these resources and the folks behind them.
-
-### [w3schools](https://www.w3schools.com/)
-{:.no-toc}
-
-When I want an unvarnished take on HTML, CSS, and Javascript I go to [w3schools](https://www.w3schools.com/). That and every time I google for frontend related stuff [w3schools](https://www.w3schools.com/) comes up. Great reference material, some of which guided the [Yolo Lightbox](#image-lightbox) implementation.
-
-> Sanks [w3schools](https://www.w3schools.com/) people.
-
-### [Solo](http://chibicode.github.io/solo/)
-{:.no-toc}
-
-Years ago I googled _"minimal jekyll theme"_, which led me to [Solo](http://chibicode.github.io/solo/). It was exactly what I was looking for, simple to get started and customize. Not to mention there's a quirky beauty in its look. Over the years I've used Solo for single page "technical" docs.
-
-Yolo is cut from the cloth of "[Solo](http://chibicode.github.io/solo)" which was previously developed by [Shu Uesugi](https://github.com/chibicode).
-
-> Well done [Shu Uesugi](https://github.com/chibicode), sanks amigo.
-
-### [Bulma](https://bulma.io/)
-{:.no-toc}
-
-_"The modern CSS framework that just works"_, true dat. Bulma is not included as a library, but Yolo contains slightly modified scss from select areas, namely flexbox, typography and image styling. For my tastes Bulma is the best css framework, they be awesome yo.
-
-> Sanks [Bulma](https://bulma.io/) people.
-
-[↑↑↑](#table-of-contents){: .back-to-top}
+{% include components/arrow.html link="#howdy" %}
 
 ---
 
@@ -1095,7 +852,7 @@ _"The modern CSS framework that just works"_, true dat. Bulma is not included as
 ```text
 MIT License (MIT)
 
-Copyright (c) 2022 Corbs
+Copyright (c) 2023 Corbs
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -1109,11 +866,11 @@ copies or substantial portions of the Software.
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
 AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 ```
 
-[↑↑↑](#table-of-contents){: .back-to-top}
+{% include components/arrow.html link="#howdy" %}

@@ -1,4 +1,4 @@
-_site
+_site/
 .sass-cache
 .idea
 .jekyll-cache
@@ -8,3 +8,4 @@ _site
 .stash
 .generated
 .env
+.nova/

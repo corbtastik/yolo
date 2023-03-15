@@ -1,0 +1,196 @@
+// ----------------------------------------------------------------------------
+// other/misc classes
+// ----------------------------------------------------------------------------
+@import "../base/variables";
+
+.yolo-caption {
+  text-align: center;
+  padding: 1rem;
+}
+
+// Color swatch
+.yolo-swatch {
+  background-color: inherit;
+  color: inherit;
+  border-radius: 0.20rem;
+  padding: .25rem .5rem;
+  position: relative;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+// Yolo page header
+.yolo-header {
+  .logo {
+    border-radius: 50%;
+    margin-bottom: 1rem;
+    width: 128px;
+    height: 128px;
+    object-fit: cover;
+    float: left;
+  }
+  .tag {
+    clear: both;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+  }
+  .description {
+    font-weight: lighter;
+    margin-top: 0;
+    margin-bottom: 1rem;
+  }
+}
+
+.yolo-footer {
+  text-align: right;
+}
+
+.yolo-toggle-container {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: $size-3;
+  font-size: $size-3;
+
+  .toggle-button {
+    position: absolute;
+    transition: color .25s ease;
+    user-select: none;
+    cursor: pointer;
+  }
+}
+
+// back to top link
+.yolo-to-top {
+  display: block;
+  text-align: right;
+  text-decoration: none;
+}
+
+// copy code header
+.yolo-code-header {
+  padding: 0.3em 0.3em 0.3em 0.4em;
+  border-top-left-radius: 0.3em;
+  border-top-right-radius: 0.3em;
+  vertical-align: middle;
+  .code-label {
+    font-weight: bold;
+  }
+  .copy-icon {
+    padding-top: .125em;
+    float: right;
+  }
+  &:is(:hover) {
+    cursor: pointer;
+  }
+}
+
+// embedded video styling
+.yolo-video {
+  width: 100%;
+  iframe {
+    width: 300px;
+    height: 533px;
+    border: none;
+    border-radius: 0.5em;
+  }
+}
+
+// pill styling
+.yolo-pill {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  margin-top: 0.25rem;
+  margin-bottom: 0.25rem;
+  padding: 0.25rem 1rem;
+  font-size: $size-6;
+  font-weight: bold;
+  border-radius: 3rem;
+}
+
+.yolo-syntax-theme-swatches {
+  .column {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}
+
+// The button that opens a yolo-tab-container
+.yolo-tab-button {
+  align-items: center;
+  border-radius: 3rem;
+  border: 1px solid transparent;
+  cursor: pointer;
+  display: inline-flex;
+  float: left;
+  font-size: $size-6;
+  font-weight: bold;
+  justify-content: center;
+  margin-bottom: 0.25rem;
+  margin-top: 0.25rem;
+  padding: 0.25rem 1rem;
+  text-align: center;
+  text-decoration: none;
+  transition: 0.3s;
+  white-space: nowrap;
+}
+.yolo-tab-button:not(:last-child) {
+  margin-right: 0.5rem;
+}
+
+// A set of tab buttons
+.yolo-tabs {
+  overflow: hidden;
+  border-radius: 0.3rem;
+  margin-bottom: 1rem;
+}
+
+// The content container for a tab
+.yolo-tab-content {
+  display: none;
+  padding: 0.5rem 1rem 1rem;
+  border-radius: 0.3rem;
+  border-top: none;
+  margin-bottom: 1rem;
+  h5 {
+    margin-top: .5rem;
+    margin-bottom: 1rem;
+  }
+}
+
+// prezo styling
+.yolo-prezo-container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  border-radius: 0.3em;
+  border: 0;
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+  &.is-16-by-9 {
+    /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+    padding-top: 56.25%;
+  }
+  &.is-4-by-3 {
+    /* 4:3 Aspect Ratio */
+    padding-top: 75%;
+  }
+  &.is-1-by-1 {
+    /* 1:1 Aspect Ratio */
+    padding-top: 100%;
+  }
+}
+
+// Style the iframe to fit in the iframe-container div with full height and width
+.yolo-prezo-iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+}
