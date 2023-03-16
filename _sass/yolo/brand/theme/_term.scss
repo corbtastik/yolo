@@ -1,27 +1,27 @@
 // ----------------------------------------------------------------------------
 // term font-families
 // ----------------------------------------------------------------------------
-$font-family-primary: "Roboto Mono", monospace;
-$font-family-secondary: "Inconsolata", monospace;
-$font-family-monospace: "Source Code Pro", monospace;
+$font-family-primary: "Azeret Mono", monospace;
+$font-family-secondary: "IBM Plex Mono", monospace;
+$font-family-monospace: "Inconsolata", monospace;
 // ----------------------------------------------------------------------------
 // term light-mode
 // ----------------------------------------------------------------------------
 // primary colors
-$light-primary-color: #fff;
+$light-primary-color: #e6e5e6;
 $light-on-primary-color: #020202;
-$light-primary-container-color: #fff;
+$light-primary-container-color: #e6e5e6;
 $light-on-primary-container-color: #020202;
 // secondary colors
-$light-secondary-color: #e502e6;
-$light-on-secondary-color: #fff;
+$light-secondary-color: #6177f5;
+$light-on-secondary-color: #e6e5e6;
 $light-secondary-container-color: #020202;
 $light-on-secondary-container-color: #00f900;
 // tertiary colors
-$light-tertiary-color: #01c4c5;
-$light-on-tertiary-color: #fff;
+$light-tertiary-color: #e60101;
+$light-on-tertiary-color: #e6e5e6;
 // link colors
-$light-link-color: #6177f5;
+$light-link-color: #e502e6;
 // ----------------------------------------------------------------------------
 // term dark-mode
 // ----------------------------------------------------------------------------
@@ -33,10 +33,10 @@ $dark-on-primary-container-color: #2afe13;
 // secondary colors
 $dark-secondary-color: #e502e6;
 $dark-on-secondary-color: #020202;
-$dark-secondary-container-color: #00f900;
+$dark-secondary-container-color: #e6e5e6;
 $dark-on-secondary-container-color: #020202;
 // tertiary colors
-$dark-tertiary-color: #01c4c5;
+$dark-tertiary-color: #e60101;
 $dark-on-tertiary-color: #020202;
 // link colors
 $dark-link-color: #6177f5;

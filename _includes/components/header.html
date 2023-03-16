@@ -1,5 +1,8 @@
-<div class="yolo-header columns">
-    <div class="column">
+<div class="yolo-header">
+    <div class="yolo-theme-toggle">
+        <span id="theme-toggle" class="material-icons md-36">light_mode</span>
+    </div>
+    <div class="yolo-site-info">
         {% if site.data.settings.header.logo %}
         <a href="./">
             <img class="logo" alt="site-logo" src="{{ site.data.settings.header.logo }}" title="Site Logo"/>
@@ -15,12 +18,5 @@
             {% endfor %}
             </span>
         </p>
-    </div>
-    <div class="column">
-        <div class="yolo-toggle-container">
-            <div class="toggle-button">
-                <span id="theme-toggle" class="material-icons md-36">light_mode</span>
-            </div>
-        </div>
     </div>
 </div>

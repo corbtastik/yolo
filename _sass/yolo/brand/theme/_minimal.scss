@@ -1,11 +1,11 @@
 // ----------------------------------------------------------------------------
-// black-white font-families
+// minimal font-families
 // ----------------------------------------------------------------------------
-$font-family-primary: "Poppins", sans-serif;
+$font-family-primary: "Sono", sans-serif;
 $font-family-secondary: "Open Sans", sans-serif;
 $font-family-monospace: "Source Code Pro", monospace;
 // ----------------------------------------------------------------------------
-// white light-mode
+// minimal light-mode
 // ----------------------------------------------------------------------------
 // primary colors
 $light-primary-color: #fff;
@@ -18,12 +18,12 @@ $light-on-secondary-color: #fff;
 $light-secondary-container-color: #000;
 $light-on-secondary-container-color: #fff;
 // tertiary colors
-$light-tertiary-color: #000;
+$light-tertiary-color: #828282;
 $light-on-tertiary-color: #fff;
 // link colors
 $light-link-color: #0091ea;
 // ----------------------------------------------------------------------------
-// black dark-mode
+// minimal dark-mode
 // ----------------------------------------------------------------------------
 // primary colors
 $dark-primary-color: #000;
@@ -36,7 +36,7 @@ $dark-on-secondary-color: #000;
 $dark-secondary-container-color: #fff;
 $dark-on-secondary-container-color: #000;
 // tertiary colors
-$dark-tertiary-color: #fff;
+$dark-tertiary-color: #bdbdbd;
 $dark-on-tertiary-color: #000;
 // link colors
 $dark-link-color: #0091ea;

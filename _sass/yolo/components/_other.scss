@@ -30,36 +30,32 @@
     float: left;
   }
   .tag {
-    clear: both;
-    margin-top: 0.5rem;
+    margin-top: 0;
     margin-bottom: 0.5rem;
+    clear: both;
     font-weight: bold;
   }
   .description {
     font-weight: lighter;
     margin-top: 0;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
   }
+}
+
+.yolo-site-info {
+  padding-top: 0.5rem;
+  float: left;
 }
 
 .yolo-footer {
   text-align: right;
 }
 
-.yolo-toggle-container {
-  position: relative;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  height: $size-3;
-  font-size: $size-3;
-
-  .toggle-button {
-    position: absolute;
-    transition: color .25s ease;
-    user-select: none;
-    cursor: pointer;
-  }
+.yolo-theme-toggle {
+  transition: color .25s ease;
+  user-select: none;
+  cursor: pointer;
+  float: right;
 }
 
 // back to top link

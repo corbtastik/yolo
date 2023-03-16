@@ -26,6 +26,7 @@
   }
 
   blockquote {
+    font-family: var(--font-family-secondary);
     border-left: .25rem solid var(--tertiary-color);
     border-top-right-radius: .25rem;
     border-bottom-right-radius: .25rem;
@@ -142,9 +143,11 @@
         color: var(--on-primary-color);
         &:hover {
           color: var(--tertiary-color);
+          text-decoration: none;
         }
         &:focus {
           color: var(--tertiary-color);
+          text-decoration: none;
         }
       }
     }
@@ -177,7 +180,7 @@
     }
   }
 
-  .toggle-button {
+  .yolo-theme-toggle {
     color: var(--secondary-color);
     &:hover {
       color: var(--tertiary-color);
@@ -265,14 +268,12 @@
         li {
           a {
             color: var(--on-primary-container-color);
-            &:hover {
-              color: var(--tertiary-color);
-              font-weight: bold;
-            }
-            &:focus {
-              color: var(--tertiary-color);
-              font-weight: bold;
-            }
+            //&:hover {
+            //  color: var(--tertiary-color);
+            //}
+            //&:focus {
+            //  color: var(--tertiary-color);
+            //}
           }
         }
         li::before {
