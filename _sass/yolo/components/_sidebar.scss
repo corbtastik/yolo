@@ -23,18 +23,21 @@
       cursor: pointer;
     }
   }
-  > .inner {
-    width: auto;
-    height: 100%;
-    margin: 1.5rem;
-    overflow-x: hidden;
-    //overflow-y: hidden;
-    transition: 0.2s;
-
-    .sidebar-logo {
-      padding: 1rem;
-    }
+  .sidebar-logo {
+    padding: 1rem;
   }
+  //> .inner {
+    //width: auto;
+    //height: 100%;
+    //margin: 1.5rem;
+    //overflow-x: hidden;
+    //overflow-y: hidden;
+    //transition: 0.2s;
+
+    //.sidebar-logo {
+    //  padding: 1rem;
+    //}
+  //}
 }
 
 @include mobile {
