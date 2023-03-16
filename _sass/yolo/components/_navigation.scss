@@ -1,13 +1,14 @@
 // Toggled by yolo.js
 .nav-menu {
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
   ul {
-    line-height: 1;
+    line-height: 1.6;
     list-style-type: none;
-    margin-bottom: 0;
-    padding: 1rem;
-
+    margin: 0;
+    padding-left: 1rem;
     li {
-      margin-bottom: 0.75rem;
+      margin: 0;
       a {
         text-decoration: none;
         &:hover {
@@ -18,7 +19,6 @@
         }
       }
     }
-
     li:before {
       content: "+ ";
     }
