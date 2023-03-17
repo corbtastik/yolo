@@ -75,6 +75,5 @@
   weights: "0,100;0,200;0,300;0,400;0,700;1,100;1,200;1,300;1,400;1,700"
 - name: "Noto Sans Mono"
   weights: "300;400;500;700"
-# Noto Emojis fonts
-- name: "Noto Emoji"
-  weights: "300;400;500;700"
+- name: "Courier Prime"
+  weights: "0,400;0,700;1,400;1,700"
