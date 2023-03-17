@@ -146,10 +146,10 @@ name: Yolo
 title: Yolo on my friend
 description: Loveable single pages
 brand:
-  # references _sass/yolo/brand/theme/_newwave.scss
-  theme: newwave
-  # references _sass/yolo/brand/syntax/_newwave.scss
-  syntax: newwave
+  # references _sass/yolo/brand/theme/_reveal.scss
+  theme: reveal
+  # references _sass/yolo/brand/syntax/_reveal.scss
+  syntax: reveal
 ```
 
 {% include components/arrow.html link="#howdy" %}
