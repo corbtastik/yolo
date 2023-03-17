@@ -38,4 +38,4 @@ exclude:
 sass:
   sass_dir: _sass
   style: compressed
-  sourcemap: never
+  sourcemap: always

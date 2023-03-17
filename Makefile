@@ -2,7 +2,7 @@
 # Makefile for various Yolo tasks
 # -----------------------------------------------------------------------------
 APP_NAME=yolo
-APP_VERSION=1.4
+APP_VERSION=1.5
 IMAGE_NAME=$(APP_NAME)
 IMAGE_TAG=v$(APP_VERSION)
 CONTAINER_REGISTRY=quay.io/corbsmartin
