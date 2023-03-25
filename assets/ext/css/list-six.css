@@ -1,0 +1,80 @@
+.yolo-menu-item {
+    width: 100%;
+    background: var(--secondary-container-color);
+    color: var(--on-secondary-container-color);
+}
+
+.yolo-menu-item:hover {
+    background: var(--primary-color);
+    color: var(--on-primary-color);
+    cursor: pointer;
+}
+
+.list-six section {
+    margin: 1rem auto;
+}
+
+.list-six .column {
+
+}
+
+.list-six .column:hover {
+
+}
+
+.list-six ul {
+    list-style: none;
+    padding: 0;
+}
+
+.list-six li + li {
+    margin-top: 0.5rem;
+}
+
+.list-six li {
+    display: block;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+
+.list-six li img {
+    float: right;
+    height: 3rem;
+    width: 3rem;
+    margin-left: 0.25rem;
+    border-radius: 50%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+}
+
+.list-six li .pill {
+    float: right;
+    height: 1.5rem;
+    text-align: center;
+    text-decoration: none;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    margin: 0.2rem;
+    border-radius: 3rem;
+    background-color: var(--secondary-color);
+    color: var(--on-secondary-color);
+    font-family: var(--font-family-monospace);
+    font-size: 0.95rem;
+}
+
+.list-six .yolo-date {
+    color: var(--tertiary-color);
+    min-width: 7rem;
+    width: 7rem;
+}
+
+.list-six .yolo-title {
+    font-size: 0.95rem;
+}
+
+.list-six .yolo-description {
+    display: block;
+    font-style: italic;
+    font-size: 0.95rem;
+}

@@ -1,0 +1,51 @@
+.list-one h1, .list-one dl {
+    margin: 0;
+}
+
+.list-one section {
+    margin: 1rem auto;
+}
+
+.list-one dl {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 0.5rem 0;
+}
+
+.list-one dl > * {
+    background: var(--secondary-container-color);
+}
+
+.list-one dl > :nth-of-type(2n) {
+    background: var(--secondary-container-color);
+}
+
+.list-one dt {
+    padding: 0.5rem 0.5rem 0.5rem 1rem;
+    text-align: left;
+    border-top-left-radius: 0.3em;
+    border-bottom-left-radius: 0.3em;
+}
+
+.list-one dd {
+    border-top-right-radius: 0.3em;
+    border-bottom-right-radius: 0.3em;
+    margin: 0;
+    padding: 0.5rem 1rem 0.5rem 0.5rem;
+    display: flex;
+    text-align: left;
+    align-items: center;
+}
+
+.list-one .yolo-date {
+    color: var(--tertiary-color);
+}
+
+.list-one .yolo-title {
+    padding-right: 0.5rem;
+}
+
+.list-one .yolo-description {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}

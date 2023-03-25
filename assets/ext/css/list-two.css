@@ -1,0 +1,37 @@
+.list-two section {
+    margin: 1rem auto;
+}
+
+.list-two ul {
+    list-style: none;
+    padding: 0;
+}
+
+.list-two li + li {
+    margin-top: 0.5rem;
+}
+
+.list-two li {
+    background: var(--secondary-container-color);
+    color: var(--on-secondary-container-color);
+    display: flex;
+    align-items: center;
+    border-radius: 0.5rem;
+    gap: 0.5rem;
+    padding: 0.5rem 0.5rem 0.5rem 1rem;
+}
+
+.list-two .yolo-date {
+    color: var(--tertiary-color);
+    width: 7rem;
+    min-width: 7rem;
+}
+
+.list-two .yolo-title {
+    padding-right: 0.5rem;
+}
+
+.list-two .yolo-description {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}

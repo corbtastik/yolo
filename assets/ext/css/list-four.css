@@ -1,0 +1,86 @@
+.yolo-menu-item {
+    width: 100%;
+}
+
+.list-four section {
+    margin: 1rem auto;
+}
+
+.list-four ul {
+    list-style: none;
+    padding: 0;
+}
+
+.list-four li + li {
+    margin-top: 0.5rem;
+}
+
+.list-four li {
+    background: var(--secondary-container-color);
+    color: var(--on-secondary-container-color);
+    display: block;
+    border-radius: 0.5rem;
+    padding: 0.5rem 1rem;
+}
+
+.list-four li:hover {
+    background: var(--primary-color);
+    color: var(--on-primary-color);
+    cursor: pointer;
+}
+
+.list-four li span:first-child {
+
+}
+
+.list-four li span:nth-child(2) {
+
+}
+
+.list-four li span:nth-child(3) {
+    /*display: block;*/
+}
+
+.list-four li img {
+    float: right;
+    height: 3rem;
+    width: 3rem;
+    margin-left: 0.25rem;
+    border-radius: 50%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+}
+
+.list-four li .pill {
+    /*float: right;*/
+    height: 1.5rem;
+    text-align: center;
+    text-decoration: none;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    padding-top: 0.175rem;
+    padding-bottom: 0.175rem;
+    /*margin-left: 0.1rem;*/
+    /*margin-right: 0.1rem;*/
+    border-radius: 3rem;
+    /*vertical-align: middle;*/
+    background-color: var(--secondary-color);
+    color: var(--on-secondary-color);
+    font-family: var(--font-family-monospace);
+    font-size: 0.95rem;
+}
+
+.list-four .yolo-date {
+    color: var(--tertiary-color);
+    min-width: 7rem;
+    width: 7rem;
+}
+
+.list-four .yolo-title {
+
+}
+
+.list-four .yolo-description {
+    display: block;
+    font-style: italic;
+}

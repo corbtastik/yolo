@@ -1,0 +1,45 @@
+.yolo-menu-item {
+    width: 100%;
+}
+
+.list-three section {
+    margin: 1rem auto;
+}
+
+.list-three ul {
+    list-style: none;
+    padding: 0;
+}
+
+.list-three li + li {
+    margin-top: 0.5rem;
+}
+
+.list-three li {
+    background: var(--secondary-container-color);
+    color: var(--on-secondary-container-color);
+    display: block;
+    border-radius: 0.5rem;
+    padding: 0.5rem 1rem;
+}
+
+.list-three li:hover {
+    background: var(--primary-color);
+    color: var(--on-primary-color);
+    cursor: pointer;
+}
+
+.list-three .yolo-date {
+    color: var(--tertiary-color);
+    min-width: 7rem;
+    width: 7rem;
+}
+
+.list-three .yolo-title {
+
+}
+
+.list-three .yolo-description {
+    display: block;
+    font-style: italic;
+}

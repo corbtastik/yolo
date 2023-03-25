@@ -14,7 +14,7 @@ ext_css:
 Yolo is laser focused on static single page sites, and while anyone can Yolo, it's purposely built for writers,
 techies, and picture taking folk.
 
-> _I don't always use single-page sites but when I do, I [yolo](https://github.com/corbtastik/yolo)._
+> _I don't always use single-pages, but when I do, I [yolo](https://github.com/corbtastik/yolo)._
 
 ### Goals for Yolo
 {:.no-toc}
@@ -48,7 +48,13 @@ jekyll serve
 
 Branding isn't implemented as a typical [gem based Jekyll theme](https://jekyllrb.com/docs/themes/), but the colors and fonts can be customized as described below.
 
-> Yolo implements "branding" on two fronts, [themes](#themes) and [syntax themes](#syntax-themes).
+> Every Yolo "brand" has a "theme" and corresponding "syntax theme".
+>   * __See__: `_sass/yolo/brand/theme` for themes.
+>   * __See__: `_sass/yolo/brand/syntax` for syntax themes.
+
+{% include components/arrow.html link="#howdy" %}
+
+---
 
 ## Themes
 
@@ -56,78 +62,53 @@ Branding isn't implemented as a typical [gem based Jekyll theme](https://jekyllr
 2. Customize the theme values for __light__ and __dark__ modes.
 3. Enable by setting `brand.theme` in `_data/settings.yml`.
 
-The following Yolo __themes__ are included out-of-the-box.
-
-| Theme                                                     | Description                          |
-|-----------------------------------------------------------|--------------------------------------|
-| [bluebonnet](https://corbtastik-yolo-bluebonnet.surge.sh) | A nod to the state flower of Texas.  |
-| [bubblegum](https://corbtastik-yolo-bubblegum.surge.sh)   | A theme for hubba bubba enthusiasts. |
-| [cooleo](https://corbtastik-yolo-cooleo.surge.sh)         | A not cool, but cooleo look.         |
-| [corbs](https://corbtastik-yolo-corbs.surge.sh)           | A personal fave.                     |
-| [domino](https://corbtastik-yolo-domino.surge.sh)         | A basic black and white theme.       |
-| [dusk](https://corbtastik-yolo-dusk.surge.sh)             | Just a good ole evening look.        |
-| [folly](https://corbtastik-yolo-folly.surge.sh)           | This theme just lacks good sense.    |
-| [grape](https://corbtastik-yolo-grape.surge.sh)           | For fans of grape soda.              |
-| [mint](https://corbtastik-yolo-mint.surge.sh)             | A minty fresh feel.                  |
-| [newspaper](https://corbtastik-yolo-newspaper.surge.sh)   | Read all about this theme.           |
-| [newwave](https://corbtastik-yolo-newwave.surge.sh)       | An 80s florescent vibe.              |
-| [reveal](https://corbtastik-yolo-reveal.surge.sh)         | A theme for big reveals.             |
-| [seaside](https://corbtastik-yolo-seaside.surge.sh)       | A peaceful easy seaside theme.       |
-| [yolo](https://corbtastik-yolo.surge.sh)                  | A theme for this zany project.       |
-| [zoot](https://corbtastik-yolo-zoot.surge.sh)             | A throwback to Red Hat Linux 6.2.    |
-
-{% include components/arrow.html link="#howdy" %}
-
----
-
-### Colors
+### Color Variables
 {:.no-toc}
-
-> __Remember:__ You must specify values for all color variables for both __light__ and __dark__ mode.
 
 There are __3__ main variables that define the colors for a theme.
 
-1. `primary-color`: Page background
-2. `secondary-color`: Headers H1-H6
-3. `tertiary-color`: Accent elements
+1. __`primary-color`__: Page background
+2. __`secondary-color`__: Headers H1-H6
+3. __`tertiary-color`__: Accent elements
 
 The remaining colors should harmonize with the `primary-color`, `secondary-color`, and `tertiary-color` you select.
+
+> __Remember:__ You must specify color values for both __light__ and __dark__ mode.
 
 #### On Colors
 {:.no-toc}
 
-"_On_" colors are placed "_on_" the corresponding "main" or "container" color.
+"_On_" colors are placed "_on_" the corresponding "_main_" or "_container_" color.
 
-> __Note:__ On colors should contrast with the underlying color to increase readability.
+> __Note:__ __On__ colors should contrast with the underlying color to increase readability.
 
 #### Container Colors
 {:.no-toc}
 
 "_Container_" colors represents an inset or sibling element of a primary or secondary colored element.
 
-> __Note:__ There isn't a `tertiary-container-color`, as `tertiary-color` is meant to standalone as an accent color.
+> __Note:__ There isn't a `tertiary-container-color`, as `tertiary-color` is meant to <ins>standalone</ins> as an accent color.
 
 #### Link Color
 {:.no-toc}
 
 Links are prominent on web pages, so it gets its own variable - [link-color](https://github.com/corbtastik/yolo).
 
-> __Note:__ It's a good idea to consistently apply a distinct color for your links.
+> __Tip:__ It's a good idea to consistently apply a distinct color for your links.
 
 {% include components/arrow.html link="#howdy" %}
 
 ---
 
-### Theme Color Swatches
+### Color Swatches
+{:.no-toc}
+
+#### Theme Colors:
 {:.no-toc}
 
 {% include demo/theme-swatches.html %}
 
-{% include components/arrow.html link="#howdy" %}
-
----
-
-### General Color Swatches
+#### General Colors:
 {:.no-toc}
 
 {% include demo/general-color-swatches.html %}
@@ -165,10 +146,10 @@ name: Yolo
 title: Yolo on my friend
 description: Loveable single pages
 brand:
-  # references _sass/yolo/brand/theme/_newwave.scss
-  theme: newwave
-  # references _sass/yolo/brand/syntax/_newwave.scss
-  syntax: newwave
+  # references _sass/yolo/brand/theme/_reveal.scss
+  theme: reveal
+  # references _sass/yolo/brand/syntax/_reveal.scss
+  syntax: reveal
 ```
 
 {% include components/arrow.html link="#howdy" %}
@@ -321,12 +302,6 @@ Yolo's fonts can be customized as outlined in [Themes](#themes).
 >
 > ![Moonie Moonpie](assets/images/moonpie.png "Sweet Moonpie")
 >
-> ```bash
-> #!/bin/bash
-> function say_howdy() {
->   echo "Howdy $1!"
-> }
->```
 
 {% include components/arrow.html link="#howdy" %}
 
@@ -401,7 +376,7 @@ Yolo's fonts can be customized as outlined in [Themes](#themes).
 
 ## Markdown Images
 
-> Images added via markdown receive styling from the `<img>` element, they're not styled with `yolo` classes.
+> Images added via markdown receive styling from the `<img>` element not specific `yolo` classes.
 
 {% include components/code.html label="Markdown images" %}
 {% raw %}
@@ -421,7 +396,7 @@ Yolo's fonts can be customized as outlined in [Themes](#themes).
 
 ## Styled Images
 
-You can use yolo Styled Images in addition to markdown images if you're looking for a little eye-candy. Yolo includes support for common aspect ratios, an [image-grid](#image-grid) and [image-lightbox](#image-lightbox).
+Yolo includes classes for common aspect ratios.
 
 > __Tip:__ Click an image to enlarge.
 
@@ -844,6 +819,347 @@ make yolo-pod
 ```
 
 {% include components/arrow.html link="#howdy" %}
+
+---
+
+## More Snippets
+
+### Bash
+{:.no-toc}
+
+{% include components/code.html label="Bash snippet" %}
+```bash
+#!/bin/bash
+function say_howdy() {
+  echo "Howdy $1!"
+}
+
+if [ $# -ne 1 ]; then
+    echo "Usage: Howdy <NAME>"
+    exit 1
+fi
+
+# Say Howdy
+say_howdy $1
+```
+
+{% include components/arrow.html link="#syntax-theme" %}
+
+---
+
+### C
+{:.no-toc}
+
+{% include components/code.html label="C snippet" %}
+```c
+#include <stdio.h>
+// Say Howdy
+int main(int argc, char **argv) {
+    if(argc != 2) {
+        printf("Usage: Howdy <NAME>");
+        return 1;
+    }
+    printf("Howdy %s!\n", argv[1]);
+    return 0;
+}
+```
+
+{% include components/arrow.html link="#syntax-theme" %}
+
+---
+
+### C++
+{:.no-toc}
+
+{% include components/code.html label="C++ snippet" %}
+```c++
+#include <iostream>
+using namespace std;
+
+int main(int argc, char** argv) {
+    if(argc != 2) {
+        cout << "Usage: Howdy <NAME>";
+        return 1;
+    }
+    cout << "Howdy " << argv[1];
+    return 0;
+}
+```
+
+{% include components/arrow.html link="#syntax-theme" %}
+
+---
+
+### Dart
+{:.no-toc}
+
+{% include components/code.html label="Dart snippet" %}
+```dart
+import 'dart:io';
+// Say Howdy
+void main(List<String> args) {
+    exitCode = 0;
+    if(args.length != 1) {
+        stdout.writeln("Usage: Howdy <NAME>");
+        exitCode = 1;
+        return;
+    }
+    stdout.writeln("Howdy ${args[0]}!");
+}
+```
+
+{% include components/arrow.html link="#syntax-theme" %}
+
+---
+
+### Go
+{:.no-toc}
+
+{% include components/code.html label="Go snippet" %}
+```go
+package main
+
+import (
+    "os"
+    "fmt"
+)
+
+// Say Howdy
+func main () {
+    if len(os.Args) != 2 {
+        fmt.Println("Usage: Howdy <NAME>")
+        os.Exit(1)
+    }
+    fmt.Println("Howdy " + os.Args[1] + "!")
+    os.Exit(0)
+}
+```
+
+{% include components/arrow.html link="#syntax-theme" %}
+
+---
+
+### HTML
+{:.no-toc}
+
+{% include components/code.html label="HTML snippet" %}
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Howdy!</title>
+</head>
+<body>
+<h1>Howdy from an HTML page!</h1>
+</body>
+</html>
+```
+
+{% include components/arrow.html link="#syntax-theme" %}
+
+---
+
+### JSON
+{:.no-toc}
+
+{% include components/code.html label="JSON snippet" %}
+```json
+{
+  "apiVersion": "v1",
+  "kind": "Service",
+  "metadata": {
+    "name": "minio-server-lb",
+    "namespace": "minio",
+    "labels": {
+      "app/name": "minio"
+    }
+  },
+  "spec": {
+    "ports": [{
+      "port": 9000,
+      "targetPort": 9000,
+      "protocol": "TCP"
+    }],
+    "selector": {
+      "app/name": "minio",
+      "app/component": "backend"
+    },
+    "type": "LoadBalancer"
+  }
+}
+```
+
+{% include components/arrow.html link="#syntax-theme" %}
+
+---
+
+### Java
+{:.no-toc}
+
+{% include components/code.html label="Java snippet" %}
+```java
+// Say Howdy
+public class Howdy {
+    public static void main(String[] args) {
+        if(args.length != 1) {
+            System.out.println("Usage: Howdy <NAME>");
+            System.exit(1);
+        }
+        System.out.println("Howdy " + args[0] + "!");
+    }
+}
+```
+
+{% include components/arrow.html link="#syntax-theme" %}
+
+---
+
+### JavaScript
+{:.no-toc}
+
+{% include components/code.html label="JavaScript snippet" %}
+```javascript
+function sayHowdy(name) {
+  console.log("Howdy " + name + "!");
+}
+
+if(process.argv.length != 3) {
+  console.log("Usage: Howdy <NAME>");
+  process.exit(1);
+}
+
+// Say Howdy
+sayHowdy(process.argv[2]);
+```
+
+{% include components/arrow.html link="#syntax-theme" %}
+
+---
+
+### Kotlin
+{:.no-toc}
+
+{% include components/code.html label="Kotlin snippet" %}
+```kotlin
+// Say Howdy
+fun main(args: Array<String>): Int {
+    if(args.size != 1) {
+        println("Usage: Howdy <NAME>")
+        return 1
+    }
+    println("Howdy " + args[0] + "!")
+    return 0
+}
+```
+
+{% include components/arrow.html link="#syntax-theme" %}
+
+---
+
+### Markdown
+{:.no-toc}
+
+{% include components/code.html label="Markdown snippet" %}
+```markdown
+# Markdown
+
+* __Howdy__
+* _from_
+* <ins>a</ins>
+* [Markdown](https://en.wikipedia.org/wiki/Markdown)
+* `document`!
+```
+
+{% include components/arrow.html link="#syntax-theme" %}
+
+---
+
+### Python
+{:.no-toc}
+
+{% include components/code.html label="Python snippet" %}
+```python
+import sys
+
+def sayHowdy(name):
+    print("Howdy " + name + "!")
+
+if len(sys.argv) != 2:
+    print("Usage: Howdy <NAME>")
+    sys.exit(1)
+
+# Say Howdy
+sayHowdy(sys.argv[1])
+```
+
+{% include components/arrow.html link="#syntax-theme" %}
+
+---
+
+### SCSS
+{:.no-toc}
+
+{% include components/code.html label="SCSS snippet" %}
+```scss
+.light-theme {
+  color: $light-secondary-color;
+  background-color: $light-primary-color;
+  font-family: $family-primary;
+
+  a {
+    color: $light-link-color;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    color: $light-accent-color;
+    font-family: $family-secondary, sans-serif;
+  }
+}
+```
+
+{% include components/arrow.html link="#syntax-theme" %}
+
+---
+
+### SQL
+{:.no-toc}
+
+{% include components/code.html label="SQL snippet" %}
+```sql
+-- Select orders for micky
+SELECT *
+FROM orders
+WHERE cust_id = "mickey@mouse.com"
+AND   price > 5000
+AND   price <= 10000
+```
+
+{% include components/arrow.html link="#syntax-theme" %}
+
+---
+
+### YAML
+{:.no-toc}
+
+{% include components/code.html label="YAML snippet" %}
+```yaml
+# ---------------------------------------------------------
+# Yolo site settings. see: _config.yml for jekyll settings
+# ---------------------------------------------------------
+name: Yolo
+version: v1.3
+title: Yolo on my friend
+description: Loveable single pages
+theme:
+  name: solo
+  syntax: monokai
+align: left
+sidebar:
+  logo: assets/images/logo.png
+```
+
+{% include components/arrow.html link="#syntax-theme" %}
 
 ---
 
