@@ -1,5 +1,4 @@
 .yolo-menu-item {
-    width: 100%;
     background: var(--secondary-container-color);
     color: var(--on-secondary-container-color);
 }
@@ -14,12 +13,9 @@
     margin: 1rem auto;
 }
 
-.list-six .column {
-
-}
-
-.list-six .column:hover {
-
+.list-six .columns {
+    margin-left: 0;
+    margin-right: 0;
 }
 
 .list-six ul {
@@ -55,12 +51,17 @@
     text-decoration: none;
     padding-left: 0.5rem;
     padding-right: 0.5rem;
-    margin: 0.2rem;
     border-radius: 3rem;
     background-color: var(--secondary-color);
     color: var(--on-secondary-color);
     font-family: var(--font-family-monospace);
     font-size: 0.95rem;
+    margin-left: 0.25rem;
+    margin-right: 0.25rem;
+}
+
+.list-six li .pills a:first-child {
+    margin-right: 0;
 }
 
 .list-six .yolo-date {
