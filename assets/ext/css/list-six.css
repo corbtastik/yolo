@@ -14,8 +14,18 @@
 }
 
 .list-six .columns {
-    margin-left: 0;
-    margin-right: 0;
+    margin: 0;
+}
+
+.list-six .columns .column {
+    padding: 0.5rem 0.7rem 0.5rem 0.75rem;
+}
+
+.list-six .pills {
+    width: 100%;
+    /*height: auto;*/
+    float: right;
+    margin-top: 0.21rem;
 }
 
 .list-six ul {
@@ -23,14 +33,11 @@
     padding: 0;
 }
 
-.list-six li + li {
-    margin-top: 0.5rem;
-}
-
 .list-six li {
     display: block;
     border-radius: 0.5rem;
-    margin-bottom: 1rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
 }
 
 
@@ -46,8 +53,8 @@
 
 .list-six li .pill {
     float: right;
-    height: 1.5rem;
     text-align: center;
+    vertical-align: middle;
     text-decoration: none;
     padding-left: 0.5rem;
     padding-right: 0.5rem;
@@ -55,13 +62,12 @@
     background-color: var(--secondary-color);
     color: var(--on-secondary-color);
     font-family: var(--font-family-monospace);
-    font-size: 0.95rem;
-    margin-left: 0.25rem;
-    margin-right: 0.25rem;
+    margin: 0.25rem 0 0.25rem 0.5rem;
 }
 
-.list-six li .pills a:first-child {
-    margin-right: 0;
+.list-six li .pill:hover {
+    background-color: var(--tertiary-color);
+    color: var(--on-tertiary-color);
 }
 
 .list-six .yolo-date {

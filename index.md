@@ -369,6 +369,15 @@ ext_css:
 
 #### List 6
 
+Post list options
+
+1. date, title, and description
+2. date, title, description, and feature image
+3. date, title, description, and tags
+4. date, title, description, and lots of tags that wrap
+5. date, title, description, feature image and tags
+6. date, title, description, feature image and lots of tags
+
 {% include demo/list-six.html %}
 
 {% include components/arrow.html link="#" %}
