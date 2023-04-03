@@ -1,0 +1,87 @@
+.yolo-menu-item {
+    background: var(--secondary-container-color);
+    color: var(--on-secondary-container-color);
+}
+
+.yolo-menu-item:hover {
+    background: var(--primary-color);
+    color: var(--on-primary-color);
+    cursor: pointer;
+}
+
+.fancy-list section {
+    margin: 1rem auto;
+}
+
+.fancy-list .columns {
+    margin: 0;
+}
+
+.fancy-list .columns .column {
+    padding: 0.5rem 0.7rem 0.5rem 0.75rem;
+}
+
+.fancy-list .pills {
+    width: 100%;
+    /*height: auto;*/
+    float: right;
+    margin-top: 0.21rem;
+}
+
+.fancy-list ul {
+    list-style: none;
+    padding: 0;
+}
+
+.fancy-list li {
+    display: block;
+    border-radius: 0.5rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+
+.fancy-list li img {
+    float: right;
+    height: 3rem;
+    width: 3rem;
+    margin-left: 0.25rem;
+    border-radius: 50%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+}
+
+.fancy-list li .pill {
+    float: right;
+    text-align: center;
+    vertical-align: middle;
+    text-decoration: none;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    border-radius: 3rem;
+    background-color: var(--secondary-color);
+    color: var(--on-secondary-color);
+    font-family: var(--font-family-monospace);
+    margin: 0.25rem 0 0.25rem 0.5rem;
+}
+
+.fancy-list li .pill:hover {
+    background-color: var(--tertiary-color);
+    color: var(--on-tertiary-color);
+}
+
+.fancy-list .yolo-date {
+    color: var(--tertiary-color);
+    min-width: 7rem;
+    width: 7rem;
+}
+
+.fancy-list .yolo-title {
+    font-size: 0.95rem;
+}
+
+.fancy-list .yolo-description {
+    display: block;
+    font-style: italic;
+    font-size: 0.95rem;
+}
